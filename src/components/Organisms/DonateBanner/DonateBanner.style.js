@@ -4,6 +4,7 @@ import Input from '../../Atoms/Input/Input';
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 const Container = styled.div`
   position: relative;
@@ -26,7 +27,8 @@ const InnerContainer = styled.div`
   padding: none;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+ ${defaultBoxShadow()}
+
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     padding: ${spacing('l')} clamp(${spacing('l')}, 3%, ${spacing('xxl')});
     min-height: 600px;
@@ -120,7 +122,7 @@ const Form = styled.form`
   position: relative;
   width: 100%;
   background-color: ${({ theme }) => theme.color('white')};
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  ${defaultBoxShadow()}
 
   margin-left: auto;
   margin-right: auto;

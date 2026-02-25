@@ -152,7 +152,7 @@ exports[`renders correctly with data prop 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow: hidden;
@@ -381,7 +381,7 @@ exports[`renders correctly with data prop 1`] = `
   }
 
   .c4:hover {
-    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
   }
 
   .c4:hover .c5 img {
@@ -680,7 +680,7 @@ exports[`renders correctly without image 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow: hidden;
@@ -871,7 +871,7 @@ exports[`renders correctly without image 1`] = `
   }
 
   .c4:hover {
-    box-shadow: 0 0 1.5rem rgba(0,0,0,0.25);
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
   }
 
   .c4:hover .c10 {

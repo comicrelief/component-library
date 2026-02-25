@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 import Link from '../../Atoms/Link/Link';
 import Text from '../../Atoms/Text/Text';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 const OuterWrapper = styled.div`
   width: 100%;
@@ -27,7 +28,7 @@ const InnerWrapper = styled.div`
   align-items: stretch;
   flex: 1 1 auto;
   max-width: 1500px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  ${defaultBoxShadow()}
 `;
 
 const PictureWrapper = styled.div`

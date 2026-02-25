@@ -6,6 +6,7 @@ import spacing from '../../../theme/shared/spacing';
 import Picture from '../../Atoms/Picture/Picture';
 import zIndex from '../../../theme/shared/zIndex';
 import handlePadding from '../../../utils/_utils';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 const Container = styled.div`
   position: relative;
@@ -101,7 +102,7 @@ const Form = styled.form`
   position: relative;
   width: 100%;
   background-color: ${({ theme }) => theme.color('white')};
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  ${defaultBoxShadow()}
   border-radius: 0.5rem;
   margin-top: ${spacing('md')};
 
@@ -228,7 +229,7 @@ const Button = styled.button`
   text-decoration: none;
   border-radius: 2rem;
   border: none;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  ${defaultBoxShadow()}
   appearance: none;
   :active,
   :focus,

@@ -96,13 +96,13 @@ it('renders article teaser correctly', () => {
       display: flex;
       background-color: #FFFFFF;
       border-radius: 1rem;
-      box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+      box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
       -webkit-transition: all 0.2s;
       transition: all 0.2s;
     }
 
     .c0:hover {
-      box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+      box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
       -webkit-transform: translateY(-4px);
       -ms-transform: translateY(-4px);
       transform: translateY(-4px);
@@ -389,13 +389,13 @@ it('renders press realese correctly', () => {
       display: flex;
       background-color: #FFFFFF;
       border-radius: 1rem;
-      box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+      box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
       -webkit-transition: all 0.2s;
       transition: all 0.2s;
     }
 
     .c0:hover {
-      box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+      box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
       -webkit-transform: translateY(-4px);
       -ms-transform: translateY(-4px);
       transform: translateY(-4px);

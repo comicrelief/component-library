@@ -11,7 +11,7 @@ import './local-preview-layout-fixes.css';
 import {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
   CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink,
-  CtaIconWrapper, CtaText, CtaTextUnderline
+  CtaIconWrapper, CtaText, CtaTextUnderline, LogoImageWrapper, LogoImage
 } from './HeroBanner.style';
 
 const HeroBanner = ({
@@ -41,7 +41,9 @@ const HeroBanner = ({
   // All variants:
   children = null,
   ctaUrl = null,
-  ctaText = null
+  ctaText = null,
+  logoImage = null,
+  logoImageAltText = ''
 }) => {
   const hasImage = Boolean(imageSet && variant !== variants.TEXT_BANNER);
   const hasCTA = Boolean(ctaUrl) && Boolean(ctaText);
@@ -104,7 +106,7 @@ const HeroBanner = ({
       >
 
         {(hasImage) && (
-          <MediaWrapper imageRight={copyLeft} variant={variant}>
+          <MediaWrapper variant={variant}>
             <PictureOrVideo
               images={imageSet}
               imageLow={imageLow}
@@ -138,6 +140,17 @@ const HeroBanner = ({
             )}
           </CopyInnerWrapper>
         </CopyOuterWrapper>
+
+        {(logoImage && variant !== variants.TEXT_BANNER) && (
+        <LogoImageWrapper imageRight={copyLeft}>
+          <LogoImage
+            imageRight={copyLeft}
+            alt={logoImageAltText}
+            image={logoImage}
+            objectFit="contain"
+          />
+        </LogoImageWrapper>
+        )}
       </OuterWrapper>
     </Container>
   );
@@ -159,6 +172,8 @@ HeroBanner.propTypes = {
   ctaNewTab: PropTypes.bool,
   paddingTop: PropTypes.string,
   paddingBottom: PropTypes.string,
+  logoImage: PropTypes.string,
+  logoImageAltText: PropTypes.string,
   variant: PropTypes.oneOf([
     variants.FULL_HEIGHT,
     variants.HALF_HEIGHT,

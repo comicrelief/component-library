@@ -5,11 +5,12 @@ import Text from '../../Atoms/Text/Text';
 
 import spacing from '../../../theme/shared/spacing';
 import { Chevron } from '../../Atoms/Icons/index';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 const Container = styled.div`
   border-radius: 1rem;
   background: ${({ theme }) => theme.color('white')};
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  ${defaultBoxShadow()}
 `;
 
 const ChevronKeyframes = keyframes`

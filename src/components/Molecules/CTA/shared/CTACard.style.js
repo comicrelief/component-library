@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import { bounceUpAnimation } from '../../../../theme/shared/animations';
 import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import fontHelper from '../../../../theme/crTheme/fontHelper';
+import defaultBoxShadow from '../../../../theme/shared/boxShadows';
 
 const ImageWrapper = styled.div`
   width: 100%;
@@ -104,7 +105,7 @@ const CardLink = styled.a`
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+  ${defaultBoxShadow()}
   text-decoration: none;
   overflow: hidden;
   cursor: ${({ isInteractive }) => (isInteractive ? 'pointer' : 'default')};
@@ -136,7 +137,7 @@ const CardLink = styled.a`
       transition: transform 0.4s cubic-bezier(0.68, -1.15, 0.265, 2.35);
 
       &:hover {
-        box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
+        ${defaultBoxShadow(true)}
 
         ${ImageWrapper} img {
           transform: scale(1.06);

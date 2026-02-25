@@ -223,6 +223,27 @@ import variants from './_variants';
   <HeroBanner
     pageBackgroundColour="teal_light"
     imageSet={defaultData.heroBannerImage}
+    image={defaultData.heroBannerImage}
+    imageLow={defaultData.heroBannerImage}
+    imageAltText="Image alt text"
+    variant={variants.FULL_HEIGHT}
+    copyLeft
+    paddingTop="2rem"
+    logoImage={defaultData.heroBannerLogoImageSquare}
+  >
+    <Text tag="h1">
+      Full Height: Copy Left w/Logo (Right on L+)
+    </Text>
+    <Text tag="p">
+       SQUARE-ISH logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
+       overlappy example here.
+    </Text>
+  </HeroBanner>
+
+  <HeroBanner
+    pageBackgroundColour="teal_light"
+    imageSet={defaultData.heroBannerImage}
+    image={defaultData.heroBannerImage}
     imageLow={defaultData.heroBannerImage}
     imageAltText="Video poster"
     variant={variants.FULL_HEIGHT}
@@ -239,6 +260,88 @@ import variants from './_variants';
       Same video setup but with videoLoop=false. The video plays once then shows the poster image.
     </Text>
   </HeroBanner>
+
+  <HeroBanner
+    pageBackgroundColour="teal_light"
+    imageSet={defaultData.heroBannerImage}
+    image={defaultData.heroBannerImage}
+    imageLow={defaultData.heroBannerImage}
+    imageAltText="Image alt text"
+    variant={variants.FULL_HEIGHT}
+    copyLeft={false}
+    paddingTop="2rem"
+    logoImage={defaultData.heroBannerLogoImageSquare}
+  >
+    <Text tag="h1">
+      Full Height: Copy Right w/Logo (Left on L+)
+    </Text>
+    <Text tag="p">
+       SQUARE-ISH logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
+       overlappy example here.
+    </Text>
+  </HeroBanner>
+
+  <HeroBanner
+    pageBackgroundColour="teal_light"
+    imageSet={defaultData.heroBannerImage}
+    image={defaultData.heroBannerImage}
+    imageLow={defaultData.heroBannerImage}
+    imageAltText="Image alt text"
+    variant={variants.FULL_HEIGHT}
+    copyLeft={false}
+    paddingTop="2rem"
+    logoImage={defaultData.heroBannerLogoImageWide}
+  >
+    <Text tag="h1">
+      Full Height: Copy Right, w/Logo (Left on L+)
+    </Text>
+    <Text tag="p">
+       WIDE logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
+       overlappy example here.
+    </Text>
+  </HeroBanner>
+
+
+  <HeroBanner
+    pageBackgroundColour="teal_light"
+    imageSet={defaultData.heroBannerImage}
+    image={defaultData.heroBannerImage}
+    imageLow={defaultData.heroBannerImage}
+    imageAltText="Image alt text"
+    variant={variants.FULL_HEIGHT}
+    copyLeft={false}
+    paddingTop="2rem"
+    logoImage={defaultData.heroBannerLogoImageTall}
+  >
+    <Text tag="h1">
+      Full Height: Copy Right, w/Logo (Left on L+)
+    </Text>
+    <Text tag="p">
+       TALL logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
+       overlappy example here.
+    </Text>
+  </HeroBanner>
+
+  <HeroBanner
+    pageBackgroundColour="teal_light"
+    imageSet={defaultData.heroBannerImage}
+    image={defaultData.heroBannerImage}
+    imageLow={defaultData.heroBannerImage}
+    imageAltText="Image alt text"
+    variant={variants.FULL_HEIGHT}
+    copyLeft={true}
+    paddingTop="2rem"
+    logoImage={defaultData.heroBannerLogoImageTall}
+  >
+    <Text tag="h1">
+      Full Height: Copy Right, w/Logo (Right on L+)
+    </Text>
+    <Text tag="p">
+       TALL logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
+       overlappy example here.
+    </Text>
+  </HeroBanner>
+
 
 </div>
 ```

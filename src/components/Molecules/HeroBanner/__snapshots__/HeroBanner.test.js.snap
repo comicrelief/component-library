@@ -113,11 +113,10 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
 
 .c7 {
   width: 100%;
-  z-index: 1;
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
   color: #000000;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1.5rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   background-color: #FFFFFF;
 }
 
@@ -179,6 +178,7 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
     max-width: 1500px;
     border-radius: 1rem;
     overflow: hidden;
+    box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
     height: 75vh;
     min-height: 600px;
     max-height: 750px;
@@ -253,7 +253,7 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
 
 @media (min-width:1024px) {
   .c7 {
-    padding: 2rem 2rem 1.75rem;
+    padding: 2rem;
   }
 }
 
@@ -442,11 +442,10 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
 
 .c7 {
   width: 100%;
-  z-index: 1;
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
   color: #000000;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1.5rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   background-color: #FFFFFF;
 }
 
@@ -508,6 +507,7 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
     max-width: 1500px;
     border-radius: 1rem;
     overflow: hidden;
+    box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
     height: auto;
     min-height: 450px;
   }
@@ -581,7 +581,7 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
 
 @media (min-width:1024px) {
   .c7 {
-    padding: 2rem 2rem 1.75rem;
+    padding: 2rem;
   }
 }
 
@@ -753,11 +753,10 @@ exports[`renders "Text Banner" Hero Banner correctly 1`] = `
 
 .c4 {
   width: 100%;
-  z-index: 1;
   border-radius: 1rem;
-  padding: 3rem 1.5rem;
+  padding: 3rem 2rem;
   color: #000000;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1.5rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   background-color: #2C0230;
   text-align: center;
 }
@@ -827,6 +826,7 @@ exports[`renders "Text Banner" Hero Banner correctly 1`] = `
     max-width: 1500px;
     border-radius: 1rem;
     overflow: hidden;
+    box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   }
 
   .c1:hover button[data-play-pause],
@@ -917,6 +917,384 @@ exports[`renders "Text Banner" Hero Banner correctly 1`] = `
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders "Text Banner" Hero Banner correctly 2`] = `
+.c8 {
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c9 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c9 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c11 {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c4 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c13 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.c0 {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #86E4E9;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 2rem 0 2rem;
+}
+
+.c1 {
+  width: 100%;
+  max-width: none;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  width: 100%;
+  height: 100%;
+}
+
+.c5 {
+  position: relative;
+  height: 100%;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% - (2 * 1rem));
+  margin: -2rem 1rem 0;
+}
+
+.c7 {
+  width: 100%;
+  border-radius: 1rem;
+  padding: 2rem;
+  color: #000000;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+  background-color: #FFFFFF;
+}
+
+.c6 {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.c10 {
+  position: absolute;
+  margin: 1rem;
+  width: 130px;
+  height: 80px;
+  top: 0;
+  right: 0;
+}
+
+.c12 {
+  width: 100%;
+  height: 100%;
+}
+
+.c12 img {
+  width: inherit;
+  height: inherit;
+  object-position: top right;
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c9 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c9 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    padding: 2rem 2rem 2rem;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    width: 100%;
+    max-width: 1500px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+    height: 75vh;
+    min-height: 600px;
+    max-height: 750px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .c2 img {
+    object-position: top center;
+    height: 100%;
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  }
+
+  .c2:has(+ div a:hover) > div > img {
+    -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    margin: -2rem 2rem 0rem;
+    width: calc(100% - (2 * 2rem));
+  }
+}
+
+@media (min-width:1024px) {
+  .c5 {
+    position: relative;
+    top: auto;
+    left: auto;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 auto;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    height: 75vh;
+    min-height: 600px;
+    max-height: 750px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    padding: 2rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    width: 92%;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    height: auto;
+    width: 50%;
+    margin: 2rem 0;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width:1024px) {
+  .c10 {
+    margin: 1.5rem;
+    width: 160px;
+    height: 100px;
+    right: 0;
+  }
+}
+
+@media (min-width:1024px) {
+
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3 lazyload"
+        height="100%"
+        width="100%"
+      >
+        <img
+          alt="Image alt text"
+          className="c4 lazyload"
+          data-lowsrc="../PromoLW.jpg"
+          data-sizes="auto"
+          data-src="../PromoLW.jpg"
+          data-srcset="../PromoLW.jpg"
+          height="100%"
+          src="../PromoLW.jpg"
+          srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          width="100%"
+        />
+      </div>
+    </div>
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          <h1
+            className="c8"
+          >
+            Full Height: Copy Left w/Logo (Right on L+)
+          </h1>
+          <p
+            className="c9"
+          >
+            SQUARE-ISH logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more overlappy example here.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c10"
+    >
+      <div
+        className="c11 c12"
+        height="auto"
+        width="100%"
+      >
+        <img
+          alt=""
+          className="c13 lazyload"
+          data-src="../HeroBannerLogo-Square.png"
+          height="auto"
+          width="100%"
+        />
       </div>
     </div>
   </div>
