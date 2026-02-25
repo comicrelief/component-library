@@ -39,7 +39,7 @@ const PictureWrapper = styled.div`
   width: 100%;
   height: 100%;
   border-radius: ${spacing('md')};
-  // background: ${({ theme }) => theme.color('grey_2')};
+  background: ${({ theme }) => theme.color('grey_2')};
   overflow: hidden;
   z-index: 1;
 `;
