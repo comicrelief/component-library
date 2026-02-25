@@ -96,7 +96,6 @@ const DonateBanner = ({
         {(shouldRenderTopImage || shouldShowDesktopImage) && (
           <PictureOrVideo
             image={shouldShowDesktopImage ? imageL : topImage}
-            alt={shouldShowDesktopImage ? (imageL?.alt || '') : (topImage?.alt || '')}
             videoDesktop={videoDesktop}
             videoMobile={videoMobile}
             posterDesktop={posterDesktop}
