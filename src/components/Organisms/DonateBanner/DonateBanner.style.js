@@ -31,18 +31,13 @@ const InnerContainer = styled.div`
  ${defaultBoxShadow()}
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    padding: ${spacing('l')} clamp(${spacing('l')}, 3%, ${spacing('xxl')});
-    min-height: 600px;
-    max-height: 750px;
-    ${({ $donateWidgetIsTextOnly }) => $donateWidgetIsTextOnly && css`
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    `}
-  }
-  max-width: 1500px;
-  margin-left: auto;
-  margin-right: auto;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
 `;
 
 const BgImage = styled(Picture)`
@@ -75,7 +70,7 @@ const Wrapper = styled.div`
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     display: flex;
-    padding: ${spacing('l')} ${spacing('md')};
+    padding: ${spacing('l')};
     gap: ${spacing('l')};
     flex-direction: row;
   }
