@@ -1,8 +1,13 @@
 import styled, { keyframes } from 'styled-components';
 
 export const OuterWrapper = styled.div`
-  padding: 2rem;
-  background: #eeeeee;
+  padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 1rem ${paddingBottom}`};
+  background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
+  
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 `;
 
 export const InnerWrapper = styled.div`
@@ -74,14 +79,27 @@ export const StatValue = styled.div`
   }
 `;
 
+export const AnimatedCharacter = styled.div`
+  position: relative;
+  overflow: hidden;
+  // small amount of extra padding to avoid descending characters like "," from being cut off;
+  // we shouldn't need to worry about longer descenders like "g" as we're using caps
+  padding-bottom: 0.06rem;
+`;
+
+export const SpacingCharacter = styled.div`
+  visibility: hidden;
+  white-space: pre;
+`;
+
 export const AnimatedDigit = styled.div`
   position: absolute;
   top: 0;
   left: 0;
 
-  transition-delay: var(--delay);
+  transition-delay: ${({ delay }) => delay}ms;
   transition-property: transform;
-  transition-duration: 2s;
+  transition-duration: ${({ duration }) => duration}ms;
   transition-timing-function: linear(
     0,
     0.329 8.8%,
