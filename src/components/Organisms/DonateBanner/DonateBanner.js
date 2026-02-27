@@ -91,7 +91,6 @@ const DonateBanner = ({
     >
       <InnerContainer
         componentBackgroundColour={componentBackgroundColour}
-        $donateWidgetIsTextOnly={donateWidgetIsTextOnly}
       >
         {(shouldRenderTopImage || shouldShowDesktopImage) && (
           <PictureOrVideo
