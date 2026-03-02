@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 export const OuterWrapper = styled.div`
   padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 1rem ${paddingBottom}`};
   background: ${({ theme, backgroundColour }) => theme.color(backgroundColour)};
-  
+
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -103,8 +103,14 @@ export const AnimatedDigit = styled.div`
 
   transition-delay: ${({ delay }) => delay}ms;
   transition-property: transform;
-  transition-duration: ${({ duration }) => duration}ms;
-  transition-timing-function: linear(
+  transition-duration: ${({ duration }) => duration};
+
+  // easing functions from https://easingwizard.com/
+  &[data-ease="cubic"] {
+    cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  &[data-ease="overshoot"] {
+   transition-timing-function: linear(
     0,
     0.329 8.8%,
     0.59 18%,
@@ -119,6 +125,10 @@ export const AnimatedDigit = styled.div`
     1.006 90.7%,
     1
   );
+  }
+  &[data-ease="bounce"] {
+   transition-timing-function: linear(0, 0.384 15.4%, 0.833 35.8%, 1 44.7%, 0.919 51.5%, 0.9 54.7%, 0.894 58%, 0.911 63.8%, 1 77.4%, 0.985 84.4%, 1);
+  }
 `;
 
 export const AccessibleValue = styled.div`

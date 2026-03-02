@@ -30,6 +30,8 @@ export default function StatNodeComponent({
   duration,
   startDelay,
   characterStagger,
+  characterDuration,
+  ease,
   body
 }) {
   const isVisible = useContext(StatContext);
@@ -57,6 +59,8 @@ export default function StatNodeComponent({
                     key={key}
                     character={character}
                     delay={characterDelay}
+                    ease={ease}
+                    characterDuration={characterDuration}
                   />
                 );
               case 'number':
@@ -65,6 +69,8 @@ export default function StatNodeComponent({
                     key={key}
                     character={character}
                     delay={characterDelay}
+                    ease={ease}
+                    characterDuration={characterDuration}
                   />
                 );
               default:
@@ -89,11 +95,18 @@ StatNodeComponent.propTypes = {
   duration: PropTypes.number,
   startDelay: PropTypes.number,
   characterStagger: PropTypes.number,
+  ease: PropTypes.string,
+  characterDuration: PropTypes.string,
   body: PropTypes.string
 };
 
 // MARK: string
-function AnimatedStringCharacter({ character, delay }) {
+function AnimatedStringCharacter({
+  character,
+  delay,
+  ease,
+  characterDuration
+}) {
   const isVisible = useContext(StatContext);
   const digitRef = useRef();
 
@@ -106,7 +119,7 @@ function AnimatedStringCharacter({ character, delay }) {
   return (
     <AnimatedCharacter>
       <SpacingCharacter>{character}</SpacingCharacter>
-      <AnimatedDigit ref={digitRef} duration={1200} delay={delay}>
+      <AnimatedDigit ref={digitRef} duration={characterDuration} delay={delay} data-ease={ease}>
         <div>&nbsp;</div>
         <div>{character}</div>
       </AnimatedDigit>
@@ -115,11 +128,18 @@ function AnimatedStringCharacter({ character, delay }) {
 }
 AnimatedStringCharacter.propTypes = {
   character: PropTypes.string.isRequired,
-  delay: PropTypes.number
+  delay: PropTypes.number,
+  ease: PropTypes.string,
+  characterDuration: PropTypes.string
 };
 
 // MARK: number
-function AnimatedNumberCharacter({ character, delay }) {
+function AnimatedNumberCharacter({
+  character,
+  delay,
+  ease,
+  characterDuration
+}) {
   const isVisible = useContext(StatContext);
   const digitRef = useRef();
 
@@ -132,7 +152,7 @@ function AnimatedNumberCharacter({ character, delay }) {
   return (
     <AnimatedCharacter>
       <SpacingCharacter>{character}</SpacingCharacter>
-      <AnimatedDigit ref={digitRef} duration={2000} delay={delay}>
+      <AnimatedDigit ref={digitRef} duration={characterDuration} delay={delay} data-ease={ease}>
         <div>&nbsp;</div>
         <div>1</div>
         <div>2</div>
@@ -150,5 +170,7 @@ function AnimatedNumberCharacter({ character, delay }) {
 }
 AnimatedNumberCharacter.propTypes = {
   character: PropTypes.string.isRequired,
-  delay: PropTypes.number
+  delay: PropTypes.number,
+  ease: PropTypes.string,
+  characterDuration: PropTypes.string
 };

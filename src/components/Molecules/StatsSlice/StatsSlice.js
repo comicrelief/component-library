@@ -15,7 +15,9 @@ const StatsSlice = ({
   nodes,
   pageBackgroundColour = 'teal_dark',
   paddingTop = '2rem',
-  paddingBottom = '2rem'
+  paddingBottom = '2rem',
+  ease = 'cubic',
+  characterDuration = '2000ms'
 }) => {
   // calculate the duration for each stat
   // based on the number of characters and the stagger
@@ -61,6 +63,8 @@ const StatsSlice = ({
                 duration={duration}
                 startDelay={startDelay}
                 characterStagger={characterStagger}
+                characterDuration={characterDuration}
+                ease={ease}
                 body={node.body}
               />
             );
@@ -83,7 +87,9 @@ StatsSlice.propTypes = {
   ),
   pageBackgroundColour: PropTypes.string,
   paddingTop: PropTypes.string,
-  paddingBottom: PropTypes.string
+  paddingBottom: PropTypes.string,
+  ease: PropTypes.string,
+  characterDuration: PropTypes.string
 };
 
 export default StatsSlice;
