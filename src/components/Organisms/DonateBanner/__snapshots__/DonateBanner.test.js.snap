@@ -527,6 +527,13 @@ exports[`Monthly donation renders correctly 1`] = `
     margin-left: auto;
     margin-right: auto;
   }
+
+  .c1:hover button[data-play-pause],
+  .c1:focus-within button[data-play-pause] {
+    opacity: 0.8;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
 }
 
 @media (min-width:1024px) {
@@ -1312,6 +1319,13 @@ exports[`Single donation renders correctly 1`] = `
     margin-left: auto;
     margin-right: auto;
   }
+
+  .c1:hover button[data-play-pause],
+  .c1:focus-within button[data-play-pause] {
+    opacity: 0.8;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
 }
 
 @media (min-width:1024px) {
@@ -2052,6 +2066,13 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .c1:hover button[data-play-pause],
+  .c1:focus-within button[data-play-pause] {
+    opacity: 0.8;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
   }
 }
 
@@ -2989,6 +3010,13 @@ exports[`Text-only donate widget renders correctly 1`] = `
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .c1:hover button[data-play-pause],
+  .c1:focus-within button[data-play-pause] {
+    opacity: 0.8;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
   }
 }
 

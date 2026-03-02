@@ -69,6 +69,7 @@ export { default as Lookup } from './components/Molecules/Lookup/Lookup';
 export { default as SimpleSchoolLookup } from './components/Molecules/SimpleSchoolLookup/SimpleSchoolLookup';
 export { default as LogoLinked } from './components/Molecules/LogoLinked/LogoLinked';
 export { default as HeroBanner } from './components/Molecules/HeroBanner/HeroBanner';
+export { default as PictureOrVideo } from './components/Molecules/PictureOrVideo/PictureOrVideo';
 export { default as QuoteSlice } from './components/Molecules/QuoteSlice/QuoteSlice';
 
 /* Organisms */

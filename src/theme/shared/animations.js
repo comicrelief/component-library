@@ -168,11 +168,25 @@ const bounceUpAnimation = (animateScale,
   `;
 };
 
+/**
+ * Intended mainly for use with the AmbientVideo component.
+ * Reveals the play/pause button when the parent container (usually a banner)
+ * is hovered or receives focus
+ */
+const playPauseReveal = css`
+  &:hover button[data-play-pause],
+  &:focus-within button[data-play-pause] {
+    opacity: 0.8;
+    transition-delay: 0s;
+  }
+`;
+
 export {
   logoRotateAnimation,
   springScaleAnimation,
   formFieldInputAnimation,
   bounceUpAnimation,
   pulseInAnimation,
-  pulseOutAnimation
+  pulseOutAnimation,
+  playPauseReveal
 };

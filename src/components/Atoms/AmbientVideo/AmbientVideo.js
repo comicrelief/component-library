@@ -24,16 +24,18 @@ const AmbientVideo = ({
   src,
   srcMobile,
   poster,
+  posterMobile,
   showFullControls = false,
-  showPlayPause = false,
+  showPlayPause = true,
   loop = true
 }) => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
-  const isBelowM = useMediaQuery({ maxWidth: breakpointValues.M - 1 });
-  const rawSrc = srcMobile && isBelowM ? srcMobile : src;
+  const isBelowL = useMediaQuery({ maxWidth: breakpointValues.L - 1 });
+  const rawSrc = srcMobile && isBelowL ? srcMobile : src;
   const effectiveSrc = normaliseSrc(rawSrc);
-  const effectivePoster = poster ? normaliseSrc(poster) : undefined;
+  const rawPoster = posterMobile && isBelowL ? posterMobile : poster;
+  const effectivePoster = rawPoster ? normaliseSrc(rawPoster) : undefined;
 
   const handleEnded = e => {
     if (!loop && effectivePoster) {
@@ -92,7 +94,7 @@ const AmbientVideo = ({
         <ReducedMotionFallback>Video playback not supported</ReducedMotionFallback>
       )}
       {showPlayPause && (
-        <PlayPauseButton type="button" onClick={handlePlayPauseClick} aria-label={isPlaying ? 'Pause' : 'Play'} data-icon={isPlaying ? 'pause' : 'play'}>
+        <PlayPauseButton type="button" onClick={handlePlayPauseClick} aria-label={isPlaying ? 'Pause' : 'Play'} data-play-pause={isPlaying ? 'pause' : 'play'}>
           <PlayPauseIcon $icon={normaliseSrc(isPlaying ? PauseIcon : PlayIcon)} aria-hidden />
         </PlayPauseButton>
       )}
@@ -109,6 +111,7 @@ AmbientVideo.propTypes = {
   src: srcPropType.isRequired,
   srcMobile: srcPropType,
   poster: srcPropType,
+  posterMobile: srcPropType,
   showFullControls: PropTypes.bool,
   showPlayPause: PropTypes.bool,
   loop: PropTypes.bool
