@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components';
 
 export const OuterWrapper = styled.div`
   padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 1rem ${paddingBottom}`};
-  background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
+  background: ${({ theme, backgroundColour }) => theme.color(backgroundColour)};
   
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     padding-left: 2rem;
@@ -15,7 +15,7 @@ export const InnerWrapper = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  @media ${({ theme }) => theme.breakpoints2026('M')} {
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
     flex-direction: row;
     gap: 2rem;
   }
@@ -27,9 +27,13 @@ export const StatContainer = styled.div`
   align-items: flex-start;
   gap: 1rem;
   background: #ffffff;
-  padding: 2rem;
+  padding: 1rem;
   flex: 1;
   border-radius: 1rem;
+
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
+    padding: 2rem;
+  }
 `;
 
 export const ValueContainer = styled.div`
@@ -67,11 +71,11 @@ export const StatValue = styled.div`
   display: flex;
   text-transform: uppercase;
   font-family: ${({ theme }) => theme.fontFamilies('Anton')};
-  font-size: ${({ theme }) => theme.fontSize('l')};
+  font-size: ${({ theme }) => theme.fontSize('xl')};
   line-height: 1;
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
-    font-size: ${({ theme }) => theme.fontSize('xl')};
+    font-size: ${({ theme }) => theme.fontSize('xxl')};
   }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
@@ -115,4 +119,14 @@ export const AnimatedDigit = styled.div`
     1.006 90.7%,
     1
   );
+`;
+
+export const AccessibleValue = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 0;
 `;

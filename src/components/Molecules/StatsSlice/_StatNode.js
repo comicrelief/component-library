@@ -9,7 +9,8 @@ import {
   ValueContainer,
   ValueUnderline,
   AnimatedCharacter,
-  SpacingCharacter
+  SpacingCharacter,
+  AccessibleValue
 
 } from './StatsSlice.style';
 import StatContext from './_utils';
@@ -45,7 +46,7 @@ export default function StatNodeComponent({
   return (
     <StatContainer>
       <ValueContainer>
-        <StatValue>
+        <StatValue aria-hidden="true">
           {characters.map(({ character, type }, index) => {
             const key = index + character;
             const characterDelay = startDelay + (duration - index * characterStagger);
@@ -77,6 +78,7 @@ export default function StatNodeComponent({
           delay={startDelay + duration * 1.5}
         />
         )}
+        <AccessibleValue>{stat}</AccessibleValue>
       </ValueContainer>
       <Text size="s">{body}</Text>
     </StatContainer>
