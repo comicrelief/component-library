@@ -5,6 +5,7 @@ import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
+import { playPauseReveal } from '../../../theme/shared/animations';
 
 const Container = styled.div`
   position: relative;
@@ -38,11 +39,7 @@ const InnerContainer = styled.div`
     margin-left: auto;
     margin-right: auto;
 
-  &:hover button[data-play-pause],
-  &:focus-within button[data-play-pause] {
-    opacity: 0.8;
-    transition-delay: 0s;
-  }
+  ${playPauseReveal}
 `;
 
 const Wrapper = styled.div`

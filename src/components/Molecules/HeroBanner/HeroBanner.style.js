@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import variants from './_variants';
-import { bounceUpAnimation } from '../../../theme/shared/animations';
+import { bounceUpAnimation, playPauseReveal } from '../../../theme/shared/animations';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
@@ -66,11 +66,7 @@ const OuterWrapper = styled.div`
       ${handleVariant(variant)}
     `)}
 
-  &:hover button[data-play-pause],
-  &:focus-within button[data-play-pause] {
-    opacity: 0.8;
-    transition-delay: 0s;
-  }
+  ${playPauseReveal}
 `;
 
 const MediaWrapper = styled.div`
