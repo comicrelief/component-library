@@ -286,7 +286,7 @@ const Button = styled.button`
   :focus,
   :hover {
     outline: none;
-    background-color: ${({ theme }) => theme.color('coral_dark')};
+    background-color: ${({ theme }) => theme.color('red_dark')};
   }
 `;
 
