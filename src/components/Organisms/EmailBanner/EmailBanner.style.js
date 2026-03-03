@@ -64,7 +64,7 @@ const Wrapper = styled.div`
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     display: flex;
-    max-width: 1152px;
+    max-width: 1216px;
     gap: ${spacing('l')};
     flex-direction: row;
   }
