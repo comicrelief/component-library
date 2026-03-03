@@ -76,11 +76,11 @@ const PlayPauseButton = styled.button`
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.2s ease 1s;
+  transition: opacity 0.2s ease 2s;
 
   // Play icon is shifted to the right slightly as it
   // doesn't look quite right when centered normally
-  &[data-icon='play'] ${PlayPauseIcon} {
+  &[data-play-pause='play'] ${PlayPauseIcon} {
     transform: translateX(2px);
   }
 
@@ -91,7 +91,7 @@ const PlayPauseButton = styled.button`
 
 const WrapperWithHover = styled(Wrapper)`
   &:hover ${PlayPauseButton},
-  &:focus-within ${PlayPauseButton} {
+  ${PlayPauseButton}:focus-visible {
     opacity: 0.8;
     transition-delay: 0s;
   }

@@ -5,11 +5,13 @@ import { breakpointValues2026 as breakpointValues } from '../../../theme/shared/
 import Picture from '../../Atoms/Picture/Picture';
 import {
   Body,
+  Body,
   CTAButton,
   Heading,
   InnerWrapper,
   OuterWrapper,
   PictureWrapper,
+  TextWrapper
   TextWrapper
 } from './QuoteSlice.style';
 
@@ -76,11 +78,23 @@ const QuoteSlice = ({
               images={imageS}
               imageLow={imageSPlaceholder}
             />
+            <Picture
+              height="100%"
+              objectFit="cover"
+              images={imageS}
+              imageLow={imageSPlaceholder}
+            />
           </MediaQuery>
           <MediaQuery
             minWidth={breakpointValues.M}
             maxWidth={breakpointValues.L - 1}
           >
+            <Picture
+              height="100%"
+              objectFit="cover"
+              images={imageM}
+              imageLow={imageMPlaceholder}
+            />
             <Picture
               height="100%"
               objectFit="cover"
@@ -95,6 +109,12 @@ const QuoteSlice = ({
               images={imageL}
               imageLow={imageLPlaceholder}
             />
+            <Picture
+              height="100%"
+              objectFit="cover"
+              images={imageL}
+              imageLow={imageLPlaceholder}
+            />
           </MediaQuery>
         </PictureWrapper>
         <TextWrapper>
@@ -103,8 +123,19 @@ const QuoteSlice = ({
               {heading}
             </Heading>
           )}
+          {heading && (
+            <Heading tag="h2" ratio={ratio}>
+              {heading}
+            </Heading>
+          )}
           {body && <Body textAlign="center">{body}</Body>}
           {hasLink && (
+            <CTAButton
+              type="button"
+              href={ctaUrl}
+              color={textColour}
+              fullWidth={false}
+            >
             <CTAButton
               type="button"
               href={ctaUrl}

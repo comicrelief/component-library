@@ -3,9 +3,9 @@ import styled, { css } from 'styled-components';
 import Input from '../../Atoms/Input/Input';
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
-import Picture from '../../Atoms/Picture/Picture';
 import zIndex from '../../../theme/shared/zIndex';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
+import { playPauseReveal } from '../../../theme/shared/animations';
 
 const Container = styled.div`
   position: relative;
@@ -31,27 +31,15 @@ const InnerContainer = styled.div`
  ${defaultBoxShadow()}
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    padding: ${spacing('l')} clamp(${spacing('l')}, 3%, ${spacing('xxl')});
-    min-height: 600px;
-    max-height: 750px;
-    ${({ $donateWidgetIsTextOnly }) => $donateWidgetIsTextOnly && css`
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    `}
-  }
-  max-width: 1500px;
-  margin-left: auto;
-  margin-right: auto;
-`;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
 
-const BgImage = styled(Picture)`
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
+  ${playPauseReveal}
 `;
 
 const Wrapper = styled.div`
@@ -75,7 +63,7 @@ const Wrapper = styled.div`
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     display: flex;
-    padding: ${spacing('l')} ${spacing('md')};
+    padding: ${spacing('l')};
     gap: ${spacing('l')};
     flex-direction: row;
   }
@@ -303,7 +291,6 @@ const Button = styled.button`
 `;
 
 export {
-  BgImage,
   Button,
   MoneybuyCopy,
   Container,
