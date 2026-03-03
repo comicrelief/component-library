@@ -51,7 +51,7 @@ const Wrapper = styled.div`
   align-items: center;
   display: block;
   width: 100%;
-  max-width: 1152px;
+  max-width: 1216px;
   margin-left: auto;
   margin-right: auto;
 
