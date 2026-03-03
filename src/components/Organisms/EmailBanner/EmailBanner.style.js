@@ -138,7 +138,7 @@ const Form = styled.form`
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    border-radius: 0.5rem;
+    border-radius: ${spacing('md')};
     max-width: 461px;
     min-width: 400px;
     margin-left: 0;
