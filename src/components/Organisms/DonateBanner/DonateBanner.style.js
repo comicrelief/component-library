@@ -17,7 +17,10 @@ const Container = styled.div`
   margin: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} 0 ${paddingBelow}`};
   background-color: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
   width: 100%;
-  padding: 2rem;
+  padding: ${spacing('l')} ${spacing('md')};
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    padding: ${spacing('l')};
+  }
 `;
 
 const InnerContainer = styled.div`
