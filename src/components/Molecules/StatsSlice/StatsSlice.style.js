@@ -42,7 +42,7 @@ export const ValueContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 `;
 
 const clipIn = keyframes`
@@ -65,6 +65,17 @@ export const ValueUnderline = styled.img`
   animation-timing-function: cubic-bezier(0.219, -0.011, 0.164, 0.987);
   animation-delay: ${({ delay }) => delay}ms;
   animation-fill-mode: both;
+
+  // ease = none and reduced motion both disable the transition
+
+  @media (prefers-reduced-motion: reduce) {
+    animation-delay: 0;
+    animation-name: none;
+  }
+  &[data-ease="none"] {
+    animation-delay: 0;
+    animation-name: none;
+  }
 `;
 
 export const StatValue = styled.div`
@@ -104,6 +115,16 @@ export const AnimatedDigit = styled.div`
   transition-delay: ${({ delay }) => delay}ms;
   transition-property: transform;
   transition-duration: ${({ duration }) => duration};
+
+  // ease = none and reduced motion both disable the transition
+  @media (prefers-reduced-motion: reduce) {
+    transition-property: none;
+    transition-delay: 0;
+  }
+  &[data-ease="none"] {
+    transition-property: none;
+    transition-delay: 0;
+  }
 
   // easing functions from https://easingwizard.com/
   &[data-ease="cubic"] {

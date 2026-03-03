@@ -8,7 +8,7 @@ import {
 import StatContext from './_utils';
 
 // stagger between characters in milliseconds
-const characterStagger = 100;
+const characterStagger = 80;
 
 // MARK: stats slice
 const StatsSlice = ({
@@ -17,7 +17,7 @@ const StatsSlice = ({
   paddingTop = '2rem',
   paddingBottom = '2rem',
   ease = 'cubic',
-  characterDuration = '2000ms'
+  characterDuration = '1600ms'
 }) => {
   // calculate the duration for each stat
   // based on the number of characters and the stagger
@@ -40,8 +40,7 @@ const StatsSlice = ({
         }
       });
       // threshold 0.5 = wait until 50% of the element is visible
-      // delay 500ms = wait 500ms before starting the animation
-    }, { threshold: 0.5, delay: 250 });
+    }, { threshold: 0.5 });
     observer.observe(elRef.current);
   }, []);
 

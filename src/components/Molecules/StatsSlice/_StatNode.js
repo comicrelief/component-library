@@ -11,7 +11,6 @@ import {
   AnimatedCharacter,
   SpacingCharacter,
   AccessibleValue
-
 } from './StatsSlice.style';
 import StatContext from './_utils';
 
@@ -82,6 +81,7 @@ export default function StatNodeComponent({
         <ValueUnderline
           src={altCtaUnderline}
           delay={startDelay + duration * 1.5}
+          data-ease={ease}
         />
         )}
         <AccessibleValue>{stat}</AccessibleValue>
@@ -113,8 +113,6 @@ function AnimatedStringCharacter({
   if (isVisible) {
     digitRef.current?.style.setProperty('transform', 'translateY(-50%)');
   }
-
-  // TODO add more characters?
 
   return (
     <AnimatedCharacter>
