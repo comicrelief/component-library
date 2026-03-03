@@ -13,12 +13,11 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: auto;
-  margin: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} 0 ${paddingBelow} 0`};
   background-color: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
   width: 100%;
-  padding: ${spacing('l')} ${spacing('md')};
+  padding: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} ${spacing('md')} ${paddingBelow} ${spacing('md')}`};
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: ${spacing('l')};
+    padding: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} ${spacing('l')} ${paddingBelow} ${spacing('l')}`};
   }
 `;
 
