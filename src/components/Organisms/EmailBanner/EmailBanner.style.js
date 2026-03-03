@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 
+import fontHelper from '../../../theme/crTheme/fontHelper';
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
@@ -164,8 +165,7 @@ const PrimaryTitleText = styled(Text)`
   width: 100%;
   margin-bottom: ${spacing('sm')};
   text-align: left;
-  font-size: ${({ theme }) => theme.fontSize('s')};
-  font-weight: 700;
+  ${({ theme }) => fontHelper(theme, 'h4')}
 `;
 
 const FormFieldset = styled.div`
@@ -190,6 +190,7 @@ const InputField = styled.div`
 const BodyCopyWrapper = styled.div`
   padding-bottom: ${spacing('md')};
   color: ${({ theme }) => theme.color('black')};
+  ${({ theme }) => fontHelper(theme, 'span')}
 `;
 
 const PrivacyCopyWrapper = styled.div`
