@@ -163,7 +163,7 @@ exports[`Monthly donation renders correctly 1`] = `
   margin: 0rem 0 2rem;
   background-color: #F4F3F5;
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 .c1 {
@@ -186,7 +186,7 @@ exports[`Monthly donation renders correctly 1`] = `
   align-items: center;
   display: block;
   width: 100%;
-  max-width: 1152px;
+  max-width: 1216px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -231,7 +231,7 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c6 {
   margin: 0;
-  padding: 0.5rem 0 1rem;
+  padding-bottom: 1rem;
   display: block;
   width: 100%;
 }
@@ -344,7 +344,7 @@ exports[`Monthly donation renders correctly 1`] = `
 .c26:focus,
 .c26:hover {
   outline: none;
-  background-color: #961D35;
+  background-color: #890B11;
 }
 
 .c14 {
@@ -507,6 +507,12 @@ exports[`Monthly donation renders correctly 1`] = `
 
 @media (min-width:1024px) {
 
+}
+
+@media (min-width:740px) {
+  .c0 {
+    padding: 2rem;
+  }
 }
 
 @media (min-width:1024px) {
@@ -1030,7 +1036,7 @@ exports[`Single donation renders correctly 1`] = `
   margin: 2rem 0 2rem;
   background-color: #F4F3F5;
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 .c1 {
@@ -1053,7 +1059,7 @@ exports[`Single donation renders correctly 1`] = `
   align-items: center;
   display: block;
   width: 100%;
-  max-width: 1152px;
+  max-width: 1216px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1098,7 +1104,7 @@ exports[`Single donation renders correctly 1`] = `
 
 .c6 {
   margin: 0;
-  padding: 0.5rem 0 1rem;
+  padding-bottom: 1rem;
   display: block;
   width: 100%;
 }
@@ -1238,7 +1244,7 @@ exports[`Single donation renders correctly 1`] = `
 .c25:focus,
 .c25:hover {
   outline: none;
-  background-color: #961D35;
+  background-color: #890B11;
 }
 
 @media (min-width:740px) {
@@ -1299,6 +1305,16 @@ exports[`Single donation renders correctly 1`] = `
   .c17 input {
     height: 3.4375rem;
   }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    padding: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+
 }
 
 @media (min-width:1024px) {
@@ -1829,7 +1845,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   margin: 0rem 0 0rem;
   background-color: #F4F3F5;
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 .c1 {
@@ -1852,7 +1868,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   align-items: center;
   display: block;
   width: 100%;
-  max-width: 1152px;
+  max-width: 1216px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1897,7 +1913,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 .c6 {
   margin: 0;
-  padding: 0.5rem 0 1rem;
+  padding-bottom: 1rem;
   display: block;
   width: 100%;
 }
@@ -2010,7 +2026,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 .c21:focus,
 .c21:hover {
   outline: none;
-  background-color: #961D35;
+  background-color: #890B11;
 }
 
 @media (min-width:740px) {
@@ -2047,6 +2063,12 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 @media (min-width:1024px) {
 
+}
+
+@media (min-width:740px) {
+  .c0 {
+    padding: 2rem;
+  }
 }
 
 @media (min-width:1024px) {
@@ -2514,7 +2536,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
   margin: 2rem 0 2rem;
   background-color: #F4F3F5;
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 .c1 {
@@ -2537,7 +2559,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
   align-items: center;
   display: block;
   width: 100%;
-  max-width: 1152px;
+  max-width: 1216px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2582,7 +2604,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
 
 .c6 {
   margin: 0;
-  padding: 0.5rem 0 1rem;
+  padding-bottom: 1rem;
   display: block;
   width: 100%;
 }
@@ -2722,7 +2744,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
 .c32:focus,
 .c32:hover {
   outline: none;
-  background-color: #961D35;
+  background-color: #890B11;
 }
 
 .c16 {
@@ -2991,6 +3013,16 @@ exports[`Text-only donate widget renders correctly 1`] = `
   .c19 input {
     height: 3.4375rem;
   }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    padding: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+
 }
 
 @media (min-width:1024px) {
