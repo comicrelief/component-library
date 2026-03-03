@@ -167,7 +167,7 @@ const OuterFieldset = styled.fieldset`
 
 const BannerTitleText = styled.div`
   margin: 0;
-  padding: ${spacing('sm')} 0 ${spacing('md')};
+  padding-bottom: ${spacing('md')};
   display: block;
   width: 100%;
 `;
