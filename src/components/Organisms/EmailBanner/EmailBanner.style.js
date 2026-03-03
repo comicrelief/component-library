@@ -195,7 +195,7 @@ const BodyCopyWrapper = styled.div`
 const PrivacyCopyWrapper = styled.div`
   padding: ${spacing('md')} ${spacing('sm')} 0;
   color: ${({ theme }) => theme.color('black')};
-  font-size: ${({ theme }) => theme.fontSize('s')};
+  font-size: ${({ theme }) => theme.fontSize('xs')};
   line-height: normal;
 `;
 
