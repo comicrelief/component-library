@@ -150,7 +150,7 @@ StatNodeComponent.propTypes = {
   ease: PropTypes.string,
   stringCharacterDuration: PropTypes.string,
   numberCharacterDuration: PropTypes.string,
-  body: PropTypes.string
+  body: PropTypes.node
 };
 
 // MARK: string
