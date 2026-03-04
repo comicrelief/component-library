@@ -50,7 +50,7 @@ const Wrapper = styled.div`
   align-items: center;
   display: block;
   width: 100%;
-  max-width: 1152px;
+  max-width: 1216px;
   margin-left: auto;
   margin-right: auto;
 
@@ -169,7 +169,7 @@ const OuterFieldset = styled.fieldset`
 
 const BannerTitleText = styled.div`
   margin: 0;
-  padding: ${spacing('sm')} 0 ${spacing('md')};
+  padding-bottom: ${spacing('md')};
   display: block;
   width: 100%;
 `;
@@ -288,7 +288,7 @@ const Button = styled.button`
   :focus,
   :hover {
     outline: none;
-    background-color: ${({ theme }) => theme.color('coral_dark')};
+    background-color: ${({ theme }) => theme.color('red_dark')};
   }
 `;
 
