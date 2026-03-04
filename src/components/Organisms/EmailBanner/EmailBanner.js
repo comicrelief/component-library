@@ -101,7 +101,7 @@ const EmailBanner = ({
             <TitleWrapperInner $copyColor={copyColor}>
               {title && (
                 <Text
-                  tag="h2"
+                  tag="h1"
                   size="big"
                   family="Anton"
                   weight="normal"
