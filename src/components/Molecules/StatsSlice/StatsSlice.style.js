@@ -139,27 +139,27 @@ export const AnimatedDigit = styled.div`
 
   // easing functions from https://easingwizard.com/
   &[data-ease="cubic"] {
-    cubic-bezier(0.22, 1, 0.36, 1);
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   }
   &[data-ease="overshoot"] {
-   transition-timing-function: linear(
-    0,
-    0.329 8.8%,
-    0.59 18%,
-    0.787 27.7%,
-    0.863 32.8%,
-    0.926 38.2%,
-    0.968 43.1%,
-    1 48.3%,
-    1.022 53.7%,
-    1.034 59.6%,
-    1.035 69.8%,
-    1.006 90.7%,
-    1
-  );
+    transition-timing-function: linear(
+      0,
+      0.329 8.8%,
+      0.59 18%,
+      0.787 27.7%,
+      0.863 32.8%,
+      0.926 38.2%,
+      0.968 43.1%,
+      1 48.3%,
+      1.022 53.7%,
+      1.034 59.6%,
+      1.035 69.8%,
+      1.006 90.7%,
+      1
+    );
   }
   &[data-ease="bounce"] {
-   transition-timing-function: linear(0, 0.384 15.4%, 0.833 35.8%, 1 44.7%, 0.919 51.5%, 0.9 54.7%, 0.894 58%, 0.911 63.8%, 1 77.4%, 0.985 84.4%, 1);
+    transition-timing-function: linear(0, 0.384 15.4%, 0.833 35.8%, 1 44.7%, 0.919 51.5%, 0.9 54.7%, 0.894 58%, 0.911 63.8%, 1 77.4%, 0.985 84.4%, 1);
   }
 `;
 

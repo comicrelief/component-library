@@ -47,3 +47,14 @@
     body: "Ut enim ad minima veniam, quis nostrum exercitationem."
 }]}  />
 ```
+
+
+### No animation
+
+```js
+<StatsSlice ease="none" nodes={[{
+    title: "123",
+    stat: "£1234.56",
+    body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi."
+}]}  />
+```

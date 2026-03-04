@@ -1,0 +1,4059 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stats Slices with a single node should render 1`] = `
+.c23 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c23 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c0 {
+  padding: 2rem 1rem 2rem;
+  background: #13767C;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1152px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #ffffff;
+  padding: 1rem;
+  -webkit-flex: 1 1 0px;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0px;
+  min-width: 30%;
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  font-family: 'Anton',Impact,sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c6 {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 0.06rem;
+}
+
+.c7 {
+  visibility: hidden;
+  white-space: pre-wrap;
+}
+
+.c8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 80ms;
+  transition-delay: 80ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c8[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c8[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c8[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c8[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 160ms;
+  transition-delay: 160ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c9[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c9[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c9[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c9[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 240ms;
+  transition-delay: 240ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c10[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c10[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c10[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c10[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c11 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 320ms;
+  transition-delay: 320ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 1600ms;
+  transition-duration: 1600ms;
+}
+
+.c11[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c11[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c11[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c11[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c12 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 400ms;
+  transition-delay: 400ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c12[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c12[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c12[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c12[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c13 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 480ms;
+  transition-delay: 480ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c13[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c13[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c13[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c13[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c14 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 560ms;
+  transition-delay: 560ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c14[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c14[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c14[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c14[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c15 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 640ms;
+  transition-delay: 640ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 1600ms;
+  transition-duration: 1600ms;
+}
+
+.c15[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c15[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c15[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c15[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c16 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 720ms;
+  transition-delay: 720ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c16[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c16[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c16[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c16[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c17 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 800ms;
+  transition-delay: 800ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c17[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c17[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c17[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c17[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c18 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 880ms;
+  transition-delay: 880ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c18[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c18[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c18[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c18[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c19 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 960ms;
+  transition-delay: 960ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 1600ms;
+  transition-duration: 1600ms;
+}
+
+.c19[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c19[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c19[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c19[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c20 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 1040ms;
+  transition-delay: 1040ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c20[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c20[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c20[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c20[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c21 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 1120ms;
+  transition-delay: 1120ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c21[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c21[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c21[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c21[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c22 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 0;
+  text-transform: uppercase;
+  font-family: 'Anton',Impact,sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.c24 {
+  font-size: 1rem;
+}
+
+@media (min-width:740px) {
+  .c23 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c23 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 {
+    padding: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    font-size: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c8 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c9 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c10 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c11 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c12 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c13 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c14 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c15 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c16 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c17 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c18 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c19 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c20 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c21 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (min-width:740px) {
+  .c22 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c22 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c24 {
+    font-size: 1.25rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          aria-hidden="true"
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                1
+              </div>
+              <div
+                className="c8"
+                data-ease="none"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                2
+              </div>
+              <div
+                className="c9"
+                data-ease="none"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                3
+              </div>
+              <div
+                className="c10"
+                data-ease="none"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                ,
+              </div>
+              <div
+                className="c11"
+                data-ease="none"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  ,
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                4
+              </div>
+              <div
+                className="c12"
+                data-ease="none"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                5
+              </div>
+              <div
+                className="c13"
+                data-ease="none"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                6
+              </div>
+              <div
+                className="c14"
+                data-ease="none"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                ,
+              </div>
+              <div
+                className="c15"
+                data-ease="none"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  ,
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                7
+              </div>
+              <div
+                className="c16"
+                data-ease="none"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                8
+              </div>
+              <div
+                className="c17"
+                data-ease="none"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                9
+              </div>
+              <div
+                className="c18"
+                data-ease="none"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                .
+              </div>
+              <div
+                className="c19"
+                data-ease="none"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  .
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                0
+              </div>
+              <div
+                className="c20"
+                data-ease="none"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                2
+              </div>
+              <div
+                className="c21"
+                data-ease="none"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div
+          className="c22"
+        >
+          123,456,789.02
+        </div>
+      </div>
+      <span
+        className="c23 c24"
+      >
+        hello
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Stats Slices with multiple nodes should render 1`] = `
+.c23 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c23 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c0 {
+  padding: 2rem 1rem 2rem;
+  background: #13767C;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1152px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #ffffff;
+  padding: 1rem;
+  -webkit-flex: 1 1 0px;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0px;
+  min-width: 30%;
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  font-family: 'Anton',Impact,sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c6 {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 0.06rem;
+}
+
+.c7 {
+  visibility: hidden;
+  white-space: pre-wrap;
+}
+
+.c8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 80ms;
+  transition-delay: 80ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c8[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c8[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c8[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c8[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 160ms;
+  transition-delay: 160ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c9[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c9[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c9[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c9[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 240ms;
+  transition-delay: 240ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c10[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c10[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c10[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c10[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c11 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 320ms;
+  transition-delay: 320ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 1600ms;
+  transition-duration: 1600ms;
+}
+
+.c11[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c11[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c11[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c11[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c12 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 400ms;
+  transition-delay: 400ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c12[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c12[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c12[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c12[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c13 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 480ms;
+  transition-delay: 480ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c13[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c13[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c13[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c13[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c14 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 560ms;
+  transition-delay: 560ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c14[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c14[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c14[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c14[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c15 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 640ms;
+  transition-delay: 640ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 1600ms;
+  transition-duration: 1600ms;
+}
+
+.c15[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c15[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c15[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c15[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c16 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 720ms;
+  transition-delay: 720ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c16[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c16[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c16[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c16[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c17 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 800ms;
+  transition-delay: 800ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c17[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c17[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c17[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c17[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c18 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 880ms;
+  transition-delay: 880ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c18[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c18[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c18[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c18[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c19 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 960ms;
+  transition-delay: 960ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 1600ms;
+  transition-duration: 1600ms;
+}
+
+.c19[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c19[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c19[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c19[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c20 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 1040ms;
+  transition-delay: 1040ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c20[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c20[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c20[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c20[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c21 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition-delay: 1120ms;
+  transition-delay: 1120ms;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 2000ms;
+  transition-duration: 2000ms;
+}
+
+.c21[data-ease="none"] {
+  -webkit-transition-property: none;
+  transition-property: none;
+  -webkit-transition-delay: 0;
+  transition-delay: 0;
+}
+
+.c21[data-ease="cubic"] {
+  -webkit-transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+  transition-timing-function: cubic-bezier(0.22,1,0.36,1);
+}
+
+.c21[data-ease="overshoot"] {
+  -webkit-transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+  transition-timing-function: linear( 0,0.329 8.8%,0.59 18%,0.787 27.7%,0.863 32.8%,0.926 38.2%,0.968 43.1%,1 48.3%,1.022 53.7%,1.034 59.6%,1.035 69.8%,1.006 90.7%,1 );
+}
+
+.c21[data-ease="bounce"] {
+  -webkit-transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+  transition-timing-function: linear(0,0.384 15.4%,0.833 35.8%,1 44.7%,0.919 51.5%,0.9 54.7%,0.894 58%,0.911 63.8%,1 77.4%,0.985 84.4%,1);
+}
+
+.c22 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 0;
+  text-transform: uppercase;
+  font-family: 'Anton',Impact,sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.c24 {
+  font-size: 1rem;
+}
+
+@media (min-width:740px) {
+  .c23 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c23 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c0 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c2 {
+    padding: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    font-size: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c8 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c9 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c10 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c11 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c12 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c13 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c14 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c15 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c16 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c17 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c18 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c19 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c20 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c21 {
+    -webkit-transition-property: none;
+    transition-property: none;
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+@media (min-width:740px) {
+  .c22 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c22 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c24 {
+    font-size: 1.25rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          aria-hidden="true"
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                1
+              </div>
+              <div
+                className="c8"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                2
+              </div>
+              <div
+                className="c9"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                3
+              </div>
+              <div
+                className="c10"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                ,
+              </div>
+              <div
+                className="c11"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  ,
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                4
+              </div>
+              <div
+                className="c12"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                5
+              </div>
+              <div
+                className="c13"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                6
+              </div>
+              <div
+                className="c14"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                ,
+              </div>
+              <div
+                className="c15"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  ,
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                7
+              </div>
+              <div
+                className="c16"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                8
+              </div>
+              <div
+                className="c17"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                9
+              </div>
+              <div
+                className="c18"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                .
+              </div>
+              <div
+                className="c19"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  .
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                0
+              </div>
+              <div
+                className="c20"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                2
+              </div>
+              <div
+                className="c21"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div
+          className="c22"
+        >
+          123,456,789.02
+        </div>
+      </div>
+      <span
+        className="c23 c24"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+      </span>
+    </div>
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          aria-hidden="true"
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                4
+              </div>
+              <div
+                className="c8"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                5
+              </div>
+              <div
+                className="c9"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                6
+              </div>
+              <div
+                className="c10"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                ,
+              </div>
+              <div
+                className="c11"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  ,
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                7
+              </div>
+              <div
+                className="c12"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                8
+              </div>
+              <div
+                className="c13"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                9
+              </div>
+              <div
+                className="c14"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                ,
+              </div>
+              <div
+                className="c15"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  ,
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                1
+              </div>
+              <div
+                className="c16"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                2
+              </div>
+              <div
+                className="c17"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                3
+              </div>
+              <div
+                className="c18"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                .
+              </div>
+              <div
+                className="c19"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  .
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                0
+              </div>
+              <div
+                className="c20"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                2
+              </div>
+              <div
+                className="c21"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div
+          className="c22"
+        >
+          456,789,123.02
+        </div>
+      </div>
+      <span
+        className="c23 c24"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+      </span>
+    </div>
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          aria-hidden="true"
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                7
+              </div>
+              <div
+                className="c8"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                8
+              </div>
+              <div
+                className="c9"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                9
+              </div>
+              <div
+                className="c10"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                ,
+              </div>
+              <div
+                className="c11"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  ,
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                1
+              </div>
+              <div
+                className="c12"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                2
+              </div>
+              <div
+                className="c13"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                3
+              </div>
+              <div
+                className="c14"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                ,
+              </div>
+              <div
+                className="c15"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  ,
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                4
+              </div>
+              <div
+                className="c16"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                5
+              </div>
+              <div
+                className="c17"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                6
+              </div>
+              <div
+                className="c18"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                .
+              </div>
+              <div
+                className="c19"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  .
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                0
+              </div>
+              <div
+                className="c20"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                2
+              </div>
+              <div
+                className="c21"
+                data-ease="cubic"
+              >
+                <div>
+                   
+                </div>
+                <div>
+                  1
+                </div>
+                <div>
+                  2
+                </div>
+                <div>
+                  3
+                </div>
+                <div>
+                  4
+                </div>
+                <div>
+                  5
+                </div>
+                <div>
+                  6
+                </div>
+                <div>
+                  7
+                </div>
+                <div>
+                  8
+                </div>
+                <div>
+                  9
+                </div>
+                <div>
+                  0
+                </div>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div
+          className="c22"
+        >
+          789,123,456.02
+        </div>
+      </div>
+      <span
+        className="c23 c24"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+      </span>
+    </div>
+  </div>
+</div>
+`;
