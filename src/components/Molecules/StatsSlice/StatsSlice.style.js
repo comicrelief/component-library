@@ -2,6 +2,8 @@ import styled, { keyframes } from 'styled-components';
 import Text from '../../Atoms/Text/Text';
 
 export const OuterWrapper = styled.div`
+  display: flex;
+  justify-content: center;
   padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 1rem ${paddingBottom}`};
   background: ${({ theme, backgroundColour }) => theme.color(backgroundColour)};
 
