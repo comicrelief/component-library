@@ -162,7 +162,7 @@ exports[`Monthly donation renders correctly 1`] = `
   height: auto;
   background-color: #F4F3F5;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 0rem 1rem 2rem 1rem;
 }
 
 .c1 {
@@ -510,7 +510,7 @@ exports[`Monthly donation renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    padding: 2rem;
+    padding: 0rem 2rem 2rem 2rem;
   }
 }
 
@@ -768,17 +768,17 @@ exports[`Monthly donation renders correctly 1`] = `
                       type="string"
                       value={10}
                     />
-
+                    
                   </div>
                 </div>
-
+                
               </label>
             </div>
             <p
               className="c25"
             >
               <strong>
-                £10
+                £10 
               </strong>
             </p>
             <button
@@ -1034,7 +1034,7 @@ exports[`Single donation renders correctly 1`] = `
   height: auto;
   background-color: #F4F3F5;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 2rem 1rem;
 }
 
 .c1 {
@@ -1307,7 +1307,7 @@ exports[`Single donation renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 2rem;
   }
 }
 
@@ -1514,7 +1514,7 @@ exports[`Single donation renders correctly 1`] = `
                 <div
                   className="c14"
                 >
-
+                  
                   <div
                     className="c15"
                   >
@@ -1529,10 +1529,10 @@ exports[`Single donation renders correctly 1`] = `
                       type="button"
                       value="£ 10"
                     />
-
+                    
                   </div>
                 </div>
-
+                
               </label>
               <label
                 className="c11 c17"
@@ -1549,7 +1549,7 @@ exports[`Single donation renders correctly 1`] = `
                 <div
                   className="c14"
                 >
-
+                  
                   <div
                     className="c15"
                   >
@@ -1564,10 +1564,10 @@ exports[`Single donation renders correctly 1`] = `
                       type="button"
                       value="£ 20"
                     />
-
+                    
                   </div>
                 </div>
-
+                
               </label>
               <label
                 className="c11 c12"
@@ -1584,7 +1584,7 @@ exports[`Single donation renders correctly 1`] = `
                 <div
                   className="c14"
                 >
-
+                  
                   <div
                     className="c15"
                   >
@@ -1599,10 +1599,10 @@ exports[`Single donation renders correctly 1`] = `
                       type="button"
                       value="£ 30"
                     />
-
+                    
                   </div>
                 </div>
-
+                
               </label>
             </div>
             <div
@@ -1651,17 +1651,17 @@ exports[`Single donation renders correctly 1`] = `
                       type="string"
                       value={20}
                     />
-
+                    
                   </div>
                 </div>
-
+                
               </label>
             </div>
             <p
               className="c24"
             >
               <strong>
-                £20
+                £20 
               </strong>
               a support worker to visit 10 isolated young mums with postnatal depression in the UK.
             </p>
@@ -1842,7 +1842,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   height: auto;
   background-color: #F4F3F5;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 0rem 1rem 0rem 1rem;
 }
 
 .c1 {
@@ -2064,7 +2064,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    padding: 2rem;
+    padding: 0rem 2rem 0rem 2rem;
   }
 }
 
@@ -2249,17 +2249,17 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                       type="string"
                       value={10}
                     />
-
+                    
                   </div>
                 </div>
-
+                
               </label>
             </div>
             <p
               className="c20"
             >
               <strong>
-                £10
+                £10 
               </strong>
             </p>
             <button
@@ -2532,7 +2532,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
   height: auto;
   background-color: #F4F3F5;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 2rem 1rem;
 }
 
 .c1 {
@@ -3013,7 +3013,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 2rem;
   }
 }
 
@@ -3277,7 +3277,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
                 <div
                   className="c21"
                 >
-
+                  
                   <div
                     className="c22"
                   >
@@ -3292,10 +3292,10 @@ exports[`Text-only donate widget renders correctly 1`] = `
                       type="button"
                       value="£ 12.10"
                     />
-
+                    
                   </div>
                 </div>
-
+                
               </label>
               <label
                 className="c18 c24"
@@ -3312,7 +3312,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
                 <div
                   className="c21"
                 >
-
+                  
                   <div
                     className="c22"
                   >
@@ -3327,10 +3327,10 @@ exports[`Text-only donate widget renders correctly 1`] = `
                       type="button"
                       value="£ 50"
                     />
-
+                    
                   </div>
                 </div>
-
+                
               </label>
               <label
                 className="c18 c19"
@@ -3347,7 +3347,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
                 <div
                   className="c21"
                 >
-
+                  
                   <div
                     className="c22"
                   >
@@ -3362,10 +3362,10 @@ exports[`Text-only donate widget renders correctly 1`] = `
                       type="button"
                       value="£ 100"
                     />
-
+                    
                   </div>
                 </div>
-
+                
               </label>
             </div>
             <div
@@ -3414,17 +3414,17 @@ exports[`Text-only donate widget renders correctly 1`] = `
                       type="string"
                       value="50"
                     />
-
+                    
                   </div>
                 </div>
-
+                
               </label>
             </div>
             <p
               className="c31"
             >
               <strong>
-                £50
+                £50 
               </strong>
               could fund a specialist therapy session for a young person who has experienced or is at risk of homelessness
             </p>
