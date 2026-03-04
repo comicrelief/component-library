@@ -19,6 +19,14 @@ exports[`Stats Slices with a single node should render 1`] = `
 }
 
 .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 2rem 1rem 2rem;
   background: #13767C;
 }
@@ -1444,6 +1452,14 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
 }
 
 .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 2rem 1rem 2rem;
   background: #13767C;
 }
