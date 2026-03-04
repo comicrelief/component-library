@@ -33,7 +33,7 @@
 },
 {
     title: "789",
-    stat: "456,789,123 people who",
+    stat: "456,789,123 people",
     body: "Ut enim ad minima veniam, quis nostrum exercitationem."
 },
 {
@@ -43,7 +43,7 @@
 },
 {
     title: "xcv",
-    stat: "$800bn",
+    stat: "$800bn raised",
     body: "Ut enim ad minima veniam, quis nostrum exercitationem."
 }]}  />
 ```
