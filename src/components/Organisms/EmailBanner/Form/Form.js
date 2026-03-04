@@ -64,7 +64,7 @@ const EmailForm = ({
       >
         <OuterFieldset>
           {shouldShowTitleInForm && (
-            <PrimaryTitleText tag="span" color="black">
+            <PrimaryTitleText tag="span" color="black" $emailWidgetIsTextOnly={emailWidgetIsTextOnly}>
               {title}
             </PrimaryTitleText>
           )}

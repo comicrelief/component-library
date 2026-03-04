@@ -159,9 +159,10 @@ const OuterFieldset = styled.fieldset`
 const PrimaryTitleText = styled(Text)`
   display: block;
   width: 100%;
-  margin-bottom: ${spacing('sm')};
+  margin-bottom: ${({ $emailWidgetIsTextOnly }) => $emailWidgetIsTextOnly ? spacing('md') : spacing('sm')};
   text-align: left;
-  ${({ theme }) => fontHelper(theme, 'h4')}
+  ${({ theme, $emailWidgetIsTextOnly }) => fontHelper(theme, $emailWidgetIsTextOnly ? 'h1' : 'h4')}
+  font-family: ${({ theme, $emailWidgetIsTextOnly }) => theme.fontFamilies($emailWidgetIsTextOnly ? 'Anton' : 'Montserrat')};
 `;
 
 const FormFieldset = styled.div`
