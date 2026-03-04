@@ -7,9 +7,6 @@ import {
   OuterWrapper
 } from './StatsSlice.style';
 
-// stagger between characters in milliseconds
-const characterStagger = 80;
-
 // MARK: stats slice
 const StatsSlice = ({
   nodes,
@@ -17,6 +14,7 @@ const StatsSlice = ({
   paddingTop = '2rem',
   paddingBottom = '2rem',
   ease = 'cubic',
+  characterStagger = 80,
   stringCharacterDuration = '1600ms',
   numberCharacterDuration = '2000ms'
 }) => {
@@ -63,6 +61,7 @@ StatsSlice.propTypes = {
   paddingTop: PropTypes.string,
   paddingBottom: PropTypes.string,
   ease: PropTypes.string,
+  characterStagger: PropTypes.number,
   stringCharacterDuration: PropTypes.string,
   numberCharacterDuration: PropTypes.string
 };
