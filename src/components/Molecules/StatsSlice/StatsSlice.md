@@ -28,12 +28,22 @@
 },
 {
     title: "456",
-    stat: "456 people",
+    stat: "over 456 lives were saved",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
 },
 {
     title: "789",
-    stat: "over $800bn",
+    stat: "456,789,123 people who",
+    body: "Ut enim ad minima veniam, quis nostrum exercitationem."
+},
+{
+    title: "asd",
+    stat: "456 people",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+},
+{
+    title: "xcv",
+    stat: "$800bn",
     body: "Ut enim ad minima veniam, quis nostrum exercitationem."
 }]}  />
 ```
