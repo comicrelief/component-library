@@ -101,7 +101,6 @@ const EmailBanner = ({
               {title && (
                 <Text
                   tag="h1"
-                  size="big"
                   family="Anton"
                   weight="normal"
                 >
