@@ -195,6 +195,16 @@ const PrivacyCopyWrapper = styled.div`
   font-size: ${({ theme }) => theme.fontSize('xs')};
   line-height: normal;
   padding-bottom: ${spacing('sm')};
+
+  /* Forces the descendants to inherit the same font size and line height here,
+  because contentful's WYSIWYG editor doesn't offer the particular text
+  styles we want here */
+  & p,
+  & span,
+  & * {
+    font-size: inherit;
+    line-height: inherit;
+  }
 `;
 
 const SuccessCopyWrapper = styled.div`
