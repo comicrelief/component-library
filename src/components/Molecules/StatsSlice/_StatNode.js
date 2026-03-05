@@ -3,25 +3,15 @@ import React, { useRef, useState, useEffect } from 'react';
 import altCtaUnderline from '../../../theme/shared/assets/alt_cta_underline.svg';
 import {
   AccessibleValue,
-  AnimatedCharacter,
-  AnimatedDigit,
   Body,
-  SpacingCharacter,
   StatContainer,
   StatValue,
   ValueContainer,
   ValueUnderline,
   Word
 } from './StatsSlice.style';
-
-/**
- * check whether a string character is a number or a string
- * @param {string} character
- * @returns {'string' | 'number'}
- */
-function getValueType(character) {
-  return Number.isNaN(parseInt(character, 10)) ? 'string' : 'number';
-}
+import splitStatString from './_utils';
+import { AnimatedStringCharacter, AnimatedNumberCharacter } from './_Characters';
 
 // MARK: stat
 export default function StatNodeComponent({
@@ -66,16 +56,7 @@ export default function StatNodeComponent({
   // split value into words and characters,
   // and get the type of each character;
   // we animate string and numeric values differently
-  const words = stat
-    .split(' ')
-    .map(word => word.split('').map(character => {
-      const type = getValueType(character);
-      return {
-        word,
-        character,
-        type
-      };
-    }));
+  const wordObjList = splitStatString(stat);
 
   // track delay for each character for a staggered effect
   let characterDelay = startDelayRef.current;
@@ -84,7 +65,7 @@ export default function StatNodeComponent({
     <StatContainer>
       <ValueContainer>
         <StatValue aria-hidden="true" ref={elRef}>
-          {words.map((wordObj, wordIndex) => {
+          {wordObjList.map((wordObj, wordIndex) => {
             // slightly gnarly here as we need to create a span for each word,
             // then the characters within that span;
             // this is to allow us to break lines at word boundaries,
@@ -95,37 +76,35 @@ export default function StatNodeComponent({
             return (
               <Word key={wordKey}>
                 {wordObj.map(({ character, type }, characterIndex) => {
-                  const characterKey = wordKey + String(characterIndex) + character;
+                  const characterKey = String(characterIndex) + character;
                   // update the character delay for the next character;
                   // this gives us a nice staggered effect
                   characterDelay += characterStagger;
-                  // characterIndex += 1;
+
+                  let CharacterComponent = null;
+                  let characterDuration = null;
                   switch (type) {
                     case 'string':
-                      return (
-                        <AnimatedStringCharacter
-                          key={characterKey}
-                          character={character}
-                          delay={characterDelay}
-                          ease={ease}
-                          characterDuration={stringCharacterDuration}
-                          isVisible={isVisible}
-                        />
-                      );
-                    case 'number':
-                      return (
-                        <AnimatedNumberCharacter
-                          key={characterKey}
-                          character={character}
-                          delay={characterDelay}
-                          ease={ease}
-                          characterDuration={numberCharacterDuration}
-                          isVisible={isVisible}
-                        />
-                      );
                     default:
-                      return null;
+                      CharacterComponent = AnimatedStringCharacter;
+                      characterDuration = stringCharacterDuration;
+                      break;
+                    case 'number':
+                      CharacterComponent = AnimatedNumberCharacter;
+                      characterDuration = numberCharacterDuration;
+                      break;
                   }
+
+                  return (
+                    <CharacterComponent
+                      key={characterKey}
+                      character={character}
+                      delay={characterDelay}
+                      ease={ease}
+                      characterDuration={characterDuration}
+                      isVisible={isVisible}
+                    />
+                  );
                 })}
               </Word>
             );
@@ -151,79 +130,4 @@ StatNodeComponent.propTypes = {
   stringCharacterDuration: PropTypes.string,
   numberCharacterDuration: PropTypes.string,
   body: PropTypes.node
-};
-
-// MARK: string
-function AnimatedStringCharacter({
-  character,
-  delay,
-  ease,
-  characterDuration,
-  isVisible
-}) {
-  const digitRef = useRef();
-
-  if (isVisible) {
-    digitRef.current?.style.setProperty('transform', 'translateY(-50%)');
-  }
-
-  return (
-    <AnimatedCharacter>
-      <SpacingCharacter>{character}</SpacingCharacter>
-      <AnimatedDigit ref={digitRef} duration={characterDuration} delay={delay} data-ease={ease}>
-        <div>&nbsp;</div>
-        <div>{character}</div>
-      </AnimatedDigit>
-    </AnimatedCharacter>
-  );
-}
-AnimatedStringCharacter.propTypes = {
-  character: PropTypes.string.isRequired,
-  delay: PropTypes.number,
-  ease: PropTypes.string,
-  characterDuration: PropTypes.string,
-  isVisible: PropTypes.bool
-};
-
-// MARK: number
-function AnimatedNumberCharacter({
-  character,
-  delay,
-  ease,
-  characterDuration,
-  isVisible
-}) {
-  const digitRef = useRef();
-
-  if (isVisible) {
-    // calculate offset to show the required digit
-    const transform = `translateY(-${(100 / 11) * (+character || 10)}%)`;
-    digitRef.current?.style.setProperty('transform', transform);
-  }
-
-  return (
-    <AnimatedCharacter>
-      <SpacingCharacter>{character}</SpacingCharacter>
-      <AnimatedDigit ref={digitRef} duration={characterDuration} delay={delay} data-ease={ease}>
-        <div>&nbsp;</div>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>0</div>
-      </AnimatedDigit>
-    </AnimatedCharacter>
-  );
-}
-AnimatedNumberCharacter.propTypes = {
-  character: PropTypes.string.isRequired,
-  delay: PropTypes.number,
-  ease: PropTypes.string,
-  characterDuration: PropTypes.string,
-  isVisible: PropTypes.bool
 };
