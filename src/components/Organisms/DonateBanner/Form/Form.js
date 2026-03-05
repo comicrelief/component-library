@@ -200,10 +200,7 @@ const Signup = ({
   const titleTag = donateWidgetIsTextOnly ? 'h1' : 'p';
 
   return (
-    <FormWrapper
-      donateOrientation={donateOrientation}
-      shouldShowTitleSection={shouldShowTitleSection}
-    >
+    <FormWrapper orientation={donateOrientation}>
       <Form
         donateOrientation={donateOrientation}
         hasTopImage={hasTopImage}
