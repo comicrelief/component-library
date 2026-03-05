@@ -654,11 +654,9 @@ exports[`Monthly donation renders correctly 1`] = `
     <div
       aria-live="polite"
       className="c2"
-      orientation="right"
     >
       <div
         className="c3"
-        orientation="right"
       >
         <form
           className="c4"
@@ -1473,11 +1471,9 @@ exports[`Single donation renders correctly 1`] = `
     <div
       aria-live="polite"
       className="c2"
-      orientation="left"
     >
       <div
         className="c3"
-        orientation="left"
       >
         <form
           className="c4"
@@ -2182,11 +2178,9 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
     <div
       aria-live="polite"
       className="c2"
-      orientation="right"
     >
       <div
         className="c3"
-        orientation="right"
       >
         <form
           className="c4"
@@ -3197,11 +3191,9 @@ exports[`Text-only donate widget renders correctly 1`] = `
     <div
       aria-live="polite"
       className="c2"
-      orientation="right"
     >
       <div
         className="c3"
-        orientation="right"
       >
         <form
           className="c4"

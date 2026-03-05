@@ -112,14 +112,13 @@ const DonateBanner = ({
         )}
 
         <Wrapper
-          orientation={donateOrientation}
           aria-live="polite"
           noTitlesAtAll={noTitlesAtAll}
           hasTopImage={shouldRenderTopImage}
           showTitleSection={shouldShowTitleSection}
         >
           {shouldShowTitleSection && (
-          <TitleWrapperOuter orientation={donateOrientation}>
+          <TitleWrapperOuter $orientation={donateOrientation}>
             <TitleWrapperInner>
               {showCopy && (
               <>

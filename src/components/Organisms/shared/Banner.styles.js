@@ -83,7 +83,7 @@ const TitleWrapperOuter = styled.div`
     width: auto;
     padding: 0;
     align-items: center;
-    order: ${({ orientation }) => (orientation === 'left' ? 2 : 1)};
+    order: ${({ $orientation }) => ($orientation === 'left' ? 2 : 1)};
   }
 `;
 
@@ -101,10 +101,10 @@ const FormWrapper = styled.div`
     min-width: 0;
     width: auto;
     display: flex;
-    justify-content: ${({ orientation }) => (
-    orientation === 'left' ? 'flex-start' : 'flex-end'
+    justify-content: ${({ $orientation }) => (
+    $orientation === 'left' ? 'flex-start' : 'flex-end'
   )};
-    order: ${({ orientation }) => (orientation === 'left' ? 1 : 2)};
+    order: ${({ $orientation }) => ($orientation === 'left' ? 1 : 2)};
   }
 `;
 

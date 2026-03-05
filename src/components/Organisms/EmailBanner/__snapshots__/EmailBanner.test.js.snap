@@ -543,17 +543,14 @@ exports[`Image banner left orientation renders correctly 1`] = `
     <div
       aria-live="polite"
       className="c2"
-      orientation="left"
     >
       <div
         className="c3"
-        orientation="left"
       >
         <form
           className="c4"
           noValidate={true}
           onSubmit={[Function]}
-          orientation="left"
         >
           <fieldset
             className="c5"
@@ -1279,17 +1276,14 @@ exports[`Image banner renders correctly 1`] = `
     <div
       aria-live="polite"
       className="c2"
-      orientation="right"
     >
       <div
         className="c3"
-        orientation="right"
       >
         <form
           className="c4"
           noValidate={true}
           onSubmit={[Function]}
-          orientation="right"
         >
           <fieldset
             className="c5"
@@ -2015,17 +2009,14 @@ exports[`Text-only email widget renders correctly 1`] = `
     <div
       aria-live="polite"
       className="c2"
-      orientation="right"
     >
       <div
         className="c3"
-        orientation="right"
       >
         <form
           className="c4"
           noValidate={true}
           onSubmit={[Function]}
-          orientation="right"
         >
           <fieldset
             className="c5"
@@ -2751,17 +2742,14 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
     <div
       aria-live="polite"
       className="c2"
-      orientation="right"
     >
       <div
         className="c3"
-        orientation="right"
       >
         <form
           className="c4"
           noValidate={true}
           onSubmit={[Function]}
-          orientation="right"
         >
           <fieldset
             className="c5"
