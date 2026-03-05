@@ -198,6 +198,24 @@ exports[`Image banner left orientation renders correctly 1`] = `
   padding: 2rem 1rem 2rem 1rem;
 }
 
+.c1 {
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: none;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c1:hover button[data-play-pause],
+.c1:focus-within button[data-play-pause] {
+  opacity: 0.8;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
 .c2 {
   position: relative;
   text-align: center;
@@ -233,23 +251,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-}
-
-.c1 {
-  position: relative;
-  background-color: #FFFFFF;
-  border-radius: 1rem;
-  overflow: hidden;
-  padding: none;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.c1:hover button[data-play-pause],
-.c1:focus-within button[data-play-pause] {
-  opacity: 0.8;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
 }
 
 .c4 {
@@ -421,6 +422,26 @@ exports[`Image banner left orientation renders correctly 1`] = `
 }
 
 @media (min-width:1024px) {
+  .c1 {
+    min-height: 700px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width:1024px) {
   .c2 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -452,26 +473,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
     -webkit-order: 1;
     -ms-flex-order: 1;
     order: 1;
-  }
-}
-
-@media (min-width:1024px) {
-  .c1 {
-    min-height: 700px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -933,6 +934,24 @@ exports[`Image banner renders correctly 1`] = `
   padding: 0rem 1rem 2rem 1rem;
 }
 
+.c1 {
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: none;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c1:hover button[data-play-pause],
+.c1:focus-within button[data-play-pause] {
+  opacity: 0.8;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
 .c2 {
   position: relative;
   text-align: center;
@@ -968,23 +987,6 @@ exports[`Image banner renders correctly 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-}
-
-.c1 {
-  position: relative;
-  background-color: #FFFFFF;
-  border-radius: 1rem;
-  overflow: hidden;
-  padding: none;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.c1:hover button[data-play-pause],
-.c1:focus-within button[data-play-pause] {
-  opacity: 0.8;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
 }
 
 .c4 {
@@ -1156,6 +1158,26 @@ exports[`Image banner renders correctly 1`] = `
 }
 
 @media (min-width:1024px) {
+  .c1 {
+    min-height: 700px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width:1024px) {
   .c2 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1187,26 +1209,6 @@ exports[`Image banner renders correctly 1`] = `
     -webkit-order: 2;
     -ms-flex-order: 2;
     order: 2;
-  }
-}
-
-@media (min-width:1024px) {
-  .c1 {
-    min-height: 700px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -1668,6 +1670,24 @@ exports[`Text-only email widget renders correctly 1`] = `
   padding: 2rem 1rem 2rem 1rem;
 }
 
+.c1 {
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: none;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c1:hover button[data-play-pause],
+.c1:focus-within button[data-play-pause] {
+  opacity: 0.8;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
 .c2 {
   position: relative;
   text-align: center;
@@ -1703,23 +1723,6 @@ exports[`Text-only email widget renders correctly 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-}
-
-.c1 {
-  position: relative;
-  background-color: #FFFFFF;
-  border-radius: 1rem;
-  overflow: hidden;
-  padding: none;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.c1:hover button[data-play-pause],
-.c1:focus-within button[data-play-pause] {
-  opacity: 0.8;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
 }
 
 .c4 {
@@ -1891,6 +1894,26 @@ exports[`Text-only email widget renders correctly 1`] = `
 }
 
 @media (min-width:1024px) {
+  .c1 {
+    min-height: 700px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width:1024px) {
   .c2 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1922,26 +1945,6 @@ exports[`Text-only email widget renders correctly 1`] = `
     -webkit-order: 2;
     -ms-flex-order: 2;
     order: 2;
-  }
-}
-
-@media (min-width:1024px) {
-  .c1 {
-    min-height: 700px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -2403,6 +2406,24 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   padding: 2rem 1rem 2rem 1rem;
 }
 
+.c1 {
+  position: relative;
+  background-color: #2C0230;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: none;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c1:hover button[data-play-pause],
+.c1:focus-within button[data-play-pause] {
+  opacity: 0.8;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
 .c2 {
   position: relative;
   text-align: center;
@@ -2438,23 +2459,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-}
-
-.c1 {
-  position: relative;
-  background-color: #2C0230;
-  border-radius: 1rem;
-  overflow: hidden;
-  padding: none;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.c1:hover button[data-play-pause],
-.c1:focus-within button[data-play-pause] {
-  opacity: 0.8;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
 }
 
 .c4 {
@@ -2626,6 +2630,26 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 }
 
 @media (min-width:1024px) {
+  .c1 {
+    min-height: 700px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width:1024px) {
   .c2 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2657,26 +2681,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
     -webkit-order: 2;
     -ms-flex-order: 2;
     order: 2;
-  }
-}
-
-@media (min-width:1024px) {
-  .c1 {
-    min-height: 700px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 

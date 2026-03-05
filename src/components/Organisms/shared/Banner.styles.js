@@ -2,6 +2,8 @@ import styled, { css } from 'styled-components';
 
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
+import { playPauseReveal } from '../../../theme/shared/animations';
 
 /**
  * Shared banner styles, currently used by EmailBanner and DonateBanner.
@@ -20,6 +22,29 @@ const Container = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} ${spacing('l')} ${paddingBelow} ${spacing('l')}`};
   }
+`;
+
+const InnerContainer = styled.div`
+  position: relative;
+  background-color: ${({ theme, componentBackgroundColour }) => theme.color(componentBackgroundColour)};
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: none;
+  width: 100%;
+  box-sizing: border-box;
+  ${defaultBoxShadow()}
+
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  ${playPauseReveal}
 `;
 
 const Wrapper = styled.div`
@@ -99,6 +124,7 @@ const FormFieldset = styled.div`
 
 export {
   Container,
+  InnerContainer,
   Wrapper,
   TitleWrapperOuter,
   TitleWrapperInner,

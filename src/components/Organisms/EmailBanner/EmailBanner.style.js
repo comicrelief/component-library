@@ -4,10 +4,10 @@ import fontHelper from '../../../theme/crTheme/fontHelper';
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
-import { playPauseReveal } from '../../../theme/shared/animations';
 
 import {
   Container,
+  InnerContainer,
   Wrapper,
   TitleWrapperOuter,
   TitleWrapperInner,
@@ -15,28 +15,6 @@ import {
   Error,
   FormFieldset
 } from '../shared/Banner.styles';
-
-const InnerContainer = styled.div`
-  position: relative;
-  background-color: ${({ theme, componentBackgroundColour }) => theme.color(componentBackgroundColour)};
-  border-radius: 1rem;
-  overflow: hidden;
-  padding: none;
-  width: 100%;
-  box-sizing: border-box;
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    min-height: 700px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-
-  ${playPauseReveal}
-`;
 
 const Form = styled.form`
   position: relative;
