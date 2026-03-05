@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 
+import fontHelper from '../../../theme/crTheme/fontHelper';
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
@@ -12,10 +13,12 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: auto;
-  margin: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} 0 ${paddingBelow} 0`};
   background-color: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
   width: 100%;
-  padding: 2rem;
+  padding: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} ${spacing('md')} ${paddingBelow} ${spacing('md')}`};
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    padding: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} ${spacing('l')} ${paddingBelow} ${spacing('l')}`};
+  }
 `;
 
 const InnerContainer = styled.div`
@@ -28,13 +31,10 @@ const InnerContainer = styled.div`
   box-sizing: border-box;
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     padding: ${spacing('l')} clamp(${spacing('l')}, 3%, ${spacing('xxl')});
-    min-height: 600px;
-    max-height: 750px;
-    ${({ $emailWidgetIsTextOnly }) => $emailWidgetIsTextOnly && css`
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    `}
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
     padding-left: ${spacing('xxl')};
@@ -64,7 +64,7 @@ const Wrapper = styled.div`
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     display: flex;
-    max-width: 1152px;
+    max-width: 1216px;
     gap: ${spacing('l')};
     flex-direction: row;
   }
@@ -138,7 +138,7 @@ const Form = styled.form`
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    border-radius: 0.5rem;
+    border-radius: ${spacing('md')};
     max-width: 461px;
     min-width: 400px;
     margin-left: 0;
@@ -159,10 +159,10 @@ const OuterFieldset = styled.fieldset`
 const PrimaryTitleText = styled(Text)`
   display: block;
   width: 100%;
-  margin-bottom: ${spacing('sm')};
+  margin-bottom: ${({ $emailWidgetIsTextOnly }) => ($emailWidgetIsTextOnly ? spacing('md') : spacing('sm'))};
   text-align: left;
-  font-size: ${({ theme }) => theme.fontSize('s')};
-  font-weight: 700;
+  ${({ theme, $emailWidgetIsTextOnly }) => fontHelper(theme, $emailWidgetIsTextOnly ? 'h1' : 'h4')}
+  font-family: ${({ theme, $emailWidgetIsTextOnly }) => theme.fontFamilies(($emailWidgetIsTextOnly ? 'Anton' : 'Montserrat'))};
 `;
 
 const FormFieldset = styled.div`
@@ -187,13 +187,14 @@ const InputField = styled.div`
 const BodyCopyWrapper = styled.div`
   padding-bottom: ${spacing('md')};
   color: ${({ theme }) => theme.color('black')};
+  ${({ theme }) => fontHelper(theme, 'span')}
 `;
 
 const PrivacyCopyWrapper = styled.div`
-  padding: ${spacing('md')} ${spacing('sm')} 0;
   color: ${({ theme }) => theme.color('black')};
-  font-size: ${({ theme }) => theme.fontSize('s')};
+  font-size: ${({ theme }) => theme.fontSize('xs')};
   line-height: normal;
+  padding-bottom: ${spacing('sm')};
 `;
 
 const SuccessCopyWrapper = styled.div`
@@ -202,7 +203,7 @@ const SuccessCopyWrapper = styled.div`
 `;
 
 const ButtonWrapper = styled.div`
-  margin: ${spacing('sm')} 0;
+  margin-top: ${spacing('md')};
 
   button {
     width: 100%;

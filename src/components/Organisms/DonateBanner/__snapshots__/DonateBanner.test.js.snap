@@ -160,10 +160,9 @@ exports[`Monthly donation renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
-  margin: 0rem 0 2rem;
   background-color: #F4F3F5;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 0rem 1rem 2rem 1rem;
 }
 
 .c1 {
@@ -511,7 +510,7 @@ exports[`Monthly donation renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    padding: 2rem;
+    padding: 0rem 2rem 2rem 2rem;
   }
 }
 
@@ -1033,10 +1032,9 @@ exports[`Single donation renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
-  margin: 2rem 0 2rem;
   background-color: #F4F3F5;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 2rem 1rem;
 }
 
 .c1 {
@@ -1309,7 +1307,7 @@ exports[`Single donation renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 2rem;
   }
 }
 
@@ -1842,10 +1840,9 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
-  margin: 0rem 0 0rem;
   background-color: #F4F3F5;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 0rem 1rem 0rem 1rem;
 }
 
 .c1 {
@@ -2067,7 +2064,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    padding: 2rem;
+    padding: 0rem 2rem 0rem 2rem;
   }
 }
 
@@ -2533,10 +2530,9 @@ exports[`Text-only donate widget renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
-  margin: 2rem 0 2rem;
   background-color: #F4F3F5;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 2rem 1rem;
 }
 
 .c1 {
@@ -3017,7 +3013,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 2rem;
   }
 }
 

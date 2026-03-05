@@ -64,7 +64,7 @@ const EmailForm = ({
       >
         <OuterFieldset>
           {shouldShowTitleInForm && (
-            <PrimaryTitleText tag="span" color="black">
+            <PrimaryTitleText tag="span" color="black" $emailWidgetIsTextOnly={emailWidgetIsTextOnly}>
               {title}
             </PrimaryTitleText>
           )}
@@ -128,6 +128,16 @@ const EmailForm = ({
                 <ErrorText size="error">{errors.formError.message}</ErrorText>
               )}
 
+              {privacyCopy && (
+                <PrivacyCopyWrapper>
+                  {typeof privacyCopy === 'string' ? (
+                    <RichText markup={privacyCopy} />
+                  ) : (
+                    privacyCopy
+                  )}
+                </PrivacyCopyWrapper>
+              )}
+
               <ButtonWrapper>
                 <ButtonWithStates
                   type="submit"
@@ -142,15 +152,6 @@ const EmailForm = ({
             </>
           )}
 
-          {privacyCopy && (
-            <PrivacyCopyWrapper>
-              {typeof privacyCopy === 'string' ? (
-                <RichText markup={privacyCopy} />
-              ) : (
-                privacyCopy
-              )}
-            </PrivacyCopyWrapper>
-          )}
         </OuterFieldset>
       </Form>
     </FormWrapper>
