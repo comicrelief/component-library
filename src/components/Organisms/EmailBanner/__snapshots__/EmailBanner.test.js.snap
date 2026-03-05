@@ -206,9 +206,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
   padding: none;
   width: 100%;
   box-sizing: border-box;
-  max-width: 1500px;
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c1:hover button[data-play-pause],
@@ -227,11 +225,32 @@ exports[`Image banner left orientation renders correctly 1`] = `
   align-items: center;
   display: block;
   width: 100%;
+  max-width: 1216px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .c3 {
   position: relative;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .c4 {
@@ -271,24 +290,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
   font-size: 1rem;
   line-height: 1.25rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
 }
 
 .c11 {
@@ -422,7 +423,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c1 {
-    padding: 2rem clamp(2rem,3%,8rem);
     min-height: 700px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -435,13 +435,9 @@ exports[`Image banner left orientation renders correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
-}
-
-@media (min-width:1440px) {
-  .c1 {
-    padding-left: 8rem;
-    padding-right: 8rem;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -451,7 +447,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    max-width: 1216px;
+    padding: 2rem;
     gap: 2rem;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -547,17 +543,14 @@ exports[`Image banner left orientation renders correctly 1`] = `
     <div
       aria-live="polite"
       className="c2"
-      orientation="left"
     >
       <div
         className="c3"
-        orientation="left"
       >
         <form
           className="c4"
           noValidate={true}
           onSubmit={[Function]}
-          orientation="left"
         >
           <fieldset
             className="c5"
@@ -946,9 +939,7 @@ exports[`Image banner renders correctly 1`] = `
   padding: none;
   width: 100%;
   box-sizing: border-box;
-  max-width: 1500px;
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c1:hover button[data-play-pause],
@@ -967,11 +958,32 @@ exports[`Image banner renders correctly 1`] = `
   align-items: center;
   display: block;
   width: 100%;
+  max-width: 1216px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .c3 {
   position: relative;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .c4 {
@@ -1011,24 +1023,6 @@ exports[`Image banner renders correctly 1`] = `
   font-size: 1rem;
   line-height: 1.25rem;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
 }
 
 .c11 {
@@ -1162,7 +1156,6 @@ exports[`Image banner renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c1 {
-    padding: 2rem clamp(2rem,3%,8rem);
     min-height: 700px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -1175,13 +1168,9 @@ exports[`Image banner renders correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
-}
-
-@media (min-width:1440px) {
-  .c1 {
-    padding-left: 8rem;
-    padding-right: 8rem;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1191,7 +1180,7 @@ exports[`Image banner renders correctly 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    max-width: 1216px;
+    padding: 2rem;
     gap: 2rem;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -1287,17 +1276,14 @@ exports[`Image banner renders correctly 1`] = `
     <div
       aria-live="polite"
       className="c2"
-      orientation="right"
     >
       <div
         className="c3"
-        orientation="right"
       >
         <form
           className="c4"
           noValidate={true}
           onSubmit={[Function]}
-          orientation="right"
         >
           <fieldset
             className="c5"
@@ -1686,9 +1672,7 @@ exports[`Text-only email widget renders correctly 1`] = `
   padding: none;
   width: 100%;
   box-sizing: border-box;
-  max-width: 1500px;
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c1:hover button[data-play-pause],
@@ -1707,11 +1691,32 @@ exports[`Text-only email widget renders correctly 1`] = `
   align-items: center;
   display: block;
   width: 100%;
+  max-width: 1216px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .c3 {
   position: relative;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .c4 {
@@ -1751,24 +1756,6 @@ exports[`Text-only email widget renders correctly 1`] = `
   font-size: 2rem;
   line-height: 2rem;
   font-family: 'Anton',Impact,sans-serif;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
 }
 
 .c11 {
@@ -1902,7 +1889,6 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c1 {
-    padding: 2rem clamp(2rem,3%,8rem);
     min-height: 700px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -1915,13 +1901,9 @@ exports[`Text-only email widget renders correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
-}
-
-@media (min-width:1440px) {
-  .c1 {
-    padding-left: 8rem;
-    padding-right: 8rem;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1931,7 +1913,7 @@ exports[`Text-only email widget renders correctly 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    max-width: 1216px;
+    padding: 2rem;
     gap: 2rem;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -2027,17 +2009,14 @@ exports[`Text-only email widget renders correctly 1`] = `
     <div
       aria-live="polite"
       className="c2"
-      orientation="right"
     >
       <div
         className="c3"
-        orientation="right"
       >
         <form
           className="c4"
           noValidate={true}
           onSubmit={[Function]}
-          orientation="right"
         >
           <fieldset
             className="c5"
@@ -2426,9 +2405,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   padding: none;
   width: 100%;
   box-sizing: border-box;
-  max-width: 1500px;
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c1:hover button[data-play-pause],
@@ -2447,11 +2424,32 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   align-items: center;
   display: block;
   width: 100%;
+  max-width: 1216px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .c3 {
   position: relative;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .c4 {
@@ -2491,24 +2489,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   font-size: 2rem;
   line-height: 2rem;
   font-family: 'Anton',Impact,sans-serif;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
 }
 
 .c11 {
@@ -2642,7 +2622,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c1 {
-    padding: 2rem clamp(2rem,3%,8rem);
     min-height: 700px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -2655,13 +2634,9 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
-}
-
-@media (min-width:1440px) {
-  .c1 {
-    padding-left: 8rem;
-    padding-right: 8rem;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -2671,7 +2646,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    max-width: 1216px;
+    padding: 2rem;
     gap: 2rem;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -2767,17 +2742,14 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
     <div
       aria-live="polite"
       className="c2"
-      orientation="right"
     >
       <div
         className="c3"
-        orientation="right"
       >
         <form
           className="c4"
           noValidate={true}
           onSubmit={[Function]}
-          orientation="right"
         >
           <fieldset
             className="c5"

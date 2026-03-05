@@ -176,6 +176,13 @@ exports[`Monthly donation renders correctly 1`] = `
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
+.c1:hover button[data-play-pause],
+.c1:focus-within button[data-play-pause] {
+  opacity: 0.8;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
 .c2 {
   position: relative;
   text-align: center;
@@ -193,6 +200,24 @@ exports[`Monthly donation renders correctly 1`] = `
 .c3 {
   position: relative;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .c4 {
@@ -248,24 +273,6 @@ exports[`Monthly donation renders correctly 1`] = `
   font-size: 1rem;
   line-height: 1.5;
   margin: 0.5rem 0 !important;
-}
-
-.c15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
 }
 
 .c17 {
@@ -531,13 +538,6 @@ exports[`Monthly donation renders correctly 1`] = `
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .c1:hover button[data-play-pause],
-  .c1:focus-within button[data-play-pause] {
-    opacity: 0.8;
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
   }
 }
 
@@ -1048,6 +1048,13 @@ exports[`Single donation renders correctly 1`] = `
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
+.c1:hover button[data-play-pause],
+.c1:focus-within button[data-play-pause] {
+  opacity: 0.8;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
 .c2 {
   position: relative;
   text-align: center;
@@ -1065,6 +1072,24 @@ exports[`Single donation renders correctly 1`] = `
 .c3 {
   position: relative;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .c4 {
@@ -1147,24 +1172,6 @@ exports[`Single donation renders correctly 1`] = `
 .c10 label input {
   cursor: pointer;
   padding: 0.5rem 1.5rem;
-}
-
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
 }
 
 .c20 {
@@ -1332,13 +1339,6 @@ exports[`Single donation renders correctly 1`] = `
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .c1:hover button[data-play-pause],
-  .c1:focus-within button[data-play-pause] {
-    opacity: 0.8;
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
   }
 }
 
@@ -1856,6 +1856,13 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
+.c1:hover button[data-play-pause],
+.c1:focus-within button[data-play-pause] {
+  opacity: 0.8;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
 .c2 {
   position: relative;
   text-align: center;
@@ -1873,6 +1880,24 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 .c3 {
   position: relative;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .c4 {
@@ -1928,24 +1953,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   font-size: 1rem;
   line-height: 1.5;
   margin: 0.5rem 0 !important;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
 }
 
 .c12 {
@@ -2085,13 +2092,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .c1:hover button[data-play-pause],
-  .c1:focus-within button[data-play-pause] {
-    opacity: 0.8;
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
   }
 }
 
@@ -2546,6 +2546,13 @@ exports[`Text-only donate widget renders correctly 1`] = `
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
+.c1:hover button[data-play-pause],
+.c1:focus-within button[data-play-pause] {
+  opacity: 0.8;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
 .c2 {
   position: relative;
   text-align: center;
@@ -2563,6 +2570,24 @@ exports[`Text-only donate widget renders correctly 1`] = `
 .c3 {
   position: relative;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .c4 {
@@ -2645,24 +2670,6 @@ exports[`Text-only donate widget renders correctly 1`] = `
 .c17 label input {
   cursor: pointer;
   padding: 0.5rem 1.5rem;
-}
-
-.c25 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
 }
 
 .c27 {
@@ -3038,13 +3045,6 @@ exports[`Text-only donate widget renders correctly 1`] = `
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .c1:hover button[data-play-pause],
-  .c1:focus-within button[data-play-pause] {
-    opacity: 0.8;
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
   }
 }
 

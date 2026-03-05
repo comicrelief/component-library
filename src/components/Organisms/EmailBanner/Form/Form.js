@@ -49,14 +49,10 @@ const EmailForm = ({
   );
 
   return (
-    <FormWrapper
-      orientation={orientation}
-      showTitleSection={showTitleSection}
-    >
+    <FormWrapper $orientation={orientation}>
       {isSubmitSuccessful && <Confetti trigger={isSubmitSuccessful} />}
 
       <Form
-        orientation={orientation}
         hasTopImage={hasTopImage}
         showTitleSection={showTitleSection}
         onSubmit={handleSubmit(onSubmit)}
