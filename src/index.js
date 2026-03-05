@@ -71,6 +71,7 @@ export { default as LogoLinked } from './components/Molecules/LogoLinked/LogoLin
 export { default as HeroBanner } from './components/Molecules/HeroBanner/HeroBanner';
 export { default as PictureOrVideo } from './components/Molecules/PictureOrVideo/PictureOrVideo';
 export { default as QuoteSlice } from './components/Molecules/QuoteSlice/QuoteSlice';
+export { default as StatsSlice } from './components/Molecules/StatsSlice/StatsSlice';
 
 /* Organisms */
 export {
