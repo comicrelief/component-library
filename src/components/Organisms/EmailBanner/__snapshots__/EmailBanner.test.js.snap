@@ -330,6 +330,13 @@ exports[`Image banner left orientation renders correctly 1`] = `
   padding-bottom: 0.5rem;
 }
 
+.c19 p,
+.c19 span,
+.c19 * {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c20 {
   margin-top: 1rem;
 }
@@ -1061,6 +1068,13 @@ exports[`Image banner renders correctly 1`] = `
   font-size: 0.75rem;
   line-height: normal;
   padding-bottom: 0.5rem;
+}
+
+.c19 p,
+.c19 span,
+.c19 * {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c20 {
@@ -1796,6 +1810,13 @@ exports[`Text-only email widget renders correctly 1`] = `
   padding-bottom: 0.5rem;
 }
 
+.c19 p,
+.c19 span,
+.c19 * {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c20 {
   margin-top: 1rem;
 }
@@ -2527,6 +2548,13 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   font-size: 0.75rem;
   line-height: normal;
   padding-bottom: 0.5rem;
+}
+
+.c19 p,
+.c19 span,
+.c19 * {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c20 {
