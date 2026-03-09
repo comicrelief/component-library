@@ -556,6 +556,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
       >
         <form
           className="c4"
+          data-test="email-banner"
           noValidate={true}
           onSubmit={[Function]}
         >
@@ -1296,6 +1297,7 @@ exports[`Image banner renders correctly 1`] = `
       >
         <form
           className="c4"
+          data-test="email-banner"
           noValidate={true}
           onSubmit={[Function]}
         >
@@ -2036,6 +2038,7 @@ exports[`Text-only email widget renders correctly 1`] = `
       >
         <form
           className="c4"
+          data-test="email-banner"
           noValidate={true}
           onSubmit={[Function]}
         >
@@ -2776,6 +2779,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
       >
         <form
           className="c4"
+          data-test="email-banner"
           noValidate={true}
           onSubmit={[Function]}
         >
