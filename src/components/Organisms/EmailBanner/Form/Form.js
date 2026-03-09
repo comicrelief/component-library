@@ -57,6 +57,7 @@ const EmailForm = ({
         showTitleSection={showTitleSection}
         onSubmit={handleSubmit(onSubmit)}
         noValidate
+        data-test="email-banner"
       >
         <OuterFieldset>
           {shouldShowTitleInForm && (
