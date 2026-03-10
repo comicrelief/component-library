@@ -10,7 +10,7 @@ import { breakpointValues2026 as breakpointValues } from '../../../theme/shared/
 import Button from '../../Atoms/Button/Button';
 import Lightbox, { LightboxContext } from './_Lightbox';
 import {
-  Container,
+  OuterWrapper,
   EmptyMessage,
   ImageGrid,
   FocusTrap
@@ -192,10 +192,9 @@ const DynamicGallery = ({
   }
 
   return (
-    <Container
+    <OuterWrapper
       className="gallery-container"
       ref={containerRef}
-      maxWidth={maxWidth}
       pageBackgroundColour={pageBackgroundColour}
       textColour={textColour}
       paddingTop={paddingTop}
@@ -212,7 +211,7 @@ const DynamicGallery = ({
           setFocusedNode
         }}
       >
-        <ImageGrid className="gallery-grid" onKeyDown={event => handleKeyDown(event)}>
+        <ImageGrid className="gallery-grid" maxWidth={maxWidth} onKeyDown={event => handleKeyDown(event)}>
           {hasNodes
           && Array(columnCount)
             .fill(null)
@@ -245,7 +244,7 @@ const DynamicGallery = ({
         </FocusTrap>
       </LightboxContext.Provider>
       {imageCount < nodes.length && <Button onClick={() => handleLoadMore()}>Show more</Button>}
-    </Container>
+    </OuterWrapper>
   );
 };
 
