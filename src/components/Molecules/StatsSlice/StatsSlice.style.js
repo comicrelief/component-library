@@ -1,5 +1,6 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import Text from '../../Atoms/Text/Text';
+import fontHelper from '../../../theme/crTheme/fontHelper';
 
 export const OuterWrapper = styled.div`
   display: flex;
@@ -17,6 +18,7 @@ export const InnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  flex: 1;
   gap: 1rem;
   max-width: 1152px;
 
@@ -32,15 +34,11 @@ export const StatContainer = styled.div`
   align-items: flex-start;
   gap: 1rem;
   background: #ffffff;
-  padding: 1rem;
+  padding: 2rem;
   flex: 1 1 0px;
   min-width: 30%;
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 1rem;
-
-  @media ${({ theme }) => theme.breakpoints2026('M')} {
-    padding: 2rem;
-  }
 `;
 
 export const ValueContainer = styled.div`
@@ -89,18 +87,7 @@ export const StatValue = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  text-transform: uppercase;
-  font-family: ${({ theme }) => theme.fontFamilies('Anton')};
-  font-size: ${({ theme }) => theme.fontSize('xl')};
-  line-height: 1;
-
-  @media ${({ theme }) => theme.breakpoints2026('M')} {
-    font-size: ${({ theme }) => theme.fontSize('xxl')};
-  }
-
-  @media ${({ theme }) => theme.breakpoints2026('L')} {
-    font-size: ${({ theme }) => theme.fontSize('xxl')};
-  }
+  ${({ theme }) => css`${fontHelper(theme, 'h1')}`}
 `;
 
 export const Word = styled.span`
@@ -165,7 +152,7 @@ export const AnimatedDigit = styled.div`
   }
 `;
 
-export const AccessibleValue = styled.div`
+export const AccessibleValue = styled.h2`
   position: absolute;
   width: 100%;
   height: 100%;
@@ -173,18 +160,7 @@ export const AccessibleValue = styled.div`
   top: 0;
   z-index: 1;
   opacity: 0;
-  text-transform: uppercase;
-  font-family: ${({ theme }) => theme.fontFamilies('Anton')};
-  font-size: ${({ theme }) => theme.fontSize('xl')};
-  line-height: 1;
-
-  @media ${({ theme }) => theme.breakpoints2026('M')} {
-    font-size: ${({ theme }) => theme.fontSize('xxl')};
-  }
-
-  @media ${({ theme }) => theme.breakpoints2026('L')} {
-    font-size: ${({ theme }) => theme.fontSize('xxl')};
-  }
+  ${({ theme }) => css`${fontHelper(theme, 'h1')}`}
 `;
 
 export const Body = styled(Text)`
