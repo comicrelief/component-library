@@ -39,7 +39,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
   line-height: inherit;
 }
 
-.c20 {
+.c21 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -76,20 +76,20 @@ exports[`Image banner left orientation renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c20 > a {
+.c21 > a {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c20:hover,
-.c20:focus,
-.c20:focus-within,
-.c20:focus-visible {
+.c21:hover,
+.c21:focus,
+.c21:focus-within,
+.c21:focus-visible {
   background-color: #890B11;
   outline-offset: 3px;
 }
 
-.c20:disabled {
+.c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -170,7 +170,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
   text-align: left;
 }
 
-.c21:disabled {
+.c22:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -193,10 +193,9 @@ exports[`Image banner left orientation renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
-  margin: 2rem 0 2rem 0;
   background-color: #F4F3F5;
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 1rem 2rem 1rem;
 }
 
 .c1 {
@@ -207,9 +206,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
   padding: none;
   width: 100%;
   box-sizing: border-box;
-  max-width: 1500px;
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c1:hover button[data-play-pause],
@@ -228,11 +225,32 @@ exports[`Image banner left orientation renders correctly 1`] = `
   align-items: center;
   display: block;
   width: 100%;
+  max-width: 1216px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .c3 {
   position: relative;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .c4 {
@@ -262,26 +280,16 @@ exports[`Image banner left orientation renders correctly 1`] = `
   width: 100%;
   margin-bottom: 0.5rem;
   text-align: left;
-  font-size: 1rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c11 {
@@ -304,20 +312,36 @@ exports[`Image banner left orientation renders correctly 1`] = `
 .c8 {
   padding-bottom: 1rem;
   color: #000000;
-}
-
-.c22 {
-  padding: 1rem 0.5rem 0;
-  color: #000000;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
-  line-height: normal;
+  line-height: 1.25rem;
 }
 
 .c19 {
-  margin: 0.5rem 0;
+  color: #000000;
+  font-size: 0.75rem;
+  line-height: normal;
+  padding-bottom: 0.5rem;
 }
 
-.c19 button {
+.c19 p,
+.c19 span,
+.c19 * {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c20 {
+  margin-top: 1rem;
+}
+
+.c20 button {
   width: 100%;
   min-height: 48px;
 }
@@ -351,27 +375,27 @@ exports[`Image banner left orientation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c20 {
+  .c21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c20 {
+  .c21 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:740px) {
-  .c20 {
+  .c21 {
     width: auto;
   }
 }
 
 @media (min-width:1024px) {
-  .c20 {
+  .c21 {
     width: auto;
   }
 }
@@ -398,18 +422,29 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 }
 
-@media (min-width:1024px) {
-  .c1 {
-    padding: 2rem clamp(2rem,3%,8rem);
-    min-height: 600px;
-    max-height: 750px;
+@media (min-width:740px) {
+  .c0 {
+    padding: 2rem 2rem 2rem 2rem;
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width:1024px) {
   .c1 {
-    padding-left: 8rem;
-    padding-right: 8rem;
+    min-height: 700px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -419,7 +454,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    max-width: 1152px;
+    padding: 2rem;
     gap: 2rem;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -458,7 +493,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c4 {
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     max-width: 461px;
     min-width: 400px;
     margin-left: 0;
@@ -473,7 +508,35 @@ exports[`Image banner left orientation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c19 button {
+  .c7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 button {
     padding: 1rem 2rem;
   }
 }
@@ -487,17 +550,15 @@ exports[`Image banner left orientation renders correctly 1`] = `
     <div
       aria-live="polite"
       className="c2"
-      orientation="left"
     >
       <div
         className="c3"
-        orientation="left"
       >
         <form
           className="c4"
+          data-test="email-banner"
           noValidate={true}
           onSubmit={[Function]}
-          orientation="left"
         >
           <fieldset
             className="c5"
@@ -647,8 +708,20 @@ exports[`Image banner left orientation renders correctly 1`] = `
             <div
               className="c19"
             >
+              <div
+                className="c9"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="c20"
+            >
               <button
-                className="c20 c21"
+                className="c21 c22"
                 color="red"
                 data-test="subscribe-button"
                 disabled={false}
@@ -659,18 +732,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
                   className=""
                 />
               </button>
-            </div>
-            <div
-              className="c22"
-            >
-              <div
-                className="c9"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
-                  }
-                }
-              />
             </div>
           </fieldset>
         </form>
@@ -719,7 +780,7 @@ exports[`Image banner renders correctly 1`] = `
   line-height: inherit;
 }
 
-.c20 {
+.c21 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -756,20 +817,20 @@ exports[`Image banner renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c20 > a {
+.c21 > a {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c20:hover,
-.c20:focus,
-.c20:focus-within,
-.c20:focus-visible {
+.c21:hover,
+.c21:focus,
+.c21:focus-within,
+.c21:focus-visible {
   background-color: #890B11;
   outline-offset: 3px;
 }
 
-.c20:disabled {
+.c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -850,7 +911,7 @@ exports[`Image banner renders correctly 1`] = `
   text-align: left;
 }
 
-.c21:disabled {
+.c22:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -873,10 +934,9 @@ exports[`Image banner renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
-  margin: 0rem 0 2rem 0;
   background-color: #F4F3F5;
   width: 100%;
-  padding: 2rem;
+  padding: 0rem 1rem 2rem 1rem;
 }
 
 .c1 {
@@ -887,9 +947,7 @@ exports[`Image banner renders correctly 1`] = `
   padding: none;
   width: 100%;
   box-sizing: border-box;
-  max-width: 1500px;
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c1:hover button[data-play-pause],
@@ -908,11 +966,32 @@ exports[`Image banner renders correctly 1`] = `
   align-items: center;
   display: block;
   width: 100%;
+  max-width: 1216px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .c3 {
   position: relative;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .c4 {
@@ -942,26 +1021,16 @@ exports[`Image banner renders correctly 1`] = `
   width: 100%;
   margin-bottom: 0.5rem;
   text-align: left;
-  font-size: 1rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
 .c11 {
@@ -984,20 +1053,36 @@ exports[`Image banner renders correctly 1`] = `
 .c8 {
   padding-bottom: 1rem;
   color: #000000;
-}
-
-.c22 {
-  padding: 1rem 0.5rem 0;
-  color: #000000;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
-  line-height: normal;
+  line-height: 1.25rem;
 }
 
 .c19 {
-  margin: 0.5rem 0;
+  color: #000000;
+  font-size: 0.75rem;
+  line-height: normal;
+  padding-bottom: 0.5rem;
 }
 
-.c19 button {
+.c19 p,
+.c19 span,
+.c19 * {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c20 {
+  margin-top: 1rem;
+}
+
+.c20 button {
   width: 100%;
   min-height: 48px;
 }
@@ -1031,27 +1116,27 @@ exports[`Image banner renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c20 {
+  .c21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c20 {
+  .c21 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:740px) {
-  .c20 {
+  .c21 {
     width: auto;
   }
 }
 
 @media (min-width:1024px) {
-  .c20 {
+  .c21 {
     width: auto;
   }
 }
@@ -1078,18 +1163,29 @@ exports[`Image banner renders correctly 1`] = `
 
 }
 
-@media (min-width:1024px) {
-  .c1 {
-    padding: 2rem clamp(2rem,3%,8rem);
-    min-height: 600px;
-    max-height: 750px;
+@media (min-width:740px) {
+  .c0 {
+    padding: 0rem 2rem 2rem 2rem;
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width:1024px) {
   .c1 {
-    padding-left: 8rem;
-    padding-right: 8rem;
+    min-height: 700px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1099,7 +1195,7 @@ exports[`Image banner renders correctly 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    max-width: 1152px;
+    padding: 2rem;
     gap: 2rem;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -1138,7 +1234,7 @@ exports[`Image banner renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c4 {
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     max-width: 461px;
     min-width: 400px;
     margin-left: 0;
@@ -1153,7 +1249,35 @@ exports[`Image banner renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c19 button {
+  .c7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 button {
     padding: 1rem 2rem;
   }
 }
@@ -1167,17 +1291,15 @@ exports[`Image banner renders correctly 1`] = `
     <div
       aria-live="polite"
       className="c2"
-      orientation="right"
     >
       <div
         className="c3"
-        orientation="right"
       >
         <form
           className="c4"
+          data-test="email-banner"
           noValidate={true}
           onSubmit={[Function]}
-          orientation="right"
         >
           <fieldset
             className="c5"
@@ -1327,8 +1449,20 @@ exports[`Image banner renders correctly 1`] = `
             <div
               className="c19"
             >
+              <div
+                className="c9"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="c20"
+            >
               <button
-                className="c20 c21"
+                className="c21 c22"
                 color="red"
                 data-test="subscribe-button"
                 disabled={false}
@@ -1339,18 +1473,6 @@ exports[`Image banner renders correctly 1`] = `
                   className=""
                 />
               </button>
-            </div>
-            <div
-              className="c22"
-            >
-              <div
-                className="c9"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
-                  }
-                }
-              />
             </div>
           </fieldset>
         </form>
@@ -1399,7 +1521,7 @@ exports[`Text-only email widget renders correctly 1`] = `
   line-height: inherit;
 }
 
-.c20 {
+.c21 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1436,20 +1558,20 @@ exports[`Text-only email widget renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c20 > a {
+.c21 > a {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c20:hover,
-.c20:focus,
-.c20:focus-within,
-.c20:focus-visible {
+.c21:hover,
+.c21:focus,
+.c21:focus-within,
+.c21:focus-visible {
   background-color: #890B11;
   outline-offset: 3px;
 }
 
-.c20:disabled {
+.c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -1530,7 +1652,7 @@ exports[`Text-only email widget renders correctly 1`] = `
   text-align: left;
 }
 
-.c21:disabled {
+.c22:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -1553,10 +1675,9 @@ exports[`Text-only email widget renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
-  margin: 2rem 0 2rem 0;
   background-color: #F4F3F5;
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 1rem 2rem 1rem;
 }
 
 .c1 {
@@ -1567,9 +1688,7 @@ exports[`Text-only email widget renders correctly 1`] = `
   padding: none;
   width: 100%;
   box-sizing: border-box;
-  max-width: 1500px;
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c1:hover button[data-play-pause],
@@ -1588,11 +1707,32 @@ exports[`Text-only email widget renders correctly 1`] = `
   align-items: center;
   display: block;
   width: 100%;
+  max-width: 1216px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .c3 {
   position: relative;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .c4 {
@@ -1620,28 +1760,18 @@ exports[`Text-only email widget renders correctly 1`] = `
 .c7 {
   display: block;
   width: 100%;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   text-align: left;
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-family: 'Anton',Impact,sans-serif;
 }
 
 .c11 {
@@ -1664,20 +1794,36 @@ exports[`Text-only email widget renders correctly 1`] = `
 .c8 {
   padding-bottom: 1rem;
   color: #000000;
-}
-
-.c22 {
-  padding: 1rem 0.5rem 0;
-  color: #000000;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
-  line-height: normal;
+  line-height: 1.25rem;
 }
 
 .c19 {
-  margin: 0.5rem 0;
+  color: #000000;
+  font-size: 0.75rem;
+  line-height: normal;
+  padding-bottom: 0.5rem;
 }
 
-.c19 button {
+.c19 p,
+.c19 span,
+.c19 * {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c20 {
+  margin-top: 1rem;
+}
+
+.c20 button {
   width: 100%;
   min-height: 48px;
 }
@@ -1711,27 +1857,27 @@ exports[`Text-only email widget renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c20 {
+  .c21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c20 {
+  .c21 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:740px) {
-  .c20 {
+  .c21 {
     width: auto;
   }
 }
 
 @media (min-width:1024px) {
-  .c20 {
+  .c21 {
     width: auto;
   }
 }
@@ -1756,13 +1902,17 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 @media (min-width:1024px) {
 
+}
+
+@media (min-width:740px) {
+  .c0 {
+    padding: 2rem 2rem 2rem 2rem;
+  }
 }
 
 @media (min-width:1024px) {
   .c1 {
-    padding: 2rem clamp(2rem,3%,8rem);
-    min-height: 600px;
-    max-height: 750px;
+    min-height: 700px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1774,13 +1924,9 @@ exports[`Text-only email widget renders correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
-}
-
-@media (min-width:1440px) {
-  .c1 {
-    padding-left: 8rem;
-    padding-right: 8rem;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1790,7 +1936,7 @@ exports[`Text-only email widget renders correctly 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    max-width: 1152px;
+    padding: 2rem;
     gap: 2rem;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -1829,7 +1975,7 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c4 {
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     max-width: 461px;
     min-width: 400px;
     margin-left: 0;
@@ -1844,7 +1990,35 @@ exports[`Text-only email widget renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c19 button {
+  .c7 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 button {
     padding: 1rem 2rem;
   }
 }
@@ -1858,17 +2032,15 @@ exports[`Text-only email widget renders correctly 1`] = `
     <div
       aria-live="polite"
       className="c2"
-      orientation="right"
     >
       <div
         className="c3"
-        orientation="right"
       >
         <form
           className="c4"
+          data-test="email-banner"
           noValidate={true}
           onSubmit={[Function]}
-          orientation="right"
         >
           <fieldset
             className="c5"
@@ -2018,8 +2190,20 @@ exports[`Text-only email widget renders correctly 1`] = `
             <div
               className="c19"
             >
+              <div
+                className="c9"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="c20"
+            >
               <button
-                className="c20 c21"
+                className="c21 c22"
                 color="red"
                 data-test="subscribe-button"
                 disabled={false}
@@ -2030,18 +2214,6 @@ exports[`Text-only email widget renders correctly 1`] = `
                   className=""
                 />
               </button>
-            </div>
-            <div
-              className="c22"
-            >
-              <div
-                className="c9"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
-                  }
-                }
-              />
             </div>
           </fieldset>
         </form>
@@ -2090,7 +2262,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   line-height: inherit;
 }
 
-.c20 {
+.c21 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2127,20 +2299,20 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c20 > a {
+.c21 > a {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c20:hover,
-.c20:focus,
-.c20:focus-within,
-.c20:focus-visible {
+.c21:hover,
+.c21:focus,
+.c21:focus-within,
+.c21:focus-visible {
   background-color: #890B11;
   outline-offset: 3px;
 }
 
-.c20:disabled {
+.c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -2221,7 +2393,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   text-align: left;
 }
 
-.c21:disabled {
+.c22:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -2244,10 +2416,9 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: auto;
-  margin: 2rem 0 2rem 0;
   background-color: #A20C51;
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 1rem 2rem 1rem;
 }
 
 .c1 {
@@ -2258,9 +2429,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   padding: none;
   width: 100%;
   box-sizing: border-box;
-  max-width: 1500px;
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c1:hover button[data-play-pause],
@@ -2279,11 +2448,32 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   align-items: center;
   display: block;
   width: 100%;
+  max-width: 1216px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .c3 {
   position: relative;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .c4 {
@@ -2311,28 +2501,18 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 .c7 {
   display: block;
   width: 100%;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   text-align: left;
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-family: 'Anton',Impact,sans-serif;
 }
 
 .c11 {
@@ -2355,20 +2535,36 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 .c8 {
   padding-bottom: 1rem;
   color: #000000;
-}
-
-.c22 {
-  padding: 1rem 0.5rem 0;
-  color: #000000;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
-  line-height: normal;
+  line-height: 1.25rem;
 }
 
 .c19 {
-  margin: 0.5rem 0;
+  color: #000000;
+  font-size: 0.75rem;
+  line-height: normal;
+  padding-bottom: 0.5rem;
 }
 
-.c19 button {
+.c19 p,
+.c19 span,
+.c19 * {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c20 {
+  margin-top: 1rem;
+}
+
+.c20 button {
   width: 100%;
   min-height: 48px;
 }
@@ -2402,27 +2598,27 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c20 {
+  .c21 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c20 {
+  .c21 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:740px) {
-  .c20 {
+  .c21 {
     width: auto;
   }
 }
 
 @media (min-width:1024px) {
-  .c20 {
+  .c21 {
     width: auto;
   }
 }
@@ -2447,13 +2643,17 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 
 @media (min-width:1024px) {
 
+}
+
+@media (min-width:740px) {
+  .c0 {
+    padding: 2rem 2rem 2rem 2rem;
+  }
 }
 
 @media (min-width:1024px) {
   .c1 {
-    padding: 2rem clamp(2rem,3%,8rem);
-    min-height: 600px;
-    max-height: 750px;
+    min-height: 700px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2465,13 +2665,9 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-  }
-}
-
-@media (min-width:1440px) {
-  .c1 {
-    padding-left: 8rem;
-    padding-right: 8rem;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -2481,7 +2677,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    max-width: 1152px;
+    padding: 2rem;
     gap: 2rem;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -2520,7 +2716,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c4 {
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     max-width: 461px;
     min-width: 400px;
     margin-left: 0;
@@ -2535,7 +2731,35 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c19 button {
+  .c7 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c20 button {
     padding: 1rem 2rem;
   }
 }
@@ -2549,17 +2773,15 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
     <div
       aria-live="polite"
       className="c2"
-      orientation="right"
     >
       <div
         className="c3"
-        orientation="right"
       >
         <form
           className="c4"
+          data-test="email-banner"
           noValidate={true}
           onSubmit={[Function]}
-          orientation="right"
         >
           <fieldset
             className="c5"
@@ -2709,8 +2931,20 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
             <div
               className="c19"
             >
+              <div
+                className="c9"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="c20"
+            >
               <button
-                className="c20 c21"
+                className="c21 c22"
                 color="red"
                 data-test="subscribe-button"
                 disabled={false}
@@ -2721,18 +2955,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                   className=""
                 />
               </button>
-            </div>
-            <div
-              className="c22"
-            >
-              <div
-                className="c9"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
-                  }
-                }
-              />
             </div>
           </fieldset>
         </form>

@@ -90,19 +90,17 @@ const EmailBanner = ({
         )}
 
         <Wrapper
-          orientation={orientation}
           aria-live="polite"
           noTitlesAtAll={noTitlesAtAll}
           hasTopImage={shouldRenderTopImage}
           showTitleSection={showTitleSection}
         >
           {showTitleSection && (
-          <TitleWrapperOuter orientation={orientation}>
+          <TitleWrapperOuter $orientation={orientation}>
             <TitleWrapperInner $copyColor={copyColor}>
               {title && (
                 <Text
-                  tag="h2"
-                  size="big"
+                  tag="h1"
                   family="Anton"
                   weight="normal"
                 >

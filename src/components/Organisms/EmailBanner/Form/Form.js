@@ -49,22 +49,19 @@ const EmailForm = ({
   );
 
   return (
-    <FormWrapper
-      orientation={orientation}
-      showTitleSection={showTitleSection}
-    >
+    <FormWrapper $orientation={orientation}>
       {isSubmitSuccessful && <Confetti trigger={isSubmitSuccessful} />}
 
       <Form
-        orientation={orientation}
         hasTopImage={hasTopImage}
         showTitleSection={showTitleSection}
         onSubmit={handleSubmit(onSubmit)}
         noValidate
+        data-test="email-banner"
       >
         <OuterFieldset>
           {shouldShowTitleInForm && (
-            <PrimaryTitleText tag="span" color="black">
+            <PrimaryTitleText tag="span" color="black" $emailWidgetIsTextOnly={emailWidgetIsTextOnly}>
               {title}
             </PrimaryTitleText>
           )}
@@ -128,6 +125,16 @@ const EmailForm = ({
                 <ErrorText size="error">{errors.formError.message}</ErrorText>
               )}
 
+              {privacyCopy && (
+                <PrivacyCopyWrapper>
+                  {typeof privacyCopy === 'string' ? (
+                    <RichText markup={privacyCopy} />
+                  ) : (
+                    privacyCopy
+                  )}
+                </PrivacyCopyWrapper>
+              )}
+
               <ButtonWrapper>
                 <ButtonWithStates
                   type="submit"
@@ -142,15 +149,6 @@ const EmailForm = ({
             </>
           )}
 
-          {privacyCopy && (
-            <PrivacyCopyWrapper>
-              {typeof privacyCopy === 'string' ? (
-                <RichText markup={privacyCopy} />
-              ) : (
-                privacyCopy
-              )}
-            </PrivacyCopyWrapper>
-          )}
         </OuterFieldset>
       </Form>
     </FormWrapper>
