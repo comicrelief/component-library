@@ -87,7 +87,6 @@ const imageS = {
   monthlySubtitle="A regular gift helps fund long-term impact."
   chooseAmountText="Choose a one-off amount"
   monthlyChooseAmountText="Choose a monthly amount"
-  popUpText="Switching to a single gift means less predictable funding."
 />;
 ```
 
@@ -137,7 +136,30 @@ import data from './dev-data/data';
 />;
 ```
 
-## Different “Other amount” copy for single vs monthly
+## Text-only widget (no image), with giving selector (single vs monthly)
+
+```js
+import data from './dev-data/data';
+
+<DonateBanner
+  donateWidgetIsTextOnly
+  pageBackgroundColour="grey_light"
+  paddingAbove="2rem"
+  paddingBelow="2rem"
+  donateOrientation="right"
+  data={data}
+  mbshipID="mbship-3c"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate now"
+  subtitle="Choose between a one-off or monthly gift."
+  monthlyTitle="Give monthly"
+  monthlySubtitle="A regular gift helps fund long-term impact."
+/>;
+```
+
+## Different "Other amount" copy for single vs monthly
 
 ```js
 import data from './dev-data/data';
@@ -164,5 +186,99 @@ const imageL = {
   subtitle="Help fund life-changing work."
   otherAmountText="can help support people in crisis."
   monthlyOtherAmountText="each month can help provide long-term support."
+/>;
+```
+
+## Image banner with Ambient Video (looping)
+
+When imageL/imageM/imageS have images & imageLow and videoDesktop & videoMobile are provided, DonateBanner uses AmbientVideo instead of Picture.
+
+```js
+import data from './dev-data/data';
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+
+const imageL = {
+  images: desktopPictures.images,
+  imageLow: desktopPictures.imageLow,
+  alt: 'Video poster'
+};
+
+const imageM = {
+  images: desktopPictures.images,
+  imageLow: desktopPictures.imageLow,
+  alt: 'Video poster'
+};
+
+const imageS = {
+  images: mobilePictures.images,
+  imageLow: mobilePictures.imageLow,
+  alt: 'Video poster'
+};
+
+<DonateBanner
+  pageBackgroundColour="grey_light"
+  paddingAbove="0rem"
+  paddingBelow="2rem"
+  donateOrientation="right"
+  imageL={imageL}
+  imageM={imageM}
+  imageS={imageS}
+  videoDesktop={require('../../Atoms/AmbientVideo/big-buck-bunny-1080p-30sec.mp4').default}
+  videoMobile={require('../../Atoms/AmbientVideo/thetestdatacom_480p_example.mp4').default}
+  videoLoop
+  data={data}
+  mbshipID="mbship-5"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate Now"
+  subtitle="Please help us fund life-changing projects in the UK and around the world."
+/>;
+```
+
+## Image banner with Ambient Video (no loop)
+
+```js
+import data from './dev-data/data';
+const desktopPictures = require('../../../styleguide/data/data').defaultData;
+const mobilePictures = require('../../../styleguide/data/data').mobileImages;
+
+const imageL = {
+  images: desktopPictures.images,
+  imageLow: desktopPictures.imageLow,
+  alt: 'Video poster'
+};
+
+const imageM = {
+  images: desktopPictures.images,
+  imageLow: desktopPictures.imageLow,
+  alt: 'Video poster'
+};
+
+const imageS = {
+  images: mobilePictures.images,
+  imageLow: mobilePictures.imageLow,
+  alt: 'Video poster'
+};
+
+<DonateBanner
+  pageBackgroundColour="grey_light"
+  paddingAbove="0rem"
+  paddingBelow="2rem"
+  donateOrientation="left"
+  imageL={imageL}
+  imageM={imageM}
+  imageS={imageS}
+  videoDesktop={require('../../Atoms/AmbientVideo/big-buck-bunny-1080p-30sec.mp4').default}
+  videoMobile={require('../../Atoms/AmbientVideo/thetestdatacom_480p_example.mp4').default}
+  videoLoop={false}
+  data={data}
+  mbshipID="mbship-6"
+  donateLink="https://donation.comicrelief.com/"
+  clientID="donate"
+  cartID="default-comicrelief"
+  title="Donate today"
+  subtitle="Your support can help people facing the toughest times."
 />;
 ```

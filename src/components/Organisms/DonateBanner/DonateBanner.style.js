@@ -3,123 +3,25 @@ import styled, { css } from 'styled-components';
 import Input from '../../Atoms/Input/Input';
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
-import Picture from '../../Atoms/Picture/Picture';
 import zIndex from '../../../theme/shared/zIndex';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
-const Container = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  margin: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} 0 ${paddingBelow}`};
-  background-color: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
-  width: 100%;
-  padding: 2rem;
-`;
-
-const InnerContainer = styled.div`
-  position: relative;
-  background-color: ${({ theme, componentBackgroundColour }) => theme.color(componentBackgroundColour)};
-  border-radius: 1rem;
-  overflow: hidden;
-  padding: none;
-  width: 100%;
-  box-sizing: border-box;
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    padding: ${spacing('l')};
-    ${({ $donateWidgetIsTextOnly }) => $donateWidgetIsTextOnly && css`
-      padding-top: 7.5rem;
-      padding-bottom: 7.5rem;
-    `}
-  }
-  @media ${({ theme }) => theme.allBreakpoints('XL')} {
-    padding-left: ${spacing('xxl')};
-    padding-right: ${spacing('xxl')};
-  }
-  max-width: 1500px;
-`;
-
-const BgImage = styled(Picture)`
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-`;
-
-const Wrapper = styled.div`
-  position: relative;
-  text-align: center;
-  align-items: center;
-  display: block;
-  width: 100%;
-
-  ${({ hasTopImage, shouldShowTitleSection }) => hasTopImage && !shouldShowTitleSection && css`
-    padding: 0;
-  `}
-
-  ${({ noTitlesAtAll }) => noTitlesAtAll === true && css`
-    justify-content: center;
-  `};
-
-
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    display: flex;
-    padding: ${spacing('l')} ${spacing('md')};
-    gap: ${spacing('l')};
-    flex-direction: row;
-  }
-`;
-
-const TitleWrapperOuter = styled.div`
-  width: 100%;
-  display: flex;
-  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
-  padding-bottom: ${spacing('l')};
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    flex: 1 1 0;
-    width: auto;
-    padding: 0;
-    align-items: center;
-    order: ${({ donateOrientation }) => (donateOrientation === 'left' ? 2 : 1)};
-  }
-`;
-
-const TitleWrapperInner = styled.div`
-  position: relative;
-  text-align: left;
-`;
-
-const FormWrapper = styled.div`
-  position: relative;
-  font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    flex: 1 1 0;
-    min-width: 0;
-    width: auto;
-    display: flex;
-    justify-content: ${({ donateOrientation }) => (
-    donateOrientation === 'left' ? 'flex-start' : 'flex-end'
-  )};
-    order: ${({ donateOrientation }) => (donateOrientation === 'left' ? 1 : 2)};
-  }
-`;
-
-const Error = styled(Text)`
-  color: ${({ theme }) => theme.color('red')};
-  font-size: ${({ theme }) => theme.fontSize('s')};
-  font-weight: 500;
-  margin-top: ${spacing('l')};
-`;
+import {
+  Container,
+  InnerContainer,
+  Wrapper,
+  TitleWrapperOuter,
+  TitleWrapperInner,
+  FormWrapper,
+  Error,
+  FormFieldset
+} from '../shared/Banner.styles';
 
 const Form = styled.form`
   position: relative;
   width: 100%;
   background-color: ${({ theme }) => theme.color('white')};
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  ${defaultBoxShadow()}
 
   margin-left: auto;
   margin-right: auto;
@@ -147,8 +49,7 @@ const Form = styled.form`
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    margin-top: ${spacing('md')};
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     max-width: 461px;
     min-width: 400px;
     /* Alignment is handled by the outer wrapper on desktop. */
@@ -159,11 +60,11 @@ const Form = styled.form`
 
 const OuterFieldset = styled.fieldset`
   color: ${({ theme }) => theme.color('black')};
-  padding: 0 ${spacing('md')} ${spacing('md')};
+  padding: ${spacing('l')};
   margin: 0;
   border: none;
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: 0 ${spacing('l')} ${spacing('l')};
+    padding: ${spacing('l')};
   }
 
   input[type='submit'] {
@@ -171,9 +72,9 @@ const OuterFieldset = styled.fieldset`
   }
 `;
 
-const Legend = styled.legend`
+const BannerTitleText = styled.div`
   margin: 0;
-  padding: ${spacing('l')} ${spacing('sm')} 0 ${spacing('sm')};
+  padding-bottom: ${spacing('md')};
   display: block;
   width: 100%;
 `;
@@ -181,8 +82,8 @@ const Legend = styled.legend`
 const PrimaryTitleText = styled(Text)`
   display: block;
   text-align: left;
-  font-size: ${({ theme }) => theme.fontSize('s')};
-  font-weight: 700;
+  font-weight: ${({ $donateWidgetIsTextOnly }) => ($donateWidgetIsTextOnly ? 400 : 700)};
+  margin: 0;
 `;
 
 const SecondaryTitleText = styled(Text)`
@@ -190,7 +91,7 @@ const SecondaryTitleText = styled(Text)`
   text-align: left;
   font-size: ${({ theme }) => theme.fontSize('s')};
   line-height: 1.5;
-  margin-top: ${spacing('sm')};
+  margin: ${spacing('sm')} 0 !important;
 `;
 
 const MoneyBuys = styled.div`
@@ -200,11 +101,10 @@ const MoneyBuys = styled.div`
   margin-bottom: ${spacing('md')};
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: row;
-    margin-top: ${spacing('m')};
   }
   label {
     flex: 0 0 31%;
-    margin-bottom: ${spacing('sm')};
+    margin-bottom: ${spacing('md')};
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       margin-bottom: 0;
     }
@@ -213,13 +113,6 @@ const MoneyBuys = styled.div`
       padding: ${spacing('sm')}  ${spacing('m')};
     }
   }
-`;
-
-const FormFieldset = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
 `;
 
 const Label = styled(Text)`
@@ -266,20 +159,24 @@ const AmountField = styled(Input)`
   }
 `;
 
-const Copy = styled.p`
+const MoneybuyCopy = styled.p`
   line-height: 1.5;
   margin-top: ${spacing('l')};
   color: ${({ theme }) => theme.color('black')};
+  margin: ${spacing('md')} 0 ${spacing('sm')};
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    margin: ${spacing('m')} 0 ${spacing('md')};
+  }
 `;
 
 const Button = styled.button`
   width: 100%;
-  margin: ${spacing('sm')} 0 ${spacing('sm')};
+  margin-top: ${spacing('md')};
   color: ${({ theme }) => theme.color('white')};
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: bold;
+  min-height: 44px;
   cursor: pointer;
-  min-height: 48px;
   background: ${({ theme, color }) => theme.color(color)};
   text-decoration: none;
   border-radius: 0.5rem;
@@ -289,18 +186,13 @@ const Button = styled.button`
   :focus,
   :hover {
     outline: none;
-    background-color: ${({ theme }) => theme.color('coral_dark')};
-  }
-
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: ${spacing('md')} ${spacing('l')};
+    background-color: ${({ theme }) => theme.color('red_dark')};
   }
 `;
 
 export {
-  BgImage,
   Button,
-  Copy,
+  MoneybuyCopy,
   Container,
   InnerContainer,
   Error,
@@ -314,7 +206,7 @@ export {
   MoneyBuys,
   AmountField,
   OuterFieldset,
-  Legend,
+  BannerTitleText,
   PrimaryTitleText,
   SecondaryTitleText
 };

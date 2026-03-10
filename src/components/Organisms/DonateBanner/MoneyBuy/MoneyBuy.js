@@ -14,18 +14,35 @@ const MoneyBuyButton = styled(Input)`
     font-family: ${({ theme }) => theme.fontFamilies('Anton')};
     font-weight: normal;
     border-radius: 0.5rem;
-    height: 4rem;
+    height: 3.75rem;
     border: 1px solid ${({ theme }) => theme.color('grey')};
     &:focus {
       border: 1px solid ${({ theme }) => theme.color('red')};
     }
 
-    ${({ isSelected }) => isSelected
-      && css`
-        background-color: ${({ theme }) => theme.color('red')};
-        border: 1px solid ${({ theme }) => theme.color('red')};
-        color: ${({ theme }) => theme.color('white')};
-      `}
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      height: 4.5rem;
+    }
+
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
+      height: 3.4375rem;
+    }
+
+    ${({ isSelected }) => (isSelected
+    ? css`
+          background-color: ${({ theme }) => theme.color('red')};
+          border: 1px solid ${({ theme }) => theme.color('red')};
+          color: ${({ theme }) => theme.color('white')};
+          &:hover {
+            background-color: ${({ theme }) => theme.color('red_dark')};
+            border-color: ${({ theme }) => theme.color('red_dark')};
+          }
+        `
+    : css`
+          &:hover {
+            background-color: ${({ theme }) => theme.color('grey_medium')};
+          }
+        `)}
   }
 `;
 

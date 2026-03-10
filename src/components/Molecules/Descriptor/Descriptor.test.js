@@ -101,7 +101,7 @@ it('renders article teaser correctly', () => {
       display: flex;
       background-color: #FFFFFF;
       border-radius: 1rem;
-      box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+      box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
     }
 
     .c1 {

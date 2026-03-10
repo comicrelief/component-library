@@ -100,6 +100,8 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
   }
 }
 
@@ -408,6 +410,8 @@ exports[`renders Single Message with Image correctly 1`] = `
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
   }
 }
 
@@ -616,6 +620,8 @@ exports[`renders Single Message with double image correctly 1`] = `
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
   }
 }
 
@@ -961,6 +967,8 @@ exports[`renders Single Message with full width correctly 1`] = `
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
   }
 }
 
@@ -1157,6 +1165,8 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
   }
 }
 
@@ -1279,7 +1289,7 @@ exports[`renders Single Message with no Image correctly 1`] = `
   z-index: 1;
   padding: 0 2rem;
   margin: auto;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 @media (min-width:740px) {
@@ -1317,6 +1327,8 @@ exports[`renders Single Message with no Image correctly 1`] = `
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Picture from '../../Atoms/Picture/Picture';
+import PictureOrVideo from '../PictureOrVideo/PictureOrVideo';
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import variants from './_variants';
@@ -11,7 +11,7 @@ import './local-preview-layout-fixes.css';
 import {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
   CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink,
-  CtaIconWrapper, CtaText, CtaTextUnderline
+  CtaIconWrapper, CtaText, CtaTextUnderline, LogoImageWrapper, LogoImage
 } from './HeroBanner.style';
 
 const HeroBanner = ({
@@ -31,10 +31,19 @@ const HeroBanner = ({
   imageSet = null,
   imageLow = null,
   image = null,
+  videoDesktop = null,
+  videoMobile = null,
+  posterDesktop = null,
+  posterMobile = null,
+  videoLoop = true,
+  videoShowFullControls = false,
+  videoShowPlayPause = true,
   // All variants:
   children = null,
   ctaUrl = null,
-  ctaText = null
+  ctaText = null,
+  logoImage = null,
+  logoImageAltText = ''
 }) => {
   const hasImage = Boolean(imageSet && variant !== variants.TEXT_BANNER);
   const hasCTA = Boolean(ctaUrl) && Boolean(ctaText);
@@ -97,12 +106,19 @@ const HeroBanner = ({
       >
 
         {(hasImage) && (
-          <MediaWrapper imageRight={copyLeft} variant={variant}>
-            <Picture
-              alt={imageAltText}
-              imageLow={imageLow}
+          <MediaWrapper variant={variant}>
+            <PictureOrVideo
               images={imageSet}
+              imageLow={imageLow}
               image={image}
+              alt={imageAltText}
+              videoDesktop={videoDesktop}
+              videoMobile={videoMobile}
+              posterDesktop={posterDesktop}
+              posterMobile={posterMobile}
+              videoLoop={videoLoop}
+              videoShowFullControls={videoShowFullControls}
+              videoShowPlayPause={videoShowPlayPause}
               objectFit="cover"
               width="100%"
               height="100%"
@@ -124,6 +140,17 @@ const HeroBanner = ({
             )}
           </CopyInnerWrapper>
         </CopyOuterWrapper>
+
+        {(logoImage && variant !== variants.TEXT_BANNER) && (
+        <LogoImageWrapper imageRight={copyLeft}>
+          <LogoImage
+            imageRight={copyLeft}
+            alt={logoImageAltText}
+            image={logoImage}
+            objectFit="contain"
+          />
+        </LogoImageWrapper>
+        )}
       </OuterWrapper>
     </Container>
   );
@@ -145,11 +172,20 @@ HeroBanner.propTypes = {
   ctaNewTab: PropTypes.bool,
   paddingTop: PropTypes.string,
   paddingBottom: PropTypes.string,
+  logoImage: PropTypes.string,
+  logoImageAltText: PropTypes.string,
   variant: PropTypes.oneOf([
     variants.FULL_HEIGHT,
     variants.HALF_HEIGHT,
     variants.TEXT_BANNER
-  ])
+  ]),
+  videoDesktop: PropTypes.string,
+  videoMobile: PropTypes.string,
+  posterDesktop: PropTypes.string,
+  posterMobile: PropTypes.string,
+  videoLoop: PropTypes.bool,
+  videoShowFullControls: PropTypes.bool,
+  videoShowPlayPause: PropTypes.bool
 };
 
 export default HeroBanner;

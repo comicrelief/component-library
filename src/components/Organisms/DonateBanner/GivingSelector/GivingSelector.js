@@ -6,13 +6,12 @@ import {
 } from './GivingSelector.style';
 
 const GivingSelector = ({
-  givingType = null, changeGivingType, setPopOpen, mbshipID
+  givingType = null, changeGivingType, mbshipID
 }) => {
-  // Only updates giving type and popup status when appropriate
+  // Only updates giving type when appropriate
   const handleGivingTypeChange = (thisButtonType, currentGivingType) => {
     if (currentGivingType !== thisButtonType) {
       changeGivingType(thisButtonType);
-      setPopOpen(thisButtonType === 'single');
     }
   };
 
@@ -54,7 +53,6 @@ const GivingSelector = ({
 GivingSelector.propTypes = {
   givingType: PropTypes.string,
   changeGivingType: PropTypes.func.isRequired,
-  setPopOpen: PropTypes.func.isRequired,
   mbshipID: PropTypes.string.isRequired
 };
 

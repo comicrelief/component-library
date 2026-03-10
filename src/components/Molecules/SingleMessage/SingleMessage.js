@@ -32,7 +32,9 @@ const SingleMessage = ({
   videoID = null,
   landscapeVideo = false,
   paddingTop = '2rem',
-  paddingBottom = '2rem'
+  paddingBottom = '2rem',
+  smPaddingTop = '2rem',
+  smPaddingBottom = '2rem'
 }) => {
   const hasImage = imageSet || false;
   const doubleImage = (imageSet || image) && (imageSet2 || image2);
@@ -42,6 +44,8 @@ const SingleMessage = ({
   // things looking nice in the CL; only using the new props where they want 'em:
   const thisPaddingTop = hasImage || hasVideo ? '0rem' : paddingTop;
   const thisPaddingBottom = hasImage || hasVideo ? '0rem' : paddingBottom;
+  const thisSmPaddingTop = hasImage || hasVideo ? '0rem' : smPaddingTop;
+  const thisSmPaddingBottom = hasImage || hasVideo ? '0rem' : smPaddingBottom;
 
   // States to track video status
   const [isInitialised, setIsInitialised] = useState(false);
@@ -147,6 +151,8 @@ const SingleMessage = ({
           ref={thisRef}
           paddingTop={thisPaddingTop}
           paddingBottom={thisPaddingBottom}
+          smPaddingTop={thisSmPaddingTop}
+          smPaddingBottom={thisSmPaddingBottom}
         >
           {imageSet || imageSet2 ? (
             <>
@@ -249,8 +255,9 @@ SingleMessage.propTypes = {
   videoID: PropTypes.string,
   landscapeVideo: PropTypes.bool,
   paddingTop: PropTypes.string,
-  paddingBottom: PropTypes.string
-
+  paddingBottom: PropTypes.string,
+  smPaddingTop: PropTypes.string,
+  smPaddingBottom: PropTypes.string
 };
 
 export default SingleMessage;

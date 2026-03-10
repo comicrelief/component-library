@@ -4,12 +4,11 @@ import PropTypes from 'prop-types';
 
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 import Text from '../../Atoms/Text/Text';
-import Picture from '../../Atoms/Picture/Picture';
+import PictureOrVideo from '../../Molecules/PictureOrVideo/PictureOrVideo';
 import Form from './Form/Form';
 import { handleTitles, handleOtherAmountText } from './_utils';
 
 import {
-  BgImage,
   Container,
   InnerContainer,
   TitleWrapperInner,
@@ -18,6 +17,10 @@ import {
 } from './DonateBanner.style';
 
 const DonateBanner = ({
+  cartID,
+  clientID,
+  donateLink,
+  mbshipID,
   donateWidgetIsTextOnly = false,
   donateOrientation = 'right',
   paddingAbove = '2rem',
@@ -28,7 +31,6 @@ const DonateBanner = ({
   subtitle = '',
   monthlyTitle = '',
   monthlySubtitle = '',
-  popUpText = 'Help us deliver long-term impact by converting your single donation into a monthly gift.',
   chooseAmountText = null,
   monthlyChooseAmountText = null,
   otherAmountText = 'will help us fund amazing projects in the UK and around the world.',
@@ -37,13 +39,16 @@ const DonateBanner = ({
   imageL = null,
   imageM = null,
   imageS = null,
-  data = {},
-  cartID,
-  clientID,
-  donateLink,
-  mbshipID
+  videoDesktop = null,
+  videoMobile = null,
+  posterDesktop = null,
+  posterMobile = null,
+  videoLoop = true,
+  videoShowFullControls = false,
+  videoShowPlayPause = true,
+  data = {}
 }) => {
-  const isLarge = useMediaQuery({ query: `(min-width: ${breakpointValues.L}px)` });
+  const isLargeBreakpoint = useMediaQuery({ query: `(min-width: ${breakpointValues.L}px)` });
   const isMedium = useMediaQuery({ query: `(min-width: ${breakpointValues.M}px)` });
   const [givingType, setGivingType] = useState();
 
@@ -60,19 +65,22 @@ const DonateBanner = ({
 
   const shouldShowImage = donateWidgetIsTextOnly === false;
 
-  const shouldShowDesktopImage = shouldShowImage
-    && isLarge && imageL
-    && (imageL.images || imageL.image);
+  const shouldShowDesktopImage = Boolean(shouldShowImage
+    && isLargeBreakpoint && imageL
+    && (imageL.images || imageL.image));
 
-  const shouldShowTopImage = shouldShowImage && !isLarge;
+  const shouldShowTopImage = shouldShowImage && !isLargeBreakpoint;
   const topImage = isMedium ? imageM : imageS;
 
-  const shouldRenderTopImage = shouldShowTopImage
-    && topImage && (topImage.images || topImage.image);
+  const shouldRenderTopImage = !!(
+    shouldShowTopImage
+    && topImage && (topImage.images || topImage.image)
+  );
 
   // For text-only variants, we hide the title area on non-desktop widths
   // (M and below), so only the form is shown.
-  const shouldShowTitleSection = noTitlesAtAll === false && isLarge && donateWidgetIsTextOnly;
+  const shouldShowTitleSection = noTitlesAtAll === false
+    && isLargeBreakpoint && donateWidgetIsTextOnly;
 
   return (
     <Container
@@ -83,50 +91,39 @@ const DonateBanner = ({
     >
       <InnerContainer
         componentBackgroundColour={componentBackgroundColour}
-        $donateWidgetIsTextOnly={donateWidgetIsTextOnly}
       >
-        {shouldRenderTopImage ? (
-          <Picture
-            image={topImage.image}
-            images={topImage.images}
-            imageLow={topImage.imageLow}
+        {(shouldRenderTopImage || shouldShowDesktopImage) && (
+          <PictureOrVideo
+            image={shouldShowDesktopImage ? imageL : topImage}
+            videoDesktop={videoDesktop}
+            videoMobile={videoMobile}
+            posterDesktop={posterDesktop}
+            posterMobile={posterMobile}
+            videoLoop={videoLoop}
+            videoShowFullControls={videoShowFullControls}
+            videoShowPlayPause={videoShowPlayPause}
+            asBackground={shouldShowDesktopImage}
             objectFit="cover"
             width="100%"
             height="100%"
-            alt={topImage.alt || ''}
-            // Force React to re-render with any updated image details
-            key={topImage.imageLow}
+            isBackgroundImage={shouldShowDesktopImage}
+            key={shouldShowDesktopImage ? imageL.imageLow : topImage.imageLow}
           />
-        ) : null}
-
-        {shouldShowDesktopImage ? (
-          <BgImage
-            image={imageL.image}
-            images={imageL.images}
-            imageLow={imageL.imageLow}
-            objectFit="cover"
-            width="100%"
-            height="100%"
-            alt={imageL.alt || ''}
-            isBackgroundImage
-          />
-        ) : null}
+        )}
 
         <Wrapper
-          donateOrientation={donateOrientation}
           aria-live="polite"
           noTitlesAtAll={noTitlesAtAll}
           hasTopImage={shouldRenderTopImage}
-          shouldShowTitleSection={shouldShowTitleSection}
+          showTitleSection={shouldShowTitleSection}
         >
           {shouldShowTitleSection && (
-          <TitleWrapperOuter donateOrientation={donateOrientation}>
+          <TitleWrapperOuter $orientation={donateOrientation}>
             <TitleWrapperInner>
               {showCopy && (
               <>
                 <Text
-                  tag="h2"
-                  size="big"
+                  tag="h1"
                   family="Anton"
                   weight="normal"
                 >
@@ -149,7 +146,6 @@ const DonateBanner = ({
             mbshipID={mbshipID}
             donateLink={donateLink}
             hideMoneyBuys={hideMoneyBuys}
-            popUpText={popUpText}
             chooseAmountText={chooseAmountText}
             monthlyChooseAmountText={monthlyChooseAmountText}
             donateWidgetIsTextOnly={donateWidgetIsTextOnly}
@@ -158,6 +154,11 @@ const DonateBanner = ({
             donateOrientation={donateOrientation}
             givingType={givingType}
             changeGivingType={setGivingType}
+            thisTitle={thisTitle}
+            thisSubtitle={thisSubtitle}
+            showCopy={showCopy}
+            isLargeBreakpoint={isLargeBreakpoint}
+            isMediumBreakpoint={isMedium}
           />
         </Wrapper>
       </InnerContainer>
@@ -176,7 +177,6 @@ DonateBanner.propTypes = {
   subtitle: PropTypes.string,
   monthlyTitle: PropTypes.string,
   monthlySubtitle: PropTypes.string,
-  popUpText: PropTypes.string,
   chooseAmountText: PropTypes.string,
   monthlyChooseAmountText: PropTypes.string,
   otherAmountText: PropTypes.string,
@@ -200,6 +200,19 @@ DonateBanner.propTypes = {
     image: PropTypes.string,
     alt: PropTypes.string
   }),
+  videoDesktop: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape({ default: PropTypes.string })
+  ]),
+  videoMobile: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape({ default: PropTypes.string })
+  ]),
+  posterDesktop: PropTypes.string,
+  posterMobile: PropTypes.string,
+  videoLoop: PropTypes.bool,
+  videoShowFullControls: PropTypes.bool,
+  videoShowPlayPause: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.shape),
   cartID: PropTypes.string.isRequired,
   clientID: PropTypes.string.isRequired,

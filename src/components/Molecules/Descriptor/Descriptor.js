@@ -17,6 +17,7 @@ import worldIcon from './assets/CR__World.svg';
 import safePlaceIcon from './assets/CR__SafePlace.svg';
 import environmentIcon from './assets/CR__Environment.svg';
 import partnershipsIcon from './assets/CR__Partnerships.svg';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 const Wrapper = styled.article`
   position: relative;
@@ -25,7 +26,7 @@ const Wrapper = styled.article`
   display: flex;
   background-color: ${({ theme }) => theme.color('white')};
   border-radius: ${spacing('md')};
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  ${defaultBoxShadow()}
 `;
 
 const InnerWrapper = styled.div`

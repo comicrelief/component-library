@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
-import zIndex from '../../../theme/shared/zIndex';
 import variants from './_variants';
-import { bounceUpAnimation } from '../../../theme/shared/animations';
+import { bounceUpAnimation, playPauseReveal } from '../../../theme/shared/animations';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 import Text from '../../Atoms/Text/Text';
+import Picture from '../../Atoms/Picture/Picture';
 
 // Lil helper function to streamline things somewhat:
 const handleVariant = variant => {
@@ -30,6 +31,7 @@ const Container = styled.div`
   flex-direction: column;
   background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)}; 
   justify-content: center; 
+  ${({ paddingTop, paddingBottom }) => css`padding: ${paddingTop} 0 ${paddingBottom};`}
 
   ${({ variant, paddingTop, paddingBottom }) => (variant === variants.TEXT_BANNER && css`
     padding: ${paddingTop} 1rem ${paddingBottom};
@@ -58,10 +60,13 @@ const OuterWrapper = styled.div`
     max-width: 1500px;
     border-radius: 1rem;
     overflow: hidden;
+    ${defaultBoxShadow()}
 
     ${({ variant }) => (variant && css`
       ${handleVariant(variant)}
     `)}
+
+  ${playPauseReveal}
 `;
 
 const MediaWrapper = styled.div`
@@ -100,11 +105,11 @@ const CopyOuterWrapper = styled.div`
   display: flex;
   width: calc(100% - (2 * 1rem)); 
   
-  ${({ variant }) => (variant !== variants.TEXT_BANNER ? 'margin: -2rem 1rem 2rem;' : 'margin: 0; width: 100%;')}
+  ${({ variant }) => (variant !== variants.TEXT_BANNER ? 'margin: -2rem 1rem 0;' : 'margin: 0; width: 100%;')}
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     ${({ variant }) => (variant !== variants.TEXT_BANNER
-    ? 'margin: -2rem 2rem 2rem; width: calc(100% - (2 * 2rem));'
+    ? 'margin: -2rem 2rem 0rem; width: calc(100% - (2 * 2rem));'
     : 'margin: 0; width: 100%;')}
   }
 
@@ -132,11 +137,10 @@ const CopyOuterWrapper = styled.div`
 
 const Copy = styled.div`
   width: 100%;
-  ${zIndex('low')};
   border-radius: 1rem;
-  padding: ${({ variant }) => (variant === variants.TEXT_BANNER ? '3rem 1.5rem' : '1.5rem')};   
+  padding: ${({ variant }) => (variant === variants.TEXT_BANNER ? '3rem 2rem' : '2rem')};
   color: ${({ theme, copyColour }) => theme.color(copyColour)};
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 1.5rem;
+  ${defaultBoxShadow()}
 
   background-color: ${({ theme, variant, textBannerCopyBackgroundColour }) => (variant === variants.TEXT_BANNER
     ? theme.color(textBannerCopyBackgroundColour)
@@ -145,7 +149,7 @@ const Copy = styled.div`
 
   ${({ variant, theme }) => (variant !== variants.TEXT_BANNER && `
     @media ${theme.breakpoints2026('L')} {
-      padding: 2rem 2rem 1.75rem;
+      padding: 2rem;
     }
   `)};
 
@@ -186,10 +190,11 @@ const CTAWrapper = styled.div`
   width: 100%;
   height: auto;
   position: relative;
-  padding: 0.5rem 2.5rem 0 0;
-  margin-top: 1.25rem;
+  margin-top: 2rem;
 
   ${({ variant }) => (variant !== variants.TEXT_BANNER && css`
+    padding-right: 2.5rem;
+    
     span {
       font-weight: bold;
       color: ${({ theme }) => theme.color('red')};
@@ -226,18 +231,18 @@ const HeroBannerLink = styled.a`
 
   > div {
     transition: box-shadow 0.35s;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 1.5rem;
+    ${defaultBoxShadow()}
   }
 
   &:hover {
     > div {
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 1.5rem;
+      ${defaultBoxShadow(true)}
     }
   }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
 
-    ${bounceUpAnimation(true, 10, 2)}
+    ${bounceUpAnimation(true, 10, 2, true)}
 
     // As the link is now wrapping the content, it'll take over width duties from 'Copy':
     width: ${({ variant }) => (variant !== variants.TEXT_BANNER ? '92%' : '100%')};
@@ -255,8 +260,46 @@ const HeroBannerLink = styled.a`
   }
 `;
 
+const LogoImageWrapper = styled.div`
+  position: absolute;
+  margin: 1rem;
+  width: 130px;
+  height: 80px;
+
+  // Logo aligned top-right by design; the images for these
+  // S and M breakpoints will be picked to suit this:
+  top: 0;
+  right: 0;
+
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    margin: 1.5rem;
+    width: 160px;
+    height: 100px;
+
+    ${({ imageRight }) => (imageRight
+    ? css` right: 0;`
+    : css` left: 0;`
+  )};   
+  }
+`;
+
+const LogoImage = styled(Picture)`
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: inherit;
+    height: inherit;
+    object-position: top right;
+
+    @media ${({ theme }) => theme.breakpoints2026('L')} {
+      ${({ imageRight }) => (!imageRight && css`object-position: top left;`)};
+    }
+  }
+`;
+
 export {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
   CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink,
-  CtaIconWrapper, CtaText, CtaTextUnderline
+  CtaIconWrapper, CtaText, CtaTextUnderline, LogoImageWrapper, LogoImage
 };
