@@ -14,7 +14,7 @@
 <StatsSlice nodes={[{
     title: "123",
     stat: "123,456,789.02",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    body: "Short body should still fill 100% width"
 }]}  />
 ```
 
@@ -29,7 +29,7 @@
 {
     title: "456",
     stat: "over 456 lives were saved",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    body: "Short body should still fill 100% width (on S, M)"
 },
 {
     title: "789",

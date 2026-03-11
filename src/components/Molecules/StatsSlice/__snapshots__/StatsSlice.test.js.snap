@@ -42,6 +42,9 @@ exports[`Stats Slices with a single node should render 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   gap: 1rem;
   max-width: 1152px;
 }
@@ -60,7 +63,7 @@ exports[`Stats Slices with a single node should render 1`] = `
   align-items: flex-start;
   gap: 1rem;
   background: #ffffff;
-  padding: 1rem;
+  padding: 2rem;
   -webkit-flex: 1 1 0px;
   -ms-flex: 1 1 0px;
   flex: 1 1 0px;
@@ -95,10 +98,15 @@ exports[`Stats Slices with a single node should render 1`] = `
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 0.5rem;
-  text-transform: uppercase;
   font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 2rem;
-  line-height: 1;
+  line-height: 2rem;
 }
 
 .c5 {
@@ -617,10 +625,15 @@ exports[`Stats Slices with a single node should render 1`] = `
   top: 0;
   z-index: 1;
   opacity: 0;
-  text-transform: uppercase;
   font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 2rem;
-  line-height: 1;
+  line-height: 2rem;
 }
 
 .c24 {
@@ -643,8 +656,13 @@ exports[`Stats Slices with a single node should render 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    padding-inline: 4rem;
   }
 }
 
@@ -658,20 +676,16 @@ exports[`Stats Slices with a single node should render 1`] = `
 }
 
 @media (min-width:740px) {
-  .c2 {
-    padding: 2rem;
-  }
-}
-
-@media (min-width:740px) {
   .c4 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
   }
 }
 
 @media (min-width:1024px) {
   .c4 {
     font-size: 3rem;
+    line-height: 3rem;
   }
 }
 
@@ -803,13 +817,15 @@ exports[`Stats Slices with a single node should render 1`] = `
 
 @media (min-width:740px) {
   .c22 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
   }
 }
 
 @media (min-width:1024px) {
   .c22 {
     font-size: 3rem;
+    line-height: 3rem;
   }
 }
 
@@ -1417,11 +1433,11 @@ exports[`Stats Slices with a single node should render 1`] = `
             </div>
           </span>
         </div>
-        <div
+        <h2
           className="c22"
         >
           123,456,789.02
-        </div>
+        </h2>
       </div>
       <span
         className="c23 c24"
@@ -1475,6 +1491,9 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   gap: 1rem;
   max-width: 1152px;
 }
@@ -1493,7 +1512,7 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
   align-items: flex-start;
   gap: 1rem;
   background: #ffffff;
-  padding: 1rem;
+  padding: 2rem;
   -webkit-flex: 1 1 0px;
   -ms-flex: 1 1 0px;
   flex: 1 1 0px;
@@ -1528,10 +1547,15 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 0.5rem;
-  text-transform: uppercase;
   font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 2rem;
-  line-height: 1;
+  line-height: 2rem;
 }
 
 .c5 {
@@ -2050,10 +2074,15 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
   top: 0;
   z-index: 1;
   opacity: 0;
-  text-transform: uppercase;
   font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 2rem;
-  line-height: 1;
+  line-height: 2rem;
 }
 
 .c24 {
@@ -2076,8 +2105,13 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
 
 @media (min-width:740px) {
   .c0 {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    padding-inline: 4rem;
   }
 }
 
@@ -2091,20 +2125,16 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
 }
 
 @media (min-width:740px) {
-  .c2 {
-    padding: 2rem;
-  }
-}
-
-@media (min-width:740px) {
   .c4 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
   }
 }
 
 @media (min-width:1024px) {
   .c4 {
     font-size: 3rem;
+    line-height: 3rem;
   }
 }
 
@@ -2236,13 +2266,15 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
 
 @media (min-width:740px) {
   .c22 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
   }
 }
 
 @media (min-width:1024px) {
   .c22 {
     font-size: 3rem;
+    line-height: 3rem;
   }
 }
 
@@ -2850,11 +2882,11 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
             </div>
           </span>
         </div>
-        <div
+        <h2
           className="c22"
         >
           123,456,789.02
-        </div>
+        </h2>
       </div>
       <span
         className="c23 c24"
@@ -3454,11 +3486,11 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
             </div>
           </span>
         </div>
-        <div
+        <h2
           className="c22"
         >
           456,789,123.02
-        </div>
+        </h2>
       </div>
       <span
         className="c23 c24"
@@ -4058,11 +4090,11 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
             </div>
           </span>
         </div>
-        <div
+        <h2
           className="c22"
         >
           789,123,456.02
-        </div>
+        </h2>
       </div>
       <span
         className="c23 c24"
