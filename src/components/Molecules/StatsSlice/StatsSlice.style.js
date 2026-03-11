@@ -9,8 +9,10 @@ export const OuterWrapper = styled.div`
   background: ${({ theme, backgroundColour }) => theme.color(backgroundColour)};
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-inline: 2rem;
+  }
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    padding-inline: 4rem;
   }
 `;
 
