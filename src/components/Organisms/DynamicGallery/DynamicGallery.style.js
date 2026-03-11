@@ -1,18 +1,19 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+export const OuterWrapper = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   position: relative;
-  max-width: ${({ maxWidth }) => maxWidth};
   background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
   padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 1rem ${paddingBottom}`};
   color: ${({ theme, textColour }) => theme.color(textColour)};
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     gap: 1rem;
+    padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 2rem ${paddingBottom}`};
   }
 `;
 
@@ -20,6 +21,7 @@ export const ImageGrid = styled.div`
   display: flex;
   gap: 1rem;
   width: 100%;
+  max-width: ${({ maxWidth }) => maxWidth};
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     gap: 2rem;

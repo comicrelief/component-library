@@ -216,6 +216,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 }
 
 .c0 {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -229,7 +230,6 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   align-items: center;
   gap: 1rem;
   position: relative;
-  max-width: 1500px;
   background: transparent;
   padding: 0rem 1rem 2rem;
   color: #000000;
@@ -242,6 +242,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   display: flex;
   gap: 1rem;
   width: 100%;
+  max-width: 1500px;
 }
 
 .c2 {
@@ -395,6 +396,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 @media (min-width:740px) {
   .c0 {
     gap: 1rem;
+    padding: 0rem 2rem 2rem;
   }
 }
 
@@ -855,6 +857,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 }
 
 .c0 {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -868,7 +871,6 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   align-items: center;
   gap: 1rem;
   position: relative;
-  max-width: 1500px;
   background: transparent;
   padding: 0rem 1rem 2rem;
   color: #000000;
@@ -881,6 +883,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   display: flex;
   gap: 1rem;
   width: 100%;
+  max-width: 1500px;
 }
 
 .c2 {
@@ -953,6 +956,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 @media (min-width:740px) {
   .c0 {
     gap: 1rem;
+    padding: 0rem 2rem 2rem;
   }
 }
 
