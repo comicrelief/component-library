@@ -32,9 +32,9 @@ const QuoteSlice = ({
   const hasLink = Boolean(ctaUrl && ctaLabel);
 
   // scale heading (the main quote) text as the text grows longer:
-  // - shorter quotes, up to XX characters, will be full size
-  // - longer quotes, over YY characters, will be at the smallest size
-  // - mid-length quotes, between XX and YY characters, will scale down proportionally
+  // - shorter quotes, up to minCharacterCount characters, will be full size
+  // - longer quotes, over maxCharacterCount characters, will be at the smallest size
+  // - mid-length quotes, between minCharacterCount and maxCharacterCount, will scale proportionally
   const minCharacterCount = 20;
   const maxCharacterCount = 400;
   const characterCount = heading?.length;
