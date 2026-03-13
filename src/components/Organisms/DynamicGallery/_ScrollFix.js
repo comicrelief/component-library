@@ -36,8 +36,8 @@ export default function ScrollFix() {
   // this is then removed when the component unmounts
   useLayoutEffect(() => {
     function resetScrollbar() {
-      document.documentElement.style.setProperty('overflow', 'auto');
-      document.documentElement.style.setProperty('padding-right', '0px');
+      document.documentElement.style.removeProperty('overflow');
+      document.documentElement.style.removeProperty('padding-right');
     }
 
     // check that the page content is longer than the viewport
