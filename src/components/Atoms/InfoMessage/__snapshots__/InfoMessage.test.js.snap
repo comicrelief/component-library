@@ -129,6 +129,7 @@ exports[`renders coral_light variant with message containing a link 1`] = `
 
 <div
   className="c0"
+  data-testid="info-message"
 >
   <p
     className="c1 c2"
@@ -269,6 +270,7 @@ exports[`renders default blue_light variant 1`] = `
 
 <div
   className="c0"
+  data-testid="info-message"
 >
   <p
     className="c1 c2"

@@ -41,11 +41,13 @@ const InfoMessage = ({
   title,
   message,
   backgroundColor = 'blue_light',
+  dataTestId = 'info-message',
   ...rest
 }) => (
   <Root
     $backgroundColor={backgroundColor}
     {...rest}
+    data-testid={dataTestId}
   >
     <TitleText tag="p">{title}</TitleText>
     <BodyText tag="p">{message}</BodyText>
@@ -55,6 +57,8 @@ const InfoMessage = ({
 InfoMessage.propTypes = {
   /** Theme colour key from our colour list. */
   backgroundColor: PropTypes.string,
+  /** Value for `data-testid` on the root  (defaults to `info-message`). */
+  dataTestId: PropTypes.string,
   /** Bold line; string for the title */
   title: PropTypes.node.isRequired,
   /** Normal-weight line; string or include `Link` for inline links */
