@@ -18,7 +18,6 @@ exports[`handles data structure correctly 1`] = `
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
-            color="red"
             href="/test"
             rel={null}
             target="_self"
@@ -151,7 +150,6 @@ exports[`handles data structure correctly 1`] = `
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
-            color="red"
             href="/test"
             rel={null}
             target="_self"
@@ -238,7 +236,6 @@ exports[`handles data structure correctly 1`] = `
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
-            color="red"
             href="/test-no-image"
             rel={null}
             target="_self"
@@ -319,7 +316,6 @@ exports[`renders 2 columns layout correctly 1`] = `
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
-            color="red"
             href="/test"
             rel={null}
             target="_self"
@@ -452,7 +448,6 @@ exports[`renders 2 columns layout correctly 1`] = `
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
-            color="red"
             href="/test"
             rel={null}
             target="_self"
@@ -539,7 +534,6 @@ exports[`renders 2 columns layout correctly 1`] = `
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
-            color="red"
             href="/test-no-image"
             rel={null}
             target="_self"
@@ -620,7 +614,6 @@ exports[`renders carousel mode correctly 1`] = `
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
-            color="red"
             href="/test"
             rel={null}
             target="_self"
@@ -753,7 +746,6 @@ exports[`renders carousel mode correctly 1`] = `
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
-            color="red"
             href="/test"
             rel={null}
             target="_self"
@@ -840,7 +832,6 @@ exports[`renders carousel mode correctly 1`] = `
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
-            color="red"
             href="/test-no-image"
             rel={null}
             target="_self"
@@ -921,7 +912,6 @@ exports[`renders correctly with data prop 1`] = `
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
-            color="red"
             href="/test"
             rel={null}
             target="_self"
@@ -1054,7 +1044,6 @@ exports[`renders correctly with data prop 1`] = `
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
-            color="red"
             href="/test"
             rel={null}
             target="_self"
@@ -1141,7 +1130,6 @@ exports[`renders correctly with data prop 1`] = `
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-5 jcePKd"
-            color="red"
             href="/test-no-image"
             rel={null}
             target="_self"

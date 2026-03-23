@@ -501,7 +501,6 @@ exports[`renders Single Message with Image correctly 1`] = `
     </p>
     <a
       className="c8"
-      color="white"
       href="/"
       target="_self"
       type="button"
@@ -1081,7 +1080,6 @@ exports[`renders Single Message with full width correctly 1`] = `
     </p>
     <a
       className="c8"
-      color="white"
       href="/"
       target="_self"
       type="button"

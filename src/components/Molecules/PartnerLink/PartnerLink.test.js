@@ -150,7 +150,6 @@ it('renders correctly', () => {
 
     <a
       className="c0 c1"
-      color="red"
       href="https://www.comicrelief.com"
       target="_self"
       type="standard"

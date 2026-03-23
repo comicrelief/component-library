@@ -17,7 +17,7 @@ const buttonStyle = () => css`
   padding: 0.6rem 1rem;
   border-radius: 0.5rem;
 
-  ${({ color, theme, buttonType }) => (theme.buttonColors(color, buttonType))};
+  ${({ $color, theme, buttonType }) => (theme.buttonColors($color, buttonType))};
 
   ${({ theme }) => css` ${fontHelper(theme, 'button')}`}
 
@@ -35,9 +35,9 @@ const buttonStyle = () => css`
 
     // Reinstate standard colours for desktop where appropriate:
     ${({
-    mobileColour, theme, buttonType, color
+    mobileColour, theme, buttonType, $color
   }) => (
-    mobileColour && theme.buttonColors(color, buttonType)
+    mobileColour && theme.buttonColors($color, buttonType)
   )};
   }
 `;

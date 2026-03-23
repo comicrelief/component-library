@@ -756,7 +756,6 @@ exports[`renders correctly 1`] = `
         </div>
         <a
           className="c8 c9"
-          color="red"
           href="/"
           target="_self"
           title="Go to Comic Relief homepage"
@@ -808,7 +807,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://www.comicrelief.com/#"
                   role="menuitem"
                   target="_self"
@@ -826,7 +824,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://www.comicrelief.com/update-your-preferences"
                   role="menuitem"
                   target="_self"
@@ -860,7 +857,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="/contact-us"
                   role="menuitem"
                   target="_self"
@@ -878,7 +874,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://giftaid.comicrelief.com/update"
                   role="menuitem"
                   target="_self"
@@ -896,7 +891,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://www.comicrelief.com/frequently-asked-questions"
                   role="menuitem"
                   target="_self"
@@ -914,7 +908,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://www.comicrelief.com/red-nose-days-frequently-asked-questions"
                   role="menuitem"
                   target="_self"
@@ -948,7 +941,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://www.comicrelief.com/about-comic-relief"
                   role="menuitem"
                   target="_self"
@@ -966,7 +958,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://www.comicrelief.com/about-comic-relief/history"
                   role="menuitem"
                   target="_self"
@@ -984,7 +975,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://www.comicrelief.com/about-comic-relief/finances"
                   role="menuitem"
                   target="_self"
@@ -1002,7 +992,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://www.comicrelief.com/working-with-us"
                   role="menuitem"
                   target="_self"
@@ -1020,7 +1009,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://www.comicrelief.com/about-comic-relief/meet-the-team"
                   role="menuitem"
                   target="_self"
@@ -1038,7 +1026,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://www.sportrelief.com/"
                   role="menuitem"
                   target="_self"
@@ -1072,7 +1059,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://www.comicrelief.com/careers"
                   role="menuitem"
                   target="_self"
@@ -1090,7 +1076,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://app.beapplied.com/org/comic-relief"
                   role="menuitem"
                   target="_self"
@@ -1124,7 +1109,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://www.comicrelief.com/news"
                   role="menuitem"
                   target="_self"
@@ -1142,7 +1126,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://www.comicrelief.com/press-releases"
                   role="menuitem"
                   target="_self"
@@ -1176,7 +1159,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="/homepage"
                   role="menuitem"
                   target="_self"
@@ -1194,7 +1176,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="/this-is-a-test"
                   role="menuitem"
                   target="_self"
@@ -1212,7 +1193,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://www.yahoo.com"
                   role="menuitem"
                   target="_blank"
@@ -1235,7 +1215,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://www.sportrelief.com"
                   role="menuitem"
                   target="_self"
@@ -1253,7 +1232,6 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
-                  color="red"
                   href="https://bing.com"
                   role="menuitem"
                   target="_blank"
