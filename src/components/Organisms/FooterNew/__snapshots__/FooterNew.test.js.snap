@@ -1165,7 +1165,6 @@ exports[`does not render copyright text when not supplied 1`] = `
       >
         <a
           className="c3 c4"
-          color="red"
           href="/"
           target="_self"
           title="Go to Comic Relief homepage"
@@ -1396,7 +1395,6 @@ exports[`does not render copyright text when not supplied 1`] = `
         >
           <a
             className="c3 c4"
-            color="red"
             href="/"
             target="_self"
             title="Go to Comic Relief homepage"
@@ -1419,7 +1417,6 @@ exports[`does not render copyright text when not supplied 1`] = `
         >
           <a
             className="c3 c4"
-            color="red"
             href="/"
             target="_self"
             title="Go to Comic Relief homepage"
@@ -1448,7 +1445,6 @@ exports[`does not render copyright text when not supplied 1`] = `
         >
           <a
             className="c3 c37"
-            color="red"
             href="/contact-us"
             target="_self"
             type="standard"
@@ -1465,7 +1461,6 @@ exports[`does not render copyright text when not supplied 1`] = `
         >
           <a
             className="c3 c37"
-            color="red"
             href="https://www.comicrelief.com/frequently-asked-questions"
             target="_self"
             type="standard"
@@ -1586,7 +1581,6 @@ exports[`does not render copyright text when not supplied 1`] = `
         >
           <a
             className="c3 c42"
-            color="red"
             href="https://www.comicrelief.com/terms-of-use"
             target="_self"
             type="standard"
@@ -1603,7 +1597,6 @@ exports[`does not render copyright text when not supplied 1`] = `
         >
           <a
             className="c3 c42"
-            color="red"
             href="https://www.comicrelief.com/privacy-notice"
             target="_self"
             type="standard"
@@ -2798,7 +2791,6 @@ exports[`renders correctly 1`] = `
       >
         <a
           className="c3 c4"
-          color="red"
           href="/"
           target="_self"
           title="Go to Comic Relief homepage"
@@ -3029,7 +3021,6 @@ exports[`renders correctly 1`] = `
         >
           <a
             className="c3 c4"
-            color="red"
             href="/"
             target="_self"
             title="Go to Comic Relief homepage"
@@ -3052,7 +3043,6 @@ exports[`renders correctly 1`] = `
         >
           <a
             className="c3 c4"
-            color="red"
             href="/"
             target="_self"
             title="Go to Comic Relief homepage"
@@ -3081,7 +3071,6 @@ exports[`renders correctly 1`] = `
         >
           <a
             className="c3 c37"
-            color="red"
             href="/contact-us"
             target="_self"
             type="standard"
@@ -3098,7 +3087,6 @@ exports[`renders correctly 1`] = `
         >
           <a
             className="c3 c37"
-            color="red"
             href="https://www.comicrelief.com/frequently-asked-questions"
             target="_self"
             type="standard"
@@ -3219,7 +3207,6 @@ exports[`renders correctly 1`] = `
         >
           <a
             className="c3 c42"
-            color="red"
             href="https://www.comicrelief.com/terms-of-use"
             target="_self"
             type="standard"
@@ -3236,7 +3223,6 @@ exports[`renders correctly 1`] = `
         >
           <a
             className="c3 c42"
-            color="red"
             href="https://www.comicrelief.com/privacy-notice"
             target="_self"
             type="standard"

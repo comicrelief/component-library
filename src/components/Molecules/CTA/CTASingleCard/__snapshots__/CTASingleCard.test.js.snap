@@ -468,7 +468,6 @@ exports[`renders correctly with data prop 1`] = `
     >
       <a
         className="c3 c4"
-        color="red"
         href="/test"
         rel={null}
         target="_self"
@@ -952,7 +951,6 @@ exports[`renders correctly without image 1`] = `
     >
       <a
         className="c3 c4"
-        color="red"
         href="/test-no-image"
         rel={null}
         target="_self"

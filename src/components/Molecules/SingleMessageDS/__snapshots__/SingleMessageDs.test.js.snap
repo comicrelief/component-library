@@ -383,7 +383,6 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="c11"
-        color="blue_dark"
         data-button-cta-copy="Check out the shop"
         href="/home"
         rel={null}

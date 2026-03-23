@@ -293,7 +293,6 @@ exports[`renders a Quote Slice with basic props 1`] = `
       </span>
       <a
         className="c8 c9"
-        color="white"
         href="http://www.google.com"
         target="_blank"
         type="button"
