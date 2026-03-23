@@ -34,8 +34,8 @@ exports[`renders coral_light variant with message containing a link 1`] = `
 
 .c0 {
   background-color: #FFCECE;
-  border-radius: 1.5rem;
-  padding: 1rem 1.5rem 1.5rem;
+  border-radius: 1rem;
+  padding: 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -64,7 +64,6 @@ exports[`renders coral_light variant with message containing a link 1`] = `
   font-size: 1rem;
   line-height: 1.25rem;
   font-weight: 700;
-  color: #222222;
   margin: 0;
 }
 
@@ -79,11 +78,9 @@ exports[`renders coral_light variant with message containing a link 1`] = `
   font-size: 1rem;
   line-height: 1.25rem;
   margin: 0;
-  color: #222222;
 }
 
 .c3 a {
-  color: inherit;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -177,8 +174,8 @@ exports[`renders default blue_light variant 1`] = `
 
 .c0 {
   background-color: #BECCF9;
-  border-radius: 1.5rem;
-  padding: 1rem 1.5rem 1.5rem;
+  border-radius: 1rem;
+  padding: 2rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -207,7 +204,6 @@ exports[`renders default blue_light variant 1`] = `
   font-size: 1rem;
   line-height: 1.25rem;
   font-weight: 700;
-  color: #222222;
   margin: 0;
 }
 
@@ -222,11 +218,9 @@ exports[`renders default blue_light variant 1`] = `
   font-size: 1rem;
   line-height: 1.25rem;
   margin: 0;
-  color: #222222;
 }
 
 .c3 a {
-  color: inherit;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
