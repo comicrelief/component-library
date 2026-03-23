@@ -27,6 +27,7 @@ export { default as Pagination } from './components/Atoms/Pagination/Pagination'
 export { default as SocialIcons } from './components/Atoms/SocialIcons/SocialIcons';
 export { default as TextInputWithDropdown } from './components/Atoms/TextInputWithDropdown/TextInputWithDropdown';
 export { default as ErrorText } from './components/Atoms/ErrorText/ErrorText';
+export { default as InfoMessage } from './components/Atoms/InfoMessage/InfoMessage';
 export { default as Label } from './components/Atoms/Label/Label';
 export { default as ButtonWithStates } from './components/Atoms/ButtonWithStates/ButtonWithStates';
 export { default as Confetti } from './components/Atoms/Confetti/Confetti';
