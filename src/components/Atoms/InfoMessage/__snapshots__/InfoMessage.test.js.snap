@@ -143,7 +143,6 @@ exports[`renders coral_light variant with message containing a link 1`] = `
      
     <a
       className="c4"
-      color="red"
       href="/contact"
       target="_self"
       type="standard"
