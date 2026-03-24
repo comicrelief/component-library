@@ -105,7 +105,7 @@ const PrivacyCopyWrapper = styled.div`
 `;
 
 const SuccessCopyWrapper = styled.div`
-  padding: 0 ${spacing('sm')} ${spacing('md')};
+  padding-bottom: ${spacing('md')};
   color: ${({ theme }) => theme.color('black')};
 `;
 
