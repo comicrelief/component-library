@@ -252,7 +252,6 @@ exports[`renders Column view correctly 1`] = `
   >
     <a
       className="c7"
-      color="red"
       data-button-cta-copy="Find out more"
       href="/home"
       rel={null}
@@ -567,7 +566,6 @@ exports[`renders correctly 1`] = `
   >
     <a
       className="c7"
-      color="red"
       data-button-cta-copy="Find out more"
       href="/home"
       rel={null}

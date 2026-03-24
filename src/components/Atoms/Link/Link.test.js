@@ -28,7 +28,6 @@ it('renders a standard styled link correctly', () => {
 
     <a
       className="c0"
-      color="red"
       href="/test"
       target="_self"
       type="standard"
@@ -105,7 +104,6 @@ it('renders a button with an icon', () => {
 
     <a
       className="c0"
-      color="red"
       href="/test"
       target="_self"
       type="standard"
@@ -171,7 +169,6 @@ it('renders a standard styled link correctly with target blank and assistive tex
 
     <a
       className="c0"
-      color="red"
       href="/test"
       target="_blank"
       type="standard"
@@ -272,7 +269,6 @@ it('renders link styled as button correctly', () => {
 
     <a
       className="c0"
-      color="yellow"
       href="/test"
       target="_self"
       type="button"

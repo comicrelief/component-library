@@ -336,7 +336,6 @@ exports[`renders Promo correctly 1`] = `
         <span>
           <a
             className="c9"
-            color="white"
             href="/"
             target="_self"
             type="button"
@@ -697,7 +696,6 @@ exports[`renders Promo correctly end position 1`] = `
         <span>
           <a
             className="c9"
-            color="white"
             href="/"
             target="_self"
             type="button"
