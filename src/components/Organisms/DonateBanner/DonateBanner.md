@@ -99,6 +99,7 @@ import data from './dev-data/data-single';
   donateWidgetIsTextOnly
   pageBackgroundColour="rnd_25_glitzy_grape"
   componentBackgroundColour="deep_violet_dark"
+  copyColor="white"
   paddingAbove="2rem"
   paddingBelow="2rem"
   donateOrientation="right"
@@ -123,6 +124,7 @@ import data from './dev-data/data';
   donateWidgetIsTextOnly
   pageBackgroundColour="grey_light"
   componentBackgroundColour="white"
+  copyColor="black"
   paddingAbove="2rem"
   paddingBelow="2rem"
   donateOrientation="right"
@@ -144,6 +146,7 @@ import data from './dev-data/data';
 <DonateBanner
   donateWidgetIsTextOnly
   pageBackgroundColour="grey_light"
+  copyColor="black"
   paddingAbove="2rem"
   paddingBelow="2rem"
   donateOrientation="right"
