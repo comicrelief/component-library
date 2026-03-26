@@ -82,7 +82,7 @@ const DonateBanner = ({
   // (M and below), so only the form is shown.
   const shouldShowTitleSection = noTitlesAtAll === false
     && isLargeBreakpoint && donateWidgetIsTextOnly;
-  console.log('copyColor', copyColor);
+
   return (
     <Container
       paddingAbove={paddingAbove}
