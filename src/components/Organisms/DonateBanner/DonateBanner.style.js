@@ -90,8 +90,13 @@ const SecondaryTitleText = styled(Text)`
   display: block;
   text-align: left;
   font-size: ${({ theme }) => theme.fontSize('s')};
-  line-height: 1.5;
+  line-height: 1.25rem;
   margin: ${spacing('sm')} 0 !important;
+
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    font-size: 1.125rem; // to be replaced with a 'proper' fontSize() once we have one that matches the design system
+    line-height: 1.375rem;
+  }
 `;
 
 const MoneyBuys = styled.div`
