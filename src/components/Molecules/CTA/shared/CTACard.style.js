@@ -3,6 +3,7 @@ import { bounceUpAnimation } from '../../../../theme/shared/animations';
 import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import fontHelper from '../../../../theme/crTheme/fontHelper';
 import defaultBoxShadow from '../../../../theme/shared/boxShadows';
+import { ArrowIconInner, ArrowIconOuter, ArrowIconWrapper } from '../../shared/ctaArrow/CtaArrowCircle.style';
 
 const ImageWrapper = styled.div`
   width: 100%;
@@ -74,28 +75,6 @@ const CTATextUnderline = styled.img`
   pointer-events: none;
 `;
 
-const ArrowIconWrapper = styled.div`
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: ${({ theme }) => theme.color('red')};
-
-  @media (min-width: ${breakpointValues.L}px) {
-    background: ${({ theme }) => theme.color('grey_4')};
-  }
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-`;
-
-const ArrowIconOuter = styled.div`
-  padding-left: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-`;
-
 // Card wrapper link - makes entire card clickable
 const CardLink = styled.a`
   display: flex;
@@ -157,6 +136,10 @@ const CardLink = styled.a`
         ${ArrowIconWrapper} {
           @media (min-width: ${breakpointValues.L}px) {
             background: ${({ theme }) => theme.color('red')};
+          }
+
+          ${ArrowIconInner} {
+            transform: scale(1.1);
           }
         }
       }
@@ -326,6 +309,7 @@ export {
   CTAText,
   CTATextUnderline,
   ArrowIconOuter,
+  ArrowIconInner,
   ArrowIconWrapper,
   CardWrapper
 };
