@@ -24,6 +24,16 @@ const defaultData = require('../../../styleguide/data/data').defaultData;<div st
       time="4 min read"
     />
   </div>
+    <div style={{ margin: '1rem', width: '300px' }}>
+    <ArticleTeaser
+      href="/test"
+      images={defaultData.images}
+      imageLow={defaultData.imageLow}
+      title="Article teaser w/no date; used for Prizes"
+      alt="Image's description"
+      time="4 min read"
+    />
+  </div>
 </div>;
 ```
 
