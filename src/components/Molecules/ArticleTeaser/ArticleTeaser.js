@@ -134,8 +134,8 @@ const handleCampaignLogo = category => {
  */
 const ArticleTeaser = ({
   href,
-  date,
   title,
+  date = null,
   imageLow = null,
   image = null,
   images = null,
@@ -170,9 +170,11 @@ const ArticleTeaser = ({
         />
       </ImageWrapper>
       <CopyWrapper category={category}>
+        { date && (
         <Date size="xs" weight="bold">
           {date}
         </Date>
+        )}
         <Title
           time={time}
           tag="h3"
@@ -196,7 +198,7 @@ ArticleTeaser.propTypes = {
   logoSize: PropTypes.string,
   category: PropTypes.string,
   alt: PropTypes.string,
-  date: PropTypes.string.isRequired,
+  date: PropTypes.string,
   title: PropTypes.string.isRequired,
   time: PropTypes.string,
   /** link url */
