@@ -434,7 +434,7 @@ it('renders press realese correctly', () => {
       -ms-flex-pack: center;
       justify-content: center;
       position: relative;
-      padding-left: 1rem;
+      padding: 1rem 0 1rem 1rem;
     }
 
     .c3 img {
