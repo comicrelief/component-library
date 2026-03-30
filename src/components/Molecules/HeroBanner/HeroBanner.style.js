@@ -263,7 +263,7 @@ const HeroBannerLink = styled.a`
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     &:hover {
       ${ArrowIconWrapper} ${ArrowIconInner} {
-        transform: scale(1.1);
+        transform: scale(1.2);
       }
     }
   }
