@@ -40,12 +40,29 @@ const defaultData = require('../../../styleguide/data/data').defaultData;<div st
 ### Article teaser: Press release
 
 ```js
-const defaultData = require('../../../styleguide/data/data').defaultData;<ArticleTeaser
-  href="/test"
-  category=""
-  date=" 01 July 2019"
-  title="Press Release"
-  alt="Image's description"
-  logoSize="80px"
-/>;
+const defaultData = require('../../../styleguide/data/data').defaultData;<div>
+
+  <div style={{ width: '100%', padding: '1rem'}}>
+    <ArticleTeaser
+      href="/test"
+      category=""
+      date=" 01 July 2019"
+      title="Press Release"
+      alt="Image's description"
+      logoSize="80px"
+    />
+  </div>
+
+
+  <div style={{ width: '100%', padding: '1rem'}}>
+    <ArticleTeaser
+      href="/test"
+      category=""
+      title="Press Release w/no date"
+      alt="Image's description"
+      logoSize="80px"
+    />
+  </div>
+
+</div>
 ```

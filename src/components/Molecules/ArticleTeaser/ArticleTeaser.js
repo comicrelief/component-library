@@ -54,7 +54,7 @@ const ImageWrapper = styled.div`
   position: relative;
   ${({ category }) => (category || category === '')
     && css`
-      padding-left: ${spacing('md')};
+      padding: ${spacing('md')} 0 ${spacing('md')} ${spacing('md')};
       img {
         border-radius: 0;
       }
