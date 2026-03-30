@@ -425,9 +425,9 @@ exports[`renders correctly with data prop 1`] = `
   }
 
   .c4:hover .c19 .c21 {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
   }
 }
 
@@ -943,9 +943,9 @@ exports[`renders correctly without image 1`] = `
   }
 
   .c4:hover .c15 .c17 {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
   }
 }
 
