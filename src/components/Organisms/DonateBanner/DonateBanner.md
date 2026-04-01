@@ -43,7 +43,7 @@ const imageS = {
 />;
 ```
 
-## Image banner (widget left), monthly title/subtitle + choose amount text overrides
+## Image banner (widget left), monthly title/subtitle + choose amount text overrides, hidden moneybuys
 
 ```js
 import data from './dev-data/data';
@@ -87,10 +87,11 @@ const imageS = {
   monthlySubtitle="A regular gift helps fund long-term impact."
   chooseAmountText="Choose a one-off amount"
   monthlyChooseAmountText="Choose a monthly amount"
+  hideMoneyBuys
 />;
 ```
 
-## Text-only widget (no image), custom widget background + text colour
+## Text-only widget (no image), custom widget background + text colour, hidden moneybuys
 
 ```js
 import data from './dev-data/data-single';
@@ -111,7 +112,7 @@ import data from './dev-data/data-single';
   title="Donate now"
   subtitle="Make a difference today."
   chooseAmountText="Enter an amount to give"
-  noMoneyBuys
+  hideMoneyBuys
 />;
 ```
 
