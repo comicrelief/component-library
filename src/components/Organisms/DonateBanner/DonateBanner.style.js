@@ -165,7 +165,7 @@ const AmountField = styled(Input)`
 `;
 
 const MoneybuyCopy = styled.p`
-  line-height: 1.5;
+  line-height: 1.25rem;
   color: ${({ theme }) => theme.color('black')};
   margin-top: ${spacing('md')};
   margin-bottom: 0;
