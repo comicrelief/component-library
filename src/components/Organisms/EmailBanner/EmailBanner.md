@@ -209,7 +209,7 @@ const handleSubscribe = (data) => {
     emailWidgetIsTextOnly
     pageBackgroundColour="rnd_25_glitzy_grape"
     componentBackgroundColour="deep_violet_dark"
-    copyColor="blue_light"
+    copyColor="white"
     paddingAbove="2rem"
     paddingBelow="2rem"
     orientation="right"
@@ -248,6 +248,7 @@ const handleSubscribe = (data) => {
     emailWidgetIsTextOnly
     pageBackgroundColour="grey_light"
     componentBackgroundColour="white"
+    copyColor="black"
     paddingAbove="2rem"
     paddingBelow="2rem"
     orientation="right"
