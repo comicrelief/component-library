@@ -33,3 +33,19 @@ import Text from '../../Atoms/Text/Text';
   </Text>
 </Accordion>
 ```
+
+```js
+import Text from '../../Atoms/Text/Text';
+
+<Accordion
+  contentBottomPadding="100px"
+  title={
+    <Text textTag="p" weight="700">
+      I am a title with an overridden text type and weight, to 'p' 700 which is the new donate preference
+    </Text>
+  }
+  >
+  
+  <Text tag="p" size="s">lorem ipsum</Text>
+</Accordion>
+```
