@@ -35,7 +35,7 @@ const Button = styled.button`
     color: inherit; // text was flashing white on focus on safari without this.
     outline: none;
     > div {
-      animation-name: ${props => props.ChevronKeyframes};
+      animation-name: ${ChevronKeyframes};
       animation-duration: 0.4s;
     }
   }
@@ -79,7 +79,7 @@ const StyledText = styled(Text)`
 `;
 
 const Accordion = ({
-  children, title, contentBottomPadding, textTag = 'h4', weight, ...rest
+  children, title, contentBottomPadding, ...rest
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -89,8 +89,8 @@ const Accordion = ({
 
   return (
     <Container {...rest}>
-      <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'} ChevronKeyframes={ChevronKeyframes} type="button">
-        <StyledText tag={textTag} weight={weight}>
+      <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'} type="button">
+        <StyledText tag="h3">
           {title}
         </StyledText>
         <Icon>
@@ -106,8 +106,6 @@ const Accordion = ({
 
 Accordion.propTypes = {
   contentBottomPadding: PropTypes.string,
-  weight: PropTypes.string,
-  textTag: PropTypes.string,
   children: PropTypes.node.isRequired,
   title: PropTypes.oneOfType([
     PropTypes.string,

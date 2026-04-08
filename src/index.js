@@ -27,7 +27,6 @@ export { default as Pagination } from './components/Atoms/Pagination/Pagination'
 export { default as SocialIcons } from './components/Atoms/SocialIcons/SocialIcons';
 export { default as TextInputWithDropdown } from './components/Atoms/TextInputWithDropdown/TextInputWithDropdown';
 export { default as ErrorText } from './components/Atoms/ErrorText/ErrorText';
-export { default as InfoMessage } from './components/Atoms/InfoMessage/InfoMessage';
 export { default as Label } from './components/Atoms/Label/Label';
 export { default as ButtonWithStates } from './components/Atoms/ButtonWithStates/ButtonWithStates';
 export { default as Confetti } from './components/Atoms/Confetti/Confetti';
@@ -70,9 +69,7 @@ export { default as Lookup } from './components/Molecules/Lookup/Lookup';
 export { default as SimpleSchoolLookup } from './components/Molecules/SimpleSchoolLookup/SimpleSchoolLookup';
 export { default as LogoLinked } from './components/Molecules/LogoLinked/LogoLinked';
 export { default as HeroBanner } from './components/Molecules/HeroBanner/HeroBanner';
-export { default as PictureOrVideo } from './components/Molecules/PictureOrVideo/PictureOrVideo';
 export { default as QuoteSlice } from './components/Molecules/QuoteSlice/QuoteSlice';
-export { default as StatsSlice } from './components/Molecules/StatsSlice/StatsSlice';
 
 /* Organisms */
 export {
@@ -81,7 +78,6 @@ export {
   ESU_FIELDS
 } from './components/Organisms/EmailSignUp/_EmailSignUp';
 export { default as CookieBanner } from './components/Organisms/CookieBanner/CookieBanner';
-export { default as EmailBanner } from './components/Organisms/EmailBanner/EmailBanner';
 export { default as Membership } from './components/Organisms/Membership/Membership';
 export {
   MarketingPreferencesDS,

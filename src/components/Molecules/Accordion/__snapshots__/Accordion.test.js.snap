@@ -9,8 +9,8 @@ exports[`renders correctly 1`] = `
   -moz-letter-spacing: 0;
   -ms-letter-spacing: 0;
   letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .c2 span {
@@ -141,15 +141,15 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:740px) {
   .c2 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width:1024px) {
   .c2 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.375rem;
+    line-height: 1.625rem;
   }
 }
 
@@ -208,7 +208,7 @@ exports[`renders correctly 1`] = `
     onClick={[Function]}
     type="button"
   >
-    <h4
+    <h3
       className="c2 c3"
     >
       <h2
@@ -216,7 +216,7 @@ exports[`renders correctly 1`] = `
       >
         I am the title
       </h2>
-    </h4>
+    </h3>
     <div
       className="c5"
     >

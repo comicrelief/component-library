@@ -11,8 +11,7 @@ import {
 
 const ImpactSlider = ({
   heading, cartID, donateLink, rowID, items, step, max,
-  backgroundColour = 'grey_light', opacityAnimation = false, children,
-  defaultSliderValue = null, paddingTop = '2rem', paddingBottom = '2rem'
+  backgroundColour = 'grey_extra_light', opacityAnimation = false, children, defaultSliderValue = null
 }) => {
   // Use the lowest possible amount as our default:
   const [currentAmount, setCurrentAmount] = useState(defaultSliderValue || step);
@@ -29,12 +28,7 @@ const ImpactSlider = ({
   };
 
   return (
-    <OuterWrapper
-      backgroundColour={backgroundColour}
-      id={rowID}
-      paddingTop={paddingTop}
-      paddingBottom={paddingBottom}
-    >
+    <OuterWrapper backgroundColour={backgroundColour} id={rowID}>
       <InnerWrapper>
         <Text tag="h1" family="Anton" weight="normal" size="xl">{heading}</Text>
         <Copy>
@@ -88,8 +82,6 @@ ImpactSlider.propTypes = {
   defaultSliderValue: PropTypes.number,
   opacityAnimation: PropTypes.bool,
   backgroundColour: PropTypes.string,
-  paddingTop: PropTypes.string,
-  paddingBottom: PropTypes.string,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       poundsPerItem: PropTypes.number.isRequired,

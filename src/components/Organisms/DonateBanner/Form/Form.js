@@ -34,7 +34,7 @@ const Signup = ({
   cartID,
   mbshipID,
   donateOrientation = 'right',
-  hideMoneyBuys = false,
+  noMoneyBuys = false,
   submitButtonColor = 'red',
   changeGivingType,
   givingType = null,
@@ -77,7 +77,7 @@ const Signup = ({
 
       givingData.moneybuys.map((moneyBuy, index) => {
         // Only show the MB-associated copy when we're actually showing moneybuys
-        if (moneyBuy.value === amountDonate && !hideMoneyBuys) {
+        if (moneyBuy.value === amountDonate && !noMoneyBuys) {
           moneyBuyUpdatedDescription = moneyBuy.description;
         }
 
@@ -105,7 +105,7 @@ const Signup = ({
     givingType,
     amountDonate,
     otherAmountText,
-    hideMoneyBuys
+    noMoneyBuys
   ]);
 
   // On load, determine what should actually be the default giving type
@@ -238,7 +238,7 @@ const Signup = ({
               mbshipID={mbshipID}
             />
           )}
-          {!hideMoneyBuys && givingType && (
+          {!noMoneyBuys && givingType && (
             <MoneyBuys>
               {givingData.moneybuys.map(({ value }, index) => (
                 <MoneyBuy
@@ -254,17 +254,19 @@ const Signup = ({
             </MoneyBuys>
           )}
           <FormFieldset>
-            <Label size="s" weight="500" color="black">
-              Enter another amount
-            </Label>
+            {!noMoneyBuys && (
+              <Label size="s" weight="500" color="black">
+                Enter another amount
+              </Label>
+            )}
             <AmountField
-              $hideMoneyBuys={hideMoneyBuys}
+              $noMoneyBuys={noMoneyBuys}
               step="0.01"
               name="membership_amount"
               type="string"
               inputBorderColor={isAmountValid(amountDonate) === false}
               prefix="£"
-              label={hideMoneyBuys ? 'Donation amount' : 'Other donation amount'}
+              label={noMoneyBuys ? 'Donation amount' : 'Other donation amount'}
               errorMsg=""
               id={`${mbshipID}--MoneyBuy-userInput`}
               showLabel={false}
@@ -278,7 +280,7 @@ const Signup = ({
               ref={amountRef}
             />
           </FormFieldset>
-          {amountDonate >= 1 && !hideMoneyBuys && moneyBuyCopy && (
+          {amountDonate >= 1 && moneyBuyCopy && (
             <MoneybuyCopy>
               <strong>{`£${amountDonate} `}</strong>
               {moneyBuyCopy}
@@ -315,7 +317,7 @@ Signup.propTypes = {
   otherAmountText: PropTypes.string.isRequired,
   mbshipID: PropTypes.string.isRequired,
   donateOrientation: PropTypes.oneOf(['left', 'right']),
-  hideMoneyBuys: PropTypes.bool,
+  noMoneyBuys: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.shape),
   chooseAmountText: PropTypes.string,
   monthlyChooseAmountText: PropTypes.string,
