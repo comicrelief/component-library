@@ -253,6 +253,7 @@ it('renders article teaser correctly', () => {
     >
       <a
         className="c1 c2"
+        color="red"
         href="/test"
         target="_self"
         type="standard"
@@ -434,7 +435,7 @@ it('renders press realese correctly', () => {
       -ms-flex-pack: center;
       justify-content: center;
       position: relative;
-      padding: 1rem 0 1rem 1rem;
+      padding-left: 1rem;
     }
 
     .c3 img {
@@ -520,6 +521,7 @@ it('renders press realese correctly', () => {
     >
       <a
         className="c1 c2"
+        color="red"
         href="/test"
         target="_self"
         type="standard"

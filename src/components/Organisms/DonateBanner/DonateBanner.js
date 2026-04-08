@@ -46,8 +46,7 @@ const DonateBanner = ({
   videoLoop = true,
   videoShowFullControls = false,
   videoShowPlayPause = true,
-  data = {},
-  copyColor = 'black'
+  data = {}
 }) => {
   const isLargeBreakpoint = useMediaQuery({ query: `(min-width: ${breakpointValues.L}px)` });
   const isMedium = useMediaQuery({ query: `(min-width: ${breakpointValues.M}px)` });
@@ -120,7 +119,7 @@ const DonateBanner = ({
         >
           {shouldShowTitleSection && (
           <TitleWrapperOuter $orientation={donateOrientation}>
-            <TitleWrapperInner $copyColor={copyColor}>
+            <TitleWrapperInner>
               {showCopy && (
               <>
                 <Text
@@ -214,7 +213,6 @@ DonateBanner.propTypes = {
   videoLoop: PropTypes.bool,
   videoShowFullControls: PropTypes.bool,
   videoShowPlayPause: PropTypes.bool,
-  copyColor: PropTypes.string,
   data: PropTypes.objectOf(PropTypes.shape),
   cartID: PropTypes.string.isRequired,
   clientID: PropTypes.string.isRequired,

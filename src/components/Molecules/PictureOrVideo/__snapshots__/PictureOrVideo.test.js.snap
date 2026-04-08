@@ -64,7 +64,6 @@ exports[`renders AmbientVideo when video props are provided correctly 1`] = `
   opacity: 0;
   -webkit-transition: opacity 0.2s ease 2s;
   transition: opacity 0.2s ease 2s;
-  z-index: 3;
 }
 
 .c6[data-play-pause='play'] .c7 {

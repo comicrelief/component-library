@@ -177,6 +177,7 @@ exports[`renders correctly in minimalist form 1`] = `
 >
   <a
     className="c1 c2"
+    color="red"
     href="/test"
     target="_self"
     type="standard"
@@ -430,6 +431,7 @@ exports[`renders correctly with copy 1`] = `
 >
   <a
     className="c1 c2"
+    color="red"
     href="/test"
     target="_self"
     type="standard"
@@ -651,6 +653,7 @@ exports[`renders correctly with date 1`] = `
 >
   <a
     className="c1 c2"
+    color="red"
     href="/test"
     target="_self"
     type="standard"
@@ -868,6 +871,7 @@ exports[`renders correctly with date and type 1`] = `
 >
   <a
     className="c1 c2"
+    color="red"
     href="/test"
     target="_self"
     type="standard"

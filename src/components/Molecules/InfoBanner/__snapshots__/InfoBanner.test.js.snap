@@ -175,6 +175,7 @@ exports[`renders correctly 1`] = `
     >
       <a
         className="c4"
+        color="red"
         href="cr.com"
         target="_self"
         type="standard"

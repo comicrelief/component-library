@@ -90,13 +90,8 @@ const SecondaryTitleText = styled(Text)`
   display: block;
   text-align: left;
   font-size: ${({ theme }) => theme.fontSize('s')};
-  line-height: 1.25rem;
+  line-height: 1.5;
   margin: ${spacing('sm')} 0 !important;
-
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    font-size: 1.125rem; // to be replaced with a 'proper' fontSize() once we have one that matches the design system
-    line-height: 1.375rem;
-  }
 `;
 
 const MoneyBuys = styled.div`
@@ -132,7 +127,7 @@ const AmountField = styled(Input)`
   font-weight: 400;
   display: block;
 
-  ${({ $hideMoneyBuys }) => $hideMoneyBuys === true && css`
+  ${({ $noMoneyBuys }) => $noMoneyBuys === true && css`
     margin-top: ${spacing('sm')};
   `}
 
@@ -165,18 +160,18 @@ const AmountField = styled(Input)`
 `;
 
 const MoneybuyCopy = styled.p`
-  line-height: 1.25rem;
+  line-height: 1.5;
+  margin-top: ${spacing('l')};
   color: ${({ theme }) => theme.color('black')};
-  margin-top: ${spacing('md')};
-  margin-bottom: 0;
+  margin: ${spacing('md')} 0 ${spacing('sm')};
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    margin-top: ${spacing('m')};
+    margin: ${spacing('m')} 0 ${spacing('md')};
   }
 `;
 
 const Button = styled.button`
   width: 100%;
-  margin-top: ${spacing('l')};
+  margin-top: ${spacing('md')};
   color: ${({ theme }) => theme.color('white')};
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: bold;

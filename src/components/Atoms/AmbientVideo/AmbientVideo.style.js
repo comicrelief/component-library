@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import zIndex from '../../../theme/shared/zIndex';
-
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -79,7 +77,6 @@ const PlayPauseButton = styled.button`
   justify-content: center;
   opacity: 0;
   transition: opacity 0.2s ease 2s;
-  ${zIndex('high')};
 
   // Play icon is shifted to the right slightly as it
   // doesn't look quite right when centered normally
