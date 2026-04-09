@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
+import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 import zIndex from '../../../theme/shared/zIndex';
+
+const mobileMaxWidth = breakpointValues.L - 1;
 
 const Wrapper = styled.div`
   width: 100%;
@@ -79,12 +82,19 @@ const PlayPauseButton = styled.button`
   justify-content: center;
   opacity: 0;
   transition: opacity 0.2s ease 2s;
-  ${zIndex('high')};
 
   // Play icon is shifted to the right slightly as it
   // doesn't look quite right when centered normally
   &[data-play-pause='play'] ${PlayPauseIcon} {
     transform: translateX(2px);
+  }
+
+  // Play icon needs to go to the top left on mobile
+  // as with the hero banner, the text container can
+  // overlap it
+  @media (max-width: ${mobileMaxWidth}px) {
+    top: 15px;
+    bottom: auto;
   }
 
   @media (prefers-reduced-motion: reduce) {
