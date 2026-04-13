@@ -45,7 +45,7 @@ const buildEsuValidationSchema = overrides => {
         /^[A-Za-z][A-Za-z' -]*$/,
         "This field only accepts letters and ' - and must start with a letter"
       )
-      .max(50, 'Your first name must be between 1 and 50 characters'),
+      .max(50, 'Your last name must be between 1 and 50 characters'),
     [ESU_FIELDS.EMAIL]: yup
       .string()
       .required('Please enter your email address')
