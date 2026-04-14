@@ -625,6 +625,7 @@ exports[`renders the customised padding version correctly:
 }
 
 .c0 {
+  background-color: #86E4E9;
   padding: 4rem 0 4rem;
 }
 
@@ -1982,6 +1983,7 @@ exports[`renders the default padding version correctly:
 }
 
 .c0 {
+  background-color: #F4F3F5;
   padding: 2rem 0 2rem;
 }
 

@@ -23,6 +23,7 @@ const WYMDCarousel = ({ data }) => {
     mobileHeight,
     peopleHelpedText,
     tabletHeight,
+    backgroundColour = 'grey_light',
     paddingTop = '2rem',
     paddingBottom = '2rem'
   } = data;
@@ -71,6 +72,7 @@ const WYMDCarousel = ({ data }) => {
     <Container
       paddingTop={paddingTop}
       paddingBottom={paddingBottom}
+      backgroundColour={backgroundColour}
     >
       <CarouselWrapper
         className="CarouselWrapper"
@@ -236,7 +238,8 @@ WYMDCarousel.propTypes = {
     tabletHeight: PropTypes.number,
     desktopHeight: PropTypes.number,
     paddingTop: PropTypes.string,
-    paddingBottom: PropTypes.string
+    paddingBottom: PropTypes.string,
+    backgroundColour: PropTypes.string
   }).isRequired
 };
 

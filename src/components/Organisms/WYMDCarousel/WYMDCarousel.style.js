@@ -347,6 +347,7 @@ const CarouselWrapper = styled.div`
 `;
 
 const Container = styled.div`
+  background-color:   ${({ theme, backgroundColour }) => theme.color(backgroundColour)};
   padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 0 ${paddingBottom};`}
 `;
 

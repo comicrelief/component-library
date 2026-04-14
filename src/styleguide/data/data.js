@@ -138,6 +138,7 @@ const carouselItemsCompleteWithPadding = {
   autoPlay: false,
   paddingBottom: '4rem',
   paddingTop: '4rem',
+  backgroundColour: 'teal_light',
   node1Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
   node1Amount: '1,000',
   node1Image: {
