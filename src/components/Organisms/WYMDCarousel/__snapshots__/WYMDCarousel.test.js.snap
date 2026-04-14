@@ -415,35 +415,10 @@ exports[`renders the customised padding version correctly:
 }
 
 .c10 {
-  font-size: 1rem;
-  line-height: normal;
   font-family: 'Anton',Impact,sans-serif;
-  font-weight: normal;
 }
 
 .c10 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.c12 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c12 {
-  font-size: 1rem;
-  line-height: normal;
-}
-
-.c12 span {
   font-size: inherit;
   line-height: inherit;
 }
@@ -682,20 +657,6 @@ exports[`renders the customised padding version correctly:
   .c10 {
     font-size: 3rem;
     line-height: 3rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c12 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c12 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
   }
 }
 
@@ -988,7 +949,7 @@ exports[`renders the customised padding version correctly:
                     className="c11"
                   >
                     <p
-                      className="c12"
+                      className="c6"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>
@@ -1039,7 +1000,7 @@ exports[`renders the customised padding version correctly:
                     className="c11"
                   >
                     <p
-                      className="c12"
+                      className="c6"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>
@@ -1090,7 +1051,7 @@ exports[`renders the customised padding version correctly:
                     className="c11"
                   >
                     <p
-                      className="c12"
+                      className="c6"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>
@@ -1141,7 +1102,7 @@ exports[`renders the customised padding version correctly:
                     className="c11"
                   >
                     <p
-                      className="c12"
+                      className="c6"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>
@@ -1192,7 +1153,7 @@ exports[`renders the customised padding version correctly:
                     className="c11"
                   >
                     <p
-                      className="c12"
+                      className="c6"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>
@@ -1243,7 +1204,7 @@ exports[`renders the customised padding version correctly:
                     className="c11"
                   >
                     <p
-                      className="c12"
+                      className="c6"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>
@@ -1294,7 +1255,7 @@ exports[`renders the customised padding version correctly:
                     className="c11"
                   >
                     <p
-                      className="c12"
+                      className="c6"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>
@@ -1345,7 +1306,7 @@ exports[`renders the customised padding version correctly:
                     className="c11"
                   >
                     <p
-                      className="c12"
+                      className="c6"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>
@@ -1396,7 +1357,7 @@ exports[`renders the customised padding version correctly:
                     className="c11"
                   >
                     <p
-                      className="c12"
+                      className="c6"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>

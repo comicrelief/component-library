@@ -130,13 +130,13 @@ const WYMDCarousel = ({ data }) => {
 
                   <div className="all-text-wrapper">
                     <AmountWrapper>
-                      <Text tag="h1" family="Anton" weight="normal" size="s">
+                      <Text tag="h1" family="Anton">
                         {theseItems[key].amount}
                       </Text>
                     </AmountWrapper>
 
                     <CopyWrapper>
-                      <Text tag="p" size="s">
+                      <Text tag="p">
                         {theseItems[key].copy}
                       </Text>
                     </CopyWrapper>
