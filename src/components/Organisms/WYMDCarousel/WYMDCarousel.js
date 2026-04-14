@@ -23,8 +23,8 @@ const WYMDCarousel = ({ data }) => {
     peopleHelpedText,
     tabletHeight,
     contentful_id: thisID,
-    paddingTop = '0rem',
-    paddingBottom = '0rem'
+    paddingTop = '2rem',
+    paddingBottom = '2rem'
   } = data;
 
   // Defaults to mobile config:

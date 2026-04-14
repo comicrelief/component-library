@@ -1982,7 +1982,7 @@ exports[`renders the default padding version correctly:
 }
 
 .c0 {
-  padding: 0rem 0 0rem;
+  padding: 2rem 0 2rem;
 }
 
 @media (min-width:740px) {
