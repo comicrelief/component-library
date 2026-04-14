@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly: 
+exports[`renders the customised padding version correctly: 
     .c1 {
       font-size: 1rem;
       line-height: 1rem;
@@ -341,7 +341,7 @@ exports[`renders correctly:
       </p>
     </div>
    1`] = `
-.c1 {
+.c2 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -353,16 +353,16 @@ exports[`renders correctly:
   line-height: 1.25rem;
 }
 
-.c1 {
+.c2 {
   font-weight: bold;
 }
 
-.c1 span {
+.c2 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c3 {
+.c4 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -374,18 +374,18 @@ exports[`renders correctly:
   line-height: 2rem;
 }
 
-.c3 {
+.c4 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: normal;
   color: #E52630;
 }
 
-.c3 span {
+.c4 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c5 {
+.c6 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -397,38 +397,130 @@ exports[`renders correctly:
   line-height: 1.25rem;
 }
 
-.c5 span {
+.c6 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c2 {
+.c10 {
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.c10 {
+  font-size: 1rem;
+  line-height: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+}
+
+.c10 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c12 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c12 {
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.c12 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c8 {
+  width: 45%;
+  display: block;
+  padding: 9%;
+  border: 2px dashed #89888b;
+  border-radius: 50%;
+  position: relative;
+  overflow: visible;
+}
+
+.c8 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.c8:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  width: 125%;
+  right: calc(-125% - 2px);
+  height: 2px;
+  border-bottom: 2px dashed #89888b;
+}
+
+.c9 {
+  padding: 1.5rem 0 0.75rem;
+}
+
+.c9 h1 {
+  font-size: 34px;
+  line-height: 37px;
+}
+
+.c11 {
+  padding: 0;
   width: 75%;
   margin: 0 auto;
 }
 
-.c2:first-child {
+.c11 p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.c3 {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.c3:first-child {
   margin-bottom: 2rem;
   text-align: center;
   font-size: 16px;
   line-height: 19.5px;
 }
 
-.c4 {
+.c5 {
   margin-bottom: 2rem;
   text-align: center;
   font-size: 34px;
   line-height: 37px;
 }
 
-.c6 {
+.c7 {
   margin-bottom: 0;
   text-align: center;
   font-size: 12px;
   line-height: 14.63px;
 }
 
-.c0 {
+.c1 {
   height: 100%;
   background-color: #FFFFFF;
   max-width: 760px;
@@ -438,14 +530,14 @@ exports[`renders correctly:
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
-.c0 .carousel {
+.c1 .carousel {
   position: relative;
   margin: 0 auto;
   padding-top: 2rem;
 }
 
-.c0 .carousel button.carousel__back-button,
-.c0 .carousel button.carousel__next-button {
+.c1 .carousel button.carousel__back-button,
+.c1 .carousel button.carousel__next-button {
   position: absolute;
   left: 0;
   top: 0;
@@ -458,8 +550,8 @@ exports[`renders correctly:
   border: none;
 }
 
-.c0 .carousel button.carousel__back-button:after,
-.c0 .carousel button.carousel__next-button:after {
+.c1 .carousel button.carousel__back-button:after,
+.c1 .carousel button.carousel__next-button:after {
   content: "";
   position: absolute;
   top: 0;
@@ -471,29 +563,29 @@ exports[`renders correctly:
   background: linear-gradient(90deg,rgba(255,255,255,1),rgba(255,255,255,0.5),rgba(255,255,255,0));
 }
 
-.c0 .carousel button.carousel__back-button:hover:after,
-.c0 .carousel button.carousel__next-button:hover:after {
+.c1 .carousel button.carousel__back-button:hover:after,
+.c1 .carousel button.carousel__next-button:hover:after {
   opacity: 0.5;
 }
 
-.c0 .carousel button.carousel__next-button {
+.c1 .carousel button.carousel__next-button {
   left: auto;
   right: 0;
 }
 
-.c0 .carousel button.carousel__next-button:before {
+.c1 .carousel button.carousel__next-button:before {
   -webkit-transform: translate(0,-50%) rotate(-90deg);
   -ms-transform: translate(0,-50%) rotate(-90deg);
   transform: translate(0,-50%) rotate(-90deg);
 }
 
-.c0 .carousel button.carousel__next-button:after {
+.c1 .carousel button.carousel__next-button:after {
   left: auto;
   right: 0;
   background: linear-gradient(270deg,rgba(255,255,255,1),rgba(255,255,255,0.5),rgba(255,255,255,0));
 }
 
-.c0 .carousel .wymd-carousel {
+.c1 .carousel .wymd-carousel {
   -webkit-transition: -webkit-transform 0.75s;
   -webkit-transition: -webkit-transform 0.75s;
   transition: -webkit-transform 0.75s;
@@ -505,15 +597,15 @@ exports[`renders correctly:
   will-change: transform;
 }
 
-.c0 .carousel .wymd-carousel .last-slide .image-wrapper:after {
+.c1 .carousel .wymd-carousel .last-slide .image-wrapper:after {
   content: none;
 }
 
-.c0 .carousel .wymd-carousel .carousel__slide {
+.c1 .carousel .wymd-carousel .carousel__slide {
   padding-bottom: 425px !important;
 }
 
-.c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide {
+.c1 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide {
   text-align: center;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -532,100 +624,151 @@ exports[`renders correctly:
   flex-direction: column;
 }
 
+.c0 {
+  padding: 4rem 0 4rem;
+}
+
 @media (min-width:740px) {
-  .c1 {
+  .c2 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c1 {
+  .c2 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:740px) {
-  .c3 {
+  .c4 {
     font-size: 2.5rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c3 {
+  .c4 {
     font-size: 3rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width:740px) {
-  .c5 {
+  .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c5 {
+  .c6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c10 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c10 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c12 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c12 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c2:first-child {
+  .c8 {
+    width: 50%;
+    padding: 9%;
+  }
+
+  .c8:after {
+    width: 100%;
+    right: calc(-100% - 8px);
+  }
+}
+
+@media (min-width:740px) {
+  .c9 h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c3:first-child {
     font-size: 20px;
     line-height: 24.38px;
   }
 }
 
 @media (min-width:740px) {
-  .c4 {
+  .c5 {
     font-size: 60px;
     line-height: 60px;
   }
 }
 
 @media (min-width:1024px) {
-  .c4 {
+  .c5 {
     font-size: 64px;
     line-height: 68px;
   }
 }
 
 @media (min-width:740px) {
-  .c6 {
+  .c7 {
     font-size: 17px;
     line-height: 19px;
   }
 }
 
 @media (min-width:1024px) {
-  .c0 .carousel {
+  .c1 .carousel {
     padding-top: 2rem;
   }
 }
 
 @media (min-width:740px) {
-  .c0 .carousel button.carousel__back-button,
-  .c0 .carousel button.carousel__next-button {
+  .c1 .carousel button.carousel__back-button,
+  .c1 .carousel button.carousel__next-button {
     width: 33.3% !important;
   }
 
-  .c0 .carousel button.carousel__back-button:after,
-  .c0 .carousel button.carousel__next-button:after {
+  .c1 .carousel button.carousel__back-button:after,
+  .c1 .carousel button.carousel__next-button:after {
     width: 100%;
   }
 }
 
 @media (min-width:740px) {
-  .c0 .carousel .wymd-carousel .carousel__slide {
+  .c1 .carousel .wymd-carousel .carousel__slide {
     padding-bottom: 450px !important;
   }
 
-  .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide > div:first-child {
+  .c1 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide > div:first-child {
     -webkit-transition: -webkit-transform 0.75s ease;
     -webkit-transition: transform 0.75s ease;
     transition: transform 0.75s ease;
@@ -634,7 +777,7 @@ exports[`renders correctly:
     transform: scale(0.5);
   }
 
-  .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide > div:first-child:after {
+  .c1 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide > div:first-child:after {
     -webkit-transition: -webkit-transform 0.75s ease,width 0.75s ease,right 0.75s ease;
     -webkit-transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
     transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
@@ -645,7 +788,7 @@ exports[`renders correctly:
     width: 300%;
   }
 
-  .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide .all-text-wrapper {
+  .c1 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide .all-text-wrapper {
     -webkit-transition: -webkit-transform 0.75s ease;
     -webkit-transition: transform 0.75s ease;
     transition: transform 0.75s ease;
@@ -657,7 +800,7 @@ exports[`renders correctly:
     transform: translateY(calc(-45px + 5%)) scale(0.5);
   }
 
-  .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
     right: calc(-300% - 6px);
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -665,13 +808,13 @@ exports[`renders correctly:
     width: 300%;
   }
 
-  .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child {
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
   }
 
-  .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
     right: calc(-222% - 6px);
     -webkit-transform: scale(0.5);
     -ms-transform: scale(0.5);
@@ -679,19 +822,19 @@ exports[`renders correctly:
     width: 300%;
   }
 
-  .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .all-text-wrapper {
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .all-text-wrapper {
     -webkit-transform: translateY(0) scale(1);
     -ms-transform: translateY(0) scale(1);
     transform: translateY(0) scale(1);
   }
 
-  .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible > div > div:first-child {
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible > div > div:first-child {
     -webkit-transform: scale(0.5);
     -ms-transform: scale(0.5);
     transform: scale(0.5);
   }
 
-  .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible > div > div:first-child:after {
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible > div > div:first-child:after {
     right: calc(-300% - 6px);
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
@@ -699,7 +842,7 @@ exports[`renders correctly:
     width: 300%;
   }
 
-  .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .all-text-wrapper {
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .all-text-wrapper {
     -webkit-transform: translateY(calc(-45px + 5%)) scale(0.5);
     -ms-transform: translateY(calc(-45px + 5%)) scale(0.5);
     transform: translateY(calc(-45px + 5%)) scale(0.5);
@@ -707,44 +850,1358 @@ exports[`renders correctly:
 }
 
 @media (min-width:1024px) {
-  .c0 .carousel .wymd-carousel .carousel__slide {
+  .c1 .carousel .wymd-carousel .carousel__slide {
     padding-bottom: 475px !important;
   }
 
-  .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
     right: calc(-250% - 6px);
     width: 250%;
   }
 
-  .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
     right: calc(-187% - 6px);
     width: 250%;
   }
 
-  .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
     right: calc(-250% - 6px);
     width: 250%;
   }
 }
 
 <div
-  className="c0 CarouselWrapper"
-  id="7zdR84QkZwrTh9NWx2H926"
+  className="c0"
 >
-  <p
-    className="c1 c2"
+  <div
+    className="c1 CarouselWrapper"
+    id="7zdR84QkZwrTh9NWx2H926"
   >
-    Over the past two years, we’ve supported
-  </p>
-  <h1
-    className="c3 c4"
+    <p
+      className="c2 c3"
+    >
+      Over the past two years, we’ve supported
+    </p>
+    <h1
+      className="c4 c5"
+    >
+      11.7 million people
+    </h1>
+    <p
+      className="c6 c7"
+    >
+      including...
+    </p>
+    <div
+      className="carousel"
+    >
+      <div
+        aria-label="slider"
+        aria-live="polite"
+        className="horizontalSlider___281Ls carousel__slider carousel__slider--horizontal"
+        onKeyDown={[Function]}
+        role="listbox"
+        style={Object {}}
+        tabIndex={0}
+      >
+        <div
+          className="carousel__slider-tray-wrapper carousel__slider-tray-wrap--horizontal"
+          style={Object {}}
+        >
+          <div
+            className="sliderTray___-vHFQ wymd-carousel carousel__slider-tray carousel__slider-tray--horizontal"
+            onClickCapture={[Function]}
+            onMouseDown={[Function]}
+            onTouchCancel={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "flexDirection": "row",
+                "transform": "translateX(0%) translateX(0px)",
+                "width": "366.6666666666667%",
+              }
+            }
+          >
+            <div
+              aria-label="slide"
+              aria-selected={true}
+              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              role="option"
+              style={
+                Object {
+                  "paddingBottom": "36.36363636363637%",
+                  "width": "9.090909090909092%",
+                }
+              }
+              tabIndex={0}
+            >
+              <div
+                className="slideInner___2mfX9 carousel__inner-slide"
+                style={Object {}}
+              />
+            </div>
+            <div
+              aria-label="slide"
+              aria-selected={true}
+              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              role="option"
+              style={
+                Object {
+                  "paddingBottom": "36.36363636363637%",
+                  "width": "9.090909090909092%",
+                }
+              }
+              tabIndex={0}
+            >
+              <div
+                className="slideInner___2mfX9 carousel__inner-slide"
+                style={Object {}}
+              >
+                <div
+                  className="c8 image-wrapper"
+                >
+                  <img
+                    alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
+                    src="//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png"
+                  />
+                </div>
+                <div
+                  className="all-text-wrapper"
+                >
+                  <div
+                    className="c9"
+                  >
+                    <h1
+                      className="c10"
+                    >
+                      1,000
+                    </h1>
+                  </div>
+                  <div
+                    className="c11"
+                  >
+                    <p
+                      className="c12"
+                    >
+                      children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-label="slide"
+              aria-selected={true}
+              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              role="option"
+              style={
+                Object {
+                  "paddingBottom": "36.36363636363637%",
+                  "width": "9.090909090909092%",
+                }
+              }
+              tabIndex={0}
+            >
+              <div
+                className="slideInner___2mfX9 carousel__inner-slide"
+                style={Object {}}
+              >
+                <div
+                  className="c8 image-wrapper"
+                >
+                  <img
+                    alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
+                    src="//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png"
+                  />
+                </div>
+                <div
+                  className="all-text-wrapper"
+                >
+                  <div
+                    className="c9"
+                  >
+                    <h1
+                      className="c10"
+                    >
+                      750,000
+                    </h1>
+                  </div>
+                  <div
+                    className="c11"
+                  >
+                    <p
+                      className="c12"
+                    >
+                      children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-label="slide"
+              aria-selected={false}
+              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--hidden"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              role="option"
+              style={
+                Object {
+                  "paddingBottom": "36.36363636363637%",
+                  "width": "9.090909090909092%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="slideInner___2mfX9 carousel__inner-slide"
+                style={Object {}}
+              >
+                <div
+                  className="c8 image-wrapper"
+                >
+                  <img
+                    alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
+                    src="//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png"
+                  />
+                </div>
+                <div
+                  className="all-text-wrapper"
+                >
+                  <div
+                    className="c9"
+                  >
+                    <h1
+                      className="c10"
+                    >
+                      3,000
+                    </h1>
+                  </div>
+                  <div
+                    className="c11"
+                  >
+                    <p
+                      className="c12"
+                    >
+                      children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-label="slide"
+              aria-selected={false}
+              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--hidden"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              role="option"
+              style={
+                Object {
+                  "paddingBottom": "36.36363636363637%",
+                  "width": "9.090909090909092%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="slideInner___2mfX9 carousel__inner-slide"
+                style={Object {}}
+              >
+                <div
+                  className="c8 image-wrapper"
+                >
+                  <img
+                    alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
+                    src="//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png"
+                  />
+                </div>
+                <div
+                  className="all-text-wrapper"
+                >
+                  <div
+                    className="c9"
+                  >
+                    <h1
+                      className="c10"
+                    >
+                      4,000
+                    </h1>
+                  </div>
+                  <div
+                    className="c11"
+                  >
+                    <p
+                      className="c12"
+                    >
+                      children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-label="slide"
+              aria-selected={false}
+              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--hidden"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              role="option"
+              style={
+                Object {
+                  "paddingBottom": "36.36363636363637%",
+                  "width": "9.090909090909092%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="slideInner___2mfX9 carousel__inner-slide"
+                style={Object {}}
+              >
+                <div
+                  className="c8 image-wrapper"
+                >
+                  <img
+                    alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
+                    src="//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png"
+                  />
+                </div>
+                <div
+                  className="all-text-wrapper"
+                >
+                  <div
+                    className="c9"
+                  >
+                    <h1
+                      className="c10"
+                    >
+                      5,000
+                    </h1>
+                  </div>
+                  <div
+                    className="c11"
+                  >
+                    <p
+                      className="c12"
+                    >
+                      children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-label="slide"
+              aria-selected={false}
+              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--hidden"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              role="option"
+              style={
+                Object {
+                  "paddingBottom": "36.36363636363637%",
+                  "width": "9.090909090909092%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="slideInner___2mfX9 carousel__inner-slide"
+                style={Object {}}
+              >
+                <div
+                  className="c8 image-wrapper"
+                >
+                  <img
+                    alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
+                    src="//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png"
+                  />
+                </div>
+                <div
+                  className="all-text-wrapper"
+                >
+                  <div
+                    className="c9"
+                  >
+                    <h1
+                      className="c10"
+                    >
+                      6,000
+                    </h1>
+                  </div>
+                  <div
+                    className="c11"
+                  >
+                    <p
+                      className="c12"
+                    >
+                      children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-label="slide"
+              aria-selected={false}
+              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--hidden"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              role="option"
+              style={
+                Object {
+                  "paddingBottom": "36.36363636363637%",
+                  "width": "9.090909090909092%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="slideInner___2mfX9 carousel__inner-slide"
+                style={Object {}}
+              >
+                <div
+                  className="c8 image-wrapper"
+                >
+                  <img
+                    alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
+                    src="//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png"
+                  />
+                </div>
+                <div
+                  className="all-text-wrapper"
+                >
+                  <div
+                    className="c9"
+                  >
+                    <h1
+                      className="c10"
+                    >
+                      7,000
+                    </h1>
+                  </div>
+                  <div
+                    className="c11"
+                  >
+                    <p
+                      className="c12"
+                    >
+                      children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-label="slide"
+              aria-selected={false}
+              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--hidden"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              role="option"
+              style={
+                Object {
+                  "paddingBottom": "36.36363636363637%",
+                  "width": "9.090909090909092%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="slideInner___2mfX9 carousel__inner-slide"
+                style={Object {}}
+              >
+                <div
+                  className="c8 image-wrapper"
+                >
+                  <img
+                    alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
+                    src="//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png"
+                  />
+                </div>
+                <div
+                  className="all-text-wrapper"
+                >
+                  <div
+                    className="c9"
+                  >
+                    <h1
+                      className="c10"
+                    >
+                      8,000
+                    </h1>
+                  </div>
+                  <div
+                    className="c11"
+                  >
+                    <p
+                      className="c12"
+                    >
+                      children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-label="slide"
+              aria-selected={false}
+              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--hidden last-slide"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              role="option"
+              style={
+                Object {
+                  "paddingBottom": "36.36363636363637%",
+                  "width": "9.090909090909092%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="slideInner___2mfX9 carousel__inner-slide"
+                style={Object {}}
+              >
+                <div
+                  className="c8 image-wrapper"
+                >
+                  <img
+                    alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
+                    src="//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png"
+                  />
+                </div>
+                <div
+                  className="all-text-wrapper"
+                >
+                  <div
+                    className="c9"
+                  >
+                    <h1
+                      className="c10"
+                    >
+                      9,000
+                    </h1>
+                  </div>
+                  <div
+                    className="c11"
+                  >
+                    <p
+                      className="c12"
+                    >
+                      children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-label="slide"
+              aria-selected={false}
+              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--hidden"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              role="option"
+              style={
+                Object {
+                  "paddingBottom": "36.36363636363637%",
+                  "width": "9.090909090909092%",
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="slideInner___2mfX9 carousel__inner-slide"
+                style={Object {}}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        aria-label="previous"
+        className="buttonBack___1mlaL carousel__back-button"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Back
+      </button>
+      <button
+        aria-label="next"
+        className="buttonNext___2mOCa carousel__next-button"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        Next
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders the default padding version correctly: 
+    .c1 {
+      font-size: 1rem;
+      line-height: 1rem;
+      text-transform: inherit;
+      font-weight: bold;
+      line-height: normal;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+    }
+
+    .c3 {
+      color: #E52630;
+      font-size: 1rem;
+      line-height: 1rem;
+      text-transform: uppercase;
+      font-weight: normal;
+      font-family: 'Anton',Impact,sans-serif;
+      -webkit-letter-spacing: 0.03rem;
+      -moz-letter-spacing: 0.03rem;
+      -ms-letter-spacing: 0.03rem;
+      letter-spacing: 0.03rem;
+    }
+
+    .c5 {
+      font-size: 1rem;
+      line-height: 1rem;
+      text-transform: inherit;
+      line-height: normal;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+    }
+
+    .c2 {
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    .c2:first-child {
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 16px;
+      line-height: 19.5px;
+    }
+
+    .c4 {
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 34px;
+      line-height: 37px;
+    }
+
+    .c6 {
+      margin-bottom: 0;
+      text-align: center;
+      font-size: 12px;
+      line-height: 14.63px;
+    }
+
+    .c0 {
+      height: 100%;
+      background-color: #FFFFFF;
+      max-width: 760px;
+      padding: 2rem;
+      margin: 0 auto;
+      border-radius: 20px;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+    }
+
+    .c0 .carousel {
+      position: relative;
+      margin: 0 auto;
+      padding-top: 2rem;
+    }
+
+    .c0 .carousel button.carousel__back-button,
+    .c0 .carousel button.carousel__next-button {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 33% !important;
+      height: 100%;
+      padding: 0 !important;
+      box-shadow: none;
+      text-indent: -9999px;
+      background-color: transparent;
+      border: none;
+    }
+
+    .c0 .carousel button.carousel__back-button:after,
+    .c0 .carousel button.carousel__next-button:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      -webkit-transition: opacity 0.2s linear;
+      transition: opacity 0.2s linear;
+      background: linear-gradient(90deg,rgba(255,255,255,1),rgba(255,255,255,0.5),rgba(255,255,255,0));
+    }
+
+    .c0 .carousel button.carousel__back-button:hover:after,
+    .c0 .carousel button.carousel__next-button:hover:after {
+      opacity: 0.5;
+    }
+
+    .c0 .carousel button.carousel__next-button {
+      left: auto;
+      right: 0;
+    }
+
+    .c0 .carousel button.carousel__next-button:before {
+      -webkit-transform: translate(0,-50%) rotate(-90deg);
+      -ms-transform: translate(0,-50%) rotate(-90deg);
+      transform: translate(0,-50%) rotate(-90deg);
+    }
+
+    .c0 .carousel button.carousel__next-button:after {
+      left: auto;
+      right: 0;
+      background: linear-gradient(270deg,rgba(255,255,255,1),rgba(255,255,255,0.5),rgba(255,255,255,0));
+    }
+
+    .c0 .carousel .wymd-carousel {
+      -webkit-transition: -webkit-transform 0.75s;
+      -webkit-transition: -webkit-transform 0.75s;
+      transition: -webkit-transform 0.75s;
+      -o-transition: transform 0.75s;
+      -webkit-transition: -webkit-transform 0.75s;
+      -webkit-transition: transform 0.75s;
+      transition: transform 0.75s;
+      -webkit-transform: 0.75s;
+      will-change: transform;
+    }
+
+    .c0 .carousel .wymd-carousel .last-slide .image-wrapper:after {
+      content: none;
+    }
+
+    .c0 .carousel .wymd-carousel .carousel__slide {
+      padding-bottom: 425px !important;
+    }
+
+    .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide {
+      text-align: center;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    @media (min-width:1024px) {
+      .c2:first-child {
+        font-size: 20px;
+        line-height: 24.38px;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c4 {
+        font-size: 60px;
+        line-height: 60px;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c4 {
+        font-size: 64px;
+        line-height: 68px;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c6 {
+        font-size: 17px;
+        line-height: 19px;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c0 .carousel {
+        padding-top: 2rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c0 .carousel button.carousel__back-button,
+      .c0 .carousel button.carousel__next-button {
+        width: 33.3% !important;
+      }
+
+      .c0 .carousel button.carousel__back-button:after,
+      .c0 .carousel button.carousel__next-button:after {
+        width: 100%;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c0 .carousel .wymd-carousel .carousel__slide {
+        padding-bottom: 450px !important;
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide > div:first-child {
+        -webkit-transition: -webkit-transform 0.75s ease;
+        -webkit-transition: transform 0.75s ease;
+        transition: transform 0.75s ease;
+        -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        transform: scale(0.5);
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide > div:first-child:after {
+        -webkit-transition: -webkit-transform 0.75s ease,width 0.75s ease,right 0.75s ease;
+        -webkit-transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
+        transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
+        right: calc(-300% - 6px);
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        width: 300%;
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide .all-text-wrapper {
+        -webkit-transition: -webkit-transform 0.75s ease;
+        -webkit-transition: transform 0.75s ease;
+        transition: transform 0.75s ease;
+        -webkit-transform-origin: top;
+        -ms-transform-origin: top;
+        transform-origin: top;
+        -webkit-transform: translateY(calc(-45px + 5%)) scale(0.5);
+        -ms-transform: translateY(calc(-45px + 5%)) scale(0.5);
+        transform: translateY(calc(-45px + 5%)) scale(0.5);
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+        right: calc(-300% - 6px);
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        width: 300%;
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+        right: calc(-222% - 6px);
+        -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        transform: scale(0.5);
+        width: 300%;
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .all-text-wrapper {
+        -webkit-transform: translateY(0) scale(1);
+        -ms-transform: translateY(0) scale(1);
+        transform: translateY(0) scale(1);
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible > div > div:first-child {
+        -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        transform: scale(0.5);
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible > div > div:first-child:after {
+        right: calc(-300% - 6px);
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        width: 300%;
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .all-text-wrapper {
+        -webkit-transform: translateY(calc(-45px + 5%)) scale(0.5);
+        -ms-transform: translateY(calc(-45px + 5%)) scale(0.5);
+        transform: translateY(calc(-45px + 5%)) scale(0.5);
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c0 .carousel .wymd-carousel .carousel__slide {
+        padding-bottom: 475px !important;
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+        right: calc(-250% - 6px);
+        width: 250%;
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+        right: calc(-187% - 6px);
+        width: 250%;
+      }
+
+      .c0 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+        right: calc(-250% - 6px);
+        width: 250%;
+      }
+    }
+
+    <div
+      className="c0 CarouselWrapper"
+      id="7zdR84QkZwrTh9NWx2H926"
+    >
+      <p
+        className="c1 c2"
+        color="inherit"
+        size="s"
+      >
+        Over the past two years, we’ve supported
+      </p>
+      <h1
+        className="c3 c4"
+        color="red"
+        size="s"
+      >
+        11.7 million people
+      </h1>
+      <p
+        className="c5 c6"
+        color="inherit"
+        size="s"
+      >
+        including...
+      </p>
+    </div>
+   1`] = `
+.c2 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c2 {
+  font-weight: bold;
+}
+
+.c2 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c4 {
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.c4 {
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  color: #E52630;
+}
+
+.c4 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c6 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c3 {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.c3:first-child {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 16px;
+  line-height: 19.5px;
+}
+
+.c5 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 34px;
+  line-height: 37px;
+}
+
+.c7 {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 14.63px;
+}
+
+.c1 {
+  height: 100%;
+  background-color: #FFFFFF;
+  max-width: 760px;
+  padding: 2rem;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c1 .carousel {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.c1 .carousel button.carousel__back-button,
+.c1 .carousel button.carousel__next-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 33% !important;
+  height: 100%;
+  padding: 0 !important;
+  box-shadow: none;
+  text-indent: -9999px;
+  background-color: transparent;
+  border: none;
+}
+
+.c1 .carousel button.carousel__back-button:after,
+.c1 .carousel button.carousel__next-button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  background: linear-gradient(90deg,rgba(255,255,255,1),rgba(255,255,255,0.5),rgba(255,255,255,0));
+}
+
+.c1 .carousel button.carousel__back-button:hover:after,
+.c1 .carousel button.carousel__next-button:hover:after {
+  opacity: 0.5;
+}
+
+.c1 .carousel button.carousel__next-button {
+  left: auto;
+  right: 0;
+}
+
+.c1 .carousel button.carousel__next-button:before {
+  -webkit-transform: translate(0,-50%) rotate(-90deg);
+  -ms-transform: translate(0,-50%) rotate(-90deg);
+  transform: translate(0,-50%) rotate(-90deg);
+}
+
+.c1 .carousel button.carousel__next-button:after {
+  left: auto;
+  right: 0;
+  background: linear-gradient(270deg,rgba(255,255,255,1),rgba(255,255,255,0.5),rgba(255,255,255,0));
+}
+
+.c1 .carousel .wymd-carousel {
+  -webkit-transition: -webkit-transform 0.75s;
+  -webkit-transition: -webkit-transform 0.75s;
+  transition: -webkit-transform 0.75s;
+  -o-transition: transform 0.75s;
+  -webkit-transition: -webkit-transform 0.75s;
+  -webkit-transition: transform 0.75s;
+  transition: transform 0.75s;
+  -webkit-transform: 0.75s;
+  will-change: transform;
+}
+
+.c1 .carousel .wymd-carousel .last-slide .image-wrapper:after {
+  content: none;
+}
+
+.c1 .carousel .wymd-carousel .carousel__slide {
+  padding-bottom: 425px !important;
+}
+
+.c1 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide {
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c0 {
+  padding: 0rem 0 0rem;
+}
+
+@media (min-width:740px) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c3:first-child {
+    font-size: 20px;
+    line-height: 24.38px;
+  }
+}
+
+@media (min-width:740px) {
+  .c5 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c5 {
+    font-size: 64px;
+    line-height: 68px;
+  }
+}
+
+@media (min-width:740px) {
+  .c7 {
+    font-size: 17px;
+    line-height: 19px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c1 .carousel {
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 .carousel button.carousel__back-button,
+  .c1 .carousel button.carousel__next-button {
+    width: 33.3% !important;
+  }
+
+  .c1 .carousel button.carousel__back-button:after,
+  .c1 .carousel button.carousel__next-button:after {
+    width: 100%;
+  }
+}
+
+@media (min-width:740px) {
+  .c1 .carousel .wymd-carousel .carousel__slide {
+    padding-bottom: 450px !important;
+  }
+
+  .c1 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide > div:first-child {
+    -webkit-transition: -webkit-transform 0.75s ease;
+    -webkit-transition: transform 0.75s ease;
+    transition: transform 0.75s ease;
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  .c1 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide > div:first-child:after {
+    -webkit-transition: -webkit-transform 0.75s ease,width 0.75s ease,right 0.75s ease;
+    -webkit-transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
+    transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
+    right: calc(-300% - 6px);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    width: 300%;
+  }
+
+  .c1 .carousel .wymd-carousel .carousel__slide .carousel__inner-slide .all-text-wrapper {
+    -webkit-transition: -webkit-transform 0.75s ease;
+    -webkit-transition: transform 0.75s ease;
+    transition: transform 0.75s ease;
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+    -webkit-transform: translateY(calc(-45px + 5%)) scale(0.5);
+    -ms-transform: translateY(calc(-45px + 5%)) scale(0.5);
+    transform: translateY(calc(-45px + 5%)) scale(0.5);
+  }
+
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+    right: calc(-300% - 6px);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    width: 300%;
+  }
+
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+    right: calc(-222% - 6px);
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    width: 300%;
+  }
+
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .all-text-wrapper {
+    -webkit-transform: translateY(0) scale(1);
+    -ms-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible > div > div:first-child {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible > div > div:first-child:after {
+    right: calc(-300% - 6px);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    width: 300%;
+  }
+
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .all-text-wrapper {
+    -webkit-transform: translateY(calc(-45px + 5%)) scale(0.5);
+    -ms-transform: translateY(calc(-45px + 5%)) scale(0.5);
+    transform: translateY(calc(-45px + 5%)) scale(0.5);
+  }
+}
+
+@media (min-width:1024px) {
+  .c1 .carousel .wymd-carousel .carousel__slide {
+    padding-bottom: 475px !important;
+  }
+
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+    right: calc(-250% - 6px);
+    width: 250%;
+  }
+
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+    right: calc(-187% - 6px);
+    width: 250%;
+  }
+
+  .c1 .carousel .wymd-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+    right: calc(-250% - 6px);
+    width: 250%;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1 CarouselWrapper"
+    id="7zdR84QkZwrTh9NWx2H926"
   >
-    11.7 million people
-  </h1>
-  <p
-    className="c5 c6"
-  >
-    including...
-  </p>
+    <p
+      className="c2 c3"
+    >
+      Over the past two years, we’ve supported
+    </p>
+    <h1
+      className="c4 c5"
+    >
+      11.7 million people
+    </h1>
+    <p
+      className="c6 c7"
+    >
+      including...
+    </p>
+  </div>
 </div>
 `;

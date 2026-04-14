@@ -8,12 +8,25 @@ import {
 import formatItems from './_utils';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import {
-  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper, Heading, PeopleHelpedText, Including
+  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper,
+  Heading, PeopleHelpedText, Including, Container
 } from './WYMDCarousel.style';
 import Text from '../../Atoms/Text/Text';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
-const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
+const WYMDCarousel = ({ data }) => {
+  const {
+    autoPlay,
+    desktopHeight,
+    headerCopy,
+    mobileHeight,
+    peopleHelpedText,
+    tabletHeight,
+    contentful_id: thisID,
+    paddingTop = '0rem',
+    paddingBottom = '0rem'
+  } = data;
+
   // Defaults to mobile config:
   const [isMobile, setIsMobile] = useState(true);
   const [visibleSlides, setVisibleSlides] = useState(1);
@@ -55,90 +68,96 @@ const WYMDCarousel = ({ data, data: { autoPlay, contentful_id: thisID } }) => {
   }
 
   return (
-    <CarouselWrapper
-      className="CarouselWrapper"
-      id={thisID}
-      mobileHeight={data.mobileHeight}
-      tabletHeight={data.tabletHeight}
-      desktopHeight={data.desktopHeight}
+    <Container
+      paddingTop={paddingTop}
+      paddingBottom={paddingBottom}
     >
-
-      <Heading tag="p" weight="bold">
-        { data.headerCopy}
-      </Heading>
-
-      <PeopleHelpedText tag="h1" family="Anton" weight="normal" color="red">
-        { data.peopleHelpedText}
-      </PeopleHelpedText>
-
-      <Including tag="p">
-        including...
-      </Including>
-
-      {theseItems && (
-      <CarouselProvider
-        naturalSlideWidth={50}
-        naturalSlideHeight={200}
-        totalSlides={totalSlides}
-        isPlaying={autoPlay}
-        interval={5000}
-        visibleSlides={visibleSlides}
-        infinite
+      <CarouselWrapper
+        className="CarouselWrapper"
+        id={thisID}
+        mobileHeight={mobileHeight}
+        tabletHeight={tabletHeight}
+        desktopHeight={desktopHeight}
       >
-        <Slider classNameAnimation="wymd-carousel">
 
-          {/* Dummy slide for our desired non-mobile layout and functionality */}
-          {isMobile === false && (
-          <Slide index={0} key={0} />
-          )}
+        <Heading tag="p" weight="bold">
+          { headerCopy}
+        </Heading>
 
-          {Object.keys(theseItems).map((key, index) => {
+        <PeopleHelpedText tag="h1" family="Anton" weight="normal" color="red">
+          { peopleHelpedText}
+        </PeopleHelpedText>
+
+        <Including tag="p">
+          including...
+        </Including>
+
+        {theseItems && (
+        <CarouselProvider
+          naturalSlideWidth={50}
+          naturalSlideHeight={200}
+          totalSlides={totalSlides}
+          isPlaying={autoPlay}
+          interval={5000}
+          visibleSlides={visibleSlides}
+          infinite
+        >
+          <Slider classNameAnimation="wymd-carousel">
+
+            {/* Dummy slide for our desired non-mobile layout and functionality */}
+            {isMobile === false && (
+            <Slide index={0} key={0} />
+            )}
+
+            {Object.keys(theseItems).map((key, index) => {
             // Reflect that initial dummy/bookend slide shown on non-mobile/tablet views:
-            const thisOffsetIndex = index + (isMobile ? 0 : 1);
+              const thisOffsetIndex = index + (isMobile ? 0 : 1);
 
-            return (
+              return (
               // Calculate the index offset accordingly to reflect the number of slides,
               // but use the REAL index when determining if its the last REAL slide
-              <Slide
-                index={thisOffsetIndex}
-                className={index === (theseItems.length - 1) && 'last-slide'}
-                key={thisOffsetIndex}
-              >
+                <Slide
+                  index={thisOffsetIndex}
+                  className={index === (theseItems.length - 1) && 'last-slide'}
+                  key={thisOffsetIndex}
+                >
 
-                <ImageWrapper className="image-wrapper">
-                  <img src={theseItems[key].image.file.url} alt={theseItems[key].copy} />
-                </ImageWrapper>
+                  <ImageWrapper className="image-wrapper">
+                    <img src={theseItems[key].image.file.url} alt={theseItems[key].copy} />
+                  </ImageWrapper>
 
-                <div className="all-text-wrapper">
-                  <AmountWrapper>
-                    <Text tag="h1" family="Anton" weight="normal" size="s">
-                      {theseItems[key].amount}
-                    </Text>
-                  </AmountWrapper>
+                  <div className="all-text-wrapper">
+                    <AmountWrapper>
+                      <Text tag="h1" family="Anton" weight="normal" size="s">
+                        {theseItems[key].amount}
+                      </Text>
+                    </AmountWrapper>
 
-                  <CopyWrapper>
-                    <Text tag="p" size="s">
-                      {theseItems[key].copy}
-                    </Text>
-                  </CopyWrapper>
-                </div>
+                    <CopyWrapper>
+                      <Text tag="p" size="s">
+                        {theseItems[key].copy}
+                      </Text>
+                    </CopyWrapper>
+                  </div>
 
-              </Slide>
-            );
-          })}
+                </Slide>
+              );
+            })}
 
-          {/* Dummy slide for our desired non-mobile layout and functionality */}
-          {isMobile === false && (
-          <Slide index={theseItems.length + 1} key="bookend-last" />
-          )}
+            {/* Dummy slide for our desired non-mobile layout and functionality */}
+            {isMobile === false && (
+            <Slide index={theseItems.length + 1} key="bookend-last" />
+            )}
 
-        </Slider>
-        <ButtonBack>Back</ButtonBack>
-        <ButtonNext>Next</ButtonNext>
-      </CarouselProvider>
-      )}
+          </Slider>
+          <ButtonBack>Back</ButtonBack>
+          <ButtonNext>Next</ButtonNext>
+        </CarouselProvider>
+        )}
 
-    </CarouselWrapper>
+      </CarouselWrapper>
+    </Container>
+
   );
 };
 
@@ -215,7 +234,9 @@ WYMDCarousel.propTypes = {
     contentful_id: PropTypes.string.isRequired,
     mobileHeight: PropTypes.number,
     tabletHeight: PropTypes.number,
-    desktopHeight: PropTypes.number
+    desktopHeight: PropTypes.number,
+    paddingTop: PropTypes.string,
+    paddingBottom: PropTypes.string
   }).isRequired
 };
 

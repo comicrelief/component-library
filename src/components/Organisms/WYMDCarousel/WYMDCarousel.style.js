@@ -126,7 +126,7 @@ const CarouselWrapper = styled.div`
   margin: 0 auto;
 
   border-radius: 20px;
- ${defaultBoxShadow()}
+  ${defaultBoxShadow()}
 
   .carousel {
     position: relative;
@@ -334,7 +334,6 @@ const CarouselWrapper = styled.div`
         }
         // END OF DESKTOP
 
-
         .carousel__inner-slide {
           text-align: center;
           display: inline-flex;
@@ -347,6 +346,11 @@ const CarouselWrapper = styled.div`
   }
 `;
 
+const Container = styled.div`
+  padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 0 ${paddingBottom};`}
+`;
+
 export {
-  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper, Heading, PeopleHelpedText, Including
+  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper,
+  Heading, PeopleHelpedText, Including, Container
 };
