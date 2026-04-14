@@ -316,8 +316,24 @@ const RichtextCarouselItems = {
   autoPlay: true
 };
 
+const RichtextCarouselItemsWithPadding = {
+  contentful_id: 'nqIEHjiYE8Yd2A2a5cI31',
+  headingCopy: 'Some heading copy that will be nicely constructed in-situ',
+  nodes: [
+    { copy: 'Some other longside but not really all that long copy, who knows, it could be this long or LESS.' },
+    { copy: '140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets.' },
+    { copy: 'Some other longside but not really all that long copy, who knows, it could be this long or LESS' },
+    { copy: '140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets. ABIGLONGLINETOFORCEONTOANEWONE' }
+  ],
+  autoPlay: true,
+  paddingBottom: '4rem',
+  paddingTop: '4rem',
+  rowBackgroundColour: 'teal_light'
+};
+
 export {
   defaultData, mobileImages, testImpactSliderItems,
   carouselItemsComplete, carouselItemsCompleteWithPadding,
-  carouselItemsIncomplete, carouselItemsMinimal, RichtextCarouselItems
+  carouselItemsIncomplete, carouselItemsMinimal,
+  RichtextCarouselItems, RichtextCarouselItemsWithPadding
 };

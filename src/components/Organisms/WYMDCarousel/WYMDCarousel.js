@@ -17,12 +17,12 @@ import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 const WYMDCarousel = ({ data }) => {
   const {
     autoPlay,
+    contentful_id: thisID,
     desktopHeight,
     headerCopy,
     mobileHeight,
     peopleHelpedText,
     tabletHeight,
-    contentful_id: thisID,
     paddingTop = '2rem',
     paddingBottom = '2rem'
   } = data;
