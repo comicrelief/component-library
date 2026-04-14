@@ -127,6 +127,83 @@ const carouselItemsComplete = {
   }
 };
 
+const carouselItemsCompleteWithPadding = {
+  __typename: 'ContentfulWhatYourMoneyDoesCarousel',
+  contentful_id: '7zdR84QkZwrTh9NWx2H926',
+  mobileHeight: 425,
+  tabletHeight: 450,
+  desktopHeight: 475,
+  headerCopy: 'Over the past two years, we’ve supported',
+  peopleHelpedText: '11.7 million people',
+  autoPlay: false,
+  paddingBottom: '4rem',
+  paddingTop: '4rem',
+  backgroundColour: 'teal_light',
+  node1Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
+  node1Amount: '1,000',
+  node1Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png'
+    }
+  },
+  node2Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
+  node2Amount: '750,000',
+  node2Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png'
+    }
+  },
+  node3Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
+  node3Amount: '3,000',
+  node3Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png'
+    }
+  },
+  node4Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
+  node4Amount: '4,000',
+  node4Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png'
+    }
+  },
+  node5Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
+  node5Amount: '5,000',
+  node5Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png'
+    }
+  },
+  node6Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
+  node6Amount: '6,000',
+  node6Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png'
+    }
+  },
+  node7Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
+  node7Amount: '7,000',
+  node7Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png'
+    }
+  },
+  node8Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
+  node8Amount: '8,000',
+  node8Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png'
+    }
+  },
+  node9Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
+  node9Amount: '9,000',
+  node9Image: {
+    file: {
+      url: '//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png'
+    }
+  }
+};
+
 const carouselItemsIncomplete = {
   __typename: 'ContentfulWhatYourMoneyDoesCarousel',
   contentful_id: '7zdR84QkZwrTh9NWx2H9262',
@@ -240,7 +317,24 @@ const RichtextCarouselItems = {
   autoPlay: true
 };
 
+const RichtextCarouselItemsWithPadding = {
+  contentful_id: 'nqIEHjiYE8Yd2A2a5cI31',
+  headingCopy: 'Some heading copy that will be nicely constructed in-situ',
+  nodes: [
+    { copy: 'Some other longside but not really all that long copy, who knows, it could be this long or LESS.' },
+    { copy: '140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets.' },
+    { copy: 'Some other longside but not really all that long copy, who knows, it could be this long or LESS' },
+    { copy: '140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets. ABIGLONGLINETOFORCEONTOANEWONE' }
+  ],
+  autoPlay: true,
+  paddingBottom: '4rem',
+  paddingTop: '4rem',
+  rowBackgroundColour: 'teal_light'
+};
+
 export {
   defaultData, mobileImages, testImpactSliderItems,
-  carouselItemsComplete, carouselItemsIncomplete, carouselItemsMinimal, RichtextCarouselItems
+  carouselItemsComplete, carouselItemsCompleteWithPadding,
+  carouselItemsIncomplete, carouselItemsMinimal,
+  RichtextCarouselItems, RichtextCarouselItemsWithPadding
 };

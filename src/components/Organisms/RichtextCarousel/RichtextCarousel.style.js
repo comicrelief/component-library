@@ -242,7 +242,12 @@ const CarouselWrapper = styled.div`
   }
 `;
 
+const Container = styled.div`
+  background-color:   ${({ theme, rowBackgroundColour }) => theme.color(rowBackgroundColour)};
+  padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 0 ${paddingBottom}`};
+`;
+
 export {
   CarouselWrapper, SlideCopyWrapper,
-  HeadingCopyWrapper
+  HeadingCopyWrapper, Container
 };
