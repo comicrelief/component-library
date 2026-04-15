@@ -1,9 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 import zIndex from '../../../theme/shared/zIndex';
-
-const mobileMaxWidth = breakpointValues.L - 1;
 
 // This is so that the button is initially visible, then afterwards
 // it's only seen again on hover
@@ -80,7 +77,8 @@ const PlayPauseIcon = styled.span`
 
 const PlayPauseButton = styled.button`
   position: absolute;
-  bottom: 15px;
+  top: 15px;
+  bottom: auto;
   left: 15px;
   width: 35px;
   height: 35px;
@@ -105,10 +103,11 @@ const PlayPauseButton = styled.button`
 
   // Play icon needs to go to the top left on mobile
   // as with the hero banner, the text container can
-  // overlap it
-  @media (max-width: ${mobileMaxWidth}px) {
-    top: 15px;
-    bottom: auto;
+  // overlap it. Here in desktop view it can come
+  // back to the bottom.
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    bottom: 15px;
+    top: auto;
   }
 
   @media (prefers-reduced-motion: reduce) {

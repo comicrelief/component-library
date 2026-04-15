@@ -40,7 +40,8 @@ exports[`renders AmbientVideo when video props are provided correctly 1`] = `
 
 .c6 {
   position: absolute;
-  bottom: 15px;
+  top: 15px;
+  bottom: auto;
   left: 15px;
   width: 35px;
   height: 35px;
@@ -94,10 +95,10 @@ exports[`renders AmbientVideo when video props are provided correctly 1`] = `
   }
 }
 
-@media (max-width:1023px) {
+@media (min-width:1024px) {
   .c6 {
-    top: 15px;
-    bottom: auto;
+    bottom: 15px;
+    top: auto;
   }
 }
 
