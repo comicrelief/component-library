@@ -94,6 +94,13 @@ exports[`renders AmbientVideo when video props are provided correctly 1`] = `
   }
 }
 
+@media (max-width:1023px) {
+  .c6 {
+    top: 15px;
+    bottom: auto;
+  }
+}
+
 @media (prefers-reduced-motion:reduce) {
   .c6 {
     display: none;
