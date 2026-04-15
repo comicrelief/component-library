@@ -28,6 +28,16 @@ it('renders default padding version correctly', () => {
       box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
     }
 
+    .c1 > div:first-child * {
+      margin-top: 0;
+    }
+
+    .c1 > div:first-child h1,
+    .c1 > div:first-child h2,
+    .c1 > div:first-child h3 {
+      margin-bottom: 1.5rem;
+    }
+
     .c1 .carousel {
       position: relative;
       margin: 0 auto;
@@ -120,6 +130,16 @@ it('renders default padding version correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+    }
+
+    .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide .slide-copy-wrapper {
+      font-size: 0.9rem;
+      line-height: 0.9rem;
+    }
+
+    .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide .slide-copy-wrapper * {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c0 {
@@ -285,6 +305,16 @@ it('renders custom padding + background colour version correctly', () => {
       box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
     }
 
+    .c1 > div:first-child * {
+      margin-top: 0;
+    }
+
+    .c1 > div:first-child h1,
+    .c1 > div:first-child h2,
+    .c1 > div:first-child h3 {
+      margin-bottom: 1.5rem;
+    }
+
     .c1 .carousel {
       position: relative;
       margin: 0 auto;
@@ -377,6 +407,16 @@ it('renders custom padding + background colour version correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+    }
+
+    .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide .slide-copy-wrapper {
+      font-size: 0.9rem;
+      line-height: 0.9rem;
+    }
+
+    .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide .slide-copy-wrapper * {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c0 {
