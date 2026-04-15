@@ -153,9 +153,9 @@ const RichtextCarousel = ({
 
 RichtextCarousel.propTypes = {
   data: PropTypes.shape({
-    headingCopy: PropTypes.string.isRequired,
+    headingCopy: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
     nodes: PropTypes.arrayOf(PropTypes.shape({
-      copy: PropTypes.string.isRequired
+      copy: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired
     })).isRequired,
     autoPlay: PropTypes.bool.isRequired,
     contentful_id: PropTypes.string.isRequired,
