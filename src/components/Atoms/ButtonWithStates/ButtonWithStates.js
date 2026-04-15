@@ -49,7 +49,7 @@ const ButtonWithStates = React.forwardRef(({
 });
 
 ButtonWithStates.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   loadingText: PropTypes.string,
   loading: PropTypes.bool,
   disabled: PropTypes.bool

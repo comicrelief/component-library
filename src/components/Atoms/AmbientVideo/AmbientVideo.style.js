@@ -1,9 +1,21 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 import zIndex from '../../../theme/shared/zIndex';
 
 const mobileMaxWidth = breakpointValues.L - 1;
+
+// This is so that the button is initially visible, then afterwards
+// it's only seen again on hover
+const playPauseIntro = keyframes`
+  0%,
+  93.75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+`;
 
 const Wrapper = styled.div`
   width: 100%;
@@ -81,7 +93,9 @@ const PlayPauseButton = styled.button`
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.2s ease 2s;
+  animation: ${playPauseIntro} 3s ease;
+  transition: opacity 0.2s ease 3s;
+  ${zIndex('high')};
 
   // Play icon is shifted to the right slightly as it
   // doesn't look quite right when centered normally
