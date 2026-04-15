@@ -78,7 +78,7 @@ const PlayPauseButton = styled.button`
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.2s ease 2s;
+  transition: opacity 0.2s ease 3s;
   ${zIndex('high')};
 
   // Play icon is shifted to the right slightly as it
