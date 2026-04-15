@@ -62,6 +62,8 @@ exports[`renders AmbientVideo when video props are provided correctly 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   opacity: 0;
+  -webkit-animation: diKSqD 3s ease;
+  animation: diKSqD 3s ease;
   -webkit-transition: opacity 0.2s ease 3s;
   transition: opacity 0.2s ease 3s;
   z-index: 3;

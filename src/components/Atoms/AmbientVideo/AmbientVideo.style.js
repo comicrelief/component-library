@@ -1,6 +1,18 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import zIndex from '../../../theme/shared/zIndex';
+
+// This is so that the button is initially visible, then afterwards
+// it's only seen again on hover
+const playPauseIntro = keyframes`
+  0%,
+  93.75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+`;
 
 const Wrapper = styled.div`
   width: 100%;
@@ -78,6 +90,7 @@ const PlayPauseButton = styled.button`
   align-items: center;
   justify-content: center;
   opacity: 0;
+  animation: ${playPauseIntro} 3s ease;
   transition: opacity 0.2s ease 3s;
   ${zIndex('high')};
 
