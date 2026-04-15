@@ -134,10 +134,12 @@ it('renders default padding version correctly', () => {
 
     .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide .slide-copy-wrapper {
       font-size: 0.9rem;
+      line-height: 0.9rem;
     }
 
     .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide .slide-copy-wrapper * {
       font-size: inherit;
+      line-height: inherit;
     }
 
     .c0 {
@@ -409,10 +411,12 @@ it('renders custom padding + background colour version correctly', () => {
 
     .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide .slide-copy-wrapper {
       font-size: 0.9rem;
+      line-height: 0.9rem;
     }
 
     .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide .slide-copy-wrapper * {
       font-size: inherit;
+      line-height: inherit;
     }
 
     .c0 {
