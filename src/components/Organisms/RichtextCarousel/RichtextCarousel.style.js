@@ -249,8 +249,11 @@ const CarouselWrapper = styled.div`
 
           .slide-copy-wrapper {
             font-size: 0.9rem;
+            line-height: 0.9rem;
+
             * {
-                font-size: inherit;
+              font-size: inherit;
+              line-height: inherit;
             }
           }
         }
