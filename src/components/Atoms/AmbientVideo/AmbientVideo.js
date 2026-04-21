@@ -20,6 +20,8 @@ import {
 // Normalise webpack module object ({ default }) or string to video URL
 const normaliseSrc = value => (typeof value === 'string' ? value : value?.default);
 
+const belowLBreakpointMediaString = `(max-width: ${breakpointValues.L - 1}px)`;
+
 const AmbientVideo = ({
   src,
   srcMobile,
@@ -32,8 +34,9 @@ const AmbientVideo = ({
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const isBelowL = useMediaQuery({ maxWidth: breakpointValues.L - 1 });
-  const rawSrc = srcMobile && isBelowL ? srcMobile : src;
-  const effectiveSrc = normaliseSrc(rawSrc);
+  const desktopSrc = normaliseSrc(src);
+  const mobileSrc = srcMobile ? normaliseSrc(srcMobile) : null;
+  // <video> only supports one poster URL; keep JS breakpoint for poster / fallback stills.
   const rawPoster = posterMobile && isBelowL ? posterMobile : poster;
   const effectivePoster = rawPoster ? normaliseSrc(rawPoster) : undefined;
 
@@ -72,7 +75,6 @@ const AmbientVideo = ({
     <VideoWrapper>
       <StyledVideo
         ref={videoRef}
-        src={effectiveSrc}
         poster={effectivePoster}
         controls={showFullControls}
         controlsList={showFullControls ? 'nodownload nofullscreen noremoteplayback' : undefined}
@@ -82,6 +84,10 @@ const AmbientVideo = ({
         onPlay={handlePlay}
         onPause={handlePause}
       >
+        {mobileSrc ? (
+          <source src={mobileSrc} type="video/mp4" media={belowLBreakpointMediaString} />
+        ) : null}
+        <source src={desktopSrc} type="video/mp4" />
         {effectivePoster ? (
           <FallbackImg src={effectivePoster} alt="Video playback not supported" />
         ) : (
