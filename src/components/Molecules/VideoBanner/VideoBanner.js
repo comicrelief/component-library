@@ -24,10 +24,20 @@ const VideoBanner = ({
   const videoEl = useRef(null);
 
   const triggerPlay = () => {
-    videoEl.current.play();
+    const el = videoEl.current;
+    if (!el) return;
+    const p = el.play();
+    if (p && typeof p.catch === 'function') {
+      p.catch(() => {
+        // Autoplay may be blocked until user gesture; muted autoplay usually succeeds.
+      });
+    }
   };
 
   useEffect(() => {
+    const el = videoEl.current;
+    if (!el) return undefined;
+
     // Trigger onload autoplay based on prop:
     if (autoPlay) {
       // As it's a Chrome requirement to mute any autoplay videos,
@@ -37,12 +47,21 @@ const VideoBanner = ({
     }
 
     // And attach event listener based on prop:
+    let onEnded;
     if (!loop && showPosterAfterPlaying) {
-      videoEl.current.addEventListener('ended', () => {
-        // Reloads video, which re-shows poster
-        videoEl.current.load();
-      });
+      onEnded = () => {
+        if (videoEl.current) {
+          videoEl.current.load();
+        }
+      };
+      el.addEventListener('ended', onEnded);
     }
+
+    return () => {
+      if (onEnded) {
+        el.removeEventListener('ended', onEnded);
+      }
+    };
   }, [autoPlay, loop, showPosterAfterPlaying]);
 
   return (

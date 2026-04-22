@@ -4,6 +4,8 @@ import moment from 'moment';
 import Text from '../../Atoms/Text/Text';
 import { Wrapper, Digits } from './Countdown.style';
 
+const pad2 = n => String(n).padStart(2, '0');
+
 const Countdown = ({
   endDate, color = 'black', endMessage = null, introMessage = null
 }) => {
@@ -17,32 +19,40 @@ const Countdown = ({
   });
 
   useEffect(() => {
-    const isoEndDate = new Date(endDate).toISOString();
-    setThisEndDate(moment(isoEndDate));
+    const parsed = moment(endDate);
+    if (!parsed.isValid()) {
+      setThisEndDate(null);
+      setCountdownHasEnded(true);
+      return;
+    }
+    setThisEndDate(parsed);
   }, [endDate]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    if (!thisEndDate || !thisEndDate.isValid()) {
+      return undefined;
+    }
+
+    const tick = () => {
       const now = moment();
-      const timeRemaining = moment(thisEndDate - now);
+      const diffSeconds = thisEndDate.diff(now, 'seconds');
 
-      const days = timeRemaining.format('DDD');
-      const hours = timeRemaining.format('HH');
-      const minutes = timeRemaining.format('mm');
-      const seconds = timeRemaining.format('ss');
-
-      setCountdownTime({
-        days: days - 1,
-        hours: hours - 1,
-        minutes,
-        seconds
-      });
-
-      if (thisEndDate.diff(now, 'seconds') < 1) {
-        clearInterval(interval);
+      if (diffSeconds < 1) {
         setCountdownHasEnded(true);
+        return;
       }
-    }, 1000);
+
+      const dur = moment.duration(thisEndDate.diff(now));
+      setCountdownTime({
+        days: pad2(Math.max(0, Math.floor(dur.asDays()))),
+        hours: pad2(dur.hours()),
+        minutes: pad2(dur.minutes()),
+        seconds: pad2(dur.seconds())
+      });
+    };
+
+    tick();
+    const interval = setInterval(tick, 1000);
     return () => clearInterval(interval);
   }, [thisEndDate]);
 

@@ -1,6 +1,33 @@
 const path = require('path');
 
+// Without react-scripts, Styleguidist has no default Babel pipeline. CRA used to supply
+// react-scripts/config/webpack.config.js via react-styleguidist's auto-discovery.
 module.exports = {
+  webpackConfig: {
+    module: {
+      rules: [
+        {
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true,
+              configFile: path.resolve(__dirname, 'babel.config.js')
+            }
+          }
+        },
+        {
+          test: /\.css$/,
+          use: ['style-loader', 'css-loader']
+        },
+        {
+          test: /\.(svg|png|jpe?g|gif|webp|ico|woff2?|eot|ttf|otf|mp4|webm|ogg)$/i,
+          type: 'asset/resource'
+        }
+      ]
+    }
+  },
   getComponentPathLine(componentPath) {
     const name = path.basename(componentPath, '.js');
     return `import { ${name} } from '@comicrelief/component-library';`;

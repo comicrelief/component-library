@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { snakeCase } from 'lodash';
 import { useMediaQuery } from 'react-responsive';
@@ -40,6 +40,23 @@ const CTAMultiCard = ({ data }) => {
   const isBelowL = useMediaQuery({ maxWidth: breakpointValues.L - 1 });
   const useSplideCarousel = Boolean(carouselOfCards && isBelowL);
 
+  const splideOptions = useMemo(
+    () => ({
+      arrows: false,
+      pagination: false,
+      // Reduce swipe "throw" as Matt felt the defaults are too much
+      // See https://splidejs.com/guides/options/
+      drag: 'free',
+      flickPower: 50,
+      perMove: 1,
+      dragMinThreshold: { mouse: 50, touch: 50 },
+      gap: '1rem',
+      fixedWidth: '309px',
+      padding: { left: '0px', right: '0px' }
+    }),
+    []
+  );
+
   if (!cards || !Array.isArray(cards) || cards.length === 0) {
     return null;
   }
@@ -64,21 +81,7 @@ const CTAMultiCard = ({ data }) => {
             useSplideCarousel={useSplideCarousel}
           >
             {useSplideCarousel ? (
-              <Splide
-                options={{
-                  arrows: false,
-                  pagination: false,
-                  // Reduce swipe "throw" as Matt felt the defaults are too much
-                  // See https://splidejs.com/guides/options/
-                  drag: 'free',
-                  flickPower: 50,
-                  perMove: 1,
-                  dragMinThreshold: { mouse: 50, touch: 50 },
-                  gap: '1rem',
-                  fixedWidth: '309px',
-                  padding: { left: '0px', right: '0px' }
-                }}
-              >
+              <Splide options={splideOptions}>
                 {cards.map((card, index) => (
                   <SplideSlide key={card?.id ? `${card.id}-${index}` : `cta-card-${index}`}>
                     <CTACard
