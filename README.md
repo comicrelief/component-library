@@ -61,6 +61,10 @@ The root entry re-exports everything; use it when you want a single import path 
 import { crTheme, ThemeProvider, Text, DynamicGallery } from '@comicrelief/component-library';
 ```
 
+#### Tree shaking hint 'sideEffects'
+
+`package.json` sets `sideEffects` so Webpack 4+ and similar tools can treat most of the published JavaScript as free of import time side effects, while still keeping anything that is: all `*.css` files inside this package, and a few modules that pull in CSS files from dependencies (like `lazysizes` on `Picture`, carousel CSS from `pure-react-carousel`, and the range-slider stylesheet from `react-range-slider-input` on the ImpactSlider). 
+
 ### Develop
 
 To install CR-CL locally, run:

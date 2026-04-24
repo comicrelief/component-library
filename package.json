@@ -3,6 +3,13 @@
   "author": "Comic Relief Engineering Team",
   "version": "0.0.0-see.readme.for.semantic.release.process",
   "main": "dist/index.js",
+  "sideEffects": [
+    "**/*.css",
+    "**/components/Atoms/Picture/Picture.js",
+    "**/components/Organisms/WYMDCarousel/WYMDCarousel.js",
+    "**/components/Organisms/RichtextCarousel/RichtextCarousel.js",
+    "**/components/Organisms/ImpactSlider/_Slider.js"
+  ],
   "exports": {
     ".": {
       "import": "./dist/index.js",
