@@ -15,14 +15,50 @@ CR-CL has a dependency of Styled-components.
 $ yarn add @comicrelief/component-library
 ```
 
-#### Wrap your app with the ThemeProvider and crTheme
+#### Theming
+
+Wrap your app with `ThemeProvider` and `crTheme`. For the smallest dependency graph, import from the `theme` entry (see [Subpath entrypoints](#subpath-entrypoints) below) instead of the package root.
+
+```
+import { ThemeProvider, crTheme } from '@comicrelief/component-library/theme';
+```
+
+The root import is still valid and exposes the same tokens:
+
 ```
 import { ThemeProvider, crTheme } from '@comicrelief/component-library';
 ```
 
-#### Import components
+#### Subpath entrypoints
+
+The package exposes named entrypoints so you can import only the slice you need. Prefer these over the root barrel when you care about bundle size.
+
+- **`@comicrelief/component-library/theme`** — `ThemeProvider`, `crTheme`, and theme tokens (`zIndex`, `allBreakpoints`, `spacing`, `containers`, `hideVisually`, `allowListed`, `animations`, …).
+
+- **`@comicrelief/component-library/atoms`** — `Text`, `Link`, `Button`, `Input`, `Picture`, `Logo`, `Checkbox`, `RadioButton`, and the rest of the design-system atoms (see `src/components/Atoms` in this repo).
+
+- **`@comicrelief/component-library/molecules`** — Molecules such as `Card`, `Box`, `HeroBanner`, `SingleMessage`, `Typeahead`, `InfoBanner`, and similar building blocks (not full site chrome such as the global header).
+
+- **`@comicrelief/component-library/organisms`** — Larger UI: `Header`, `Header2025`, `Footer`, `Donate`, carousels, `MarketingPreferencesDS`, `DynamicGallery`, and other composed features.
+
+Example: atoms + theme in a small app or route:
+
 ```
-import { HeroBanner } from '@comicrelief/component-library';
+import { crTheme, ThemeProvider } from '@comicrelief/component-library/theme';
+import { Text, Link, Button } from '@comicrelief/component-library/atoms';
+```
+
+Example: a molecule and an organism in separate features:
+
+```
+import { HeroBanner } from '@comicrelief/component-library/molecules';
+import { WYMDCarousel } from '@comicrelief/component-library/organisms';
+```
+
+The root entry re-exports everything; use it when you want a single import path and are not optimizing for chunk size.
+
+```
+import { crTheme, ThemeProvider, Text, DynamicGallery } from '@comicrelief/component-library';
 ```
 
 ### Develop

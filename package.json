@@ -3,6 +3,36 @@
   "author": "Comic Relief Engineering Team",
   "version": "0.0.0-see.readme.for.semantic.release.process",
   "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./theme": {
+      "import": "./dist/theme.js",
+      "require": "./dist/theme.js",
+      "default": "./dist/theme.js"
+    },
+    "./atoms": {
+      "import": "./dist/atoms.js",
+      "require": "./dist/atoms.js",
+      "default": "./dist/atoms.js"
+    },
+    "./molecules": {
+      "import": "./dist/molecules.js",
+      "require": "./dist/molecules.js",
+      "default": "./dist/molecules.js"
+    },
+    "./organisms": {
+      "import": "./dist/organisms.js",
+      "require": "./dist/organisms.js",
+      "default": "./dist/organisms.js"
+    },
+    "./dist/*": "./dist/*",
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
   "license": "ISC",
   "jest": {
     "verbose": true,
