@@ -1,44 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders a Quote Slice with basic props 1`] = `
-.c4 {
-  font-family: 'Anton',Impact,sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-}
-
-.c4 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.c6 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c6 {
-  text-align: center;
-}
-
-.c6 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
 .c8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -102,6 +64,44 @@ exports[`renders a Quote Slice with basic props 1`] = `
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.c4 {
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.c4 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c6 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c6 {
+  text-align: center;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c0 {
@@ -197,6 +197,32 @@ exports[`renders a Quote Slice with basic props 1`] = `
 }
 
 @media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    width: auto;
+  }
+}
+
+@media (min-width:740px) {
   .c4 {
     font-size: 1.875rem;
     line-height: 1.875rem;
@@ -221,32 +247,6 @@ exports[`renders a Quote Slice with basic props 1`] = `
   .c6 {
     font-size: 1.125rem;
     line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c8 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c8 {
-    width: auto;
-  }
-}
-
-@media (min-width:1024px) {
-  .c8 {
-    width: auto;
   }
 }
 

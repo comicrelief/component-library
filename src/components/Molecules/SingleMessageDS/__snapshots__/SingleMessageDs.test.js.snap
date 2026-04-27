@@ -1,53 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-.c6 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c6 {
-  font-size: 1rem;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: bold;
-  color: #274084;
-}
-
-.c6 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.c8 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c8 {
-  font-size: 1rem;
-  line-height: normal;
-}
-
-.c8 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
 .c3 {
   display: block;
   width: 100%;
@@ -128,6 +81,53 @@ exports[`renders correctly 1`] = `
   fill: #FFFFFF;
 }
 
+.c6 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c6 {
+  font-size: 1rem;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  color: #274084;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c8 {
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -198,34 +198,6 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c6 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c8 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
   .c12 {
     width: auto;
     right: auto;
@@ -262,6 +234,34 @@ exports[`renders correctly 1`] = `
 @media (min-width:1024px) {
   .c13 {
     fill: #FFFFFF;
+  }
+}
+
+@media (min-width:740px) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 

@@ -1,29 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Single Message with 100% vertical height image correctly 1`] = `
-.c6 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c6 {
-  font-size: 3rem;
-  line-height: normal;
-  color: #FFFFFF;
-}
-
-.c6 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
 .c3 {
   display: block;
   width: 100%;
@@ -81,18 +58,27 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   z-index: 1;
 }
 
-@media (min-width:740px) {
-  .c6 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
+.c6 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
-@media (min-width:1024px) {
-  .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
+.c6 {
+  font-size: 3rem;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 @media (min-width:740px) {
@@ -155,6 +141,20 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   }
 }
 
+@media (min-width:740px) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
 <div
   className="c0"
   id="single-msg__5"
@@ -198,6 +198,63 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 `;
 
 exports[`renders Single Message with Image correctly 1`] = `
+.c3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c4 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  background: #6F3AAB;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+.c0 iframe {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  z-index: 0;
+}
+
+.c5 {
+  width: 100%;
+  z-index: 1;
+  padding: 0 2rem;
+}
+
+.c1 {
+  width: 100%;
+  height: 280px;
+  position: relative;
+}
+
+.c2 {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 .c6 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
@@ -242,20 +299,6 @@ exports[`renders Single Message with Image correctly 1`] = `
 .c7 span {
   font-size: inherit;
   line-height: inherit;
-}
-
-.c3 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c4 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c8 {
@@ -308,47 +351,55 @@ exports[`renders Single Message with Image correctly 1`] = `
   opacity: 0.5;
 }
 
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow: hidden;
-  background: #6F3AAB;
-  padding-top: 0rem;
-  padding-bottom: 0rem;
+@media (min-width:740px) {
+  .c0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
 }
 
-.c0 iframe {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: auto;
-  z-index: 0;
+@media (min-width:740px) {
+  .c5 {
+    height: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0 4rem;
+  }
 }
 
-.c5 {
-  width: 100%;
-  z-index: 1;
-  padding: 0 2rem;
+@media (min-width:740px) {
+  .c5 {
+    width: 50%;
+  }
 }
 
-.c1 {
-  width: 100%;
-  height: 280px;
-  position: relative;
+@media (min-width:740px) {
+  .c1 {
+    height: auto;
+    width: 50%;
+  }
 }
 
-.c2 {
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+@media (min-width:740px) {
+  .c1 {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width:740px) {
+
 }
 
 @media (min-width:740px) {
@@ -403,57 +454,6 @@ exports[`renders Single Message with Image correctly 1`] = `
   .c8 {
     width: auto;
   }
-}
-
-@media (min-width:740px) {
-  .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    padding-top: 0rem;
-    padding-bottom: 0rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c5 {
-    height: auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    padding: 0 4rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c5 {
-    width: 50%;
-  }
-}
-
-@media (min-width:740px) {
-  .c1 {
-    height: auto;
-    width: 50%;
-  }
-}
-
-@media (min-width:740px) {
-  .c1 {
-    padding-bottom: 0;
-  }
-}
-
-@media (min-width:740px) {
-
 }
 
 <div
@@ -512,29 +512,6 @@ exports[`renders Single Message with Image correctly 1`] = `
 `;
 
 exports[`renders Single Message with double image correctly 1`] = `
-.c6 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c6 {
-  font-size: 3rem;
-  line-height: normal;
-  color: #000000;
-}
-
-.c6 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
 .c3 {
   display: block;
   width: 100%;
@@ -600,18 +577,27 @@ exports[`renders Single Message with double image correctly 1`] = `
   z-index: 1;
 }
 
-@media (min-width:740px) {
-  .c6 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
+.c6 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
-@media (min-width:1024px) {
-  .c6 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
+.c6 {
+  font-size: 3rem;
+  line-height: normal;
+  color: #000000;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 @media (min-width:740px) {
@@ -687,6 +673,20 @@ exports[`renders Single Message with double image correctly 1`] = `
 
 @media (min-width:740px) {
 
+}
+
+@media (min-width:740px) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
 }
 
 <div
@@ -754,6 +754,63 @@ exports[`renders Single Message with double image correctly 1`] = `
 `;
 
 exports[`renders Single Message with full width correctly 1`] = `
+.c3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c4 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  background: #6F3AAB;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+.c0 iframe {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  z-index: 0;
+}
+
+.c5 {
+  width: 100%;
+  z-index: 1;
+  padding: 0 2rem;
+}
+
+.c1 {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.c2 {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 .c6 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
@@ -798,20 +855,6 @@ exports[`renders Single Message with full width correctly 1`] = `
 .c7 span {
   font-size: inherit;
   line-height: inherit;
-}
-
-.c3 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c4 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c8 {
@@ -862,103 +905,6 @@ exports[`renders Single Message with full width correctly 1`] = `
 .c8:disabled {
   cursor: not-allowed;
   opacity: 0.5;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow: hidden;
-  background: #6F3AAB;
-  padding-top: 0rem;
-  padding-bottom: 0rem;
-}
-
-.c0 iframe {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: auto;
-  z-index: 0;
-}
-
-.c5 {
-  width: 100%;
-  z-index: 1;
-  padding: 0 2rem;
-}
-
-.c1 {
-  width: 100%;
-  height: 200px;
-  position: relative;
-}
-
-.c2 {
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-@media (min-width:740px) {
-  .c6 {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c6 {
-    font-size: 3rem;
-    line-height: 3rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c7 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c7 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c8 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c8 {
-    width: auto;
-  }
-}
-
-@media (min-width:1024px) {
-  .c8 {
-    width: auto;
-  }
 }
 
 @media (min-width:740px) {
@@ -1032,6 +978,60 @@ exports[`renders Single Message with full width correctly 1`] = `
 @media (min-width:740px) {
   .c2 img {
     position: absolute;
+  }
+}
+
+@media (min-width:740px) {
+  .c6 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c6 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c8 {
+    width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    width: auto;
   }
 }
 
@@ -1143,22 +1143,6 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
 }
 
 @media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
-}
-
-@media (min-width:740px) {
   .c0 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -1200,6 +1184,22 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
   }
 }
 
+@media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
 <div
   className="c0"
   id="single-msg__4"
@@ -1234,29 +1234,6 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
 `;
 
 exports[`renders Single Message with no Image correctly 1`] = `
-.c2 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c2 {
-  font-size: 3rem;
-  line-height: normal;
-  color: #FFFFFF;
-}
-
-.c2 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1290,34 +1267,27 @@ exports[`renders Single Message with no Image correctly 1`] = `
   padding: 0 1rem;
 }
 
-@media (min-width:740px) {
-  .c2 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
+.c2 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
-@media (min-width:1024px) {
-  .c2 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
+.c2 {
+  font-size: 3rem;
+  line-height: normal;
+  color: #FFFFFF;
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
+.c2 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 @media (min-width:740px) {
@@ -1377,6 +1347,36 @@ exports[`renders Single Message with no Image correctly 1`] = `
 }
 
 @media (min-width:740px) {
+
+}
+
+@media (min-width:740px) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
+@media (min-width:740px) {
+
+}
+
+@media (min-width:1024px) {
 
 }
 
