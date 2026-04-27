@@ -37,7 +37,7 @@ The package exposes named entrypoints so you can import only the slice you need.
 
 - **`@comicrelief/component-library/atoms`** — This is split into these sub-categories: **`atoms/form`**, **`atoms/actions`**, **`atoms/text`**, **`atoms/media`**, **`atoms/brand`**, **`atoms/navigation`**, **`atoms/icons`**, **`atoms/effects`**.
 
-- **`@comicrelief/component-library/molecules`** — This is split into these sub-categories: **`molecules/search-lookup`**, **`molecules/cards-ctas`**, **`molecules/banners-heroes`**, **`molecules/engagement`**, **`molecules/cards-initiatives`** (Descriptor), **`molecules/footer-email`** (footer/inline `FooterEmailSignUp` — the organism `EmailSignUp` lives under organisms), **`molecules/icons`** (`Icon` re-export, aligned with **`atoms/icons`** for SocialIcons).
+- **`@comicrelief/component-library/molecules`** — This is split into these sub-categories: **`molecules/search-lookup`**, **`molecules/cards-ctas`**, **`molecules/banners-heroes`**, **`molecules/engagement`**, **`molecules/footer`** , **`molecules/icons`** 
 
 - **`@comicrelief/component-library/organisms`** — This is split into these sub-categories: **`organisms/headers`**, **`organisms/footers`**, **`organisms/compliance`**, **`organisms/donation`**, **`organisms/email-contact`**, **`organisms/media`**.
 

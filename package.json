@@ -97,14 +97,19 @@
       "default": "./dist/molecules-engagement.js"
     },
     "./molecules/cards-initiatives": {
-      "import": "./dist/molecules-cards-initiatives.js",
-      "require": "./dist/molecules-cards-initiatives.js",
-      "default": "./dist/molecules-cards-initiatives.js"
+      "import": "./dist/molecules-cards-ctas.js",
+      "require": "./dist/molecules-cards-ctas.js",
+      "default": "./dist/molecules-cards-ctas.js"
+    },
+    "./molecules/footer": {
+      "import": "./dist/molecules-footer.js",
+      "require": "./dist/molecules-footer.js",
+      "default": "./dist/molecules-footer.js"
     },
     "./molecules/footer-email": {
-      "import": "./dist/molecules-footer-email.js",
-      "require": "./dist/molecules-footer-email.js",
-      "default": "./dist/molecules-footer-email.js"
+      "import": "./dist/molecules-footer.js",
+      "require": "./dist/molecules-footer.js",
+      "default": "./dist/molecules-footer.js"
     },
     "./molecules/icons": {
       "import": "./dist/molecules-icons.js",
