@@ -35,11 +35,13 @@ The package exposes named entrypoints so you can import only the slice you need.
 
 - **`@comicrelief/component-library/theme`** — `ThemeProvider`, `crTheme`, and theme tokens (`zIndex`, `allBreakpoints`, `spacing`, `containers`, `hideVisually`, `allowListed`, `animations`, …).
 
-- **`@comicrelief/component-library/atoms`** — `Text`, `Link`, `Button`, `Input`, `Picture`, `Logo`, `Checkbox`, `RadioButton`, and the rest of the design-system atoms (see `src/components/Atoms` in this repo).
+- **`@comicrelief/component-library/atoms`** — This is split into these sub-categories: **`atoms/form`**, **`atoms/actions`**, **`atoms/text`**, **`atoms/media`**, **`atoms/brand`**, **`atoms/navigation`**, **`atoms/icons`**, **`atoms/effects`**.
 
-- **`@comicrelief/component-library/molecules`** — Molecules such as `Card`, `Box`, `HeroBanner`, `SingleMessage`, `Typeahead`, `InfoBanner`, and similar building blocks (not full site chrome such as the global header).
+- **`@comicrelief/component-library/molecules`** — This is split into these sub-categories: **`molecules/search-lookup`**, **`molecules/cards-ctas`**, **`molecules/banners-heroes`**, **`molecules/engagement`**, **`molecules/cards-initiatives`** (Descriptor), **`molecules/footer-email`** (footer/inline `FooterEmailSignUp` — the organism `EmailSignUp` lives under organisms), **`molecules/icons`** (`Icon` re-export, aligned with **`atoms/icons`** for SocialIcons).
 
-- **`@comicrelief/component-library/organisms`** — Larger UI: `Header`, `Header2025`, `Footer`, `Donate`, carousels, `MarketingPreferencesDS`, `DynamicGallery`, and other composed features.
+- **`@comicrelief/component-library/organisms`** — This is split into these sub-categories: **`organisms/headers`**, **`organisms/footers`**, **`organisms/compliance`**, **`organisms/donation`**, **`organisms/email-contact`**, **`organisms/media`**.
+
+If desired you can import the whole sections (`/atoms`, `/molecules`, `/organisms`) which re-export the same set of names as the subpaths combined.
 
 Example: atoms + theme in a small app or route:
 
