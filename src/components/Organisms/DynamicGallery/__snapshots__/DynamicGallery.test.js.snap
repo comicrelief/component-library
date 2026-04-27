@@ -1,20 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
-.c5 {
-  display: block;
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-
-.c6 {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
 .c18 {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -31,6 +17,20 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 
 .c23 {
   fill: #000000;
+}
+
+.c5 {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c6 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .c9 {

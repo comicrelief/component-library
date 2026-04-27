@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { crTheme } from '../../src/index';
+import { crTheme } from '../../src/theme';
 import ThemeProvider from '../../src/theme/ThemeProvider';
 
 export default function renderWithTheme(component) {

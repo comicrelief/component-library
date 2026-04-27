@@ -15,10 +15,6 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c2 {
-      text-align: left;
-    }
-
     .c0 {
       width: 100%;
     }
@@ -29,6 +25,10 @@ it('renders correctly', () => {
       display: -ms-flexbox;
       display: flex;
       padding: 4rem;
+    }
+
+    .c2 {
+      text-align: left;
     }
 
     @media (min-width:740px) {

@@ -17,6 +17,20 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
+    .c0 {
+      position: relative;
+      display: inline;
+      color: #000000;
+      font-weight: normal;
+    }
+
+    .c0:hover,
+    .c0:focus {
+      color: #000000;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+    }
+
     .c4 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
@@ -38,34 +52,6 @@ it('renders correctly', () => {
     .c4 span {
       font-size: inherit;
       line-height: inherit;
-    }
-
-    .c2 {
-      display: block;
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-
-    .c3 {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: none;
-    }
-
-    .c0 {
-      position: relative;
-      display: inline;
-      color: #000000;
-      font-weight: normal;
-    }
-
-    .c0:hover,
-    .c0:focus {
-      color: #000000;
-      -webkit-text-decoration: none;
-      text-decoration: none;
     }
 
     .c6 {
@@ -126,6 +112,20 @@ it('renders correctly', () => {
       width: 100%;
       height: 100%;
       background-color: #E52630;
+    }
+
+    .c2 {
+      display: block;
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+
+    .c3 {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: none;
     }
 
     @media (min-width:740px) {

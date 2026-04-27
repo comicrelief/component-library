@@ -42,61 +42,6 @@ exports[`renders correctly 1`] = `
   line-height: inherit;
 }
 
-.c15 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  height: 2.5rem;
-  width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-  padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
-  background-color: #E52630;
-  color: #FFFFFF;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c15 > a {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c15:hover,
-.c15:focus,
-.c15:focus-within,
-.c15:focus-visible {
-  background-color: #890B11;
-  outline-offset: 3px;
-}
-
-.c15:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
 .c8 {
   width: 100%;
   position: relative;
@@ -167,15 +112,6 @@ exports[`renders correctly 1`] = `
 
 .c13:focus {
   border: 1px solid #666;
-}
-
-.c5 {
-  text-align: left;
-}
-
-.c16:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
 }
 
 .c0 {
@@ -264,6 +200,70 @@ exports[`renders correctly 1`] = `
   margin-bottom: 1.5rem;
 }
 
+.c15 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  height: 2.5rem;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #E52630;
+  color: #FFFFFF;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c15 > a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c15:hover,
+.c15:focus,
+.c15:focus-within,
+.c15:focus-visible {
+  background-color: #890B11;
+  outline-offset: 3px;
+}
+
+.c15:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c16:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c5 {
+  text-align: left;
+}
+
 @media (min-width:740px) {
   .c1 {
     font-size: 1.875rem;
@@ -289,32 +289,6 @@ exports[`renders correctly 1`] = `
   .c4 {
     font-size: 1.125rem;
     line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c15 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c15 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c15 {
-    width: auto;
-  }
-}
-
-@media (min-width:1024px) {
-  .c15 {
-    width: auto;
   }
 }
 
@@ -356,6 +330,32 @@ exports[`renders correctly 1`] = `
 @media (min-width:1024px) {
   .c9 {
     max-width: 290px;
+  }
+}
+
+@media (min-width:740px) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c15 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c15 {
+    width: auto;
+  }
+}
+
+@media (min-width:1024px) {
+  .c15 {
+    width: auto;
   }
 }
 
