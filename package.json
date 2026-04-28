@@ -171,10 +171,15 @@
   },
   "dependencies": {
     "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
     "@hookform/resolvers": "^3.9.0",
     "@splidejs/react-splide": "^0.7.12",
     "axios": "^1.7.2",
     "babel-plugin-import": "^1.13.8",
+    "babel-plugin-styled-components": "^2.1.4",
+    "cross-env": "^7.0.3",
     "lazysizes": "^5.3.2",
     "lodash": "^4.17.11",
     "moment": "^2.29.4",
@@ -207,7 +212,7 @@
     "nth-check": "2.0.1"
   },
   "scripts": {
-    "build": "rm -rf dist && run-s build:cjs build:esm",
+    "build": "rm -rf dist && yarn build:cjs && yarn build:esm",
     "build:cjs": "cross-env MODULE_FORMAT=cjs NODE_ENV=production babel src --out-dir dist/cjs --copy-files --ignore __tests__,spec.js,test.js",
     "build:esm": "cross-env MODULE_FORMAT=esm NODE_ENV=production babel src --out-dir dist/esm --copy-files --ignore __tests__,spec.js,test.js && node scripts/write-esm-package-json.js",
     "test:unit": "yarn run jest",
@@ -220,7 +225,7 @@
     "test:e2e:local": "export NODE_ENV=development; start-server-and-test styleguide http://localhost:6060 test:e2e",
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix",
-    "build-pr": "rm -rf dist && run-s build-pr:cjs build-pr:esm",
+    "build-pr": "rm -rf dist && yarn build-pr:cjs && yarn build-pr:esm",
     "build-pr:cjs": "cross-env MODULE_FORMAT=cjs NODE_ENV=development BABEL_ENV=development babel src --out-dir dist/cjs --copy-files --ignore __tests__,spec.js,test.js",
     "build-pr:esm": "cross-env MODULE_FORMAT=esm NODE_ENV=development BABEL_ENV=development babel src --out-dir dist/esm --copy-files --ignore __tests__,spec.js,test.js && node scripts/write-esm-package-json.js",
     "postinstall": "yarn build-pr"
@@ -238,12 +243,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.26.0",
-    "@babel/preset-env": "^7.26.0",
-    "@babel/preset-react": "^7.26.3",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@playwright/test": "^1.38.1",
-    "cross-env": "^7.0.3",
     "ejs": "^3.1.10",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -253,7 +254,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "jest": "^26.1.0",
     "jest-styled-components": "^7.1.1",
-    "npm-run-all": "^4.1.5",
     "prettier": "^2.8.8",
     "react-styleguidist": "^11.1.7",
     "react-test-renderer": "^17.0.2",
