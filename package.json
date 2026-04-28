@@ -2,7 +2,7 @@
   "name": "@comicrelief/component-library",
   "author": "Comic Relief Engineering Team",
   "version": "0.0.0-see.readme.for.semantic.release.process",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
   "sideEffects": [
     "**/*.css",
     "**/components/Atoms/Picture/Picture.js",
@@ -12,141 +12,142 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "default": "./dist/index.js"
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
     },
     "./theme": {
-      "import": "./dist/theme.js",
-      "require": "./dist/theme.js",
-      "default": "./dist/theme.js"
+      "import": "./dist/esm/theme.js",
+      "require": "./dist/cjs/theme.js",
+      "default": "./dist/esm/theme.js"
     },
     "./atoms": {
-      "import": "./dist/atoms.js",
-      "require": "./dist/atoms.js",
-      "default": "./dist/atoms.js"
+      "import": "./dist/esm/atoms.js",
+      "require": "./dist/cjs/atoms.js",
+      "default": "./dist/esm/atoms.js"
     },
     "./molecules": {
-      "import": "./dist/molecules.js",
-      "require": "./dist/molecules.js",
-      "default": "./dist/molecules.js"
+      "import": "./dist/esm/molecules.js",
+      "require": "./dist/cjs/molecules.js",
+      "default": "./dist/esm/molecules.js"
     },
     "./organisms": {
-      "import": "./dist/organisms.js",
-      "require": "./dist/organisms.js",
-      "default": "./dist/organisms.js"
+      "import": "./dist/esm/organisms.js",
+      "require": "./dist/cjs/organisms.js",
+      "default": "./dist/esm/organisms.js"
     },
     "./atoms/form": {
-      "import": "./dist/atoms-form.js",
-      "require": "./dist/atoms-form.js",
-      "default": "./dist/atoms-form.js"
+      "import": "./dist/esm/atoms-form.js",
+      "require": "./dist/cjs/atoms-form.js",
+      "default": "./dist/esm/atoms-form.js"
     },
     "./atoms/actions": {
-      "import": "./dist/atoms-actions.js",
-      "require": "./dist/atoms-actions.js",
-      "default": "./dist/atoms-actions.js"
+      "import": "./dist/esm/atoms-actions.js",
+      "require": "./dist/cjs/atoms-actions.js",
+      "default": "./dist/esm/atoms-actions.js"
     },
     "./atoms/text": {
-      "import": "./dist/atoms-text.js",
-      "require": "./dist/atoms-text.js",
-      "default": "./dist/atoms-text.js"
+      "import": "./dist/esm/atoms-text.js",
+      "require": "./dist/cjs/atoms-text.js",
+      "default": "./dist/esm/atoms-text.js"
     },
     "./atoms/media": {
-      "import": "./dist/atoms-media.js",
-      "require": "./dist/atoms-media.js",
-      "default": "./dist/atoms-media.js"
+      "import": "./dist/esm/atoms-media.js",
+      "require": "./dist/cjs/atoms-media.js",
+      "default": "./dist/esm/atoms-media.js"
     },
     "./atoms/brand": {
-      "import": "./dist/atoms-brand.js",
-      "require": "./dist/atoms-brand.js",
-      "default": "./dist/atoms-brand.js"
+      "import": "./dist/esm/atoms-brand.js",
+      "require": "./dist/cjs/atoms-brand.js",
+      "default": "./dist/esm/atoms-brand.js"
     },
     "./atoms/navigation": {
-      "import": "./dist/atoms-navigation.js",
-      "require": "./dist/atoms-navigation.js",
-      "default": "./dist/atoms-navigation.js"
+      "import": "./dist/esm/atoms-navigation.js",
+      "require": "./dist/cjs/atoms-navigation.js",
+      "default": "./dist/esm/atoms-navigation.js"
     },
     "./atoms/icons": {
-      "import": "./dist/atoms-icons.js",
-      "require": "./dist/atoms-icons.js",
-      "default": "./dist/atoms-icons.js"
+      "import": "./dist/esm/atoms-icons.js",
+      "require": "./dist/cjs/atoms-icons.js",
+      "default": "./dist/esm/atoms-icons.js"
     },
     "./atoms/effects": {
-      "import": "./dist/atoms-effects.js",
-      "require": "./dist/atoms-effects.js",
-      "default": "./dist/atoms-effects.js"
+      "import": "./dist/esm/atoms-effects.js",
+      "require": "./dist/cjs/atoms-effects.js",
+      "default": "./dist/esm/atoms-effects.js"
     },
     "./molecules/search-lookup": {
-      "import": "./dist/molecules-search-lookup.js",
-      "require": "./dist/molecules-search-lookup.js",
-      "default": "./dist/molecules-search-lookup.js"
+      "import": "./dist/esm/molecules-search-lookup.js",
+      "require": "./dist/cjs/molecules-search-lookup.js",
+      "default": "./dist/esm/molecules-search-lookup.js"
     },
     "./molecules/cards-ctas": {
-      "import": "./dist/molecules-cards-ctas.js",
-      "require": "./dist/molecules-cards-ctas.js",
-      "default": "./dist/molecules-cards-ctas.js"
+      "import": "./dist/esm/molecules-cards-ctas.js",
+      "require": "./dist/cjs/molecules-cards-ctas.js",
+      "default": "./dist/esm/molecules-cards-ctas.js"
     },
     "./molecules/banners-heroes": {
-      "import": "./dist/molecules-banners-heroes.js",
-      "require": "./dist/molecules-banners-heroes.js",
-      "default": "./dist/molecules-banners-heroes.js"
+      "import": "./dist/esm/molecules-banners-heroes.js",
+      "require": "./dist/cjs/molecules-banners-heroes.js",
+      "default": "./dist/esm/molecules-banners-heroes.js"
     },
     "./molecules/engagement": {
-      "import": "./dist/molecules-engagement.js",
-      "require": "./dist/molecules-engagement.js",
-      "default": "./dist/molecules-engagement.js"
+      "import": "./dist/esm/molecules-engagement.js",
+      "require": "./dist/cjs/molecules-engagement.js",
+      "default": "./dist/esm/molecules-engagement.js"
     },
     "./molecules/cards-initiatives": {
-      "import": "./dist/molecules-cards-ctas.js",
-      "require": "./dist/molecules-cards-ctas.js",
-      "default": "./dist/molecules-cards-ctas.js"
+      "import": "./dist/esm/molecules-cards-ctas.js",
+      "require": "./dist/cjs/molecules-cards-ctas.js",
+      "default": "./dist/esm/molecules-cards-ctas.js"
     },
     "./molecules/footer": {
-      "import": "./dist/molecules-footer.js",
-      "require": "./dist/molecules-footer.js",
-      "default": "./dist/molecules-footer.js"
+      "import": "./dist/esm/molecules-footer.js",
+      "require": "./dist/cjs/molecules-footer.js",
+      "default": "./dist/esm/molecules-footer.js"
     },
     "./molecules/footer-email": {
-      "import": "./dist/molecules-footer.js",
-      "require": "./dist/molecules-footer.js",
-      "default": "./dist/molecules-footer.js"
+      "import": "./dist/esm/molecules-footer.js",
+      "require": "./dist/cjs/molecules-footer.js",
+      "default": "./dist/esm/molecules-footer.js"
     },
     "./molecules/icons": {
-      "import": "./dist/molecules-icons.js",
-      "require": "./dist/molecules-icons.js",
-      "default": "./dist/molecules-icons.js"
+      "import": "./dist/esm/molecules-icons.js",
+      "require": "./dist/cjs/molecules-icons.js",
+      "default": "./dist/esm/molecules-icons.js"
     },
     "./organisms/headers": {
-      "import": "./dist/organisms-headers.js",
-      "require": "./dist/organisms-headers.js",
-      "default": "./dist/organisms-headers.js"
+      "import": "./dist/esm/organisms-headers.js",
+      "require": "./dist/cjs/organisms-headers.js",
+      "default": "./dist/esm/organisms-headers.js"
     },
     "./organisms/footers": {
-      "import": "./dist/organisms-footers.js",
-      "require": "./dist/organisms-footers.js",
-      "default": "./dist/organisms-footers.js"
+      "import": "./dist/esm/organisms-footers.js",
+      "require": "./dist/cjs/organisms-footers.js",
+      "default": "./dist/esm/organisms-footers.js"
     },
     "./organisms/compliance": {
-      "import": "./dist/organisms-compliance.js",
-      "require": "./dist/organisms-compliance.js",
-      "default": "./dist/organisms-compliance.js"
+      "import": "./dist/esm/organisms-compliance.js",
+      "require": "./dist/cjs/organisms-compliance.js",
+      "default": "./dist/esm/organisms-compliance.js"
     },
     "./organisms/donation": {
-      "import": "./dist/organisms-donation.js",
-      "require": "./dist/organisms-donation.js",
-      "default": "./dist/organisms-donation.js"
+      "import": "./dist/esm/organisms-donation.js",
+      "require": "./dist/cjs/organisms-donation.js",
+      "default": "./dist/esm/organisms-donation.js"
     },
     "./organisms/email-contact": {
-      "import": "./dist/organisms-email-contact.js",
-      "require": "./dist/organisms-email-contact.js",
-      "default": "./dist/organisms-email-contact.js"
+      "import": "./dist/esm/organisms-email-contact.js",
+      "require": "./dist/cjs/organisms-email-contact.js",
+      "default": "./dist/esm/organisms-email-contact.js"
     },
     "./organisms/media": {
-      "import": "./dist/organisms-media.js",
-      "require": "./dist/organisms-media.js",
-      "default": "./dist/organisms-media.js"
+      "import": "./dist/esm/organisms-media.js",
+      "require": "./dist/cjs/organisms-media.js",
+      "default": "./dist/esm/organisms-media.js"
     },
-    "./dist/*": "./dist/*",
+    "./dist/cjs/*": "./dist/cjs/*",
+    "./dist/esm/*": "./dist/esm/*",
     "./src/*": "./src/*",
     "./package.json": "./package.json"
   },
@@ -163,7 +164,7 @@
       "^axios$": "axios/dist/node/axios.cjs"
     }
   },
-  "module": "dist/index.js",
+  "module": "dist/esm/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/comicrelief/component-library.git"
@@ -206,7 +207,9 @@
     "nth-check": "2.0.1"
   },
   "scripts": {
-    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
+    "build": "rm -rf dist && run-s build:cjs build:esm",
+    "build:cjs": "cross-env MODULE_FORMAT=cjs NODE_ENV=production babel src --out-dir dist/cjs --copy-files --ignore __tests__,spec.js,test.js",
+    "build:esm": "cross-env MODULE_FORMAT=esm NODE_ENV=production babel src --out-dir dist/esm --copy-files --ignore __tests__,spec.js,test.js && node scripts/write-esm-package-json.js",
     "test:unit": "yarn run jest",
     "test:unit:update": "yarn jest -u",
     "styleguide": "cross-env FAST_REFRESH=false styleguidist server",
@@ -217,7 +220,9 @@
     "test:e2e:local": "export NODE_ENV=development; start-server-and-test styleguide http://localhost:6060 test:e2e",
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix",
-    "build-pr": "rm -rf dist && NODE_ENV=development BABEL_ENV=development yarn babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js",
+    "build-pr": "rm -rf dist && run-s build-pr:cjs build-pr:esm",
+    "build-pr:cjs": "cross-env MODULE_FORMAT=cjs NODE_ENV=development BABEL_ENV=development babel src --out-dir dist/cjs --copy-files --ignore __tests__,spec.js,test.js",
+    "build-pr:esm": "cross-env MODULE_FORMAT=esm NODE_ENV=development BABEL_ENV=development babel src --out-dir dist/esm --copy-files --ignore __tests__,spec.js,test.js && node scripts/write-esm-package-json.js",
     "postinstall": "yarn build-pr"
   },
   "browserslist": {
@@ -233,6 +238,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@playwright/test": "^1.38.1",
     "cross-env": "^7.0.3",
