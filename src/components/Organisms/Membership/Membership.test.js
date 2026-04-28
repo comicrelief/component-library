@@ -132,20 +132,6 @@ it('renders correctly', () => {
       line-height: inherit;
     }
 
-    .c1 {
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: relative;
-    }
-
-    .c3 {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-    }
-
     .c14 {
       width: 100%;
       position: relative;
@@ -249,6 +235,20 @@ it('renders correctly', () => {
       border-color: #E52630;
       background-color: #E52630;
       color: #FFFFFF;
+    }
+
+    .c1 {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .c3 {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
     }
 
     .c0 {

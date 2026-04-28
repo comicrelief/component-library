@@ -77,10 +77,6 @@ exports[`renders Column view correctly 1`] = `
   opacity: 0.5;
 }
 
-.c9 {
-  fill: #FFFFFF;
-}
-
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -135,6 +131,10 @@ exports[`renders Column view correctly 1`] = `
   z-index: 2;
 }
 
+.c9 {
+  fill: #FFFFFF;
+}
+
 @media (min-width:740px) {
   .c8 {
     width: auto;
@@ -169,12 +169,6 @@ exports[`renders Column view correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
-  .c9 {
-    fill: #FFFFFF;
-  }
-}
-
 @media (min-width:1440px) {
   .c0 {
     -webkit-flex-direction: column;
@@ -205,6 +199,12 @@ exports[`renders Column view correctly 1`] = `
 @media (min-width:740px) {
   .c6 {
     right: 2rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c9 {
+    fill: #FFFFFF;
   }
 }
 
@@ -358,10 +358,6 @@ exports[`renders correctly 1`] = `
   opacity: 0.5;
 }
 
-.c9 {
-  fill: #FFFFFF;
-}
-
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -416,6 +412,10 @@ exports[`renders correctly 1`] = `
   z-index: 2;
 }
 
+.c9 {
+  fill: #FFFFFF;
+}
+
 @media (min-width:740px) {
   .c8 {
     width: auto;
@@ -447,12 +447,6 @@ exports[`renders correctly 1`] = `
 @media (min-width:1024px) {
   .c7 {
     width: auto;
-  }
-}
-
-@media (min-width:1024px) {
-  .c9 {
-    fill: #FFFFFF;
   }
 }
 
@@ -519,6 +513,12 @@ exports[`renders correctly 1`] = `
 @media (min-width:740px) {
   .c6 {
     bottom: -3rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c9 {
+    fill: #FFFFFF;
   }
 }
 

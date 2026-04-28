@@ -15,15 +15,57 @@ CR-CL has a dependency of Styled-components.
 $ yarn add @comicrelief/component-library
 ```
 
-#### Wrap your app with the ThemeProvider and crTheme
+#### Theming
+
+Wrap your app with `ThemeProvider` and `crTheme`. For the smallest dependency graph, import from the `theme` entry (see [Subpath entrypoints](#subpath-entrypoints) below) instead of the package root.
+
+```
+import { ThemeProvider, crTheme } from '@comicrelief/component-library/theme';
+```
+
+The root import is still valid and exposes the same tokens:
+
 ```
 import { ThemeProvider, crTheme } from '@comicrelief/component-library';
 ```
 
-#### Import components
+#### Subpath entrypoints
+
+The package exposes named entrypoints so you can import only the slice you need. Prefer these over the root barrel when you care about bundle size.
+
+- **`@comicrelief/component-library/theme`** — `ThemeProvider`, `crTheme`, and theme tokens (`zIndex`, `allBreakpoints`, `spacing`, `containers`, `hideVisually`, `allowListed`, `animations`, …).
+
+- **`@comicrelief/component-library/atoms`** — This is split into these sub-categories: **`atoms/form`**, **`atoms/actions`**, **`atoms/text`**, **`atoms/media`**, **`atoms/brand`**, **`atoms/navigation`**, **`atoms/icons`**, **`atoms/effects`**.
+
+- **`@comicrelief/component-library/molecules`** — This is split into these sub-categories: **`molecules/search-lookup`**, **`molecules/cards-ctas`**, **`molecules/banners-heroes`**, **`molecules/engagement`**, **`molecules/footer`** , **`molecules/icons`** 
+
+- **`@comicrelief/component-library/organisms`** — This is split into these sub-categories: **`organisms/headers`**, **`organisms/footers`**, **`organisms/compliance`**, **`organisms/donation`**, **`organisms/email-contact`**, **`organisms/media`**.
+
+If desired you can import the whole sections (`/atoms`, `/molecules`, `/organisms`) which re-export the same set of names as the subpaths combined.
+
+Example: atoms + theme in a small app or route:
+
 ```
-import { HeroBanner } from '@comicrelief/component-library';
+import { crTheme, ThemeProvider } from '@comicrelief/component-library/theme';
+import { Text, Link, Button } from '@comicrelief/component-library/atoms';
 ```
+
+Example: a molecule and an organism in separate features:
+
+```
+import { HeroBanner } from '@comicrelief/component-library/molecules';
+import { WYMDCarousel } from '@comicrelief/component-library/organisms';
+```
+
+The root entry re-exports everything; use it when you want a single import path and are not optimizing for chunk size.
+
+```
+import { crTheme, ThemeProvider, Text, DynamicGallery } from '@comicrelief/component-library';
+```
+
+#### Tree shaking hint 'sideEffects'
+
+`package.json` sets `sideEffects` so Webpack 4+ and similar tools can treat most of the published JavaScript as free of import time side effects, while still keeping anything that is: all `*.css` files inside this package, and a few modules that pull in CSS files from dependencies (like `lazysizes` on `Picture`, carousel CSS from `pure-react-carousel`, and the range-slider stylesheet from `react-range-slider-input` on the ImpactSlider). 
 
 ### Develop
 

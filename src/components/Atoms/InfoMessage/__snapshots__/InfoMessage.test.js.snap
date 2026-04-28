@@ -18,20 +18,6 @@ exports[`renders coral_light variant with message containing a link 1`] = `
   line-height: inherit;
 }
 
-.c4 {
-  position: relative;
-  display: inline;
-  color: #000000;
-  font-weight: normal;
-}
-
-.c4:hover,
-.c4:focus {
-  color: #000000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
 .c0 {
   background-color: #FFCECE;
   border-radius: 1rem;
@@ -83,6 +69,20 @@ exports[`renders coral_light variant with message containing a link 1`] = `
 .c3 a {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+
+.c4 {
+  position: relative;
+  display: inline;
+  color: #000000;
+  font-weight: normal;
+}
+
+.c4:hover,
+.c4:focus {
+  color: #000000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 @media (min-width:740px) {
