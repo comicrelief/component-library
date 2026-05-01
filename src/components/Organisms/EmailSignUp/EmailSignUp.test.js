@@ -1,7 +1,7 @@
 import React from "react";
 import "jest-styled-components";
 import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
-import { EmailSignUp, validationSchema } from "./_EmailSignUp";
+import { EmailSignUp, buildEsuValidationSchema } from "./_EmailSignUp";
 import RichText from "../../Atoms/RichText/RichText";
 import { useForm, FormProvider } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -9,7 +9,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 const DummyForm = () => {
   const formMethods = useForm({
     mode: "onBlur",
-    resolver: yupResolver(validationSchema),
+    resolver: yupResolver(buildEsuValidationSchema()),
   });
   const { handleSubmit } = formMethods;
 

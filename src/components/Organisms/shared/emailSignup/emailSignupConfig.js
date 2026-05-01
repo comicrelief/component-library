@@ -34,7 +34,7 @@ const buildEsuValidationSchema = overrides => {
       .string()
       .required('Please enter your first name')
       .matches(
-        /^[A-Za-z][A-Za-z' -]*$/,
+        /^\p{L}[\p{L}' -]*$/u,
         "This field only accepts letters and ' - and must start with a letter"
       )
       .max(25, 'Your first name must be between 1 and 25 characters'),
@@ -42,7 +42,7 @@ const buildEsuValidationSchema = overrides => {
       .string()
       .required('Please enter your last name')
       .matches(
-        /^[A-Za-z][A-Za-z' -]*$/,
+        /^\p{L}[\p{L}' -]*$/u,
         "This field only accepts letters and ' - and must start with a letter"
       )
       .max(50, 'Your last name must be between 1 and 50 characters'),
