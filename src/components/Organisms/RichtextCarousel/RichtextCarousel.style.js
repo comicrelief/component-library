@@ -53,7 +53,17 @@ const CarouselWrapper = styled.div`
   margin: 0 auto;
 
   border-radius: 20px;
- ${defaultBoxShadow()}
+  ${defaultBoxShadow()}
+
+  > div:first-child {
+    * {
+      margin-top: 0;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 1.5rem;
+    }
+  }
 
   .carousel {
     position: relative;
@@ -236,13 +246,28 @@ const CarouselWrapper = styled.div`
           align-items: center;
           justify-content: flex-start;
           flex-direction: column;
+
+          .slide-copy-wrapper {
+            font-size: 0.9rem;
+            line-height: 0.9rem;
+
+            * {
+              font-size: inherit;
+              line-height: inherit;
+            }
+          }
         }
       }
     }
   }
 `;
 
+const Container = styled.div`
+  background-color:   ${({ theme, rowBackgroundColour }) => theme.color(rowBackgroundColour)};
+  padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 0 ${paddingBottom}`};
+`;
+
 export {
   CarouselWrapper, SlideCopyWrapper,
-  HeadingCopyWrapper
+  HeadingCopyWrapper, Container
 };

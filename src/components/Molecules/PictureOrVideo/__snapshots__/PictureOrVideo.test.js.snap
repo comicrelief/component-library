@@ -40,7 +40,8 @@ exports[`renders AmbientVideo when video props are provided correctly 1`] = `
 
 .c6 {
   position: absolute;
-  bottom: 15px;
+  top: 15px;
+  bottom: auto;
   left: 15px;
   width: 35px;
   height: 35px;
@@ -62,8 +63,11 @@ exports[`renders AmbientVideo when video props are provided correctly 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   opacity: 0;
-  -webkit-transition: opacity 0.2s ease 2s;
-  transition: opacity 0.2s ease 2s;
+  -webkit-animation: diKSqD 3s ease;
+  animation: diKSqD 3s ease;
+  -webkit-transition: opacity 0.2s ease 3s;
+  transition: opacity 0.2s ease 3s;
+  z-index: 3;
 }
 
 .c6[data-play-pause='play'] .c7 {
@@ -91,6 +95,13 @@ exports[`renders AmbientVideo when video props are provided correctly 1`] = `
   }
 }
 
+@media (min-width:1024px) {
+  .c6 {
+    bottom: 15px;
+    top: auto;
+  }
+}
+
 @media (prefers-reduced-motion:reduce) {
   .c6 {
     display: none;
@@ -111,8 +122,16 @@ exports[`renders AmbientVideo when video props are provided correctly 1`] = `
     onPlay={[Function]}
     playsInline={true}
     poster="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
-    src="https://example.com/video-desktop.mp4"
   >
+    <source
+      media="(max-width: 1023px)"
+      src="https://example.com/video-mobile.mp4"
+      type="video/mp4"
+    />
+    <source
+      src="https://example.com/video-desktop.mp4"
+      type="video/mp4"
+    />
     <img
       alt="Video playback not supported"
       className="c3"

@@ -1,4 +1,18 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+import zIndex from '../../../theme/shared/zIndex';
+
+// This is so that the button is initially visible, then afterwards
+// it's only seen again on hover
+const playPauseIntro = keyframes`
+  0%,
+  93.75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+`;
 
 const Wrapper = styled.div`
   width: 100%;
@@ -63,7 +77,8 @@ const PlayPauseIcon = styled.span`
 
 const PlayPauseButton = styled.button`
   position: absolute;
-  bottom: 15px;
+  top: 15px;
+  bottom: auto;
   left: 15px;
   width: 35px;
   height: 35px;
@@ -76,12 +91,23 @@ const PlayPauseButton = styled.button`
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.2s ease 2s;
+  animation: ${playPauseIntro} 3s ease;
+  transition: opacity 0.2s ease 3s;
+  ${zIndex('high')};
 
   // Play icon is shifted to the right slightly as it
   // doesn't look quite right when centered normally
   &[data-play-pause='play'] ${PlayPauseIcon} {
     transform: translateX(2px);
+  }
+
+  // Play icon needs to go to the top left on mobile
+  // as with the hero banner, the text container can
+  // overlap it. Here in desktop view it can come
+  // back to the bottom.
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    bottom: 15px;
+    top: auto;
   }
 
   @media (prefers-reduced-motion: reduce) {

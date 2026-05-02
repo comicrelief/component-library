@@ -7,23 +7,26 @@ import {
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import {
-  CarouselWrapper, SlideCopyWrapper, HeadingCopyWrapper
+  CarouselWrapper, SlideCopyWrapper, HeadingCopyWrapper, Container
 } from './RichtextCarousel.style';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
 const RichtextCarousel = ({
   data: {
-    contentful_id: thisID,
     autoPlay,
-    nodes,
+    contentful_id: thisID,
     headingCopy,
+    nodes,
     // Set some defaults for good measure:
+    carouselBackgroundColour = 'white',
+    desktopHeight = 350,
     mobileHeight = 300,
     tabletHeight = 350,
-    desktopHeight = 350,
-    carouselBackgroundColour = 'white',
     nodeBackgroundColour = 'white',
-    nodeOutlineColour = 'grey'
+    nodeOutlineColour = 'grey',
+    paddingBottom = '2rem',
+    paddingTop = '2rem',
+    rowBackgroundColour = 'grey_light'
   }
 }) => {
   // Defaults to mobile config:
@@ -67,84 +70,92 @@ const RichtextCarousel = ({
   }
 
   return (
-    <CarouselWrapper
-      className="CarouselWrapper"
-      id={thisID}
-      mobileHeight={mobileHeight}
-      tabletHeight={tabletHeight}
-      desktopHeight={desktopHeight}
-      carouselBackgroundColour={carouselBackgroundColour}
+    <Container
+      paddingTop={paddingTop}
+      paddingBottom={paddingBottom}
+      rowBackgroundColour={rowBackgroundColour}
     >
 
-      <HeadingCopyWrapper>
-        {headingCopy}
-      </HeadingCopyWrapper>
-
-      {theseItems && (
-      <CarouselProvider
-        naturalSlideWidth={50}
-        naturalSlideHeight={200}
-        totalSlides={totalSlides}
-        isPlaying={autoPlay}
-        interval={5000}
-        visibleSlides={visibleSlides}
-        infinite
+      <CarouselWrapper
+        className="CarouselWrapper"
+        id={thisID}
+        mobileHeight={mobileHeight}
+        tabletHeight={tabletHeight}
+        desktopHeight={desktopHeight}
+        carouselBackgroundColour={carouselBackgroundColour}
       >
-        <Slider classNameAnimation="richtext-carousel">
 
-          {/* Dummy slide for our desired non-mobile layout and functionality */}
-          {isMobile === false && (
-          <Slide index={0} key={0} />
-          )}
+        <HeadingCopyWrapper>
+          {headingCopy}
+        </HeadingCopyWrapper>
 
-          {Object.keys(theseItems).map((key, index) => {
+        {theseItems && (
+        <CarouselProvider
+          naturalSlideWidth={50}
+          naturalSlideHeight={200}
+          totalSlides={totalSlides}
+          isPlaying={autoPlay}
+          interval={5000}
+          visibleSlides={visibleSlides}
+          infinite
+        >
+          <Slider classNameAnimation="richtext-carousel">
+
+            {/* Dummy slide for our desired non-mobile layout and functionality */}
+            {isMobile === false && (
+            <Slide index={0} key={0} />
+            )}
+
+            {Object.keys(theseItems).map((key, index) => {
             // Reflect that initial dummy/bookend slide shown on non-mobile/tablet views:
-            const thisOffsetIndex = index + (isMobile ? 0 : 1);
+              const thisOffsetIndex = index + (isMobile ? 0 : 1);
 
-            return (
+              return (
               // Calculate the index offset accordingly to reflect the number of slides,
               // but use the REAL index when determining if its the last REAL slide
-              <Slide
-                index={thisOffsetIndex}
-                className={index === (theseItems.length - 1) && 'last-slide'}
-                key={thisOffsetIndex}
-              >
-
-                <SlideCopyWrapper
-                  className="slide-copy-wrapper"
-                  mobileHeight={mobileHeight}
-                  tabletHeight={tabletHeight}
-                  desktopHeight={desktopHeight}
-                  nodeBackgroundColour={nodeBackgroundColour}
-                  nodeOutlineColour={nodeOutlineColour}
+                <Slide
+                  index={thisOffsetIndex}
+                  className={index === (theseItems.length - 1) && 'last-slide'}
+                  key={thisOffsetIndex}
                 >
-                  {theseItems[index].copy}
-                </SlideCopyWrapper>
 
-              </Slide>
-            );
-          })}
+                  <SlideCopyWrapper
+                    className="slide-copy-wrapper"
+                    mobileHeight={mobileHeight}
+                    tabletHeight={tabletHeight}
+                    desktopHeight={desktopHeight}
+                    nodeBackgroundColour={nodeBackgroundColour}
+                    nodeOutlineColour={nodeOutlineColour}
+                  >
+                    {theseItems[index].copy}
+                  </SlideCopyWrapper>
 
-          {/* Dummy slide for our desired non-mobile layout and functionality */}
-          {isMobile === false && (
-          <Slide index={theseItems.length + 1} key="bookend-last" />
-          )}
+                </Slide>
+              );
+            })}
 
-        </Slider>
-        <ButtonBack>Back</ButtonBack>
-        <ButtonNext>Next</ButtonNext>
-      </CarouselProvider>
-      )}
+            {/* Dummy slide for our desired non-mobile layout and functionality */}
+            {isMobile === false && (
+            <Slide index={theseItems.length + 1} key="bookend-last" />
+            )}
 
-    </CarouselWrapper>
+          </Slider>
+          <ButtonBack>Back</ButtonBack>
+          <ButtonNext>Next</ButtonNext>
+        </CarouselProvider>
+        )}
+
+      </CarouselWrapper>
+    </Container>
+
   );
 };
 
 RichtextCarousel.propTypes = {
   data: PropTypes.shape({
-    headingCopy: PropTypes.string.isRequired,
+    headingCopy: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
     nodes: PropTypes.arrayOf(PropTypes.shape({
-      copy: PropTypes.string.isRequired
+      copy: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired
     })).isRequired,
     autoPlay: PropTypes.bool.isRequired,
     contentful_id: PropTypes.string.isRequired,
@@ -153,7 +164,10 @@ RichtextCarousel.propTypes = {
     desktopHeight: PropTypes.number,
     carouselBackgroundColour: PropTypes.string,
     nodeBackgroundColour: PropTypes.string,
-    nodeOutlineColour: PropTypes.string
+    nodeOutlineColour: PropTypes.string,
+    paddingTop: PropTypes.string,
+    paddingBottom: PropTypes.string,
+    rowBackgroundColour: PropTypes.string
   }).isRequired
 };
 
