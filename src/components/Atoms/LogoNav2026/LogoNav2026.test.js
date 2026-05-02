@@ -8,16 +8,13 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c0 img {
-      -webkit-animation: jaJSCW 0.4s ease-in-out forwards;
-      animation: jaJSCW 0.4s ease-in-out forwards;
-      -webkit-animation-name: blCpAO;
-      animation-name: blCpAO;
+      animation: k0 0.4s ease-in-out forwards;
+      animation-name: k1;
     }
 
     .c0:hover img,
     .c0:focus img {
-      -webkit-animation: jaJSCW 0.4s ease-in-out forwards;
-      animation: jaJSCW 0.4s ease-in-out forwards;
+      animation: k0 0.4s ease-in-out forwards;
     }
 
     .c1 {
@@ -39,13 +36,13 @@ it('renders correctly', () => {
       display: none;
     }
 
-    @media (min-width:320px) {
+    @media (min-width: 320px) {
       .c2 {
         display: none;
       }
     }
 
-    @media (min-width:320px) {
+    @media (min-width: 320px) {
       .c3 {
         display: block;
         width: 132px;
@@ -53,18 +50,54 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c3 {
         width: 162px;
         height: 25px;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c3 {
         width: 162px;
         min-width: 162px;
         height: 46px;
+      }
+    }
+
+    @keyframes k0 {
+      from {
+        transform: scale3d(1,1,1);
+      }
+
+      30% {
+        transform: scale3d(1.04,1.04,1.04);
+      }
+
+      60% {
+        transform: scale3d(1.03,1.03,1.03);
+      }
+
+      to {
+        transform: scale3d(1.04,1.04,1.04);
+      }
+    }
+
+    @keyframes k1 {
+      from {
+        transform: scale3d(1.03,1.03,1.03);
+      }
+
+      30% {
+        transform: scale3d(0.99,0.99,0.99);
+      }
+
+      60% {
+        transform: scale3d(1.01,1.01,1.01);
+      }
+
+      to {
+        transform: scale3d(1,1,1);
       }
     }
 

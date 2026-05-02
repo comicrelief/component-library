@@ -5,9 +5,6 @@ exports[`does not render copyright text when not supplied 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -30,8 +27,6 @@ exports[`does not render copyright text when not supplied 1`] = `
   display: inline-block;
   z-index: 3;
   width: 59px;
-  -webkit-transform: inherit;
-  -ms-transform: inherit;
   transform: inherit;
   vertical-align: bottom;
 }
@@ -40,8 +35,6 @@ exports[`does not render copyright text when not supplied 1`] = `
   display: inline-block;
   z-index: 3;
   width: 59px;
-  -webkit-transform: inherit;
-  -ms-transform: inherit;
   transform: inherit;
   vertical-align: bottom;
 }
@@ -53,32 +46,20 @@ exports[`does not render copyright text when not supplied 1`] = `
   font-weight: normal;
 }
 
-.c3:hover,
-.c3:focus {
+.c3 :hover,
+.c3 :focus {
   color: #000000;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c23 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   height: 2.5rem;
   width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: none;
   cursor: pointer;
@@ -89,16 +70,12 @@ exports[`does not render copyright text when not supplied 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
 }
 
-.c23 > a {
-  -webkit-text-decoration: none;
+.c23 >a {
   text-decoration: none;
 }
 
@@ -118,17 +95,12 @@ exports[`does not render copyright text when not supplied 1`] = `
 .c15 {
   width: 100%;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   color: #000000;
 }
 
-.c15:after {
+.c15 :after {
   position: absolute;
   top: 0;
   right: 0;
@@ -139,9 +111,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 
 .c18 {
   border: 0;
-  -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
   height: 1px;
   margin: -1px;
@@ -160,17 +130,8 @@ exports[`does not render copyright text when not supplied 1`] = `
 .c20 {
   position: relative;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -184,8 +145,6 @@ exports[`does not render copyright text when not supplied 1`] = `
   border: 1px solid;
   border-color: #969598;
   box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
@@ -194,41 +153,26 @@ exports[`does not render copyright text when not supplied 1`] = `
   font-family: inherit;
 }
 
-.c21:focus {
+.c21 :focus {
   border: 1px solid #666;
 }
 
 .c29 {
-  -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   display: block;
   position: relative;
-  -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
   background-color: #222222;
   border-radius: 0.5rem;
   padding: 0.5rem;
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
   height: 100%;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-  -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
   transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
   transform-origin: center;
 }
 
@@ -239,8 +183,6 @@ exports[`does not render copyright text when not supplied 1`] = `
 
 .c29:hover,
 .c29:focus {
-  -webkit-transform: scale(1.15);
-  -ms-transform: scale(1.15);
   transform: scale(1.15);
 }
 
@@ -252,37 +194,23 @@ exports[`does not render copyright text when not supplied 1`] = `
 
 .c31 {
   width: 100%;
-  -webkit-filter: brightness(0) invert(1);
   filter: brightness(0) invert(1);
 }
 
 .c27 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 2rem;
   list-style-type: none;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
   margin: 3rem 0;
   padding: 0;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .c28 {
   width: 54px;
   height: 54px;
-  -webkit-flex: 0 0 54px;
-  -ms-flex: 0 0 54px;
   flex: 0 0 54px;
   margin-right: 0;
 }
@@ -292,9 +220,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 .c25 {
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
+  transform: rotate(180deg);
   fill: #FFFFFF;
 }
 
@@ -311,9 +237,6 @@ exports[`does not render copyright text when not supplied 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -321,32 +244,16 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 .c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1rem;
   overflow: visible;
 }
 
 .c14 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   overflow: visible;
@@ -364,22 +271,9 @@ exports[`does not render copyright text when not supplied 1`] = `
   border-color: transparent;
   height: 44px;
   padding: 12px 2.4rem 12px 18px;
-  -webkit-transition: background-color 0.2s ease,text-indent 0.18s ease;
   transition: background-color 0.2s ease,text-indent 0.18s ease;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
-}
-
-.c16 input::-webkit-input-placeholder {
-  color: #E1E2E3;
-}
-
-.c16 input::-moz-placeholder {
-  color: #E1E2E3;
-}
-
-.c16 input:-ms-input-placeholder {
-  color: #E1E2E3;
 }
 
 .c16 input::placeholder {
@@ -392,17 +286,8 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 .c22 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
 }
@@ -414,8 +299,6 @@ exports[`does not render copyright text when not supplied 1`] = `
   padding: 0 1rem;
   border-radius: 0.5rem;
   overflow: hidden;
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
   min-width: max-content;
   width: 100%;
 }
@@ -424,15 +307,8 @@ exports[`does not render copyright text when not supplied 1`] = `
   display: inline-grid;
   grid-auto-flow: column;
   grid-template-columns: auto 18px;
-  -webkit-column-gap: 0.5rem;
   column-gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   line-height: 1;
   white-space: nowrap;
@@ -442,43 +318,26 @@ exports[`does not render copyright text when not supplied 1`] = `
   display: inline-block;
   font-size: 16px;
   line-height: 1;
-  -webkit-transform: translateX(13px);
-  -ms-transform: translateX(13px);
   transform: translateX(13px);
-  -webkit-transition: -webkit-transform 0.22s ease;
-  -webkit-transition: transform 0.22s ease;
   transition: transform 0.22s ease;
   will-change: transform;
   white-space: nowrap;
 }
 
 .c24 .emailSignUpButtonArrow {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 18px;
   height: 18px;
   opacity: 0;
-  -webkit-transform: translateX(-13px);
-  -ms-transform: translateX(-13px);
   transform: translateX(-13px);
-  -webkit-transition: opacity 0.22s ease,-webkit-transform 0.22s ease;
-  -webkit-transition: opacity 0.22s ease,transform 0.22s ease;
   transition: opacity 0.22s ease,transform 0.22s ease;
   will-change: transform,opacity;
 }
 
 .c24 .emailSignUpButtonArrow svg {
-  fill: currentColor !important;
+  fill: currentColor!important;
 }
 
 .c24:hover,
@@ -489,16 +348,12 @@ exports[`does not render copyright text when not supplied 1`] = `
 
 .c24:hover .emailSignUpButtonLabel,
 .c24:focus .emailSignUpButtonLabel {
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
   transform: translateX(0);
 }
 
 .c24:hover .emailSignUpButtonArrow,
 .c24:focus .emailSignUpButtonArrow {
   opacity: 1;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
   transform: translateX(0);
 }
 
@@ -519,24 +374,14 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   margin-bottom: 1rem;
   gap: 1rem;
 }
 
 .c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1rem;
 }
@@ -560,12 +405,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 .c35 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   list-style: none;
   padding: 1rem 0;
@@ -579,7 +419,6 @@ exports[`does not render copyright text when not supplied 1`] = `
 
 .c37 {
   color: #FFFFFF;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
@@ -587,9 +426,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 
 .c37:hover,
 .c37:focus {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: #FFFFFF;
   text-decoration-color: #FFFFFF;
 }
 
@@ -600,35 +437,19 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 .c40 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0 0 1rem 0;
   gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .c41 {
   margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -640,16 +461,13 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 .c42 {
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c42 > span {
+.c42 >span {
   color: #FFFFFF;
   opacity: 0.8;
-  -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-text-decoration-color: #FFFFFF;
   text-decoration-color: #FFFFFF;
   font-weight: normal;
   font-size: 0.875rem;
@@ -657,9 +475,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 
 .c42:hover,
 .c42:focus {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: #FFFFFF;
   text-decoration-color: #FFFFFF;
 }
 
@@ -670,83 +486,39 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 .c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 2rem;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
   padding-bottom: 2rem;
 }
 
 .c32 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 2rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   padding-bottom: 0;
   display: none;
 }
 
 .c34 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 2rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   padding-bottom: 0;
   display: none;
 }
 
 .c46 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 2rem;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
   padding-bottom: 2rem;
 }
@@ -756,20 +528,16 @@ exports[`does not render copyright text when not supplied 1`] = `
   border: 0;
 }
 
-.c4:hover {
+.c4 :hover {
   border: 0;
 }
 
 .c4 img {
-  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.41,1.64,0.41,0.8);
-  -webkit-transition: transform 0.6s cubic-bezier(0.41,1.64,0.41,0.8);
   transition: transform 0.6s cubic-bezier(0.41,1.64,0.41,0.8);
 }
 
 .c4:hover img,
 .c4:focus img {
-  -webkit-transform: rotate(-14deg);
-  -ms-transform: rotate(-14deg);
   transform: rotate(-14deg);
 }
 
@@ -788,132 +556,115 @@ exports[`does not render copyright text when not supplied 1`] = `
   margin-bottom: 0.5rem;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c17 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c17 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:1150px) {
+@media (min-width: 1150px) {
   .c5 {
     width: 72px;
   }
 }
 
-@media (min-width:1150px) {
+@media (min-width: 1150px) {
   .c33 {
     width: 59px;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c23 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c23 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c23 {
     width: auto;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c23 {
     width: auto;
   }
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c27 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: start;
-    -ms-flex-pack: start;
     justify-content: start;
     margin: 0.5rem 0;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c28 {
     margin-right: 0;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c25 {
     fill: #FFFFFF;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c10 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c12 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c12 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c13 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c14 {
     width: 100%;
     max-width: 364px;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c16 input,
   .c16 textarea {
     text-indent: 0;
-    -webkit-transition: text-indent 0.18s ease;
     transition: text-indent 0.18s ease;
   }
 
@@ -925,227 +676,146 @@ exports[`does not render copyright text when not supplied 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c22 {
     width: 100%;
     max-width: 123px;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
     flex: 0 0 auto;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c24 {
     margin: 0;
     max-width: 123px;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
     padding-bottom: 3rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c0 {
     padding-top: 5.5rem;
     padding-bottom: 5rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     padding: 0 2rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c1 {
     padding: 0 4rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-column-gap: 3rem;
     column-gap: 3rem;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
     align-items: flex-start;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     min-width: 0;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c9 {
     max-width: 100%;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c26 {
     box-sizing: border-box;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     margin-bottom: 0;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c39 {
     box-sizing: border-box;
     display: none;
     margin-bottom: 1rem;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c35 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 1.5rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c41 {
     display: inline;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 0;
     display: none;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
 }
 
-@media (min-width:1024px) {
-  .c2 {
-    display: none;
-  }
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c32 {
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 2rem;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 }
 
-@media (min-width:1024px) {
-  .c32 {
-    display: none;
-  }
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c34 {
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 2rem;
     display: none;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 }
 
-@media (min-width:1024px) {
-  .c34 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c46 {
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 0;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
   }
 }
 
-@media (min-width:1024px) {
-  .c46 {
-    display: none;
-  }
-}
-
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c44 {
     margin-bottom: 0;
   }
@@ -1159,20 +829,29 @@ exports[`does not render copyright text when not supplied 1`] = `
     <div
       className="c1"
     >
-      
       <div
         className="c2"
       >
         <a
+          animateRotate={true}
+          buttonType="primary"
           className="c3 c4"
+          color="red"
+          fullWidth={false}
+          home={false}
           href="/"
+          iconFirst={false}
+          mobileColour={null}
           target="_self"
           title="Go to Comic Relief homepage"
           type="standard"
+          underline={true}
         >
           <div
             className="c5"
             rotate={0}
+            sizeMd="72px"
+            sizeSm="59px"
           >
             <img
               alt="Comic Relief logo"
@@ -1209,52 +888,58 @@ exports[`does not render copyright text when not supplied 1`] = `
                 </div>
                 <div
                   className="c13"
+                  error={false}
                 >
                   <div
                     className="c14"
                   >
                     <label
                       className="c15 c16"
+                      errorMsg=""
                       htmlFor="email-signup"
+                      optional={true}
                     >
                       <span
                         className="c17 c18"
                         dangerouslySetInnerHTML={
-                          Object {
+                          {
                             "__html": "Email address",
                           }
                         }
                       />
                       <div
                         className="c19"
+                        error={false}
                       >
-                        
                         <div
                           className="c20"
+                          error={false}
                         >
                           <input
                             aria-required={false}
                             className="c21"
+                            error={false}
                             id="email-signup"
                             name="email"
                             onBlur={[Function]}
                             onChange={[Function]}
                             placeholder="Enter your email address"
+                            prefixLength={0}
                             required={false}
                             type="email"
                           />
-                          
                         </div>
                       </div>
-                      
                     </label>
                   </div>
                   <div
                     className="c22"
                   >
                     <button
+                      buttonType="primary"
                       className="c23 c24"
                       color="white"
+                      fullWidth={false}
                       type="submit"
                     >
                       <span
@@ -1271,14 +956,18 @@ exports[`does not render copyright text when not supplied 1`] = `
                         >
                           <svg
                             className="c25"
+                            colour="white"
                             direction="right"
                             height={18}
-                            viewBox="0 0 15 15"
+                            mobileColour={null}
+                            viewBox="0 0 96 96"
                             width={18}
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                              d="m90.871,50.776c-0.016,0.016 -0.026,0.036 -0.043,0.052l-32,32c-0.781,0.781 -1.804,1.172 -2.828,1.172s-2.047,-0.391 -2.829,-1.171a4,4 0 0 1 0,-5.657l25.172,-25.172l-70.343,0a4,4 0 0 1 0,-8l70.343,0l-25.172,-25.171a4,4 0 0 1 5.657,-5.657l32,32c0.016,0.016 0.027,0.036 0.043,0.052c0.167,0.172 0.321,0.357 0.455,0.557c0.069,0.104 0.118,0.216 0.176,0.325c0.065,0.121 0.138,0.236 0.191,0.364c0.057,0.137 0.09,0.279 0.13,0.42c0.032,0.109 0.074,0.214 0.097,0.327a4.017,4.017 0 0 1 0,1.568c-0.023,0.113 -0.065,0.217 -0.097,0.327c-0.041,0.141 -0.074,0.283 -0.13,0.42c-0.053,0.128 -0.126,0.243 -0.191,0.364c-0.059,0.109 -0.107,0.221 -0.176,0.325a4.035,4.035 0 0 1 -0.455,0.555z"
+                              id="svg_1"
+                              transform="rotate(-180 47.998626708984375,48.00019836425781) "
                             />
                           </svg>
                         </span>
@@ -1294,14 +983,18 @@ exports[`does not render copyright text when not supplied 1`] = `
           >
             <ul
               className="c27"
+              newStyle={true}
             >
               <li
                 className="c28"
+                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-facebook"
                   href="https://www.facebook.com/comicrelief"
+                  isHeader={false}
+                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our Facebook page"
@@ -1309,17 +1002,21 @@ exports[`does not render copyright text when not supplied 1`] = `
                   <img
                     alt="facebook"
                     className="c31"
+                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
                 className="c28"
+                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-instagram"
                   href="https://www.instagram.com/comicrelief"
+                  isHeader={false}
+                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our Instagram account"
@@ -1327,17 +1024,21 @@ exports[`does not render copyright text when not supplied 1`] = `
                   <img
                     alt="instagram"
                     className="c31"
+                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
                 className="c28"
+                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-x"
                   href="https://x.com/comicrelief"
+                  isHeader={false}
+                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our X account"
@@ -1345,17 +1046,21 @@ exports[`does not render copyright text when not supplied 1`] = `
                   <img
                     alt="x"
                     className="c31"
+                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
                 className="c28"
+                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-tiktok"
                   href="https://www.tiktok.com/@comicrelief"
+                  isHeader={false}
+                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our TikTok account"
@@ -1363,17 +1068,21 @@ exports[`does not render copyright text when not supplied 1`] = `
                   <img
                     alt="tiktok"
                     className="c31"
+                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
                 className="c28"
+                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-youtube"
                   href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+                  isHeader={false}
+                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our YouTube channel"
@@ -1381,6 +1090,7 @@ exports[`does not render copyright text when not supplied 1`] = `
                   <img
                     alt="youtube"
                     className="c31"
+                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
@@ -1392,15 +1102,25 @@ exports[`does not render copyright text when not supplied 1`] = `
           className="c32"
         >
           <a
+            animateRotate={true}
+            buttonType="primary"
             className="c3 c4"
+            color="red"
+            fullWidth={false}
+            home={false}
             href="/"
+            iconFirst={false}
+            mobileColour={null}
             target="_self"
             title="Go to Comic Relief homepage"
             type="standard"
+            underline={true}
           >
             <div
               className="c33"
               rotate={0}
+              sizeMd="59px"
+              sizeSm="59px"
             >
               <img
                 alt="Comic Relief logo"
@@ -1414,15 +1134,25 @@ exports[`does not render copyright text when not supplied 1`] = `
           className="c34"
         >
           <a
+            animateRotate={true}
+            buttonType="primary"
             className="c3 c4"
+            color="red"
+            fullWidth={false}
+            home={false}
             href="/"
+            iconFirst={false}
+            mobileColour={null}
             target="_self"
             title="Go to Comic Relief homepage"
             type="standard"
+            underline={true}
           >
             <div
               className="c33"
               rotate={0}
+              sizeMd="59px"
+              sizeSm="59px"
             >
               <img
                 alt="Comic Relief logo"
@@ -1442,10 +1172,17 @@ exports[`does not render copyright text when not supplied 1`] = `
           className="c36"
         >
           <a
+            buttonType="primary"
             className="c3 c37"
+            color="red"
+            fullWidth={false}
+            home={false}
             href="/contact-us"
+            iconFirst={false}
+            mobileColour={null}
             target="_self"
             type="standard"
+            underline={true}
           >
             <span
               className="c17 c38"
@@ -1458,10 +1195,17 @@ exports[`does not render copyright text when not supplied 1`] = `
           className="c36"
         >
           <a
+            buttonType="primary"
             className="c3 c37"
+            color="red"
+            fullWidth={false}
+            home={false}
             href="https://www.comicrelief.com/frequently-asked-questions"
+            iconFirst={false}
+            mobileColour={null}
             target="_self"
             type="standard"
+            underline={true}
           >
             <span
               className="c17 c38"
@@ -1476,14 +1220,18 @@ exports[`does not render copyright text when not supplied 1`] = `
       >
         <ul
           className="c27"
+          newStyle={true}
         >
           <li
             className="c28"
+            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-facebook"
               href="https://www.facebook.com/comicrelief"
+              isHeader={false}
+              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our Facebook page"
@@ -1491,17 +1239,21 @@ exports[`does not render copyright text when not supplied 1`] = `
               <img
                 alt="facebook"
                 className="c31"
+                invertColor={true}
                 src="mock.asset"
               />
             </a>
           </li>
           <li
             className="c28"
+            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-instagram"
               href="https://www.instagram.com/comicrelief"
+              isHeader={false}
+              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our Instagram account"
@@ -1509,17 +1261,21 @@ exports[`does not render copyright text when not supplied 1`] = `
               <img
                 alt="instagram"
                 className="c31"
+                invertColor={true}
                 src="mock.asset"
               />
             </a>
           </li>
           <li
             className="c28"
+            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-x"
               href="https://x.com/comicrelief"
+              isHeader={false}
+              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our X account"
@@ -1527,17 +1283,21 @@ exports[`does not render copyright text when not supplied 1`] = `
               <img
                 alt="x"
                 className="c31"
+                invertColor={true}
                 src="mock.asset"
               />
             </a>
           </li>
           <li
             className="c28"
+            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-tiktok"
               href="https://www.tiktok.com/@comicrelief"
+              isHeader={false}
+              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our TikTok account"
@@ -1545,17 +1305,21 @@ exports[`does not render copyright text when not supplied 1`] = `
               <img
                 alt="tiktok"
                 className="c31"
+                invertColor={true}
                 src="mock.asset"
               />
             </a>
           </li>
           <li
             className="c28"
+            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-youtube"
               href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+              isHeader={false}
+              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our YouTube channel"
@@ -1563,6 +1327,7 @@ exports[`does not render copyright text when not supplied 1`] = `
               <img
                 alt="youtube"
                 className="c31"
+                invertColor={true}
                 src="mock.asset"
               />
             </a>
@@ -1578,10 +1343,17 @@ exports[`does not render copyright text when not supplied 1`] = `
           className="c41"
         >
           <a
+            buttonType="primary"
             className="c3 c42"
+            color="red"
+            fullWidth={false}
+            home={false}
             href="https://www.comicrelief.com/terms-of-use"
+            iconFirst={false}
+            mobileColour={null}
             target="_self"
             type="standard"
+            underline={true}
           >
             <span
               className="c17 c43"
@@ -1594,10 +1366,17 @@ exports[`does not render copyright text when not supplied 1`] = `
           className="c41"
         >
           <a
+            buttonType="primary"
             className="c3 c42"
+            color="red"
+            fullWidth={false}
+            home={false}
             href="https://www.comicrelief.com/privacy-notice"
+            iconFirst={false}
+            mobileColour={null}
             target="_self"
             type="standard"
+            underline={true}
           >
             <span
               className="c17 c43"
@@ -1629,9 +1408,6 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -1654,8 +1430,6 @@ exports[`renders correctly 1`] = `
   display: inline-block;
   z-index: 3;
   width: 59px;
-  -webkit-transform: inherit;
-  -ms-transform: inherit;
   transform: inherit;
   vertical-align: bottom;
 }
@@ -1664,8 +1438,6 @@ exports[`renders correctly 1`] = `
   display: inline-block;
   z-index: 3;
   width: 59px;
-  -webkit-transform: inherit;
-  -ms-transform: inherit;
   transform: inherit;
   vertical-align: bottom;
 }
@@ -1677,32 +1449,20 @@ exports[`renders correctly 1`] = `
   font-weight: normal;
 }
 
-.c3:hover,
-.c3:focus {
+.c3 :hover,
+.c3 :focus {
   color: #000000;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c23 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   height: 2.5rem;
   width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: none;
   cursor: pointer;
@@ -1713,16 +1473,12 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
 }
 
-.c23 > a {
-  -webkit-text-decoration: none;
+.c23 >a {
   text-decoration: none;
 }
 
@@ -1742,17 +1498,12 @@ exports[`renders correctly 1`] = `
 .c15 {
   width: 100%;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   color: #000000;
 }
 
-.c15:after {
+.c15 :after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1763,9 +1514,7 @@ exports[`renders correctly 1`] = `
 
 .c18 {
   border: 0;
-  -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
   height: 1px;
   margin: -1px;
@@ -1784,17 +1533,8 @@ exports[`renders correctly 1`] = `
 .c20 {
   position: relative;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -1808,8 +1548,6 @@ exports[`renders correctly 1`] = `
   border: 1px solid;
   border-color: #969598;
   box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
@@ -1818,41 +1556,26 @@ exports[`renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c21:focus {
+.c21 :focus {
   border: 1px solid #666;
 }
 
 .c29 {
-  -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
   display: block;
   position: relative;
-  -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
   background-color: #222222;
   border-radius: 0.5rem;
   padding: 0.5rem;
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
   height: 100%;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-  -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
   transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
   transform-origin: center;
 }
 
@@ -1863,8 +1586,6 @@ exports[`renders correctly 1`] = `
 
 .c29:hover,
 .c29:focus {
-  -webkit-transform: scale(1.15);
-  -ms-transform: scale(1.15);
   transform: scale(1.15);
 }
 
@@ -1876,37 +1597,23 @@ exports[`renders correctly 1`] = `
 
 .c31 {
   width: 100%;
-  -webkit-filter: brightness(0) invert(1);
   filter: brightness(0) invert(1);
 }
 
 .c27 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 2rem;
   list-style-type: none;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
   margin: 3rem 0;
   padding: 0;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .c28 {
   width: 54px;
   height: 54px;
-  -webkit-flex: 0 0 54px;
-  -ms-flex: 0 0 54px;
   flex: 0 0 54px;
   margin-right: 0;
 }
@@ -1916,9 +1623,7 @@ exports[`renders correctly 1`] = `
 }
 
 .c25 {
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
+  transform: rotate(180deg);
   fill: #FFFFFF;
 }
 
@@ -1935,9 +1640,6 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -1945,32 +1647,16 @@ exports[`renders correctly 1`] = `
 }
 
 .c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1rem;
   overflow: visible;
 }
 
 .c14 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   overflow: visible;
@@ -1988,22 +1674,9 @@ exports[`renders correctly 1`] = `
   border-color: transparent;
   height: 44px;
   padding: 12px 2.4rem 12px 18px;
-  -webkit-transition: background-color 0.2s ease,text-indent 0.18s ease;
   transition: background-color 0.2s ease,text-indent 0.18s ease;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
-}
-
-.c16 input::-webkit-input-placeholder {
-  color: #E1E2E3;
-}
-
-.c16 input::-moz-placeholder {
-  color: #E1E2E3;
-}
-
-.c16 input:-ms-input-placeholder {
-  color: #E1E2E3;
 }
 
 .c16 input::placeholder {
@@ -2016,17 +1689,8 @@ exports[`renders correctly 1`] = `
 }
 
 .c22 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
 }
@@ -2038,8 +1702,6 @@ exports[`renders correctly 1`] = `
   padding: 0 1rem;
   border-radius: 0.5rem;
   overflow: hidden;
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
   min-width: max-content;
   width: 100%;
 }
@@ -2048,15 +1710,8 @@ exports[`renders correctly 1`] = `
   display: inline-grid;
   grid-auto-flow: column;
   grid-template-columns: auto 18px;
-  -webkit-column-gap: 0.5rem;
   column-gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   line-height: 1;
   white-space: nowrap;
@@ -2066,43 +1721,26 @@ exports[`renders correctly 1`] = `
   display: inline-block;
   font-size: 16px;
   line-height: 1;
-  -webkit-transform: translateX(13px);
-  -ms-transform: translateX(13px);
   transform: translateX(13px);
-  -webkit-transition: -webkit-transform 0.22s ease;
-  -webkit-transition: transform 0.22s ease;
   transition: transform 0.22s ease;
   will-change: transform;
   white-space: nowrap;
 }
 
 .c24 .emailSignUpButtonArrow {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 18px;
   height: 18px;
   opacity: 0;
-  -webkit-transform: translateX(-13px);
-  -ms-transform: translateX(-13px);
   transform: translateX(-13px);
-  -webkit-transition: opacity 0.22s ease,-webkit-transform 0.22s ease;
-  -webkit-transition: opacity 0.22s ease,transform 0.22s ease;
   transition: opacity 0.22s ease,transform 0.22s ease;
   will-change: transform,opacity;
 }
 
 .c24 .emailSignUpButtonArrow svg {
-  fill: currentColor !important;
+  fill: currentColor!important;
 }
 
 .c24:hover,
@@ -2113,16 +1751,12 @@ exports[`renders correctly 1`] = `
 
 .c24:hover .emailSignUpButtonLabel,
 .c24:focus .emailSignUpButtonLabel {
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
   transform: translateX(0);
 }
 
 .c24:hover .emailSignUpButtonArrow,
 .c24:focus .emailSignUpButtonArrow {
   opacity: 1;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
   transform: translateX(0);
 }
 
@@ -2143,24 +1777,14 @@ exports[`renders correctly 1`] = `
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   margin-bottom: 1rem;
   gap: 1rem;
 }
 
 .c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1rem;
 }
@@ -2184,12 +1808,7 @@ exports[`renders correctly 1`] = `
 }
 
 .c35 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   list-style: none;
   padding: 1rem 0;
@@ -2203,7 +1822,6 @@ exports[`renders correctly 1`] = `
 
 .c37 {
   color: #FFFFFF;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
@@ -2211,9 +1829,7 @@ exports[`renders correctly 1`] = `
 
 .c37:hover,
 .c37:focus {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: #FFFFFF;
   text-decoration-color: #FFFFFF;
 }
 
@@ -2224,35 +1840,19 @@ exports[`renders correctly 1`] = `
 }
 
 .c40 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0 0 1rem 0;
   gap: 0.5rem;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 .c41 {
   margin: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -2264,16 +1864,13 @@ exports[`renders correctly 1`] = `
 }
 
 .c42 {
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c42 > span {
+.c42 >span {
   color: #FFFFFF;
   opacity: 0.8;
-  -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-text-decoration-color: #FFFFFF;
   text-decoration-color: #FFFFFF;
   font-weight: normal;
   font-size: 0.875rem;
@@ -2281,9 +1878,7 @@ exports[`renders correctly 1`] = `
 
 .c42:hover,
 .c42:focus {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: #FFFFFF;
   text-decoration-color: #FFFFFF;
 }
 
@@ -2294,83 +1889,39 @@ exports[`renders correctly 1`] = `
 }
 
 .c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 2rem;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
   padding-bottom: 2rem;
 }
 
 .c32 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 2rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   padding-bottom: 0;
   display: none;
 }
 
 .c34 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 2rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   padding-bottom: 0;
   display: none;
 }
 
 .c46 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 2rem;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
   padding-bottom: 2rem;
 }
@@ -2380,20 +1931,16 @@ exports[`renders correctly 1`] = `
   border: 0;
 }
 
-.c4:hover {
+.c4 :hover {
   border: 0;
 }
 
 .c4 img {
-  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.41,1.64,0.41,0.8);
-  -webkit-transition: transform 0.6s cubic-bezier(0.41,1.64,0.41,0.8);
   transition: transform 0.6s cubic-bezier(0.41,1.64,0.41,0.8);
 }
 
 .c4:hover img,
 .c4:focus img {
-  -webkit-transform: rotate(-14deg);
-  -ms-transform: rotate(-14deg);
   transform: rotate(-14deg);
 }
 
@@ -2412,132 +1959,115 @@ exports[`renders correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c17 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c17 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:1150px) {
+@media (min-width: 1150px) {
   .c5 {
     width: 72px;
   }
 }
 
-@media (min-width:1150px) {
+@media (min-width: 1150px) {
   .c33 {
     width: 59px;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c23 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c23 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c23 {
     width: auto;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c23 {
     width: auto;
   }
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c27 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: start;
-    -ms-flex-pack: start;
     justify-content: start;
     margin: 0.5rem 0;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c28 {
     margin-right: 0;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c25 {
     fill: #FFFFFF;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c10 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c12 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c12 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c13 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c14 {
     width: 100%;
     max-width: 364px;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c16 input,
   .c16 textarea {
     text-indent: 0;
-    -webkit-transition: text-indent 0.18s ease;
     transition: text-indent 0.18s ease;
   }
 
@@ -2549,227 +2079,146 @@ exports[`renders correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c22 {
     width: 100%;
     max-width: 123px;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
     flex: 0 0 auto;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c24 {
     margin: 0;
     max-width: 123px;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
     padding-bottom: 3rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c0 {
     padding-top: 5.5rem;
     padding-bottom: 5rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     padding: 0 2rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c1 {
     padding: 0 4rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-column-gap: 3rem;
     column-gap: 3rem;
-    -webkit-align-items: flex-start;
-    -webkit-box-align: flex-start;
-    -ms-flex-align: flex-start;
     align-items: flex-start;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     min-width: 0;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c9 {
     max-width: 100%;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c26 {
     box-sizing: border-box;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     margin-bottom: 0;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c39 {
     box-sizing: border-box;
     display: none;
     margin-bottom: 1rem;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c35 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 1.5rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c41 {
     display: inline;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 0;
     display: none;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
 }
 
-@media (min-width:1024px) {
-  .c2 {
-    display: none;
-  }
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c32 {
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 2rem;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 }
 
-@media (min-width:1024px) {
-  .c32 {
-    display: none;
-  }
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c34 {
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 2rem;
     display: none;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 }
 
-@media (min-width:1024px) {
-  .c34 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c46 {
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 0;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
   }
 }
 
-@media (min-width:1024px) {
-  .c46 {
-    display: none;
-  }
-}
-
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c44 {
     margin-bottom: 0;
   }
@@ -2783,20 +2232,29 @@ exports[`renders correctly 1`] = `
     <div
       className="c1"
     >
-      
       <div
         className="c2"
       >
         <a
+          animateRotate={true}
+          buttonType="primary"
           className="c3 c4"
+          color="red"
+          fullWidth={false}
+          home={false}
           href="/"
+          iconFirst={false}
+          mobileColour={null}
           target="_self"
           title="Go to Comic Relief homepage"
           type="standard"
+          underline={true}
         >
           <div
             className="c5"
             rotate={0}
+            sizeMd="72px"
+            sizeSm="59px"
           >
             <img
               alt="Comic Relief logo"
@@ -2833,52 +2291,58 @@ exports[`renders correctly 1`] = `
                 </div>
                 <div
                   className="c13"
+                  error={false}
                 >
                   <div
                     className="c14"
                   >
                     <label
                       className="c15 c16"
+                      errorMsg=""
                       htmlFor="email-signup"
+                      optional={true}
                     >
                       <span
                         className="c17 c18"
                         dangerouslySetInnerHTML={
-                          Object {
+                          {
                             "__html": "Email address",
                           }
                         }
                       />
                       <div
                         className="c19"
+                        error={false}
                       >
-                        
                         <div
                           className="c20"
+                          error={false}
                         >
                           <input
                             aria-required={false}
                             className="c21"
+                            error={false}
                             id="email-signup"
                             name="email"
                             onBlur={[Function]}
                             onChange={[Function]}
                             placeholder="Enter your email address"
+                            prefixLength={0}
                             required={false}
                             type="email"
                           />
-                          
                         </div>
                       </div>
-                      
                     </label>
                   </div>
                   <div
                     className="c22"
                   >
                     <button
+                      buttonType="primary"
                       className="c23 c24"
                       color="white"
+                      fullWidth={false}
                       type="submit"
                     >
                       <span
@@ -2895,14 +2359,18 @@ exports[`renders correctly 1`] = `
                         >
                           <svg
                             className="c25"
+                            colour="white"
                             direction="right"
                             height={18}
-                            viewBox="0 0 15 15"
+                            mobileColour={null}
+                            viewBox="0 0 96 96"
                             width={18}
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                              d="m90.871,50.776c-0.016,0.016 -0.026,0.036 -0.043,0.052l-32,32c-0.781,0.781 -1.804,1.172 -2.828,1.172s-2.047,-0.391 -2.829,-1.171a4,4 0 0 1 0,-5.657l25.172,-25.172l-70.343,0a4,4 0 0 1 0,-8l70.343,0l-25.172,-25.171a4,4 0 0 1 5.657,-5.657l32,32c0.016,0.016 0.027,0.036 0.043,0.052c0.167,0.172 0.321,0.357 0.455,0.557c0.069,0.104 0.118,0.216 0.176,0.325c0.065,0.121 0.138,0.236 0.191,0.364c0.057,0.137 0.09,0.279 0.13,0.42c0.032,0.109 0.074,0.214 0.097,0.327a4.017,4.017 0 0 1 0,1.568c-0.023,0.113 -0.065,0.217 -0.097,0.327c-0.041,0.141 -0.074,0.283 -0.13,0.42c-0.053,0.128 -0.126,0.243 -0.191,0.364c-0.059,0.109 -0.107,0.221 -0.176,0.325a4.035,4.035 0 0 1 -0.455,0.555z"
+                              id="svg_1"
+                              transform="rotate(-180 47.998626708984375,48.00019836425781) "
                             />
                           </svg>
                         </span>
@@ -2918,14 +2386,18 @@ exports[`renders correctly 1`] = `
           >
             <ul
               className="c27"
+              newStyle={true}
             >
               <li
                 className="c28"
+                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-facebook"
                   href="https://www.facebook.com/comicrelief"
+                  isHeader={false}
+                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our Facebook page"
@@ -2933,17 +2405,21 @@ exports[`renders correctly 1`] = `
                   <img
                     alt="facebook"
                     className="c31"
+                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
                 className="c28"
+                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-instagram"
                   href="https://www.instagram.com/comicrelief"
+                  isHeader={false}
+                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our Instagram account"
@@ -2951,17 +2427,21 @@ exports[`renders correctly 1`] = `
                   <img
                     alt="instagram"
                     className="c31"
+                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
                 className="c28"
+                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-x"
                   href="https://x.com/comicrelief"
+                  isHeader={false}
+                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our X account"
@@ -2969,17 +2449,21 @@ exports[`renders correctly 1`] = `
                   <img
                     alt="x"
                     className="c31"
+                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
                 className="c28"
+                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-tiktok"
                   href="https://www.tiktok.com/@comicrelief"
+                  isHeader={false}
+                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our TikTok account"
@@ -2987,17 +2471,21 @@ exports[`renders correctly 1`] = `
                   <img
                     alt="tiktok"
                     className="c31"
+                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
                 className="c28"
+                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-youtube"
                   href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+                  isHeader={false}
+                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our YouTube channel"
@@ -3005,6 +2493,7 @@ exports[`renders correctly 1`] = `
                   <img
                     alt="youtube"
                     className="c31"
+                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
@@ -3016,15 +2505,25 @@ exports[`renders correctly 1`] = `
           className="c32"
         >
           <a
+            animateRotate={true}
+            buttonType="primary"
             className="c3 c4"
+            color="red"
+            fullWidth={false}
+            home={false}
             href="/"
+            iconFirst={false}
+            mobileColour={null}
             target="_self"
             title="Go to Comic Relief homepage"
             type="standard"
+            underline={true}
           >
             <div
               className="c33"
               rotate={0}
+              sizeMd="59px"
+              sizeSm="59px"
             >
               <img
                 alt="Comic Relief logo"
@@ -3038,15 +2537,25 @@ exports[`renders correctly 1`] = `
           className="c34"
         >
           <a
+            animateRotate={true}
+            buttonType="primary"
             className="c3 c4"
+            color="red"
+            fullWidth={false}
+            home={false}
             href="/"
+            iconFirst={false}
+            mobileColour={null}
             target="_self"
             title="Go to Comic Relief homepage"
             type="standard"
+            underline={true}
           >
             <div
               className="c33"
               rotate={0}
+              sizeMd="59px"
+              sizeSm="59px"
             >
               <img
                 alt="Comic Relief logo"
@@ -3066,10 +2575,17 @@ exports[`renders correctly 1`] = `
           className="c36"
         >
           <a
+            buttonType="primary"
             className="c3 c37"
+            color="red"
+            fullWidth={false}
+            home={false}
             href="/contact-us"
+            iconFirst={false}
+            mobileColour={null}
             target="_self"
             type="standard"
+            underline={true}
           >
             <span
               className="c17 c38"
@@ -3082,10 +2598,17 @@ exports[`renders correctly 1`] = `
           className="c36"
         >
           <a
+            buttonType="primary"
             className="c3 c37"
+            color="red"
+            fullWidth={false}
+            home={false}
             href="https://www.comicrelief.com/frequently-asked-questions"
+            iconFirst={false}
+            mobileColour={null}
             target="_self"
             type="standard"
+            underline={true}
           >
             <span
               className="c17 c38"
@@ -3100,14 +2623,18 @@ exports[`renders correctly 1`] = `
       >
         <ul
           className="c27"
+          newStyle={true}
         >
           <li
             className="c28"
+            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-facebook"
               href="https://www.facebook.com/comicrelief"
+              isHeader={false}
+              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our Facebook page"
@@ -3115,17 +2642,21 @@ exports[`renders correctly 1`] = `
               <img
                 alt="facebook"
                 className="c31"
+                invertColor={true}
                 src="mock.asset"
               />
             </a>
           </li>
           <li
             className="c28"
+            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-instagram"
               href="https://www.instagram.com/comicrelief"
+              isHeader={false}
+              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our Instagram account"
@@ -3133,17 +2664,21 @@ exports[`renders correctly 1`] = `
               <img
                 alt="instagram"
                 className="c31"
+                invertColor={true}
                 src="mock.asset"
               />
             </a>
           </li>
           <li
             className="c28"
+            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-x"
               href="https://x.com/comicrelief"
+              isHeader={false}
+              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our X account"
@@ -3151,17 +2686,21 @@ exports[`renders correctly 1`] = `
               <img
                 alt="x"
                 className="c31"
+                invertColor={true}
                 src="mock.asset"
               />
             </a>
           </li>
           <li
             className="c28"
+            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-tiktok"
               href="https://www.tiktok.com/@comicrelief"
+              isHeader={false}
+              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our TikTok account"
@@ -3169,17 +2708,21 @@ exports[`renders correctly 1`] = `
               <img
                 alt="tiktok"
                 className="c31"
+                invertColor={true}
                 src="mock.asset"
               />
             </a>
           </li>
           <li
             className="c28"
+            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-youtube"
               href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+              isHeader={false}
+              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our YouTube channel"
@@ -3187,6 +2730,7 @@ exports[`renders correctly 1`] = `
               <img
                 alt="youtube"
                 className="c31"
+                invertColor={true}
                 src="mock.asset"
               />
             </a>
@@ -3202,10 +2746,17 @@ exports[`renders correctly 1`] = `
           className="c41"
         >
           <a
+            buttonType="primary"
             className="c3 c42"
+            color="red"
+            fullWidth={false}
+            home={false}
             href="https://www.comicrelief.com/terms-of-use"
+            iconFirst={false}
+            mobileColour={null}
             target="_self"
             type="standard"
+            underline={true}
           >
             <span
               className="c17 c43"
@@ -3218,10 +2769,17 @@ exports[`renders correctly 1`] = `
           className="c41"
         >
           <a
+            buttonType="primary"
             className="c3 c42"
+            color="red"
+            fullWidth={false}
+            home={false}
             href="https://www.comicrelief.com/privacy-notice"
+            iconFirst={false}
+            mobileColour={null}
             target="_self"
             type="standard"
+            underline={true}
           >
             <span
               className="c17 c43"

@@ -29,9 +29,6 @@ it('renders correctly', () => {
       font-family: 'Anton',Impact,sans-serif;
       font-weight: 400;
       text-transform: uppercase;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1.5rem;
       line-height: 1.5rem;
@@ -52,9 +49,6 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -74,9 +68,6 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 700;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1.25rem;
       line-height: 1.5rem;
@@ -96,9 +87,6 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -113,9 +101,6 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -149,12 +134,7 @@ it('renders correctly', () => {
     .c14 {
       width: 100%;
       position: relative;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
       flex-direction: column;
       color: #000000;
     }
@@ -164,9 +144,6 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -180,17 +157,8 @@ it('renders correctly', () => {
     .c19 {
       position: relative;
       width: 100%;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: end;
-      -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
       justify-content: flex-end;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
     }
 
@@ -204,8 +172,6 @@ it('renders correctly', () => {
       border: 1px solid;
       border-color: #969598;
       box-shadow: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
       appearance: none;
       color: #000000;
       border-radius: 0.5rem;
@@ -214,7 +180,7 @@ it('renders correctly', () => {
       font-family: inherit;
     }
 
-    .c20:focus {
+    .c20 :focus {
       border: 1px solid #666;
     }
 
@@ -226,9 +192,6 @@ it('renders correctly', () => {
       border: 2px solid #E1E2E3;
       font-size: 1.5rem;
       font-weight: 700;
-      -webkit-letter-spacing: -2px;
-      -moz-letter-spacing: -2px;
-      -ms-letter-spacing: -2px;
       letter-spacing: -2px;
       height: auto;
     }
@@ -241,9 +204,6 @@ it('renders correctly', () => {
       border: 2px solid #E1E2E3;
       font-size: 1.5rem;
       font-weight: 700;
-      -webkit-letter-spacing: -2px;
-      -moz-letter-spacing: -2px;
-      -ms-letter-spacing: -2px;
       letter-spacing: -2px;
       height: auto;
       border-color: #E52630;
@@ -254,13 +214,7 @@ it('renders correctly', () => {
     .c0 {
       background-color: #FEE3CC;
       position: relative;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
       justify-content: center;
       min-height: 100vh;
     }
@@ -273,7 +227,7 @@ it('renders correctly', () => {
       height: auto;
     }
 
-    .c2:before {
+    .c2 :before {
       color: #FEE3CC;
       content: '';
       position: absolute;
@@ -319,7 +273,7 @@ it('renders correctly', () => {
       border: none;
     }
 
-    .c10 > :not(:last-child):not(legend) {
+    .c10 >:not(:last-child):not(legend) {
       margin-bottom: 2rem;
     }
 
@@ -329,19 +283,11 @@ it('renders correctly', () => {
     }
 
     .c13 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
       justify-content: space-between;
     }
 
     .c13 label {
-      -webkit-flex: 0 0 30%;
-      -ms-flex: 0 0 30%;
       flex: 0 0 30%;
     }
 
@@ -350,18 +296,12 @@ it('renders correctly', () => {
       padding: 1rem;
     }
 
-    .c13 label:hover input {
+    .c13 label :hover input {
       border-color: #E52630;
     }
 
     .c22 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
     }
 
@@ -371,8 +311,6 @@ it('renders correctly', () => {
 
     .c25 {
       position: relative;
-      -webkit-flex: 0 0 50%;
-      -ms-flex: 0 0 50%;
       flex: 0 0 50%;
       font-weight: 400;
       display: block;
@@ -383,8 +321,6 @@ it('renders correctly', () => {
       padding: 0px 15px;
       font-size: 20px;
       top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
       left: 0px;
       font-weight: 500;
@@ -396,7 +332,7 @@ it('renders correctly', () => {
       padding: 0.5rem 1rem 0.5rem 2rem;
     }
 
-    .c25 input:focus {
+    .c25 input :focus {
       border: 2px solid #E52630;
     }
 
@@ -416,155 +352,137 @@ it('renders correctly', () => {
       border-radius: 100px;
     }
 
-    .c26:active,
-    .c26:focus,
-    .c26:hover {
+    .c26 :active,
+    .c26 :focus,
+    .c26 :hover {
       background-color: #961D35;
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c6 {
         font-size: 1.875rem;
         line-height: 1.875rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c6 {
         font-size: 2rem;
         line-height: 2rem;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c7 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c7 {
         font-size: 1.125rem;
         line-height: 1.375rem;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c12 {
         font-size: 1.25rem;
         line-height: 1.5rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c12 {
         font-size: 1.375rem;
         line-height: 1.625rem;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c16 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c16 {
         font-size: 1.125rem;
         line-height: 1.375rem;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c23 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c23 {
         font-size: 1.125rem;
         line-height: 1.375rem;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c17 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c17 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:740px) {
-
-    }
-
-    @media (min-width:1024px) {
-
-    }
-
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c0 {
-        -webkit-align-items: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: inherit;
-        -webkit-justify-content: inherit;
-        -ms-flex-pack: inherit;
         justify-content: inherit;
         min-height: 750px;
         height: 100vh;
         max-height: 900px;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
         flex-direction: row;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c2 {
         height: 100%;
       }
 
-      .c2:before {
+      .c2 :before {
         content: none;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c4 {
         margin: 0 8rem;
         max-width: 420px;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c8 {
         height: 430px;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c25 {
-        -webkit-flex: 0 0 60%;
-        -ms-flex: 0 0 60%;
         flex: 0 0 60%;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c26 {
         width: auto;
         padding: 1rem 2rem;
@@ -573,12 +491,20 @@ it('renders correctly', () => {
     }
 
     <div
+      backgroundColor="orange_light"
       className="c0"
+      formAligntRight={false}
       id="mship-1"
     >
       <div
+        backgroundColor="orange_light"
         className="c1 c2"
         height="100%"
+        image={null}
+        images={null}
+        isBackgroundImage={false}
+        nonObjFitImage={null}
+        objFitState={true}
         width="100%"
       >
         <img
@@ -586,6 +512,8 @@ it('renders correctly', () => {
           className="c3 lazyload"
           data-src={null}
           height="100%"
+          objFitState={true}
+          objectFit="cover"
           width="100%"
         />
       </div>
@@ -630,111 +558,129 @@ it('renders correctly', () => {
               >
                 <label
                   className="c14 c15"
+                  errorMsg=""
                   htmlFor="mship-1--moneyBuy-box1"
+                  optional={null}
                 >
                   <span
                     className="c16 c17"
                     dangerouslySetInnerHTML={
-                      Object {
+                      {
                         "__html": "",
                       }
                     }
                   />
                   <div
                     className="c18"
+                    error={false}
                   >
-                    
                     <div
                       className="c19"
+                      error={false}
                     >
                       <input
                         aria-label="£5"
                         aria-required={false}
+                        boxBorderColor=""
                         className="c20"
+                        error={false}
                         id="mship-1--moneyBuy-box1"
+                        isInputMatchBox="5"
+                        isSelected={false}
                         name="mship-1--moneyBuy1"
                         onClick={[Function]}
                         placeholder=""
+                        prefixLength={0}
                         required={false}
                         type="button"
                         value="£ 5"
                       />
-                      
                     </div>
                   </div>
-                  
                 </label>
                 <label
                   className="c14 c21"
+                  errorMsg=""
                   htmlFor="mship-1--moneyBuy-box2"
+                  optional={null}
                 >
                   <span
                     className="c16 c17"
                     dangerouslySetInnerHTML={
-                      Object {
+                      {
                         "__html": "",
                       }
                     }
                   />
                   <div
                     className="c18"
+                    error={false}
                   >
-                    
                     <div
                       className="c19"
+                      error={false}
                     >
                       <input
                         aria-label="£10"
                         aria-required={false}
+                        boxBorderColor=""
                         className="c20"
+                        error={false}
                         id="mship-1--moneyBuy-box2"
+                        isInputMatchBox="10"
+                        isSelected={true}
                         name="mship-1--moneyBuy2"
                         onClick={[Function]}
                         placeholder=""
+                        prefixLength={0}
                         required={false}
                         type="button"
                         value="£ 10"
                       />
-                      
                     </div>
                   </div>
-                  
                 </label>
                 <label
                   className="c14 c15"
+                  errorMsg=""
                   htmlFor="mship-1--moneyBuy-box3"
+                  optional={null}
                 >
                   <span
                     className="c16 c17"
                     dangerouslySetInnerHTML={
-                      Object {
+                      {
                         "__html": "",
                       }
                     }
                   />
                   <div
                     className="c18"
+                    error={false}
                   >
-                    
                     <div
                       className="c19"
+                      error={false}
                     >
                       <input
                         aria-label="£20"
                         aria-required={false}
+                        boxBorderColor=""
                         className="c20"
+                        error={false}
                         id="mship-1--moneyBuy-box3"
+                        isInputMatchBox="20"
+                        isSelected={false}
                         name="mship-1--moneyBuy3"
                         onClick={[Function]}
                         placeholder=""
+                        prefixLength={0}
                         required={false}
                         type="button"
                         value="£ 20"
                       />
-                      
                     </div>
                   </div>
-                  
                 </label>
               </div>
               <div
@@ -747,28 +693,33 @@ it('renders correctly', () => {
                 </span>
                 <label
                   className="c14 c25"
+                  errorMsg=""
                   htmlFor="mship-1--MoneyBuy-userInput"
+                  optional={null}
                 >
                   <span
                     className="c16 c17"
                     dangerouslySetInnerHTML={
-                      Object {
+                      {
                         "__html": "£",
                       }
                     }
                   />
                   <div
                     className="c18"
+                    error={false}
                   >
-                    
                     <div
                       className="c19"
+                      error={false}
                     >
                       <input
                         aria-label="Input a different amount"
                         aria-required={false}
                         className="c20"
+                        error={false}
                         id="mship-1--MoneyBuy-userInput"
+                        inputBorderColor={false}
                         max="25000"
                         min="1"
                         name="membership_amount"
@@ -777,15 +728,14 @@ it('renders correctly', () => {
                         onKeyPress={[Function]}
                         pattern="[^[0-9]+([,.][0-9]+)?$]"
                         placeholder="0.00"
+                        prefixLength={0}
                         required={false}
                         step="0.01"
                         type="number"
                         value=""
                       />
-                      
                     </div>
                   </div>
-                  
                 </label>
               </div>
               <input

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Picture from '../../../Atoms/Picture/Picture';
 import Link from '../../../Atoms/Link/Link';
-import ArrowIcon from '../../shared/ctaArrow/ArrowIcon';
+import ArrowIcon from './_ArrowIcon';
 import altCtaUnderline from '../../../../theme/shared/assets/alt_cta_underline.svg';
 import {
   CardLink,
@@ -14,7 +14,6 @@ import {
   CTAText,
   CTATextUnderline,
   ArrowIconOuter,
-  ArrowIconInner,
   ArrowIconWrapper,
   CardWrapper
 } from './CTACard.style';
@@ -93,9 +92,7 @@ const CTACard = ({
               </CTAText>
               <ArrowIconOuter>
                 <ArrowIconWrapper>
-                  <ArrowIconInner>
-                    <ArrowIcon />
-                  </ArrowIconInner>
+                  <ArrowIcon />
                 </ArrowIconWrapper>
               </ArrowIconOuter>
             </CTA>

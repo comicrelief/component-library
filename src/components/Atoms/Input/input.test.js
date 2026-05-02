@@ -20,9 +20,6 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -36,12 +33,7 @@ it('renders correctly', () => {
     .c0 {
       width: 100%;
       position: relative;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
       flex-direction: column;
       color: #000000;
     }
@@ -51,9 +43,6 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -67,17 +56,8 @@ it('renders correctly', () => {
     .c4 {
       position: relative;
       width: 100%;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: end;
-      -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
       justify-content: flex-end;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
     }
 
@@ -91,8 +71,6 @@ it('renders correctly', () => {
       border: 1px solid;
       border-color: #969598;
       box-shadow: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
       appearance: none;
       color: #000000;
       border-radius: 0.5rem;
@@ -101,78 +79,73 @@ it('renders correctly', () => {
       font-family: inherit;
     }
 
-    .c5:focus {
+    .c5 :focus {
       border: 1px solid #666;
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c1 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c1 {
         font-size: 1.125rem;
         line-height: 1.375rem;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c2 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c2 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
-    }
-
-    @media (min-width:740px) {
-
-    }
-
-    @media (min-width:1024px) {
-
     }
 
     <label
       className="c0"
+      errorMsg=""
       htmlFor="Accessibility info go here"
+      optional={null}
     >
       <span
         className="c1 c2"
         dangerouslySetInnerHTML={
-          Object {
+          {
             "__html": "Label",
           }
         }
       />
       <div
         className="c3"
+        error={false}
       >
-        
         <div
           className="c4"
+          error={false}
         >
           <input
             aria-required={false}
             className="c5"
+            error={false}
             id="Accessibility info go here"
             name="fullname"
             placeholder="This is the hint text"
+            prefixLength={0}
             required={false}
             type="text"
           />
-          
         </div>
       </div>
-      
     </label>
   `);
 });
@@ -195,9 +168,6 @@ it('renders with responsive max widths correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -211,12 +181,7 @@ it('renders with responsive max widths correctly', () => {
     .c0 {
       width: 100%;
       position: relative;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
       flex-direction: column;
       color: #000000;
     }
@@ -226,9 +191,6 @@ it('renders with responsive max widths correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -242,17 +204,8 @@ it('renders with responsive max widths correctly', () => {
     .c4 {
       position: relative;
       width: 100%;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: end;
-      -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
       justify-content: flex-end;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
     }
 
@@ -266,8 +219,6 @@ it('renders with responsive max widths correctly', () => {
       border: 1px solid;
       border-color: #969598;
       box-shadow: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
       appearance: none;
       color: #000000;
       border-radius: 0.5rem;
@@ -276,45 +227,45 @@ it('renders with responsive max widths correctly', () => {
       font-family: inherit;
     }
 
-    .c5:focus {
+    .c5 :focus {
       border: 1px solid #666;
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c1 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c1 {
         font-size: 1.125rem;
         line-height: 1.375rem;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c2 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c2 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c4 {
         max-width: 150px;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c4 {
         max-width: 250px;
       }
@@ -322,36 +273,41 @@ it('renders with responsive max widths correctly', () => {
 
     <label
       className="c0"
+      errorMsg=""
       htmlFor="input-example-7"
+      optional={null}
     >
       <span
         className="c1 c2"
         dangerouslySetInnerHTML={
-          Object {
+          {
             "__html": "Responsive Width Input",
           }
         }
       />
       <div
         className="c3"
+        error={false}
       >
-        
         <div
           className="c4"
+          error={false}
+          maxPxWidthLargeBreakpoint={250}
+          maxPxWidthMediumBreakpoint={150}
         >
           <input
             aria-required={false}
             className="c5"
+            error={false}
             id="input-example-7"
             name="responsive-width"
             placeholder="This input has responsive max widths"
+            prefixLength={0}
             required={false}
             type="text"
           />
-          
         </div>
       </div>
-      
     </label>
   `);
 });

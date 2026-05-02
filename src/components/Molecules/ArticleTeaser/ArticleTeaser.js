@@ -54,7 +54,7 @@ const ImageWrapper = styled.div`
   position: relative;
   ${({ category }) => (category || category === '')
     && css`
-      padding: ${spacing('md')} 0 ${spacing('md')} ${spacing('md')};
+      padding-left: ${spacing('md')};
       img {
         border-radius: 0;
       }
@@ -134,8 +134,8 @@ const handleCampaignLogo = category => {
  */
 const ArticleTeaser = ({
   href,
+  date,
   title,
-  date = null,
   imageLow = null,
   image = null,
   images = null,
@@ -170,11 +170,9 @@ const ArticleTeaser = ({
         />
       </ImageWrapper>
       <CopyWrapper category={category}>
-        { date && (
         <Date size="xs" weight="bold">
           {date}
         </Date>
-        )}
         <Title
           time={time}
           tag="h3"
@@ -198,7 +196,7 @@ ArticleTeaser.propTypes = {
   logoSize: PropTypes.string,
   category: PropTypes.string,
   alt: PropTypes.string,
-  date: PropTypes.string,
+  date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   time: PropTypes.string,
   /** link url */

@@ -16,16 +16,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 }
 
 .c18 {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+  transform: rotate(0);
   fill: #000000;
 }
 
 .c20 {
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
+  transform: rotate(180deg);
   fill: #000000;
 }
 
@@ -39,17 +35,8 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   z-index: 2000;
   visibility: hidden;
@@ -75,16 +62,8 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 }
 
 .c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
   position: relative;
@@ -95,43 +74,23 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 
 .c13 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   min-width: 128px;
   min-height: 32px;
   width: 100%;
 }
 
-.c13 > div {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.c13>div {
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-transition: width 0.3s ease-in-out,height 0.3s ease-in-out;
   transition: width 0.3s ease-in-out,height 0.3s ease-in-out;
 }
 
 .c13 img {
   opacity: 0;
-  -webkit-transition: opacity 0.1s ease-out 0.3s;
   transition: opacity 0.1s ease-out 0.3s;
 }
 
@@ -139,22 +98,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
 }
 
 .c21 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
   gap: 0.5rem;
   width: 100%;
@@ -164,17 +113,8 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 
 .c15 {
   position: absolute;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
@@ -186,11 +126,10 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 }
 
 .c15 svg {
-  -webkit-transition: fill 0.1s ease-out;
   transition: fill 0.1s ease-out;
 }
 
-.c15:focus-visible {
+.c15 :focus-visible {
   outline: 2px solid #E52630;
 }
 
@@ -202,31 +141,19 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 .c16 {
   top: 50%;
   left: 0;
-  -webkit-transform: translate(-1rem,-50%);
-  -ms-transform: translate(-1rem,-50%);
   transform: translate(-1rem,-50%);
 }
 
 .c19 {
   top: 50%;
   right: 0;
-  -webkit-transform: translate(1rem,-50%);
-  -ms-transform: translate(1rem,-50%);
   transform: translate(1rem,-50%);
 }
 
 .c0 {
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
   position: relative;
@@ -236,9 +163,6 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   gap: 1rem;
   width: 100%;
@@ -246,15 +170,8 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 }
 
 .c2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1.1rem;
 }
@@ -264,12 +181,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.9rem;
   padding: 0;
@@ -288,18 +200,14 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 }
 
 .c3 div:first-child {
-  -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
 
-.c3 > div:first-child:hover {
+.c3>div:first-child:hover {
   box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.4);
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   height: auto;
   width: 100%;
@@ -314,17 +222,11 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 .c4 img {
   height: 100%;
   opacity: 0;
-  -webkit-transition: opacity 0.1s ease-out 0.3s;
   transition: opacity 0.1s ease-out 0.3s;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0.5rem;
   padding: 0 1rem;
@@ -338,9 +240,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   border: 0;
   padding: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -349,19 +249,19 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   bottom: 0;
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c18 {
     fill: #000000;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c20 {
     fill: #000000;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c11 {
     margin-top: 84px;
   }
@@ -373,40 +273,36 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c16 {
     position: fixed;
-    -webkit-transform: translate(1rem,-50%);
-    -ms-transform: translate(1rem,-50%);
     transform: translate(1rem,-50%);
     top: 50%;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c19 {
     position: fixed;
-    -webkit-transform: translate(-1rem,-50%);
-    -ms-transform: translate(-1rem,-50%);
     transform: translate(-1rem,-50%);
     top: 50%;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
     gap: 1rem;
     padding: 0rem 2rem 2rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     gap: 2rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
     gap: 2rem;
   }
@@ -414,9 +310,14 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 
 <div
   className="c0 gallery-container"
+  paddingBottom="2rem"
+  paddingTop="0rem"
+  pageBackgroundColour="transparent"
+  textColour="black"
 >
   <div
     className="c1 gallery-grid"
+    maxWidth="1500px"
     onKeyDown={[Function]}
   >
     <div
@@ -424,18 +325,27 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
     >
       <button
         aria-label=""
+        caption=""
         className="c3 gallery-node"
         data-node-index={0}
+        focusOutlineColour="black"
         onPointerUp={[Function]}
         tabIndex={0}
         title=""
       >
         <div
           className="c4 gallery-node-image"
+          maxHeight="undefinedpx"
+          minHeight="undefinedpx"
         >
           <div
             className="c5"
             height="auto"
+            image="image1.jpg"
+            images={null}
+            isBackgroundImage={false}
+            nonObjFitImage="image1.jpg"
+            objFitState={true}
             width="100%"
           >
             <img
@@ -443,6 +353,8 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
               className="c6 lazyload"
               data-src="image1.jpg"
               height="auto"
+              objFitState={true}
+              objectFit="cover"
               onLoad={[Function]}
               width="100%"
             />
@@ -458,18 +370,27 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
     >
       <button
         aria-label=""
+        caption=""
         className="c3 gallery-node"
         data-node-index={1}
+        focusOutlineColour="black"
         onPointerUp={[Function]}
         tabIndex={0}
         title=""
       >
         <div
           className="c4 gallery-node-image"
+          maxHeight="undefinedpx"
+          minHeight="undefinedpx"
         >
           <div
             className="c5"
             height="auto"
+            image="image2.jpg"
+            images={null}
+            isBackgroundImage={false}
+            nonObjFitImage="image2.jpg"
+            objFitState={true}
             width="100%"
           >
             <img
@@ -477,6 +398,8 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
               className="c6 lazyload"
               data-src="image2.jpg"
               height="auto"
+              objFitState={true}
+              objectFit="cover"
               onLoad={[Function]}
               width="100%"
             />
@@ -492,18 +415,27 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
     >
       <button
         aria-label=""
+        caption=""
         className="c3 gallery-node"
         data-node-index={2}
+        focusOutlineColour="black"
         onPointerUp={[Function]}
         tabIndex={0}
         title=""
       >
         <div
           className="c4 gallery-node-image"
+          maxHeight="undefinedpx"
+          minHeight="undefinedpx"
         >
           <div
             className="c5"
             height="auto"
+            image="image3.jpg"
+            images={null}
+            isBackgroundImage={false}
+            nonObjFitImage="image3.jpg"
+            objFitState={true}
             width="100%"
           >
             <img
@@ -511,6 +443,8 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
               className="c6 lazyload"
               data-src="image3.jpg"
               height="auto"
+              objFitState={true}
+              objectFit="cover"
               onLoad={[Function]}
               width="100%"
             />
@@ -523,12 +457,14 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
     </div>
     <div
       className="c8"
+      isEmpty={false}
     >
       No images to display
     </div>
   </div>
   <div
     className="c9"
+    isOpen={false}
   >
     <div
       className="c10"
@@ -549,16 +485,55 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
             className="c14"
           >
             <span
-              className="css-1xdhyk6"
+              height={16}
+              style={
+                {
+                  "display": "inherit",
+                }
+              }
+              width={2}
             >
               <span
-                className="css-1fr62ah"
+                style={
+                  {
+                    "animation": "react-spinners-PulseLoader-pulse 0.75s 0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08)",
+                    "animationFillMode": "both",
+                    "backgroundColor": "#E1E2E3",
+                    "borderRadius": "100%",
+                    "display": "inline-block",
+                    "height": "15px",
+                    "margin": "2px",
+                    "width": "15px",
+                  }
+                }
               />
               <span
-                className="css-1q1fqtl"
+                style={
+                  {
+                    "animation": "react-spinners-PulseLoader-pulse 0.75s 0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08)",
+                    "animationFillMode": "both",
+                    "backgroundColor": "#E1E2E3",
+                    "borderRadius": "100%",
+                    "display": "inline-block",
+                    "height": "15px",
+                    "margin": "2px",
+                    "width": "15px",
+                  }
+                }
               />
               <span
-                className="css-1v7m6ew"
+                style={
+                  {
+                    "animation": "react-spinners-PulseLoader-pulse 0.75s 0.36s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08)",
+                    "animationFillMode": "both",
+                    "backgroundColor": "#E1E2E3",
+                    "borderRadius": "100%",
+                    "display": "inline-block",
+                    "height": "15px",
+                    "margin": "2px",
+                    "width": "15px",
+                  }
+                }
               />
             </span>
           </div>
@@ -574,14 +549,18 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
             </span>
             <svg
               className="c18"
+              colour="black"
               direction="left"
               height={16}
-              viewBox="0 0 15 15"
+              mobileColour={null}
+              viewBox="0 0 96 96"
               width={16}
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                d="m90.871,50.776c-0.016,0.016 -0.026,0.036 -0.043,0.052l-32,32c-0.781,0.781 -1.804,1.172 -2.828,1.172s-2.047,-0.391 -2.829,-1.171a4,4 0 0 1 0,-5.657l25.172,-25.172l-70.343,0a4,4 0 0 1 0,-8l70.343,0l-25.172,-25.171a4,4 0 0 1 5.657,-5.657l32,32c0.016,0.016 0.027,0.036 0.043,0.052c0.167,0.172 0.321,0.357 0.455,0.557c0.069,0.104 0.118,0.216 0.176,0.325c0.065,0.121 0.138,0.236 0.191,0.364c0.057,0.137 0.09,0.279 0.13,0.42c0.032,0.109 0.074,0.214 0.097,0.327a4.017,4.017 0 0 1 0,1.568c-0.023,0.113 -0.065,0.217 -0.097,0.327c-0.041,0.141 -0.074,0.283 -0.13,0.42c-0.053,0.128 -0.126,0.243 -0.191,0.364c-0.059,0.109 -0.107,0.221 -0.176,0.325a4.035,4.035 0 0 1 -0.455,0.555z"
+                id="svg_1"
+                transform="rotate(-180 47.998626708984375,48.00019836425781) "
               />
             </svg>
           </button>
@@ -597,14 +576,18 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
             </span>
             <svg
               className="c20"
+              colour="black"
               direction="right"
               height={16}
-              viewBox="0 0 15 15"
+              mobileColour={null}
+              viewBox="0 0 96 96"
               width={16}
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                d="m90.871,50.776c-0.016,0.016 -0.026,0.036 -0.043,0.052l-32,32c-0.781,0.781 -1.804,1.172 -2.828,1.172s-2.047,-0.391 -2.829,-1.171a4,4 0 0 1 0,-5.657l25.172,-25.172l-70.343,0a4,4 0 0 1 0,-8l70.343,0l-25.172,-25.171a4,4 0 0 1 5.657,-5.657l32,32c0.016,0.016 0.027,0.036 0.043,0.052c0.167,0.172 0.321,0.357 0.455,0.557c0.069,0.104 0.118,0.216 0.176,0.325c0.065,0.121 0.138,0.236 0.191,0.364c0.057,0.137 0.09,0.279 0.13,0.42c0.032,0.109 0.074,0.214 0.097,0.327a4.017,4.017 0 0 1 0,1.568c-0.023,0.113 -0.065,0.217 -0.097,0.327c-0.041,0.141 -0.074,0.283 -0.13,0.42c-0.053,0.128 -0.126,0.243 -0.191,0.364c-0.059,0.109 -0.107,0.221 -0.176,0.325a4.035,4.035 0 0 1 -0.455,0.555z"
+                id="svg_1"
+                transform="rotate(-180 47.998626708984375,48.00019836425781) "
               />
             </svg>
           </button>
@@ -627,7 +610,9 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
           </span>
           <svg
             className="c23"
+            colour="black"
             height={16}
+            mobileColour={null}
             viewBox="0 0 96 96"
             width={16}
             xmlns="http://www.w3.org/2000/svg"
@@ -653,16 +638,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 
 exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 .c12 {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+  transform: rotate(0);
   fill: #000000;
 }
 
 .c14 {
-  -webkit-transform: rotate(0);
-  -ms-transform: rotate(0);
-  transform: rotate(0);
+  transform: rotate(180deg);
   fill: #000000;
 }
 
@@ -676,17 +657,8 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   z-index: 2000;
   visibility: hidden;
@@ -712,16 +684,8 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 }
 
 .c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
   position: relative;
@@ -732,43 +696,23 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 
 .c7 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   min-width: 128px;
   min-height: 32px;
   width: 100%;
 }
 
-.c7 > div {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.c7>div {
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-transition: width 0.3s ease-in-out,height 0.3s ease-in-out;
   transition: width 0.3s ease-in-out,height 0.3s ease-in-out;
 }
 
 .c7 img {
   opacity: 0;
-  -webkit-transition: opacity 0.1s ease-out 0.3s;
   transition: opacity 0.1s ease-out 0.3s;
 }
 
@@ -776,22 +720,12 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
 }
 
 .c15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
   gap: 0.5rem;
   width: 100%;
@@ -801,17 +735,8 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 
 .c9 {
   position: absolute;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
@@ -823,11 +748,10 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 }
 
 .c9 svg {
-  -webkit-transition: fill 0.1s ease-out;
   transition: fill 0.1s ease-out;
 }
 
-.c9:focus-visible {
+.c9 :focus-visible {
   outline: 2px solid #E52630;
 }
 
@@ -839,31 +763,19 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 .c10 {
   top: 50%;
   left: 0;
-  -webkit-transform: translate(-1rem,-50%);
-  -ms-transform: translate(-1rem,-50%);
   transform: translate(-1rem,-50%);
 }
 
 .c13 {
   top: 50%;
   right: 0;
-  -webkit-transform: translate(1rem,-50%);
-  -ms-transform: translate(1rem,-50%);
   transform: translate(1rem,-50%);
 }
 
 .c0 {
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
   position: relative;
@@ -873,9 +785,6 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   gap: 1rem;
   width: 100%;
@@ -894,9 +803,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   border: 0;
   padding: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(0 0 0 0);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -905,19 +812,19 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   bottom: 0;
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c12 {
     fill: #000000;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c14 {
     fill: #000000;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c5 {
     margin-top: 84px;
   }
@@ -929,34 +836,30 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c10 {
     position: fixed;
-    -webkit-transform: translate(1rem,-50%);
-    -ms-transform: translate(1rem,-50%);
     transform: translate(1rem,-50%);
     top: 50%;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c13 {
     position: fixed;
-    -webkit-transform: translate(-1rem,-50%);
-    -ms-transform: translate(-1rem,-50%);
     transform: translate(-1rem,-50%);
     top: 50%;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
     gap: 1rem;
     padding: 0rem 2rem 2rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     gap: 2rem;
   }
@@ -964,19 +867,26 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 
 <div
   className="c0 gallery-container"
+  paddingBottom="2rem"
+  paddingTop="0rem"
+  pageBackgroundColour="transparent"
+  textColour="black"
 >
   <div
     className="c1 gallery-grid"
+    maxWidth="1500px"
     onKeyDown={[Function]}
   >
     <div
       className="c2"
+      isEmpty={true}
     >
       No images to display
     </div>
   </div>
   <div
     className="c3"
+    isOpen={false}
   >
     <div
       className="c4"
@@ -997,16 +907,55 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
             className="c8"
           >
             <span
-              className="css-1xdhyk6"
+              height={16}
+              style={
+                {
+                  "display": "inherit",
+                }
+              }
+              width={2}
             >
               <span
-                className="css-1fr62ah"
+                style={
+                  {
+                    "animation": "react-spinners-PulseLoader-pulse 0.75s 0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08)",
+                    "animationFillMode": "both",
+                    "backgroundColor": "#E1E2E3",
+                    "borderRadius": "100%",
+                    "display": "inline-block",
+                    "height": "15px",
+                    "margin": "2px",
+                    "width": "15px",
+                  }
+                }
               />
               <span
-                className="css-1q1fqtl"
+                style={
+                  {
+                    "animation": "react-spinners-PulseLoader-pulse 0.75s 0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08)",
+                    "animationFillMode": "both",
+                    "backgroundColor": "#E1E2E3",
+                    "borderRadius": "100%",
+                    "display": "inline-block",
+                    "height": "15px",
+                    "margin": "2px",
+                    "width": "15px",
+                  }
+                }
               />
               <span
-                className="css-1v7m6ew"
+                style={
+                  {
+                    "animation": "react-spinners-PulseLoader-pulse 0.75s 0.36s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08)",
+                    "animationFillMode": "both",
+                    "backgroundColor": "#E1E2E3",
+                    "borderRadius": "100%",
+                    "display": "inline-block",
+                    "height": "15px",
+                    "margin": "2px",
+                    "width": "15px",
+                  }
+                }
               />
             </span>
           </div>
@@ -1022,14 +971,18 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
             </span>
             <svg
               className="c12"
+              colour="black"
               direction="left"
               height={16}
-              viewBox="0 0 15 15"
+              mobileColour={null}
+              viewBox="0 0 96 96"
               width={16}
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                d="m90.871,50.776c-0.016,0.016 -0.026,0.036 -0.043,0.052l-32,32c-0.781,0.781 -1.804,1.172 -2.828,1.172s-2.047,-0.391 -2.829,-1.171a4,4 0 0 1 0,-5.657l25.172,-25.172l-70.343,0a4,4 0 0 1 0,-8l70.343,0l-25.172,-25.171a4,4 0 0 1 5.657,-5.657l32,32c0.016,0.016 0.027,0.036 0.043,0.052c0.167,0.172 0.321,0.357 0.455,0.557c0.069,0.104 0.118,0.216 0.176,0.325c0.065,0.121 0.138,0.236 0.191,0.364c0.057,0.137 0.09,0.279 0.13,0.42c0.032,0.109 0.074,0.214 0.097,0.327a4.017,4.017 0 0 1 0,1.568c-0.023,0.113 -0.065,0.217 -0.097,0.327c-0.041,0.141 -0.074,0.283 -0.13,0.42c-0.053,0.128 -0.126,0.243 -0.191,0.364c-0.059,0.109 -0.107,0.221 -0.176,0.325a4.035,4.035 0 0 1 -0.455,0.555z"
+                id="svg_1"
+                transform="rotate(-180 47.998626708984375,48.00019836425781) "
               />
             </svg>
           </button>
@@ -1045,14 +998,18 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
             </span>
             <svg
               className="c14"
+              colour="black"
               direction="right"
               height={16}
-              viewBox="0 0 15 15"
+              mobileColour={null}
+              viewBox="0 0 96 96"
               width={16}
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                d="m90.871,50.776c-0.016,0.016 -0.026,0.036 -0.043,0.052l-32,32c-0.781,0.781 -1.804,1.172 -2.828,1.172s-2.047,-0.391 -2.829,-1.171a4,4 0 0 1 0,-5.657l25.172,-25.172l-70.343,0a4,4 0 0 1 0,-8l70.343,0l-25.172,-25.171a4,4 0 0 1 5.657,-5.657l32,32c0.016,0.016 0.027,0.036 0.043,0.052c0.167,0.172 0.321,0.357 0.455,0.557c0.069,0.104 0.118,0.216 0.176,0.325c0.065,0.121 0.138,0.236 0.191,0.364c0.057,0.137 0.09,0.279 0.13,0.42c0.032,0.109 0.074,0.214 0.097,0.327a4.017,4.017 0 0 1 0,1.568c-0.023,0.113 -0.065,0.217 -0.097,0.327c-0.041,0.141 -0.074,0.283 -0.13,0.42c-0.053,0.128 -0.126,0.243 -0.191,0.364c-0.059,0.109 -0.107,0.221 -0.176,0.325a4.035,4.035 0 0 1 -0.455,0.555z"
+                id="svg_1"
+                transform="rotate(-180 47.998626708984375,48.00019836425781) "
               />
             </svg>
           </button>
@@ -1075,7 +1032,9 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
           </span>
           <svg
             className="c17"
+            colour="black"
             height={16}
+            mobileColour={null}
             viewBox="0 0 96 96"
             width={16}
             xmlns="http://www.w3.org/2000/svg"

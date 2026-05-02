@@ -23,9 +23,6 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -47,32 +44,20 @@ it('renders correctly', () => {
       font-weight: normal;
     }
 
-    .c3:hover,
-    .c3:focus {
+    .c3 :hover,
+    .c3 :focus {
       color: #FFFFFF;
-      -webkit-text-decoration: none;
       text-decoration: none;
     }
 
     .c5 {
-      display: -webkit-inline-box;
-      display: -webkit-inline-flex;
-      display: -ms-inline-flexbox;
       display: inline-flex;
       position: relative;
-      -webkit-text-decoration: none;
       text-decoration: none;
-      -webkit-transition: all 0.2s;
       transition: all 0.2s;
       height: 2.5rem;
       width: 100%;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
       justify-content: center;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
       border: none;
       cursor: pointer;
@@ -83,9 +68,6 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 700;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -105,15 +87,10 @@ it('renders correctly', () => {
     }
 
     .c0 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
       position: relative;
       padding: 1rem;
       background: #2C0230;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
       flex-direction: column;
       z-index: 3;
     }
@@ -139,47 +116,47 @@ it('renders correctly', () => {
       border-bottom: 2px solid;
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c1 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c1 {
         font-size: 1.125rem;
         line-height: 1.375rem;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c5 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c5 {
         font-size: 1.125rem;
         line-height: 1.375rem;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c5 {
         width: auto;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c5 {
         width: auto;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c2 {
         width: 75%;
         margin: 0 auto;
@@ -190,7 +167,7 @@ it('renders correctly', () => {
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c6 {
         margin: 0 0.25rem 0 0;
         display: inline-block;
@@ -205,10 +182,17 @@ it('renders correctly', () => {
       >
         Hello! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about
         <a
+          buttonType="primary"
           className="c3 c4"
+          color="red"
+          fullWidth={false}
+          home={false}
           href="https://www.comicrelief.com/cookies-policy"
+          iconFirst={false}
+          mobileColour={null}
           target="_self"
           type="standard_white"
+          underline={true}
         >
           our use of cookies
         </a>
@@ -218,21 +202,35 @@ it('renders correctly', () => {
         className="c1 c2"
       >
         <a
+          buttonType="primary"
           className="c5 c6"
+          color="white"
+          fullWidth={false}
+          home={false}
           href="/comic"
+          iconFirst={false}
+          mobileColour={null}
           onClick={[Function]}
           target="_self"
           type="button"
+          underline={true}
         >
           Accept
         </a>
         Or click
         <a
+          buttonType="primary"
           className="c3 c4"
+          color="red"
+          fullWidth={false}
+          home={false}
           href=""
+          iconFirst={false}
+          mobileColour={null}
           onClick={[Function]}
           target="_self"
           type="standard_white"
+          underline={true}
         >
           here
         </a>

@@ -28,13 +28,13 @@ it('renders default padding version correctly', () => {
       box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
     }
 
-    .c1 > div:first-child * {
+    .c1 >div:first-child * {
       margin-top: 0;
     }
 
-    .c1 > div:first-child h1,
-    .c1 > div:first-child h2,
-    .c1 > div:first-child h3 {
+    .c1 >div:first-child h1,
+    .c1 >div:first-child h2,
+    .c1 >div:first-child h3 {
       margin-bottom: 1.5rem;
     }
 
@@ -49,9 +49,9 @@ it('renders default padding version correctly', () => {
       position: absolute;
       left: 0;
       top: 0;
-      width: 33% !important;
+      width: 33%!important;
       height: 100%;
-      padding: 0 !important;
+      padding: 0!important;
       box-shadow: none;
       text-indent: -9999px;
       background-color: transparent;
@@ -66,7 +66,6 @@ it('renders default padding version correctly', () => {
       left: 0;
       width: 50%;
       height: 100%;
-      -webkit-transition: opacity 0.2s linear;
       transition: opacity 0.2s linear;
       background: linear-gradient(90deg,#FFFFFF,#FFFFFF7a,#FFFFFF00);
     }
@@ -82,8 +81,6 @@ it('renders default padding version correctly', () => {
     }
 
     .c1 .carousel button.carousel__next-button:before {
-      -webkit-transform: translate(0,-50%) rotate(-90deg);
-      -ms-transform: translate(0,-50%) rotate(-90deg);
       transform: translate(0,-50%) rotate(-90deg);
     }
 
@@ -94,12 +91,8 @@ it('renders default padding version correctly', () => {
     }
 
     .c1 .carousel .richtext-carousel {
-      -webkit-transition: -webkit-transform 0.75s;
-      -webkit-transition: -webkit-transform 0.75s;
       transition: -webkit-transform 0.75s;
       -o-transition: transform 0.75s;
-      -webkit-transition: -webkit-transform 0.75s;
-      -webkit-transition: transform 0.75s;
       transition: transform 0.75s;
       -webkit-transform: 0.75s;
       will-change: transform;
@@ -110,25 +103,14 @@ it('renders default padding version correctly', () => {
     }
 
     .c1 .carousel .richtext-carousel .carousel__slide {
-      padding-bottom: 300px !important;
+      padding-bottom: 300px!important;
     }
 
     .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide {
       text-align: center;
-      display: -webkit-inline-box;
-      display: -webkit-inline-flex;
-      display: -ms-inline-flexbox;
       display: inline-flex;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
-      -webkit-box-pack: start;
-      -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
       justify-content: flex-start;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
       flex-direction: column;
     }
 
@@ -147,10 +129,10 @@ it('renders default padding version correctly', () => {
       padding: 2rem 0 2rem;
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c1 .carousel button.carousel__back-button,
       .c1 .carousel button.carousel__next-button {
-        width: 33.3% !important;
+        width: 33.3%!important;
       }
 
       .c1 .carousel button.carousel__back-button:after,
@@ -159,77 +141,57 @@ it('renders default padding version correctly', () => {
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c1 .carousel .richtext-carousel .carousel__slide {
-        padding-bottom: 350px !important;
+        padding-bottom: 350px!important;
       }
 
-      .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide > div:first-child {
-        -webkit-transition: -webkit-transform 0.75s ease;
-        -webkit-transition: transform 0.75s ease;
+      .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide >div:first-child {
         transition: transform 0.75s ease;
-        -webkit-transform-origin: center;
-        -ms-transform-origin: center;
         transform-origin: center;
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
         transform: scale(0.8);
       }
 
-      .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide > div:first-child:after {
-        -webkit-transition: -webkit-transform 0.75s ease,width 0.75s ease,right 0.75s ease;
-        -webkit-transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
+      .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide >div:first-child:after {
         transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
         width: 100%;
         right: calc(-100% - 6px);
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
         transform: scale(1);
       }
 
-      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide >div:first-child:after {
         width: 33%;
         right: calc(-33% - 3px);
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
         transform: scale(1);
       }
 
-      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child {
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
+      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible .carousel__inner-slide >div:first-child {
         transform: scale(1);
       }
 
-      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible .carousel__inner-slide >div:first-child:after {
         width: 33%;
         right: calc(-33% + 3px);
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
         transform: scale(0.8);
       }
 
-      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible > div > div:first-child {
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
+      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible +.carousel__slide--visible >div>div:first-child {
         transform: scale(0.8);
       }
 
-      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible > div > div:first-child:after {
+      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible +.carousel__slide--visible >div>div:first-child:after {
         width: 50%;
         right: calc(-50% - 6px);
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
         transform: scale(1);
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c1 .carousel .richtext-carousel .carousel__slide {
-        padding-bottom: 350px !important;
+        padding-bottom: 350px!important;
       }
 
-      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible +.carousel__slide--visible .carousel__inner-slide >div:first-child:after {
         right: calc(-125% - 5px);
         width: 125%;
       }
@@ -237,10 +199,17 @@ it('renders default padding version correctly', () => {
 
     <div
       className="c0"
+      paddingBottom="2rem"
+      paddingTop="2rem"
+      rowBackgroundColour="grey_light"
     >
       <div
+        carouselBackgroundColour="white"
         className="c1 CarouselWrapper"
+        desktopHeight={350}
         id="nqIEHjiYE8Yd2A2a5cI3O"
+        mobileHeight={300}
+        tabletHeight={350}
       >
         <div
           className="c2"
@@ -262,16 +231,8 @@ it('renders custom padding + background colour version correctly', () => {
       background: #FFFFFF;
       height: 300px;
       width: 75%;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
       flex-direction: column;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
       justify-content: center;
       padding: 25px;
       border: 1px dashed #969598;
@@ -305,13 +266,13 @@ it('renders custom padding + background colour version correctly', () => {
       box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
     }
 
-    .c1 > div:first-child * {
+    .c1 >div:first-child * {
       margin-top: 0;
     }
 
-    .c1 > div:first-child h1,
-    .c1 > div:first-child h2,
-    .c1 > div:first-child h3 {
+    .c1 >div:first-child h1,
+    .c1 >div:first-child h2,
+    .c1 >div:first-child h3 {
       margin-bottom: 1.5rem;
     }
 
@@ -326,9 +287,9 @@ it('renders custom padding + background colour version correctly', () => {
       position: absolute;
       left: 0;
       top: 0;
-      width: 33% !important;
+      width: 33%!important;
       height: 100%;
-      padding: 0 !important;
+      padding: 0!important;
       box-shadow: none;
       text-indent: -9999px;
       background-color: transparent;
@@ -343,7 +304,6 @@ it('renders custom padding + background colour version correctly', () => {
       left: 0;
       width: 50%;
       height: 100%;
-      -webkit-transition: opacity 0.2s linear;
       transition: opacity 0.2s linear;
       background: linear-gradient(90deg,#FFFFFF,#FFFFFF7a,#FFFFFF00);
     }
@@ -359,8 +319,6 @@ it('renders custom padding + background colour version correctly', () => {
     }
 
     .c1 .carousel button.carousel__next-button:before {
-      -webkit-transform: translate(0,-50%) rotate(-90deg);
-      -ms-transform: translate(0,-50%) rotate(-90deg);
       transform: translate(0,-50%) rotate(-90deg);
     }
 
@@ -371,12 +329,8 @@ it('renders custom padding + background colour version correctly', () => {
     }
 
     .c1 .carousel .richtext-carousel {
-      -webkit-transition: -webkit-transform 0.75s;
-      -webkit-transition: -webkit-transform 0.75s;
       transition: -webkit-transform 0.75s;
       -o-transition: transform 0.75s;
-      -webkit-transition: -webkit-transform 0.75s;
-      -webkit-transition: transform 0.75s;
       transition: transform 0.75s;
       -webkit-transform: 0.75s;
       will-change: transform;
@@ -387,25 +341,14 @@ it('renders custom padding + background colour version correctly', () => {
     }
 
     .c1 .carousel .richtext-carousel .carousel__slide {
-      padding-bottom: 300px !important;
+      padding-bottom: 300px!important;
     }
 
     .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide {
       text-align: center;
-      display: -webkit-inline-box;
-      display: -webkit-inline-flex;
-      display: -ms-inline-flexbox;
       display: inline-flex;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
-      -webkit-box-pack: start;
-      -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
       justify-content: flex-start;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
       flex-direction: column;
     }
 
@@ -424,23 +367,23 @@ it('renders custom padding + background colour version correctly', () => {
       padding: 4rem 0 4rem;
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c3 {
         height: 350px;
         width: 85%;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c3 {
         height: 350px;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c1 .carousel button.carousel__back-button,
       .c1 .carousel button.carousel__next-button {
-        width: 33.3% !important;
+        width: 33.3%!important;
       }
 
       .c1 .carousel button.carousel__back-button:after,
@@ -449,77 +392,57 @@ it('renders custom padding + background colour version correctly', () => {
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c1 .carousel .richtext-carousel .carousel__slide {
-        padding-bottom: 350px !important;
+        padding-bottom: 350px!important;
       }
 
-      .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide > div:first-child {
-        -webkit-transition: -webkit-transform 0.75s ease;
-        -webkit-transition: transform 0.75s ease;
+      .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide >div:first-child {
         transition: transform 0.75s ease;
-        -webkit-transform-origin: center;
-        -ms-transform-origin: center;
         transform-origin: center;
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
         transform: scale(0.8);
       }
 
-      .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide > div:first-child:after {
-        -webkit-transition: -webkit-transform 0.75s ease,width 0.75s ease,right 0.75s ease;
-        -webkit-transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
+      .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide >div:first-child:after {
         transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
         width: 100%;
         right: calc(-100% - 6px);
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
         transform: scale(1);
       }
 
-      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide >div:first-child:after {
         width: 33%;
         right: calc(-33% - 3px);
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
         transform: scale(1);
       }
 
-      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child {
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
+      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible .carousel__inner-slide >div:first-child {
         transform: scale(1);
       }
 
-      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible .carousel__inner-slide >div:first-child:after {
         width: 33%;
         right: calc(-33% + 3px);
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
         transform: scale(0.8);
       }
 
-      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible > div > div:first-child {
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
+      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible +.carousel__slide--visible >div>div:first-child {
         transform: scale(0.8);
       }
 
-      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible > div > div:first-child:after {
+      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible +.carousel__slide--visible >div>div:first-child:after {
         width: 50%;
         right: calc(-50% - 6px);
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
         transform: scale(1);
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c1 .carousel .richtext-carousel .carousel__slide {
-        padding-bottom: 350px !important;
+        padding-bottom: 350px!important;
       }
 
-      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible + .carousel__slide--visible + .carousel__slide--visible .carousel__inner-slide > div:first-child:after {
+      .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible +.carousel__slide--visible .carousel__inner-slide >div:first-child:after {
         right: calc(-125% - 5px);
         width: 125%;
       }
@@ -527,10 +450,17 @@ it('renders custom padding + background colour version correctly', () => {
 
     <div
       className="c0"
+      paddingBottom="4rem"
+      paddingTop="4rem"
+      rowBackgroundColour="teal_light"
     >
       <div
+        carouselBackgroundColour="white"
         className="c1 CarouselWrapper"
+        desktopHeight={350}
         id="nqIEHjiYE8Yd2A2a5cI31"
+        mobileHeight={300}
+        tabletHeight={350}
       >
         <div
           className="c2"
@@ -546,12 +476,11 @@ it('renders custom padding + background colour version correctly', () => {
             className="horizontalSlider___281Ls carousel__slider carousel__slider--horizontal"
             onKeyDown={[Function]}
             role="listbox"
-            style={Object {}}
-            tabIndex={0}
+            style={{}}
           >
             <div
               className="carousel__slider-tray-wrapper carousel__slider-tray-wrap--horizontal"
-              style={Object {}}
+              style={{}}
             >
               <div
                 className="sliderTray___-vHFQ richtext-carousel carousel__slider-tray carousel__slider-tray--horizontal"
@@ -562,7 +491,7 @@ it('renders custom padding + background colour version correctly', () => {
                 onTouchMove={[Function]}
                 onTouchStart={[Function]}
                 style={
-                  Object {
+                  {
                     "flexDirection": "row",
                     "transform": "translateX(0%) translateX(0px)",
                     "width": "200%",
@@ -577,16 +506,15 @@ it('renders custom padding + background colour version correctly', () => {
                   onFocus={[Function]}
                   role="option"
                   style={
-                    Object {
+                    {
                       "paddingBottom": "66.66666666666667%",
                       "width": "16.666666666666668%",
                     }
                   }
-                  tabIndex={0}
                 >
                   <div
                     className="slideInner___2mfX9 carousel__inner-slide"
-                    style={Object {}}
+                    style={{}}
                   />
                 </div>
                 <div
@@ -597,19 +525,23 @@ it('renders custom padding + background colour version correctly', () => {
                   onFocus={[Function]}
                   role="option"
                   style={
-                    Object {
+                    {
                       "paddingBottom": "66.66666666666667%",
                       "width": "16.666666666666668%",
                     }
                   }
-                  tabIndex={0}
                 >
                   <div
                     className="slideInner___2mfX9 carousel__inner-slide"
-                    style={Object {}}
+                    style={{}}
                   >
                     <div
                       className="c3 slide-copy-wrapper"
+                      desktopHeight={350}
+                      mobileHeight={300}
+                      nodeBackgroundColour="white"
+                      nodeOutlineColour="grey"
+                      tabletHeight={350}
                     >
                       Some other longside but not really all that long copy, who knows, it could be this long or LESS.
                     </div>
@@ -623,19 +555,23 @@ it('renders custom padding + background colour version correctly', () => {
                   onFocus={[Function]}
                   role="option"
                   style={
-                    Object {
+                    {
                       "paddingBottom": "66.66666666666667%",
                       "width": "16.666666666666668%",
                     }
                   }
-                  tabIndex={0}
                 >
                   <div
                     className="slideInner___2mfX9 carousel__inner-slide"
-                    style={Object {}}
+                    style={{}}
                   >
                     <div
                       className="c3 slide-copy-wrapper"
+                      desktopHeight={350}
+                      mobileHeight={300}
+                      nodeBackgroundColour="white"
+                      nodeOutlineColour="grey"
+                      tabletHeight={350}
                     >
                       140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets.
                     </div>
@@ -649,19 +585,23 @@ it('renders custom padding + background colour version correctly', () => {
                   onFocus={[Function]}
                   role="option"
                   style={
-                    Object {
+                    {
                       "paddingBottom": "66.66666666666667%",
                       "width": "16.666666666666668%",
                     }
                   }
-                  tabIndex={-1}
                 >
                   <div
                     className="slideInner___2mfX9 carousel__inner-slide"
-                    style={Object {}}
+                    style={{}}
                   >
                     <div
                       className="c3 slide-copy-wrapper"
+                      desktopHeight={350}
+                      mobileHeight={300}
+                      nodeBackgroundColour="white"
+                      nodeOutlineColour="grey"
+                      tabletHeight={350}
                     >
                       Some other longside but not really all that long copy, who knows, it could be this long or LESS
                     </div>
@@ -675,19 +615,23 @@ it('renders custom padding + background colour version correctly', () => {
                   onFocus={[Function]}
                   role="option"
                   style={
-                    Object {
+                    {
                       "paddingBottom": "66.66666666666667%",
                       "width": "16.666666666666668%",
                     }
                   }
-                  tabIndex={-1}
                 >
                   <div
                     className="slideInner___2mfX9 carousel__inner-slide"
-                    style={Object {}}
+                    style={{}}
                   >
                     <div
                       className="c3 slide-copy-wrapper"
+                      desktopHeight={350}
+                      mobileHeight={300}
+                      nodeBackgroundColour="white"
+                      nodeOutlineColour="grey"
+                      tabletHeight={350}
                     >
                       140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets. ABIGLONGLINETOFORCEONTOANEWONE
                     </div>
@@ -701,16 +645,15 @@ it('renders custom padding + background colour version correctly', () => {
                   onFocus={[Function]}
                   role="option"
                   style={
-                    Object {
+                    {
                       "paddingBottom": "66.66666666666667%",
                       "width": "16.666666666666668%",
                     }
                   }
-                  tabIndex={-1}
                 >
                   <div
                     className="slideInner___2mfX9 carousel__inner-slide"
-                    style={Object {}}
+                    style={{}}
                   />
                 </div>
               </div>

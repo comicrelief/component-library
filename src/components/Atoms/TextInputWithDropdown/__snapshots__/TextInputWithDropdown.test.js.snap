@@ -5,9 +5,6 @@ exports[`renders correctly with no value and no options 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -21,12 +18,7 @@ exports[`renders correctly with no value and no options 1`] = `
 .c1 {
   width: 100%;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   color: #000000;
 }
@@ -36,9 +28,6 @@ exports[`renders correctly with no value and no options 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -52,17 +41,8 @@ exports[`renders correctly with no value and no options 1`] = `
 .c5 {
   position: relative;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -76,8 +56,6 @@ exports[`renders correctly with no value and no options 1`] = `
   border: 1px solid;
   border-color: #969598;
   box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
@@ -86,7 +64,7 @@ exports[`renders correctly with no value and no options 1`] = `
   font-family: inherit;
 }
 
-.c6:focus {
+.c6 :focus {
   border: 1px solid #666;
 }
 
@@ -94,40 +72,32 @@ exports[`renders correctly with no value and no options 1`] = `
   position: relative;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c2 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c3 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c3 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
 }
 
 <div
@@ -136,39 +106,42 @@ exports[`renders correctly with no value and no options 1`] = `
 >
   <label
     className="c1 TextInputWithDropdown__input"
+    errorMsg=""
     htmlFor="text-input-with-dropdown"
+    optional={null}
   >
     <span
       className="c2 c3"
       dangerouslySetInnerHTML={
-        Object {
+        {
           "__html": "Search for bikes",
         }
       }
     />
     <div
       className="c4"
+      error={false}
     >
-      
       <div
         className="c5"
+        error={false}
       >
         <input
           aria-required={false}
           autoComplete="off"
           className="c6"
+          error={false}
           id="text-input-with-dropdown"
           name="query"
           onChange={[Function]}
           placeholder=""
+          prefixLength={0}
           required={false}
           type="text"
           value=""
         />
-        
       </div>
     </div>
-    
   </label>
 </div>
 `;
@@ -178,9 +151,6 @@ exports[`renders correctly with value and no options 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -194,12 +164,7 @@ exports[`renders correctly with value and no options 1`] = `
 .c1 {
   width: 100%;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   color: #000000;
 }
@@ -209,9 +174,6 @@ exports[`renders correctly with value and no options 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -225,17 +187,8 @@ exports[`renders correctly with value and no options 1`] = `
 .c5 {
   position: relative;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -249,8 +202,6 @@ exports[`renders correctly with value and no options 1`] = `
   border: 1px solid;
   border-color: #969598;
   box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
@@ -259,7 +210,7 @@ exports[`renders correctly with value and no options 1`] = `
   font-family: inherit;
 }
 
-.c6:focus {
+.c6 :focus {
   border: 1px solid #666;
 }
 
@@ -267,40 +218,32 @@ exports[`renders correctly with value and no options 1`] = `
   position: relative;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c2 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c3 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c3 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
 }
 
 <div
@@ -309,39 +252,42 @@ exports[`renders correctly with value and no options 1`] = `
 >
   <label
     className="c1 TextInputWithDropdown__input"
+    errorMsg=""
     htmlFor="text-input-with-dropdown"
+    optional={null}
   >
     <span
       className="c2 c3"
       dangerouslySetInnerHTML={
-        Object {
+        {
           "__html": "Search for bikes",
         }
       }
     />
     <div
       className="c4"
+      error={false}
     >
-      
       <div
         className="c5"
+        error={false}
       >
         <input
           aria-required={false}
           autoComplete="off"
           className="c6"
+          error={false}
           id="text-input-with-dropdown"
           name="query"
           onChange={[Function]}
           placeholder=""
+          prefixLength={0}
           required={false}
           type="text"
           value="bikes"
         />
-        
       </div>
     </div>
-    
   </label>
 </div>
 `;
@@ -351,9 +297,6 @@ exports[`renders correctly with value and options 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -367,12 +310,7 @@ exports[`renders correctly with value and options 1`] = `
 .c1 {
   width: 100%;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   color: #000000;
 }
@@ -382,9 +320,6 @@ exports[`renders correctly with value and options 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -398,17 +333,8 @@ exports[`renders correctly with value and options 1`] = `
 .c5 {
   position: relative;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -422,8 +348,6 @@ exports[`renders correctly with value and options 1`] = `
   border: 1px solid;
   border-color: #969598;
   box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
@@ -432,7 +356,7 @@ exports[`renders correctly with value and options 1`] = `
   font-family: inherit;
 }
 
-.c6:focus {
+.c6 :focus {
   border: 1px solid #666;
 }
 
@@ -473,43 +397,35 @@ exports[`renders correctly with value and options 1`] = `
   background-color: #F4F3F5;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c2 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c3 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c3 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     max-width: 500px;
   }
@@ -521,42 +437,46 @@ exports[`renders correctly with value and options 1`] = `
 >
   <label
     className="c1 TextInputWithDropdown__input"
+    errorMsg=""
     htmlFor="text-input-with-dropdown"
+    optional={null}
   >
     <span
       className="c2 c3"
       dangerouslySetInnerHTML={
-        Object {
+        {
           "__html": "Search for bikes",
         }
       }
     />
     <div
       className="c4"
+      error={false}
     >
-      
       <div
         className="c5"
+        error={false}
       >
         <input
           aria-required={false}
           autoComplete="off"
           className="c6"
+          error={false}
           id="text-input-with-dropdown"
           name="query"
           onChange={[Function]}
           placeholder=""
+          prefixLength={0}
           required={false}
           type="text"
           value="c"
         />
-        
       </div>
     </div>
-    
   </label>
   <div
     className="c7 TextInputWithDropdown__options"
+    hideBorder={false}
   >
     <ul
       className="c8"

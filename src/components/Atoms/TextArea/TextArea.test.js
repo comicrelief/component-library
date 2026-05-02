@@ -20,9 +20,6 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -36,12 +33,7 @@ it('renders correctly', () => {
     .c0 {
       width: 100%;
       position: relative;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
       flex-direction: column;
       color: #000000;
     }
@@ -51,9 +43,6 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -70,8 +59,6 @@ it('renders correctly', () => {
       border-radius: 0.5rem;
       border-color: #E1E2E3;
       box-shadow: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
       appearance: none;
       color: #000000;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
@@ -82,44 +69,32 @@ it('renders correctly', () => {
       border: 1px solid #666;
     }
 
-    .c3:focus::-webkit-input-placeholder {
-      visibility: hidden;
-    }
-
-    .c3:focus::-moz-placeholder {
-      visibility: hidden;
-    }
-
-    .c3:focus:-ms-input-placeholder {
-      visibility: hidden;
-    }
-
     .c3:focus::placeholder {
       visibility: hidden;
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c1 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c1 {
         font-size: 1.125rem;
         line-height: 1.375rem;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c2 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c2 {
         font-size: 1rem;
         line-height: 1.25rem;
@@ -128,12 +103,14 @@ it('renders correctly', () => {
 
     <label
       className="c0"
+      errorMsg=""
       htmlFor="Please leave your comment here"
+      optional={null}
     >
       <span
         className="c1 c2"
         dangerouslySetInnerHTML={
-          Object {
+          {
             "__html": "Label",
           }
         }
@@ -141,12 +118,12 @@ it('renders correctly', () => {
       <textarea
         aria-describedby="Please leave your comment here"
         className="c3"
+        error={false}
         id="Please leave your comment here"
         name="description"
         placeholder="This is text area"
         rows={5}
       />
-      
     </label>
   `);
 });

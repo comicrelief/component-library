@@ -12,14 +12,11 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    Array [
+    [
       .c2 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -37,20 +34,13 @@ it('renders correctly', () => {
     }
 
     .c0 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
       margin-bottom: 8px;
     }
 
     .c1 {
       border: 0;
-      -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
       height: 1px;
       margin: -1px;
@@ -61,7 +51,7 @@ it('renders correctly', () => {
       width: 1px;
     }
 
-    .c1 + span {
+    .c1 +span {
       margin-right: 12px;
       width: 24px;
       height: 24px;
@@ -69,30 +59,28 @@ it('renders correctly', () => {
       background-color: #FFFFFF;
       border: 1px solid #969598;
       float: left;
-      -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
       flex-shrink: 0;
     }
 
-    .c1:checked + span {
+    .c1 :checked+span {
       background: url(mock.asset) no-repeat center;
       background-size: contain;
       background-color: #E52630;
       border: 1px solid #E52630;
     }
 
-    .c1:focus + span {
+    .c1 :focus+span {
       border: 1px solid #E52630;
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c2 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c2 {
         font-size: 1.125rem;
         line-height: 1.375rem;
@@ -101,6 +89,7 @@ it('renders correctly', () => {
 
     <label
         className="c0"
+        hasLabelAsString={true}
         htmlFor="sport1"
       >
         <input
@@ -121,9 +110,6 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -141,20 +127,13 @@ it('renders correctly', () => {
     }
 
     .c0 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
       margin-bottom: 8px;
     }
 
     .c1 {
       border: 0;
-      -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
       height: 1px;
       margin: -1px;
@@ -165,7 +144,7 @@ it('renders correctly', () => {
       width: 1px;
     }
 
-    .c1 + span {
+    .c1 +span {
       margin-right: 12px;
       width: 24px;
       height: 24px;
@@ -173,30 +152,28 @@ it('renders correctly', () => {
       background-color: #FFFFFF;
       border: 1px solid #969598;
       float: left;
-      -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
       flex-shrink: 0;
     }
 
-    .c1:checked + span {
+    .c1 :checked+span {
       background: url(mock.asset) no-repeat center;
       background-size: contain;
       background-color: #E52630;
       border: 1px solid #E52630;
     }
 
-    .c1:focus + span {
+    .c1 :focus+span {
       border: 1px solid #E52630;
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c2 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c2 {
         font-size: 1.125rem;
         line-height: 1.375rem;
@@ -205,6 +182,7 @@ it('renders correctly', () => {
 
     <label
         className="c0"
+        hasLabelAsString={true}
         htmlFor="sport2"
       >
         <input
