@@ -26,6 +26,7 @@ module.exports = defineConfig({
     ['html', { open: 'never' }]
   ],
   use: {
+    baseURL: 'http://localhost:4173',
     actionTimeout: 0,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry'
@@ -48,9 +49,9 @@ module.exports = defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'yarn styleguide',
-    port: '6060',
+    command: 'yarn build:preview && yarn serve:preview',
+    url: 'http://localhost:4173',
     timeout: 120000,
-    reuseExistingServer: true
+    reuseExistingServer: !process.env.CI
   }
 });
