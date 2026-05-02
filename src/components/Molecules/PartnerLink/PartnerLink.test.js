@@ -21,9 +21,6 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -61,18 +58,15 @@ it('renders correctly', () => {
       font-weight: normal;
     }
 
-    .c0:hover,
-    .c0:focus {
+    .c0 :hover,
+    .c0 :focus {
       color: #000000;
-      -webkit-text-decoration: none;
       text-decoration: none;
     }
 
     .c6 {
       border: 0;
-      -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
-      -webkit-clip-path: inset(50%);
       clip-path: inset(50%);
       height: 1px;
       margin: -1px;
@@ -91,22 +85,18 @@ it('renders correctly', () => {
       border: none;
     }
 
-    .c1:hover,
-    .c1:focus {
+    .c1 :hover,
+    .c1 :focus {
       border: none;
     }
 
-    .c1:hover .c5,
-    .c1:focus .c5 {
+    .c1 :hover .c5,
+    .c1 :focus .c5 {
       overflow: inherit;
-      -webkit-clip-path: none;
       clip-path: none;
       margin: 0;
       text-align: center;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
       transform: translateY(-50%);
-      -webkit-clip: auto;
       clip: auto;
       top: 50%;
       left: 0;
@@ -114,8 +104,8 @@ it('renders correctly', () => {
       z-index: 2;
     }
 
-    .c1:hover::after,
-    .c1:focus::after {
+    .c1 :hover ::after,
+    .c1 :focus ::after {
       content: '';
       position: absolute;
       display: block;
@@ -128,36 +118,48 @@ it('renders correctly', () => {
       background-color: #E52630;
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c4 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c4 {
         font-size: 1.125rem;
         line-height: 1.375rem;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c6 {
         font-size: 1rem;
       }
     }
 
     <a
+      buttonType="primary"
       className="c0 c1"
       color="red"
+      fullWidth={false}
+      home={false}
       href="https://www.comicrelief.com"
+      iconFirst={false}
+      mobileColour={null}
       target="_self"
       type="standard"
+      underline={true}
     >
       <div
         className="c2 lazyload"
         height="auto"
+        image={null}
+        images="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+        isBackgroundImage={false}
+        nonObjFitImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        objFitState={true}
+        setObjFitState={[Function]}
         width="100%"
       >
         <img
@@ -168,6 +170,10 @@ it('renders correctly', () => {
           data-src={null}
           data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
           height="auto"
+          mediumBreakpointRowLayout={null}
+          objFitState={true}
+          objectFit="none"
+          smallBreakpointRowLayout={null}
           src={null}
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"

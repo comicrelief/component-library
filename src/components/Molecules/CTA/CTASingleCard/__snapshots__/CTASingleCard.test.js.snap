@@ -5,9 +5,6 @@ exports[`renders correctly with data prop 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -39,10 +36,9 @@ exports[`renders correctly with data prop 1`] = `
   font-weight: normal;
 }
 
-.c3:hover,
-.c3:focus {
+.c3 :hover,
+.c3 :focus {
   color: #000000;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -55,8 +51,6 @@ exports[`renders correctly with data prop 1`] = `
 .c6 {
   width: 100%;
   overflow: hidden;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
   background: transparent;
   border-radius: 1rem 1rem 0 0;
@@ -73,15 +67,11 @@ exports[`renders correctly with data prop 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
   color: #E52630;
   font-weight: bold;
-  -webkit-text-decoration: none;
   text-decoration: none;
   position: relative;
   display: inline-block;
@@ -93,7 +83,6 @@ exports[`renders correctly with data prop 1`] = `
   position: absolute;
   left: 0;
   bottom: -5px;
-  -webkit-transition: opacity 0.15s 0.1s;
   transition: opacity 0.15s 0.1s;
   opacity: 0;
   pointer-events: none;
@@ -104,56 +93,28 @@ exports[`renders correctly with data prop 1`] = `
   height: 32px;
   border-radius: 50%;
   background: #E52630;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
 .c18 {
   padding-left: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
-  -webkit-text-decoration: none;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
@@ -161,25 +122,14 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 .c4 img {
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
-  -webkit-transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
   transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
 }
 
 .c2 {
   width: auto;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
   align-self: stretch;
   width: 100%;
   max-width: 100%;
@@ -188,31 +138,17 @@ exports[`renders correctly with data prop 1`] = `
 .c9 {
   width: 100%;
   background: #FFFFFF;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   min-height: 0;
   border-radius: 0 0 1rem 1rem;
 }
 
 .c10 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   min-height: 0;
 }
@@ -226,20 +162,9 @@ exports[`renders correctly with data prop 1`] = `
 
 .c13 {
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: auto;
   padding-top: 2rem;
@@ -254,75 +179,67 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   max-width: 1152px;
   margin: 0 auto;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c12 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c12 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c6 {
     width: calc(100% / 3);
     min-width: 292px;
     max-width: 309px;
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
     flex-shrink: 0;
-    -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
-    -ms-flex-positive: 0;
     flex-grow: 0;
     height: 100%;
     border-radius: 1rem 0 0 1rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c6 {
     min-width: 355px;
     max-width: 362px;
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c6 {
     min-width: 363px;
     max-width: 363px;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c6 img {
     height: 100%;
     object-fit: cover;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c15 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -341,42 +258,29 @@ exports[`renders correctly with data prop 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c4 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
     align-items: stretch;
     min-height: calc(219px - 4rem);
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c4 {
     min-height: 272px;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c4 {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
     transform-origin: center;
-    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-    -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
     transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
   }
 
   .c4:hover,
   .c4:focus {
-    -webkit-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
     transform: translateY(-10px);
   }
 
@@ -385,13 +289,10 @@ exports[`renders correctly with data prop 1`] = `
   }
 
   .c4:hover .c5 img {
-    -webkit-transform: scale(1.06);
-    -ms-transform: scale(1.06);
     transform: scale(1.06);
   }
 
   .c4:hover .c14 {
-    -webkit-text-decoration: none;
     text-decoration: none;
   }
 
@@ -400,86 +301,101 @@ exports[`renders correctly with data prop 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
     height: auto;
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c2 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
     height: auto;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c9 {
     width: calc(200% / 3);
     min-width: 384px;
     max-width: 650px;
-    -webkit-flex: 1;
-    -ms-flex: 1;
     flex: 1;
     border-radius: 0 1rem 1rem 0;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c9 {
     min-width: 541px;
     max-width: 790px;
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c9 {
     width: 789px;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
     padding-inline: 2rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c0 {
     padding-inline: 4rem;
   }
 }
 
 <div
+  backgroundColor="transparent"
   className="c0"
+  paddingAbove="1rem"
+  paddingBelow="2rem"
 >
   <div
     className="c1"
   >
     <div
       className="c2"
+      isCarousel={false}
+      isFullWidth={true}
     >
       <a
+        buttonType="primary"
         className="c3 c4"
         color="red"
+        fullWidth={false}
+        home={false}
         href="/test"
+        iconFirst={false}
+        isCarousel={false}
+        isInteractive={true}
+        isSingleCard={true}
+        mobileColour={null}
         rel={null}
         target="_self"
         type="standard"
+        underline={true}
       >
         <div
           className="c5 c6"
+          isSingleCard={true}
         >
           <div
             className="c7 lazyload"
             height="100%"
+            image="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            images="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
+            isBackgroundImage={false}
+            nonObjFitImage="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
+            objFitState={true}
+            setObjFitState={[Function]}
             width="100%"
           >
             <img
@@ -490,6 +406,10 @@ exports[`renders correctly with data prop 1`] = `
               data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
               data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
               height="100%"
+              mediumBreakpointRowLayout={null}
+              objFitState={true}
+              objectFit="cover"
+              smallBreakpointRowLayout={null}
               src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
               srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
               width="100%"
@@ -498,6 +418,7 @@ exports[`renders correctly with data prop 1`] = `
         </div>
         <div
           className="c9"
+          isSingleCard={true}
         >
           <div
             className="c10"
@@ -564,9 +485,6 @@ exports[`renders correctly without image 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -584,10 +502,9 @@ exports[`renders correctly without image 1`] = `
   font-weight: normal;
 }
 
-.c3:hover,
-.c3:focus {
+.c3 :hover,
+.c3 :focus {
   color: #000000;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -601,15 +518,11 @@ exports[`renders correctly without image 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
   color: #E52630;
   font-weight: bold;
-  -webkit-text-decoration: none;
   text-decoration: none;
   position: relative;
   display: inline-block;
@@ -621,7 +534,6 @@ exports[`renders correctly without image 1`] = `
   position: absolute;
   left: 0;
   bottom: -5px;
-  -webkit-transition: opacity 0.15s 0.1s;
   transition: opacity 0.15s 0.1s;
   opacity: 0;
   pointer-events: none;
@@ -632,56 +544,28 @@ exports[`renders correctly without image 1`] = `
   height: 32px;
   border-radius: 50%;
   background: #E52630;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
 .c14 {
   padding-left: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
-  -webkit-text-decoration: none;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
@@ -689,25 +573,14 @@ exports[`renders correctly without image 1`] = `
 }
 
 .c4 img {
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
-  -webkit-transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
   transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
 }
 
 .c2 {
   width: auto;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
   align-self: stretch;
   width: 100%;
   max-width: 100%;
@@ -716,31 +589,17 @@ exports[`renders correctly without image 1`] = `
 .c5 {
   width: 100%;
   background: #FFFFFF;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   padding: 2rem;
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   min-height: 0;
   border-radius: 0 0 1rem 1rem;
 }
 
 .c6 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   min-height: 0;
 }
@@ -754,20 +613,9 @@ exports[`renders correctly without image 1`] = `
 
 .c9 {
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: auto;
   padding-top: 2rem;
@@ -782,37 +630,34 @@ exports[`renders correctly without image 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   max-width: 1152px;
   margin: 0 auto;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c11 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -831,42 +676,29 @@ exports[`renders correctly without image 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c4 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
     align-items: stretch;
     min-height: calc(219px - 4rem);
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c4 {
     min-height: 272px;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c4 {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
     transform-origin: center;
-    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-    -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
     transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
   }
 
   .c4:hover,
   .c4:focus {
-    -webkit-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
     transform: translateY(-10px);
   }
 
@@ -875,7 +707,6 @@ exports[`renders correctly without image 1`] = `
   }
 
   .c4:hover .c10 {
-    -webkit-text-decoration: none;
     text-decoration: none;
   }
 
@@ -884,82 +715,91 @@ exports[`renders correctly without image 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
     height: auto;
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c2 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
     height: auto;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c5 {
     width: calc(200% / 3);
     min-width: 384px;
     max-width: 650px;
-    -webkit-flex: 1;
-    -ms-flex: 1;
     flex: 1;
     border-radius: 0 1rem 1rem 0;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c5 {
     min-width: 541px;
     max-width: 790px;
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c5 {
     width: 789px;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
     padding-inline: 2rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c0 {
     padding-inline: 4rem;
   }
 }
 
 <div
+  backgroundColor="transparent"
   className="c0"
+  paddingAbove="1rem"
+  paddingBelow="2rem"
 >
   <div
     className="c1"
   >
     <div
       className="c2"
+      isCarousel={false}
+      isFullWidth={true}
     >
       <a
+        buttonType="primary"
         className="c3 c4"
         color="red"
+        fullWidth={false}
+        home={false}
         href="/test-no-image"
+        iconFirst={false}
+        isCarousel={false}
+        isInteractive={true}
+        isSingleCard={true}
+        mobileColour={null}
         rel={null}
         target="_self"
         type="standard"
+        underline={true}
       >
         <div
           className="c5"
+          isSingleCard={true}
         >
           <div
             className="c6"

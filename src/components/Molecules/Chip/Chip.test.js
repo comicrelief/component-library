@@ -1,9 +1,9 @@
-import React from "react";
-import "jest-styled-components";
-import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
-import Chip from "./Chip";
+import React from 'react';
+import 'jest-styled-components';
+import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
+import Chip from './Chip';
 
-it("renders article teaser correctly", () => {
+it('renders article teaser correctly', () => {
   const handleToggle = (e) => e.target.value;
   const tree = renderWithTheme(
     <Chip category="Gender Justice" handleToggle={handleToggle} />
@@ -11,13 +11,7 @@ it("renders article teaser correctly", () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
       width: auto;
       height: 48px;
@@ -26,8 +20,6 @@ it("renders article teaser correctly", () => {
       margin: 0.5rem 0.5rem 0 0;
       padding: 4px;
       padding-right: 1rem;
-      -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
       flex: 0 0 auto;
       position: relative;
     }
@@ -46,7 +38,7 @@ it("renders article teaser correctly", () => {
       z-index: 1;
     }
 
-    .c2:hover {
+    .c2 :hover {
       background: #E1E2E3;
     }
 
@@ -62,7 +54,7 @@ it("renders article teaser correctly", () => {
       border: 1px solid #666;
     }
 
-    .c1 + span {
+    .c1 +span {
       background: url(mock.asset) no-repeat center;
       background-size: 24px;
       margin-right: 1rem;
@@ -74,22 +66,22 @@ it("renders article teaser correctly", () => {
       z-index: 2;
     }
 
-    .c1:checked ~ span {
+    .c1 :checked~span {
       background-size: 24px;
       background-color: #6F3AAB;
     }
 
-    .c1:focus + span {
+    .c1 :focus+span {
       border-color: #666;
       border-width: 3px;
     }
 
-    .c1:focus + span {
+    .c1 :focus+span {
       border-color: #666;
       border-width: 3px;
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c0 {
         margin: 1rem 1rem 0 0;
       }

@@ -5,9 +5,6 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -39,13 +36,8 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
   background: #6F3AAB;
@@ -81,93 +73,109 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   z-index: 1;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c6 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
     padding-top: 0rem;
     padding-bottom: 0rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c5 {
     min-height: calc(100vh - 5.625rem);
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
     padding: 0 4rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c5 {
     width: 50%;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     height: auto;
     width: 50%;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     padding-bottom: 0;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 img {
     position: absolute;
   }
 }
 
 <div
+  backgroundColor="purple"
   className="c0"
+  copyFirst={false}
+  fullImage={false}
+  hasVideo={false}
   id="single-msg__5"
+  isPlaying={false}
+  landscapeVideo={false}
+  paddingBottom="0rem"
+  paddingTop="0rem"
+  smPaddingBottom="0rem"
+  smPaddingTop="0rem"
+  vhFull={true}
 >
   <div
     className="c1"
+    doubleImage={null}
+    fullImage={false}
+    hasVideo={false}
+    isBuffering={false}
+    isPlaying={false}
+    landscapeVideo={false}
+    vhFull={true}
   >
     <div
       className="c2"
+      doubleImage={null}
+      fullImage={false}
+      hasVideo={false}
+      isBuffering={false}
+      isPlaying={false}
+      landscapeVideo={false}
+      vhFull={true}
     >
       <div
         className="c3 lazyload"
         height="100%"
+        image="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        images="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+        isBackgroundImage={false}
+        nonObjFitImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        objFitState={true}
+        setObjFitState={[Function]}
         width="100%"
       >
         <img
@@ -178,6 +186,10 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
           data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
           data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
           height="100%"
+          mediumBreakpointRowLayout={null}
+          objFitState={true}
+          objectFit="cover"
+          smallBreakpointRowLayout={null}
           src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
@@ -187,6 +199,13 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   </div>
   <div
     className="c5"
+    copyFirst={false}
+    fullImage={false}
+    hasImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+    hasVideo={false}
+    paddingBottom="2rem"
+    paddingTop="2rem"
+    vhFull={true}
   >
     <p
       className="c6"
@@ -202,9 +221,6 @@ exports[`renders Single Message with Image correctly 1`] = `
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 2rem;
   line-height: 2rem;
@@ -225,9 +241,6 @@ exports[`renders Single Message with Image correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -259,24 +272,13 @@ exports[`renders Single Message with Image correctly 1`] = `
 }
 
 .c8 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   height: 2.5rem;
   width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: none;
   cursor: pointer;
@@ -287,9 +289,6 @@ exports[`renders Single Message with Image correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -309,13 +308,8 @@ exports[`renders Single Message with Image correctly 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
   background: #6F3AAB;
@@ -351,124 +345,141 @@ exports[`renders Single Message with Image correctly 1`] = `
   z-index: 1;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c6 {
     font-size: 2.5rem;
     line-height: 2.5rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c6 {
     font-size: 3rem;
     line-height: 3rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     width: auto;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c8 {
     width: auto;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
     padding-top: 0rem;
     padding-bottom: 0rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c5 {
     height: auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
     padding: 0 4rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c5 {
     width: 50%;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     height: auto;
     width: 50%;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     padding-bottom: 0;
   }
 }
 
-@media (min-width:740px) {
-
-}
-
 <div
+  backgroundColor="purple"
   className="c0"
+  copyFirst={false}
+  fullImage={false}
+  hasVideo={false}
   id="single-msg__1"
+  isPlaying={false}
+  landscapeVideo={false}
+  paddingBottom="0rem"
+  paddingTop="0rem"
+  smPaddingBottom="0rem"
+  smPaddingTop="0rem"
+  vhFull={false}
 >
   <div
     className="c1"
+    doubleImage={null}
+    fullImage={false}
+    hasVideo={false}
+    isBuffering={false}
+    isPlaying={false}
+    landscapeVideo={false}
+    vhFull={false}
   >
     <div
       className="c2"
+      doubleImage={null}
+      fullImage={false}
+      hasVideo={false}
+      isBuffering={false}
+      isPlaying={false}
+      landscapeVideo={false}
+      vhFull={false}
     >
       <div
         className="c3 lazyload"
         height="100%"
+        image="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        images="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+        isBackgroundImage={false}
+        nonObjFitImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        objFitState={true}
+        setObjFitState={[Function]}
         width="100%"
       >
         <img
@@ -479,6 +490,10 @@ exports[`renders Single Message with Image correctly 1`] = `
           data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
           data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
           height="100%"
+          mediumBreakpointRowLayout={null}
+          objFitState={true}
+          objectFit="cover"
+          smallBreakpointRowLayout={null}
           src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
@@ -488,6 +503,13 @@ exports[`renders Single Message with Image correctly 1`] = `
   </div>
   <div
     className="c5"
+    copyFirst={false}
+    fullImage={false}
+    hasImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+    hasVideo={false}
+    paddingBottom="2rem"
+    paddingTop="2rem"
+    vhFull={false}
   >
     <h1
       className="c6"
@@ -500,11 +522,17 @@ exports[`renders Single Message with Image correctly 1`] = `
       description
     </p>
     <a
+      buttonType="primary"
       className="c8"
       color="white"
+      fullWidth={false}
+      home={false}
       href="/"
+      iconFirst={false}
+      mobileColour={null}
       target="_self"
       type="button"
+      underline={true}
     >
       CTA
     </a>
@@ -517,9 +545,6 @@ exports[`renders Single Message with double image correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -551,13 +576,8 @@ exports[`renders Single Message with double image correctly 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
   background: #FFE400;
@@ -585,12 +605,7 @@ exports[`renders Single Message with double image correctly 1`] = `
   width: 100%;
   height: 280px;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -601,108 +616,101 @@ exports[`renders Single Message with double image correctly 1`] = `
   z-index: 1;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c6 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
     padding-top: 0rem;
     padding-bottom: 0rem;
   }
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c5 {
     height: auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
     padding: 0 4rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c5 {
     width: 50%;
   }
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     height: auto;
     width: 50%;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     padding-bottom: 0;
   }
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
 <div
+  backgroundColor="yellow"
   className="c0"
+  copyFirst={false}
+  fullImage={false}
+  hasVideo={false}
   id="single-msg__6"
+  isPlaying={false}
+  landscapeVideo={false}
+  paddingBottom="0rem"
+  paddingTop="0rem"
+  smPaddingBottom="0rem"
+  smPaddingTop="0rem"
+  vhFull={false}
 >
   <div
     className="c1"
+    doubleImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+    fullImage={false}
+    hasVideo={false}
+    isBuffering={false}
+    isPlaying={false}
+    landscapeVideo={false}
+    vhFull={false}
   >
     <div
       className="c2"
+      doubleImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+      fullImage={false}
+      hasVideo={false}
+      isBuffering={false}
+      isPlaying={false}
+      landscapeVideo={false}
+      vhFull={false}
     >
       <div
         className="c3 lazyload"
         height="100%"
+        image="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        images="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+        isBackgroundImage={false}
+        nonObjFitImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        objFitState={true}
+        setObjFitState={[Function]}
         width="100%"
       >
         <img
@@ -713,6 +721,10 @@ exports[`renders Single Message with double image correctly 1`] = `
           data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
           data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
           height="100%"
+          mediumBreakpointRowLayout={null}
+          objFitState={true}
+          objectFit="cover"
+          smallBreakpointRowLayout={null}
           src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
@@ -721,10 +733,18 @@ exports[`renders Single Message with double image correctly 1`] = `
     </div>
     <div
       className="c2"
+      doubleImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+      vhFull={false}
     >
       <div
         className="c3 lazyload"
         height="100%"
+        image="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        images="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+        isBackgroundImage={false}
+        nonObjFitImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        objFitState={true}
+        setObjFitState={[Function]}
         width="100%"
       >
         <img
@@ -735,6 +755,10 @@ exports[`renders Single Message with double image correctly 1`] = `
           data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
           data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
           height="100%"
+          mediumBreakpointRowLayout={null}
+          objFitState={true}
+          objectFit="cover"
+          smallBreakpointRowLayout={null}
           src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
@@ -744,6 +768,13 @@ exports[`renders Single Message with double image correctly 1`] = `
   </div>
   <div
     className="c5"
+    copyFirst={false}
+    fullImage={false}
+    hasImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+    hasVideo={false}
+    paddingBottom="2rem"
+    paddingTop="2rem"
+    vhFull={false}
   >
     <p
       className="c6"
@@ -759,9 +790,6 @@ exports[`renders Single Message with full width correctly 1`] = `
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 2rem;
   line-height: 2rem;
@@ -782,9 +810,6 @@ exports[`renders Single Message with full width correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -816,24 +841,13 @@ exports[`renders Single Message with full width correctly 1`] = `
 }
 
 .c8 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   height: 2.5rem;
   width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: none;
   cursor: pointer;
@@ -844,9 +858,6 @@ exports[`renders Single Message with full width correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -866,13 +877,8 @@ exports[`renders Single Message with full width correctly 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
   background: #6F3AAB;
@@ -908,115 +914,98 @@ exports[`renders Single Message with full width correctly 1`] = `
   z-index: 1;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c6 {
     font-size: 2.5rem;
     line-height: 2.5rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c6 {
     font-size: 3rem;
     line-height: 3rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     width: auto;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c8 {
     width: auto;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
     padding-top: 0rem;
     padding-bottom: 0rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c5 {
     min-height: calc(100vh - 5.625rem);
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
     padding: 0 4rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c5 {
     position: absolute;
     width: 100%;
     right: 0;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 50%;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c5 {
     width: 50%;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     height: auto;
     width: 100%;
@@ -1024,31 +1013,62 @@ exports[`renders Single Message with full width correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     padding-bottom: 0;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 img {
     position: absolute;
   }
 }
 
 <div
+  backgroundColor="purple"
   className="c0"
+  copyFirst={false}
+  fullImage={true}
+  hasVideo={false}
   id="single-msg__3"
+  isPlaying={false}
+  landscapeVideo={false}
+  paddingBottom="0rem"
+  paddingTop="0rem"
+  smPaddingBottom="0rem"
+  smPaddingTop="0rem"
+  vhFull={false}
 >
   <div
     className="c1"
+    doubleImage={null}
+    fullImage={true}
+    hasVideo={false}
+    isBuffering={false}
+    isPlaying={false}
+    landscapeVideo={false}
+    vhFull={false}
   >
     <div
       className="c2"
+      doubleImage={null}
+      fullImage={true}
+      hasVideo={false}
+      isBuffering={false}
+      isPlaying={false}
+      landscapeVideo={false}
+      vhFull={false}
     >
       <div
         className="c3 lazyload"
         height="100%"
+        image="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        images="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+        isBackgroundImage={false}
+        nonObjFitImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        objFitState={true}
+        setObjFitState={[Function]}
         width="100%"
       >
         <img
@@ -1059,6 +1079,10 @@ exports[`renders Single Message with full width correctly 1`] = `
           data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
           data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
           height="100%"
+          mediumBreakpointRowLayout={null}
+          objFitState={true}
+          objectFit="cover"
+          smallBreakpointRowLayout={null}
           src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
@@ -1068,6 +1092,13 @@ exports[`renders Single Message with full width correctly 1`] = `
   </div>
   <div
     className="c5"
+    copyFirst={false}
+    fullImage={true}
+    hasImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+    hasVideo={false}
+    paddingBottom="2rem"
+    paddingTop="2rem"
+    vhFull={false}
   >
     <h1
       className="c6"
@@ -1080,11 +1111,17 @@ exports[`renders Single Message with full width correctly 1`] = `
       description
     </p>
     <a
+      buttonType="primary"
       className="c8"
       color="white"
+      fullWidth={false}
+      home={false}
       href="/"
+      iconFirst={false}
+      mobileColour={null}
       target="_self"
       type="button"
+      underline={true}
     >
       CTA
     </a>
@@ -1108,13 +1145,8 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
   background: #6F3AAB;
@@ -1144,45 +1176,15 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
   z-index: 1;
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
     padding-top: 0rem;
     padding-bottom: 0rem;
   }
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     height: auto;
     width: 100%;
@@ -1190,31 +1192,62 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     padding-bottom: 0;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 img {
     position: absolute;
   }
 }
 
 <div
+  backgroundColor="purple"
   className="c0"
+  copyFirst={false}
+  fullImage={true}
+  hasVideo={false}
   id="single-msg__4"
+  isPlaying={false}
+  landscapeVideo={false}
+  paddingBottom="0rem"
+  paddingTop="0rem"
+  smPaddingBottom="0rem"
+  smPaddingTop="0rem"
+  vhFull={false}
 >
   <div
     className="c1"
+    doubleImage={null}
+    fullImage={true}
+    hasVideo={false}
+    isBuffering={false}
+    isPlaying={false}
+    landscapeVideo={false}
+    vhFull={false}
   >
     <div
       className="c2"
+      doubleImage={null}
+      fullImage={true}
+      hasVideo={false}
+      isBuffering={false}
+      isPlaying={false}
+      landscapeVideo={false}
+      vhFull={false}
     >
       <div
         className="c3 lazyload"
         height="100%"
+        image="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        images="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+        isBackgroundImage={false}
+        nonObjFitImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        objFitState={true}
+        setObjFitState={[Function]}
         width="100%"
       >
         <img
@@ -1225,6 +1258,10 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
           data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
           data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
           height="100%"
+          mediumBreakpointRowLayout={null}
+          objFitState={true}
+          objectFit="cover"
+          smallBreakpointRowLayout={null}
           src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
@@ -1240,9 +1277,6 @@ exports[`renders Single Message with no Image correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -1260,13 +1294,8 @@ exports[`renders Single Message with no Image correctly 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
   background: #6F3AAB;
@@ -1292,102 +1321,69 @@ exports[`renders Single Message with no Image correctly 1`] = `
   padding: 0 1rem;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c2 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     height: auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
     padding: 0 4rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     width: 100%;
-    max-width: 880px;
     padding: 0 4rem;
   }
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
-
-}
-
 <div
+  backgroundColor="purple"
   className="c0"
+  copyFirst={false}
+  fullImage={false}
+  hasVideo={false}
   id="single-msg__2"
+  isPlaying={false}
+  landscapeVideo={false}
+  paddingBottom="2rem"
+  paddingTop="2rem"
+  smPaddingBottom="2rem"
+  smPaddingTop="2rem"
+  vhFull={false}
 >
   <div
     className="c1"
+    copyFirst={false}
+    fullImage={false}
+    hasImage={false}
+    hasVideo={false}
+    paddingBottom="2rem"
+    paddingTop="2rem"
+    vhFull={false}
   >
     <p
       className="c2"

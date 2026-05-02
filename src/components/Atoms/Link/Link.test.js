@@ -19,19 +19,24 @@ it('renders a standard styled link correctly', () => {
       font-weight: normal;
     }
 
-    .c0:hover,
-    .c0:focus {
+    .c0 :hover,
+    .c0 :focus {
       color: #000000;
-      -webkit-text-decoration: none;
       text-decoration: none;
     }
 
     <a
+      buttonType="primary"
       className="c0"
       color="red"
+      fullWidth={false}
+      home={false}
       href="/test"
+      iconFirst={false}
+      mobileColour={null}
       target="_self"
       type="standard"
+      underline={true}
     >
       A standard link
     </a>
@@ -52,13 +57,8 @@ it('renders a button with an icon', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c1 {
-      display: -webkit-inline-box;
-      display: -webkit-inline-flex;
-      display: -ms-inline-flexbox;
       display: inline-flex;
       margin-left: 1rem;
-      -webkit-align-self: center;
-      -ms-flex-item-align: center;
       align-self: center;
       right: 1.5rem;
       position: absolute;
@@ -74,10 +74,9 @@ it('renders a button with an icon', () => {
       font-weight: normal;
     }
 
-    .c0:hover,
-    .c0:focus {
+    .c0 :hover,
+    .c0 :focus {
       color: #000000;
-      -webkit-text-decoration: none;
       text-decoration: none;
     }
 
@@ -85,7 +84,7 @@ it('renders a button with an icon', () => {
       fill: #FFFFFF;
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c1 {
         width: auto;
         right: auto;
@@ -97,18 +96,24 @@ it('renders a button with an icon', () => {
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c2 {
         fill: #FFFFFF;
       }
     }
 
     <a
+      buttonType="primary"
       className="c0"
       color="red"
+      fullWidth={false}
+      home={false}
       href="/test"
+      iconFirst={false}
+      mobileColour={null}
       target="_self"
       type="standard"
+      underline={true}
     >
       Internal link
       <span
@@ -117,8 +122,10 @@ it('renders a button with an icon', () => {
       >
         <svg
           className="c2"
+          colour="white"
           fill="#FFFFFF"
           height={24}
+          mobileColour={null}
           viewBox="0 0 96 96"
           width={24}
           xmlns="http://www.w3.org/2000/svg"
@@ -147,18 +154,15 @@ it('renders a standard styled link correctly with target blank and assistive tex
       font-weight: normal;
     }
 
-    .c0:hover,
-    .c0:focus {
+    .c0 :hover,
+    .c0 :focus {
       color: #000000;
-      -webkit-text-decoration: none;
       text-decoration: none;
     }
 
     .c1 {
       border: 0;
-      -webkit-clip: rect(0 0 0 0);
       clip: rect(0 0 0 0);
-      -webkit-clip-path: inset(50%);
       clip-path: inset(50%);
       height: 1px;
       margin: -1px;
@@ -170,11 +174,17 @@ it('renders a standard styled link correctly with target blank and assistive tex
     }
 
     <a
+      buttonType="primary"
       className="c0"
       color="red"
+      fullWidth={false}
+      home={false}
       href="/test"
+      iconFirst={false}
+      mobileColour={null}
       target="_blank"
       type="standard"
+      underline={true}
     >
       A standard link
       <span
@@ -195,24 +205,13 @@ it('renders link styled as button correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c0 {
-      display: -webkit-inline-box;
-      display: -webkit-inline-flex;
-      display: -ms-inline-flexbox;
       display: inline-flex;
       position: relative;
-      -webkit-text-decoration: none;
       text-decoration: none;
-      -webkit-transition: all 0.2s;
       transition: all 0.2s;
       height: 2.5rem;
       width: 100%;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
       justify-content: center;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
       border: none;
       cursor: pointer;
@@ -223,9 +222,6 @@ it('renders link styled as button correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 700;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -244,38 +240,44 @@ it('renders link styled as button correctly', () => {
       opacity: 0.5;
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c0 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c0 {
         font-size: 1.125rem;
         line-height: 1.375rem;
       }
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c0 {
         width: auto;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c0 {
         width: auto;
       }
     }
 
     <a
+      buttonType="primary"
       className="c0"
       color="yellow"
+      fullWidth={false}
+      home={false}
       href="/test"
+      iconFirst={false}
+      mobileColour={null}
       target="_self"
       type="button"
+      underline={true}
     >
       A yellow button
     </a>

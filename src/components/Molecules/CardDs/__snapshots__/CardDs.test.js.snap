@@ -16,36 +16,20 @@ exports[`renders Column view correctly 1`] = `
 }
 
 .c8 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   margin-left: 1rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
   align-self: center;
   right: 1.5rem;
 }
 
 .c7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   height: 2.5rem;
   width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: none;
   cursor: pointer;
@@ -56,9 +40,6 @@ exports[`renders Column view correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -82,13 +63,8 @@ exports[`renders Column view correctly 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
   width: 100%;
@@ -112,12 +88,7 @@ exports[`renders Column view correctly 1`] = `
 .c5 {
   padding: 2rem;
   padding-bottom: 4rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   border-radius: 1rem;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
@@ -135,7 +106,7 @@ exports[`renders Column view correctly 1`] = `
   z-index: 2;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     width: auto;
     right: auto;
@@ -143,66 +114,64 @@ exports[`renders Column view correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     width: auto;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     width: auto;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c9 {
     fill: #FFFFFF;
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c1 {
     width: 100%;
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c5 {
     height: 100%;
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c5 {
     margin: -3rem 0 -1.5rem 0;
     width: 100%;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c6 {
     right: 2rem;
   }
@@ -210,21 +179,31 @@ exports[`renders Column view correctly 1`] = `
 
 <div
   className="c0"
+  isCarousel={true}
 >
   <a
     aria-hidden="true"
     className="c1"
     data-image-cta-copy="Find out more"
     href="/home"
+    isCarousel={true}
     tabIndex="-1"
     target="_blank"
   >
     <div
       className="c2"
+      hasLink="/home"
+      isCarousel={true}
     >
       <div
         className="c3 lazyload"
         height="auto"
+        image={null}
+        images="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+        isBackgroundImage={false}
+        nonObjFitImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        objFitState={true}
+        setObjFitState={[Function]}
         width="100%"
       >
         <img
@@ -235,6 +214,10 @@ exports[`renders Column view correctly 1`] = `
           data-src={null}
           data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
           height="auto"
+          mediumBreakpointRowLayout={null}
+          objFitState={true}
+          objectFit="cover"
+          smallBreakpointRowLayout={null}
           src={null}
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
@@ -243,21 +226,33 @@ exports[`renders Column view correctly 1`] = `
     </div>
   </a>
   <div
+    backgroundColor="white"
     className="c5"
+    hasImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+    hasLink="/home"
+    isCarousel={true}
   >
     Column view
   </div>
   <div
     className="c6"
+    hasImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+    isCarousel={true}
   >
     <a
+      buttonType="primary"
       className="c7"
       color="red"
       data-button-cta-copy="Find out more"
+      fullWidth={false}
+      home={false}
       href="/home"
+      iconFirst={false}
+      mobileColour={null}
       rel={null}
       target="_self"
       type="button"
+      underline={true}
     >
       Find out more
       <span
@@ -266,8 +261,10 @@ exports[`renders Column view correctly 1`] = `
       >
         <svg
           className="c9"
+          colour="white"
           fill="#FFFFFF"
           height={24}
+          mobileColour={null}
           viewBox="0 0 96 96"
           width={24}
           xmlns="http://www.w3.org/2000/svg"
@@ -298,36 +295,20 @@ exports[`renders correctly 1`] = `
 }
 
 .c8 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   margin-left: 1rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
   align-self: center;
   right: 1.5rem;
 }
 
 .c7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   height: 2.5rem;
   width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: none;
   cursor: pointer;
@@ -338,9 +319,6 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -364,13 +342,8 @@ exports[`renders correctly 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
   width: 100%;
@@ -394,12 +367,7 @@ exports[`renders correctly 1`] = `
 .c5 {
   padding: 2rem;
   padding-bottom: 4rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   border-radius: 1rem;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
@@ -417,7 +385,7 @@ exports[`renders correctly 1`] = `
   z-index: 2;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     width: auto;
     right: auto;
@@ -425,99 +393,95 @@ exports[`renders correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     width: auto;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     width: auto;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c9 {
     fill: #FFFFFF;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
     margin: 0 -1.5rem 0 1.5rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     width: calc(50% + 6rem);
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c1 {
     width: 100%;
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c5 {
     height: 100%;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c5 {
     margin: 1.5rem 0 -1.5rem -1.5rem;
     width: calc(50% + 6rem);
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c5 {
     margin: -3rem 0 -1.5rem 0;
     width: 100%;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c6 {
     right: 2rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c6 {
     bottom: -3rem;
   }
@@ -536,10 +500,17 @@ exports[`renders correctly 1`] = `
   >
     <div
       className="c2"
+      hasLink="/home"
     >
       <div
         className="c3 lazyload"
         height="auto"
+        image={null}
+        images="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+        isBackgroundImage={false}
+        nonObjFitImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        objFitState={true}
+        setObjFitState={[Function]}
         width="100%"
       >
         <img
@@ -550,6 +521,10 @@ exports[`renders correctly 1`] = `
           data-src={null}
           data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
           height="auto"
+          mediumBreakpointRowLayout={null}
+          objFitState={true}
+          objectFit="cover"
+          smallBreakpointRowLayout={null}
           src={null}
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
@@ -558,21 +533,31 @@ exports[`renders correctly 1`] = `
     </div>
   </a>
   <div
+    backgroundColor="white"
     className="c5"
+    hasImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+    hasLink="/home"
   >
     Text body copy description
   </div>
   <div
     className="c6"
+    hasImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
   >
     <a
+      buttonType="primary"
       className="c7"
       color="red"
       data-button-cta-copy="Find out more"
+      fullWidth={false}
+      home={false}
       href="/home"
+      iconFirst={false}
+      mobileColour={null}
       rel={null}
       target="_self"
       type="button"
+      underline={true}
     >
       Find out more
       <span
@@ -581,8 +566,10 @@ exports[`renders correctly 1`] = `
       >
         <svg
           className="c9"
+          colour="white"
           fill="#FFFFFF"
           height={24}
+          mobileColour={null}
           viewBox="0 0 96 96"
           width={24}
           xmlns="http://www.w3.org/2000/svg"

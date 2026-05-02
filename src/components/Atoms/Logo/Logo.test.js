@@ -19,13 +19,11 @@ it('renders correctly', () => {
       display: inline-block;
       z-index: 3;
       width: 51px;
-      -webkit-transform: rotate(-14deg);
-      -ms-transform: rotate(-14deg);
       transform: rotate(-14deg);
       vertical-align: bottom;
     }
 
-    @media (min-width:1150px) {
+    @media (min-width: 1150px) {
       .c0 {
         width: 70px;
       }
@@ -34,6 +32,8 @@ it('renders correctly', () => {
     <div
       className="c0"
       rotate={1}
+      sizeMd="70px"
+      sizeSm="51px"
     >
       <img
         alt="Comic Relief logo"

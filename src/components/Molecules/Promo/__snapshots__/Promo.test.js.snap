@@ -5,9 +5,6 @@ exports[`renders Promo correctly 1`] = `
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 2rem;
   line-height: 2rem;
@@ -33,9 +30,6 @@ exports[`renders Promo correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -67,24 +61,13 @@ exports[`renders Promo correctly 1`] = `
 }
 
 .c9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   height: 2.5rem;
   width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: none;
   cursor: pointer;
@@ -95,9 +78,6 @@ exports[`renders Promo correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -118,13 +98,8 @@ exports[`renders Promo correctly 1`] = `
 
 .c0 {
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
   background: #274084;
@@ -137,18 +112,9 @@ exports[`renders Promo correctly 1`] = `
   left: 0;
   right: 0;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   position: relative;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
@@ -170,31 +136,25 @@ exports[`renders Promo correctly 1`] = `
 .c5 {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     font-size: 2.5rem;
     line-height: 2.5rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     font-size: 3rem;
     line-height: 3rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     font-size: 4rem;
     line-height: 4rem;
@@ -202,7 +162,7 @@ exports[`renders Promo correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     font-size: 5rem;
     line-height: 5rem;
@@ -210,75 +170,73 @@ exports[`renders Promo correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c9 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c9 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c9 {
     width: auto;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c9 {
     width: auto;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c4 {
     min-height: calc(100vh - 90px);
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c6 {
     width: 100%;
     padding: 8rem 1.5rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c1 {
     height: 100%;
     position: absolute;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c5 {
     width: 50%;
     position: absolute;
@@ -290,14 +248,23 @@ exports[`renders Promo correctly 1`] = `
 }
 
 <div
+  backgroundColor="blue_dark"
   className="c0"
+  position="none"
 >
   <div
     className="c1"
+    imageRight={false}
   >
     <div
       className="c2 lazyload"
       height="100%"
+      image="../promo.jpg"
+      images="../promo.jpg"
+      isBackgroundImage={false}
+      nonObjFitImage="../promo.jpg"
+      objFitState={true}
+      setObjFitState={[Function]}
       width="100%"
     >
       <img
@@ -308,6 +275,10 @@ exports[`renders Promo correctly 1`] = `
         data-src="../promo.jpg"
         data-srcset="../promo.jpg"
         height="100%"
+        mediumBreakpointRowLayout={null}
+        objFitState={true}
+        objectFit="cover"
+        smallBreakpointRowLayout={null}
         src="../promo.jpg"
         srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
         width="100%"
@@ -316,12 +287,19 @@ exports[`renders Promo correctly 1`] = `
   </div>
   <div
     className="c4"
+    copyLeft={false}
   >
     <div
+      behindTextGradient="none"
       className="c5"
+      copyLeft={false}
+      hasVideo={false}
     >
       <div
+        behindTextGradient="none"
         className="c6"
+        hasVideo={false}
+        position="none"
       >
         <h1
           className="c7"
@@ -335,11 +313,17 @@ exports[`renders Promo correctly 1`] = `
         </p>
         <span>
           <a
+            buttonType="primary"
             className="c9"
             color="white"
+            fullWidth={false}
+            home={false}
             href="/"
+            iconFirst={false}
+            mobileColour={null}
             target="_self"
             type="button"
+            underline={true}
           >
             Show me this
           </a>
@@ -355,9 +339,6 @@ exports[`renders Promo correctly end position 1`] = `
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 2rem;
   line-height: 2rem;
@@ -383,9 +364,6 @@ exports[`renders Promo correctly end position 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -417,24 +395,13 @@ exports[`renders Promo correctly end position 1`] = `
 }
 
 .c9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   height: 2.5rem;
   width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: none;
   cursor: pointer;
@@ -445,9 +412,6 @@ exports[`renders Promo correctly end position 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -468,17 +432,11 @@ exports[`renders Promo correctly end position 1`] = `
 
 .c0 {
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   overflow: hidden;
   background: #274084;
-  -webkit-clip-path: polygon(0 0,100% 0,100% 90%,0 101%);
   clip-path: polygon(0 0,100% 0,100% 90%,0 101%);
   border-radius: 0 0 0 2rem;
 }
@@ -490,18 +448,9 @@ exports[`renders Promo correctly end position 1`] = `
   left: 0;
   right: 0;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   position: relative;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
@@ -523,31 +472,25 @@ exports[`renders Promo correctly end position 1`] = `
 .c5 {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     font-size: 2.5rem;
     line-height: 2.5rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     font-size: 3rem;
     line-height: 3rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     font-size: 4rem;
     line-height: 4rem;
@@ -555,7 +498,7 @@ exports[`renders Promo correctly end position 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     font-size: 5rem;
     line-height: 5rem;
@@ -563,83 +506,80 @@ exports[`renders Promo correctly end position 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c9 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c9 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c9 {
     width: auto;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c9 {
     width: auto;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c0 {
-    -webkit-clip-path: polygon(0 0,100% 0,100% 85%,0% 101%);
     clip-path: polygon(0 0,100% 0,100% 85%,0% 101%);
     border-radius: 0 0 0 4rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c4 {
     min-height: calc(100vh - 90px);
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c6 {
     width: 100%;
     padding: 8rem 1.5rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c1 {
     height: 100%;
     position: absolute;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c5 {
     width: 50%;
     position: absolute;
@@ -651,14 +591,23 @@ exports[`renders Promo correctly end position 1`] = `
 }
 
 <div
+  backgroundColor="blue_dark"
   className="c0"
+  position="end"
 >
   <div
     className="c1"
+    imageRight={false}
   >
     <div
       className="c2 lazyload"
       height="100%"
+      image="../promo.jpg"
+      images="../promo.jpg"
+      isBackgroundImage={false}
+      nonObjFitImage="../promo.jpg"
+      objFitState={true}
+      setObjFitState={[Function]}
       width="100%"
     >
       <img
@@ -669,6 +618,10 @@ exports[`renders Promo correctly end position 1`] = `
         data-src="../promo.jpg"
         data-srcset="../promo.jpg"
         height="100%"
+        mediumBreakpointRowLayout={null}
+        objFitState={true}
+        objectFit="cover"
+        smallBreakpointRowLayout={null}
         src="../promo.jpg"
         srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
         width="100%"
@@ -677,12 +630,19 @@ exports[`renders Promo correctly end position 1`] = `
   </div>
   <div
     className="c4"
+    copyLeft={false}
   >
     <div
+      behindTextGradient="none"
       className="c5"
+      copyLeft={false}
+      hasVideo={false}
     >
       <div
+        behindTextGradient="none"
         className="c6"
+        hasVideo={false}
+        position="end"
       >
         <h1
           className="c7"
@@ -696,11 +656,17 @@ exports[`renders Promo correctly end position 1`] = `
         </p>
         <span>
           <a
+            buttonType="primary"
             className="c9"
             color="white"
+            fullWidth={false}
+            home={false}
             href="/"
+            iconFirst={false}
+            mobileColour={null}
             target="_self"
             type="button"
+            underline={true}
           >
             Show me this
           </a>

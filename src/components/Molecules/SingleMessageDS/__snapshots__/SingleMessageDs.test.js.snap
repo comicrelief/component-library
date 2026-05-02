@@ -5,9 +5,6 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -30,9 +27,6 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -63,36 +57,20 @@ exports[`renders correctly 1`] = `
 }
 
 .c12 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   margin-left: 1rem;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
   align-self: center;
   right: 1.5rem;
 }
 
 .c11 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   height: 2.5rem;
   width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: none;
   cursor: pointer;
@@ -103,9 +81,6 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -129,25 +104,14 @@ exports[`renders correctly 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
   justify-content: space-around;
   background: inherit;
 }
 
 .c7 {
-  -webkit-letter-spacing: 0.03em;
-  -moz-letter-spacing: 0.03em;
-  -ms-letter-spacing: 0.03em;
   letter-spacing: 0.03em;
 }
 
@@ -179,12 +143,7 @@ exports[`renders correctly 1`] = `
   height: auto;
   padding: 1.5rem;
   z-index: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   border-radius: 1rem;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
@@ -197,35 +156,35 @@ exports[`renders correctly 1`] = `
   right: 1.5rem;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c6 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c12 {
     width: auto;
     right: auto;
@@ -233,87 +192,67 @@ exports[`renders correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c11 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c11 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c11 {
     width: auto;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c11 {
     width: auto;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c13 {
     fill: #FFFFFF;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
     height: 448px;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     margin: 0;
     height: 448px;
-    -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
-    -ms-flex-positive: 0;
     flex-grow: 0;
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
     flex-shrink: 0;
-    -webkit-flex-basis: 50%;
-    -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
   }
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c5 {
     min-height: 448px;
     height: auto;
     width: calc(50% + 1.5rem);
-    -webkit-box-flex: 0;
-    -webkit-flex-grow: 0;
-    -ms-flex-positive: 0;
     flex-grow: 0;
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
     flex-shrink: 0;
-    -webkit-flex-basis: calc(50% + 1.5rem);
-    -ms-flex-preferred-size: calc(50% + 1.5rem);
     flex-basis: calc(50% + 1.5rem);
     padding: 2rem;
     padding-bottom: calc(2rem + 1.5rem);
@@ -321,7 +260,7 @@ exports[`renders correctly 1`] = `
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c5 {
     padding: calc(1.5rem * 2);
     padding-bottom: calc(1.5rem * 3);
@@ -331,6 +270,8 @@ exports[`renders correctly 1`] = `
 
 <div
   className="c0"
+  imageDirection="right"
+  imageLeft={true}
   title="Heading Line 1 Heading Line 2"
 >
   <a
@@ -338,6 +279,8 @@ exports[`renders correctly 1`] = `
     className="c1"
     data-image-cta-copy="Check out the shop"
     href="/home"
+    imageDirection="right"
+    imageLeft={true}
     tabIndex="-1"
     target="_blank"
     title="Heading Line 1 Heading Line 2"
@@ -348,6 +291,12 @@ exports[`renders correctly 1`] = `
       <div
         className="c3 lazyload"
         height="auto"
+        image={null}
+        images="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+        isBackgroundImage={false}
+        nonObjFitImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        objFitState={true}
+        setObjFitState={[Function]}
         width="100%"
       >
         <img
@@ -358,6 +307,10 @@ exports[`renders correctly 1`] = `
           data-src={null}
           data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
           height="auto"
+          mediumBreakpointRowLayout={null}
+          objFitState={true}
+          objectFit="cover"
+          smallBreakpointRowLayout={null}
           src={null}
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
@@ -366,7 +319,11 @@ exports[`renders correctly 1`] = `
     </div>
   </a>
   <div
+    backgroundColor="white"
     className="c5"
+    hasImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+    hasLink="/home"
+    imageLeft={true}
   >
     <span
       className="c6 c7"
@@ -380,15 +337,22 @@ exports[`renders correctly 1`] = `
     </p>
     <div
       className="c9 c10"
+      hasImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
     >
       <a
+        buttonType="primary"
         className="c11"
         color="blue_dark"
         data-button-cta-copy="Check out the shop"
+        fullWidth={false}
+        home={false}
         href="/home"
+        iconFirst={false}
+        mobileColour={null}
         rel={null}
         target="_self"
         type="button"
+        underline={true}
       >
         Check out the shop
         <span
@@ -397,8 +361,10 @@ exports[`renders correctly 1`] = `
         >
           <svg
             className="c13"
+            colour="white"
             fill="#FFFFFF"
             height={24}
+            mobileColour={null}
             viewBox="0 0 96 96"
             width={24}
             xmlns="http://www.w3.org/2000/svg"

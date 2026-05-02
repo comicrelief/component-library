@@ -2,17 +2,9 @@
 
 exports[`renders correctly in full size with first page selected 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding-left: 0;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style-type: none;
 }
@@ -25,7 +17,6 @@ exports[`renders correctly in full size with first page selected 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -37,7 +28,6 @@ exports[`renders correctly in full size with first page selected 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -49,7 +39,6 @@ exports[`renders correctly in full size with first page selected 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
@@ -57,7 +46,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
   color: #000000;
 }
 
-.c4:hover {
+.c4 :hover {
   background: #4ECDBE;
   color: #FFFFFF;
 }
@@ -70,12 +59,19 @@ exports[`renders correctly in full size with first page selected 1`] = `
   >
     <a
       aria-label="First page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={true}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={true}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       «
@@ -86,12 +82,19 @@ exports[`renders correctly in full size with first page selected 1`] = `
   >
     <a
       aria-label="Previous page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={true}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ‹
@@ -102,12 +105,19 @@ exports[`renders correctly in full size with first page selected 1`] = `
   >
     <a
       aria-label="Page 1"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c3"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={true}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       1
@@ -118,12 +128,19 @@ exports[`renders correctly in full size with first page selected 1`] = `
   >
     <a
       aria-label="Page 2"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c4"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/2"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       2
@@ -134,12 +151,19 @@ exports[`renders correctly in full size with first page selected 1`] = `
   >
     <a
       aria-label="Page 3"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c4"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/3"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       3
@@ -150,12 +174,19 @@ exports[`renders correctly in full size with first page selected 1`] = `
   >
     <a
       aria-label="Page 4"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c4"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/4"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       4
@@ -166,12 +197,19 @@ exports[`renders correctly in full size with first page selected 1`] = `
   >
     <a
       aria-label="Page 5"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c4"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/5"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       5
@@ -182,12 +220,19 @@ exports[`renders correctly in full size with first page selected 1`] = `
   >
     <a
       aria-label="Next page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c4"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/2"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ›
@@ -198,12 +243,19 @@ exports[`renders correctly in full size with first page selected 1`] = `
   >
     <a
       aria-label="Last page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c4"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/5"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       »
@@ -214,17 +266,9 @@ exports[`renders correctly in full size with first page selected 1`] = `
 
 exports[`renders correctly in full size with last page selected 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding-left: 0;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style-type: none;
 }
@@ -237,7 +281,6 @@ exports[`renders correctly in full size with last page selected 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
@@ -245,7 +288,7 @@ exports[`renders correctly in full size with last page selected 1`] = `
   color: #000000;
 }
 
-.c2:hover {
+.c2 :hover {
   background: #4ECDBE;
   color: #FFFFFF;
 }
@@ -254,7 +297,6 @@ exports[`renders correctly in full size with last page selected 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -266,7 +308,6 @@ exports[`renders correctly in full size with last page selected 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -282,12 +323,19 @@ exports[`renders correctly in full size with last page selected 1`] = `
   >
     <a
       aria-label="First page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/1"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       «
@@ -298,12 +346,19 @@ exports[`renders correctly in full size with last page selected 1`] = `
   >
     <a
       aria-label="Previous page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/4"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ‹
@@ -314,12 +369,19 @@ exports[`renders correctly in full size with last page selected 1`] = `
   >
     <a
       aria-label="Page 1"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/1"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       1
@@ -330,12 +392,19 @@ exports[`renders correctly in full size with last page selected 1`] = `
   >
     <a
       aria-label="Page 2"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/2"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       2
@@ -346,12 +415,19 @@ exports[`renders correctly in full size with last page selected 1`] = `
   >
     <a
       aria-label="Page 3"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/3"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       3
@@ -362,12 +438,19 @@ exports[`renders correctly in full size with last page selected 1`] = `
   >
     <a
       aria-label="Page 4"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/4"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       4
@@ -378,12 +461,19 @@ exports[`renders correctly in full size with last page selected 1`] = `
   >
     <a
       aria-label="Page 5"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c3"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={true}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       5
@@ -394,12 +484,19 @@ exports[`renders correctly in full size with last page selected 1`] = `
   >
     <a
       aria-label="Next page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c4"
       color="black"
+      colorOnHover="white"
       disabled={true}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ›
@@ -410,12 +507,19 @@ exports[`renders correctly in full size with last page selected 1`] = `
   >
     <a
       aria-label="Last page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c4"
       color="black"
+      colorOnHover="white"
       disabled={true}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={true}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       »
@@ -426,17 +530,9 @@ exports[`renders correctly in full size with last page selected 1`] = `
 
 exports[`renders correctly in full size with max pages less than current page 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding-left: 0;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style-type: none;
 }
@@ -449,7 +545,6 @@ exports[`renders correctly in full size with max pages less than current page 1`
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
@@ -457,7 +552,7 @@ exports[`renders correctly in full size with max pages less than current page 1`
   color: #000000;
 }
 
-.c2:hover {
+.c2 :hover {
   background: #4ECDBE;
   color: #FFFFFF;
 }
@@ -466,7 +561,6 @@ exports[`renders correctly in full size with max pages less than current page 1`
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -478,7 +572,6 @@ exports[`renders correctly in full size with max pages less than current page 1`
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -494,12 +587,19 @@ exports[`renders correctly in full size with max pages less than current page 1`
   >
     <a
       aria-label="First page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/1"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       «
@@ -510,12 +610,19 @@ exports[`renders correctly in full size with max pages less than current page 1`
   >
     <a
       aria-label="Previous page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/18"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ‹
@@ -526,12 +633,19 @@ exports[`renders correctly in full size with max pages less than current page 1`
   >
     <a
       aria-label="More pages"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c3"
       color="black"
+      colorOnHover="white"
       disabled={true}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ...
@@ -542,12 +656,19 @@ exports[`renders correctly in full size with max pages less than current page 1`
   >
     <a
       aria-label="Page 16"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/16"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       16
@@ -558,12 +679,19 @@ exports[`renders correctly in full size with max pages less than current page 1`
   >
     <a
       aria-label="Page 17"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/17"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       17
@@ -574,12 +702,19 @@ exports[`renders correctly in full size with max pages less than current page 1`
   >
     <a
       aria-label="Page 18"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/18"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       18
@@ -590,12 +725,19 @@ exports[`renders correctly in full size with max pages less than current page 1`
   >
     <a
       aria-label="Page 19"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c4"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={true}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       19
@@ -606,12 +748,19 @@ exports[`renders correctly in full size with max pages less than current page 1`
   >
     <a
       aria-label="Page 20"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/20"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       20
@@ -622,12 +771,19 @@ exports[`renders correctly in full size with max pages less than current page 1`
   >
     <a
       aria-label="Next page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/20"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ›
@@ -638,12 +794,19 @@ exports[`renders correctly in full size with max pages less than current page 1`
   >
     <a
       aria-label="Last page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/20"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       »
@@ -654,17 +817,9 @@ exports[`renders correctly in full size with max pages less than current page 1`
 
 exports[`renders correctly in full size with max pages less than total pages 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding-left: 0;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style-type: none;
 }
@@ -677,7 +832,6 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
@@ -685,7 +839,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   color: #000000;
 }
 
-.c2:hover {
+.c2 :hover {
   background: #4ECDBE;
   color: #FFFFFF;
 }
@@ -694,7 +848,6 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -706,7 +859,6 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -722,12 +874,19 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   >
     <a
       aria-label="First page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/1"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       «
@@ -738,12 +897,19 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   >
     <a
       aria-label="Previous page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/1"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ‹
@@ -754,12 +920,19 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   >
     <a
       aria-label="Page 1"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/1"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       1
@@ -770,12 +943,19 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   >
     <a
       aria-label="Page 2"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c3"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={true}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       2
@@ -786,12 +966,19 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   >
     <a
       aria-label="Page 3"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/3"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       3
@@ -802,12 +989,19 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   >
     <a
       aria-label="Page 4"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/4"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       4
@@ -818,12 +1012,19 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   >
     <a
       aria-label="Page 5"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/5"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       5
@@ -834,12 +1035,19 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   >
     <a
       aria-label="Page 6"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/6"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       6
@@ -850,12 +1058,19 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   >
     <a
       aria-label="More pages"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c4"
       color="black"
+      colorOnHover="white"
       disabled={true}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ...
@@ -866,12 +1081,19 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   >
     <a
       aria-label="Next page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/3"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ›
@@ -882,12 +1104,19 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
   >
     <a
       aria-label="Last page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/10"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       »
@@ -898,17 +1127,9 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
 
 exports[`renders correctly in full size with max pages more than total pages 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding-left: 0;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style-type: none;
 }
@@ -921,7 +1142,6 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
@@ -929,7 +1149,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   color: #000000;
 }
 
-.c2:hover {
+.c2 :hover {
   background: #4ECDBE;
   color: #FFFFFF;
 }
@@ -938,7 +1158,6 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -954,12 +1173,19 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   >
     <a
       aria-label="First page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/1"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       «
@@ -970,12 +1196,19 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   >
     <a
       aria-label="Previous page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/3"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ‹
@@ -986,12 +1219,19 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   >
     <a
       aria-label="Page 1"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/1"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       1
@@ -1002,12 +1242,19 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   >
     <a
       aria-label="Page 2"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/2"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       2
@@ -1018,12 +1265,19 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   >
     <a
       aria-label="Page 3"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/3"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       3
@@ -1034,12 +1288,19 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   >
     <a
       aria-label="Page 4"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c3"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={true}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       4
@@ -1050,12 +1311,19 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   >
     <a
       aria-label="Page 5"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/5"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       5
@@ -1066,12 +1334,19 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   >
     <a
       aria-label="Page 6"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/6"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       6
@@ -1082,12 +1357,19 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   >
     <a
       aria-label="Next page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/5"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ›
@@ -1098,12 +1380,19 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
   >
     <a
       aria-label="Last page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/6"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       »
@@ -1114,17 +1403,9 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
 
 exports[`renders correctly in full size with more on both sides 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding-left: 0;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style-type: none;
 }
@@ -1137,7 +1418,6 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
@@ -1145,7 +1425,7 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   color: #000000;
 }
 
-.c2:hover {
+.c2 :hover {
   background: #4ECDBE;
   color: #FFFFFF;
 }
@@ -1154,7 +1434,6 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -1166,7 +1445,6 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -1182,12 +1460,19 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   >
     <a
       aria-label="First page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/1"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       «
@@ -1198,12 +1483,19 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   >
     <a
       aria-label="Previous page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/3"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ‹
@@ -1214,12 +1506,19 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   >
     <a
       aria-label="More pages"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c3"
       color="black"
+      colorOnHover="white"
       disabled={true}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ...
@@ -1230,12 +1529,19 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   >
     <a
       aria-label="Page 2"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/2"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       2
@@ -1246,12 +1552,19 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   >
     <a
       aria-label="Page 3"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/3"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       3
@@ -1262,12 +1575,19 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   >
     <a
       aria-label="Page 4"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c4"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={true}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       4
@@ -1278,12 +1598,19 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   >
     <a
       aria-label="Page 5"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/5"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       5
@@ -1294,12 +1621,19 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   >
     <a
       aria-label="Page 6"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/6"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       6
@@ -1310,12 +1644,19 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   >
     <a
       aria-label="More pages"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c3"
       color="black"
+      colorOnHover="white"
       disabled={true}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ...
@@ -1326,12 +1667,19 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   >
     <a
       aria-label="Next page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/5"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ›
@@ -1342,12 +1690,19 @@ exports[`renders correctly in full size with more on both sides 1`] = `
   >
     <a
       aria-label="Last page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/7"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       »
@@ -1358,17 +1713,9 @@ exports[`renders correctly in full size with more on both sides 1`] = `
 
 exports[`renders correctly in full size with more on left 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding-left: 0;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style-type: none;
 }
@@ -1381,7 +1728,6 @@ exports[`renders correctly in full size with more on left 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
@@ -1389,7 +1735,7 @@ exports[`renders correctly in full size with more on left 1`] = `
   color: #000000;
 }
 
-.c2:hover {
+.c2 :hover {
   background: #4ECDBE;
   color: #FFFFFF;
 }
@@ -1398,7 +1744,6 @@ exports[`renders correctly in full size with more on left 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -1410,7 +1755,6 @@ exports[`renders correctly in full size with more on left 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -1426,12 +1770,19 @@ exports[`renders correctly in full size with more on left 1`] = `
   >
     <a
       aria-label="First page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/1"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       «
@@ -1442,12 +1793,19 @@ exports[`renders correctly in full size with more on left 1`] = `
   >
     <a
       aria-label="Previous page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/3"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ‹
@@ -1458,12 +1816,19 @@ exports[`renders correctly in full size with more on left 1`] = `
   >
     <a
       aria-label="More pages"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c3"
       color="black"
+      colorOnHover="white"
       disabled={true}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ...
@@ -1474,12 +1839,19 @@ exports[`renders correctly in full size with more on left 1`] = `
   >
     <a
       aria-label="Page 2"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/2"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       2
@@ -1490,12 +1862,19 @@ exports[`renders correctly in full size with more on left 1`] = `
   >
     <a
       aria-label="Page 3"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/3"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       3
@@ -1506,12 +1885,19 @@ exports[`renders correctly in full size with more on left 1`] = `
   >
     <a
       aria-label="Page 4"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c4"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={true}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       4
@@ -1522,12 +1908,19 @@ exports[`renders correctly in full size with more on left 1`] = `
   >
     <a
       aria-label="Page 5"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/5"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       5
@@ -1538,12 +1931,19 @@ exports[`renders correctly in full size with more on left 1`] = `
   >
     <a
       aria-label="Page 6"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/6"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       6
@@ -1554,12 +1954,19 @@ exports[`renders correctly in full size with more on left 1`] = `
   >
     <a
       aria-label="Next page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/5"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ›
@@ -1570,12 +1977,19 @@ exports[`renders correctly in full size with more on left 1`] = `
   >
     <a
       aria-label="Last page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/6"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       »
@@ -1586,17 +2000,9 @@ exports[`renders correctly in full size with more on left 1`] = `
 
 exports[`renders correctly in full size with more on right 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding-left: 0;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style-type: none;
 }
@@ -1609,7 +2015,6 @@ exports[`renders correctly in full size with more on right 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
@@ -1617,7 +2022,7 @@ exports[`renders correctly in full size with more on right 1`] = `
   color: #000000;
 }
 
-.c2:hover {
+.c2 :hover {
   background: #4ECDBE;
   color: #FFFFFF;
 }
@@ -1626,7 +2031,6 @@ exports[`renders correctly in full size with more on right 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -1638,7 +2042,6 @@ exports[`renders correctly in full size with more on right 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -1654,12 +2057,19 @@ exports[`renders correctly in full size with more on right 1`] = `
   >
     <a
       aria-label="First page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/1"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       «
@@ -1670,12 +2080,19 @@ exports[`renders correctly in full size with more on right 1`] = `
   >
     <a
       aria-label="Previous page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/2"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ‹
@@ -1686,12 +2103,19 @@ exports[`renders correctly in full size with more on right 1`] = `
   >
     <a
       aria-label="Page 1"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/1"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       1
@@ -1702,12 +2126,19 @@ exports[`renders correctly in full size with more on right 1`] = `
   >
     <a
       aria-label="Page 2"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/2"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       2
@@ -1718,12 +2149,19 @@ exports[`renders correctly in full size with more on right 1`] = `
   >
     <a
       aria-label="Page 3"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c3"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={true}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       3
@@ -1734,12 +2172,19 @@ exports[`renders correctly in full size with more on right 1`] = `
   >
     <a
       aria-label="Page 4"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/4"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       4
@@ -1750,12 +2195,19 @@ exports[`renders correctly in full size with more on right 1`] = `
   >
     <a
       aria-label="Page 5"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/5"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       5
@@ -1766,12 +2218,19 @@ exports[`renders correctly in full size with more on right 1`] = `
   >
     <a
       aria-label="More pages"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c4"
       color="black"
+      colorOnHover="white"
       disabled={true}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ...
@@ -1782,12 +2241,19 @@ exports[`renders correctly in full size with more on right 1`] = `
   >
     <a
       aria-label="Next page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/4"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       ›
@@ -1798,12 +2264,19 @@ exports[`renders correctly in full size with more on right 1`] = `
   >
     <a
       aria-label="Last page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/6"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       »
@@ -1814,17 +2287,9 @@ exports[`renders correctly in full size with more on right 1`] = `
 
 exports[`renders correctly in minimalist form 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding-left: 0;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style-type: none;
 }
@@ -1837,7 +2302,6 @@ exports[`renders correctly in minimalist form 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
@@ -1845,7 +2309,7 @@ exports[`renders correctly in minimalist form 1`] = `
   color: #000000;
 }
 
-.c2:hover {
+.c2 :hover {
   background: #4ECDBE;
   color: #FFFFFF;
 }
@@ -1854,7 +2318,6 @@ exports[`renders correctly in minimalist form 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -1870,12 +2333,19 @@ exports[`renders correctly in minimalist form 1`] = `
   >
     <a
       aria-label="Page 1"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/1"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       1
@@ -1886,12 +2356,19 @@ exports[`renders correctly in minimalist form 1`] = `
   >
     <a
       aria-label="Page 2"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/2"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       2
@@ -1902,12 +2379,19 @@ exports[`renders correctly in minimalist form 1`] = `
   >
     <a
       aria-label="Page 3"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c3"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={true}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       3
@@ -1918,12 +2402,19 @@ exports[`renders correctly in minimalist form 1`] = `
   >
     <a
       aria-label="Page 4"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/4"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       4
@@ -1934,12 +2425,19 @@ exports[`renders correctly in minimalist form 1`] = `
   >
     <a
       aria-label="Page 5"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/5"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       5
@@ -1950,17 +2448,9 @@ exports[`renders correctly in minimalist form 1`] = `
 
 exports[`renders correctly in minimalist form with non-default color 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding-left: 0;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style-type: none;
 }
@@ -1973,7 +2463,6 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
@@ -1981,7 +2470,7 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
   color: #000000;
 }
 
-.c2:hover {
+.c2 :hover {
   background: #4ECDBE;
   color: #FFFFFF;
 }
@@ -1990,7 +2479,6 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -2006,12 +2494,19 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
   >
     <a
       aria-label="Page 1"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/1"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="blue"
+      selectedColor="white"
       target="_self"
     >
       1
@@ -2022,12 +2517,19 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
   >
     <a
       aria-label="Page 2"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/2"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="blue"
+      selectedColor="white"
       target="_self"
     >
       2
@@ -2038,12 +2540,19 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
   >
     <a
       aria-label="Page 3"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c3"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={true}
+      selectedBackgroundColor="blue"
+      selectedColor="white"
       target="_self"
     >
       3
@@ -2054,12 +2563,19 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
   >
     <a
       aria-label="Page 4"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/4"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="blue"
+      selectedColor="white"
       target="_self"
     >
       4
@@ -2070,12 +2586,19 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
   >
     <a
       aria-label="Page 5"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/5"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="blue"
+      selectedColor="white"
       target="_self"
     >
       5
@@ -2086,17 +2609,9 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
 
 exports[`renders correctly with custom labels 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding-left: 0;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style-type: none;
 }
@@ -2109,7 +2624,6 @@ exports[`renders correctly with custom labels 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
@@ -2117,7 +2631,7 @@ exports[`renders correctly with custom labels 1`] = `
   color: #000000;
 }
 
-.c2:hover {
+.c2 :hover {
   background: #4ECDBE;
   color: #FFFFFF;
 }
@@ -2126,7 +2640,6 @@ exports[`renders correctly with custom labels 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -2142,12 +2655,19 @@ exports[`renders correctly with custom labels 1`] = `
   >
     <a
       aria-label="First page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/1"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       First
@@ -2158,12 +2678,19 @@ exports[`renders correctly with custom labels 1`] = `
   >
     <a
       aria-label="Previous page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/2"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       Previous
@@ -2174,12 +2701,19 @@ exports[`renders correctly with custom labels 1`] = `
   >
     <a
       aria-label="Page 1"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/1"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       Page 1
@@ -2190,12 +2724,19 @@ exports[`renders correctly with custom labels 1`] = `
   >
     <a
       aria-label="Page 2"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/2"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       Page 2
@@ -2206,12 +2747,19 @@ exports[`renders correctly with custom labels 1`] = `
   >
     <a
       aria-label="Page 3"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c3"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href={null}
       onClick={[Function]}
       selected={true}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       Page 3
@@ -2222,12 +2770,19 @@ exports[`renders correctly with custom labels 1`] = `
   >
     <a
       aria-label="Page 4"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/4"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       Page 4
@@ -2238,12 +2793,19 @@ exports[`renders correctly with custom labels 1`] = `
   >
     <a
       aria-label="Page 5"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/5"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       Page 5
@@ -2254,12 +2816,19 @@ exports[`renders correctly with custom labels 1`] = `
   >
     <a
       aria-label="Next page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/4"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       Next
@@ -2270,12 +2839,19 @@ exports[`renders correctly with custom labels 1`] = `
   >
     <a
       aria-label="Last page"
+      backgroundColor="white"
+      backgroundColorOnHover="teal"
       className="c2"
       color="black"
+      colorOnHover="white"
       disabled={false}
+      disabledBackgroundColor="white"
+      disabledColor="grey_medium"
       href="example.com/page/5"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="red"
+      selectedColor="white"
       target="_self"
     >
       Last
@@ -2286,17 +2862,9 @@ exports[`renders correctly with custom labels 1`] = `
 
 exports[`renders correctly with custom style 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding-left: 0;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   list-style-type: none;
 }
@@ -2309,7 +2877,6 @@ exports[`renders correctly with custom style 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
@@ -2317,7 +2884,7 @@ exports[`renders correctly with custom style 1`] = `
   color: #E52630;
 }
 
-.c2:hover {
+.c2 :hover {
   background: #4ECDBE;
   color: #FFE400;
 }
@@ -2326,7 +2893,6 @@ exports[`renders correctly with custom style 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -2338,7 +2904,6 @@ exports[`renders correctly with custom style 1`] = `
   padding: 9px 14px 9px 14px;
   border-radius: 30px;
   text-align: center;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 700;
   cursor: default;
@@ -2354,12 +2919,19 @@ exports[`renders correctly with custom style 1`] = `
   >
     <a
       aria-label="First page"
+      backgroundColor="yellow"
+      backgroundColorOnHover="teal"
       className="c2"
       color="red"
+      colorOnHover="yellow"
       disabled={false}
+      disabledBackgroundColor="grey_light"
+      disabledColor="white"
       href="example.com/page/1"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="teal"
+      selectedColor="yellow"
       target="_self"
     >
       «
@@ -2370,12 +2942,19 @@ exports[`renders correctly with custom style 1`] = `
   >
     <a
       aria-label="Previous page"
+      backgroundColor="yellow"
+      backgroundColorOnHover="teal"
       className="c2"
       color="red"
+      colorOnHover="yellow"
       disabled={false}
+      disabledBackgroundColor="grey_light"
+      disabledColor="white"
       href="example.com/page/4"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="teal"
+      selectedColor="yellow"
       target="_self"
     >
       ‹
@@ -2386,12 +2965,19 @@ exports[`renders correctly with custom style 1`] = `
   >
     <a
       aria-label="More pages"
+      backgroundColor="yellow"
+      backgroundColorOnHover="teal"
       className="c3"
       color="red"
+      colorOnHover="yellow"
       disabled={true}
+      disabledBackgroundColor="grey_light"
+      disabledColor="white"
       href={null}
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="teal"
+      selectedColor="yellow"
       target="_self"
     >
       ...
@@ -2402,12 +2988,19 @@ exports[`renders correctly with custom style 1`] = `
   >
     <a
       aria-label="Page 3"
+      backgroundColor="yellow"
+      backgroundColorOnHover="teal"
       className="c2"
       color="red"
+      colorOnHover="yellow"
       disabled={false}
+      disabledBackgroundColor="grey_light"
+      disabledColor="white"
       href="example.com/page/3"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="teal"
+      selectedColor="yellow"
       target="_self"
     >
       3
@@ -2418,12 +3011,19 @@ exports[`renders correctly with custom style 1`] = `
   >
     <a
       aria-label="Page 4"
+      backgroundColor="yellow"
+      backgroundColorOnHover="teal"
       className="c2"
       color="red"
+      colorOnHover="yellow"
       disabled={false}
+      disabledBackgroundColor="grey_light"
+      disabledColor="white"
       href="example.com/page/4"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="teal"
+      selectedColor="yellow"
       target="_self"
     >
       4
@@ -2434,12 +3034,19 @@ exports[`renders correctly with custom style 1`] = `
   >
     <a
       aria-label="Page 5"
+      backgroundColor="yellow"
+      backgroundColorOnHover="teal"
       className="c4"
       color="red"
+      colorOnHover="yellow"
       disabled={false}
+      disabledBackgroundColor="grey_light"
+      disabledColor="white"
       href={null}
       onClick={[Function]}
       selected={true}
+      selectedBackgroundColor="teal"
+      selectedColor="yellow"
       target="_self"
     >
       5
@@ -2450,12 +3057,19 @@ exports[`renders correctly with custom style 1`] = `
   >
     <a
       aria-label="Page 6"
+      backgroundColor="yellow"
+      backgroundColorOnHover="teal"
       className="c2"
       color="red"
+      colorOnHover="yellow"
       disabled={false}
+      disabledBackgroundColor="grey_light"
+      disabledColor="white"
       href="example.com/page/6"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="teal"
+      selectedColor="yellow"
       target="_self"
     >
       6
@@ -2466,12 +3080,19 @@ exports[`renders correctly with custom style 1`] = `
   >
     <a
       aria-label="Page 7"
+      backgroundColor="yellow"
+      backgroundColorOnHover="teal"
       className="c2"
       color="red"
+      colorOnHover="yellow"
       disabled={false}
+      disabledBackgroundColor="grey_light"
+      disabledColor="white"
       href="example.com/page/7"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="teal"
+      selectedColor="yellow"
       target="_self"
     >
       7
@@ -2482,12 +3103,19 @@ exports[`renders correctly with custom style 1`] = `
   >
     <a
       aria-label="More pages"
+      backgroundColor="yellow"
+      backgroundColorOnHover="teal"
       className="c3"
       color="red"
+      colorOnHover="yellow"
       disabled={true}
+      disabledBackgroundColor="grey_light"
+      disabledColor="white"
       href={null}
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="teal"
+      selectedColor="yellow"
       target="_self"
     >
       ...
@@ -2498,12 +3126,19 @@ exports[`renders correctly with custom style 1`] = `
   >
     <a
       aria-label="Next page"
+      backgroundColor="yellow"
+      backgroundColorOnHover="teal"
       className="c2"
       color="red"
+      colorOnHover="yellow"
       disabled={false}
+      disabledBackgroundColor="grey_light"
+      disabledColor="white"
       href="example.com/page/6"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="teal"
+      selectedColor="yellow"
       target="_self"
     >
       ›
@@ -2514,12 +3149,19 @@ exports[`renders correctly with custom style 1`] = `
   >
     <a
       aria-label="Last page"
+      backgroundColor="yellow"
+      backgroundColorOnHover="teal"
       className="c2"
       color="red"
+      colorOnHover="yellow"
       disabled={false}
+      disabledBackgroundColor="grey_light"
+      disabledColor="white"
       href="example.com/page/10"
       onClick={[Function]}
       selected={false}
+      selectedBackgroundColor="teal"
+      selectedColor="yellow"
       target="_self"
     >
       »

@@ -8,12 +8,10 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c4 {
-      -webkit-text-decoration: none;
       text-decoration: none;
       cursor: pointer;
       display: block;
       position: relative;
-      -webkit-transition: opacity 0.2s;
       transition: opacity 0.2s;
     }
 
@@ -27,17 +25,8 @@ it('renders correctly', () => {
     }
 
     .c0 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
       justify-content: center;
     }
 
@@ -82,6 +71,8 @@ it('renders correctly', () => {
             className="c4"
             data-test="icon-share-button-facebook"
             href="#"
+            isHeader={false}
+            newStyle={false}
             onClick={[Function]}
             rel="noopener noreferrer"
             role="button"
@@ -91,6 +82,7 @@ it('renders correctly', () => {
             <img
               alt="comicrelief"
               className="c5"
+              invertColor={false}
               src="mock.asset"
             />
           </a>
@@ -102,6 +94,8 @@ it('renders correctly', () => {
             className="c4"
             data-test="icon-share-button-twitter"
             href="#"
+            isHeader={false}
+            newStyle={false}
             onClick={[Function]}
             rel="noopener noreferrer"
             role="button"
@@ -111,6 +105,7 @@ it('renders correctly', () => {
             <img
               alt="comicrelief"
               className="c5"
+              invertColor={false}
               src="mock.asset"
             />
           </a>

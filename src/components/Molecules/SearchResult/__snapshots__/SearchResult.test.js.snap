@@ -5,9 +5,6 @@ exports[`renders correctly in minimalist form 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -27,9 +24,6 @@ exports[`renders correctly in minimalist form 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -66,10 +60,9 @@ exports[`renders correctly in minimalist form 1`] = `
   font-weight: normal;
 }
 
-.c1:hover,
-.c1:focus {
+.c1 :hover,
+.c1 :focus {
   color: #000000;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -80,22 +73,16 @@ exports[`renders correctly in minimalist form 1`] = `
 }
 
 .c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   border: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
   width: 100%;
 }
 
-.c2:hover {
+.c2 :hover {
   border: 0;
   font-weight: normal;
 }
@@ -105,16 +92,8 @@ exports[`renders correctly in minimalist form 1`] = `
 }
 
 .c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
   width: 100%;
@@ -124,49 +103,47 @@ exports[`renders correctly in minimalist form 1`] = `
   margin: 0;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c8 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c3 {
     width: 45%;
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c3 {
     width: 100%;
   }
@@ -176,18 +153,31 @@ exports[`renders correctly in minimalist form 1`] = `
   className="c0"
 >
   <a
+    buttonType="primary"
     className="c1 c2"
     color="red"
+    fullWidth={false}
+    home={false}
     href="/test"
+    iconFirst={false}
+    mobileColour={null}
     target="_self"
     type="standard"
+    underline={true}
   >
     <div
       className="c3"
+      largeImageWidth="100%"
+      smallImageWidth="45%"
     >
       <div
         className="c4"
         height="auto"
+        image={null}
+        images={null}
+        isBackgroundImage={false}
+        nonObjFitImage={null}
+        objFitState={true}
         width="100%"
       >
         <img
@@ -195,6 +185,8 @@ exports[`renders correctly in minimalist form 1`] = `
           className="c5 lazyload"
           data-src={null}
           height="auto"
+          objFitState={true}
+          objectFit="cover"
           width="100%"
         />
       </div>
@@ -212,7 +204,6 @@ exports[`renders correctly in minimalist form 1`] = `
       >
         News article
       </h3>
-      
     </div>
   </a>
 </article>
@@ -223,9 +214,6 @@ exports[`renders correctly with copy 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -245,9 +233,6 @@ exports[`renders correctly with copy 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -267,9 +252,6 @@ exports[`renders correctly with copy 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -306,10 +288,9 @@ exports[`renders correctly with copy 1`] = `
   font-weight: normal;
 }
 
-.c1:hover,
-.c1:focus {
+.c1 :hover,
+.c1 :focus {
   color: #000000;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -320,22 +301,16 @@ exports[`renders correctly with copy 1`] = `
 }
 
 .c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   border: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
   width: 100%;
 }
 
-.c2:hover {
+.c2 :hover {
   border: 0;
   font-weight: normal;
 }
@@ -345,16 +320,8 @@ exports[`renders correctly with copy 1`] = `
 }
 
 .c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
   width: 100%;
@@ -364,63 +331,61 @@ exports[`renders correctly with copy 1`] = `
   margin: 0;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c8 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c10 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c3 {
     width: 45%;
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c3 {
     width: 100%;
   }
@@ -430,18 +395,31 @@ exports[`renders correctly with copy 1`] = `
   className="c0"
 >
   <a
+    buttonType="primary"
     className="c1 c2"
     color="red"
+    fullWidth={false}
+    home={false}
     href="/test"
+    iconFirst={false}
+    mobileColour={null}
     target="_self"
     type="standard"
+    underline={true}
   >
     <div
       className="c3"
+      largeImageWidth="100%"
+      smallImageWidth="45%"
     >
       <div
         className="c4"
         height="auto"
+        image={null}
+        images={null}
+        isBackgroundImage={false}
+        nonObjFitImage={null}
+        objFitState={true}
         width="100%"
       >
         <img
@@ -449,6 +427,8 @@ exports[`renders correctly with copy 1`] = `
           className="c5 lazyload"
           data-src={null}
           height="auto"
+          objFitState={true}
+          objectFit="cover"
           width="100%"
         />
       </div>
@@ -481,9 +461,6 @@ exports[`renders correctly with date 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -503,9 +480,6 @@ exports[`renders correctly with date 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -542,10 +516,9 @@ exports[`renders correctly with date 1`] = `
   font-weight: normal;
 }
 
-.c1:hover,
-.c1:focus {
+.c1 :hover,
+.c1 :focus {
   color: #000000;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -556,22 +529,16 @@ exports[`renders correctly with date 1`] = `
 }
 
 .c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   border: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
   width: 100%;
 }
 
-.c2:hover {
+.c2 :hover {
   border: 0;
   font-weight: normal;
 }
@@ -581,16 +548,8 @@ exports[`renders correctly with date 1`] = `
 }
 
 .c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
   width: 100%;
@@ -600,49 +559,47 @@ exports[`renders correctly with date 1`] = `
   margin: 0;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c8 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c3 {
     width: 45%;
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c3 {
     width: 100%;
   }
@@ -652,18 +609,31 @@ exports[`renders correctly with date 1`] = `
   className="c0"
 >
   <a
+    buttonType="primary"
     className="c1 c2"
     color="red"
+    fullWidth={false}
+    home={false}
     href="/test"
+    iconFirst={false}
+    mobileColour={null}
     target="_self"
     type="standard"
+    underline={true}
   >
     <div
       className="c3"
+      largeImageWidth="100%"
+      smallImageWidth="45%"
     >
       <div
         className="c4"
         height="auto"
+        image={null}
+        images={null}
+        isBackgroundImage={false}
+        nonObjFitImage={null}
+        objFitState={true}
         width="100%"
       >
         <img
@@ -671,6 +641,8 @@ exports[`renders correctly with date 1`] = `
           className="c5 lazyload"
           data-src={null}
           height="auto"
+          objFitState={true}
+          objectFit="cover"
           width="100%"
         />
       </div>
@@ -688,7 +660,6 @@ exports[`renders correctly with date 1`] = `
       >
         News article
       </h3>
-      
     </div>
   </a>
 </article>
@@ -699,9 +670,6 @@ exports[`renders correctly with date and type 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -721,9 +689,6 @@ exports[`renders correctly with date and type 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -760,10 +725,9 @@ exports[`renders correctly with date and type 1`] = `
   font-weight: normal;
 }
 
-.c1:hover,
-.c1:focus {
+.c1 :hover,
+.c1 :focus {
   color: #000000;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -774,22 +738,16 @@ exports[`renders correctly with date and type 1`] = `
 }
 
 .c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   border: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
   width: 100%;
 }
 
-.c2:hover {
+.c2 :hover {
   border: 0;
   font-weight: normal;
 }
@@ -799,16 +757,8 @@ exports[`renders correctly with date and type 1`] = `
 }
 
 .c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   padding: 1rem;
   width: 100%;
@@ -818,49 +768,47 @@ exports[`renders correctly with date and type 1`] = `
   margin: 0;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c8 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c3 {
     width: 45%;
   }
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .c3 {
     width: 100%;
   }
@@ -870,18 +818,31 @@ exports[`renders correctly with date and type 1`] = `
   className="c0"
 >
   <a
+    buttonType="primary"
     className="c1 c2"
     color="red"
+    fullWidth={false}
+    home={false}
     href="/test"
+    iconFirst={false}
+    mobileColour={null}
     target="_self"
     type="standard"
+    underline={true}
   >
     <div
       className="c3"
+      largeImageWidth="100%"
+      smallImageWidth="45%"
     >
       <div
         className="c4"
         height="auto"
+        image={null}
+        images={null}
+        isBackgroundImage={false}
+        nonObjFitImage={null}
+        objFitState={true}
         width="100%"
       >
         <img
@@ -889,6 +850,8 @@ exports[`renders correctly with date and type 1`] = `
           className="c5 lazyload"
           data-src={null}
           height="auto"
+          objFitState={true}
+          objectFit="cover"
           width="100%"
         />
       </div>
@@ -906,7 +869,6 @@ exports[`renders correctly with date and type 1`] = `
       >
         News article
       </h3>
-      
     </div>
   </a>
 </article>

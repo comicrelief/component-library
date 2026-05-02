@@ -5,9 +5,6 @@ exports[`renders correctly 1`] = `
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1.5rem;
   line-height: 1.5rem;
@@ -29,9 +26,6 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -43,24 +37,13 @@ exports[`renders correctly 1`] = `
 }
 
 .c15 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   height: 2.5rem;
   width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border: none;
   cursor: pointer;
@@ -71,16 +54,12 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
 }
 
-.c15 > a {
-  -webkit-text-decoration: none;
+.c15 >a {
   text-decoration: none;
 }
 
@@ -100,12 +79,7 @@ exports[`renders correctly 1`] = `
 .c8 {
   width: 100%;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   color: #000000;
 }
@@ -115,9 +89,6 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -131,17 +102,8 @@ exports[`renders correctly 1`] = `
 .c12 {
   position: relative;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -155,8 +117,6 @@ exports[`renders correctly 1`] = `
   border: 1px solid;
   border-color: #969598;
   box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
@@ -165,7 +125,7 @@ exports[`renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c13:focus {
+.c13 :focus {
   border: 1px solid #666;
 }
 
@@ -179,12 +139,7 @@ exports[`renders correctly 1`] = `
 }
 
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   font-size: 1rem;
   color: #FFFFFF;
@@ -193,9 +148,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 1rem;
 }
@@ -209,12 +161,7 @@ exports[`renders correctly 1`] = `
 }
 
 .c17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   margin-top: 1rem;
 }
@@ -230,23 +177,13 @@ exports[`renders correctly 1`] = `
 }
 
 .c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   margin: 1rem 0;
 }
 
 .c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0;
 }
@@ -256,7 +193,7 @@ exports[`renders correctly 1`] = `
   margin-bottom: 1rem;
 }
 
-.c9 > span:first-child {
+.c9>span:first-child {
   color: #FFFFFF;
 }
 
@@ -264,96 +201,83 @@ exports[`renders correctly 1`] = `
   margin-bottom: 1.5rem;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     font-size: 1.875rem;
     line-height: 1.875rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c1 {
     font-size: 2rem;
     line-height: 2rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c4 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c4 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c15 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c15 {
     width: auto;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c15 {
     width: auto;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c10 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
-}
-
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: start;
-    -ms-flex-pack: start;
     justify-content: start;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
     gap: 1rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c9 {
     max-width: 290px;
   }
@@ -364,7 +288,10 @@ exports[`renders correctly 1`] = `
   onSubmit={[Function]}
 >
   <div
+    backgroundColour="deep_violet_dark"
     className="c0"
+    containerPadding={true}
+    textColour="white"
   >
     <h2
       className="c1 c2"
@@ -378,9 +305,10 @@ exports[`renders correctly 1`] = `
         className="c4"
       >
         <div
+          align="left"
           className="c5"
           dangerouslySetInnerHTML={
-            Object {
+            {
               "__html": "<h1> Top Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
             }
           }
@@ -392,141 +320,160 @@ exports[`renders correctly 1`] = `
     >
       <div
         className="c7"
+        columnLayout={false}
       >
         <label
           className="c8 c9"
+          errorMsg=""
           htmlFor="first-name"
+          optional={null}
         >
           <span
             className="c4 c10"
             dangerouslySetInnerHTML={
-              Object {
+              {
                 "__html": "First Name",
               }
             }
           />
           <div
             className="c11"
+            error={false}
           >
-            
             <div
               className="c12"
+              error={false}
             >
               <input
                 aria-required={true}
                 className="c13"
+                error={false}
                 id="first-name"
                 name="firstName"
                 onBlur={[Function]}
                 onChange={[Function]}
                 placeholder="Enter your first name"
+                prefixLength={0}
                 required={false}
+                textColour="white"
                 type="text"
               />
-              
             </div>
           </div>
-          
         </label>
         <label
           className="c8 c9"
+          errorMsg=""
           htmlFor="last-name"
+          optional={null}
         >
           <span
             className="c4 c10"
             dangerouslySetInnerHTML={
-              Object {
+              {
                 "__html": "Last Name",
               }
             }
           />
           <div
             className="c11"
+            error={false}
           >
-            
             <div
               className="c12"
+              error={false}
             >
               <input
                 aria-required={true}
                 className="c13"
+                error={false}
                 id="last-name"
                 name="lastName"
                 onBlur={[Function]}
                 onChange={[Function]}
                 placeholder="Enter your last name"
+                prefixLength={0}
                 required={false}
+                textColour="white"
                 type="text"
               />
-              
             </div>
           </div>
-          
         </label>
       </div>
       <label
         className="c8 c9"
+        errorMsg=""
         htmlFor="email"
+        optional={null}
       >
         <span
           className="c4 c10"
           dangerouslySetInnerHTML={
-            Object {
+            {
               "__html": "Email Address",
             }
           }
         />
         <div
           className="c11"
+          error={false}
         >
-          
           <div
             className="c12"
+            error={false}
           >
             <input
               aria-required={true}
               className="c13"
+              error={false}
               id="email"
               name="email"
               onBlur={[Function]}
               onChange={[Function]}
               placeholder="example@youremail.com"
+              prefixLength={0}
               required={false}
+              textColour="white"
               type="email"
             />
-            
           </div>
         </div>
-        
       </label>
       <div
+        buttonColour="red"
         className="c14"
       >
         <button
+          buttonType="primary"
           className="c15 c16"
           color="red"
           data-test="subscribe-button"
           disabled={true}
+          fullWidth={false}
           type="submit"
         >
           Subscribe
           <div
             className=""
+            withMargin={false}
           />
         </button>
       </div>
     </div>
     <div
       className="c17"
+      textColour="white"
     >
       <span
         className="c4"
       >
         <div
+          align="left"
           className="c5"
           dangerouslySetInnerHTML={
-            Object {
-              "__html": "check <a href=\\"https://www.comicrelief.com/privacy-notice\\">Privacy policy</a>",
+            {
+              "__html": "check <a href="https://www.comicrelief.com/privacy-notice">Privacy policy</a>",
             }
           }
         />

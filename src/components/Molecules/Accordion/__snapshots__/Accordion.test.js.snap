@@ -5,9 +5,6 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -22,9 +19,6 @@ exports[`renders correctly 1`] = `
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1.5rem;
   line-height: 1.5rem;
@@ -44,9 +38,6 @@ exports[`renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -63,8 +54,6 @@ exports[`renders correctly 1`] = `
 }
 
 .c6 {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
   fill: #000000;
 }
@@ -76,22 +65,12 @@ exports[`renders correctly 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   width: 100%;
   background: none;
   border: none;
-  -webkit-transition: bottom 0.1s linear;
   transition: bottom 0.1s linear;
   cursor: pointer;
   text-align: left;
@@ -104,25 +83,15 @@ exports[`renders correctly 1`] = `
   outline: none;
 }
 
-.c1:focus > div,
-.c1:hover > div {
-  -webkit-animation-name: jiZjjg;
-  animation-name: jiZjjg;
-  -webkit-animation-duration: 0.4s;
+.c1:focus >div,
+.c1:hover >div {
+  animation-name: k0;
   animation-duration: 0.4s;
 }
 
 .c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
   align-content: center;
 }
 
@@ -130,7 +99,6 @@ exports[`renders correctly 1`] = `
   overflow: hidden;
   height: 0;
   visibility: none;
-  -webkit-transition: all 0.2s cubic-bezier(0.21,1.7,0.83,0.68) 0s;
   transition: all 0.2s cubic-bezier(0.21,1.7,0.83,0.68) 0s;
   padding: 0 2rem;
 }
@@ -139,63 +107,77 @@ exports[`renders correctly 1`] = `
   margin-bottom: 0;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c2 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c4 {
     font-size: 1.875rem;
     line-height: 1.875rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c4 {
     font-size: 2rem;
     line-height: 2rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c6 {
     fill: #000000;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     padding: 2rem 3rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     padding: 0 3rem;
+  }
+}
+
+@keyframes k0 {
+  0% {
+    margin-top: 0rem;
+  }
+
+  50% {
+    margin-top: 0.5rem;
+  }
+
+  100% {
+    margin-top: 0rem;
   }
 }
 
@@ -213,6 +195,7 @@ exports[`renders correctly 1`] = `
     >
       <h2
         className="c4"
+        font="Anton"
       >
         I am the title
       </h2>
@@ -222,9 +205,11 @@ exports[`renders correctly 1`] = `
     >
       <svg
         className="c6"
+        colour="black"
         direction="down"
         fill="#000000"
         height={24}
+        mobileColour={null}
         viewBox="0 0 48 48"
         width={24}
         xmlns="http://www.w3.org/2000/svg"
@@ -237,6 +222,7 @@ exports[`renders correctly 1`] = `
   </button>
   <div
     className="c7"
+    isOpen={false}
   >
     <p
       className="c8"

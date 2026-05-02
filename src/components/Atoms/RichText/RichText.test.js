@@ -14,11 +14,12 @@ it('It sanitises markup and renders properly', () => {
     .c0 {
       text-align: right;
     }
-    
+
     <div
+      align="right"
       className="c0"
       dangerouslySetInnerHTML={
-        Object {
+        {
           "__html": "<p>Here's some copy</p><span>More copy</span>",
         }
       }

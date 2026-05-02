@@ -12,14 +12,11 @@ it('renders correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    Array [
+    [
       .c2 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -46,12 +43,10 @@ it('renders correctly', () => {
       opacity: 0;
       left: 0;
       right: 0;
-      -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
       flex-shrink: 0;
     }
 
-    .c1 + span {
+    .c1 +span {
       left: 2px;
       border-radius: 30px;
       background-clip: padding-box;
@@ -62,12 +57,12 @@ it('renders correctly', () => {
       border: 1px solid #666;
     }
 
-    .c1:checked + span {
+    .c1 :checked+span {
       background-color: #6F3AAB;
       border: 1px solid #6F3AAB;
     }
 
-    .c1:checked + span:before {
+    .c1 :checked+span :before {
       position: absolute;
       content: '';
       top: 8px;
@@ -83,25 +78,19 @@ it('renders correctly', () => {
     }
 
     .c0 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
       position: relative;
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c2 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c2 {
         font-size: 1.125rem;
         line-height: 1.375rem;
@@ -130,9 +119,6 @@ it('renders correctly', () => {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
-      -webkit-letter-spacing: 0;
-      -moz-letter-spacing: 0;
-      -ms-letter-spacing: 0;
       letter-spacing: 0;
       font-size: 1rem;
       line-height: 1.25rem;
@@ -159,12 +145,10 @@ it('renders correctly', () => {
       opacity: 0;
       left: 0;
       right: 0;
-      -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
       flex-shrink: 0;
     }
 
-    .c1 + span {
+    .c1 +span {
       left: 2px;
       border-radius: 30px;
       background-clip: padding-box;
@@ -175,12 +159,12 @@ it('renders correctly', () => {
       border: 1px solid #666;
     }
 
-    .c1:checked + span {
+    .c1 :checked+span {
       background-color: #6F3AAB;
       border: 1px solid #6F3AAB;
     }
 
-    .c1:checked + span:before {
+    .c1 :checked+span :before {
       position: absolute;
       content: '';
       top: 8px;
@@ -196,25 +180,19 @@ it('renders correctly', () => {
     }
 
     .c0 {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
       position: relative;
     }
 
-    @media (min-width:740px) {
+    @media (min-width: 740px) {
       .c2 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
       .c2 {
         font-size: 1.125rem;
         line-height: 1.375rem;
