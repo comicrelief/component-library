@@ -34,9 +34,10 @@
     "test:unit:update": "jest -u",
     "styleguide": "cross-env FAST_REFRESH=false styleguidist server",
     "styleguide:build": "styleguidist build",
+    "serve:preview": "vite preview --config vite.preview.config.mjs --port 4173",
     "test:e2e": "playwright test --project=chromium",
     "test:e2e--h": "playwright test --project=chromium --headed",
-    "test:e2e:ci": "NODE_ENV=development; start-server-and-test styleguide http://localhost:6060 test:e2e",
+    "test:e2e:ci": "playwright test --project=chromium",
     "test:e2e:local": "export NODE_ENV=development; start-server-and-test styleguide http://localhost:6060 test:e2e",
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix"
