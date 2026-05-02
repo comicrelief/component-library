@@ -6,7 +6,7 @@ test.describe('link component', () => {
     await page.goto('/#link');
 
     // select dropdown menu component-1 should be visible
-    const specificElement = page.locator('[data-testid="Link-example-0"]');
+    const specificElement = page.locator('[data-testid="Link-example-1"]');
     await expect(specificElement).toBeVisible();
 
     const [popup] = await Promise.all([
@@ -27,7 +27,7 @@ test.describe('link component', () => {
     await page.goto('/#link');
 
     // select dropdown menu component-1 should be visible
-    const specificElement = page.locator('[data-testid="Link-example-0"]');
+    const specificElement = page.locator('[data-testid="Link-example-1"]');
     await expect(specificElement).toBeVisible();
 
     // link standard icon should be visible

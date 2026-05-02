@@ -6,7 +6,7 @@ test.describe('share button component', () => {
     await page.goto('/#sharebutton');
 
     // accordian elements should be visible
-    await expect(page.locator('[data-testid="ShareButton-example-0"]')).toBeVisible();
+    await expect(page.locator('[data-testid="ShareButton-example-1"]')).toBeVisible();
     await expect(page.locator('[data-preview="ShareButton"]')).toBeVisible();
 
     await expect(page.locator('[data-preview="ShareButton"] > div > div > div:nth-child(1) > ul > li:nth-child(1) > a > img')).toBeVisible();

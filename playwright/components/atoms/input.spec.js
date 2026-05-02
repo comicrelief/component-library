@@ -39,7 +39,7 @@ test.describe('input component', () => {
     await page.locator('#input-example-2').type('This is test input text');
 
     // error message should be visible
-    await expect(page.locator('[data-preview="Input"] > div > label > span[data-test="error-message"]')).toBeVisible();
+    await expect(page.locator('[data-testid="Input-example-1"] span[data-test="error-message"]')).toBeVisible();
 
     await page.close();
   });
@@ -57,7 +57,7 @@ test.describe('input component', () => {
     const nameAttribute = await inputElement.getAttribute('name');
 
     // Verify the 'name' attribute
-    expect(nameAttribute).toBe('fullname');
+    expect(nameAttribute).toBe('fullname3');
 
     await page.locator('#input-example-3').type('This is test input text');
 
@@ -77,7 +77,7 @@ test.describe('input component', () => {
     const nameAttribute = await inputElement.getAttribute('name');
 
     // Verify the 'name' attribute
-    expect(nameAttribute).toBe('fullname');
+    expect(nameAttribute).toBe('fullname4');
 
     await page.locator('#input-example-4').type('This is test input text');
 
@@ -97,7 +97,7 @@ test.describe('input component', () => {
     const nameAttribute = await inputElement.getAttribute('name');
 
     // Verify the 'name' attribute
-    expect(nameAttribute).toBe('fullname');
+    expect(nameAttribute).toBe('fullname5');
 
     await page.locator('#input-example-5').type('This is test input text');
 

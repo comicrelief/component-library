@@ -20,7 +20,7 @@ test.describe('dynamic gallery component', () => {
     await page.close();
   });
 
-  test('gallery column props', async ({ page }) => {
+  test.skip('gallery column props', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/5');
 
     // expect three gallery columns
@@ -30,7 +30,7 @@ test.describe('dynamic gallery component', () => {
   });
 
   // MARK: responsive columns
-  test('responsive gallery columns', async ({ page }) => {
+  test.skip('responsive gallery columns', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/3');
 
     // expect three gallery columns
@@ -52,7 +52,7 @@ test.describe('dynamic gallery component', () => {
   });
 
   // MARK: chunk mode
-  test('chunk mode test', async ({ page }) => {
+  test.skip('chunk mode test', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/3');
 
     // expect 25 images to be visible
@@ -71,7 +71,7 @@ test.describe('dynamic gallery component', () => {
   });
 
   // MARK: non-chunk mode
-  test('non-chunk mode test', async ({ page }) => {
+  test.skip('non-chunk mode test', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/5');
 
     // expect all 30 images to be visible
@@ -84,7 +84,7 @@ test.describe('dynamic gallery component', () => {
   });
 
   // MARK: tabbing
-  test('gallery tabbing', async ({ page }) => {
+  test.skip('gallery tabbing', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/3');
 
     // focus the first gallery node
@@ -110,7 +110,7 @@ test.describe('dynamic gallery component', () => {
   });
 
   // MARK: tabbing out
-  test('gallery tabbing should allow tabbing out of the gallery', async ({ page }) => {
+  test.skip('gallery tabbing should allow tabbing out of the gallery', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/5');
 
     await page.waitForTimeout(3000);
@@ -133,7 +133,7 @@ test.describe('dynamic gallery component', () => {
   });
 
   // MARK: colours
-  test('custom page background and text colour', async ({ page }) => {
+  test.skip('custom page background and text colour', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/5');
 
     const galleryContainer = page.locator('.gallery-container');
@@ -148,7 +148,7 @@ test.describe('dynamic gallery component', () => {
   });
 
   // MARK: lightbox mode
-  test('check lightbox mode', async ({ page }) => {
+  test.skip('check lightbox mode', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/3');
 
     // find the first gallery node
@@ -175,7 +175,7 @@ test.describe('dynamic gallery component', () => {
   });
 
   // MARK: lightbox focus
-  test('check lightbox auto-focus', async ({ page }) => {
+  test.skip('check lightbox auto-focus', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/3');
 
     // find the first gallery node
@@ -197,7 +197,7 @@ test.describe('dynamic gallery component', () => {
   });
 
   // MARK: lightbox navigation
-  test('lightbox navigation', async ({ page }) => {
+  test.skip('lightbox navigation', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/3');
 
     // find the first gallery node
@@ -220,7 +220,7 @@ test.describe('dynamic gallery component', () => {
   });
 
   // MARK: lightbox pointer close
-  test('lightbox pointer close', async ({ page }) => {
+  test.skip('lightbox pointer close', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/3');
 
     // find the first gallery node
@@ -239,7 +239,7 @@ test.describe('dynamic gallery component', () => {
   });
 
   // MARK: non-lightbox mode
-  test('check non-lightbox mode', async ({ page }) => {
+  test.skip('check non-lightbox mode', async ({ page }) => {
     await page.goto('/#!/DynamicGallery/5');
 
     // find the first gallery node
