@@ -13,7 +13,7 @@ const getPrefixWidth = prefixLength => `calc(1.5rem + (${prefixLength} * 0.5rem)
 
 const InputWrapper = styled.div`
   position: relative;
-  font-size: ${({ theme }) => theme.fontSize('m')};
+  font-size: ${({ theme }) => theme.fontSize('s')};
 `;
 
 const InputFieldContainer = styled.div`
@@ -38,7 +38,7 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 2.4rem 1rem 1.5rem;
+  padding: 1rem;
   ${prefixLength > 0 ? `padding-left: ${getPrefixWidth(prefixLength)};` : ''}
   background-color: ${theme.color('grey_light')};
   border: 1px solid;
