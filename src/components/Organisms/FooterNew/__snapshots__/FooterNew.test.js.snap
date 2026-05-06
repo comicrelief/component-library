@@ -857,8 +857,8 @@ exports[`does not render copyright text when not supplied 1`] = `
 
 @media (min-width:1024px) {
   .c19 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -2503,8 +2503,8 @@ exports[`renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c19 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 

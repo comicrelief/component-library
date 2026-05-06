@@ -173,8 +173,8 @@ it('renders correctly', () => {
 
     @media (min-width:1024px) {
       .c8 {
-        font-size: 1.125rem;
-        line-height: 1.375rem;
+        font-size: 1.25rem;
+        line-height: 1.25rem;
       }
     }
 

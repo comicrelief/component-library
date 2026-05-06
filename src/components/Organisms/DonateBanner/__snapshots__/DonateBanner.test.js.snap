@@ -524,8 +524,8 @@ exports[`Monthly donation renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c21 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1326,8 +1326,8 @@ exports[`Single donation renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c14 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -2130,8 +2130,8 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c16 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -2962,8 +2962,8 @@ exports[`Text-only donate widget renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c23 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 

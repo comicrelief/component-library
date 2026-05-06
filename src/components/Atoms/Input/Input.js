@@ -14,7 +14,7 @@ const getPrefixWidth = prefixLength => `calc(1.5rem + (${prefixLength} * 0.5rem)
 
 const InputWrapper = styled.div`
   position: relative;
-  ${({ theme }) => fontHelper(theme, 'span')}
+  ${({ theme }) => fontHelper(theme, 'formFieldInput')}
 `;
 
 const InputFieldContainer = styled.div`

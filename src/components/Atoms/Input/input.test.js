@@ -150,8 +150,8 @@ it('renders correctly', () => {
 
     @media (min-width:1024px) {
       .c3 {
-        font-size: 1.125rem;
-        line-height: 1.375rem;
+        font-size: 1.25rem;
+        line-height: 1.25rem;
       }
     }
 
@@ -347,8 +347,8 @@ it('renders with responsive max widths correctly', () => {
 
     @media (min-width:1024px) {
       .c3 {
-        font-size: 1.125rem;
-        line-height: 1.375rem;
+        font-size: 1.25rem;
+        line-height: 1.25rem;
       }
     }
 

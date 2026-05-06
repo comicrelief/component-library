@@ -431,8 +431,8 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c16 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1194,8 +1194,8 @@ exports[`Image banner renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c16 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1957,8 +1957,8 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c16 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -2720,8 +2720,8 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c16 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 
