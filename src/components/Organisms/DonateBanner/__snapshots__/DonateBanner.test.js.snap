@@ -72,7 +72,15 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c21 {
   position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c23 {
@@ -508,6 +516,20 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c21 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
 
 }
 
@@ -875,7 +897,15 @@ exports[`Single donation renders correctly 1`] = `
 
 .c14 {
   position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c15 {
@@ -1282,6 +1312,20 @@ exports[`Single donation renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c19 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c14 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
@@ -1766,7 +1810,15 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 .c16 {
   position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c18 {
@@ -2064,6 +2116,20 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c11 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c16 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
@@ -2368,7 +2434,15 @@ exports[`Text-only donate widget renders correctly 1`] = `
 
 .c23 {
   position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c25 {
@@ -2874,6 +2948,20 @@ exports[`Text-only donate widget renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c18 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c23 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c23 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }

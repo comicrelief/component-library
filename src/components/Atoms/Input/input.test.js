@@ -61,7 +61,15 @@ it('renders correctly', () => {
 
     .c3 {
       position: relative;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c4 {
@@ -130,6 +138,20 @@ it('renders correctly', () => {
       .c2 {
         font-size: 1rem;
         line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c3 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c3 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
       }
     }
 
@@ -236,7 +258,15 @@ it('renders with responsive max widths correctly', () => {
 
     .c3 {
       position: relative;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
       font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c4 {
@@ -305,6 +335,20 @@ it('renders with responsive max widths correctly', () => {
       .c2 {
         font-size: 1rem;
         line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c3 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c3 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
       }
     }
 

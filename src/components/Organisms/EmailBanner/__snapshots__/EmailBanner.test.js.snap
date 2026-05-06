@@ -122,7 +122,15 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 .c16 {
   position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c17 {
@@ -411,6 +419,20 @@ exports[`Image banner left orientation renders correctly 1`] = `
   .c15 {
     font-size: 1rem;
     line-height: 1.25rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c16 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -863,7 +885,15 @@ exports[`Image banner renders correctly 1`] = `
 
 .c16 {
   position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c17 {
@@ -1152,6 +1182,20 @@ exports[`Image banner renders correctly 1`] = `
   .c15 {
     font-size: 1rem;
     line-height: 1.25rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c16 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -1604,7 +1648,15 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 .c16 {
   position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c17 {
@@ -1893,6 +1945,20 @@ exports[`Text-only email widget renders correctly 1`] = `
   .c15 {
     font-size: 1rem;
     line-height: 1.25rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c16 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -2345,7 +2411,15 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 
 .c16 {
   position: relative;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
   font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c17 {
@@ -2634,6 +2708,20 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   .c15 {
     font-size: 1rem;
     line-height: 1.25rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c16 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
