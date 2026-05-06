@@ -60,11 +60,13 @@ export default function App() {
             {isIsolated ? 'Show Sidebar' : 'Isolate'}
           </IsolateButton>
         </PreviewHeader>
-        <PreviewBox data-testid={`${selected.name}-example-1`}>
-          <div data-preview={selected.name}>
-            {currentItem?.demo}
-          </div>
-        </PreviewBox>
+        {(currentItem?.examples ?? (currentItem?.demo != null ? [currentItem.demo] : [])).map((example, idx) => (
+          <PreviewBox key={idx} data-testid={`${selected.name}-example-${2 * idx + 1}`}>
+            <div data-preview={selected.name}>
+              {example}
+            </div>
+          </PreviewBox>
+        ))}
       </Preview>
     </Layout>
   );
