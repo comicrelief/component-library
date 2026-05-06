@@ -41,9 +41,6 @@ const Button = styled.button`
   }
 
   padding: ${spacing('l')};
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: ${spacing('l')} ${spacing('lg')};
-  }
 `;
 
 const Icon = styled.div`
