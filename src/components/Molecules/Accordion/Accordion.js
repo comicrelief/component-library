@@ -26,6 +26,8 @@ const Button = styled.button`
   width: 100%;
   background: none;
   border: none;
+  color: inherit;
+  -webkit-appearance: none;
   transition: bottom 0.1s linear;
   cursor: pointer;
   text-align: left;
