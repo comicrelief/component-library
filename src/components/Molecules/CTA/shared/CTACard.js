@@ -51,6 +51,7 @@ const CTACard = ({
       isCarousel={isCarousel}
       isFullWidth={effectiveIsFullWidth}
       columns={columns}
+      hasLink={hasLink}
     >
       <CardLink
         as={hasLink ? Link : 'div'}

@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 const Container = styled.div`
   position: relative;
@@ -8,18 +9,17 @@ const Container = styled.div`
   border-radius: ${props => (props.squaredCorners ? '0' : `${spacing('md')}`)};
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  ${defaultBoxShadow()}
 
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, if so make horizontal layout */
   @media ${({ theme }) => theme.allBreakpoints('S')} {
     flex-direction: ${props => ((props.smallBreakpointRowLayout === true) ? 'row' : 'column')};
-    gap: ${spacing('md')};
     background: ${({ theme, backgroundColor, smallBreakpointRowLayout }) => ((smallBreakpointRowLayout === true) ? 'transparent' : theme.color(backgroundColor))};
   }
 
   /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS, if so make horizontal layout */
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: ${props => ((props.mediumBreakpointRowLayout === true) ? 'row' : 'column')};
-    gap: ${spacing('md')};
     background: ${({ theme, backgroundColor, mediumBreakpointRowLayout }) => ((mediumBreakpointRowLayout === true) ? 'transparent' : theme.color(backgroundColor))};
   }
 

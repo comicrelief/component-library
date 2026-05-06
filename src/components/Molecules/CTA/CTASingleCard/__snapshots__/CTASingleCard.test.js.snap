@@ -206,6 +206,7 @@ exports[`renders correctly with data prop 1`] = `
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+  border-radius: 1rem;
   width: 100%;
   max-width: 100%;
 }
@@ -768,6 +769,7 @@ exports[`renders correctly without image 1`] = `
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+  border-radius: 1rem;
   width: 100%;
   max-width: 100%;
 }
