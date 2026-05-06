@@ -14,7 +14,7 @@ exports[`handles data structure correctly 1`] = `
         className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 gAuYUa"
       >
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 hresUt"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 hxglwr"
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 bKpTSX"
@@ -104,7 +104,7 @@ exports[`handles data structure correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 hresUt"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 nEnLi"
         >
           <div
             className="CTACardstyle__CardLink-sc-si8xx1-3 geBvAi"
@@ -150,7 +150,7 @@ exports[`handles data structure correctly 1`] = `
           </div>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 hresUt"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 hxglwr"
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 bKpTSX"
@@ -240,7 +240,7 @@ exports[`handles data structure correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 hresUt"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 hxglwr"
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 bKpTSX"
@@ -324,7 +324,7 @@ exports[`renders 2 columns layout correctly 1`] = `
         className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 jrSYsC"
       >
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 eXKCWj"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 dPhdyR"
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 bKpTSX"
@@ -414,7 +414,7 @@ exports[`renders 2 columns layout correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 eXKCWj"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 cdJZAM"
         >
           <div
             className="CTACardstyle__CardLink-sc-si8xx1-3 geBvAi"
@@ -460,7 +460,7 @@ exports[`renders 2 columns layout correctly 1`] = `
           </div>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 eXKCWj"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 dPhdyR"
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 bKpTSX"
@@ -550,7 +550,7 @@ exports[`renders 2 columns layout correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 eXKCWj"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 dPhdyR"
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 bKpTSX"
@@ -634,7 +634,7 @@ exports[`renders carousel mode correctly 1`] = `
         className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 fqrDP"
       >
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 cvEMcI"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 bKpTSX"
@@ -724,7 +724,7 @@ exports[`renders carousel mode correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 cvEMcI"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 fOlVWn"
         >
           <div
             className="CTACardstyle__CardLink-sc-si8xx1-3 geBvAi"
@@ -770,7 +770,7 @@ exports[`renders carousel mode correctly 1`] = `
           </div>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 cvEMcI"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 bKpTSX"
@@ -860,7 +860,7 @@ exports[`renders carousel mode correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 cvEMcI"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 bKpTSX"
@@ -944,7 +944,7 @@ exports[`renders correctly with data prop 1`] = `
         className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 fqrDP"
       >
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 cvEMcI"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 bKpTSX"
@@ -1034,7 +1034,7 @@ exports[`renders correctly with data prop 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 cvEMcI"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 fOlVWn"
         >
           <div
             className="CTACardstyle__CardLink-sc-si8xx1-3 geBvAi"
@@ -1080,7 +1080,7 @@ exports[`renders correctly with data prop 1`] = `
           </div>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 cvEMcI"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 bKpTSX"
@@ -1170,7 +1170,7 @@ exports[`renders correctly with data prop 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 cvEMcI"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 bKpTSX"

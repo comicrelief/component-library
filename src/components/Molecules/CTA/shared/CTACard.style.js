@@ -153,6 +153,11 @@ const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-self: stretch;
+  border-radius: 1rem;
+
+  ${({ hasLink }) => (!hasLink && css`
+    ${defaultBoxShadow()}
+  `)}
 
   // Full width mode - always full width, no constraints
   ${({ isFullWidth }) => isFullWidth && css`
