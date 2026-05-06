@@ -178,11 +178,11 @@ export default {
     weight: 400,
     transform: 'inherit',
     small: {
-      fontSize: '1.25rem',
+      fontSize: '1rem',
       lineHeight: '1.25rem'
     },
     medium: {
-      fontSize: '1.25rem',
+      fontSize: '1rem',
       lineHeight: '1.25rem'
     },
     large: {

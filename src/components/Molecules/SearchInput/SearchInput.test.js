@@ -62,7 +62,15 @@ it('renders correctly', () => {
 
     .c8 {
       position: relative;
-      font-size: 1.25rem;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c9 {
@@ -87,7 +95,7 @@ it('renders correctly', () => {
       box-sizing: border-box;
       width: 100%;
       height: 48px;
-      padding: 1rem 2.4rem 1rem 1.5rem;
+      padding: 1rem;
       background-color: #F4F3F5;
       border: 1px solid;
       border-color: #969598;
@@ -153,6 +161,20 @@ it('renders correctly', () => {
       .c6 {
         font-size: 1.125rem;
         line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c8 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c8 {
+        font-size: 1.25rem;
+        line-height: 1.25rem;
       }
     }
 
