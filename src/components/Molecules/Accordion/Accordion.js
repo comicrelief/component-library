@@ -4,7 +4,7 @@ import styled, { css, keyframes } from 'styled-components';
 import Text from '../../Atoms/Text/Text';
 
 import spacing from '../../../theme/shared/spacing';
-import { Chevron } from '../../Atoms/Icons/index';
+import menuGroupIcon from '../../../theme/shared/assets/Menu-Group-Icon.svg';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 const Container = styled.div`
@@ -51,6 +51,12 @@ const Icon = styled.div`
   align-content: center;
 `;
 
+const MenuGroupIcon = styled.img`
+  height: 24px;
+  transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
+  transition: transform 0.15s ease-in-out;
+`;
+
 const Copy = styled.div`
   overflow: hidden;
   height: 0;
@@ -93,7 +99,7 @@ const Accordion = ({
           {title}
         </StyledText>
         <Icon>
-          <Chevron colour="black" direction={isOpen ? 'up' : 'down'} />
+          <MenuGroupIcon src={menuGroupIcon} alt="" aria-hidden="true" isOpen={isOpen} />
         </Icon>
       </Button>
       <Copy isOpen={isOpen} contentBottomPadding={contentBottomPadding}>
