@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 const Container = styled.div`
   position: relative;
@@ -8,6 +9,7 @@ const Container = styled.div`
   border-radius: ${props => (props.squaredCorners ? '0' : `${spacing('md')}`)};
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  ${defaultBoxShadow()}
 
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, if so make horizontal layout */
   @media ${({ theme }) => theme.allBreakpoints('S')} {

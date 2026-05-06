@@ -11,6 +11,7 @@ exports[`renders correctly 1`] = `
   border-radius: 1rem;
   overflow: hidden;
   background: #FFE400;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c1 {
@@ -88,6 +89,7 @@ exports[`renders correctly 2`] = `
   border-radius: 1rem;
   overflow: hidden;
   background: #FFE400;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c1 {
@@ -179,6 +181,7 @@ exports[`renders correctly with no body 1`] = `
   border-radius: 1rem;
   overflow: hidden;
   background: #FFE400;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c1 {
