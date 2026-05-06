@@ -11,6 +11,9 @@ const Container = styled.div`
   border-radius: 1rem;
   background: ${({ theme }) => theme.color('white')};
   ${defaultBoxShadow()}
+  &:hover {
+    ${defaultBoxShadow(true)}
+  }
 `;
 
 const ChevronKeyframes = keyframes`
@@ -36,10 +39,6 @@ const Button = styled.button`
   &:hover {
     color: inherit; // text was flashing white on focus on safari without this.
     outline: none;
-    > div {
-      animation-name: ${props => props.ChevronKeyframes};
-      animation-duration: 0.4s;
-    }
   }
 
   padding: ${spacing('l')};
@@ -61,7 +60,7 @@ const Copy = styled.div`
   overflow: hidden;
   height: 0;
   visibility: none;
-  transition: all 0.2s cubic-bezier(0.21, 1.7, 0.83, 0.68) 0s;
+  transition: all 0.2s cubic-bezier(0, 0, 0.25, 0.82);
   padding: 0 ${spacing('l')};
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding: 0 ${spacing('lg')};
