@@ -11,7 +11,7 @@ const OuterWrapper = styled.div`
 
 const InnerWrapper = styled.div`
   width: 100%;
-  max-width: 780px;
+  max-width: 752px;
   margin: 0 auto;
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
