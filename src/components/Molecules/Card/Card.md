@@ -3,7 +3,7 @@
 const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
-<div style={{backgroundColor: 'lightblue', padding: '10px'}}>
+<div style={{backgroundColor: 'lightblue', padding: '2rem'}}>
     <Card
       imageLow={defaultData.image}
       images={defaultData.images}
@@ -25,7 +25,7 @@ import Link from '../../Atoms/Link/Link';
 const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
-<div style={{backgroundColor: 'lightblue', padding: '10px'}}>
+<div style={{backgroundColor: 'lightblue', padding: '2rem'}}>
     <Card
       imageLow={defaultData.image}
       images={defaultData.images}
@@ -49,7 +49,7 @@ import Link from '../../Atoms/Link/Link';
 const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
-<div style={{backgroundColor: 'lightblue', padding: '10px'}}>
+<div style={{backgroundColor: 'lightblue', padding: '2rem'}}>
     <Card
       imageLow={defaultData.image}
       images={defaultData.images}
@@ -73,7 +73,7 @@ import Link from '../../Atoms/Link/Link';
 const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
-<div style={{backgroundColor: 'lightblue', padding: '10px'}}>
+<div style={{backgroundColor: 'lightblue', padding: '2rem'}}>
     <Card
       imageLow={defaultData.image}
       images={defaultData.images}
@@ -97,7 +97,7 @@ import Link from '../../Atoms/Link/Link';
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
 
-<div style={{backgroundColor: 'lightblue', padding: '10px'}}>
+<div style={{backgroundColor: 'lightblue', padding: '2rem'}}>
     <Card
       imageLow={defaultData.image}
       images={defaultData.image}
