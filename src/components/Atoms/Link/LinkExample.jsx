@@ -11,6 +11,9 @@ export default function LinkExample() {
         <Link href="#anchor" target="blank">Link standard</Link>
       </div>
       <div style={{ backgroundColor: '#ddd', padding: '15px', marginBottom: '10px', borderRadius: '5px' }}>
+        <Link href="#anchor" target="blank" color="green">Link override colour</Link>
+      </div>
+      <div style={{ backgroundColor: '#ddd', padding: '15px', marginBottom: '10px', borderRadius: '5px' }}>
         <Link href="#anchor" target="blank" icon={<Download colour="black" />}>
           Link standard icon
         </Link>

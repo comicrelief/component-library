@@ -57,7 +57,7 @@ const Link = ({
   return (
     <StyledLink
       {...rest}
-      color={color}
+      $color={color}
       mobileColour={mobileColour}
       href={href}
       target={window}

@@ -40,6 +40,8 @@ import TextInputWithDropdownExample from '../components/Atoms/TextInputWithDropd
 import textInputWithDropdownExampleSrc from '../components/Atoms/TextInputWithDropdown/TextInputWithDropdownExample.jsx?raw';
 import ButtonWithStatesExample from '../components/Atoms/ButtonWithStates/ButtonWithStatesExample.jsx';
 import buttonWithStatesExampleSrc from '../components/Atoms/ButtonWithStates/ButtonWithStatesExample.jsx?raw';
+import InfoMessageExample from '../components/Atoms/InfoMessage/InfoMessageExample.jsx';
+import infoMessageExampleSrc from '../components/Atoms/InfoMessage/InfoMessageExample.jsx?raw';
 
 // Molecule examples
 import InfoBannerExample from '../components/Molecules/InfoBanner/InfoBannerExample.jsx';
@@ -131,6 +133,7 @@ export const atoms = [
   { name: 'Checkbox', demo: demo(CheckboxExample, checkboxExampleSrc) },
   { name: 'Confetti', demo: demo(ConfettiExample, confettiExampleSrc) },
   { name: 'ErrorText', demo: demo(ErrorTextExample, errorTextExampleSrc) },
+  { name: 'InfoMessage', demo: demo(InfoMessageExample, infoMessageExampleSrc) },
   { name: 'Input', demo: demo(InputExample, inputExampleSrc) },
   { name: 'Label', demo: demo(LabelExample, labelExampleSrc) },
   { name: 'Link', demo: demo(LinkExample, linkExampleSrc) },
