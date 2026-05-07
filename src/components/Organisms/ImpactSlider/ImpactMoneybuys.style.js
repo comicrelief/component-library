@@ -29,6 +29,7 @@ const Moneybuy = styled.div`
     align-items: center;
     justify-content: flex-start;
     opacity: 1;
+    padding: 16px 40px;
 
     ${props => props.isInactive && css`
         opacity: 0.5;
@@ -36,8 +37,6 @@ const Moneybuy = styled.div`
 
     @media ${({ theme }) => theme.allBreakpoints('M')} {
         width: 70%;
-        padding: 8px 40px;
-
     }
 
     @media ${({ theme }) => theme.allBreakpoints('L')} {
