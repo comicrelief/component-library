@@ -35,10 +35,6 @@ const Moneybuy = styled.div`
         opacity: 0.5;
     `}
 
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
-        width: 70%;
-    }
-
     @media ${({ theme }) => theme.allBreakpoints('L')} {
         padding: 20px 14px;
         flex-direction: column;
