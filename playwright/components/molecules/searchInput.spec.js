@@ -8,13 +8,13 @@ test.describe('search input component', () => {
     await expect(page.locator('[data-testid="SearchInput-example-1"]')).toBeVisible();
     await expect(page.locator('[data-preview="SearchInput"]')).toBeVisible();
 
-    const inputElement = page.locator('#search');
+    const inputElement = page.locator('#school-lookup');
 
     // Get the 'placeholder' attribute
     const placeholderAttribute = await inputElement.getAttribute('placeholder');
 
     // Verify the 'placeholder' attribute
-    expect(placeholderAttribute).toBe('Search...');
+    expect(placeholderAttribute).toBe('Type to start search');
 
     await page.locator('#search').type('Red Nose Day');
 
