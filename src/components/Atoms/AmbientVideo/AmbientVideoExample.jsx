@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import AmbientVideo from './AmbientVideo';
-import { defaultData } from '../../../styleguide/data/data';
+import { defaultData } from '../../../data/data';
 import video480 from './big-buck-bunny-480p-30sec.mp4';
 import video1080 from './big-buck-bunny-1080p-30sec.mp4';
 import videoMobile from './thetestdatacom_480p_example.mp4';

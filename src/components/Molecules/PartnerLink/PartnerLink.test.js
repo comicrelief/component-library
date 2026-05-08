@@ -4,7 +4,7 @@ import 'jest-styled-components';
 import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import PartnerLink from './PartnerLink';
 import Picture from '../../Atoms/Picture/Picture';
-import { defaultData } from '../../../styleguide/data/data';
+import { defaultData } from '../../../data/data';
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <PartnerLink link="https://www.comicrelief.com">

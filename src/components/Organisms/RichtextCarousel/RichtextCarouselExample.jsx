@@ -1,6 +1,6 @@
 import React from 'react';
 import RichtextCarousel from './RichtextCarousel';
-import { RichtextCarouselItems, RichtextCarouselItemsWithPadding } from '../../../styleguide/data/data';
+import { RichtextCarouselItems, RichtextCarouselItemsWithPadding } from '../../../data/data';
 
 export default function RichtextCarouselExample() {
   return (

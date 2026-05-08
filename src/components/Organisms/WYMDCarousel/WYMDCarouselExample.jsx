@@ -1,6 +1,6 @@
 import React from 'react';
 import WYMDCarousel from './WYMDCarousel';
-import { carouselItemsComplete, carouselItemsCompleteWithPadding, carouselItemsIncomplete, carouselItemsMinimal } from '../../../styleguide/data/data';
+import { carouselItemsComplete, carouselItemsCompleteWithPadding, carouselItemsIncomplete, carouselItemsMinimal } from '../../../data/data';
 
 export default function WYMDCarouselExample() {
   return (

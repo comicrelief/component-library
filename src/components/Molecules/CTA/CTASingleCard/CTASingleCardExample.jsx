@@ -1,5 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
 import CTASingleCard from './CTASingleCard';
+
+const ExampleWrapper = styled.div`
+  background: #E1E2E3;
+`;
 import Text from '../../../Atoms/Text/Text';
 
 const fallback = 'https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg';
@@ -21,24 +26,24 @@ export default function CTASingleCardExample() {
   return (
     <>
       <h3>Basic</h3>
-      <div style={{ background: '#E1E2E3' }}>
+      <ExampleWrapper>
         <CTASingleCard data={{
           card: { ...baseCard, id: 'single-card-1', label: 'Example Label', body: <Text tag="p"><strong>Single Card</strong> content here</Text> },
           backgroundColour: 'Transparent',
           paddingAbove: '1rem',
           paddingBelow: '2rem',
         }} />
-      </div>
+      </ExampleWrapper>
 
       <h3>With background colour</h3>
-      <div style={{ background: '#E1E2E3' }}>
+      <ExampleWrapper>
         <CTASingleCard data={{
           card: { ...baseCard, id: 'single-card-2', label: 'Example Label', body: <Text tag="p">Single card</Text> },
           backgroundColour: 'grey_medium',
           paddingAbove: '1rem',
           paddingBelow: '2rem',
         }} />
-      </div>
+      </ExampleWrapper>
     </>
   );
 }

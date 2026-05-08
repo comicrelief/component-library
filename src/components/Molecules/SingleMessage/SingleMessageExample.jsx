@@ -2,7 +2,7 @@ import React from 'react';
 import SingleMessage from './SingleMessage';
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
-import { defaultData } from '../../../styleguide/data/data';
+import { defaultData } from '../../../data/data';
 import exampleYoutubeIds from './_ExampleYoutubeIds';
 
 export default function SingleMessageExample() {

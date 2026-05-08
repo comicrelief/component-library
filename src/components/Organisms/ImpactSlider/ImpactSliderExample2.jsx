@@ -1,7 +1,7 @@
 import React from 'react';
 import ImpactSlider from './ImpactSlider';
 import Text from '../../Atoms/Text/Text';
-import { testImpactSliderItems } from '../../../styleguide/data/data';
+import { testImpactSliderItems } from '../../../data/data';
 
 export default function ImpactSliderExample2() {
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import Picture from './Picture';
-import { defaultData } from '../../../styleguide/data/data';
+import { defaultData } from '../../../data/data';
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <Picture

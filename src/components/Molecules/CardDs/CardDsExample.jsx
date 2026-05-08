@@ -1,21 +1,22 @@
 import React from 'react';
+import styled from 'styled-components';
 import CardDs from './CardDs';
 import Text from '../../Atoms/Text/Text';
 import { Internal, Download } from '../../Atoms/Icons/index';
-import { defaultData } from '../../../styleguide/data/data';
+import { defaultData } from '../../../data/data';
 
-const wrapStyle = {
-  display: 'flex',
-  padding: '2rem 0',
-  background: '#E1E2E3',
-  justifyContent: 'space-around',
-};
+const ExampleWrapper = styled.div`
+  display: flex;
+  padding: 2rem 0;
+  background: #E1E2E3;
+  justify-content: space-around;
+`;
 
 export default function CardDsExample() {
   return (
     <>
       <h3>Image, Text &amp; Link</h3>
-      <div style={wrapStyle}>
+      <ExampleWrapper>
         <CardDs
           target="_blank"
           link="/home"
@@ -37,10 +38,10 @@ export default function CardDsExample() {
           <Text tag="p" size="m">Registration fee: £39</Text>
           <Text tag="p" size="m">Sponsorship pledge: £500</Text>
         </CardDs>
-      </div>
+      </ExampleWrapper>
 
       <h3>Text &amp; Link (no image)</h3>
-      <div style={wrapStyle}>
+      <ExampleWrapper>
         <CardDs
           target="blank"
           link="/home"
@@ -52,18 +53,18 @@ export default function CardDsExample() {
           <Text tag="h3" color="purple" size="xl">Title</Text>
           <Text tag="p">Text body copy description</Text>
         </CardDs>
-      </div>
+      </ExampleWrapper>
 
       <h3>Text only (no link)</h3>
-      <div style={wrapStyle}>
+      <ExampleWrapper>
         <CardDs backgroundColor="white" height="auto">
           <Text tag="h3" color="purple" size="xl">Title</Text>
           <Text tag="p">Text body copy description</Text>
         </CardDs>
-      </div>
+      </ExampleWrapper>
 
       <h3>Only column view (for CardsCarousel)</h3>
-      <div style={wrapStyle}>
+      <ExampleWrapper>
         <CardDs
           target="_blank"
           link="/home"
@@ -79,7 +80,7 @@ export default function CardDsExample() {
           <Text tag="h3" color="purple" size="xl">Only Column view</Text>
           <Text tag="p">Text body copy description</Text>
         </CardDs>
-      </div>
+      </ExampleWrapper>
     </>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import PartnerLink from './PartnerLink';
 import Picture from '../../Atoms/Picture/Picture';
-import { defaultData } from '../../../styleguide/data/data';
+import { defaultData } from '../../../data/data';
 
 export default function PartnerLinkExample() {
   return (

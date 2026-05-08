@@ -2,7 +2,7 @@ import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import ArticleTeaser from './ArticleTeaser';
-import { defaultData } from '../../../styleguide/data/data';
+import { defaultData } from '../../../data/data';
 it('renders article teaser correctly', () => {
   const tree = renderWithTheme(
     <ArticleTeaser
@@ -385,7 +385,7 @@ it('renders press realese correctly', () => {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-left: 1rem;
+  padding: 1rem 0 1rem 1rem;
 }
 
 .c3 img {

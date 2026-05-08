@@ -1,6 +1,6 @@
 import React from 'react';
 import VideoBanner from './VideoBanner';
-import poster from '../../../styleguide/assets/VideoBannerPosterImage.png';
+import poster from '../../../assets/VideoBannerPosterImage.png';
 
 const src = 'https://www.comicrelief.com/sites/default/files/downloads/Creativists_Logo_Web_small_V2_0.mp4';
 

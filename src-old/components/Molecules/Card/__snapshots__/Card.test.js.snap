@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c0 {
+  position: relative;
+  display: flex;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #FFE400;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c1 {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+@media (min-width: 0px) {
+  .c0 {
+    flex-direction: column;
+    background: #FFE400;
+  }
+}
+
+@media (min-width: 740px) {
+  .c0 {
+    flex-direction: column;
+    background: #FFE400;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c0 {
+    flex-direction: column;
+    background: #FFE400;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c1 {
+    padding: 2rem;
+  }
+
+  .c1 h1 {
+    font-size: 2rem;
+  }
+}
+
+<div
+  backgroundColor="yellow"
+  className="c0"
+  mediumBreakpointRowLayout={null}
+  smallBreakpointRowLayout={null}
+  squaredCorners={false}
+>
+  <div
+    className="c1"
+    mediumBreakpointRowLayout={null}
+    smallBreakpointRowLayout={null}
+  >
+    <h2>
+      Title
+    </h2>
+    <p>
+      Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders correctly 2`] = `
+.c0 {
+  position: relative;
+  display: flex;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #FFE400;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c1 {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+@media (min-width: 0px) {
+  .c0 {
+    flex-direction: column;
+    background: #FFE400;
+  }
+}
+
+@media (min-width: 740px) {
+  .c0 {
+    flex-direction: column;
+    background: #FFE400;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c0 {
+    flex-direction: column;
+    background: #FFE400;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c1 {
+    padding: 2rem;
+  }
+
+  .c1 h1 {
+    font-size: 2rem;
+  }
+}
+
+<div
+  backgroundColor="yellow"
+  className="c0"
+  mediumBreakpointLayout="Row"
+  mediumBreakpointRowLayout={null}
+  smallBreakpointLayout="Row"
+  smallBreakpointRowLayout={null}
+  squaredCorners={false}
+>
+  <div
+    className="c1"
+    mediumBreakpointRowLayout={null}
+    smallBreakpointRowLayout={null}
+  >
+    <h2>
+      Title
+    </h2>
+    <p>
+      Text body copy description. Loads more text test. Loads more text test.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with no body 1`] = `
+.c2 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c3 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c0 {
+  position: relative;
+  display: flex;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #FFE400;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c1 {
+  height: auto;
+}
+
+@media (min-width: 0px) {
+  .c0 {
+    flex-direction: column;
+    background: #FFE400;
+  }
+}
+
+@media (min-width: 740px) {
+  .c0 {
+    flex-direction: column;
+    background: #FFE400;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c0 {
+    flex-direction: column;
+    background: #FFE400;
+  }
+}
+
+<div
+  backgroundColor="yellow"
+  className="c0"
+  mediumBreakpointRowLayout={null}
+  smallBreakpointRowLayout={null}
+  squaredCorners={false}
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2 lazyload"
+      height="100%"
+      image={null}
+      images="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+      isBackgroundImage={false}
+      nonObjFitImage=""
+      objFitState={true}
+      setObjFitState={[Function]}
+      width="100%"
+    >
+      <img
+        alt=""
+        className="c3 lazyload"
+        data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        data-sizes="auto"
+        data-src={null}
+        data-srcset="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        height="100%"
+        mediumBreakpointRowLayout={null}
+        objFitState={true}
+        objectFit="cover"
+        smallBreakpointRowLayout={null}
+        src={null}
+        srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        width="100%"
+      />
+    </div>
+  </div>
+</div>
+`;

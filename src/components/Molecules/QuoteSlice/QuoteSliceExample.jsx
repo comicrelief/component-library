@@ -1,6 +1,6 @@
 import React from 'react';
 import QuoteSlice from './QuoteSlice';
-import { defaultData } from '../../../styleguide/data/data';
+import { defaultData } from '../../../data/data';
 
 export default function QuoteSliceExample() {
   return (

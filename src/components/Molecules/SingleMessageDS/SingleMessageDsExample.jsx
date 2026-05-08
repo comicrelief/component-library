@@ -4,7 +4,7 @@ import SingleMessageDs from './SingleMessageDs';
 import Text from '../../Atoms/Text/Text';
 import Download from '../../Atoms/Icons/Download';
 import spacing from '../../../theme/shared/spacing';
-import { defaultData } from '../../../styleguide/data/data';
+import { defaultData } from '../../../data/data';
 
 const Title = styled(Text)`
   letter-spacing: 0.03em;
@@ -15,18 +15,18 @@ const Title = styled(Text)`
   }
 `;
 
-const wrapStyle = {
-  display: 'flex',
-  padding: '4rem 0',
-  background: '#E1E2E3',
-  justifyContent: 'space-around',
-};
+const ExampleWrapper = styled.div`
+  display: flex;
+  padding: 4rem 0;
+  background: #E1E2E3;
+  justify-content: space-around;
+`;
 
 export default function SingleMessageDsExample() {
   return (
     <>
       <h3>Image align left, CTA clickable</h3>
-      <div style={wrapStyle}>
+      <ExampleWrapper>
         <SingleMessageDs
           imageLeft={true}
           link="/home"
@@ -47,10 +47,10 @@ export default function SingleMessageDsExample() {
             to get you looking your best while you're raising some cash.
           </Text>
         </SingleMessageDs>
-      </div>
+      </ExampleWrapper>
 
       <h3>Image align right, CTA clickable</h3>
-      <div style={wrapStyle}>
+      <ExampleWrapper>
         <SingleMessageDs
           target="blank"
           link="https://www.comicrelief.com/"
@@ -72,10 +72,10 @@ export default function SingleMessageDsExample() {
             to get you looking your best while you're raising some cash.
           </Text>
         </SingleMessageDs>
-      </div>
+      </ExampleWrapper>
 
       <h3>With download icon</h3>
-      <div style={wrapStyle}>
+      <ExampleWrapper>
         <SingleMessageDs
           link="https://assets.ctfassets.net/zsfivwzfgl3t/EsIEuI1teYkbLB7peOtqP/b43a905cffd89115d642fe5a84ff020a/RND21_fundraise_moneybuys_poster.pdf"
           linkLabel="Download this"
@@ -90,10 +90,10 @@ export default function SingleMessageDsExample() {
             to get you looking your best while you're raising some cash.
           </Text>
         </SingleMessageDs>
-      </div>
+      </ExampleWrapper>
 
       <h3>Video with no CTA</h3>
-      <div style={wrapStyle}>
+      <ExampleWrapper>
         <SingleMessageDs
           imageLow={defaultData.image}
           images={defaultData.images}
@@ -103,7 +103,7 @@ export default function SingleMessageDsExample() {
         >
           <Text tag="p">Some text and stuff.</Text>
         </SingleMessageDs>
-      </div>
+      </ExampleWrapper>
     </>
   );
 }

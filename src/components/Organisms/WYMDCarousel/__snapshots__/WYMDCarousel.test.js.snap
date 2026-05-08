@@ -790,7 +790,7 @@ exports[`renders the customised padding version correctly:
     <p
       className="c2 c3"
     >
-      Over the past two years, we’ve supported
+      Over the past two years, we've supported
     </p>
     <h1
       className="c4 c5"
@@ -2040,7 +2040,7 @@ exports[`renders the default padding version correctly:
     <p
       className="c2 c3"
     >
-      Over the past two years, we’ve supported
+      Over the past two years, we've supported
     </p>
     <h1
       className="c4 c5"

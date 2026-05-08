@@ -1,0 +1,380 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c3 {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c4 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.c12 {
+  display: inline-flex;
+  margin-left: 1rem;
+  align-self: center;
+  right: 1.5rem;
+}
+
+.c11 {
+  display: inline-flex;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.2s;
+  height: 2.5rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #2042AD;
+  color: #FFFFFF;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c11:hover,
+.c11:focus,
+.c11:focus-within,
+.c11:focus-visible {
+  background-color: #274084;
+  outline-offset: 3px;
+}
+
+.c11:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c13 {
+  fill: #FFFFFF;
+}
+
+.c6 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c6 {
+  font-size: 1rem;
+  line-height: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  color: #274084;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c8 {
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c0 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-around;
+  background: inherit;
+}
+
+.c7 {
+  letter-spacing: 0.03em;
+}
+
+.c2 {
+  height: 100%;
+}
+
+.c2 img {
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c1 {
+  margin-right: 1.5rem;
+}
+
+.c10 {
+  position: absolute;
+  bottom: -1.5rem;
+  z-index: 2;
+}
+
+.c10 a {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+}
+
+.c5 {
+  position: relative;
+  height: auto;
+  padding: 1.5rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+  background: #FFFFFF;
+  padding-bottom: calc(2rem + 1.5rem);
+  margin: -1.5rem 0 1.5rem 1.5rem;
+}
+
+.c5 .c9 {
+  right: 1.5rem;
+}
+
+@media (min-width: 740px) {
+  .c12 {
+    width: auto;
+    right: auto;
+    position: relative;
+  }
+}
+
+@media (min-width: 740px) {
+  .c11 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c11 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c11 {
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c11 {
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c13 {
+    fill: #FFFFFF;
+  }
+}
+
+@media (min-width: 740px) {
+  .c6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c0 {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 740px) {
+  .c2 {
+    height: 448px;
+  }
+}
+
+@media (min-width: 740px) {
+  .c1 {
+    margin: 0;
+    height: 448px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 740px) {
+  .c5 {
+    min-height: 448px;
+    height: auto;
+    width: calc(50% + 1.5rem);
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(50% + 1.5rem);
+    padding: 2rem;
+    padding-bottom: calc(2rem + 1.5rem);
+    margin: 2rem 0 1.5rem -1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .c5 {
+    padding: calc(1.5rem * 2);
+    padding-bottom: calc(1.5rem * 3);
+    margin: 2rem 0 1.5rem -2rem;
+  }
+}
+
+<div
+  className="c0"
+  imageDirection="right"
+  imageLeft={true}
+  title="Heading Line 1 Heading Line 2"
+>
+  <a
+    aria-hidden="true"
+    className="c1"
+    data-image-cta-copy="Check out the shop"
+    href="/home"
+    imageDirection="right"
+    imageLeft={true}
+    tabIndex="-1"
+    target="_blank"
+    title="Heading Line 1 Heading Line 2"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3 lazyload"
+        height="auto"
+        image={null}
+        images="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+        isBackgroundImage={false}
+        nonObjFitImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        objFitState={true}
+        setObjFitState={[Function]}
+        width="100%"
+      >
+        <img
+          alt="Happy man going to work"
+          className="c4 lazyload"
+          data-lowsrc="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+          data-sizes="auto"
+          data-src={null}
+          data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+          height="auto"
+          mediumBreakpointRowLayout={null}
+          objFitState={true}
+          objectFit="cover"
+          smallBreakpointRowLayout={null}
+          src={null}
+          srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+          width="100%"
+        />
+      </div>
+    </div>
+  </a>
+  <div
+    backgroundColor="white"
+    className="c5"
+    hasImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+    hasLink="/home"
+    imageLeft={true}
+  >
+    <span
+      className="c6 c7"
+    >
+      Subtitle
+    </span>
+    <p
+      className="c8"
+    >
+      Whatever you’ve got planned, the Sport Relief shop has everything you need to get you looking your best while you’re raising some cash. Also available in Sainsbury’s stores and online and in selected Argos stores.
+    </p>
+    <div
+      className="c9 c10"
+      hasImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+    >
+      <a
+        buttonType="primary"
+        className="c11"
+        data-button-cta-copy="Check out the shop"
+        fullWidth={false}
+        home={false}
+        href="/home"
+        iconFirst={false}
+        mobileColour={null}
+        rel={null}
+        target="_self"
+        type="button"
+        underline={true}
+      >
+        Check out the shop
+        <span
+          className="c12"
+          type="button"
+        >
+          <svg
+            className="c13"
+            colour="white"
+            fill="#FFFFFF"
+            height={24}
+            mobileColour={null}
+            viewBox="0 0 96 96"
+            width={24}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.171 38.829a4 4 0 015.657-5.657L44 54.343V8a4 4 0 018 0v46.343l21.172-21.172a4 4 0 115.656 5.657l-28 28-.005.004a3.976 3.976 0 01-.604.493c-.101.068-.211.115-.317.172-.123.067-.241.141-.372.195-.133.055-.273.087-.41.127-.113.033-.22.077-.337.1a3.89 3.89 0 01-1.566.002c-.116-.023-.224-.067-.336-.1-.138-.04-.277-.072-.411-.128-.13-.054-.248-.128-.37-.195-.106-.058-.216-.105-.318-.173a4.037 4.037 0 01-.604-.493l-.005-.004-28.002-27.999zM84 68a4 4 0 00-4 4v12H16V72a4 4 0 00-8 0v16a4 4 0 004 4h72a4 4 0 004-4V72a4 4 0 00-4-4z"
+            />
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+`;

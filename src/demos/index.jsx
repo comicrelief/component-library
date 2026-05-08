@@ -99,10 +99,22 @@ import quoteSliceExampleSrc from '../components/Molecules/QuoteSlice/QuoteSliceE
 
 // Organism examples
 import FooterExample from '../components/Organisms/Footer/FooterExample.jsx';
-import { DonateExample1, DonateExample3, DonateExample5, DonateExample7, DonateExample9 } from '../components/Organisms/Donate/DonateExample.jsx';
+import footerExampleSrc from '../components/Organisms/Footer/FooterExample.jsx?raw';
+import EmailSignUpExample from '../components/Organisms/EmailSignUp/EmailSignUpExample.jsx';
+import emailSignUpExampleSrc from '../components/Organisms/EmailSignUp/EmailSignUpExample.jsx?raw';
+import MarketingPreferencesDSExample from '../components/Organisms/MarketingPreferencesDS/MarketingPreferencesDSExample.jsx';
+import marketingPreferencesDSExampleSrc from '../components/Organisms/MarketingPreferencesDS/MarketingPreferencesDSExample.jsx?raw';
 import MembershipExample from '../components/Organisms/Membership/MembershipExample.jsx';
-import EmailSignUpForm from '../components/Organisms/EmailSignUp/EmailSignUpForm.js';
-import MarketingPreferencesDSForm from '../components/Organisms/MarketingPreferencesDS/MarketingPreferencesDSForm.js';
+import membershipExampleSrc from '../components/Organisms/Membership/MembershipExample.jsx?raw';
+import DonateBannerExample from '../components/Organisms/DonateBanner/DonateBannerExample.jsx';
+import donateBannerExampleSrc from '../components/Organisms/DonateBanner/DonateBannerExample.jsx?raw';
+import FooterNewExample from '../components/Organisms/FooterNew/FooterNewExample.jsx';
+import footerNewExampleSrc from '../components/Organisms/FooterNew/FooterNewExample.jsx?raw';
+import HeaderExample from '../components/Organisms/Header/HeaderExample.jsx';
+import headerExampleSrc from '../components/Organisms/Header/HeaderExample.jsx?raw';
+import Header2025Example from '../components/Organisms/Header2025/Header2025Example.jsx';
+import header2025ExampleSrc from '../components/Organisms/Header2025/Header2025Example.jsx?raw';
+import { DonateExample1, DonateExample3, DonateExample5, DonateExample7, DonateExample9 } from '../components/Organisms/Donate/DonateExample.jsx';
 import CookieBannerExample from '../components/Organisms/CookieBanner/CookieBannerExample.jsx';
 import cookieBannerExampleSrc from '../components/Organisms/CookieBanner/CookieBannerExample.jsx?raw';
 import ImpactSliderExample1 from '../components/Organisms/ImpactSlider/ImpactSliderExample1.jsx';
@@ -118,7 +130,7 @@ import dynamicGalleryExampleSrc from '../components/Organisms/DynamicGallery/Dyn
 
 const Placeholder = ({ name }) => (
   <div style={{ padding: '1rem', background: '#f5f5f5', borderRadius: '4px', color: '#666' }}>
-    <em>{name} — no example file found.</em>
+    <em>{name} — no example in place.</em>
   </div>
 );
 
@@ -182,16 +194,16 @@ export const molecules = [
 export const organisms = [
   { name: 'CookieBanner', demo: demo(CookieBannerExample, cookieBannerExampleSrc) },
   { name: 'Donate', examples: [<DonateExample1 />, <DonateExample3 />, <DonateExample5 />, <DonateExample7 />, <DonateExample9 />] },
-  { name: 'DonateBanner', demo: <Placeholder name="DonateBanner" /> },
+  { name: 'DonateBanner', demo: demo(DonateBannerExample, donateBannerExampleSrc) },
   { name: 'DynamicGallery', demo: demo(DynamicGalleryExample, dynamicGalleryExampleSrc) },
-  { name: 'EmailSignUpForm', demo: <EmailSignUpForm /> },
-  { name: 'Footer', demo: <FooterExample /> },
-  { name: 'FooterNew', demo: <Placeholder name="FooterNew" /> },
-  { name: 'Header', demo: <Placeholder name="Header" /> },
-  { name: 'Header2025', demo: <Placeholder name="Header2025" /> },
+  { name: 'EmailSignUpForm', demo: demo(EmailSignUpExample, emailSignUpExampleSrc) },
+  { name: 'Footer', demo: demo(FooterExample, footerExampleSrc) },
+  { name: 'FooterNew', demo: demo(FooterNewExample, footerNewExampleSrc) },
+  { name: 'Header', demo: demo(HeaderExample, headerExampleSrc) },
+  { name: 'Header2025', demo: demo(Header2025Example, header2025ExampleSrc) },
   { name: 'ImpactSlider', examples: [demo(ImpactSliderExample1, impactSliderExample1Src), demo(ImpactSliderExample2, impactSliderExample2Src)] },
-  { name: 'MarketingPreferencesDSForm', demo: <MarketingPreferencesDSForm /> },
-  { name: 'Membership', demo: <MembershipExample /> },
+  { name: 'MarketingPreferencesDSForm', demo: demo(MarketingPreferencesDSExample, marketingPreferencesDSExampleSrc) },
+  { name: 'Membership', demo: demo(MembershipExample, membershipExampleSrc) },
   { name: 'RichtextCarousel', demo: demo(RichtextCarouselExample, richtextCarouselExampleSrc) },
   { name: 'WYMDCarousel', demo: demo(WYMDCarouselExample, wymdCarouselExampleSrc) },
 ];

@@ -1,13 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
 import ArticleTeaser from './ArticleTeaser';
-import { defaultData } from '../../../styleguide/data/data';
+import { defaultData } from '../../../data/data';
+
+const ExampleWrapper = styled.div`
+  margin: 1rem;
+  width: 300px;
+`;
 
 export default function ArticleTeaserExample() {
   return (
     <>
       <h3>Article teaser</h3>
       <div style={{ display: 'flex', background: '#E1E2E3' }}>
-        <div style={{ margin: '1rem', width: '300px' }}>
+        <ExampleWrapper>
           <ArticleTeaser
             href="/test"
             images={defaultData.images}
@@ -17,8 +23,8 @@ export default function ArticleTeaserExample() {
             alt="Image's description"
             time="4 min read"
           />
-        </div>
-        <div style={{ margin: '1rem', width: '300px' }}>
+        </ExampleWrapper>
+        <ExampleWrapper>
           <ArticleTeaser
             href="/test"
             images={defaultData.images}
@@ -28,7 +34,7 @@ export default function ArticleTeaserExample() {
             alt="Image's description"
             time="4 min read"
           />
-        </div>
+        </ExampleWrapper>
       </div>
 
       <h3>Press release</h3>

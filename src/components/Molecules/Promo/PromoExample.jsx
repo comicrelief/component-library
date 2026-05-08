@@ -2,9 +2,9 @@ import React from 'react';
 import Promo from './Promo';
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
-import { defaultData } from '../../../styleguide/data/data';
-import poster from '../../../styleguide/assets/VideoBannerPosterImage.png';
-import mobilePoster from '../../../styleguide/assets/mobileVideoPosterImage.png';
+import { defaultData } from '../../../data/data';
+import poster from '../../../assets/VideoBannerPosterImage.png';
+import mobilePoster from '../../../assets/mobileVideoPosterImage.png';
 
 const videoSrc = 'https://www.comicrelief.com/sites/default/files/downloads/Creativists_Logo_Web_small_V2_0.mp4';
 const mobileVideoSrc = 'https://samplelib.com/lib/preview/mp4/sample-10s.mp4';

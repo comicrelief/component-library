@@ -4,7 +4,8 @@ import PictureOrVideo from '../PictureOrVideo/PictureOrVideo';
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 import variants from './_variants';
-import { CtaArrow } from '../../Atoms/Icons/index';
+import ArrowIcon from '../shared/ctaArrow/ArrowIcon';
+import { ArrowIconWrapper, ArrowIconInner } from '../shared/ctaArrow/CtaArrowCircle.style';
 import altCtaUnderline from '../../../theme/shared/assets/alt_cta_underline.svg';
 import './local-preview-layout-fixes.css';
 
@@ -70,7 +71,11 @@ const HeroBanner = ({
               </CtaText>
 
               <CtaIconWrapper>
-                <CtaArrow />
+                <ArrowIconWrapper $preventHoverColourChange>
+                  <ArrowIconInner>
+                    <ArrowIcon />
+                  </ArrowIconInner>
+                </ArrowIconWrapper>
               </CtaIconWrapper>
             </>
 

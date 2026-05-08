@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchResult from './SearchResult';
-import { defaultData } from '../../../styleguide/data/data';
+import { defaultData } from '../../../data/data';
 
 export default function SearchResultExample() {
   return (

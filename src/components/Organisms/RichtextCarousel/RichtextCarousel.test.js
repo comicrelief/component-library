@@ -6,7 +6,7 @@ import RichtextCarousel from './RichtextCarousel';
 const {
   RichtextCarouselItems,
   RichtextCarouselItemsWithPadding,
-} = require('../../../styleguide/data/data');
+} = require('../../../data/data');
 
 it('renders default padding version correctly', () => {
   const tree = renderWithTheme(

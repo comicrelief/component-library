@@ -3,7 +3,7 @@ import 'jest-styled-components';
 
 import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import Membership from './Membership';
-import { defaultData } from '../../../styleguide/data/data';
+import { defaultData } from '../../../data/data';
 import data from './dev-data/data';
 
 it('renders correctly', () => {

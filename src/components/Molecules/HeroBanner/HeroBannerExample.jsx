@@ -2,7 +2,7 @@ import React from 'react';
 import HeroBanner from './HeroBanner';
 import Text from '../../Atoms/Text/Text';
 import variants from './_variants';
-import { defaultData } from '../../../styleguide/data/data';
+import { defaultData } from '../../../data/data';
 import video1080 from '../../Atoms/AmbientVideo/big-buck-bunny-1080p-30sec.mp4';
 import videoMobile from '../../Atoms/AmbientVideo/thetestdatacom_480p_example.mp4';
 

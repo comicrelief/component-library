@@ -1,6 +1,6 @@
 import React from 'react';
 import Picture from './Picture';
-import { defaultData } from '../../../styleguide/data/data';
+import { defaultData } from '../../../data/data';
 
 export default function PictureExample() {
   return (

@@ -222,10 +222,10 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
       <div
         className="c3 lazyload"
         height="100%"
-        image="../PromoLW.jpg"
-        images="../PromoLW.jpg"
+        image="mock.asset"
+        images="mock.asset"
         isBackgroundImage={false}
-        nonObjFitImage="../PromoLW.jpg"
+        nonObjFitImage="mock.asset"
         objFitState={true}
         setObjFitState={[Function]}
         width="100%"
@@ -233,16 +233,16 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
         <img
           alt="Image alt text"
           className="c4 lazyload"
-          data-lowsrc="../PromoLW.jpg"
+          data-lowsrc="mock.asset"
           data-sizes="auto"
-          data-src="../PromoLW.jpg"
-          data-srcset="../PromoLW.jpg"
+          data-src="mock.asset"
+          data-srcset="mock.asset"
           height="100%"
           mediumBreakpointRowLayout={null}
           objFitState={true}
           objectFit="cover"
           smallBreakpointRowLayout={null}
-          src="../PromoLW.jpg"
+          src="mock.asset"
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
         />
@@ -503,10 +503,10 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
       <div
         className="c3 lazyload"
         height="100%"
-        image="../PromoLW.jpg"
-        images="../PromoLW.jpg"
+        image="mock.asset"
+        images="mock.asset"
         isBackgroundImage={false}
-        nonObjFitImage="../PromoLW.jpg"
+        nonObjFitImage="mock.asset"
         objFitState={true}
         setObjFitState={[Function]}
         width="100%"
@@ -514,16 +514,16 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
         <img
           alt="Image alt text"
           className="c4 lazyload"
-          data-lowsrc="../PromoLW.jpg"
+          data-lowsrc="mock.asset"
           data-sizes="auto"
-          data-src="../PromoLW.jpg"
-          data-srcset="../PromoLW.jpg"
+          data-src="mock.asset"
+          data-srcset="mock.asset"
           height="100%"
           mediumBreakpointRowLayout={null}
           objFitState={true}
           objectFit="cover"
           smallBreakpointRowLayout={null}
-          src="../PromoLW.jpg"
+          src="mock.asset"
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
         />
@@ -1035,10 +1035,10 @@ exports[`renders "Text Banner" Hero Banner correctly 2`] = `
       <div
         className="c3 lazyload"
         height="100%"
-        image="../PromoLW.jpg"
-        images="../PromoLW.jpg"
+        image="mock.asset"
+        images="mock.asset"
         isBackgroundImage={false}
-        nonObjFitImage="../PromoLW.jpg"
+        nonObjFitImage="mock.asset"
         objFitState={true}
         setObjFitState={[Function]}
         width="100%"
@@ -1046,16 +1046,16 @@ exports[`renders "Text Banner" Hero Banner correctly 2`] = `
         <img
           alt="Image alt text"
           className="c4 lazyload"
-          data-lowsrc="../PromoLW.jpg"
+          data-lowsrc="mock.asset"
           data-sizes="auto"
-          data-src="../PromoLW.jpg"
-          data-srcset="../PromoLW.jpg"
+          data-src="mock.asset"
+          data-srcset="mock.asset"
           height="100%"
           mediumBreakpointRowLayout={null}
           objFitState={true}
           objectFit="cover"
           smallBreakpointRowLayout={null}
-          src="../PromoLW.jpg"
+          src="mock.asset"
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
           width="100%"
         />
@@ -1097,18 +1097,18 @@ exports[`renders "Text Banner" Hero Banner correctly 2`] = `
       <div
         className="c11 c12"
         height="auto"
-        image="../HeroBannerLogo-Square.png"
+        image="mock.asset"
         imageRight={true}
         images={null}
         isBackgroundImage={false}
-        nonObjFitImage="../HeroBannerLogo-Square.png"
+        nonObjFitImage="mock.asset"
         objFitState={true}
         width="100%"
       >
         <img
           alt=""
           className="c13 lazyload"
-          data-src="../HeroBannerLogo-Square.png"
+          data-src="mock.asset"
           height="auto"
           objFitState={true}
           objectFit="contain"
