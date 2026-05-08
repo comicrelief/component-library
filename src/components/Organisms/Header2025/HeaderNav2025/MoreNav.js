@@ -4,7 +4,7 @@ import Text from '../../../Atoms/Text/Text';
 
 import { ChevronWrapper } from './HeaderNav2025.style';
 
-import menuGroupIcon from './Menu-Group-Icon.svg';
+import menuGroupIcon from '../../../../theme/shared/assets/Menu-Group-Icon.svg';
 
 import {
   MoreNavLabel,
