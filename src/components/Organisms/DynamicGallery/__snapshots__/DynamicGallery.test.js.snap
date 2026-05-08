@@ -129,7 +129,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   transition: fill 0.1s ease-out;
 }
 
-.c15 :focus-visible {
+.c15:focus-visible {
   outline: 2px solid #E52630;
 }
 
@@ -751,7 +751,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   transition: fill 0.1s ease-out;
 }
 
-.c9 :focus-visible {
+.c9:focus-visible {
   outline: 2px solid #E52630;
 }
 

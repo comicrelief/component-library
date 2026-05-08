@@ -315,7 +315,6 @@ exports[`renders Promo correctly 1`] = `
           <a
             buttonType="primary"
             className="c9"
-            color="white"
             fullWidth={false}
             home={false}
             href="/"
@@ -658,7 +657,6 @@ exports[`renders Promo correctly end position 1`] = `
           <a
             buttonType="primary"
             className="c9"
-            color="white"
             fullWidth={false}
             home={false}
             href="/"

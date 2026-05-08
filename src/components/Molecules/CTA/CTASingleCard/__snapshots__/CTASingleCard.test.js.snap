@@ -34,10 +34,11 @@ exports[`renders correctly with data prop 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
+  color: #E52630;
 }
 
-.c3 :hover,
-.c3 :focus {
+.c3:hover,
+.c3:focus {
   color: #000000;
   text-decoration: none;
 }
@@ -369,7 +370,6 @@ exports[`renders correctly with data prop 1`] = `
       <a
         buttonType="primary"
         className="c3 c4"
-        color="red"
         fullWidth={false}
         home={false}
         href="/test"
@@ -500,10 +500,11 @@ exports[`renders correctly without image 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
+  color: #E52630;
 }
 
-.c3 :hover,
-.c3 :focus {
+.c3:hover,
+.c3:focus {
   color: #000000;
   text-decoration: none;
 }
@@ -783,7 +784,6 @@ exports[`renders correctly without image 1`] = `
       <a
         buttonType="primary"
         className="c3 c4"
-        color="red"
         fullWidth={false}
         home={false}
         href="/test-no-image"

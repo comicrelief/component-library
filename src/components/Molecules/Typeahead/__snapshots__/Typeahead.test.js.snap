@@ -64,7 +64,7 @@ exports[`renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c6 :focus {
+.c6:focus {
   border: 1px solid #666;
 }
 

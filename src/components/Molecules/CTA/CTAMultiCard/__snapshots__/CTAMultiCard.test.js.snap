@@ -24,8 +24,7 @@ exports[`handles data structure correctly 1`] = `
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 ervBKA CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
-            color="red"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
             fullWidth={false}
             home={false}
             href="/test"
@@ -191,8 +190,7 @@ exports[`handles data structure correctly 1`] = `
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 ervBKA CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
-            color="red"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
             fullWidth={false}
             home={false}
             href="/test"
@@ -298,8 +296,7 @@ exports[`handles data structure correctly 1`] = `
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 ervBKA CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
-            color="red"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
             fullWidth={false}
             home={false}
             href="/test-no-image"
@@ -393,8 +390,7 @@ exports[`renders 2 columns layout correctly 1`] = `
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 ervBKA CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
-            color="red"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
             fullWidth={false}
             home={false}
             href="/test"
@@ -560,8 +556,7 @@ exports[`renders 2 columns layout correctly 1`] = `
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 ervBKA CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
-            color="red"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
             fullWidth={false}
             home={false}
             href="/test"
@@ -667,8 +662,7 @@ exports[`renders 2 columns layout correctly 1`] = `
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 ervBKA CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
-            color="red"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
             fullWidth={false}
             home={false}
             href="/test-no-image"
@@ -762,8 +756,7 @@ exports[`renders carousel mode correctly 1`] = `
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 ervBKA CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
-            color="red"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
             fullWidth={false}
             home={false}
             href="/test"
@@ -929,8 +922,7 @@ exports[`renders carousel mode correctly 1`] = `
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 ervBKA CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
-            color="red"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
             fullWidth={false}
             home={false}
             href="/test"
@@ -1036,8 +1028,7 @@ exports[`renders carousel mode correctly 1`] = `
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 ervBKA CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
-            color="red"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
             fullWidth={false}
             home={false}
             href="/test-no-image"
@@ -1131,8 +1122,7 @@ exports[`renders correctly with data prop 1`] = `
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 ervBKA CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
-            color="red"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
             fullWidth={false}
             home={false}
             href="/test"
@@ -1298,8 +1288,7 @@ exports[`renders correctly with data prop 1`] = `
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 ervBKA CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
-            color="red"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
             fullWidth={false}
             home={false}
             href="/test"
@@ -1405,8 +1394,7 @@ exports[`renders correctly with data prop 1`] = `
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 ervBKA CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
-            color="red"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
             fullWidth={false}
             home={false}
             href="/test-no-image"

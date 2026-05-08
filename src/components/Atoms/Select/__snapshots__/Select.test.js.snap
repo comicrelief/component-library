@@ -55,7 +55,7 @@ exports[`renders correctly 1`] = `
   cursor: pointer;
 }
 
-.c3 :focus {
+.c3:focus {
   border: 1px solid #666;
 }
 

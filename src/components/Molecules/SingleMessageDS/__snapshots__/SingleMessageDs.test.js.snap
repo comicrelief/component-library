@@ -342,7 +342,6 @@ exports[`renders correctly 1`] = `
       <a
         buttonType="primary"
         className="c11"
-        color="blue_dark"
         data-button-cta-copy="Check out the shop"
         fullWidth={false}
         home={false}

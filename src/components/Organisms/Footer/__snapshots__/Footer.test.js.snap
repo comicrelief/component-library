@@ -102,10 +102,11 @@ exports[`renders correctly 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
+  color: #E52630;
 }
 
-.c8 :hover,
-.c8 :focus {
+.c8:hover,
+.c8:focus {
   color: #000000;
   text-decoration: none;
 }
@@ -343,7 +344,7 @@ exports[`renders correctly 1`] = `
   border: 0;
 }
 
-.c9 :hover {
+.c9:hover {
   border: 0;
 }
 
@@ -687,7 +688,6 @@ exports[`renders correctly 1`] = `
         <a
           buttonType="primary"
           className="c8 c9"
-          color="red"
           fullWidth={false}
           home={false}
           href="/"
@@ -753,7 +753,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://www.comicrelief.com/#"
@@ -780,7 +779,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://www.comicrelief.com/update-your-preferences"
@@ -827,7 +825,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="/contact-us"
@@ -854,7 +851,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://giftaid.comicrelief.com/update"
@@ -881,7 +877,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://www.comicrelief.com/frequently-asked-questions"
@@ -908,7 +903,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://www.comicrelief.com/red-nose-days-frequently-asked-questions"
@@ -955,7 +949,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://www.comicrelief.com/about-comic-relief"
@@ -982,7 +975,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://www.comicrelief.com/about-comic-relief/history"
@@ -1009,7 +1001,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://www.comicrelief.com/about-comic-relief/finances"
@@ -1036,7 +1027,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://www.comicrelief.com/working-with-us"
@@ -1063,7 +1053,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://www.comicrelief.com/about-comic-relief/meet-the-team"
@@ -1090,7 +1079,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://www.sportrelief.com/"
@@ -1137,7 +1125,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://www.comicrelief.com/careers"
@@ -1164,7 +1151,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://app.beapplied.com/org/comic-relief"
@@ -1211,7 +1197,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://www.comicrelief.com/news"
@@ -1238,7 +1223,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://www.comicrelief.com/press-releases"
@@ -1285,7 +1269,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="/homepage"
@@ -1312,7 +1295,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="/this-is-a-test"
@@ -1339,7 +1321,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://www.yahoo.com"
@@ -1371,7 +1352,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://www.sportrelief.com"
@@ -1398,7 +1378,6 @@ exports[`renders correctly 1`] = `
                 <a
                   buttonType="primary"
                   className="c8 c19 c20"
-                  color="red"
                   fullWidth={false}
                   home={false}
                   href="https://bing.com"

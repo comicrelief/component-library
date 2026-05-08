@@ -58,10 +58,11 @@ exports[`renders correctly in minimalist form 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
+  color: #E52630;
 }
 
-.c1 :hover,
-.c1 :focus {
+.c1:hover,
+.c1:focus {
   color: #000000;
   text-decoration: none;
 }
@@ -82,7 +83,7 @@ exports[`renders correctly in minimalist form 1`] = `
   width: 100%;
 }
 
-.c2 :hover {
+.c2:hover {
   border: 0;
   font-weight: normal;
 }
@@ -155,7 +156,6 @@ exports[`renders correctly in minimalist form 1`] = `
   <a
     buttonType="primary"
     className="c1 c2"
-    color="red"
     fullWidth={false}
     home={false}
     href="/test"
@@ -286,10 +286,11 @@ exports[`renders correctly with copy 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
+  color: #E52630;
 }
 
-.c1 :hover,
-.c1 :focus {
+.c1:hover,
+.c1:focus {
   color: #000000;
   text-decoration: none;
 }
@@ -310,7 +311,7 @@ exports[`renders correctly with copy 1`] = `
   width: 100%;
 }
 
-.c2 :hover {
+.c2:hover {
   border: 0;
   font-weight: normal;
 }
@@ -397,7 +398,6 @@ exports[`renders correctly with copy 1`] = `
   <a
     buttonType="primary"
     className="c1 c2"
-    color="red"
     fullWidth={false}
     home={false}
     href="/test"
@@ -514,10 +514,11 @@ exports[`renders correctly with date 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
+  color: #E52630;
 }
 
-.c1 :hover,
-.c1 :focus {
+.c1:hover,
+.c1:focus {
   color: #000000;
   text-decoration: none;
 }
@@ -538,7 +539,7 @@ exports[`renders correctly with date 1`] = `
   width: 100%;
 }
 
-.c2 :hover {
+.c2:hover {
   border: 0;
   font-weight: normal;
 }
@@ -611,7 +612,6 @@ exports[`renders correctly with date 1`] = `
   <a
     buttonType="primary"
     className="c1 c2"
-    color="red"
     fullWidth={false}
     home={false}
     href="/test"
@@ -723,10 +723,11 @@ exports[`renders correctly with date and type 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
+  color: #E52630;
 }
 
-.c1 :hover,
-.c1 :focus {
+.c1:hover,
+.c1:focus {
   color: #000000;
   text-decoration: none;
 }
@@ -747,7 +748,7 @@ exports[`renders correctly with date and type 1`] = `
   width: 100%;
 }
 
-.c2 :hover {
+.c2:hover {
   border: 0;
   font-weight: normal;
 }
@@ -820,7 +821,6 @@ exports[`renders correctly with date and type 1`] = `
   <a
     buttonType="primary"
     className="c1 c2"
-    color="red"
     fullWidth={false}
     home={false}
     href="/test"

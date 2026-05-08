@@ -524,7 +524,6 @@ exports[`renders Single Message with Image correctly 1`] = `
     <a
       buttonType="primary"
       className="c8"
-      color="white"
       fullWidth={false}
       home={false}
       href="/"
@@ -1113,7 +1112,6 @@ exports[`renders Single Message with full width correctly 1`] = `
     <a
       buttonType="primary"
       className="c8"
-      color="white"
       fullWidth={false}
       home={false}
       href="/"

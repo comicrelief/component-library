@@ -242,7 +242,6 @@ exports[`renders Column view correctly 1`] = `
     <a
       buttonType="primary"
       className="c7"
-      color="red"
       data-button-cta-copy="Find out more"
       fullWidth={false}
       home={false}
@@ -547,7 +546,6 @@ exports[`renders correctly 1`] = `
     <a
       buttonType="primary"
       className="c7"
-      color="red"
       data-button-cta-copy="Find out more"
       fullWidth={false}
       home={false}

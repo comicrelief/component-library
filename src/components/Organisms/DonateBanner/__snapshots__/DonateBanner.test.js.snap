@@ -89,7 +89,7 @@ exports[`Monthly donation renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c24 :focus {
+.c24:focus {
   border: 1px solid #666;
 }
 
@@ -275,9 +275,9 @@ exports[`Monthly donation renders correctly 1`] = `
   appearance: none;
 }
 
-.c26 :active,
-.c26 :focus,
-.c26 :hover {
+.c26:active,
+.c26:focus,
+.c26:hover {
   outline: none;
   background-color: #890B11;
 }
@@ -778,7 +778,7 @@ exports[`Single donation renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c23 :focus {
+.c23:focus {
   border: 1px solid #666;
 }
 
@@ -800,7 +800,7 @@ exports[`Single donation renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c16 :focus {
+.c16:focus {
   border: 1px solid #666;
 }
 
@@ -1055,9 +1055,9 @@ exports[`Single donation renders correctly 1`] = `
   appearance: none;
 }
 
-.c25 :active,
-.c25 :focus,
-.c25 :hover {
+.c25:active,
+.c25:focus,
+.c25:hover {
   outline: none;
   background-color: #890B11;
 }
@@ -1538,7 +1538,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c19 :focus {
+.c19:focus {
   border: 1px solid #666;
 }
 
@@ -1724,9 +1724,9 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   appearance: none;
 }
 
-.c21 :active,
-.c21 :focus,
-.c21 :hover {
+.c21:active,
+.c21:focus,
+.c21:hover {
   outline: none;
   background-color: #890B11;
 }
@@ -2063,7 +2063,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c30 :focus {
+.c30:focus {
   border: 1px solid #666;
 }
 
@@ -2085,7 +2085,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c23 :focus {
+.c23:focus {
   border: 1px solid #666;
 }
 
@@ -2340,9 +2340,9 @@ exports[`Text-only donate widget renders correctly 1`] = `
   appearance: none;
 }
 
-.c32 :active,
-.c32 :focus,
-.c32 :hover {
+.c32:active,
+.c32:focus,
+.c32:hover {
   outline: none;
   background-color: #890B11;
 }

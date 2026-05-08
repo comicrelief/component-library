@@ -44,10 +44,11 @@ exports[`renders correctly 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
+  color: #E52630;
 }
 
-.c4 :hover,
-.c4 :focus {
+.c4:hover,
+.c4:focus {
   color: #000000;
   text-decoration: none;
 }
@@ -152,7 +153,6 @@ exports[`renders correctly 1`] = `
       <a
         buttonType="primary"
         className="c4"
-        color="red"
         fullWidth={false}
         home={false}
         href="cr.com"

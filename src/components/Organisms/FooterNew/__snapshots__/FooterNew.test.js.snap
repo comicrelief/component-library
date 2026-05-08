@@ -44,10 +44,11 @@ exports[`does not render copyright text when not supplied 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
+  color: #E52630;
 }
 
-.c3 :hover,
-.c3 :focus {
+.c3:hover,
+.c3:focus {
   color: #000000;
   text-decoration: none;
 }
@@ -100,7 +101,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   color: #000000;
 }
 
-.c15 :after {
+.c15:after {
   position: absolute;
   top: 0;
   right: 0;
@@ -153,7 +154,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   font-family: inherit;
 }
 
-.c21 :focus {
+.c21:focus {
   border: 1px solid #666;
 }
 
@@ -528,7 +529,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   border: 0;
 }
 
-.c4 :hover {
+.c4:hover {
   border: 0;
 }
 
@@ -836,7 +837,6 @@ exports[`does not render copyright text when not supplied 1`] = `
           animateRotate={true}
           buttonType="primary"
           className="c3 c4"
-          color="red"
           fullWidth={false}
           home={false}
           href="/"
@@ -1105,7 +1105,6 @@ exports[`does not render copyright text when not supplied 1`] = `
             animateRotate={true}
             buttonType="primary"
             className="c3 c4"
-            color="red"
             fullWidth={false}
             home={false}
             href="/"
@@ -1137,7 +1136,6 @@ exports[`does not render copyright text when not supplied 1`] = `
             animateRotate={true}
             buttonType="primary"
             className="c3 c4"
-            color="red"
             fullWidth={false}
             home={false}
             href="/"
@@ -1174,7 +1172,6 @@ exports[`does not render copyright text when not supplied 1`] = `
           <a
             buttonType="primary"
             className="c3 c37"
-            color="red"
             fullWidth={false}
             home={false}
             href="/contact-us"
@@ -1197,7 +1194,6 @@ exports[`does not render copyright text when not supplied 1`] = `
           <a
             buttonType="primary"
             className="c3 c37"
-            color="red"
             fullWidth={false}
             home={false}
             href="https://www.comicrelief.com/frequently-asked-questions"
@@ -1345,7 +1341,6 @@ exports[`does not render copyright text when not supplied 1`] = `
           <a
             buttonType="primary"
             className="c3 c42"
-            color="red"
             fullWidth={false}
             home={false}
             href="https://www.comicrelief.com/terms-of-use"
@@ -1368,7 +1363,6 @@ exports[`does not render copyright text when not supplied 1`] = `
           <a
             buttonType="primary"
             className="c3 c42"
-            color="red"
             fullWidth={false}
             home={false}
             href="https://www.comicrelief.com/privacy-notice"
@@ -1447,10 +1441,11 @@ exports[`renders correctly 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
+  color: #E52630;
 }
 
-.c3 :hover,
-.c3 :focus {
+.c3:hover,
+.c3:focus {
   color: #000000;
   text-decoration: none;
 }
@@ -1503,7 +1498,7 @@ exports[`renders correctly 1`] = `
   color: #000000;
 }
 
-.c15 :after {
+.c15:after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1556,7 +1551,7 @@ exports[`renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c21 :focus {
+.c21:focus {
   border: 1px solid #666;
 }
 
@@ -1931,7 +1926,7 @@ exports[`renders correctly 1`] = `
   border: 0;
 }
 
-.c4 :hover {
+.c4:hover {
   border: 0;
 }
 
@@ -2239,7 +2234,6 @@ exports[`renders correctly 1`] = `
           animateRotate={true}
           buttonType="primary"
           className="c3 c4"
-          color="red"
           fullWidth={false}
           home={false}
           href="/"
@@ -2508,7 +2502,6 @@ exports[`renders correctly 1`] = `
             animateRotate={true}
             buttonType="primary"
             className="c3 c4"
-            color="red"
             fullWidth={false}
             home={false}
             href="/"
@@ -2540,7 +2533,6 @@ exports[`renders correctly 1`] = `
             animateRotate={true}
             buttonType="primary"
             className="c3 c4"
-            color="red"
             fullWidth={false}
             home={false}
             href="/"
@@ -2577,7 +2569,6 @@ exports[`renders correctly 1`] = `
           <a
             buttonType="primary"
             className="c3 c37"
-            color="red"
             fullWidth={false}
             home={false}
             href="/contact-us"
@@ -2600,7 +2591,6 @@ exports[`renders correctly 1`] = `
           <a
             buttonType="primary"
             className="c3 c37"
-            color="red"
             fullWidth={false}
             home={false}
             href="https://www.comicrelief.com/frequently-asked-questions"
@@ -2748,7 +2738,6 @@ exports[`renders correctly 1`] = `
           <a
             buttonType="primary"
             className="c3 c42"
-            color="red"
             fullWidth={false}
             home={false}
             href="https://www.comicrelief.com/terms-of-use"
@@ -2771,7 +2760,6 @@ exports[`renders correctly 1`] = `
           <a
             buttonType="primary"
             className="c3 c42"
-            color="red"
             fullWidth={false}
             home={false}
             href="https://www.comicrelief.com/privacy-notice"

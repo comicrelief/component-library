@@ -126,7 +126,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   font-family: inherit;
 }
 
-.c24 :focus {
+.c24:focus {
   border: 1px solid #666;
 }
 
@@ -265,9 +265,9 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   appearance: none;
 }
 
-.c26 :active,
-.c26 :focus,
-.c26 :hover {
+.c26:active,
+.c26:focus,
+.c26:hover {
   outline: none;
   background-color: #961D35;
 }
@@ -827,7 +827,7 @@ exports[`Monthly donation renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c25 :focus {
+.c25:focus {
   border: 1px solid #666;
 }
 
@@ -970,9 +970,9 @@ exports[`Monthly donation renders correctly 1`] = `
   appearance: none;
 }
 
-.c27 :active,
-.c27 :focus,
-.c27 :hover {
+.c27:active,
+.c27:focus,
+.c27:hover {
   outline: none;
   background-color: #961D35;
 }
@@ -1523,7 +1523,7 @@ exports[`Single donation renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c18 :focus {
+.c18:focus {
   border: 1px solid #666;
 }
 
@@ -1742,9 +1742,9 @@ exports[`Single donation renders correctly 1`] = `
   appearance: none;
 }
 
-.c25 :active,
-.c25 :focus,
-.c25 :hover {
+.c25:active,
+.c25:focus,
+.c25:hover {
   outline: none;
   background-color: #961D35;
 }
@@ -2297,7 +2297,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   font-family: inherit;
 }
 
-.c18 :focus {
+.c18:focus {
   border: 1px solid #666;
 }
 
@@ -2436,9 +2436,9 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   appearance: none;
 }
 
-.c20 :active,
-.c20 :focus,
-.c20 :hover {
+.c20:active,
+.c20:focus,
+.c20:hover {
   outline: none;
   background-color: #961D35;
 }

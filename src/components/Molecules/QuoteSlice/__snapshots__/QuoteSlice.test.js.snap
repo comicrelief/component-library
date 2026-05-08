@@ -249,7 +249,6 @@ exports[`renders a Quote Slice with basic props 1`] = `
       <a
         buttonType="primary"
         className="c8 c9"
-        color="white"
         fullWidth={false}
         home={false}
         href="http://www.google.com"
