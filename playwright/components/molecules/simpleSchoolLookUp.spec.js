@@ -5,7 +5,7 @@ test.describe('simple school lookup component', () => {
     await page.goto('/#simpleschoollookup');
 
     // simple school lookup elements should be visible
-    await expect(page.locator('[data-testid="SimpleSchoolLookup-example-0"]')).toBeVisible();
+    await expect(page.locator('[data-testid="SimpleSchoolLookup-example-1"]')).toBeVisible();
     await expect(page.locator('[data-preview="SimpleSchoolLookup"]')).toBeVisible();
 
     const inputElement = page.locator('#school_lookup');
