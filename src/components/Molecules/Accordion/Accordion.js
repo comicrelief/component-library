@@ -70,10 +70,10 @@ const Copy = styled.div`
     height: auto;
     visibility: visible;
     transition: all 0.2s cubic-bezier(0.21, 1.7, 0.83, 0.68) 0s;
-    padding: 0 ${spacing('lg')} ${contentBottomPadding || spacing('l')};
+    padding: 0 ${spacing('l')} ${contentBottomPadding || spacing('l')};
 
     @media ${({ theme }) => theme.allBreakpoints('M')} {
-      padding: 0 ${spacing('lg')} ${contentBottomPadding || spacing('l')};
+      padding: 0 ${spacing('l')} ${contentBottomPadding || spacing('l')};
     }
   `)}
 `;
