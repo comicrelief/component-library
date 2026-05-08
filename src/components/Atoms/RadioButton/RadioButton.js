@@ -32,7 +32,7 @@ const StyledRadioInput = styled.input`
   &:checked + span {
     background-color: ${({ theme }) => theme.color('purple')};
     border: 1px solid ${({ theme }) => theme.color('purple')};
-    :before {
+    &:before {
       position: absolute;
       content: '';
       top: 8px;

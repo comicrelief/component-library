@@ -72,7 +72,7 @@ const Overlay = styled.span`
   right: 0;
   bottom: 0;
   ${zIndex('low')};
-  :hover {
+  &:hover {
     background: ${({ theme }) => theme.color('grey_medium')};
   }
 `;
@@ -99,15 +99,15 @@ const CheckInput = styled.input`
     float: left;
     ${zIndex('medium')};
   }
-  :checked ~ span {
+  &:checked ~ span {
     background-size: 24px;
     background-color: ${({ theme, color }) => theme.color(color)};
   }
-  :focus + span {
+  &:focus + span {
     border-color: ${({ theme }) => theme.color('grey_for_forms')};
     border-width: 3px;
   }
-  :focus + span {
+  &:focus + span {
     border-color: ${({ theme }) => theme.color('grey_for_forms')};
     border-width: 3px;
   }
@@ -123,11 +123,11 @@ const ClearButton = styled.button`
   padding-left: 3rem;
   position: relative;
   height: 48px;
-  :focus {
+  &:focus {
     border-color: ${({ theme }) => theme.color('grey_for_forms')};
   }
 
-  :before {
+  &:before {
     content: '';
     background: url(${clear}) no-repeat center;
     width: 20px;

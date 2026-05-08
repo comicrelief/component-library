@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { atoms, molecules, organisms } from './demos/index.jsx';
 import { Layout, Sidebar, SidebarTitle, SidebarItem, Preview, PreviewHeader, PreviewBox, Logo, IsolateButton } from './App.styles.js';
+import crLogo from './components/Atoms/Logo/assets/cr-logo.svg';
 
 const groups = [
   { label: 'Atoms', items: atoms },
@@ -36,7 +37,7 @@ export default function App() {
     <Layout>
       {!isIsolated && (
       <Sidebar>
-        <Logo>Comic Relief</Logo>
+        <Logo><img src={crLogo} alt="Comic Relief" /></Logo>
         {groups.map(group => (
           <div key={group.label}>
             <SidebarTitle>{group.label}</SidebarTitle>

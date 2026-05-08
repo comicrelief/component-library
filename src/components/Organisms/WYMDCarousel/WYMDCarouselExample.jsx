@@ -1,13 +1,18 @@
 import React from 'react';
 import WYMDCarousel from './WYMDCarousel';
-import { carouselItemsComplete, carouselItemsIncomplete, carouselItemsMinimal } from '../../../styleguide/data/data';
+import { carouselItemsComplete, carouselItemsCompleteWithPadding, carouselItemsIncomplete, carouselItemsMinimal } from '../../../styleguide/data/data';
 
 export default function WYMDCarouselExample() {
   return (
     <>
       <div>
-        <h2 style={{ textAlign: 'center' }}>All fields supplied, autoplay on:</h2>
+        <h2 style={{ textAlign: 'center' }}>All fields supplied, autoplay on, default padding:</h2>
         <WYMDCarousel data={carouselItemsComplete} />
+      </div>
+
+      <div>
+        <h2 style={{ textAlign: 'center' }}>All fields supplied, autoplay on, custom padding:</h2>
+        <WYMDCarousel data={carouselItemsCompleteWithPadding} />
       </div>
 
       <div>

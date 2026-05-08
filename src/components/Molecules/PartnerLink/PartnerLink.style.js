@@ -18,8 +18,8 @@ const Item = styled(Link)`
   position: relative;
   padding: 0;
   border: none;
-  :hover,
-  :focus {
+  &:hover,
+  &:focus {
     border: none;
     ${MoreInfo} {
       overflow: inherit;

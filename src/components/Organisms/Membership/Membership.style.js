@@ -28,7 +28,7 @@ const BgImage = styled(Picture)`
   right: 0;
   height: auto;
 
-  :before {
+  &:before {
     color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
     content: '';
     position: absolute;
@@ -39,7 +39,7 @@ const BgImage = styled(Picture)`
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     height: 100%;
 
-    :before {
+    &:before {
       content: none;
     }
   }
@@ -117,7 +117,7 @@ const MoneyBuys = styled.div`
       padding: ${spacing('md')};
     }
 
-    :hover input {
+    &:hover input {
       border-color: ${({ theme }) => theme.color('red')};
     }
   }
@@ -158,7 +158,7 @@ const AmountField = styled(Input)`
     padding: ${spacing('sm')} ${spacing('md')} ${spacing('sm')} ${spacing('l')};
     ${({ inputBorderColor, theme }) => inputBorderColor && `border: 2px solid ${theme.color('red')};`}
 
-    :focus {
+    &:focus {
       border: 2px solid ${({ theme }) => theme.color('red')};
     }
   }
@@ -178,9 +178,9 @@ const Button = styled.button`
   background: ${({ theme, color }) => (color ? theme.color(color) : theme.color('red'))};
   border: none;
   border-radius: 100px;
-  :active,
-  :focus,
-  :hover {
+  &:active,
+  &:focus,
+  &:hover {
     background-color: ${({ theme }) => theme.color('coral_dark')};
   }
 

@@ -182,9 +182,9 @@ const Button = styled.button`
   border-radius: 0.5rem;
   border: none;
   appearance: none;
-  :active,
-  :focus,
-  :hover {
+  &:active,
+  &:focus,
+  &:hover {
     outline: none;
     background-color: ${({ theme }) => theme.color('red_dark')};
   }

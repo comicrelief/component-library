@@ -17,12 +17,12 @@ export const Sidebar = styled.nav`
 `;
 
 export const SidebarTitle = styled.div`
-  padding: 0.75rem 1rem 0.25rem;
-  font-size: 0.65rem;
+  padding: 1.5rem 1rem 0.75rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: ${color('grey')};
+  color: ${color('red')};
 `;
 
 export const SidebarItem = styled.button`
@@ -73,23 +73,22 @@ export const PreviewBox = styled.div`
 `;
 
 export const Logo = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 1rem 0.75rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: ${color('red')};
-  letter-spacing: 0.05em;
+  padding: 1rem;
   border-bottom: 1px solid ${color('grey_dark')};
   margin-bottom: 0.5rem;
+
+  img {
+    display: block;
+    width: 65px;
+    height: auto;
+  }
 `;
 
 export const IsolateButton = styled.button`
-  background: none;
-  border: 1px solid ${color('grey_medium')};
+  background: ${color('red')};
+  border: 1px solid ${color('red')};
   border-radius: 4px;
-  color: ${({ $active }) => ($active ? color('red') : color('grey_5'))};
+  color: ${color('white')};
   cursor: pointer;
   font-size: 0.75rem;
   font-weight: 700;
@@ -97,7 +96,7 @@ export const IsolateButton = styled.button`
   padding: 0.25rem 0.6rem;
 
   &:hover {
-    border-color: ${color('red')};
-    color: ${color('red')};
+    background: ${color('red_dark')};
+    border-color: ${color('red_dark')};
   }
 `;

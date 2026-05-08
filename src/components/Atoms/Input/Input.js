@@ -51,7 +51,7 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   z-index: 2;
   font-family: inherit;
 
-  :focus {
+  &:focus {
     border: 1px solid ${theme.color('grey_for_forms')};
   }
 `}`;

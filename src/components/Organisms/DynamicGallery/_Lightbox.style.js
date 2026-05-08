@@ -117,7 +117,7 @@ export const NavButton = styled.button`
     }
   }
 
-  :focus-visible {
+  &:focus-visible {
     outline: 2px solid ${({ theme }) => theme.color('red')};
   }
 `;
