@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SRLogo from './assets/CR SR Logo_RGB_RGB.png';
-import CRLogo from './assets/CR_LOGO_RED_RGB.png';
-import RNDLogo from './assets/CR_RND22_LOGO_RGB.png';
+import SRLogo from './assets/SRlogo.svg';
+import CRLogo from './assets/CRlogo.svg';
+import RNDLogo from './assets/RNDlogo.svg';
 import {
   Wrapper, Link, ImageWrapper, CopyWrapper, Title, Date, Time, Image
 } from './ArticleTeaser.style';
