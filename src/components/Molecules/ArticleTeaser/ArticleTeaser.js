@@ -177,7 +177,7 @@ const ArticleTeaser = ({
         )}
         <Title
           time={time}
-          tag="h3"
+          tag="h4"
         >
           {title}
         </Title>

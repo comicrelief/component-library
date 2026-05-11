@@ -50,8 +50,8 @@ it('renders article teaser correctly', () => {
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      font-size: 1.25rem;
-      line-height: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c10 span {
@@ -188,15 +188,15 @@ it('renders article teaser correctly', () => {
 
     @media (min-width:740px) {
       .c10 {
-        font-size: 1.25rem;
-        line-height: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
       }
     }
 
     @media (min-width:1024px) {
       .c10 {
-        font-size: 1.375rem;
-        line-height: 1.625rem;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
       }
     }
 
@@ -287,11 +287,11 @@ it('renders article teaser correctly', () => {
           >
              01 July 2019
           </span>
-          <h3
+          <h4
             className="c10 c11"
           >
             News article
-          </h3>
+          </h4>
         </div>
       </a>
     </article>
@@ -342,8 +342,8 @@ it('renders press realese correctly', () => {
       -moz-letter-spacing: 0;
       -ms-letter-spacing: 0;
       letter-spacing: 0;
-      font-size: 1.25rem;
-      line-height: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c10 span {
@@ -485,15 +485,15 @@ it('renders press realese correctly', () => {
 
     @media (min-width:740px) {
       .c10 {
-        font-size: 1.25rem;
-        line-height: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
       }
     }
 
     @media (min-width:1024px) {
       .c10 {
-        font-size: 1.375rem;
-        line-height: 1.625rem;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
       }
     }
 
@@ -554,11 +554,11 @@ it('renders press realese correctly', () => {
           >
              01 July 2019
           </span>
-          <h3
+          <h4
             className="c10 c11"
           >
             Press Release
-          </h3>
+          </h4>
         </div>
       </a>
     </article>
