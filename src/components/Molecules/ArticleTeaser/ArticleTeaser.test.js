@@ -435,6 +435,7 @@ it('renders press realese correctly', () => {
       justify-content: center;
       position: relative;
       padding: 1rem 0 1rem 1rem;
+      padding: 1rem 0px 1rem 2rem;
     }
 
     .c3 img {

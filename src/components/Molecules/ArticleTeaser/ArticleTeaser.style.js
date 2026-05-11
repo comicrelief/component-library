@@ -46,6 +46,7 @@ const ImageWrapper = styled.div`
   ${({ category }) => (category || category === '')
     && css`
       padding: ${spacing('md')} 0 ${spacing('md')} ${spacing('md')};
+      padding: 1rem 0px 1rem 2rem;
       img {
         border-radius: 0;
       }
