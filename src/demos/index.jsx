@@ -98,8 +98,7 @@ import QuoteSliceExample from '../components/Molecules/QuoteSlice/QuoteSliceExam
 import quoteSliceExampleSrc from '../components/Molecules/QuoteSlice/QuoteSliceExample.jsx?raw';
 
 // Organism examples
-import FooterExample from '../components/Organisms/Footer/FooterExample.jsx';
-import footerExampleSrc from '../components/Organisms/Footer/FooterExample.jsx?raw';
+import { FooterExample1, FooterExample2, FooterExample3 } from '../components/Organisms/Footer/FooterExample.jsx';
 import EmailSignUpExample from '../components/Organisms/EmailSignUp/EmailSignUpExample.jsx';
 import emailSignUpExampleSrc from '../components/Organisms/EmailSignUp/EmailSignUpExample.jsx?raw';
 import MarketingPreferencesDSExample from '../components/Organisms/MarketingPreferencesDS/MarketingPreferencesDSExample.jsx';
@@ -108,12 +107,10 @@ import MembershipExample from '../components/Organisms/Membership/MembershipExam
 import membershipExampleSrc from '../components/Organisms/Membership/MembershipExample.jsx?raw';
 import DonateBannerExample from '../components/Organisms/DonateBanner/DonateBannerExample.jsx';
 import donateBannerExampleSrc from '../components/Organisms/DonateBanner/DonateBannerExample.jsx?raw';
-import EmailBannerExample from '../components/Organisms/EmailBanner/EmailBannerExample.jsx';
-import emailBannerExampleSrc from '../components/Organisms/EmailBanner/EmailBannerExample.jsx?raw';
+import { EmailBannerExample1, EmailBannerExample2, EmailBannerExample3, EmailBannerExample4, EmailBannerExample5 } from '../components/Organisms/EmailBanner/EmailBannerExample.jsx';
 import FooterNewExample from '../components/Organisms/FooterNew/FooterNewExample.jsx';
 import footerNewExampleSrc from '../components/Organisms/FooterNew/FooterNewExample.jsx?raw';
-import HeaderExample from '../components/Organisms/Header/HeaderExample.jsx';
-import headerExampleSrc from '../components/Organisms/Header/HeaderExample.jsx?raw';
+import { HeaderExample1, HeaderExample2, HeaderExample3, HeaderExample4, HeaderExample5 } from '../components/Organisms/Header/HeaderExample.jsx';
 import Header2025Example from '../components/Organisms/Header2025/Header2025Example.jsx';
 import header2025ExampleSrc from '../components/Organisms/Header2025/Header2025Example.jsx?raw';
 import { DonateExample1, DonateExample3, DonateExample5, DonateExample7, DonateExample9 } from '../components/Organisms/Donate/DonateExample.jsx';
@@ -198,11 +195,11 @@ export const organisms = [
   { name: 'Donate', examples: [<DonateExample1 />, <DonateExample3 />, <DonateExample5 />, <DonateExample7 />, <DonateExample9 />] },
   { name: 'DonateBanner', demo: demo(DonateBannerExample, donateBannerExampleSrc) },
   { name: 'DynamicGallery', demo: demo(DynamicGalleryExample, dynamicGalleryExampleSrc) },
-  { name: 'EmailBanner', demo: demo(EmailBannerExample, emailBannerExampleSrc) },
+  { name: 'EmailBanner', examples: [<EmailBannerExample1 />, <EmailBannerExample2 />, <EmailBannerExample3 />, <EmailBannerExample4 />, <EmailBannerExample5 />] },
   { name: 'EmailSignUpForm', demo: demo(EmailSignUpExample, emailSignUpExampleSrc) },
-  { name: 'Footer', demo: demo(FooterExample, footerExampleSrc) },
+  { name: 'Footer', examples: [<FooterExample1 />, <FooterExample2 />, <FooterExample3 />] },
   { name: 'FooterNew', demo: demo(FooterNewExample, footerNewExampleSrc) },
-  { name: 'Header', demo: demo(HeaderExample, headerExampleSrc) },
+  { name: 'Header', examples: [<HeaderExample1 />, <HeaderExample2 />, <HeaderExample3 />, <HeaderExample4 />, <HeaderExample5 />] },
   { name: 'Header2025', demo: demo(Header2025Example, header2025ExampleSrc) },
   { name: 'ImpactSlider', examples: [demo(ImpactSliderExample1, impactSliderExample1Src), demo(ImpactSliderExample2, impactSliderExample2Src)] },
   { name: 'MarketingPreferencesDSForm', demo: demo(MarketingPreferencesDSExample, marketingPreferencesDSExampleSrc) },

@@ -172,18 +172,18 @@ test.describe('dynamic gallery component', () => {
     await galleryNode.click();
 
     // expect the lightbox to be visible
-    await expect(page.locator('dialog')).toBeVisible();
+    await expect(gallery.locator('dialog')).toBeVisible();
 
     await page.waitForTimeout(1000);
     await page.keyboard.press('Escape');
-    await expect(page.locator('dialog')).toBeHidden();
+    await expect(gallery.locator('dialog')).toBeHidden();
 
     // focus the gallery node and press enter
     await galleryNode.focus();
     await page.keyboard.press('Enter');
 
     // expect the lightbox to be visible
-    await expect(page.locator('dialog')).toBeVisible();
+    await expect(gallery.locator('dialog')).toBeVisible();
 
     await page.close();
   });
@@ -201,13 +201,13 @@ test.describe('dynamic gallery component', () => {
     await galleryNode.click();
 
     // the close button should not be focused after opening the lightbox with the mouse
-    await expect(page.locator('.close-button')).not.toBeFocused();
+    await expect(gallery.locator('.close-button')).not.toBeFocused();
     await page.keyboard.press('Escape');
 
     // the close button should be focused after opening the lightbox with the keyboard
     await galleryNode.focus();
     await page.keyboard.press('Enter');
-    await expect(page.locator('.close-button')).toBeFocused();
+    await expect(gallery.locator('.close-button')).toBeFocused();
 
     await page.close();
   });
@@ -225,7 +225,7 @@ test.describe('dynamic gallery component', () => {
     await galleryNode.click();
 
     // expect the lightbox and caption to be visible
-    await expect(page.locator('dialog')).toBeVisible();
+    await expect(gallery.locator('dialog')).toBeVisible();
     await expect(page.getByText('Lightbox: This is the body for image 0')).toBeVisible();
 
     await page.waitForTimeout(1000);
@@ -250,10 +250,10 @@ test.describe('dynamic gallery component', () => {
     await galleryNode.click();
 
     // click the close button
-    await page.locator('.close-button').click();
+    await gallery.locator('.close-button').click();
 
     // expect the lightbox to be hidden
-    await expect(page.locator('dialog')).toBeHidden();
+    await expect(gallery.locator('dialog')).toBeHidden();
 
     await page.close();
   });
@@ -271,14 +271,14 @@ test.describe('dynamic gallery component', () => {
     await galleryNode.click();
 
     // expect the lightbox to be hidden
-    await expect(page.locator('dialog')).toBeHidden();
+    await expect(gallery.locator('dialog')).toBeHidden();
 
     // focus the gallery node and press enter
     await galleryNode.focus();
     await page.keyboard.press('Enter');
 
     // expect the lightbox to be hidden
-    await expect(page.locator('dialog')).toBeHidden();
+    await expect(gallery.locator('dialog')).toBeHidden();
 
     await page.close();
   });

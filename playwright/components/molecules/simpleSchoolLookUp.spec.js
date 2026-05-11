@@ -2,6 +2,22 @@ const { test, expect } = require('@playwright/test');
 
 test.describe('simple school lookup component', () => {
   test('simple school lookup', async ({ page, context }) => {
+    await page.route('**/schools/lookup**', route => {
+      route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({
+          data: {
+            schools: [
+              { name: "St Paul's School", post_code: 'SW13 9JT' },
+              { name: "St Paul's Cathedral School", post_code: 'EC4M 8AD' },
+              { name: 'EC4M 9AD School', post_code: 'EC4M 9AD' }
+            ]
+          }
+        })
+      });
+    });
+
     await page.goto('/#simpleschoollookup');
 
     // simple school lookup elements should be visible
