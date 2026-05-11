@@ -4,6 +4,7 @@ import defaultBoxShadow from '../../../theme/shared/boxShadows';
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import link from '../../Atoms/Link/Link';
+import { bounceUpAnimation } from '../../../theme/shared/animations';
 
 const Wrapper = styled.article`
   width: 100%;
@@ -11,11 +12,22 @@ const Wrapper = styled.article`
   display: flex;
   background-color: ${({ theme }) => theme.color('white')};
   border-radius: 1rem;
+  overflow: hidden;
+  ${bounceUpAnimation(true, 4, 2)};
   ${defaultBoxShadow()}
-  transition: all 0.2s;
+
+  img {
+    // Zoom the image in slightly by default so the 'bounce' animation doesn't cause issues
+    transform: scale(1.02);
+    transition: transform 0.3s cubic-bezier(0.65, -0.19, 0.37, 1.16);
+  }
+
   &:hover {
-  ${defaultBoxShadow(true)}
-    transform: translateY(-4px);
+    ${defaultBoxShadow(true)}
+
+    img {
+      transform: scale(1.04);
+    }
   }
 `;
 
@@ -43,34 +55,37 @@ const ImageWrapper = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  ${({ category }) => (category || category === '')
-    && css`
-      padding: ${spacing('md')} 0 ${spacing('md')} ${spacing('md')};
-      padding: 1rem 0px 1rem 2rem;
-      img {
-        border-radius: 0;
-      }
-    `};
 
-  ${({ category }) => !category
-    && category !== ''
-    && css`
+  ${({ category }) => (category || category === '') && css`
+    padding: ${spacing('md')} 0 ${spacing('md')} ${spacing('md')};
+    padding: 1rem 0px 1rem 2rem;
+    
+    img {
+      border-radius: 0;
+    }
+  `};
+
+  ${({ category }) => !category && category !== '' && css`
+    img {
+      // border-radius: 1rem 1rem 0 0;
+    }
+
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      width: 45%;
+      
       img {
-        border-radius: 1rem 1rem 0 0;
+        // border-radius: 1rem 0 0 1rem;
       }
-      @media ${({ theme }) => theme.allBreakpoints('M')} {
-        width: 45%;
-        img {
-          border-radius: 1rem 0 0 1rem;
-        }
+    }
+
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
+      width: 100%;
+      
+      img {
+        // border-radius: 1rem 1rem 0 0;
       }
-      @media ${({ theme }) => theme.allBreakpoints('L')} {
-        width: 100%;
-        img {
-          border-radius: 1rem 1rem 0 0;
-        }
-      }
-    `};
+    }
+  `};
 `;
 
 const CopyWrapper = styled.div`
@@ -106,6 +121,8 @@ const Time = styled(Text)`
 
 const Image = styled(Picture)`
   display: flex;
+  // To allow us to zoom the image
+  overflow: hidden;
 `;
 
 export {

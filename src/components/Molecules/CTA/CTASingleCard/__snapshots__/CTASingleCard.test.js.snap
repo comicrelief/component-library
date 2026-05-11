@@ -388,22 +388,19 @@ exports[`renders correctly with data prop 1`] = `
 
 @media (min-width:740px) {
   .c4 {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
     -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
     -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
     transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
   }
 
   .c4:hover,
   .c4:focus {
-    -webkit-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
-    transform: translateY(-10px);
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
   }
 
   .c4:hover {
@@ -913,22 +910,19 @@ exports[`renders correctly without image 1`] = `
 
 @media (min-width:740px) {
   .c4 {
-    -webkit-transition: -webkit-transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
-    -webkit-transform-origin: center;
-    -ms-transform-origin: center;
-    transform-origin: center;
     -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
     -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
     transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
   }
 
   .c4:hover,
   .c4:focus {
-    -webkit-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
-    transform: translateY(-10px);
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
   }
 
   .c4:hover {

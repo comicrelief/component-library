@@ -40,15 +40,15 @@ const ArticleTeaser = ({
       <ImageWrapper category={category}>
         <Image
           imageLow={
-              !category && category !== ''
-                ? imageLow
-                : handleCampaignLogo(category)
-            }
+            !category && category !== ''
+              ? imageLow
+              : handleCampaignLogo(category)
+          }
           images={
-              !category && category !== ''
-                ? images
-                : handleCampaignLogo(category)
-            }
+            !category && category !== ''
+              ? images
+              : handleCampaignLogo(category)
+          }
           image={
             !category && category !== ''
               ? image
@@ -61,10 +61,10 @@ const ArticleTeaser = ({
         />
       </ImageWrapper>
       <CopyWrapper category={category}>
-        { date && (
-        <Date size="xs" weight="bold">
-          {date}
-        </Date>
+        {date && (
+          <Date size="xs" weight="bold">
+            {date}
+          </Date>
         )}
         <Title
           time={time}
@@ -73,9 +73,9 @@ const ArticleTeaser = ({
           {title}
         </Title>
         {time && (
-        <Time size="xs" weight="400" color="grey_dark">
-          {time}
-        </Time>
+          <Time size="xs" weight="400" color="grey_dark">
+            {time}
+          </Time>
         )}
       </CopyWrapper>
     </Link>
