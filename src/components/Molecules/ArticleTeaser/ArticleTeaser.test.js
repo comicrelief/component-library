@@ -62,13 +62,13 @@ it('renders article teaser correctly', () => {
     .c4 {
       display: block;
       width: 100%;
-      height: 100%;
+      height: auto;
       position: relative;
     }
 
     .c6 {
       width: 100%;
-      height: 100%;
+      height: auto;
       display: block;
       object-fit: cover;
     }
@@ -262,7 +262,7 @@ it('renders article teaser correctly', () => {
         >
           <div
             className="c4 c5"
-            height="100%"
+            height="auto"
             width="100%"
           >
             <img
@@ -272,7 +272,7 @@ it('renders article teaser correctly', () => {
               data-sizes="auto"
               data-src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
               data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
-              height="100%"
+              height="auto"
               src="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
               srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
               width="100%"
@@ -354,13 +354,13 @@ it('renders press realese correctly', () => {
     .c4 {
       display: block;
       width: 80px;
-      height: 80px;
+      height: auto;
       position: relative;
     }
 
     .c6 {
       width: 80px;
-      height: 80px;
+      height: auto;
       display: block;
       object-fit: cover;
     }
@@ -529,7 +529,7 @@ it('renders press realese correctly', () => {
         >
           <div
             className="c4 c5"
-            height="80px"
+            height="auto"
             width="80px"
           >
             <img
@@ -539,7 +539,7 @@ it('renders press realese correctly', () => {
               data-sizes="auto"
               data-src="mock.asset"
               data-srcset="mock.asset"
-              height="80px"
+              height="auto"
               src="mock.asset"
               srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
               width="80px"

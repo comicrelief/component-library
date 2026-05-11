@@ -1,120 +1,11 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
-
-import Text from '../../Atoms/Text/Text';
-import Picture from '../../Atoms/Picture/Picture';
-import link from '../../Atoms/Link/Link';
-import spacing from '../../../theme/shared/spacing';
-import SRLogo from '../../Atoms/Logo/assets/sr-logo.svg';
-import CRLogo from '../../Atoms/Logo/assets/cr-logo.svg';
-import RNDLogo from './assets/RND-Logo-2026.png';
-import defaultBoxShadow from '../../../theme/shared/boxShadows';
-
-/**
- * Article Teaser
- */
-const Wrapper = styled.article`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  background-color: ${({ theme }) => theme.color('white')};
-  border-radius: 1rem;
-  ${defaultBoxShadow()}
-  transition: all 0.2s;
-  &:hover {
-  ${defaultBoxShadow(true)}
-    transform: translateY(-4px);
-  }
-`;
-
-const Link = styled(link)`
-  padding: 0;
-  display: flex;
-  height: 100%;
-  flex-direction: ${({ category }) => (category || category === '' ? 'row' : 'column')};
-  align-items: ${({ category }) => (category || category === '') && 'center'};
-  text-decoration: none;
-  color: inherit;
-  width: 100%;
-
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex-direction: row;
-  }
-
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    flex-direction: ${({ category }) => !category && category !== '' && 'column'};
-  }
-`;
-
-const ImageWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  ${({ category }) => (category || category === '')
-    && css`
-      padding: ${spacing('md')} 0 ${spacing('md')} ${spacing('md')};
-      img {
-        border-radius: 0;
-      }
-    `};
-
-  ${({ category }) => !category
-    && category !== ''
-    && css`
-      img {
-        border-radius: 1rem 1rem 0 0;
-      }
-      @media ${({ theme }) => theme.allBreakpoints('M')} {
-        width: 45%;
-        img {
-          border-radius: 1rem 0 0 1rem;
-        }
-      }
-      @media ${({ theme }) => theme.allBreakpoints('L')} {
-        width: 100%;
-        img {
-          border-radius: 1rem 1rem 0 0;
-        }
-      }
-    `};
-`;
-
-const CopyWrapper = styled.div`
-  padding: ${spacing('l')};
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  ${({ category }) => !category
-    && category !== ''
-    && css`
-      @media ${({ theme }) => theme.allBreakpoints('M')} {
-        width: 55%;
-      }
-    `};
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    width: 100%;
-  }
-`;
-
-const Title = styled(Text)`
-  margin: ${({ time }) => (time ? `0 0 ${spacing('md')}` : '0')};
-`;
-
-const Date = styled(Text)`
-  display: block;
-  margin-bottom: ${spacing('md')};
-`;
-
-const Time = styled(Text)`
-  display: block;
-  margin-top: auto;
-`;
-
-const Image = styled(Picture)`
-  display: flex;
-`;
+import SRLogo from './assets/CR SR Logo_RGB_RGB.png';
+import CRLogo from './assets/CR_LOGO_RED_RGB.png';
+import RNDLogo from './assets/CR_RND22_LOGO_RGB.png';
+import {
+  Wrapper, Link, ImageWrapper, CopyWrapper, Title, Date, Time, Image
+} from './ArticleTeaser.style';
 
 const handleCampaignLogo = category => {
   switch (category) {
@@ -166,7 +57,7 @@ const ArticleTeaser = ({
           alt={alt}
           objectFit="cover"
           width={category || category === '' ? logoSize : '100%'}
-          height={category || category === '' ? logoSize : '100%'}
+          height="auto"
         />
       </ImageWrapper>
       <CopyWrapper category={category}>
