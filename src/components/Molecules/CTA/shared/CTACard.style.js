@@ -111,7 +111,7 @@ const CardLink = styled.a`
 
     // Desktop-only hover effects
     @media ${({ theme }) => theme.allBreakpoints('M')} {
-    ${bounceUpAnimation(true, 4, 2)};
+      ${bounceUpAnimation(true, 4, 2)};
 
       &:hover {
         ${defaultBoxShadow(true)}
