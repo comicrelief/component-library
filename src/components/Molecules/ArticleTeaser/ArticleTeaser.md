@@ -64,5 +64,27 @@ const defaultData = require('../../../styleguide/data/data').defaultData;<div>
     />
   </div>
 
+  <div style={{ width: '100%', padding: '1rem'}}>
+    <ArticleTeaser
+      href="/test"
+      category="Red Nose Day"
+      title="Red Nose Day Press Release"
+      date=" 01 July 2019"
+      alt="Image's description"
+      logoSize="80px"
+    />
+  </div>
+
+  <div style={{ width: '100%', padding: '1rem'}}>
+    <ArticleTeaser
+      href="/test"
+      category="Sport Relief"
+      title="Sport Relief Press Release"
+      date=" 01 July 2019"
+      alt="Image's description"
+      logoSize="80px"
+    />
+  </div>
+
 </div>
 ```

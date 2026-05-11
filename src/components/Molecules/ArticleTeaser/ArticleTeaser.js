@@ -6,9 +6,9 @@ import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import link from '../../Atoms/Link/Link';
 import spacing from '../../../theme/shared/spacing';
-import SR from '../../Atoms/Logo/assets/sr-logo.svg';
-import CR from '../../Atoms/Logo/assets/cr-logo.svg';
-import RND from './assets/RND.png';
+import SRLogo from '../../Atoms/Logo/assets/sr-logo.svg';
+import CRLogo from '../../Atoms/Logo/assets/cr-logo.svg';
+import RNDLogo from './assets/RND-Logo-2026.png';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 /**
@@ -119,13 +119,13 @@ const Image = styled(Picture)`
 const handleCampaignLogo = category => {
   switch (category) {
     case 'Comic Relief':
-      return CR;
+      return CRLogo;
     case 'Sport Relief':
-      return SR;
+      return SRLogo;
     case 'Red Nose Day':
-      return RND;
+      return RNDLogo;
     default:
-      return CR;
+      return CRLogo;
   }
 };
 
