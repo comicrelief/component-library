@@ -3,6 +3,8 @@ import { css } from 'styled-components';
 /**
  * Reusable imageZoom snippet
  *
+ * @param {object} params - allows us to stipulate specific params based on need.
+ *
  * @param {boolean} zoomed - Whether or not we're applying our base styles or
  * the active/hovered styles, typically when a parent element has been hovered.
  *

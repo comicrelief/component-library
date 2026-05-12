@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { initial } from 'lodash';
 import { bounceUpAnimation } from '../../../../theme/shared/animations';
 import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import fontHelper from '../../../../theme/crTheme/fontHelper';
