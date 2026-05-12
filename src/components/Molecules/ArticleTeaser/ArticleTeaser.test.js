@@ -59,7 +59,7 @@ it('renders article teaser correctly', () => {
       line-height: inherit;
     }
 
-    .c14 {
+    .c15 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
@@ -71,7 +71,7 @@ it('renders article teaser correctly', () => {
       line-height: 1.25rem;
     }
 
-    .c14 span {
+    .c15 span {
       font-size: inherit;
       line-height: inherit;
     }
@@ -104,13 +104,13 @@ it('renders article teaser correctly', () => {
       text-decoration: none;
     }
 
-    .c21 {
+    .c23 {
       display: inline-block;
       color: #FFFFFF;
       fill: currentColor;
     }
 
-    .c20 {
+    .c22 {
       display: -webkit-inline-box;
       display: -webkit-inline-flex;
       display: -ms-inline-flexbox;
@@ -134,7 +134,7 @@ it('renders article teaser correctly', () => {
       transform-origin: center;
     }
 
-    .c19 {
+    .c21 {
       width: 32px;
       height: 32px;
       border-radius: 50%;
@@ -157,7 +157,7 @@ it('renders article teaser correctly', () => {
       overflow: hidden;
     }
 
-    .c18 {
+    .c19 {
       height: 2rem;
       position: absolute;
       top: 50%;
@@ -168,11 +168,11 @@ it('renders article teaser correctly', () => {
       content: "";
     }
 
-    .c15 {
+    .c16 {
       position: relative;
     }
 
-    .c17 {
+    .c18 {
       height: 4px;
       width: 100%;
       position: absolute;
@@ -189,6 +189,20 @@ it('renders article teaser correctly', () => {
       display: -ms-flexbox;
       display: flex;
       overflow: hidden;
+    }
+
+    .c14 {
+      width: 100%;
+      height: auto;
+      position: relative;
+      margin-top: 2rem;
+      padding-right: 2.5rem;
+    }
+
+    .c14 span {
+      font-weight: bold;
+      font-size: 1rem;
+      color: #E52630;
     }
 
     .c0 {
@@ -226,6 +240,10 @@ it('renders article teaser correctly', () => {
       transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
     }
 
+    .c0 .c20 {
+      background-color: #E52630;
+    }
+
     .c0:hover {
       box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
     }
@@ -236,8 +254,12 @@ it('renders article teaser correctly', () => {
       transform: scale(1.04);
     }
 
-    .c0:hover:hover .c16 {
+    .c0:hover .c17 {
       opacity: 1;
+    }
+
+    .c0:hover .c13 span {
+      color: #E52630;
     }
 
     .c2 {
@@ -293,20 +315,6 @@ it('renders article teaser correctly', () => {
       margin-bottom: 1rem;
     }
 
-    .c13 {
-      width: 100%;
-      height: auto;
-      position: relative;
-      margin-top: 2rem;
-      padding-right: 2.5rem;
-    }
-
-    .c13 span {
-      font-weight: bold;
-      font-size: 1rem;
-      color: #E52630;
-    }
-
     @media (min-width:740px) {
       .c9 {
         font-size: 1rem;
@@ -336,16 +344,38 @@ it('renders article teaser correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c14 {
+      .c15 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
     @media (min-width:1024px) {
-      .c14 {
+      .c15 {
         font-size: 1.125rem;
         line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c14 span {
+        -webkit-transition: color 0.15s 0.1s;
+        transition: color 0.15s 0.1s;
+        color: #000000;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c0 .c20 {
+        -webkit-transition: background-color 0.15s 0.1s;
+        transition: background-color 0.15s 0.1s;
+        background-color: #000000;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c0:hover .c20 {
+        background-color: #E52630;
       }
     }
 
@@ -386,12 +416,6 @@ it('renders article teaser correctly', () => {
     @media (min-width:1024px) {
       .c8 {
         width: 100%;
-      }
-    }
-
-    @media (min-width:740px) {
-      .c13 span {
-        color: #000000;
       }
     }
 
@@ -440,29 +464,29 @@ it('renders article teaser correctly', () => {
             News article
           </h4>
           <div
-            className="c13"
+            className="c13 c14"
           >
             <span
-              className="c14 c15"
+              className="c15 c16"
             >
               Learn more
               <img
                 alt="Learn more"
-                className="c16 c17"
+                className="c17 c18"
                 src="mock.asset"
               />
             </span>
             <div
-              className="c18"
+              className="c19"
             >
               <div
-                className="c19"
+                className="c20 c21"
               >
                 <span
-                  className="c20"
+                  className="c22"
                 >
                   <svg
-                    className="c21"
+                    className="c23"
                     fill="none"
                     height="15"
                     viewBox="0 0 15 15"
@@ -537,7 +561,7 @@ it('renders press realese correctly', () => {
       line-height: inherit;
     }
 
-    .c14 {
+    .c15 {
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
       font-weight: 400;
       text-transform: inherit;
@@ -549,7 +573,7 @@ it('renders press realese correctly', () => {
       line-height: 1.25rem;
     }
 
-    .c14 span {
+    .c15 span {
       font-size: inherit;
       line-height: inherit;
     }
@@ -582,13 +606,13 @@ it('renders press realese correctly', () => {
       text-decoration: none;
     }
 
-    .c21 {
+    .c23 {
       display: inline-block;
       color: #FFFFFF;
       fill: currentColor;
     }
 
-    .c20 {
+    .c22 {
       display: -webkit-inline-box;
       display: -webkit-inline-flex;
       display: -ms-inline-flexbox;
@@ -612,7 +636,7 @@ it('renders press realese correctly', () => {
       transform-origin: center;
     }
 
-    .c19 {
+    .c21 {
       width: 32px;
       height: 32px;
       border-radius: 50%;
@@ -635,7 +659,7 @@ it('renders press realese correctly', () => {
       overflow: hidden;
     }
 
-    .c18 {
+    .c19 {
       height: 2rem;
       position: absolute;
       top: 50%;
@@ -646,11 +670,11 @@ it('renders press realese correctly', () => {
       content: "";
     }
 
-    .c15 {
+    .c16 {
       position: relative;
     }
 
-    .c17 {
+    .c18 {
       height: 4px;
       width: 100%;
       position: absolute;
@@ -667,6 +691,20 @@ it('renders press realese correctly', () => {
       display: -ms-flexbox;
       display: flex;
       overflow: hidden;
+    }
+
+    .c14 {
+      width: 100%;
+      height: auto;
+      position: relative;
+      margin-top: 2rem;
+      padding-right: 2.5rem;
+    }
+
+    .c14 span {
+      font-weight: bold;
+      font-size: 1rem;
+      color: #E52630;
     }
 
     .c0 {
@@ -704,6 +742,10 @@ it('renders press realese correctly', () => {
       transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
     }
 
+    .c0 .c20 {
+      background-color: #E52630;
+    }
+
     .c0:hover {
       box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
     }
@@ -714,8 +756,12 @@ it('renders press realese correctly', () => {
       transform: scale(1);
     }
 
-    .c0:hover:hover .c16 {
+    .c0:hover .c17 {
       opacity: 1;
+    }
+
+    .c0:hover .c13 span {
+      color: #E52630;
     }
 
     .c2 {
@@ -777,20 +823,6 @@ it('renders press realese correctly', () => {
       margin-bottom: 1rem;
     }
 
-    .c13 {
-      width: 100%;
-      height: auto;
-      position: relative;
-      margin-top: 2rem;
-      padding-right: 2.5rem;
-    }
-
-    .c13 span {
-      font-weight: bold;
-      font-size: 1rem;
-      color: #E52630;
-    }
-
     @media (min-width:740px) {
       .c9 {
         font-size: 1rem;
@@ -820,16 +852,38 @@ it('renders press realese correctly', () => {
     }
 
     @media (min-width:740px) {
-      .c14 {
+      .c15 {
         font-size: 1rem;
         line-height: 1.25rem;
       }
     }
 
     @media (min-width:1024px) {
-      .c14 {
+      .c15 {
         font-size: 1.125rem;
         line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c14 span {
+        -webkit-transition: color 0.15s 0.1s;
+        transition: color 0.15s 0.1s;
+        color: #000000;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c0 .c20 {
+        -webkit-transition: background-color 0.15s 0.1s;
+        transition: background-color 0.15s 0.1s;
+        background-color: #000000;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c0:hover .c20 {
+        background-color: #E52630;
       }
     }
 
@@ -848,12 +902,6 @@ it('renders press realese correctly', () => {
     @media (min-width:1024px) {
       .c8 {
         width: 100%;
-      }
-    }
-
-    @media (min-width:740px) {
-      .c13 span {
-        color: #000000;
       }
     }
 
@@ -902,29 +950,29 @@ it('renders press realese correctly', () => {
             Press Release
           </h4>
           <div
-            className="c13"
+            className="c13 c14"
           >
             <span
-              className="c14 c15"
+              className="c15 c16"
             >
               Learn more
               <img
                 alt="Learn more"
-                className="c16 c17"
+                className="c17 c18"
                 src="mock.asset"
               />
             </span>
             <div
-              className="c18"
+              className="c19"
             >
               <div
-                className="c19"
+                className="c20 c21"
               >
                 <span
-                  className="c20"
+                  className="c22"
                 >
                   <svg
-                    className="c21"
+                    className="c23"
                     fill="none"
                     height="15"
                     viewBox="0 0 15 15"

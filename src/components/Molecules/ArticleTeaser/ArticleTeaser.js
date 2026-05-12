@@ -47,7 +47,7 @@ const ArticleTeaser = ({
 
   return (
     <Wrapper isNewsTeaser={isNewsTeaser}>
-      <Link href={href} type="standard" category={category} underline={false}>
+      <Link href={href} type="standard" category={category} isNewsTeaser={isNewsTeaser} underline={false}>
         <ImageWrapper isNewsTeaser={isNewsTeaser}>
           <Image
             imageLow={
@@ -106,9 +106,7 @@ const ArticleTeaser = ({
               </ArrowIconWrapper>
             </CtaIconWrapper>
           </CtaWrapper>
-
         </CopyWrapper>
-
       </Link>
     </Wrapper>
   );

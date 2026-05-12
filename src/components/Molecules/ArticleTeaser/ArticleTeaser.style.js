@@ -7,11 +7,32 @@ import Picture from '../../Atoms/Picture/Picture';
 import link from '../../Atoms/Link/Link';
 import { bounceUpAnimation } from '../../../theme/shared/animations';
 import { CtaTextUnderline } from '../HeroBanner/HeroBanner.style';
+import { ArrowIconWrapper } from '../shared/ctaArrow/CtaArrowCircle.style';
 
 const Image = styled(Picture)`
   display: flex;
-  // To allow us to zoom the image
   overflow: hidden;
+`;
+
+const CtaWrapper = styled.div`
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: 2rem;
+  padding-right: 2.5rem;
+
+  span {
+    font-weight: bold;
+    font-size: 1rem;
+    color: ${({ theme }) => theme.color('red')};
+  }
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    span {
+      transition: color 0.15s 0.1s;
+      color: ${({ theme }) => theme.color('black')};
+    }
+  }
 `;
 
 const Wrapper = styled.article`
@@ -34,6 +55,15 @@ const Wrapper = styled.article`
     `)};
   }
 
+  ${ArrowIconWrapper} {
+    background-color: ${({ theme }) => theme.color('red')};
+
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      transition: background-color 0.15s 0.1s;
+      background-color: ${({ theme }) => theme.color('black')};
+    }
+  }
+
   &:hover {
     ${defaultBoxShadow(true)}
 
@@ -46,9 +76,20 @@ const Wrapper = styled.article`
     }
 
     // Fade in the 'Alt CTA'-style squiggley underline:
-    &:hover {
-      ${CtaTextUnderline} {
-        opacity: 1;
+    ${CtaTextUnderline} {
+    // TODO: should this be always visible on XS-SM, given we're not doing hover styles there?
+      opacity: 1;
+    }
+
+    ${ArrowIconWrapper} {
+      @media ${({ theme }) => theme.allBreakpoints('M')} {
+        background-color: ${({ theme }) => theme.color('red')};
+      }
+    }
+
+    ${CtaWrapper} {
+      span {
+        color: ${({ theme }) => theme.color('red')};
       }
     }
   }
@@ -58,8 +99,8 @@ const Link = styled(link)`
   padding: 0;
   display: flex;
   height: 100%;
-  flex-direction: ${({ category }) => (category || category === '' ? 'row' : 'column')};
-  align-items: ${({ category }) => (category || category === '') && 'center'};
+  flex-direction: ${({ isNewsTeaser }) => (!isNewsTeaser ? 'row' : 'column')};
+  align-items: ${({ isNewsTeaser }) => (!isNewsTeaser) && 'center'};
   text-decoration: none;
   color: inherit;
   width: 100%;
@@ -69,10 +110,8 @@ const Link = styled(link)`
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    flex-direction: ${({ category }) => !category && category !== '' && 'column'};
+    flex-direction: ${({ isNewsTeaser }) => isNewsTeaser && 'column'};
   }
-
-
 `;
 
 const ImageWrapper = styled.div`
@@ -127,30 +166,6 @@ const Time = styled(Text)`
   margin-top: auto;
 `;
 
-const CtaWrapper = styled.div`
-  width: 100%;
-  height: auto;
-  position: relative;
-  margin-top: 2rem;
-  padding-right: 2.5rem;
-  
-  span {
-    font-weight: bold;
-    font-size: 1rem;
-    color: ${({ theme }) => theme.color('red')};
-  }
-    
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    span {
-      color: ${({ theme }) => theme.color('black')};
-    }
-  }
-`;
-
-const ExampleWrapper = styled.div`
-  width: 666px;
-`;
-
 export {
-  Wrapper, Link, ImageWrapper, CopyWrapper, Title, Date, Time, Image, CtaWrapper, ExampleWrapper
+  Wrapper, Link, ImageWrapper, CopyWrapper, Title, Date, Time, Image, CtaWrapper
 };
