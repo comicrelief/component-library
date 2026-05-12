@@ -14,7 +14,7 @@ const Wrapper = styled.article`
   background-color: ${({ theme }) => theme.color('white')};
   border-radius: 1rem;
   overflow: hidden;
-  ${bounceUpAnimation(true, 4, 2)};
+  ${bounceUpAnimation(true, 10, 2)};
   ${defaultBoxShadow()}
 
   img {
@@ -134,6 +134,10 @@ const Image = styled(Picture)`
   overflow: hidden;
 `;
 
+const CtaWrapper = styled.div`
+  position: relative;
+`;
+
 export {
-  Wrapper, Link, ImageWrapper, CopyWrapper, Title, Date, Time, Image
+  Wrapper, Link, ImageWrapper, CopyWrapper, Title, Date, Time, Image, CtaWrapper
 };
