@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
+import imageZoom from '../../../theme/shared/imageZoom';
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import link from '../../Atoms/Link/Link';
@@ -17,16 +18,14 @@ const Wrapper = styled.article`
   ${defaultBoxShadow()}
 
   img {
-    // Zoom the image in slightly by default so the 'bounce' animation doesn't cause issues
-    transform: scale(1.02);
-    transition: transform 0.3s cubic-bezier(0.65, -0.19, 0.37, 1.16);
+    ${imageZoom()}
   }
 
   &:hover {
     ${defaultBoxShadow(true)}
 
     img {
-      transform: scale(1.04);
+      ${imageZoom({ zoomed: true })}
     }
   }
 `;

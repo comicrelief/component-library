@@ -205,9 +205,9 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
     -webkit-transform: scale(1.02);
     -ms-transform: scale(1.02);
     transform: scale(1.02);
-    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-    -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+    -webkit-transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+    transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
   }
 
   .c2:has(+ div a:hover) > div > img {
@@ -533,9 +533,9 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
     -webkit-transform: scale(1.02);
     -ms-transform: scale(1.02);
     transform: scale(1.02);
-    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-    -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+    -webkit-transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+    transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
     min-height: 450px;
   }
 
@@ -1154,9 +1154,9 @@ exports[`renders "Text Banner" Hero Banner correctly 2`] = `
     -webkit-transform: scale(1.02);
     -ms-transform: scale(1.02);
     transform: scale(1.02);
-    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-    -webkit-transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
-    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+    -webkit-transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+    transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
   }
 
   .c2:has(+ div a:hover) > div > img {
