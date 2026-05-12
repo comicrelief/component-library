@@ -443,12 +443,12 @@ it('renders article teaser correctly', () => {
             className="c13"
           >
             <span
-              className="c14 c15 cta"
+              className="c14 c15"
             >
               Learn more
               <img
                 alt="Learn more"
-                className="c16 c17 cta-text-underline"
+                className="c16 c17"
                 src="mock.asset"
               />
             </span>
@@ -905,12 +905,12 @@ it('renders press realese correctly', () => {
             className="c13"
           >
             <span
-              className="c14 c15 cta"
+              className="c14 c15"
             >
               Learn more
               <img
                 alt="Learn more"
-                className="c16 c17 cta-text-underline"
+                className="c16 c17"
                 src="mock.asset"
               />
             </span>

@@ -6,9 +6,7 @@ import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import link from '../../Atoms/Link/Link';
 import { bounceUpAnimation } from '../../../theme/shared/animations';
-import {
-  CtaTextUnderline
-} from '../HeroBanner/HeroBanner.style';
+import { CtaTextUnderline } from '../HeroBanner/HeroBanner.style';
 
 const Image = styled(Picture)`
   display: flex;
