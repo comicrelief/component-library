@@ -13,7 +13,7 @@
           "body": "Load of text here",
           "backgroundColour": "White",
           "link": "/test",
-          "linkLabel": "test go",
+          "linkLabel": "Learn more",
           "image": {
             "description": "",
             "gatsbyImageData": {
@@ -77,7 +77,7 @@
           "body": "Third card",
           "backgroundColour": "White",
           "link": "/test",
-          "linkLabel": "test go",
+          "linkLabel": "Learn more",
           "image": {
             "description": "",
             "gatsbyImageData": {

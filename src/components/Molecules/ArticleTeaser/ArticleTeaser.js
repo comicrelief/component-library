@@ -4,8 +4,16 @@ import SRLogo from './assets/SRlogo.svg';
 import CRLogo from './assets/CRlogo.svg';
 import RNDLogo from './assets/RNDlogo.svg';
 import {
-  Wrapper, Link, ImageWrapper, CopyWrapper, Title, Date, Time, Image
+  Wrapper, Link, ImageWrapper, CopyWrapper, Title, Date, Time, Image, CtaWrapper
 } from './ArticleTeaser.style';
+
+import altCtaUnderline from '../../../theme/shared/assets/alt_cta_underline.svg';
+import { ArrowIconWrapper, ArrowIconInner } from '../shared/ctaArrow/CtaArrowCircle.style';
+import ArrowIcon from '../shared/ctaArrow/ArrowIcon';
+
+import {
+  CtaIconWrapper, CtaText, CtaTextUnderline
+} from '../HeroBanner/HeroBanner.style';
 
 const handleCampaignLogo = category => {
   switch (category) {
@@ -34,53 +42,78 @@ const ArticleTeaser = ({
   category = null,
   logoSize = null,
   time = null
-}) => (
-  <Wrapper category={category}>
-    <Link href={href} type="standard" category={category} underline={false}>
-      <ImageWrapper category={category}>
-        <Image
-          imageLow={
-            !category && category !== ''
+}) => {
+  const isNewsTeaser = !category && category !== '';
+
+  return (
+    <Wrapper isNewsTeaser={isNewsTeaser}>
+      <Link href={href} type="standard" category={category} underline={false}>
+        <ImageWrapper isNewsTeaser={isNewsTeaser}>
+          <Image
+            imageLow={
+            isNewsTeaser
               ? imageLow
               : handleCampaignLogo(category)
           }
-          images={
-            !category && category !== ''
+            images={
+            isNewsTeaser
               ? images
               : handleCampaignLogo(category)
           }
-          image={
-            !category && category !== ''
+            image={
+            isNewsTeaser
               ? image
               : handleCampaignLogo(category)
           }
-          alt={alt}
-          objectFit="cover"
-          width={category || category === '' ? logoSize : '100%'}
-          height="auto"
-        />
-      </ImageWrapper>
-      <CopyWrapper category={category}>
-        {date && (
+            alt={alt}
+            objectFit="cover"
+            width={!isNewsTeaser ? logoSize : '100%'}
+            height="auto"
+          />
+        </ImageWrapper>
+        <CopyWrapper isNewsTeaser={isNewsTeaser}>
+          {date && (
           <Date size="xs" weight="bold">
             {date}
           </Date>
-        )}
-        <Title
-          time={time}
-          tag="h4"
-        >
-          {title}
-        </Title>
-        {time && (
+          )}
+          <Title
+            time={time}
+            tag="h4"
+          >
+            {title}
+          </Title>
+          {time && (
           <Time size="xs" weight="400" color="grey_dark">
             {time}
           </Time>
-        )}
-      </CopyWrapper>
-    </Link>
-  </Wrapper>
-);
+          )}
+
+          <CtaWrapper>
+            <CtaText className="cta">
+              Learn more
+              <CtaTextUnderline
+                src={altCtaUnderline}
+                alt="Learn more"
+                className="cta-text-underline"
+              />
+            </CtaText>
+
+            <CtaIconWrapper>
+              <ArrowIconWrapper $preventHoverColourChange>
+                <ArrowIconInner>
+                  <ArrowIcon />
+                </ArrowIconInner>
+              </ArrowIconWrapper>
+            </CtaIconWrapper>
+          </CtaWrapper>
+
+        </CopyWrapper>
+
+      </Link>
+    </Wrapper>
+  );
+};
 
 ArticleTeaser.propTypes = {
   images: PropTypes.string,

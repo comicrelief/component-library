@@ -66,7 +66,7 @@ exports[`handles data structure correctly 1`] = `
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
                 >
-                  test go
+                  Learn more
                   <img
                     alt=""
                     aria-hidden="true"
@@ -202,7 +202,7 @@ exports[`handles data structure correctly 1`] = `
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
                 >
-                  test go
+                  Learn more
                   <img
                     alt=""
                     aria-hidden="true"
@@ -376,7 +376,7 @@ exports[`renders 2 columns layout correctly 1`] = `
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
                 >
-                  test go
+                  Learn more
                   <img
                     alt=""
                     aria-hidden="true"
@@ -512,7 +512,7 @@ exports[`renders 2 columns layout correctly 1`] = `
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
                 >
-                  test go
+                  Learn more
                   <img
                     alt=""
                     aria-hidden="true"
@@ -686,7 +686,7 @@ exports[`renders carousel mode correctly 1`] = `
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
                 >
-                  test go
+                  Learn more
                   <img
                     alt=""
                     aria-hidden="true"
@@ -822,7 +822,7 @@ exports[`renders carousel mode correctly 1`] = `
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
                 >
-                  test go
+                  Learn more
                   <img
                     alt=""
                     aria-hidden="true"
@@ -996,7 +996,7 @@ exports[`renders correctly with data prop 1`] = `
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
                 >
-                  test go
+                  Learn more
                   <img
                     alt=""
                     aria-hidden="true"
@@ -1132,7 +1132,7 @@ exports[`renders correctly with data prop 1`] = `
                 <span
                   className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
                 >
-                  test go
+                  Learn more
                   <img
                     alt=""
                     aria-hidden="true"
