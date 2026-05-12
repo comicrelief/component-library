@@ -18,6 +18,7 @@ test.describe('impact slider component - 1', () => {
     console.log('Target initially: ', moneyBuyText);
 
     if (slider) {
+      await slider.scrollIntoViewIfNeeded();
       // Get the bounding box of the slider
       let sliderBound = await slider.boundingBox();
 
@@ -66,6 +67,7 @@ test.describe('impact slider component - 1', () => {
     console.log('Target initially: ', moneyBuyText);
 
     if (slider) {
+      await slider.scrollIntoViewIfNeeded();
       // Get the bounding box of the slider
       let sliderBound = await slider.boundingBox();
 
@@ -114,6 +116,7 @@ test.describe('impact slider component - 1', () => {
     console.log('Target initially: ', moneyBuyText);
 
     if (slider) {
+      await slider.scrollIntoViewIfNeeded();
       // Get the bounding box of the slider
       let sliderBound = await slider.boundingBox();
 
@@ -164,6 +167,7 @@ test.describe('impact slider component - 1', () => {
 
     // drag the slider to the right to increase the amount to £80
     if (slider) {
+      await slider.scrollIntoViewIfNeeded();
       // Get the bounding box of the slider
       sliderBound = await slider.boundingBox();
 
@@ -201,6 +205,7 @@ test.describe('impact slider component - 1', () => {
 
     // drag the slider to the left to decrease the amount to £50
     if (slider) {
+      await slider.scrollIntoViewIfNeeded();
       // Get the bounding box of the slider
       sliderBound = await slider.boundingBox();
 
@@ -259,6 +264,7 @@ test.describe('impact slider component - 2', () => {
     console.log('Target initially: ', moneyBuyText);
 
     if (slider) {
+      await slider.scrollIntoViewIfNeeded();
       // Get the bounding box of the slider
       let sliderBound = await slider.boundingBox();
 

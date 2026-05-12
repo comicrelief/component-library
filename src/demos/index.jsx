@@ -103,8 +103,7 @@ import EmailSignUpExample from '../components/Organisms/EmailSignUp/EmailSignUpE
 import emailSignUpExampleSrc from '../components/Organisms/EmailSignUp/EmailSignUpExample.jsx?raw';
 import MarketingPreferencesDSExample from '../components/Organisms/MarketingPreferencesDS/MarketingPreferencesDSExample.jsx';
 import marketingPreferencesDSExampleSrc from '../components/Organisms/MarketingPreferencesDS/MarketingPreferencesDSExample.jsx?raw';
-import MembershipExample from '../components/Organisms/Membership/MembershipExample.jsx';
-import membershipExampleSrc from '../components/Organisms/Membership/MembershipExample.jsx?raw';
+import { MembershipExample1, MembershipExample2 } from '../components/Organisms/Membership/MembershipExample.jsx';
 import DonateBannerExample from '../components/Organisms/DonateBanner/DonateBannerExample.jsx';
 import donateBannerExampleSrc from '../components/Organisms/DonateBanner/DonateBannerExample.jsx?raw';
 import { EmailBannerExample1, EmailBannerExample2, EmailBannerExample3, EmailBannerExample4, EmailBannerExample5 } from '../components/Organisms/EmailBanner/EmailBannerExample.jsx';
@@ -203,7 +202,7 @@ export const organisms = [
   { name: 'Header2025', demo: demo(Header2025Example, header2025ExampleSrc) },
   { name: 'ImpactSlider', examples: [demo(ImpactSliderExample1, impactSliderExample1Src), demo(ImpactSliderExample2, impactSliderExample2Src)] },
   { name: 'MarketingPreferencesDSForm', demo: demo(MarketingPreferencesDSExample, marketingPreferencesDSExampleSrc) },
-  { name: 'Membership', demo: demo(MembershipExample, membershipExampleSrc) },
+  { name: 'Membership', examples: [<MembershipExample1 />, <MembershipExample2 />] },
   { name: 'RichtextCarousel', demo: demo(RichtextCarouselExample, richtextCarouselExampleSrc) },
   { name: 'WYMDCarousel', demo: demo(WYMDCarouselExample, wymdCarouselExampleSrc) },
 ];
