@@ -5,7 +5,6 @@ import defaultBoxShadow from '../../../theme/shared/boxShadows';
 import { ArrowIconWrapper, ArrowIconInner } from '../shared/ctaArrow/CtaArrowCircle.style';
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
-import imageZoom from '../../../theme/shared/imageZoom';
 
 // Lil helper function to streamline things somewhat:
 const handleVariant = variant => {
@@ -83,13 +82,17 @@ const MediaWrapper = styled.div`
     img {
       object-position: top center;
       height: 100%;
-      ${imageZoom()}
+
+      // Zoom the image in slightly by default so the 'bounce' animation doesn't cause issues
+      transform: scale(1.02);
+      transition: transform 0.4s cubic-bezier(0.68, -1.15, 0.265, 2.35);
+
       ${({ variant }) => (variant === variants.HALF_HEIGHT && 'min-height: 450px;')};  
    }
 
     &:has(+ div a:hover) {
       > div > img {
-        ${imageZoom({ zoomed: true })}
+        transform: scale(1.04);
       }
     }
   }
