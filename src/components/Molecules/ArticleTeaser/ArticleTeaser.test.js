@@ -304,6 +304,7 @@ it('renders article teaser correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+      width: 100%;
     }
 
     .c12 {
@@ -812,6 +813,7 @@ it('renders press realese correctly', () => {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
+      width: 100%;
     }
 
     .c12 {

@@ -141,6 +141,7 @@ const CopyWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
   ${({ isNewsTeaser }) => isNewsTeaser
     && css`
       @media ${({ theme }) => theme.allBreakpoints('M')} {
