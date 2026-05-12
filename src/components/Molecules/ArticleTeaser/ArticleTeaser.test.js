@@ -419,9 +419,9 @@ it('renders press realese correctly', () => {
     }
 
     .c0 img {
-      -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-      transform: scale(1);
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
       -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
       -webkit-transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
       transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
@@ -432,9 +432,9 @@ it('renders press realese correctly', () => {
     }
 
     .c0:hover img {
-      -webkit-transform: scale(1.04);
-      -ms-transform: scale(1.04);
-      transform: scale(1.04);
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
     }
 
     .c2 {

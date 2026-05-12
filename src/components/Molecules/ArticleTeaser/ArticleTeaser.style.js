@@ -21,7 +21,7 @@ const Wrapper = styled.article`
     // Given that this component is used for both 'Press Release' and 'News Article' teasers (the former
     // having 'category' is set to a non-null value), we need to tweak the styles a bit to best suit:
     ${({ category }) => ((category !== null) ? css`
-      ${imageZoom({ initialScale: 1 })}`
+      ${imageZoom({ initialScale: 0.9 })}`
     : css`
       ${imageZoom()}
     `)};
@@ -31,7 +31,11 @@ const Wrapper = styled.article`
     ${defaultBoxShadow(true)}
 
     img {
-      ${imageZoom({ zoomed: true })}
+      ${({ category }) => ((category !== null) ? css`
+        ${imageZoom({ zoomed: true, finalScale: 1 })}`
+    : css`
+        ${imageZoom({ zoomed: true })}
+      `)};
     }
   }
 `;
