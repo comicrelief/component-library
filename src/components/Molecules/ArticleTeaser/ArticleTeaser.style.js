@@ -18,7 +18,13 @@ const Wrapper = styled.article`
   ${defaultBoxShadow()}
 
   img {
-    ${imageZoom()}
+    // Given that this component is used for both 'Press Release' and 'News Article' teasers (the former
+    // having 'category' is set to a non-null value), we need to tweak the styles a bit to best suit:
+    ${({ category }) => ((category !== null) ? css`
+      ${imageZoom({ initialScale: 1 })}`
+    : css`
+      ${imageZoom()}
+    `)};
   }
 
   &:hover {

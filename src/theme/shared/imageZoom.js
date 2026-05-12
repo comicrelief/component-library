@@ -25,6 +25,9 @@ const imageZoom = (params = {}) => {
   return !zoomed ? css`
     transform: scale(${initialScale});
     transition: transform 0.3s cubic-bezier(0.65, -0.19, 0.37, 1.16);  
+    // TODO: Promo alt?
+    // transition: transform 0.4s cubic-bezier(0.68, -1.15, 0.265, 2.35);
+
   ` : css`
     transform: scale(${finalScale});
   `;

@@ -35,7 +35,7 @@ const ArticleTeaser = ({
   logoSize = null,
   time = null
 }) => (
-  <Wrapper>
+  <Wrapper category={category}>
     <Link href={href} type="standard" category={category} underline={false}>
       <ImageWrapper category={category}>
         <Image

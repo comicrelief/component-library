@@ -419,9 +419,9 @@ it('renders press realese correctly', () => {
     }
 
     .c0 img {
-      -webkit-transform: scale(1.02);
-      -ms-transform: scale(1.02);
-      transform: scale(1.02);
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
       -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
       -webkit-transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
       transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
