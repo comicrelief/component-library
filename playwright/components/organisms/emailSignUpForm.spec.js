@@ -20,7 +20,7 @@ test.describe('Email Signup Form component', () => {
 
     // validate firstname field
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').type('dwe$%£34');
-    await page.keyboard.press('Tab');
+    await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').blur();
 
     // firstname with special chars should show error message
     await expect(page.locator('label[for="first-name"]  div ~ span')).toContainText('This field only accepts letters and \' - and must start with a letter');
@@ -28,13 +28,13 @@ test.describe('Email Signup Form component', () => {
     // firstname starting with a space should show error message
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').fill('');
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').type(' test firstname');
-    await page.keyboard.press('Tab');
+    await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').blur();
     await expect(page.locator('label[for="first-name"]  div ~ span')).toContainText('This field only accepts letters and \' - and must start with a letter');
 
     // firstname starting with numbers should show error message
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').fill('');
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').type('1234567');
-    await page.keyboard.press('Tab');
+    await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').blur();
     await expect(page.locator('label[for="first-name"]  div ~ span')).toContainText('This field only accepts letters and \' - and must start with a letter');
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').fill('');
 
@@ -50,7 +50,7 @@ test.describe('Email Signup Form component', () => {
     // validate lastname field
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').fill('');
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').type('dwe$%£34');
-    await page.keyboard.press('Tab');
+    await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').blur();
 
     // lastname with special chars should show error message
     await expect(page.locator('label[for="last-name"]  div ~ span')).toContainText('This field only accepts letters and \' - and must start with a letter');
@@ -58,13 +58,13 @@ test.describe('Email Signup Form component', () => {
     // lastname starting with a space should show error message
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').fill('');
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').type(' test firstname');
-    await page.keyboard.press('Tab');
+    await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').blur();
     await expect(page.locator('label[for="last-name"]  div ~ span')).toContainText('This field only accepts letters and \' - and must start with a letter');
 
     // lastname starting with numbers should show error message
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').fill('');
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').type('1234567');
-    await page.keyboard.press('Tab');
+    await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').blur();
     await expect(page.locator('label[for="last-name"]  div ~ span')).toContainText('This field only accepts letters and \' - and must start with a letter');
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').fill('');
 

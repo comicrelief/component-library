@@ -34,15 +34,15 @@ test.describe('simple school lookup component', () => {
 
     // enter school name and click find address button
     await page.locator('input#school_lookup').type('St Paul');
-    await expect(page.locator('[data-preview="SimpleSchoolLookup"] > div > div > button[type="button"]')).toBeVisible();
-    await page.locator('[data-preview="SimpleSchoolLookup"] > div > div > button[type="button"]').click();
+    await expect(page.locator('[data-preview="SimpleSchoolLookup"] button[type="button"]')).toBeVisible();
+    await page.locator('[data-preview="SimpleSchoolLookup"] button[type="button"]').click();
     await expect(page.locator('label[for="school_lookup"] ~ div > ul[role="listbox"]')).toBeVisible();
 
     // clear school name and enter school postcode
     await page.locator('input#school_lookup').fill('');
     await page.locator('input#school_lookup').fill('EC4M 9AD');
-    await expect(page.locator('[data-preview="SimpleSchoolLookup"] > div > div > button[type="button"]')).toBeVisible();
-    await page.locator('[data-preview="SimpleSchoolLookup"] > div > div > button[type="button"]').click();
+    await expect(page.locator('[data-preview="SimpleSchoolLookup"] button[type="button"]')).toBeVisible();
+    await page.locator('[data-preview="SimpleSchoolLookup"] button[type="button"]').click();
 
     await expect(page.locator('label[for="school_lookup"] ~ div > ul[role="listbox"]')).toBeVisible();
     await page.close();
