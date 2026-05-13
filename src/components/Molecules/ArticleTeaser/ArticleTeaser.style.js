@@ -24,12 +24,12 @@ const CtaWrapper = styled.div`
   span {
     font-weight: bold;
     font-size: 1rem;
+    transition: color 0.15s 0.1s;
     color: ${({ theme }) => theme.color('red')};
   }
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     span {
-      transition: color 0.15s 0.1s;
       color: ${({ theme }) => theme.color('black')};
     }
   }
@@ -42,10 +42,15 @@ const Wrapper = styled.article`
   background-color: ${({ theme }) => theme.color('white')};
   border-radius: 1rem;
   overflow: hidden;
-  ${bounceUpAnimation(true, 10, 2)};
   ${defaultBoxShadow()}
 
-  ${Image} {
+  &:hover {
+    ${defaultBoxShadow(true)}
+  }
+
+  // Image zoom on M+ only:
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    ${Image} {
     // Given that this component is used for both 'Press Release' and 'News Article'
     // teasers, we need to tweak the styles a bit to best suit:
     ${({ isNewsTeaser }) => (isNewsTeaser ? css`
@@ -53,43 +58,43 @@ const Wrapper = styled.article`
     : css`
       ${imageZoom({ initialScale: 0.9 })}
     `)};
+    }
   }
 
   ${ArrowIconWrapper} {
     background-color: ${({ theme }) => theme.color('red')};
 
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
       transition: background-color 0.15s 0.1s;
       background-color: ${({ theme }) => theme.color('black')};
     }
   }
 
-  &:hover {
-    ${defaultBoxShadow(true)}
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    ${bounceUpAnimation(true, 10, 2)};
 
-    ${Image} {
-      ${({ isNewsTeaser }) => (isNewsTeaser ? css`
-        ${imageZoom({ zoomed: true })}`
-    : css`
-        ${imageZoom({ zoomed: true, finalScale: 1 })}
-      `)};
-    }
+    // NON-SHADOW HOVER STYLES FOR M+ ONLY
+    &:hover {
+      ${Image} {
+        ${({ isNewsTeaser }) => (isNewsTeaser ? css`
+          ${imageZoom({ zoomed: true })}` : css`
+          ${imageZoom({ zoomed: true, finalScale: 1 })}
+        `)};
+      }
 
-    // Fade in the 'Alt CTA'-style squiggley underline:
-    ${CtaTextUnderline} {
-    // TODO: should this be always visible on XS-SM, given we're not doing hover styles there?
-      opacity: 1;
-    }
-
-    ${ArrowIconWrapper} {
-      @media ${({ theme }) => theme.allBreakpoints('M')} {
+      ${ArrowIconWrapper} {
         background-color: ${({ theme }) => theme.color('red')};
       }
-    }
+        
+      // Fade in the 'Alt CTA'-style squiggley underline:
+      ${CtaTextUnderline} {
+        opacity: 1;
+      }
 
-    ${CtaWrapper} {
-      span {
-        color: ${({ theme }) => theme.color('red')};
+      ${CtaWrapper} {
+        span {
+          color: ${({ theme }) => theme.color('red')};
+        }
       }
     }
   }
