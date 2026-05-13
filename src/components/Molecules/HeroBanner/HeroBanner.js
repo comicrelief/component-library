@@ -7,13 +7,12 @@ import variants from './_variants';
 import ArrowIcon from '../shared/ctaArrow/ArrowIcon';
 import { ArrowIconWrapper, ArrowIconInner } from '../shared/ctaArrow/CtaArrowCircle.style';
 import altCtaUnderline from '../../../theme/shared/assets/alt_cta_underline.svg';
-import CtaTextUnderline from '../shared/CtaUnderline/CtaUnderline.style';
+import { CtaTextUnderline, CtaIconWrapper, CtaText } from '../shared/ctaText/ctaText.style';
 import './local-preview-layout-fixes.css';
 
 import {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
-  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink,
-  CtaIconWrapper, CtaText, LogoImageWrapper, LogoImage
+  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink, LogoImageWrapper, LogoImage
 } from './HeroBanner.style';
 
 const HeroBanner = ({

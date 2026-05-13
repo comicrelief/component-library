@@ -3,7 +3,6 @@ import variants from './_variants';
 import { bounceUpAnimation, playPauseReveal } from '../../../theme/shared/animations';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
 import { ArrowIconWrapper, ArrowIconInner } from '../shared/ctaArrow/CtaArrowCircle.style';
-import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 
 // Lil helper function to streamline things somewhat:
@@ -203,19 +202,6 @@ const CTAWrapper = styled.div`
   `)}
 `;
 
-const CtaIconWrapper = styled.div`
-  height: 2rem;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  content: "";
-`;
-
-const CtaText = styled(Text)`
-  position: relative;
-`;
-
 const HeroBannerLink = styled.a`
   text-decoration: none;
   width: 100%;
@@ -299,6 +285,5 @@ const LogoImage = styled(Picture)`
 
 export {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
-  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink,
-  CtaIconWrapper, CtaText, LogoImageWrapper, LogoImage
+  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink, LogoImageWrapper, LogoImage
 };

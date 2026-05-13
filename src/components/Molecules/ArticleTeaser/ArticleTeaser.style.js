@@ -6,7 +6,7 @@ import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import link from '../../Atoms/Link/Link';
 import { bounceUpAnimation } from '../../../theme/shared/animations';
-import CtaTextUnderline from '../shared/CtaUnderline/CtaUnderline.style';
+import { CtaTextUnderline } from '../shared/ctaText/ctaText.style';
 import { ArrowIconWrapper } from '../shared/ctaArrow/CtaArrowCircle.style';
 
 const Image = styled(Picture)`
