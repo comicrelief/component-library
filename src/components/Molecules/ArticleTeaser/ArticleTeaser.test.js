@@ -473,9 +473,9 @@ it('renders article teaser correctly', () => {
             <span
               className="c15 c16"
             >
-              Learn more
+              Read more
               <img
-                alt="Learn more"
+                alt="Read more"
                 className="c17 c18"
                 src="mock.asset"
               />
@@ -957,9 +957,9 @@ it('renders press realese correctly', () => {
             <span
               className="c15 c16"
             >
-              Learn more
+              Read more
               <img
-                alt="Learn more"
+                alt="Read more"
                 className="c17 c18"
                 src="mock.asset"
               />

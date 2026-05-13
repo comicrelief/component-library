@@ -91,10 +91,10 @@ const ArticleTeaser = ({
 
           <CtaWrapper>
             <CtaText>
-              Learn more
+              Read more
               <CtaTextUnderline
                 src={altCtaUnderline}
-                alt="Learn more"
+                alt="Read more"
               />
             </CtaText>
 
