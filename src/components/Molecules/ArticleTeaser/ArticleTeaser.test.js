@@ -330,17 +330,6 @@ it('renders article teaser correctly', () => {
       }
     }
 
-    @media (min-width:740px) {
-      .c0 .c5 {
-        -webkit-transform: scale(1.02);
-        -ms-transform: scale(1.02);
-        transform: scale(1.02);
-        -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
-        -webkit-transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
-        transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
-      }
-    }
-
     @media (min-width:1024px) {
       .c0 .c20 {
         -webkit-transition: background-color 0.15s 0.1s;
@@ -364,6 +353,15 @@ it('renders article teaser correctly', () => {
         -webkit-transform: translateY(-10px);
         -ms-transform: translateY(-10px);
         transform: translateY(-10px);
+      }
+
+      .c0 .c5 {
+        -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        transform: scale(1.02);
+        -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+        -webkit-transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+        transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
       }
 
       .c0:hover .c5 {
@@ -844,17 +842,6 @@ it('renders press realese correctly', () => {
       }
     }
 
-    @media (min-width:740px) {
-      .c0 .c5 {
-        -webkit-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-        transform: scale(0.9);
-        -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
-        -webkit-transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
-        transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
-      }
-    }
-
     @media (min-width:1024px) {
       .c0 .c20 {
         -webkit-transition: background-color 0.15s 0.1s;
@@ -878,6 +865,15 @@ it('renders press realese correctly', () => {
         -webkit-transform: translateY(-10px);
         -ms-transform: translateY(-10px);
         transform: translateY(-10px);
+      }
+
+      .c0 .c5 {
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
+        -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+        -webkit-transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+        transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
       }
 
       .c0:hover .c5 {
@@ -909,12 +905,6 @@ it('renders press realese correctly', () => {
 
     @media (min-width:1024px) {
 
-    }
-
-    @media (min-width:1024px) {
-      .c8 {
-        width: 100%;
-      }
     }
 
     <article

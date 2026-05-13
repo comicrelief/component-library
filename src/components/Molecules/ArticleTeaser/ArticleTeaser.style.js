@@ -26,10 +26,8 @@ const CtaWrapper = styled.div`
     font-size: 1rem;
     transition: color 0.15s 0.1s;
     color: ${({ theme }) => theme.color('red')};
-  }
 
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    span {
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
       color: ${({ theme }) => theme.color('black')};
     }
   }
@@ -48,19 +46,6 @@ const Wrapper = styled.article`
     ${defaultBoxShadow(true)}
   }
 
-  // Image zoom on M+ only:
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    ${Image} {
-    // Given that this component is used for both 'Press Release' and 'News Article'
-    // teasers, we need to tweak the styles a bit to best suit:
-    ${({ isNewsTeaser }) => (isNewsTeaser ? css`
-      ${imageZoom()}`
-    : css`
-      ${imageZoom({ initialScale: 0.9 })}
-    `)};
-    }
-  }
-
   ${ArrowIconWrapper} {
     background-color: ${({ theme }) => theme.color('red')};
 
@@ -73,13 +58,18 @@ const Wrapper = styled.article`
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     ${bounceUpAnimation(true, 10, 2)};
 
-    // NON-SHADOW HOVER STYLES FOR M+ ONLY
+    ${Image} {
+      // Only set up imageZoom pre-zoom defaults when we actually need them:
+      ${({ isNewsTeaser }) => css`
+        ${imageZoom({ initialScale: (isNewsTeaser ? 1.02 : 0.9) })}
+      `}
+    }
+      
     &:hover {
       ${Image} {
-        ${({ isNewsTeaser }) => (isNewsTeaser ? css`
-          ${imageZoom({ zoomed: true })}` : css`
-          ${imageZoom({ zoomed: true, finalScale: 1 })}
-        `)};
+        ${({ isNewsTeaser }) => css`
+          ${imageZoom({ zoomed: true, finalScale: (isNewsTeaser ? 1.04 : 1) })}
+        `}
       }
 
       ${ArrowIconWrapper} {
@@ -147,15 +137,16 @@ const CopyWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  ${({ isNewsTeaser }) => isNewsTeaser
-    && css`
-      @media ${({ theme }) => theme.allBreakpoints('M')} {
-        width: 55%;
-      }
-    `};
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    width: 100%;
-  }
+
+  ${({ isNewsTeaser }) => isNewsTeaser && css`
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      width: 55%;
+    }
+      
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
+      width: 100%;
+    }
+  `};
 `;
 
 const Title = styled(Text)`
