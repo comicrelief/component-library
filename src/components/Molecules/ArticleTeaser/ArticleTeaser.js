@@ -10,9 +10,10 @@ import {
 import altCtaUnderline from '../../../theme/shared/assets/alt_cta_underline.svg';
 import { ArrowIconWrapper, ArrowIconInner } from '../shared/ctaArrow/CtaArrowCircle.style';
 import ArrowIcon from '../shared/ctaArrow/ArrowIcon';
+import CtaTextUnderline from '../shared/CtaUnderline/CtaUnderline.style';
 
 import {
-  CtaIconWrapper, CtaText, CtaTextUnderline
+  CtaIconWrapper, CtaText
 } from '../HeroBanner/HeroBanner.style';
 
 const handleCampaignLogo = category => {

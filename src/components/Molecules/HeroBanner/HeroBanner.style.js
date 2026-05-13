@@ -216,16 +216,6 @@ const CtaText = styled(Text)`
   position: relative;
 `;
 
-const CtaTextUnderline = styled.img`
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-`;
-
 const HeroBannerLink = styled.a`
   text-decoration: none;
   width: 100%;
@@ -310,5 +300,5 @@ const LogoImage = styled(Picture)`
 export {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
   CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink,
-  CtaIconWrapper, CtaText, CtaTextUnderline, LogoImageWrapper, LogoImage
+  CtaIconWrapper, CtaText, LogoImageWrapper, LogoImage
 };
