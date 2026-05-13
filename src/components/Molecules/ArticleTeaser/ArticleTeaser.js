@@ -44,27 +44,16 @@ const ArticleTeaser = ({
   time = null
 }) => {
   const isNewsTeaser = !category && category !== '';
+  const thisCampaignLogo = !isNewsTeaser && handleCampaignLogo(category);
 
   return (
     <Wrapper isNewsTeaser={isNewsTeaser}>
       <Link href={href} type="standard" category={category} isNewsTeaser={isNewsTeaser} underline={false}>
         <ImageWrapper isNewsTeaser={isNewsTeaser}>
           <Image
-            imageLow={
-            isNewsTeaser
-              ? imageLow
-              : handleCampaignLogo(category)
-          }
-            images={
-            isNewsTeaser
-              ? images
-              : handleCampaignLogo(category)
-          }
-            image={
-            isNewsTeaser
-              ? image
-              : handleCampaignLogo(category)
-          }
+            imageLow={isNewsTeaser ? imageLow : thisCampaignLogo}
+            images={isNewsTeaser ? images : thisCampaignLogo}
+            image={isNewsTeaser ? image : thisCampaignLogo}
             alt={alt}
             objectFit="cover"
             width={!isNewsTeaser ? logoSize : '100%'}
@@ -73,9 +62,9 @@ const ArticleTeaser = ({
         </ImageWrapper>
         <CopyWrapper isNewsTeaser={isNewsTeaser}>
           {date && (
-          <Date size="xs" weight="bold">
-            {date}
-          </Date>
+            <Date size="xs" weight="bold">
+              {date}
+            </Date>
           )}
           <Title
             time={time}
@@ -84,11 +73,10 @@ const ArticleTeaser = ({
             {title}
           </Title>
           {time && (
-          <Time size="xs" weight="400" color="grey_dark">
-            {time}
-          </Time>
+            <Time size="xs" weight="400" color="grey_dark">
+              {time}
+            </Time>
           )}
-
           <CtaWrapper>
             <CtaText>
               Read more
@@ -97,7 +85,6 @@ const ArticleTeaser = ({
                 alt="Read more"
               />
             </CtaText>
-
             <CtaIconWrapper>
               <ArrowIconWrapper $preventHoverColourChange>
                 <ArrowIconInner>
