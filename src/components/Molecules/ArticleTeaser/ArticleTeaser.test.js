@@ -104,13 +104,13 @@ it('renders article teaser correctly', () => {
       text-decoration: none;
     }
 
-    .c23 {
+    .c24 {
       display: inline-block;
       color: #FFFFFF;
       fill: currentColor;
     }
 
-    .c22 {
+    .c23 {
       display: -webkit-inline-box;
       display: -webkit-inline-flex;
       display: -ms-inline-flexbox;
@@ -134,7 +134,7 @@ it('renders article teaser correctly', () => {
       transform-origin: center;
     }
 
-    .c21 {
+    .c22 {
       width: 32px;
       height: 32px;
       border-radius: 50%;
@@ -168,7 +168,7 @@ it('renders article teaser correctly', () => {
       opacity: 0;
     }
 
-    .c19 {
+    .c20 {
       height: 2rem;
       position: absolute;
       top: 50%;
@@ -195,8 +195,16 @@ it('renders article teaser correctly', () => {
       width: 100%;
       height: auto;
       position: relative;
-      margin-top: 2rem;
-      padding-right: 2.5rem;
+      margin-top: auto;
+      padding: 2rem 2.5rem 0 0;
+    }
+
+    .c14 .c19 {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+      top: auto;
+      bottom: -5px;
     }
 
     .c14 span {
@@ -224,7 +232,7 @@ it('renders article teaser correctly', () => {
       box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
     }
 
-    .c0 .c20 {
+    .c0 .c21 {
       background-color: #E52630;
     }
 
@@ -331,7 +339,7 @@ it('renders article teaser correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c0 .c20 {
+      .c0 .c21 {
         -webkit-transition: background-color 0.15s 0.1s;
         transition: background-color 0.15s 0.1s;
         background-color: #000000;
@@ -370,7 +378,7 @@ it('renders article teaser correctly', () => {
         transform: scale(1.04);
       }
 
-      .c0:hover .c20 {
+      .c0:hover .c21 {
         background-color: #E52630;
       }
 
@@ -481,16 +489,16 @@ it('renders article teaser correctly', () => {
               />
             </span>
             <div
-              className="c19"
+              className="c19 c20"
             >
               <div
-                className="c20 c21"
+                className="c21 c22"
               >
                 <span
-                  className="c22"
+                  className="c23"
                 >
                   <svg
-                    className="c23"
+                    className="c24"
                     fill="none"
                     height="15"
                     viewBox="0 0 15 15"
@@ -610,13 +618,13 @@ it('renders press realese correctly', () => {
       text-decoration: none;
     }
 
-    .c23 {
+    .c24 {
       display: inline-block;
       color: #FFFFFF;
       fill: currentColor;
     }
 
-    .c22 {
+    .c23 {
       display: -webkit-inline-box;
       display: -webkit-inline-flex;
       display: -ms-inline-flexbox;
@@ -640,7 +648,7 @@ it('renders press realese correctly', () => {
       transform-origin: center;
     }
 
-    .c21 {
+    .c22 {
       width: 32px;
       height: 32px;
       border-radius: 50%;
@@ -674,7 +682,7 @@ it('renders press realese correctly', () => {
       opacity: 0;
     }
 
-    .c19 {
+    .c20 {
       height: 2rem;
       position: absolute;
       top: 50%;
@@ -701,8 +709,16 @@ it('renders press realese correctly', () => {
       width: 100%;
       height: auto;
       position: relative;
-      margin-top: 2rem;
-      padding-right: 2.5rem;
+      margin-top: auto;
+      padding: 2rem 2.5rem 0 0;
+    }
+
+    .c14 .c19 {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+      top: auto;
+      bottom: -5px;
     }
 
     .c14 span {
@@ -730,7 +746,7 @@ it('renders press realese correctly', () => {
       box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
     }
 
-    .c0 .c20 {
+    .c0 .c21 {
       background-color: #E52630;
     }
 
@@ -842,7 +858,7 @@ it('renders press realese correctly', () => {
     }
 
     @media (min-width:1024px) {
-      .c0 .c20 {
+      .c0 .c21 {
         -webkit-transition: background-color 0.15s 0.1s;
         transition: background-color 0.15s 0.1s;
         background-color: #000000;
@@ -881,7 +897,7 @@ it('renders press realese correctly', () => {
         transform: scale(1);
       }
 
-      .c0:hover .c20 {
+      .c0:hover .c21 {
         background-color: #E52630;
       }
 
@@ -964,16 +980,16 @@ it('renders press realese correctly', () => {
               />
             </span>
             <div
-              className="c19"
+              className="c19 c20"
             >
               <div
-                className="c20 c21"
+                className="c21 c22"
               >
                 <span
-                  className="c22"
+                  className="c23"
                 >
                   <svg
-                    className="c23"
+                    className="c24"
                     fill="none"
                     height="15"
                     viewBox="0 0 15 15"

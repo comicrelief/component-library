@@ -5,7 +5,7 @@ import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import link from '../../Atoms/Link/Link';
 import { bounceUpAnimation, imageZoom } from '../../../theme/shared/animations';
-import { CtaTextUnderline } from '../shared/ctaText/ctaText.style';
+import { CtaTextUnderline, CtaIconWrapper } from '../shared/ctaText/ctaText.style';
 import { ArrowIconWrapper } from '../shared/ctaArrow/CtaArrowCircle.style';
 
 const Image = styled(Picture)`
@@ -17,8 +17,14 @@ const CtaWrapper = styled.div`
   width: 100%;
   height: auto;
   position: relative;
-  margin-top: 2rem;
-  padding-right: 2.5rem;
+  margin-top: auto;
+  padding: 2rem 2.5rem 0 0;
+
+  ${CtaIconWrapper} {
+    transform: translateY(0);
+    top: auto;
+    bottom: -5px;
+  }
 
   span {
     font-weight: bold;

@@ -5,8 +5,8 @@ const defaultData = require('../../../styleguide/data/data').defaultData;
 
 <>
   <span> Max-width container to better show how this reacts when in-situ in CRcom on the XS and SM breakpoints: </span>
-  <div style={{ display: 'flex', background: '#E1E2E3', maxWidth: '739px', marginBottom: '2rem' }}>
-    <div style={{ margin: '1rem', width: '100%' }}>
+  <div style={{ display: 'flex', background: '#E1E2E3', maxWidth: '739px', marginBottom: '2rem', flexFlow: 'wrap', justifyContent: 'space-between' }}>
+    <div style={{ margin: '1rem', width: '45%' }}>
       <ArticleTeaser
         href="/test"
         images={defaultData.images}
@@ -14,18 +14,16 @@ const defaultData = require('../../../styleguide/data/data').defaultData;
         date=" 01 July 2019"
         title="News article"
         alt="Image's description"
-        time="4 min read"
       />
     </div>
 
-    <div style={{ margin: '1rem', width: '100%' }}>
+    <div style={{ margin: '1rem', width: '45%' }}>
       <ArticleTeaser
         href="/test"
         images={defaultData.images}
         imageLow={defaultData.imageLow}
-        title="Article teaser w/no date; used for Prizes"
+        title="Article teaser w/no date; used for Prizes, loads, loads, loads, loads, loads, loads, loads, loads, loads, LOADS more copy to mess with the heights a bit"
         alt="Image's description"
-        time="4 min read"
       />
     </div>
   </div>
