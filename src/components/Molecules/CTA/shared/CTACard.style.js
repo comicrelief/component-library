@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { bounceUpAnimation } from '../../../../theme/shared/animations';
+import { bounceUpAnimation, imageZoom } from '../../../../theme/shared/animations';
 import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import fontHelper from '../../../../theme/crTheme/fontHelper';
 import defaultBoxShadow from '../../../../theme/shared/boxShadows';
@@ -106,7 +106,7 @@ const CardLink = styled.a`
 
   ${({ isInteractive }) => isInteractive && css`
     img {
-      transition: transform 0.3s cubic-bezier(0.65, -0.19, 0.37, 1.16);
+      ${imageZoom({ initialScale: 1 })}
     }
 
     // Desktop-only hover effects
@@ -119,7 +119,7 @@ const CardLink = styled.a`
         ${defaultBoxShadow(true)}
 
         ${ImageWrapper} img {
-          transform: scale(1.06);
+          ${imageZoom({ zoomed: true, finalScale: 1.06 })}
         }
 
         ${CTAText} {

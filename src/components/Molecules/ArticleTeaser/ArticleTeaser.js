@@ -1,131 +1,27 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
+import SRLogo from './assets/SRlogo.svg';
+import CRLogo from './assets/CRlogo.svg';
+import RNDLogo from './assets/RNDlogo.svg';
+import {
+  Wrapper, Link, ImageWrapper, CopyWrapper, Title, Date, Time, Image, CtaWrapper
+} from './ArticleTeaser.style';
 
-import Text from '../../Atoms/Text/Text';
-import Picture from '../../Atoms/Picture/Picture';
-import link from '../../Atoms/Link/Link';
-import spacing from '../../../theme/shared/spacing';
-import SR from '../../Atoms/Logo/assets/sr-logo.svg';
-import CR from '../../Atoms/Logo/assets/cr-logo.svg';
-import RND from './assets/RND.png';
-import defaultBoxShadow from '../../../theme/shared/boxShadows';
-
-/**
- * Article Teaser
- */
-const Wrapper = styled.article`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  background-color: ${({ theme }) => theme.color('white')};
-  border-radius: 1rem;
-  ${defaultBoxShadow()}
-  transition: all 0.2s;
-  &:hover {
-  ${defaultBoxShadow(true)}
-    transform: translateY(-4px);
-  }
-`;
-
-const Link = styled(link)`
-  padding: 0;
-  display: flex;
-  height: 100%;
-  flex-direction: ${({ category }) => (category || category === '' ? 'row' : 'column')};
-  align-items: ${({ category }) => (category || category === '') && 'center'};
-  text-decoration: none;
-  color: inherit;
-  width: 100%;
-
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex-direction: row;
-  }
-
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    flex-direction: ${({ category }) => !category && category !== '' && 'column'};
-  }
-`;
-
-const ImageWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  ${({ category }) => (category || category === '')
-    && css`
-      padding: ${spacing('md')} 0 ${spacing('md')} ${spacing('md')};
-      img {
-        border-radius: 0;
-      }
-    `};
-
-  ${({ category }) => !category
-    && category !== ''
-    && css`
-      img {
-        border-radius: 1rem 1rem 0 0;
-      }
-      @media ${({ theme }) => theme.allBreakpoints('M')} {
-        width: 45%;
-        img {
-          border-radius: 1rem 0 0 1rem;
-        }
-      }
-      @media ${({ theme }) => theme.allBreakpoints('L')} {
-        width: 100%;
-        img {
-          border-radius: 1rem 1rem 0 0;
-        }
-      }
-    `};
-`;
-
-const CopyWrapper = styled.div`
-  padding: ${spacing('l')};
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  ${({ category }) => !category
-    && category !== ''
-    && css`
-      @media ${({ theme }) => theme.allBreakpoints('M')} {
-        width: 55%;
-      }
-    `};
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    width: 100%;
-  }
-`;
-
-const Title = styled(Text)`
-  margin: ${({ time }) => (time ? `0 0 ${spacing('md')}` : '0')};
-`;
-
-const Date = styled(Text)`
-  display: block;
-  margin-bottom: ${spacing('md')};
-`;
-
-const Time = styled(Text)`
-  display: block;
-  margin-top: auto;
-`;
-
-const Image = styled(Picture)`
-  display: flex;
-`;
+import altCtaUnderline from '../../../theme/shared/assets/alt_cta_underline.svg';
+import { ArrowIconWrapper, ArrowIconInner } from '../shared/ctaArrow/CtaArrowCircle.style';
+import ArrowIcon from '../shared/ctaArrow/ArrowIcon';
+import { CtaTextUnderline, CtaIconWrapper, CtaText } from '../shared/ctaText/ctaText.style';
 
 const handleCampaignLogo = category => {
   switch (category) {
     case 'Comic Relief':
-      return CR;
+      return CRLogo;
     case 'Sport Relief':
-      return SR;
+      return SRLogo;
     case 'Red Nose Day':
-      return RND;
+      return RNDLogo;
     default:
-      return CR;
+      return CRLogo;
   }
 };
 
@@ -143,53 +39,62 @@ const ArticleTeaser = ({
   category = null,
   logoSize = null,
   time = null
-}) => (
-  <Wrapper>
-    <Link href={href} type="standard" category={category} underline={false}>
-      <ImageWrapper category={category}>
-        <Image
-          imageLow={
-              !category && category !== ''
-                ? imageLow
-                : handleCampaignLogo(category)
-            }
-          images={
-              !category && category !== ''
-                ? images
-                : handleCampaignLogo(category)
-            }
-          image={
-            !category && category !== ''
-              ? image
-              : handleCampaignLogo(category)
-          }
-          alt={alt}
-          objectFit="cover"
-          width={category || category === '' ? logoSize : '100%'}
-          height={category || category === '' ? logoSize : '100%'}
-        />
-      </ImageWrapper>
-      <CopyWrapper category={category}>
-        { date && (
-        <Date size="xs" weight="bold">
-          {date}
-        </Date>
-        )}
-        <Title
-          time={time}
-          tag="h3"
-        >
-          {title}
-        </Title>
-        {time && (
-        <Time size="xs" weight="400" color="grey_dark">
-          {time}
-        </Time>
-        )}
-      </CopyWrapper>
-    </Link>
-  </Wrapper>
-);
+}) => {
+  const isNewsTeaser = !category && category !== '';
+  const thisCampaignLogo = !isNewsTeaser && handleCampaignLogo(category);
+
+  return (
+    <Wrapper isNewsTeaser={isNewsTeaser}>
+      <Link href={href} type="standard" category={category} isNewsTeaser={isNewsTeaser} underline={false}>
+        <ImageWrapper isNewsTeaser={isNewsTeaser}>
+          <Image
+            imageLow={isNewsTeaser ? imageLow : thisCampaignLogo}
+            images={isNewsTeaser ? images : thisCampaignLogo}
+            image={isNewsTeaser ? image : thisCampaignLogo}
+            alt={alt}
+            objectFit="cover"
+            width={!isNewsTeaser ? logoSize : '100%'}
+            height="auto"
+          />
+        </ImageWrapper>
+        <CopyWrapper isNewsTeaser={isNewsTeaser}>
+          {date && (
+            <Date size="xs" weight="bold">
+              {date}
+            </Date>
+          )}
+          <Title
+            time={time}
+            tag="h4"
+          >
+            {title}
+          </Title>
+          {time && (
+            <Time size="xs" weight="400" color="grey_dark">
+              {time}
+            </Time>
+          )}
+          <CtaWrapper>
+            <CtaText>
+              Read more
+              <CtaTextUnderline
+                src={altCtaUnderline}
+                alt="Read more"
+              />
+            </CtaText>
+            <CtaIconWrapper>
+              <ArrowIconWrapper $preventHoverColourChange>
+                <ArrowIconInner>
+                  <ArrowIcon />
+                </ArrowIconInner>
+              </ArrowIconWrapper>
+            </CtaIconWrapper>
+          </CtaWrapper>
+        </CopyWrapper>
+      </Link>
+    </Wrapper>
+  );
+};
 
 ArticleTeaser.propTypes = {
   images: PropTypes.string,

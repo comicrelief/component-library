@@ -3,7 +3,6 @@ import variants from './_variants';
 import { bounceUpAnimation, playPauseReveal } from '../../../theme/shared/animations';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
 import { ArrowIconWrapper, ArrowIconInner } from '../shared/ctaArrow/CtaArrowCircle.style';
-import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 
 // Lil helper function to streamline things somewhat:
@@ -85,7 +84,7 @@ const MediaWrapper = styled.div`
 
       // Zoom the image in slightly by default so the 'bounce' animation doesn't cause issues
       transform: scale(1.02);
-      transition: transform ${0.4}s cubic-bezier(0.68, ${-1.15}, 0.265, ${2.35});
+      transition: transform 0.4s cubic-bezier(0.68, -1.15, 0.265, 2.35);
 
       ${({ variant }) => (variant === variants.HALF_HEIGHT && 'min-height: 450px;')};  
    }
@@ -203,29 +202,6 @@ const CTAWrapper = styled.div`
   `)}
 `;
 
-const CtaIconWrapper = styled.div`
-  height: 2rem;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  content: "";
-`;
-
-const CtaText = styled(Text)`
-  position: relative;
-`;
-
-const CtaTextUnderline = styled.img`
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-`;
-
 const HeroBannerLink = styled.a`
   text-decoration: none;
   width: 100%;
@@ -309,6 +285,5 @@ const LogoImage = styled(Picture)`
 
 export {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
-  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink,
-  CtaIconWrapper, CtaText, CtaTextUnderline, LogoImageWrapper, LogoImage
+  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink, LogoImageWrapper, LogoImage
 };
