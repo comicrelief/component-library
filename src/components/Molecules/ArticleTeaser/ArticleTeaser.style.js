@@ -23,7 +23,7 @@ const CtaWrapper = styled.div`
   ${CtaIconWrapper} {
     transform: translateY(0);
     top: auto;
-    bottom: -5px;
+    bottom: -8px;
   }
 
   span {

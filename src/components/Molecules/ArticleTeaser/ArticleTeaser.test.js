@@ -204,7 +204,7 @@ it('renders article teaser correctly', () => {
       -ms-transform: translateY(0);
       transform: translateY(0);
       top: auto;
-      bottom: -5px;
+      bottom: -8px;
     }
 
     .c14 span {
@@ -718,7 +718,7 @@ it('renders press realese correctly', () => {
       -ms-transform: translateY(0);
       transform: translateY(0);
       top: auto;
-      bottom: -5px;
+      bottom: -8px;
     }
 
     .c14 span {
