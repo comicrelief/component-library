@@ -21,7 +21,7 @@ const CtaWrapper = styled.div`
   padding: 2rem 2.5rem 0 0;
 
   ${CtaIconWrapper} {
-    transform: translateY(0);
+    transform: none;
     top: auto;
     bottom: -8px;
   }

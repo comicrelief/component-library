@@ -200,9 +200,9 @@ it('renders article teaser correctly', () => {
     }
 
     .c14 .c19 {
-      -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-      transform: translateY(0);
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
       top: auto;
       bottom: -8px;
     }
@@ -714,9 +714,9 @@ it('renders press realese correctly', () => {
     }
 
     .c14 .c19 {
-      -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-      transform: translateY(0);
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
       top: auto;
       bottom: -8px;
     }
