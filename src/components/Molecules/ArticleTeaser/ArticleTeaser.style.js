@@ -1,11 +1,10 @@
 import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
-import imageZoom from '../../../theme/shared/imageZoom';
 import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import link from '../../Atoms/Link/Link';
-import { bounceUpAnimation } from '../../../theme/shared/animations';
+import { bounceUpAnimation, imageZoom } from '../../../theme/shared/animations';
 import { CtaTextUnderline } from '../shared/ctaText/ctaText.style';
 import { ArrowIconWrapper } from '../shared/ctaArrow/CtaArrowCircle.style';
 
@@ -58,7 +57,7 @@ const Wrapper = styled.article`
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     ${bounceUpAnimation(true, 10, 2)};
 
-    ${Image} {
+    ${Image} img {
       // Only set up imageZoom pre-zoom defaults when we actually need them:
       ${({ isNewsTeaser }) => css`
         ${imageZoom({ initialScale: (isNewsTeaser ? 1.02 : 0.9) })}
@@ -66,7 +65,7 @@ const Wrapper = styled.article`
     }
       
     &:hover {
-      ${Image} {
+      ${Image} img {
         ${({ isNewsTeaser }) => css`
           ${imageZoom({ zoomed: true, finalScale: (isNewsTeaser ? 1.04 : 1) })}
         `}
@@ -116,7 +115,6 @@ const ImageWrapper = styled.div`
   position: relative;
 
   ${({ isNewsTeaser }) => (!isNewsTeaser) && css`
-    padding: ${spacing('md')} 0 ${spacing('md')} ${spacing('md')};
     padding: 1rem 0px 1rem 2rem;
   `};
 

@@ -1,10 +1,9 @@
 import styled, { css } from 'styled-components';
-import { bounceUpAnimation } from '../../../../theme/shared/animations';
+import { bounceUpAnimation, imageZoom } from '../../../../theme/shared/animations';
 import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import fontHelper from '../../../../theme/crTheme/fontHelper';
 import defaultBoxShadow from '../../../../theme/shared/boxShadows';
 import { ArrowIconInner, ArrowIconOuter, ArrowIconWrapper } from '../../shared/ctaArrow/CtaArrowCircle.style';
-import imageZoom from '../../../../theme/shared/imageZoom';
 
 const ImageWrapper = styled.div`
   width: 100%;
