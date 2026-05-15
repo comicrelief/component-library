@@ -37,6 +37,9 @@
     "test:e2e--h": "playwright test --project=chromium --headed",
     "test:e2e:ci": "playwright test --project=chromium",
     "test:e2e:local": "export NODE_ENV=development; start-server-and-test dev http://localhost:5173 test:e2e",
+    "test:e2e:mac": "export NODE_ENV=development; export PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'; start-server-and-test dev http://localhost:5173 test:e2e",
+    "test:e2e:mac": "export NODE_ENV=development; export PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'; start-server-and-test dev http://localhost:5173 test:e2e",
+    "test:e2e:mac:atoms": "export NODE_ENV=development; export PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'; start-server-and-test dev http://localhost:5173 'npx playwright test Atoms'",
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix"
   },
@@ -87,6 +90,7 @@
     "react-dom": "^18.3.1",
     "react-test-renderer": "^18.3.1",
     "semantic-release": "^17.4.6",
+    "start-server-and-test": "^3.0.5",
     "styled-components": "^6.1.13",
     "vite": "^5.4.10",
     "vite-plugin-dts": "^4.3.0"

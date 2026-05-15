@@ -23,7 +23,8 @@ module.exports = defineConfig({
   },
   reporter: [
     ['list'],
-    ['html', { open: 'never' }]
+    ['html', { open: 'never' }],
+    ['json', { outputFile: '/tmp/pw-progress.json' }]
   ],
   use: {
     baseURL: 'http://localhost:4173',
@@ -38,6 +39,7 @@ module.exports = defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
+        channel: process.platform === 'darwin' ? 'chrome' : undefined,
         viewport: {
           // Match our widest nav:
           width: 1300,
