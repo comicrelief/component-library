@@ -21,95 +21,85 @@ test.describe('dynamic gallery component', () => {
   });
 
   test('gallery column props', async ({ page }) => {
-    await page.goto('/#dynamicgallery');
+    await page.goto('/#!/DynamicGallery/5');
 
-    const gallery = page.locator('[data-testid="gallery-customised"]');
-
-    // expect four gallery columns
-    await expect(gallery.locator('.gallery-column')).toHaveCount(4);
+    // expect three gallery columns
+    await expect(page.locator('.gallery-column')).toHaveCount(4);
 
     await page.close();
   });
 
   // MARK: responsive columns
   test('responsive gallery columns', async ({ page }) => {
-    await page.goto('/#dynamicgallery');
-
-    const gallery = page.locator('[data-testid="gallery-basic"]');
+    await page.goto('/#!/DynamicGallery/3');
 
     // expect three gallery columns
-    await expect(gallery.locator('.gallery-column')).toHaveCount(3);
+    await expect(page.locator('.gallery-column')).toHaveCount(3);
 
     // resize the page to a small width
     await page.setViewportSize({ width: 700, height: 1000 });
 
-    // expect two gallery columns
-    await expect(gallery.locator('.gallery-column')).toHaveCount(2);
+    // expect one gallery column
+    await expect(page.locator('.gallery-column')).toHaveCount(2);
 
     // resize the page to a medium width
     await page.setViewportSize({ width: 320, height: 1000 });
 
     // expect one gallery column
-    await expect(gallery.locator('.gallery-column')).toHaveCount(1);
+    await expect(page.locator('.gallery-column')).toHaveCount(1);
 
     await page.close();
   });
 
   // MARK: chunk mode
   test('chunk mode test', async ({ page }) => {
-    await page.goto('/#dynamicgallery');
-
-    const gallery = page.locator('[data-testid="gallery-basic"]');
+    await page.goto('/#!/DynamicGallery/3');
 
     // expect 25 images to be visible
-    await expect(gallery.locator('.gallery-node')).toHaveCount(25);
+    await expect(page.locator('.gallery-node')).toHaveCount(25);
 
     // find the "load more" button and click it
-    await gallery.locator('button:has-text("Show more")').click();
+    await page.locator('button:has-text("Show more")').click();
 
     // expect 50 images to be visible
-    await expect(gallery.locator('.gallery-node')).toHaveCount(50);
+    await expect(page.locator('.gallery-node')).toHaveCount(50);
 
     // expect the "load more" button to be hidden
-    await expect(gallery.locator('button:has-text("Show more")')).toBeHidden();
+    await expect(page.locator('button:has-text("Show more")')).toBeHidden();
 
     await page.close();
   });
 
   // MARK: non-chunk mode
   test('non-chunk mode test', async ({ page }) => {
-    await page.goto('/#dynamicgallery');
-
-    const gallery = page.locator('[data-testid="gallery-customised"]');
+    await page.goto('/#!/DynamicGallery/5');
 
     // expect all 30 images to be visible
-    await expect(gallery.locator('.gallery-node')).toHaveCount(30);
+    await expect(page.locator('.gallery-node')).toHaveCount(30);
 
     // expect the "load more" button to be hidden
-    await expect(gallery.locator('button:has-text("Show more")')).toBeHidden();
+    await expect(page.locator('button:has-text("Show more")')).toBeHidden();
 
     await page.close();
   });
 
   // MARK: tabbing
   test('gallery tabbing', async ({ page }) => {
-    await page.goto('/#dynamicgallery');
-
-    const gallery = page.locator('[data-testid="gallery-basic"]');
+    await page.goto('/#!/DynamicGallery/3');
 
     // focus the first gallery node
-    await gallery.locator('.gallery-node').first().focus();
+    await page.locator('.gallery-node').first().focus();
 
     await page.waitForTimeout(3000);
 
     // first tab should focus the first node in the first column
-    const firstNode = gallery.locator('.gallery-column').first().locator('.gallery-node').first();
+    const firstNode = page.locator('.gallery-column').first().locator('.gallery-node').first();
     await firstNode.focus();
     await expect(firstNode).toBeFocused();
 
     // tab to the first node in the second column
     await page.keyboard.press('Tab');
-    const secondNode = gallery.locator('.gallery-column').nth(1).locator('.gallery-node').first();
+    const secondNode = page.locator('.gallery-column').nth(1).locator('.gallery-node').first();
     await expect(secondNode).toBeFocused();
 
     // tab back to the first node in the first column
@@ -121,21 +111,19 @@ test.describe('dynamic gallery component', () => {
 
   // MARK: tabbing out
   test('gallery tabbing should allow tabbing out of the gallery', async ({ page }) => {
-    await page.goto('/#dynamicgallery');
+    await page.goto('/#!/DynamicGallery/5');
 
     await page.waitForTimeout(3000);
 
-    const gallery = page.locator('[data-testid="gallery-customised"]');
-
-    // focus the last gallery node
-    const galleryNodes = await gallery.locator('.gallery-node').all();
-    await gallery.locator(`[data-node-index="${galleryNodes.length - 1}"]`).focus();
+    // focus the first gallery node
+    const galleryNodes = await page.locator('.gallery-node').all();
+    await page.locator(`[data-node-index="${galleryNodes.length - 1}"]`).focus();
 
     // press tab
     await page.keyboard.press('Tab');
-    const galleryContainer = gallery.locator('.gallery-container');
+    const galleryContainer = page.locator('.gallery-container');
 
-    // assert that the focus has moved outside the gallery
+    // asset that the focus has moved outside the gallery
     expect(
       await galleryContainer.evaluate(
         el => !el.contains(document.activeElement)
@@ -146,9 +134,9 @@ test.describe('dynamic gallery component', () => {
 
   // MARK: colours
   test('custom page background and text colour', async ({ page }) => {
-    await page.goto('/#dynamicgallery');
+    await page.goto('/#!/DynamicGallery/5');
 
-    const galleryContainer = page.locator('[data-testid="gallery-customised"] .gallery-container');
+    const galleryContainer = page.locator('.gallery-container');
 
     const backgroundColor = await galleryContainer.evaluate(el => window.getComputedStyle(el).getPropertyValue('background-color'));
     expect(backgroundColor).toBe(hexToRgb('#0565D1'));
@@ -161,71 +149,65 @@ test.describe('dynamic gallery component', () => {
 
   // MARK: lightbox mode
   test('check lightbox mode', async ({ page }) => {
-    await page.goto('/#dynamicgallery');
-
-    const gallery = page.locator('[data-testid="gallery-basic"]');
+    await page.goto('/#!/DynamicGallery/3');
 
     // find the first gallery node
-    const galleryNode = gallery.locator('.gallery-node').first();
+    const galleryNode = page.locator('.gallery-node').first();
 
     // click it
     await galleryNode.click();
 
     // expect the lightbox to be visible
-    await expect(gallery.locator('dialog')).toBeVisible();
+    await expect(page.locator('dialog')).toBeVisible();
 
     await page.waitForTimeout(1000);
     await page.keyboard.press('Escape');
-    await expect(gallery.locator('dialog')).toBeHidden();
+    await expect(page.locator('dialog')).toBeHidden();
 
     // focus the gallery node and press enter
     await galleryNode.focus();
     await page.keyboard.press('Enter');
 
     // expect the lightbox to be visible
-    await expect(gallery.locator('dialog')).toBeVisible();
+    await expect(page.locator('dialog')).toBeVisible();
 
     await page.close();
   });
 
   // MARK: lightbox focus
   test('check lightbox auto-focus', async ({ page }) => {
-    await page.goto('/#dynamicgallery');
-
-    const gallery = page.locator('[data-testid="gallery-basic"]');
+    await page.goto('/#!/DynamicGallery/3');
 
     // find the first gallery node
-    const galleryNode = gallery.locator('.gallery-node').first();
+    const galleryNode = page.locator('.gallery-node').first();
 
     // click it
     await galleryNode.click();
 
     // the close button should not be focused after opening the lightbox with the mouse
-    await expect(gallery.locator('.close-button')).not.toBeFocused();
+    await expect(page.locator('.close-button')).not.toBeFocused();
     await page.keyboard.press('Escape');
 
     // the close button should be focused after opening the lightbox with the keyboard
     await galleryNode.focus();
     await page.keyboard.press('Enter');
-    await expect(gallery.locator('.close-button')).toBeFocused();
+    await expect(page.locator('.close-button')).toBeFocused();
 
     await page.close();
   });
 
   // MARK: lightbox navigation
   test('lightbox navigation', async ({ page }) => {
-    await page.goto('/#dynamicgallery');
-
-    const gallery = page.locator('[data-testid="gallery-basic"]');
+    await page.goto('/#!/DynamicGallery/3');
 
     // find the first gallery node
-    const galleryNode = gallery.locator('.gallery-node').first();
+    const galleryNode = page.locator('.gallery-node').first();
 
     // click it
     await galleryNode.click();
 
     // expect the lightbox and caption to be visible
-    await expect(gallery.locator('dialog')).toBeVisible();
+    await expect(page.locator('dialog')).toBeVisible();
     await expect(page.getByText('Lightbox: This is the body for image 0')).toBeVisible();
 
     await page.waitForTimeout(1000);
@@ -239,46 +221,42 @@ test.describe('dynamic gallery component', () => {
 
   // MARK: lightbox pointer close
   test('lightbox pointer close', async ({ page }) => {
-    await page.goto('/#dynamicgallery');
-
-    const gallery = page.locator('[data-testid="gallery-basic"]');
+    await page.goto('/#!/DynamicGallery/3');
 
     // find the first gallery node
-    const galleryNode = gallery.locator('.gallery-node').first();
+    const galleryNode = page.locator('.gallery-node').first();
 
     // click it
     await galleryNode.click();
 
     // click the close button
-    await gallery.locator('.close-button').click();
+    await page.locator('.close-button').click();
 
     // expect the lightbox to be hidden
-    await expect(gallery.locator('dialog')).toBeHidden();
+    await expect(page.locator('dialog')).toBeHidden();
 
     await page.close();
   });
 
   // MARK: non-lightbox mode
   test('check non-lightbox mode', async ({ page }) => {
-    await page.goto('/#dynamicgallery');
-
-    const gallery = page.locator('[data-testid="gallery-customised"]');
+    await page.goto('/#!/DynamicGallery/5');
 
     // find the first gallery node
-    const galleryNode = gallery.locator('.gallery-node').first();
+    const galleryNode = page.locator('.gallery-node').first();
 
     // click it
     await galleryNode.click();
 
     // expect the lightbox to be hidden
-    await expect(gallery.locator('dialog')).toBeHidden();
+    await expect(page.locator('dialog')).toBeHidden();
 
     // focus the gallery node and press enter
     await galleryNode.focus();
     await page.keyboard.press('Enter');
 
     // expect the lightbox to be hidden
-    await expect(gallery.locator('dialog')).toBeHidden();
+    await expect(page.locator('dialog')).toBeHidden();
 
     await page.close();
   });
