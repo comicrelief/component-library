@@ -54,6 +54,7 @@ const MenuGroupIcon = styled.img`
   height: 24px;
   transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
   transition: transform 0.15s ease-in-out;
+  margin: 0;
 `;
 
 const Copy = styled.div`
