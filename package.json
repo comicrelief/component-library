@@ -37,9 +37,8 @@
     "test:e2e--h": "playwright test --project=chromium --headed",
     "test:e2e:ci": "playwright test --project=chromium",
     "test:e2e:local": "export NODE_ENV=development; start-server-and-test dev http://localhost:5173 test:e2e",
-    "test:e2e:mac": "export NODE_ENV=development; export PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'; start-server-and-test dev http://localhost:5173 test:e2e",
-    "test:e2e:mac": "export NODE_ENV=development; export PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'; start-server-and-test dev http://localhost:5173 test:e2e",
-    "test:e2e:mac:atoms": "export NODE_ENV=development; export PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'; start-server-and-test dev http://localhost:5173 'npx playwright test Atoms'",
+    "test:e2e:mac": "yarn build:preview && start-server-and-test serve:preview http://localhost:4173 'playwright test --project=chromium'; yarn playwright show-report",
+    "test:e2e:mac:atoms": "yarn build:preview && start-server-and-test serve:preview http://localhost:4173 'playwright test playwright/components/atoms --project=chromium'; yarn playwright show-report",
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix"
   },
