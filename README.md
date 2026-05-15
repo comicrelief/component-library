@@ -13,6 +13,7 @@ Comic Relief React Component Library
 - Confetti updated to newer react-canvas-confetti API => new prop names to activate confetti.
 - _TriggerConfetti.js removed => was likely a private helper no longer needed.
 
+### Have added a couple of scripts I worked on to make deving playwright locally less insanity inducing.
 
 
 

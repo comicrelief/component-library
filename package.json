@@ -36,9 +36,11 @@
     "test:e2e": "playwright test --project=chromium",
     "test:e2e--h": "playwright test --project=chromium --headed",
     "test:e2e:ci": "playwright test --project=chromium",
-    "test:e2e:local": "export NODE_ENV=development; start-server-and-test dev http://localhost:5173 test:e2e",
-    "test:e2e:mac": "yarn build:preview && start-server-and-test serve:preview http://localhost:4173 'playwright test --project=chromium'; yarn playwright show-report",
-    "test:e2e:mac:atoms": "yarn build:preview && start-server-and-test serve:preview http://localhost:4173 'playwright test playwright/components/atoms --project=chromium'; yarn playwright show-report",
+    "test:e2e:local": "playwright test --project=chromium; yarn playwright show-report",
+    "test:e2e:mac": "playwright test --project=chromium; yarn playwright show-report",
+    "test:e2e:mac:atoms": "playwright test playwright/components/atoms --project=chromium; yarn playwright show-report",
+    "test:e2e:mac:molecules": "playwright test playwright/components/molecules --project=chromium; yarn playwright show-report",
+    "test:e2e:mac:organisms": "playwright test playwright/components/organisms --project=chromium; yarn playwright show-report",
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix"
   },
@@ -89,7 +91,6 @@
     "react-dom": "^18.3.1",
     "react-test-renderer": "^18.3.1",
     "semantic-release": "^17.4.6",
-    "start-server-and-test": "1.7.4",
     "styled-components": "^6.1.13",
     "vite": "^5.4.10",
     "vite-plugin-dts": "^4.3.0"
