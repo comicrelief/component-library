@@ -93,12 +93,15 @@ test.describe('Email Signup Form component', () => {
     // enter valid inputs should not show error messages
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').fill('');
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').type('test firstname');
+    await page.evaluate(sel => document.querySelector(sel).dispatchEvent(new FocusEvent('focusout', { bubbles: true })), '[data-testid="EmailSignUpForm-example-1"] #first-name');
 
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').fill('');
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').type('test lastname');
+    await page.evaluate(sel => document.querySelector(sel).dispatchEvent(new FocusEvent('focusout', { bubbles: true })), '[data-testid="EmailSignUpForm-example-1"] #last-name');
 
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #email').fill(''); // clear the email field
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #email').type('email-signup@email.sls.comicrelief.com');
+    await page.evaluate(sel => document.querySelector(sel).dispatchEvent(new FocusEvent('focusout', { bubbles: true })), '[data-testid="EmailSignUpForm-example-1"] #email');
 
     // submit the ESU form
     await page.locator('[data-testid="EmailSignUpForm-example-1"] button[type="submit"]').click();
