@@ -4,7 +4,7 @@ import SRLogo from './assets/SRlogo.svg';
 import CRLogo from './assets/CRlogo.svg';
 import RNDLogo from './assets/RNDlogo.svg';
 import {
-  Wrapper, Link, ImageWrapper, CopyWrapper, Title, Date, Time, Image, CtaWrapper
+  OuterWrapper, InnerWrapper, Link, ImageWrapper, CopyWrapper, Title, Date, Time, Image, CtaWrapper
 } from './ArticleTeaser.style';
 
 import altCtaUnderline from '../../../theme/shared/assets/alt_cta_underline.svg';
@@ -44,55 +44,57 @@ const ArticleTeaser = ({
   const thisCampaignLogo = !isNewsTeaser && handleCampaignLogo(category);
 
   return (
-    <Wrapper isNewsTeaser={isNewsTeaser}>
+    <OuterWrapper isNewsTeaser={isNewsTeaser}>
       <Link href={href} type="standard" category={category} isNewsTeaser={isNewsTeaser} underline={false}>
-        <ImageWrapper isNewsTeaser={isNewsTeaser}>
-          <Image
-            imageLow={isNewsTeaser ? imageLow : thisCampaignLogo}
-            images={isNewsTeaser ? images : thisCampaignLogo}
-            image={isNewsTeaser ? image : thisCampaignLogo}
-            alt={alt}
-            objectFit="cover"
-            width={!isNewsTeaser ? logoSize : '100%'}
-            height="auto"
-          />
-        </ImageWrapper>
-        <CopyWrapper isNewsTeaser={isNewsTeaser}>
-          {date && (
-            <Date size="xs" weight="bold">
-              {date}
-            </Date>
-          )}
-          <Title
-            time={time}
-            tag="h4"
-          >
-            {title}
-          </Title>
-          {time && (
-            <Time size="xs" weight="400" color="grey_dark">
-              {time}
-            </Time>
-          )}
-          <CtaWrapper>
-            <CtaText>
-              Read more
-              <CtaTextUnderline
-                src={altCtaUnderline}
-                alt="Read more"
-              />
-            </CtaText>
-            <CtaIconWrapper>
-              <ArrowIconWrapper $preventHoverColourChange>
-                <ArrowIconInner>
-                  <ArrowIcon />
-                </ArrowIconInner>
-              </ArrowIconWrapper>
-            </CtaIconWrapper>
-          </CtaWrapper>
-        </CopyWrapper>
+        <InnerWrapper isNewsTeaser={isNewsTeaser}>
+          <ImageWrapper isNewsTeaser={isNewsTeaser}>
+            <Image
+              imageLow={isNewsTeaser ? imageLow : thisCampaignLogo}
+              images={isNewsTeaser ? images : thisCampaignLogo}
+              image={isNewsTeaser ? image : thisCampaignLogo}
+              alt={alt}
+              objectFit="cover"
+              width={!isNewsTeaser ? logoSize : '100%'}
+              height="auto"
+            />
+          </ImageWrapper>
+          <CopyWrapper isNewsTeaser={isNewsTeaser}>
+            {date && (
+              <Date size="xs" weight="bold">
+                {date}
+              </Date>
+            )}
+            <Title
+              time={time}
+              tag="h4"
+            >
+              {title}
+            </Title>
+            {time && (
+              <Time size="xs" weight="400" color="grey_dark">
+                {time}
+              </Time>
+            )}
+            <CtaWrapper>
+              <CtaText>
+                Read more
+                <CtaTextUnderline
+                  src={altCtaUnderline}
+                  alt="Read more"
+                />
+              </CtaText>
+              <CtaIconWrapper>
+                <ArrowIconWrapper $preventHoverColourChange>
+                  <ArrowIconInner>
+                    <ArrowIcon />
+                  </ArrowIconInner>
+                </ArrowIconWrapper>
+              </CtaIconWrapper>
+            </CtaWrapper>
+          </CopyWrapper>
+        </InnerWrapper>
       </Link>
-    </Wrapper>
+    </OuterWrapper>
   );
 };
 

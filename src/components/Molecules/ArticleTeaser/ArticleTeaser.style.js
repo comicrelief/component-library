@@ -13,6 +13,23 @@ const Image = styled(Picture)`
   overflow: hidden;
 `;
 
+const InnerWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: ${({ theme }) => theme.color('white')};
+  flex-direction: ${({ isNewsTeaser }) => (!isNewsTeaser ? 'row' : 'column')};
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    flex-direction: row;
+  }
+
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
+    flex-direction: ${({ isNewsTeaser }) => isNewsTeaser && 'column'};
+  }
+`;
+
 const CtaWrapper = styled.div`
   width: 100%;
   height: auto;
@@ -38,18 +55,14 @@ const CtaWrapper = styled.div`
   }
 `;
 
-const Wrapper = styled.article`
-  width: 100%;
-  height: 100%;
+const Link = styled(link)`
+  padding: 0;
   display: flex;
-  background-color: ${({ theme }) => theme.color('white')};
-  border-radius: 1rem;
-  overflow: hidden;
-  ${defaultBoxShadow()}
-
-  &:hover {
-    ${defaultBoxShadow(true)}
-  }
+  height: 100%;
+  align-items: ${({ isNewsTeaser }) => (!isNewsTeaser) && 'center'};
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
 
   ${ArrowIconWrapper} {
     background-color: ${({ theme }) => theme.color('red')};
@@ -59,9 +72,13 @@ const Wrapper = styled.article`
       background-color: ${({ theme }) => theme.color('black')};
     }
   }
-
+    
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    ${bounceUpAnimation(true, 10, 2)};
+    ${bounceUpAnimation(true, 10, 2, true)};
+
+    ${InnerWrapper} {
+      ${defaultBoxShadow()}
+    }
 
     ${Image} img {
       // Only set up imageZoom pre-zoom defaults when we actually need them:
@@ -71,6 +88,10 @@ const Wrapper = styled.article`
     }
       
     &:hover {
+      ${InnerWrapper} {
+        ${defaultBoxShadow(true)}
+      }
+
       ${Image} img {
         ${({ isNewsTeaser }) => css`
           ${imageZoom({ zoomed: true, finalScale: (isNewsTeaser ? 1.04 : 1) })}
@@ -95,23 +116,10 @@ const Wrapper = styled.article`
   }
 `;
 
-const Link = styled(link)`
-  padding: 0;
-  display: flex;
-  height: 100%;
-  flex-direction: ${({ isNewsTeaser }) => (!isNewsTeaser ? 'row' : 'column')};
-  align-items: ${({ isNewsTeaser }) => (!isNewsTeaser) && 'center'};
-  text-decoration: none;
-  color: inherit;
+const OuterWrapper = styled.article`
   width: 100%;
-
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex-direction: row;
-  }
-
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    flex-direction: ${({ isNewsTeaser }) => isNewsTeaser && 'column'};
-  }
+  height: 100%;
+  display: flex;
 `;
 
 const ImageWrapper = styled.div`
@@ -168,5 +176,5 @@ const Time = styled(Text)`
 `;
 
 export {
-  Wrapper, Link, ImageWrapper, CopyWrapper, Title, Date, Time, Image, CtaWrapper
+  OuterWrapper, InnerWrapper, Link, ImageWrapper, CopyWrapper, Title, Date, Time, Image, CtaWrapper
 };
