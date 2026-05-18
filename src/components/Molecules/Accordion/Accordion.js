@@ -7,15 +7,6 @@ import spacing from '../../../theme/shared/spacing';
 import menuGroupIcon from '../../../theme/shared/assets/Menu-Group-Icon.svg';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
-const Container = styled.div`
-  border-radius: 1rem;
-  background: ${({ theme }) => theme.color('white')};
-  ${defaultBoxShadow()}
-  &:hover {
-    ${defaultBoxShadow(true)}
-  }
-`;
-
 const ChevronKeyframes = keyframes`
  0% { margin-top: 0rem; }
  50% { margin-top: 0.5rem; }
@@ -54,6 +45,19 @@ const MenuGroupIcon = styled.img`
   height: 24px;
   transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
   transition: transform 0.15s ease-in-out;
+`;
+
+const Container = styled.div`
+  border-radius: 1rem;
+  background: ${({ theme }) => theme.color('white')};
+  ${defaultBoxShadow()}
+  &:hover {
+    ${defaultBoxShadow(true)}
+  }
+
+  ${MenuGroupIcon} {
+    margin: 0;
+  }
 `;
 
 const Copy = styled.div`

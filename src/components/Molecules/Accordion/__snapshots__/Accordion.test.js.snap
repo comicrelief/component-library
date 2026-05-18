@@ -40,7 +40,7 @@ exports[`renders correctly 1`] = `
   line-height: inherit;
 }
 
-.c8 {
+.c9 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -52,24 +52,14 @@ exports[`renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c8 {
+.c9 {
   font-size: 1rem;
   line-height: normal;
 }
 
-.c8 span {
+.c9 span {
   font-size: inherit;
   line-height: inherit;
-}
-
-.c0 {
-  border-radius: 1rem;
-  background: #FFFFFF;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
-}
-
-.c0:hover {
-  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c1 {
@@ -117,7 +107,7 @@ exports[`renders correctly 1`] = `
   align-content: center;
 }
 
-.c6 {
+.c7 {
   height: 24px;
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -127,7 +117,21 @@ exports[`renders correctly 1`] = `
   transition: transform 0.15s ease-in-out;
 }
 
-.c7 {
+.c0 {
+  border-radius: 1rem;
+  background: #FFFFFF;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c0:hover {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+}
+
+.c0 .c6 {
+  margin: 0;
+}
+
+.c8 {
   overflow: hidden;
   height: 0;
   visibility: none;
@@ -169,21 +173,21 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
-  .c8 {
+  .c9 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width:1024px) {
-  .c8 {
+  .c9 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width:740px) {
-  .c7 {
+  .c8 {
     padding: 0 3rem;
   }
 }
@@ -212,16 +216,16 @@ exports[`renders correctly 1`] = `
       <img
         alt=""
         aria-hidden="true"
-        className="c6"
+        className="c6 c7"
         src="mock.asset"
       />
     </div>
   </button>
   <div
-    className="c7"
+    className="c8"
   >
     <p
-      className="c8"
+      className="c9"
     >
       Name, surname, email and billing address We need these to process your payment, create a receipt and send it to you. Establishment information We use this information to understand which institutions (e.g. schools, companies) raise money for us. Your details will be kept safe and never shared with other organisations; see our Privacy Policy for more information
     </p>
