@@ -41,6 +41,7 @@
     "test:e2e:mac:atoms": "playwright test playwright/components/atoms --project=chromium; yarn playwright show-report",
     "test:e2e:mac:molecules": "playwright test playwright/components/molecules --project=chromium; yarn playwright show-report",
     "test:e2e:mac:organisms": "playwright test playwright/components/organisms --project=chromium; yarn playwright show-report",
+    "test:e2e:mac:organisms:dynamicGallery": "playwright test playwright/components/organisms/dynamicGallery.spec.js --project=chromium; yarn playwright show-report",
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix"
   },
