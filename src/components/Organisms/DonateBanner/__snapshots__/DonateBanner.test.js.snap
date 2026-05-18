@@ -212,7 +212,7 @@ exports[`Monthly donation renders correctly 1`] = `
   display: block;
   text-align: left;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.25rem;
   margin: 0.5rem 0!important;
 }
 
@@ -254,15 +254,15 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 .c25 {
-  line-height: 1.5;
-  margin-top: 2rem;
+  line-height: 1.25rem;
   color: #000000;
-  margin: 1rem 0 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 .c26 {
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 2rem;
   color: #FFFFFF;
   font-size: 1rem;
   font-weight: bold;
@@ -275,9 +275,9 @@ exports[`Monthly donation renders correctly 1`] = `
   appearance: none;
 }
 
-.c26:active,
-.c26:focus,
-.c26:hover {
+.c26 :active,
+.c26 :focus,
+.c26 :hover {
   outline: none;
   background-color: #890B11;
 }
@@ -475,6 +475,13 @@ exports[`Monthly donation renders correctly 1`] = `
   }
 }
 
+@media (min-width: 1024px) {
+  .c9 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
 @media (min-width: 740px) {
   .c19 {
     flex-basis: 60%;
@@ -483,7 +490,7 @@ exports[`Monthly donation renders correctly 1`] = `
 
 @media (min-width: 740px) {
   .c25 {
-    margin: 1.5rem 0 1rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -647,7 +654,6 @@ exports[`Monthly donation renders correctly 1`] = `
                       chooseAmountText={null}
                       className="c24"
                       error={false}
-                      hideMoneyBuys={false}
                       id="mbship-1--MoneyBuy-userInput"
                       inputBorderColor={false}
                       max="25000"
@@ -975,7 +981,7 @@ exports[`Single donation renders correctly 1`] = `
   display: block;
   text-align: left;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.25rem;
   margin: 0.5rem 0!important;
 }
 
@@ -1034,15 +1040,15 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 .c24 {
-  line-height: 1.5;
-  margin-top: 2rem;
+  line-height: 1.25rem;
   color: #000000;
-  margin: 1rem 0 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 .c25 {
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 2rem;
   color: #FFFFFF;
   font-size: 1rem;
   font-weight: bold;
@@ -1055,9 +1061,9 @@ exports[`Single donation renders correctly 1`] = `
   appearance: none;
 }
 
-.c25:active,
-.c25:focus,
-.c25:hover {
+.c25 :active,
+.c25 :focus,
+.c25 :hover {
   outline: none;
   background-color: #890B11;
 }
@@ -1176,6 +1182,13 @@ exports[`Single donation renders correctly 1`] = `
   }
 }
 
+@media (min-width: 1024px) {
+  .c9 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
 @media (min-width: 740px) {
   .c10 {
     flex-direction: row;
@@ -1196,7 +1209,7 @@ exports[`Single donation renders correctly 1`] = `
 
 @media (min-width: 740px) {
   .c24 {
-    margin: 1.5rem 0 1rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -1406,7 +1419,6 @@ exports[`Single donation renders correctly 1`] = `
                       chooseAmountText={null}
                       className="c23"
                       error={false}
-                      hideMoneyBuys={false}
                       id="mbship-1--MoneyBuy-userInput"
                       inputBorderColor={false}
                       max="25000"
@@ -1661,7 +1673,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   display: block;
   text-align: left;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.25rem;
   margin: 0.5rem 0!important;
 }
 
@@ -1703,15 +1715,15 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 .c20 {
-  line-height: 1.5;
-  margin-top: 2rem;
+  line-height: 1.25rem;
   color: #000000;
-  margin: 1rem 0 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 .c21 {
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 2rem;
   color: #FFFFFF;
   font-size: 1rem;
   font-weight: bold;
@@ -1724,9 +1736,9 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   appearance: none;
 }
 
-.c21:active,
-.c21:focus,
-.c21:hover {
+.c21 :active,
+.c21 :focus,
+.c21 :hover {
   outline: none;
   background-color: #890B11;
 }
@@ -1821,6 +1833,13 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   }
 }
 
+@media (min-width: 1024px) {
+  .c9 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
 @media (min-width: 740px) {
   .c14 {
     flex-basis: 60%;
@@ -1829,7 +1848,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 @media (min-width: 740px) {
   .c20 {
-    margin: 1.5rem 0 1rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -1918,7 +1937,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                       chooseAmountText="Overridden choose amount text"
                       className="c19"
                       error={false}
-                      hideMoneyBuys={false}
                       id="mbship-1--MoneyBuy-userInput"
                       inputBorderColor={false}
                       max="25000"
@@ -2260,7 +2278,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
   display: block;
   text-align: left;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.25rem;
   margin: 0.5rem 0!important;
 }
 
@@ -2319,15 +2337,15 @@ exports[`Text-only donate widget renders correctly 1`] = `
 }
 
 .c31 {
-  line-height: 1.5;
-  margin-top: 2rem;
+  line-height: 1.25rem;
   color: #000000;
-  margin: 1rem 0 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 .c32 {
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 2rem;
   color: #FFFFFF;
   font-size: 1rem;
   font-weight: bold;
@@ -2340,9 +2358,9 @@ exports[`Text-only donate widget renders correctly 1`] = `
   appearance: none;
 }
 
-.c32:active,
-.c32:focus,
-.c32:hover {
+.c32 :active,
+.c32 :focus,
+.c32 :hover {
   outline: none;
   background-color: #890B11;
 }
@@ -2634,6 +2652,13 @@ exports[`Text-only donate widget renders correctly 1`] = `
   }
 }
 
+@media (min-width: 1024px) {
+  .c10 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
 @media (min-width: 740px) {
   .c17 {
     flex-direction: row;
@@ -2654,7 +2679,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
 
 @media (min-width: 740px) {
   .c31 {
-    margin: 1.5rem 0 1rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -2951,7 +2976,6 @@ exports[`Text-only donate widget renders correctly 1`] = `
                       chooseAmountText="Enter an amount to give"
                       className="c30"
                       error={false}
-                      hideMoneyBuys={false}
                       id="mbship-4--MoneyBuy-userInput"
                       inputBorderColor={false}
                       max="25000"
