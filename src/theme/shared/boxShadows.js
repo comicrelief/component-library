@@ -11,6 +11,7 @@ import { css } from 'styled-components';
  * @returns {css} template literal
  */
 const defaultBoxShadow = (hovered = false) => css`
+  ${!hovered && 'transition: box-shadow 0.3s;'}
   box-shadow: rgba(0, 0, 0, ${hovered ? 0.25 : 0.15}) 0px 0px 1rem;
 `;
 

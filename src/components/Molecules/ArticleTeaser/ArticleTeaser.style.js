@@ -72,13 +72,19 @@ const Link = styled(link)`
       background-color: ${({ theme }) => theme.color('black')};
     }
   }
-    
+
+  ${InnerWrapper}{
+    ${defaultBoxShadow()}
+  }
+
+  &:hover {
+    ${InnerWrapper} {
+      ${defaultBoxShadow(true)}
+    }
+  }
+
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     ${bounceUpAnimation(true, 10, 2, true)};
-
-    ${InnerWrapper} {
-      ${defaultBoxShadow()}
-    }
 
     ${Image} img {
       // Only set up imageZoom pre-zoom defaults when we actually need them:
@@ -88,10 +94,6 @@ const Link = styled(link)`
     }
       
     &:hover {
-      ${InnerWrapper} {
-        ${defaultBoxShadow(true)}
-      }
-
       ${Image} img {
         ${({ isNewsTeaser }) => css`
           ${imageZoom({ zoomed: true, finalScale: (isNewsTeaser ? 1.04 : 1) })}

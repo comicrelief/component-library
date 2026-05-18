@@ -246,6 +246,16 @@ it('renders article teaser correctly', () => {
       background-color: #E52630;
     }
 
+    .c2 .c3 {
+      -webkit-transition: box-shadow 0.3s;
+      transition: box-shadow 0.3s;
+      box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+    }
+
+    .c2:hover .c3 {
+      box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+    }
+
     .c0 {
       width: 100%;
       height: 100%;
@@ -382,10 +392,6 @@ it('renders article teaser correctly', () => {
         transform: translateY(-10px);
       }
 
-      .c2 .c3 {
-        box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
-      }
-
       .c2 .c7 img {
         -webkit-transform: scale(1.02);
         -ms-transform: scale(1.02);
@@ -393,10 +399,6 @@ it('renders article teaser correctly', () => {
         -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
         -webkit-transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
         transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
-      }
-
-      .c2:hover .c3 {
-        box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
       }
 
       .c2:hover .c7 img {
@@ -779,6 +781,16 @@ it('renders press realese correctly', () => {
       background-color: #E52630;
     }
 
+    .c2 .c3 {
+      -webkit-transition: box-shadow 0.3s;
+      transition: box-shadow 0.3s;
+      box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+    }
+
+    .c2:hover .c3 {
+      box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+    }
+
     .c0 {
       width: 100%;
       height: 100%;
@@ -912,10 +924,6 @@ it('renders press realese correctly', () => {
         transform: translateY(-10px);
       }
 
-      .c2 .c3 {
-        box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
-      }
-
       .c2 .c7 img {
         -webkit-transform: scale(0.9);
         -ms-transform: scale(0.9);
@@ -923,10 +931,6 @@ it('renders press realese correctly', () => {
         -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
         -webkit-transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
         transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
-      }
-
-      .c2:hover .c3 {
-        box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
       }
 
       .c2:hover .c7 img {

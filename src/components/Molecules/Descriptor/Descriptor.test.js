@@ -101,6 +101,8 @@ it('renders article teaser correctly', () => {
       display: flex;
       background-color: #FFFFFF;
       border-radius: 1rem;
+      -webkit-transition: box-shadow 0.3s;
+      transition: box-shadow 0.3s;
       box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
     }
 

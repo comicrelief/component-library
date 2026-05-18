@@ -25,6 +25,8 @@ it('renders default padding version correctly', () => {
       padding: 2.5rem 2rem 3.5rem;
       margin: 0 auto;
       border-radius: 20px;
+      -webkit-transition: box-shadow 0.3s;
+      transition: box-shadow 0.3s;
       box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
     }
 
@@ -302,6 +304,8 @@ it('renders custom padding + background colour version correctly', () => {
       padding: 2.5rem 2rem 3.5rem;
       margin: 0 auto;
       border-radius: 20px;
+      -webkit-transition: box-shadow 0.3s;
+      transition: box-shadow 0.3s;
       box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
     }
 

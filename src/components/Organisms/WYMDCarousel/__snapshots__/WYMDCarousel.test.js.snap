@@ -502,6 +502,8 @@ exports[`renders the customised padding version correctly:
   padding: 2rem;
   margin: 0 auto;
   border-radius: 20px;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
@@ -1846,6 +1848,8 @@ exports[`renders the default padding version correctly:
   padding: 2rem;
   margin: 0 auto;
   border-radius: 20px;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 

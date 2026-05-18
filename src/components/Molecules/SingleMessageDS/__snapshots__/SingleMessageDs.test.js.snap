@@ -157,6 +157,8 @@ exports[`renders correctly 1`] = `
 
 .c2 img {
   border-radius: 1rem;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
@@ -187,6 +189,8 @@ exports[`renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   border-radius: 1rem;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   background: #FFFFFF;
   padding-bottom: calc(2rem + 1.5rem);
