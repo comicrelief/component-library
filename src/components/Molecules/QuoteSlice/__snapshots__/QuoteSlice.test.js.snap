@@ -141,8 +141,6 @@ exports[`renders a Quote Slice with basic props 1`] = `
   max-height: 750px;
   max-width: 1500px;
   border-radius: 1rem;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
@@ -349,8 +347,6 @@ exports[`renders an empty Quote Slice with no options set 1`] = `
   max-height: 750px;
   max-width: 1500px;
   border-radius: 1rem;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 

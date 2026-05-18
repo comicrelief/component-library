@@ -214,8 +214,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
   padding: none;
   width: 100%;
   box-sizing: border-box;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
@@ -267,8 +265,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
   position: relative;
   width: 100%;
   background-color: #FFFFFF;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-align: left;
   margin-left: auto;
@@ -981,8 +977,6 @@ exports[`Image banner renders correctly 1`] = `
   padding: none;
   width: 100%;
   box-sizing: border-box;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
@@ -1034,8 +1028,6 @@ exports[`Image banner renders correctly 1`] = `
   position: relative;
   width: 100%;
   background-color: #FFFFFF;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-align: left;
   margin-left: auto;
@@ -1748,8 +1740,6 @@ exports[`Text-only email widget renders correctly 1`] = `
   padding: none;
   width: 100%;
   box-sizing: border-box;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
@@ -1801,8 +1791,6 @@ exports[`Text-only email widget renders correctly 1`] = `
   position: relative;
   width: 100%;
   background-color: #FFFFFF;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-align: left;
   margin-left: auto;
@@ -2515,8 +2503,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   padding: none;
   width: 100%;
   box-sizing: border-box;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
@@ -2568,8 +2554,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   position: relative;
   width: 100%;
   background-color: #FFFFFF;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-align: left;
   margin-left: auto;

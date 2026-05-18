@@ -170,7 +170,7 @@ const bounceUpAnimation = (animateScale,
   const overshoot = 1.55 + (bounceIntensity * 0.4);
   const duration = 0.2 + (bounceIntensity * 0.1);
 
-  // The Hero Banner and ArticleTeaser requires us to apply the transform inside
+  // The Hero Banner requires us to apply the transform inside
   // the anchor, in order to address the 'infinity bounce' bug
   if (targetChild) {
     return css`

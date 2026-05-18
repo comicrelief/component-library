@@ -120,8 +120,6 @@ exports[`renders correctly 1`] = `
 .c0 {
   border-radius: 1rem;
   background: #FFFFFF;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 

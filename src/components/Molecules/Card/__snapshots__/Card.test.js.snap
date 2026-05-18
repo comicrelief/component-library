@@ -11,8 +11,6 @@ exports[`renders correctly 1`] = `
   border-radius: 1rem;
   overflow: hidden;
   background: #FFE400;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
@@ -91,8 +89,6 @@ exports[`renders correctly 2`] = `
   border-radius: 1rem;
   overflow: hidden;
   background: #FFE400;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
@@ -185,8 +181,6 @@ exports[`renders correctly with no body 1`] = `
   border-radius: 1rem;
   overflow: hidden;
   background: #FFE400;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 

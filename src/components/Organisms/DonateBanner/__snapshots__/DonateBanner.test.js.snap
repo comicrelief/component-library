@@ -181,8 +181,6 @@ exports[`Monthly donation renders correctly 1`] = `
   padding: none;
   width: 100%;
   box-sizing: border-box;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
@@ -234,8 +232,6 @@ exports[`Monthly donation renders correctly 1`] = `
   position: relative;
   width: 100%;
   background-color: #FFFFFF;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   margin-left: auto;
   margin-right: auto;
@@ -1086,8 +1082,6 @@ exports[`Single donation renders correctly 1`] = `
   padding: none;
   width: 100%;
   box-sizing: border-box;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
@@ -1139,8 +1133,6 @@ exports[`Single donation renders correctly 1`] = `
   position: relative;
   width: 100%;
   background-color: #FFFFFF;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   margin-left: auto;
   margin-right: auto;
@@ -1927,8 +1919,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   padding: none;
   width: 100%;
   box-sizing: border-box;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
@@ -1980,8 +1970,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   position: relative;
   width: 100%;
   background-color: #FFFFFF;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   margin-left: auto;
   margin-right: auto;
@@ -2555,8 +2543,6 @@ exports[`Text-only donate widget renders correctly 1`] = `
   padding: none;
   width: 100%;
   box-sizing: border-box;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
@@ -2608,8 +2594,6 @@ exports[`Text-only donate widget renders correctly 1`] = `
   position: relative;
   width: 100%;
   background-color: #FFFFFF;
-  -webkit-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   margin-left: auto;
   margin-right: auto;

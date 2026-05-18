@@ -7,6 +7,7 @@ import link from '../../Atoms/Link/Link';
 import { bounceUpAnimation, imageZoom } from '../../../theme/shared/animations';
 import { CtaTextUnderline, CtaIconWrapper } from '../shared/ctaText/ctaText.style';
 import { ArrowIconWrapper } from '../shared/ctaArrow/CtaArrowCircle.style';
+import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
 const Image = styled(Picture)`
   display: flex;
@@ -75,6 +76,12 @@ const Link = styled(link)`
 
   ${InnerWrapper}{
     ${defaultBoxShadow()}
+
+    @media (max-width: ${breakpointValues.M - 1}px) {
+      // Can at least add this to breakpoints where we're not doing the bounceUp transition
+      // contained within a media query to stop its increased specificity from overriding bounceUp's own rules:
+      transition: box-shadow 0.3s;
+    }
   }
 
   &:hover {
