@@ -60,13 +60,13 @@ const EmailForm = ({
         data-test="email-banner"
       >
         <OuterFieldset>
-          {shouldShowTitleInForm && (
+          {shouldShowTitleInForm && !isSubmitted && (
             <PrimaryTitleText tag="span" color="black" $emailWidgetIsTextOnly={emailWidgetIsTextOnly}>
               {title}
             </PrimaryTitleText>
           )}
 
-          {shouldShowTitleInForm && bodyCopy && (
+          {shouldShowTitleInForm && bodyCopy && !isSubmitted && (
             <BodyCopyWrapper>
               {typeof bodyCopy === 'string' ? (
                 <RichText markup={bodyCopy} />
