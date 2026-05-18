@@ -242,6 +242,10 @@ it('renders article teaser correctly', () => {
       width: 100%;
     }
 
+    .c2 .c23 {
+      background-color: #E52630;
+    }
+
     .c0 {
       width: 100%;
       height: 100%;
@@ -249,10 +253,6 @@ it('renders article teaser correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-    }
-
-    .c0 .c23 {
-      background-color: #E52630;
     }
 
     .c5 {
@@ -341,6 +341,14 @@ it('renders article teaser correctly', () => {
       }
     }
 
+    @media (min-width:1024px) {
+      .c2 .c23 {
+        -webkit-transition: background-color 0.15s 0.1s;
+        transition: background-color 0.15s 0.1s;
+        background-color: #000000;
+      }
+    }
+
     @media (min-width:740px) {
       .c2 {
         -webkit-flex-direction: row;
@@ -405,14 +413,6 @@ it('renders article teaser correctly', () => {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-      }
-    }
-
-    @media (min-width:1024px) {
-      .c0 .c23 {
-        -webkit-transition: background-color 0.15s 0.1s;
-        transition: background-color 0.15s 0.1s;
-        background-color: #000000;
       }
     }
 
@@ -773,6 +773,10 @@ it('renders press realese correctly', () => {
       width: 100%;
     }
 
+    .c2 .c23 {
+      background-color: #E52630;
+    }
+
     .c0 {
       width: 100%;
       height: 100%;
@@ -780,10 +784,6 @@ it('renders press realese correctly', () => {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-    }
-
-    .c0 .c23 {
-      background-color: #E52630;
     }
 
     .c5 {
@@ -873,6 +873,14 @@ it('renders press realese correctly', () => {
       }
     }
 
+    @media (min-width:1024px) {
+      .c2 .c23 {
+        -webkit-transition: background-color 0.15s 0.1s;
+        transition: background-color 0.15s 0.1s;
+        background-color: #000000;
+      }
+    }
+
     @media (min-width:740px) {
       .c2 {
         -webkit-flex-direction: row;
@@ -934,14 +942,6 @@ it('renders press realese correctly', () => {
 
     @media (min-width:1024px) {
 
-    }
-
-    @media (min-width:1024px) {
-      .c0 .c23 {
-        -webkit-transition: background-color 0.15s 0.1s;
-        transition: background-color 0.15s 0.1s;
-        background-color: #000000;
-      }
     }
 
     <article

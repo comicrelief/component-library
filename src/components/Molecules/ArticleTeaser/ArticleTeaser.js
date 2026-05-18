@@ -46,8 +46,7 @@ const ArticleTeaser = ({
   return (
     <OuterWrapper isNewsTeaser={isNewsTeaser}>
       <Link href={href} type="standard" category={category} isNewsTeaser={isNewsTeaser} underline={false}>
-        <InnerWrapper>
-
+        <InnerWrapper isNewsTeaser={isNewsTeaser}>
           <ImageWrapper isNewsTeaser={isNewsTeaser}>
             <Image
               imageLow={isNewsTeaser ? imageLow : thisCampaignLogo}

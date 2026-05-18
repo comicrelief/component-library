@@ -19,6 +19,15 @@ const InnerWrapper = styled.div`
   border-radius: 1rem;
   overflow: hidden;
   background-color: ${({ theme }) => theme.color('white')};
+  flex-direction: ${({ isNewsTeaser }) => (!isNewsTeaser ? 'row' : 'column')};
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    flex-direction: row;
+  }
+
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
+    flex-direction: ${({ isNewsTeaser }) => isNewsTeaser && 'column'};
+  }
 `;
 
 const CtaWrapper = styled.div`
@@ -50,16 +59,26 @@ const Link = styled(link)`
   padding: 0;
   display: flex;
   height: 100%;
-  flex-direction: ${({ isNewsTeaser }) => (!isNewsTeaser ? 'row' : 'column')};
   align-items: ${({ isNewsTeaser }) => (!isNewsTeaser) && 'center'};
   text-decoration: none;
   color: inherit;
   width: 100%;
+
+  ${ArrowIconWrapper} {
+    background-color: ${({ theme }) => theme.color('red')};
+
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
+      transition: background-color 0.15s 0.1s;
+      background-color: ${({ theme }) => theme.color('black')};
+    }
+  }
     
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex-direction: row;
-
     ${bounceUpAnimation(true, 10, 2, true)};
+
+    ${InnerWrapper} {
+      ${defaultBoxShadow()}
+    }
 
     ${Image} img {
       // Only set up imageZoom pre-zoom defaults when we actually need them:
@@ -68,10 +87,6 @@ const Link = styled(link)`
       `}
     }
       
-    ${InnerWrapper} {
-      ${defaultBoxShadow()}
-    }
-  
     &:hover {
       ${InnerWrapper} {
         ${defaultBoxShadow(true)}
@@ -99,25 +114,12 @@ const Link = styled(link)`
       }
     }
   }
-
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    flex-direction: ${({ isNewsTeaser }) => isNewsTeaser && 'column'};
-  }
 `;
 
 const OuterWrapper = styled.article`
   width: 100%;
   height: 100%;
   display: flex;
-  
-  ${ArrowIconWrapper} {
-    background-color: ${({ theme }) => theme.color('red')};
-
-    @media ${({ theme }) => theme.allBreakpoints('L')} {
-      transition: background-color 0.15s 0.1s;
-      background-color: ${({ theme }) => theme.color('black')};
-    }
-  }
 `;
 
 const ImageWrapper = styled.div`
