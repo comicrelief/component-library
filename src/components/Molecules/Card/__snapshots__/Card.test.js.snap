@@ -8,6 +8,7 @@ exports[`renders correctly 1`] = `
   border-radius: 1rem;
   overflow: hidden;
   background: #FFE400;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c1 {
@@ -19,7 +20,6 @@ exports[`renders correctly 1`] = `
 @media (min-width: 0px) {
   .c0 {
     flex-direction: column;
-    gap: 1rem;
     background: #FFE400;
   }
 }
@@ -27,7 +27,6 @@ exports[`renders correctly 1`] = `
 @media (min-width: 740px) {
   .c0 {
     flex-direction: column;
-    gap: 1rem;
     background: #FFE400;
   }
 }
@@ -79,6 +78,7 @@ exports[`renders correctly 2`] = `
   border-radius: 1rem;
   overflow: hidden;
   background: #FFE400;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c1 {
@@ -90,7 +90,6 @@ exports[`renders correctly 2`] = `
 @media (min-width: 0px) {
   .c0 {
     flex-direction: column;
-    gap: 1rem;
     background: #FFE400;
   }
 }
@@ -98,7 +97,6 @@ exports[`renders correctly 2`] = `
 @media (min-width: 740px) {
   .c0 {
     flex-direction: column;
-    gap: 1rem;
     background: #FFE400;
   }
 }
@@ -166,6 +164,7 @@ exports[`renders correctly with no body 1`] = `
   border-radius: 1rem;
   overflow: hidden;
   background: #FFE400;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c1 {
@@ -175,7 +174,6 @@ exports[`renders correctly with no body 1`] = `
 @media (min-width: 0px) {
   .c0 {
     flex-direction: column;
-    gap: 1rem;
     background: #FFE400;
   }
 }
@@ -183,7 +181,6 @@ exports[`renders correctly with no body 1`] = `
 @media (min-width: 740px) {
   .c0 {
     flex-direction: column;
-    gap: 1rem;
     background: #FFE400;
   }
 }

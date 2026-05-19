@@ -6,6 +6,7 @@ import alertIcon from './assets/error-alert-icon-red.svg';
 import Label from '../Label/Label';
 import ErrorText from '../ErrorText/ErrorText';
 import zIndex from '../../../theme/shared/zIndex';
+import fontHelper from '../../../theme/crTheme/fontHelper';
 
 // This seems to get a decent approximation of the necessary width (without resorting to measuring
 //  the element with JS)
@@ -13,7 +14,7 @@ const getPrefixWidth = prefixLength => `calc(1.5rem + (${prefixLength} * 0.5rem)
 
 const InputWrapper = styled.div`
   position: relative;
-  font-size: ${({ theme }) => theme.fontSize('m')};
+  ${({ theme }) => fontHelper(theme, 'formFieldInput')}
 `;
 
 const InputFieldContainer = styled.div`
@@ -38,7 +39,7 @@ const InputField = styled.input`${({ theme, error, prefixLength }) => css`
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 2.4rem 1rem 1.5rem;
+  padding: 1rem;
   ${prefixLength > 0 ? `padding-left: ${getPrefixWidth(prefixLength)};` : ''}
   background-color: ${theme.color('grey_light')};
   border: 1px solid;

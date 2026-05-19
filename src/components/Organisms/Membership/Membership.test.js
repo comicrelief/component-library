@@ -151,7 +151,12 @@ it('renders correctly', () => {
 
 .c18 {
   position: relative;
-  font-size: 1.25rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c19 {
@@ -167,7 +172,7 @@ it('renders correctly', () => {
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 2.4rem 1rem 1.5rem;
+  padding: 1rem;
   background-color: #F4F3F5;
   border: 1px solid;
   border-color: #969598;
@@ -438,6 +443,20 @@ it('renders correctly', () => {
 @media (min-width: 1024px) {
   .c17 {
     font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c18 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c18 {
+    font-size: 1.25rem;
     line-height: 1.25rem;
   }
 }

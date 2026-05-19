@@ -59,7 +59,12 @@ exports[`Monthly donation renders correctly 1`] = `
 
 .c21 {
   position: relative;
-  font-size: 1.25rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c23 {
@@ -75,7 +80,7 @@ exports[`Monthly donation renders correctly 1`] = `
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 2.4rem 1rem 1.5rem;
+  padding: 1rem;
   padding-left: calc(1.5rem + (1 * 0.5rem));
   background-color: #F4F3F5;
   border: 1px solid;
@@ -410,6 +415,20 @@ exports[`Monthly donation renders correctly 1`] = `
   .c16 {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -754,7 +773,12 @@ exports[`Single donation renders correctly 1`] = `
 
 .c14 {
   position: relative;
-  font-size: 1.25rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c15 {
@@ -770,7 +794,7 @@ exports[`Single donation renders correctly 1`] = `
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 2.4rem 1rem 1.5rem;
+  padding: 1rem;
   padding-left: calc(1.5rem + (1 * 0.5rem));
   background-color: #F4F3F5;
   border: 1px solid;
@@ -793,7 +817,7 @@ exports[`Single donation renders correctly 1`] = `
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 2.4rem 1rem 1.5rem;
+  padding: 1rem;
   background-color: #F4F3F5;
   border: 1px solid;
   border-color: #969598;
@@ -1093,6 +1117,20 @@ exports[`Single donation renders correctly 1`] = `
   .c19 {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c14 {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -1520,7 +1558,12 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 .c16 {
   position: relative;
-  font-size: 1.25rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c18 {
@@ -1536,7 +1579,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 2.4rem 1rem 1.5rem;
+  padding: 1rem;
   padding-left: calc(1.5rem + (1 * 0.5rem));
   background-color: #F4F3F5;
   border: 1px solid;
@@ -1768,6 +1811,20 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   .c11 {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c16 {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -2051,7 +2108,12 @@ exports[`Text-only donate widget renders correctly 1`] = `
 
 .c21 {
   position: relative;
-  font-size: 1.25rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c22 {
@@ -2067,7 +2129,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 2.4rem 1rem 1.5rem;
+  padding: 1rem;
   padding-left: calc(1.5rem + (1 * 0.5rem));
   background-color: #F4F3F5;
   border: 1px solid;
@@ -2090,7 +2152,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 2.4rem 1rem 1.5rem;
+  padding: 1rem;
   background-color: #F4F3F5;
   border: 1px solid;
   border-color: #969598;
@@ -2563,6 +2625,20 @@ exports[`Text-only donate widget renders correctly 1`] = `
   .c26 {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 

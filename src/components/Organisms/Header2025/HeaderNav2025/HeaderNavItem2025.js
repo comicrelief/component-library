@@ -6,7 +6,7 @@ import {
   NavItem, NavLink, DesktopNavLink, SubNavMenu, SubNavItem, SubNavLink, ChevronWrapper, StyledText
 } from './HeaderNav2025.style';
 
-import menuGroupIcon from './Menu-Group-Icon.svg';
+import menuGroupIcon from '../../../../theme/shared/assets/Menu-Group-Icon.svg';
 
 const HeaderNavItem2025 = (
   {

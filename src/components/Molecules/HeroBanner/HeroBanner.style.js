@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 import variants from './_variants';
 import { bounceUpAnimation, playPauseReveal } from '../../../theme/shared/animations';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
-import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 
 // Lil helper function to streamline things somewhat:
@@ -29,8 +28,8 @@ const Container = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)}; 
-  justify-content: center; 
+  background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
+  justify-content: center;
   ${({ paddingTop, paddingBottom }) => css`padding: ${paddingTop} 0 ${paddingBottom};`}
 
   ${({ variant, paddingTop, paddingBottom }) => (variant === variants.TEXT_BANNER && css`
@@ -72,7 +71,7 @@ const OuterWrapper = styled.div`
 const MediaWrapper = styled.div`
   width: 100%;
   height: 100%;
-    
+
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     position: absolute;
     top: 0;
@@ -84,9 +83,9 @@ const MediaWrapper = styled.div`
 
       // Zoom the image in slightly by default so the 'bounce' animation doesn't cause issues
       transform: scale(1.02);
-      transition: transform ${0.4}s cubic-bezier(0.68, ${-1.15}, 0.265, ${2.35});
+      transition: transform 0.4s cubic-bezier(0.68, -1.15, 0.265, 2.35);
 
-      ${({ variant }) => (variant === variants.HALF_HEIGHT && 'min-height: 450px;')};  
+      ${({ variant }) => (variant === variants.HALF_HEIGHT && 'min-height: 450px;')};
    }
 
     &:has(+ div a:hover) {
@@ -103,8 +102,8 @@ const CopyOuterWrapper = styled.div`
   left: 0;
   right: 0;
   display: flex;
-  width: calc(100% - (2 * 1rem)); 
-  
+  width: calc(100% - (2 * 1rem));
+
   ${({ variant }) => (variant !== variants.TEXT_BANNER ? 'margin: -2rem 1rem 0;' : 'margin: 0; width: 100%;')}
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
@@ -177,12 +176,12 @@ const CopyInnerWrapper = styled.div`
 
     ${({ variant }) => (variant === variants.TEXT_BANNER ? css`width: 100%;` : css`width: 50%;`)};
 
-    ${({ variant }) => (variant === variants.TEXT_BANNER ? css`margin: 0;` : css`margin: 2rem 0;`)};   
+    ${({ variant }) => (variant === variants.TEXT_BANNER ? css`margin: 0;` : css`margin: 2rem 0;`)};
 
     justify-content: ${({ copyLeft }) => (copyLeft
     ? css` flex-end;`
     : css` flex-start;`
-  )};    
+  )};
   }
 `;
 
@@ -194,35 +193,12 @@ const CTAWrapper = styled.div`
 
   ${({ variant }) => (variant !== variants.TEXT_BANNER && css`
     padding-right: 2.5rem;
-    
+
     span {
       font-weight: bold;
       color: ${({ theme }) => theme.color('red')};
     }
   `)}
-`;
-
-const CtaIconWrapper = styled.div`
-  height: 2rem;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  content: "";
-`;
-
-const CtaText = styled(Text)`
-  position: relative;
-`;
-
-const CtaTextUnderline = styled.img`
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
 `;
 
 const HeroBannerLink = styled.a`
@@ -246,7 +222,7 @@ const HeroBannerLink = styled.a`
 
     // As the link is now wrapping the content, it'll take over width duties from 'Copy':
     width: ${({ variant }) => (variant !== variants.TEXT_BANNER ? '92%' : '100%')};
-    
+
     > div {
       width: 100%;
     }
@@ -279,7 +255,7 @@ const LogoImageWrapper = styled.div`
     ${({ imageRight }) => (imageRight
     ? css` right: 0;`
     : css` left: 0;`
-  )};   
+  )};
   }
 `;
 
@@ -300,6 +276,5 @@ const LogoImage = styled(Picture)`
 
 export {
   Container, CopyOuterWrapper, Copy, MediaWrapper,
-  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink,
-  CtaIconWrapper, CtaText, CtaTextUnderline, LogoImageWrapper, LogoImage
+  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink, LogoImageWrapper, LogoImage
 };

@@ -18,13 +18,14 @@ exports[`handles data structure correctly 1`] = `
         useSplideCarousel={false}
       >
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-6 knJsnf"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-6 cslXhN"
           columns={3}
+          hasLink={true}
           isCarousel={false}
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 floDNG"
             fullWidth={false}
             home={false}
             href="/test"
@@ -124,8 +125,9 @@ exports[`handles data structure correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-6 knJsnf"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-6 kGMdcU"
           columns={3}
+          hasLink={false}
           isCarousel={false}
         >
           <div
@@ -184,13 +186,14 @@ exports[`handles data structure correctly 1`] = `
           </div>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-6 knJsnf"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-6 cslXhN"
           columns={3}
+          hasLink={true}
           isCarousel={false}
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 floDNG"
             fullWidth={false}
             home={false}
             href="/test"
@@ -290,13 +293,14 @@ exports[`handles data structure correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-6 knJsnf"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-6 cslXhN"
           columns={3}
+          hasLink={true}
           isCarousel={false}
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 floDNG"
             fullWidth={false}
             home={false}
             href="/test-no-image"
@@ -384,13 +388,14 @@ exports[`renders 2 columns layout correctly 1`] = `
         useSplideCarousel={false}
       >
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-6 jvcffx"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-6 blfqiH"
           columns={2}
+          hasLink={true}
           isCarousel={true}
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 floDNG"
             fullWidth={false}
             home={false}
             href="/test"
@@ -490,8 +495,9 @@ exports[`renders 2 columns layout correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-6 jvcffx"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-6 fWzOTa"
           columns={2}
+          hasLink={false}
           isCarousel={true}
         >
           <div
@@ -550,13 +556,14 @@ exports[`renders 2 columns layout correctly 1`] = `
           </div>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-6 jvcffx"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-6 blfqiH"
           columns={2}
+          hasLink={true}
           isCarousel={true}
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 floDNG"
             fullWidth={false}
             home={false}
             href="/test"
@@ -656,13 +663,14 @@ exports[`renders 2 columns layout correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-6 jvcffx"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-6 blfqiH"
           columns={2}
+          hasLink={true}
           isCarousel={true}
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 floDNG"
             fullWidth={false}
             home={false}
             href="/test-no-image"
@@ -750,13 +758,14 @@ exports[`renders carousel mode correctly 1`] = `
         useSplideCarousel={false}
       >
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-6 cHBcPu"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-6 cgBhTo"
           columns={3}
+          hasLink={true}
           isCarousel={true}
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 floDNG"
             fullWidth={false}
             home={false}
             href="/test"
@@ -856,8 +865,9 @@ exports[`renders carousel mode correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-6 cHBcPu"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-6 OBjOx"
           columns={3}
+          hasLink={false}
           isCarousel={true}
         >
           <div
@@ -916,13 +926,14 @@ exports[`renders carousel mode correctly 1`] = `
           </div>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-6 cHBcPu"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-6 cgBhTo"
           columns={3}
+          hasLink={true}
           isCarousel={true}
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 floDNG"
             fullWidth={false}
             home={false}
             href="/test"
@@ -1022,13 +1033,14 @@ exports[`renders carousel mode correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-6 cHBcPu"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-6 cgBhTo"
           columns={3}
+          hasLink={true}
           isCarousel={true}
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 floDNG"
             fullWidth={false}
             home={false}
             href="/test-no-image"
@@ -1116,13 +1128,14 @@ exports[`renders correctly with data prop 1`] = `
         useSplideCarousel={false}
       >
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-6 cHBcPu"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-6 cgBhTo"
           columns={3}
+          hasLink={true}
           isCarousel={true}
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 floDNG"
             fullWidth={false}
             home={false}
             href="/test"
@@ -1222,8 +1235,9 @@ exports[`renders correctly with data prop 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-6 cHBcPu"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-6 OBjOx"
           columns={3}
+          hasLink={false}
           isCarousel={true}
         >
           <div
@@ -1282,13 +1296,14 @@ exports[`renders correctly with data prop 1`] = `
           </div>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-6 cHBcPu"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-6 cgBhTo"
           columns={3}
+          hasLink={true}
           isCarousel={true}
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 floDNG"
             fullWidth={false}
             home={false}
             href="/test"
@@ -1388,13 +1403,14 @@ exports[`renders correctly with data prop 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-6 cHBcPu"
+          className="CTACardstyle__CardWrapper-sc-si8xx1-6 cgBhTo"
           columns={3}
+          hasLink={true}
           isCarousel={true}
         >
           <a
             buttonType="primary"
-            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 bBvPTL"
+            className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-5 floDNG"
             fullWidth={false}
             home={false}
             href="/test-no-image"

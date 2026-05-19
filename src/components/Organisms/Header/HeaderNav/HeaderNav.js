@@ -7,7 +7,7 @@ import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import { NavHelper } from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
-import menuGroupIcon from './Menu-Group-Icon.svg';
+import menuGroupIcon from '../../../../theme/shared/assets/Menu-Group-Icon.svg';
 
 import {
   Nav,

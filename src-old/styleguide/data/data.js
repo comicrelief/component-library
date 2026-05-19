@@ -13,6 +13,7 @@ const defaultData = {
   heroBannerLogoImageSquare: '../HeroBannerLogo-Square.png',
   heroBannerLogoImageWide: '../HeroBannerLogo-Wide.png',
   heroBannerLogoImageTall: '../HeroBannerLogo-Tall.png',
+  newsImage: '../newsPhoto.jpg',
   imageLow:
     'http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=100&h=50&q=100',
   image:

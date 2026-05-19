@@ -4,14 +4,8 @@ import styled, { css, keyframes } from 'styled-components';
 import Text from '../../Atoms/Text/Text';
 
 import spacing from '../../../theme/shared/spacing';
-import { Chevron } from '../../Atoms/Icons/index';
+import menuGroupIcon from '../../../theme/shared/assets/Menu-Group-Icon.svg';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
-
-const Container = styled.div`
-  border-radius: 1rem;
-  background: ${({ theme }) => theme.color('white')};
-  ${defaultBoxShadow()}
-`;
 
 const ChevronKeyframes = keyframes`
  0% { margin-top: 0rem; }
@@ -26,6 +20,8 @@ const Button = styled.button`
   width: 100%;
   background: none;
   border: none;
+  color: inherit;
+  -webkit-appearance: none;
   transition: bottom 0.1s linear;
   cursor: pointer;
   text-align: left;
@@ -41,9 +37,6 @@ const Button = styled.button`
   }
 
   padding: ${spacing('l')};
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: ${spacing('l')} ${spacing('lg')};
-  }
 `;
 
 const Icon = styled.div`
@@ -52,11 +45,30 @@ const Icon = styled.div`
   align-content: center;
 `;
 
+const MenuGroupIcon = styled.img`
+  height: 24px;
+  transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
+  transition: transform 0.15s ease-in-out;
+`;
+
+const Container = styled.div`
+  border-radius: 1rem;
+  background: ${({ theme }) => theme.color('white')};
+  ${defaultBoxShadow()}
+  &:hover {
+    ${defaultBoxShadow(true)}
+  }
+
+  ${MenuGroupIcon} {
+    margin: 0;
+  }
+`;
+
 const Copy = styled.div`
   overflow: hidden;
   height: 0;
   visibility: none;
-  transition: all 0.2s cubic-bezier(0.21, 1.7, 0.83, 0.68) 0s;
+  transition: all 0.2s cubic-bezier(0, 0, 0.25, 0.82);
   padding: 0 ${spacing('l')};
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding: 0 ${spacing('lg')};
@@ -66,10 +78,10 @@ const Copy = styled.div`
     height: auto;
     visibility: visible;
     transition: all 0.2s cubic-bezier(0.21, 1.7, 0.83, 0.68) 0s;
-    padding: 0 ${spacing('lg')} ${contentBottomPadding || spacing('l')};
+    padding: 0 ${spacing('l')} ${contentBottomPadding || spacing('l')};
 
     @media ${({ theme }) => theme.allBreakpoints('M')} {
-      padding: 0 ${spacing('lg')} ${contentBottomPadding || spacing('l')};
+      padding: 0 ${spacing('l')} ${contentBottomPadding || spacing('l')};
     }
   `)}
 `;
@@ -94,7 +106,7 @@ const Accordion = ({
           {title}
         </StyledText>
         <Icon>
-          <Chevron colour="black" direction={isOpen ? 'up' : 'down'} />
+          <MenuGroupIcon src={menuGroupIcon} alt="" aria-hidden="true" isOpen={isOpen} />
         </Icon>
       </Button>
       <Copy isOpen={isOpen} contentBottomPadding={contentBottomPadding}>

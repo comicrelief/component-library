@@ -22,23 +22,18 @@ const Moneybuy = styled.div`
     padding: 8px 20px;
     height: auto;
     background-color: white;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     border: 1px solid ${props => props.theme.color('black')};
     position: relative;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     opacity: 1;
+    padding: 16px 40px;
 
     ${props => props.isInactive && css`
         opacity: 0.5;
     `}
-
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
-        width: 70%;
-        padding: 8px 40px;
-
-    }
 
     @media ${({ theme }) => theme.allBreakpoints('L')} {
         padding: 20px 14px;

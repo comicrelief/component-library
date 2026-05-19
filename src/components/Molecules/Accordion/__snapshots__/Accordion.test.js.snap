@@ -34,7 +34,7 @@ exports[`renders correctly 1`] = `
   line-height: inherit;
 }
 
-.c8 {
+.c9 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -43,25 +43,14 @@ exports[`renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c8 {
+.c9 {
   font-size: 1rem;
   line-height: normal;
 }
 
-.c8 span {
+.c9 span {
   font-size: inherit;
   line-height: inherit;
-}
-
-.c6 {
-  transform: rotate(180deg);
-  fill: #000000;
-}
-
-.c0 {
-  border-radius: 1rem;
-  background: #FFFFFF;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c1 {
@@ -71,6 +60,8 @@ exports[`renders correctly 1`] = `
   width: 100%;
   background: none;
   border: none;
+  color: inherit;
+  -webkit-appearance: none;
   transition: bottom 0.1s linear;
   cursor: pointer;
   text-align: left;
@@ -96,10 +87,30 @@ exports[`renders correctly 1`] = `
 }
 
 .c7 {
+  height: 24px;
+  transform: rotate(0deg);
+  transition: transform 0.15s ease-in-out;
+}
+
+.c0 {
+  border-radius: 1rem;
+  background: #FFFFFF;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c0:hover {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+}
+
+.c0 .c6 {
+  margin: 0;
+}
+
+.c8 {
   overflow: hidden;
   height: 0;
   visibility: none;
-  transition: all 0.2s cubic-bezier(0.21,1.7,0.83,0.68) 0s;
+  transition: all 0.2s cubic-bezier(0,0,0.25,0.82);
   padding: 0 2rem;
 }
 
@@ -136,33 +147,21 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c8 {
+  .c9 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .c8 {
+  .c9 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width: 1024px) {
-  .c6 {
-    fill: #000000;
-  }
-}
-
 @media (min-width: 740px) {
-  .c1 {
-    padding: 2rem 3rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c7 {
+  .c8 {
     padding: 0 3rem;
   }
 }
@@ -203,29 +202,21 @@ exports[`renders correctly 1`] = `
     <div
       className="c5"
     >
-      <svg
-        className="c6"
-        colour="black"
-        direction="down"
-        fill="#000000"
-        height={24}
-        mobileColour={null}
-        viewBox="0 0 48 48"
-        width={24}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M40 33a1.992 1.992 0 01-1.414-.586L24 17.829 9.414 32.414a2 2 0 11-2.828-2.828l16-16a2 2 0 012.828 0l16 16A2 2 0 0140 33z"
-        />
-      </svg>
+      <img
+        alt=""
+        aria-hidden="true"
+        className="c6 c7"
+        isOpen={false}
+        src="mock.asset"
+      />
     </div>
   </button>
   <div
-    className="c7"
+    className="c8"
     isOpen={false}
   >
     <p
-      className="c8"
+      className="c9"
     >
       Name, surname, email and billing address We need these to process your payment, create a receipt and send it to you. Establishment information We use this information to understand which institutions (e.g. schools, companies) raise money for us. Your details will be kept safe and never shared with other organisations; see our Privacy Policy for more information
     </p>
