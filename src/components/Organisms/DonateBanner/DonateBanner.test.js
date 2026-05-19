@@ -5,7 +5,7 @@ import DonateBanner from './DonateBanner';
 import data from './dev-data/data';
 import singleData from './dev-data/data-single';
 
-const defaultData = require('../../../styleguide/data/data').defaultData;
+const defaultData = require('../../../data/data').defaultData;
 
 it('Monthly donation renders correctly', () => {
   const imageL = {
@@ -117,7 +117,7 @@ it('Single donation with no Money Buys renders correctly', () => {
       clientID="donate"
       cartID="default-comicrelief"
       title="Donate Now"
-      hideMoneyBuys
+      noMoneyBuys
       subtitle="Please help us fund life-changing projects in the UK and around the world."
       chooseAmountText="Overridden choose amount text"
     />
@@ -141,7 +141,7 @@ it('Text-only donate widget renders correctly', () => {
       clientID="donate"
       cartID="default-comicrelief"
       title="Donate Now"
-      hideMoneyBuys
+      noMoneyBuys
       subtitle="Please help us fund life-changing projects in the UK and around the world."
       chooseAmountText="Enter an amount to give"
     />

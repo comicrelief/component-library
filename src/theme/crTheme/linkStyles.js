@@ -18,7 +18,7 @@ export default styleName => {
   let style = css`
     color: ${color('black')};
     font-weight: normal;
-    :hover {
+    &:hover {
       color: inherit;
       font-weight: 700;
     }
@@ -28,8 +28,8 @@ export default styleName => {
     style = css`
       color: ${linkStyles[styleName].color};
       font-weight: ${linkStyles[styleName].weight};
-      :hover,
-      :focus {
+      &:hover,
+      &:focus {
         color: ${linkStyles[styleName].hoverColor};
         font-weight: ${linkStyles[styleName].hoverWeight};
         text-decoration: none;

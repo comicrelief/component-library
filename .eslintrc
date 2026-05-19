@@ -21,7 +21,7 @@
     "react/jsx-filename-extension": "off",
     "react/no-danger": "off",
     "import/no-extraneous-dependencies": ["error", {"devDependencies": ["importers/**/*.js"]}],
-    "react/jsx-curly-newline": "off", // already handled by prettier, but differently, so we have to disable one
+    "react/jsx-curly-newline": "off",
     "quotes": [
       2,
       "single",

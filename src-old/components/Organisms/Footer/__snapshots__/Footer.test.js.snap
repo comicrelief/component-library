@@ -1,0 +1,1420 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c13 {
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.c13 {
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.c13 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c16 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c16 {
+  font-size: 1rem;
+  line-height: normal;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.c16 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c21 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c21 {
+  font-size: 1rem;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.c21 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c26 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c26 {
+  font-size: 1rem;
+  line-height: normal;
+  color: #969598;
+}
+
+.c26 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c11 {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.c10 {
+  display: inline-block;
+  z-index: 3;
+  width: 48px;
+  transform: inherit;
+  vertical-align: bottom;
+}
+
+.c8 {
+  position: relative;
+  display: inline;
+  color: #000000;
+  font-weight: normal;
+}
+
+.c8:hover,
+.c8:focus {
+  color: #000000;
+  text-decoration: none;
+}
+
+.c24 {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c19 {
+  border: 0;
+  height: 46px;
+  width: 100%;
+  background-color: #2C0230;
+  text-decoration: none;
+}
+
+.c19:hover,
+.c19:focus {
+  border-bottom: none;
+}
+
+.c12 {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.c12 >h2 {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c17 {
+  display: flex;
+  transition: max-height 0.5s ease;
+  max-height: 0px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  list-style: none outside;
+  flex-direction: column;
+}
+
+.c17 >li a {
+  display: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.c17 >li a:after {
+  content: none;
+}
+
+.c22 {
+  display: flex;
+  transition: max-height 0.5s ease;
+  max-height: 0px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  list-style: none outside;
+  flex-direction: column;
+}
+
+.c22 >li a {
+  display: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.c22 >li a:after {
+  content: none;
+}
+
+.c18 {
+  height: 40px;
+  width: 100%;
+  background-color: inherit;
+  padding: 8px 0;
+}
+
+.c23 {
+  height: 40px;
+  width: 100%;
+  background-color: inherit;
+  padding: 8px 0;
+}
+
+.c20 {
+  padding: 14px 21px;
+  height: auto;
+  position: relative;
+}
+
+.c14 {
+  background-color: inherit;
+  list-style: none outside;
+  padding: 0 0 4rem;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.c15 {
+  position: relative;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.c15 a {
+  width: auto;
+  padding: 0;
+  height: auto;
+  position: relative;
+  background-color: inherit;
+  font-size: 19px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.c15 a:after {
+  content: '\\2303';
+  position: absolute;
+  font-family: Arial;
+  margin-left: 4px;
+  overflow: hidden;
+  line-height: 19px;
+  font-size: 23px;
+  color: #FFFFFF;
+  font-weight: 100;
+  transition: transform 0.2s ease;
+  transform: rotate(180deg);
+  top: 0;
+  right: -25px;
+}
+
+.c5 {
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  transition: opacity 0.2s;
+}
+
+.c5:hover,
+.c5:focus {
+  opacity: 0.6;
+}
+
+.c7 {
+  width: 100%;
+}
+
+.c3 {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  list-style-type: none;
+  justify-content: flex-start;
+  margin: 0 auto 0 0;
+  padding: 0;
+  align-items: center;
+}
+
+.c4 {
+  width: 48px;
+  height: auto;
+  flex: 0 0 48px;
+  margin-right: 1.5rem;
+}
+
+.c6 {
+  width: auto;
+}
+
+.c0 {
+  text-align: center;
+  line-height: initial;
+  background: #222;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.c1 {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+}
+
+.c2 {
+  display: flex;
+  margin: 3rem 0 5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c25 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  margin-top: 0;
+}
+
+.c25 p {
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+
+.c9 {
+  color: transparent;
+  border: 0;
+}
+
+.c9 :hover {
+  border: 0;
+}
+
+@media (min-width: 740px) {
+  .c13 {
+    font-size: 1.875rem;
+    line-height: 1.875rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c13 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c16 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c26 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c26 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 1150px) {
+  .c10 {
+    width: 72px;
+  }
+}
+
+@media (min-width: 740px) {
+  .c17 {
+    max-height: none;
+    height: auto;
+  }
+
+  .c17 >li a {
+    display: inline;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 740px) {
+  .c22 {
+    max-height: none;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .c22 >li a {
+    display: inline;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 740px) {
+  .c18 {
+    height: auto;
+    margin-top: 12px;
+    padding: 0;
+  }
+
+  .c18 a {
+    background-color: inherit;
+    height: auto;
+  }
+
+  .c18 a:after {
+    content: none!important;
+  }
+
+  .c18 a:hover,
+  .c18 a:focus {
+    border-bottom: 2px solid #fff;
+  }
+
+  .c18 a:hover span,
+  .c18 a:focus span {
+    border-bottom: 0;
+    padding-bottom: 2px;
+  }
+}
+
+@media (min-width: 740px) {
+  .c23 {
+    height: auto;
+    margin-top: 12px;
+    padding: 0;
+    flex: 0 0 100%;
+  }
+
+  .c23 a {
+    background-color: inherit;
+    height: auto;
+  }
+
+  .c23 a:after {
+    content: none!important;
+  }
+
+  .c23 a:hover,
+  .c23 a:focus {
+    border-bottom: 2px solid #fff;
+  }
+
+  .c23 a:hover span,
+  .c23 a:focus span {
+    border-bottom: 0;
+    padding-bottom: 2px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c23 {
+    flex: 0 0 100%;
+  }
+}
+
+@media (min-width: 740px) {
+  .c14 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+}
+
+@media (min-width: 740px) {
+  .c15 {
+    flex: 0 0 30%;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c15 {
+    flex: 0 0 calc(25% - 1rem);
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .c15 >span {
+    padding: 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .c15 a {
+    font-size: 20px;
+    line-height: 40px;
+  }
+}
+
+@media (min-width: 740px) {
+  .c15 a {
+    cursor: default;
+    display: inline;
+  }
+
+  .c15 a:after {
+    content: none;
+  }
+}
+
+@media (min-width: 740px) {
+  .c3 {
+    justify-content: start;
+    margin: 0 auto 0 0;
+  }
+}
+
+@media (min-width: 740px) {
+  .c4 {
+    margin-right: 1.5rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c0 {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c1 {
+    padding: 0 1rem 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c25 p {
+    font-size: 16px;
+    line-height: 27px;
+  }
+}
+
+<div>
+  <footer
+    className="c0"
+    navItems={true}
+    role="banner"
+  >
+    <div
+      className="c1"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className=""
+        >
+          <ul
+            className="c3"
+            newStyle={false}
+          >
+            <li
+              className="c4"
+              newStyle={false}
+            >
+              <a
+                className="c5 c6"
+                data-test="icon-facebook"
+                href="https://www.facebook.com/comicrelief"
+                isHeader={false}
+                newStyle={false}
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Check out our Facebook page"
+              >
+                <img
+                  alt="facebook"
+                  className="c7"
+                  invertColor={false}
+                  src="mock.asset"
+                />
+              </a>
+            </li>
+            <li
+              className="c4"
+              newStyle={false}
+            >
+              <a
+                className="c5 c6"
+                data-test="icon-instagram"
+                href="https://www.instagram.com/comicrelief"
+                isHeader={false}
+                newStyle={false}
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Check out our Instagram account"
+              >
+                <img
+                  alt="instagram"
+                  className="c7"
+                  invertColor={false}
+                  src="mock.asset"
+                />
+              </a>
+            </li>
+            <li
+              className="c4"
+              newStyle={false}
+            >
+              <a
+                className="c5 c6"
+                data-test="icon-twitter"
+                href="https://twitter.com/comicrelief"
+                isHeader={false}
+                newStyle={false}
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Check out our Twitter account"
+              >
+                <img
+                  alt="twitter"
+                  className="c7"
+                  invertColor={false}
+                  src="mock.asset"
+                />
+              </a>
+            </li>
+            <li
+              className="c4"
+              newStyle={false}
+            >
+              <a
+                className="c5 c6"
+                data-test="icon-youtube"
+                href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
+                isHeader={false}
+                newStyle={false}
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Check out our YouTube channel"
+              >
+                <img
+                  alt="youtube"
+                  className="c7"
+                  invertColor={false}
+                  src="mock.asset"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <a
+          buttonType="primary"
+          className="c8 c9"
+          fullWidth={false}
+          home={false}
+          href="/"
+          iconFirst={false}
+          mobileColour={null}
+          target="_self"
+          title="Go to Comic Relief homepage"
+          type="standard"
+          underline={true}
+        >
+          <div
+            className="c10"
+            rotate={0}
+            sizeMd="72px"
+            sizeSm="48px"
+          >
+            <img
+              alt="Comic Relief logo"
+              className="c11"
+              src="mock.asset"
+            />
+          </div>
+        </a>
+      </div>
+      <nav
+        aria-label="main-menu"
+        className="c12"
+        isExpandable={false}
+        role="navigation"
+      >
+        <h2
+          className="c13"
+          id="footer-menu"
+        >
+          Footer navigation
+        </h2>
+        <ul
+          className="c14"
+          role="menubar"
+        >
+          <li
+            className="c15"
+            index={0}
+            isSubMenuOpen={false}
+            role="none"
+          >
+            <span
+              className="c16"
+            >
+              Hear from us
+            </span>
+            <ul
+              aria-label="Hear from us"
+              className="c17"
+              column={false}
+              isSubMenuOpen={false}
+              role="list"
+            >
+              <li
+                className="c18"
+                column={false}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://www.comicrelief.com/#"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Get the newsletter
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c18"
+                column={false}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://www.comicrelief.com/update-your-preferences"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    How we contact you
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li
+            className="c15"
+            index={1}
+            isSubMenuOpen={false}
+            role="none"
+          >
+            <span
+              className="c16"
+            >
+              Get in touch
+            </span>
+            <ul
+              aria-label="Get in touch"
+              className="c22"
+              column={true}
+              isSubMenuOpen={false}
+              role="list"
+            >
+              <li
+                className="c23"
+                column={true}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="/contact-us"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Contact us
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c23"
+                column={true}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://giftaid.comicrelief.com/update"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Your Gift Aid
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c23"
+                column={true}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://www.comicrelief.com/frequently-asked-questions"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    FAQs
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c23"
+                column={true}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://www.comicrelief.com/red-nose-days-frequently-asked-questions"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Red Nose Day 2019 FAQs
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li
+            className="c15"
+            index={2}
+            isSubMenuOpen={false}
+            role="none"
+          >
+            <span
+              className="c16"
+            >
+              About us
+            </span>
+            <ul
+              aria-label="About us"
+              className="c22"
+              column={true}
+              isSubMenuOpen={false}
+              role="list"
+            >
+              <li
+                className="c23"
+                column={true}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://www.comicrelief.com/about-comic-relief"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Mission
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c23"
+                column={true}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://www.comicrelief.com/about-comic-relief/history"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Our history
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c23"
+                column={true}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://www.comicrelief.com/about-comic-relief/finances"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Finances
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c23"
+                column={true}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://www.comicrelief.com/working-with-us"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Partners
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c23"
+                column={true}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://www.comicrelief.com/about-comic-relief/meet-the-team"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Meet the team
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c23"
+                column={true}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://www.sportrelief.com/"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Sport Relief
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li
+            className="c15"
+            index={3}
+            isSubMenuOpen={false}
+            role="none"
+          >
+            <span
+              className="c16"
+            >
+              Careers
+            </span>
+            <ul
+              aria-label="Careers"
+              className="c17"
+              column={false}
+              isSubMenuOpen={false}
+              role="list"
+            >
+              <li
+                className="c18"
+                column={false}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://www.comicrelief.com/careers"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Working at Comic Relief
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c18"
+                column={false}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://app.beapplied.com/org/comic-relief"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Open roles
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li
+            className="c15"
+            index={4}
+            isSubMenuOpen={false}
+            role="none"
+          >
+            <span
+              className="c16"
+            >
+              News
+            </span>
+            <ul
+              aria-label="News"
+              className="c17"
+              column={false}
+              isSubMenuOpen={false}
+              role="list"
+            >
+              <li
+                className="c18"
+                column={false}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://www.comicrelief.com/news"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    News
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c18"
+                column={false}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://www.comicrelief.com/press-releases"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Press area
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li
+            className="c15"
+            index={5}
+            isSubMenuOpen={false}
+            role="none"
+          >
+            <span
+              className="c16"
+            >
+              Legal
+            </span>
+            <ul
+              aria-label="Legal"
+              className="c17"
+              column={false}
+              isSubMenuOpen={false}
+              role="list"
+            >
+              <li
+                className="c18"
+                column={false}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="/homepage"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Link comp with both URL and Ref
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c18"
+                column={false}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="/this-is-a-test"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Link comp with only Ref
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c18"
+                column={false}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://www.yahoo.com"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_blank"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Link comp with only URL
+                  </span>
+                  <span
+                    className="c24"
+                  >
+                    (opens in new window)
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c18"
+                column={false}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://www.sportrelief.com"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_self"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Test allowListed external link
+                  </span>
+                </a>
+              </li>
+              <li
+                className="c18"
+                column={false}
+              >
+                <a
+                  buttonType="primary"
+                  className="c8 c19 c20"
+                  fullWidth={false}
+                  home={false}
+                  href="https://bing.com"
+                  iconFirst={false}
+                  inline={true}
+                  mobileColour={null}
+                  overrideallowList={false}
+                  role="menuitem"
+                  target="_blank"
+                  type="standard"
+                  underline={true}
+                >
+                  <span
+                    className="c21"
+                  >
+                    Test non-allowListed external link
+                  </span>
+                  <span
+                    className="c24"
+                  >
+                    (opens in new window)
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div
+        className="c25"
+      >
+        <p
+          className="c26"
+        >
+          Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
+        </p>
+      </div>
+    </div>
+  </footer>
+</div>
+`;

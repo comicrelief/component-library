@@ -1,0 +1,192 @@
+import { keyframes, css } from 'styled-components';
+
+const pulseIn = keyframes`
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.04, 1.04, 1.04);
+  }
+  60% {
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  to {
+    transform: scale3d(1.04, 1.04, 1.04);
+  }
+`;
+
+const pulseOut = keyframes`
+  from {
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  30% {
+    transform: scale3d(0.99, 0.99, 0.99);
+  }
+  60% {
+    transform: scale3d(1.01, 1.01, 1.01);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+`;
+
+const pulseInAnimation = css`
+  animation: ${pulseIn} 0.4s ease-in-out forwards;
+`;
+
+const pulseOutAnimation = css`
+  ${pulseInAnimation}
+  animation-name: ${pulseOut};
+`;
+
+/**
+ * Logo rotation animation on hover
+ * Applies a rotation transition that rotates the logo (or whatever else)
+ * -14deg on hover/focus
+ * @param {boolean} animateRotate - Whether to enable the rotation animation
+ * @returns {css} template literal for the animation
+ */
+const logoRotateAnimation = animateRotate => {
+  if (!animateRotate) {
+    return css``;
+  }
+
+  return css`
+    img {
+      transition: transform 0.6s cubic-bezier(0.41, 1.64, 0.41, 0.8);
+    }
+
+    &:hover,
+    &:focus {
+      img {
+        transform: rotate(-14deg);
+      }
+    }
+  `;
+};
+
+/**
+ * Spring scale animation on hover
+ * Applies a smooth spring-like scale transition that expands the element on hover/focus
+ * @param {boolean} animateScale - Whether to enable the scale animation
+ * @param {number} scaleFactor - Scale factor to apply on hover (default 8%)
+ * @param {number} bounceIntensity - Intensity of the springy bounce effect (0-3, default: 1)
+ * @returns {css} template literal for the animation
+ */
+const springScaleAnimation = (animateScale, scaleFactor = 1.08, bounceIntensity = 1) => {
+  if (!animateScale) {
+    return css``;
+  }
+
+  // More negative pull-back and higher overshoot = more bounce
+  // Default intensity (1) gives: cubic-bezier(0.68, -0.85, 0.265, 1.95)
+  // Higher intensity = more pronounced bounce effect
+  const pullBack = -0.55 - (bounceIntensity * 0.3);
+  const overshoot = 1.55 + (bounceIntensity * 0.4);
+  const duration = 0.2 + (bounceIntensity * 0.1);
+
+  return css`
+    transition: transform ${duration}s cubic-bezier(0.68, ${pullBack}, 0.265, ${overshoot});
+    transform-origin: center;
+
+    &:hover,
+    &:focus {
+      transform: scale(${scaleFactor});
+    }
+  `;
+};
+
+/**
+ * formFieldInputAnimation on hover / focus-within
+ * Slides the text inside an input a few pixels to the right.
+ * @param {number} shiftPx - Pixel amount to indent the text (default: 4)
+ * @returns {css}
+ */
+const formFieldInputAnimation = (shiftPx = 4) => css`
+    input,
+    textarea {
+      text-indent: 0;
+      transition: text-indent 0.18s ease;
+    }
+
+    &:hover input,
+    &:hover textarea,
+    &:focus-within input,
+    &:focus-within textarea {
+      text-indent: ${shiftPx}px;
+    }
+  `;
+
+/**
+ * bounceUpAnimation animation on hover
+ * Applies a smooth spring-like position transition that moves the element up on hover/focus
+ * @param {boolean} animateScale - Whether to enable the scale animation
+ * @param {number} pixelMovement - Amount of movement to apply on hover
+ * @param {number} bounceIntensity - Intensity of the springy bounce effect (0-3, default: 1)
+ * @param {boolean} targetChild - Where to apply the transform
+
+ * @returns {css} template literal for the animation
+ */
+const bounceUpAnimation = (animateScale,
+  pixelMovement = 10,
+  bounceIntensity = 1,
+  targetChild = false) => {
+  if (!animateScale) {
+    return css``;
+  }
+
+  const pullBack = -0.55 - (bounceIntensity * 0.3);
+  const overshoot = 1.55 + (bounceIntensity * 0.4);
+  const duration = 0.2 + (bounceIntensity * 0.1);
+
+  // The Hero Banner requires us to apply the transform inside
+  // the anchor, in order to address the 'infinity bounce' bug
+  if (targetChild) {
+    return css`
+    > div {
+      transition: transform ${duration}s cubic-bezier(0.68, ${pullBack}, 0.265, ${overshoot});
+      transform-origin: center;
+    }
+
+    &:hover,
+    &:focus {
+      > div {
+        transform: translateY(-${pixelMovement}px);
+      }
+    }
+  `;
+  }
+
+  return css`
+    transition: transform ${duration}s cubic-bezier(0.68, ${pullBack}, 0.265, ${overshoot});
+    transform-origin: center;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-${pixelMovement}px);
+    }
+  `;
+};
+
+/**
+ * Intended mainly for use with the AmbientVideo component.
+ * Reveals the play/pause button when the parent container (usually a banner)
+ * is hovered or receives focus
+ */
+const playPauseReveal = css`
+  &:hover button[data-play-pause],
+  &:focus-within button[data-play-pause] {
+    opacity: 0.8;
+    transition-delay: 0s;
+  }
+`;
+
+export {
+  logoRotateAnimation,
+  springScaleAnimation,
+  formFieldInputAnimation,
+  bounceUpAnimation,
+  pulseInAnimation,
+  pulseOutAnimation,
+  playPauseReveal
+};

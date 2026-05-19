@@ -1,0 +1,871 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly in minimalist form 1`] = `
+.c7 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c7 {
+  font-size: 0.75rem;
+  line-height: normal;
+}
+
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.c8 {
+  font-size: 2rem;
+  line-height: normal;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c4 {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c5 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.c1 {
+  position: relative;
+  display: inline;
+  color: #000000;
+  font-weight: normal;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #000000;
+  text-decoration: none;
+}
+
+.c0 {
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+.c2 {
+  display: flex;
+  height: 100%;
+  border: 0;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.c2 :hover {
+  border: 0;
+  font-weight: normal;
+}
+
+.c3 {
+  height: auto;
+}
+
+.c6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.c9 {
+  margin: 0;
+}
+
+@media (min-width: 740px) {
+  .c7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c7 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c8 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c8 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c2 {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 740px) {
+  .c3 {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .c3 {
+    width: 100%;
+  }
+}
+
+<article
+  className="c0"
+>
+  <a
+    buttonType="primary"
+    className="c1 c2"
+    fullWidth={false}
+    home={false}
+    href="/test"
+    iconFirst={false}
+    mobileColour={null}
+    target="_self"
+    type="standard"
+    underline={true}
+  >
+    <div
+      className="c3"
+      largeImageWidth="100%"
+      smallImageWidth="45%"
+    >
+      <div
+        className="c4"
+        height="auto"
+        image={null}
+        images={null}
+        isBackgroundImage={false}
+        nonObjFitImage={null}
+        objFitState={true}
+        width="100%"
+      >
+        <img
+          alt="Image's description"
+          className="c5 lazyload"
+          data-src={null}
+          height="auto"
+          objFitState={true}
+          objectFit="cover"
+          width="100%"
+        />
+      </div>
+    </div>
+    <div
+      className="c6"
+    >
+      <span
+        className="c7"
+      >
+         
+      </span>
+      <h3
+        className="c8 c9"
+      >
+        News article
+      </h3>
+    </div>
+  </a>
+</article>
+`;
+
+exports[`renders correctly with copy 1`] = `
+.c7 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c7 {
+  font-size: 0.75rem;
+  line-height: normal;
+}
+
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.c8 {
+  font-size: 2rem;
+  line-height: normal;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c10 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c10 {
+  font-size: 1.25rem;
+  line-height: normal;
+}
+
+.c10 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c4 {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c5 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.c1 {
+  position: relative;
+  display: inline;
+  color: #000000;
+  font-weight: normal;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #000000;
+  text-decoration: none;
+}
+
+.c0 {
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+.c2 {
+  display: flex;
+  height: 100%;
+  border: 0;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.c2 :hover {
+  border: 0;
+  font-weight: normal;
+}
+
+.c3 {
+  height: auto;
+}
+
+.c6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.c9 {
+  margin: 0;
+}
+
+@media (min-width: 740px) {
+  .c7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c7 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c8 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c8 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c10 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c2 {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 740px) {
+  .c3 {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .c3 {
+    width: 100%;
+  }
+}
+
+<article
+  className="c0"
+>
+  <a
+    buttonType="primary"
+    className="c1 c2"
+    fullWidth={false}
+    home={false}
+    href="/test"
+    iconFirst={false}
+    mobileColour={null}
+    target="_self"
+    type="standard"
+    underline={true}
+  >
+    <div
+      className="c3"
+      largeImageWidth="100%"
+      smallImageWidth="45%"
+    >
+      <div
+        className="c4"
+        height="auto"
+        image={null}
+        images={null}
+        isBackgroundImage={false}
+        nonObjFitImage={null}
+        objFitState={true}
+        width="100%"
+      >
+        <img
+          alt="Image's description"
+          className="c5 lazyload"
+          data-src={null}
+          height="auto"
+          objFitState={true}
+          objectFit="cover"
+          width="100%"
+        />
+      </div>
+    </div>
+    <div
+      className="c6"
+    >
+      <span
+        className="c7"
+      >
+         
+      </span>
+      <h3
+        className="c8 c9"
+      >
+        News article
+      </h3>
+      <p
+        className="c10"
+      >
+        News article copy
+      </p>
+    </div>
+  </a>
+</article>
+`;
+
+exports[`renders correctly with date 1`] = `
+.c7 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c7 {
+  font-size: 0.75rem;
+  line-height: normal;
+}
+
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.c8 {
+  font-size: 2rem;
+  line-height: normal;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c4 {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c5 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.c1 {
+  position: relative;
+  display: inline;
+  color: #000000;
+  font-weight: normal;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #000000;
+  text-decoration: none;
+}
+
+.c0 {
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+.c2 {
+  display: flex;
+  height: 100%;
+  border: 0;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.c2 :hover {
+  border: 0;
+  font-weight: normal;
+}
+
+.c3 {
+  height: auto;
+}
+
+.c6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.c9 {
+  margin: 0;
+}
+
+@media (min-width: 740px) {
+  .c7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c7 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c8 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c8 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c2 {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 740px) {
+  .c3 {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .c3 {
+    width: 100%;
+  }
+}
+
+<article
+  className="c0"
+>
+  <a
+    buttonType="primary"
+    className="c1 c2"
+    fullWidth={false}
+    home={false}
+    href="/test"
+    iconFirst={false}
+    mobileColour={null}
+    target="_self"
+    type="standard"
+    underline={true}
+  >
+    <div
+      className="c3"
+      largeImageWidth="100%"
+      smallImageWidth="45%"
+    >
+      <div
+        className="c4"
+        height="auto"
+        image={null}
+        images={null}
+        isBackgroundImage={false}
+        nonObjFitImage={null}
+        objFitState={true}
+        width="100%"
+      >
+        <img
+          alt="Image's description"
+          className="c5 lazyload"
+          data-src={null}
+          height="auto"
+          objFitState={true}
+          objectFit="cover"
+          width="100%"
+        />
+      </div>
+    </div>
+    <div
+      className="c6"
+    >
+      <span
+        className="c7"
+      >
+         01 July 2019
+      </span>
+      <h3
+        className="c8 c9"
+      >
+        News article
+      </h3>
+    </div>
+  </a>
+</article>
+`;
+
+exports[`renders correctly with date and type 1`] = `
+.c7 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c7 {
+  font-size: 0.75rem;
+  line-height: normal;
+}
+
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c8 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.c8 {
+  font-size: 2rem;
+  line-height: normal;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c4 {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c5 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.c1 {
+  position: relative;
+  display: inline;
+  color: #000000;
+  font-weight: normal;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #000000;
+  text-decoration: none;
+}
+
+.c0 {
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+.c2 {
+  display: flex;
+  height: 100%;
+  border: 0;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.c2 :hover {
+  border: 0;
+  font-weight: normal;
+}
+
+.c3 {
+  height: auto;
+}
+
+.c6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.c9 {
+  margin: 0;
+}
+
+@media (min-width: 740px) {
+  .c7 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c7 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c8 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c8 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c2 {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 740px) {
+  .c3 {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .c3 {
+    width: 100%;
+  }
+}
+
+<article
+  className="c0"
+>
+  <a
+    buttonType="primary"
+    className="c1 c2"
+    fullWidth={false}
+    home={false}
+    href="/test"
+    iconFirst={false}
+    mobileColour={null}
+    target="_self"
+    type="standard"
+    underline={true}
+  >
+    <div
+      className="c3"
+      largeImageWidth="100%"
+      smallImageWidth="45%"
+    >
+      <div
+        className="c4"
+        height="auto"
+        image={null}
+        images={null}
+        isBackgroundImage={false}
+        nonObjFitImage={null}
+        objFitState={true}
+        width="100%"
+      >
+        <img
+          alt="Image's description"
+          className="c5 lazyload"
+          data-src={null}
+          height="auto"
+          objFitState={true}
+          objectFit="cover"
+          width="100%"
+        />
+      </div>
+    </div>
+    <div
+      className="c6"
+    >
+      <span
+        className="c7"
+      >
+         article | 01 July 2019
+      </span>
+      <h3
+        className="c8 c9"
+      >
+        News article
+      </h3>
+    </div>
+  </a>
+</article>
+`;

@@ -6,7 +6,7 @@ test.describe('label component', () => {
     await page.goto('/#label');
 
     // select dropdown menu component-1 should be visible
-    const specificElement = page.locator('[data-testid="Label-example-0"]');
+    const specificElement = page.locator('[data-testid="Label-example-1"]');
     await expect(specificElement).toBeVisible();
 
     await page.locator('input[name="field-wrapper-test"]').type('This is test text');

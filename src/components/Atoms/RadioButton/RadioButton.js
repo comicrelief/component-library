@@ -19,7 +19,7 @@ const StyledRadioInput = styled.input`
   left: 0;
   right: 0;
   flex-shrink: 0;
-  + span {
+  & + span {
     left: 2px;
     border-radius: 30px;
     background-clip: padding-box;
@@ -29,10 +29,10 @@ const StyledRadioInput = styled.input`
     height: 30px;
     border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
   }
-  :checked + span {
+  &:checked + span {
     background-color: ${({ theme }) => theme.color('purple')};
     border: 1px solid ${({ theme }) => theme.color('purple')};
-    :before {
+    &:before {
       position: absolute;
       content: '';
       top: 8px;

@@ -3,9 +3,6 @@
 exports[`renders correctly 1`] = `
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   border-radius: 1rem;
@@ -15,44 +12,33 @@ exports[`renders correctly 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   padding: 2rem;
 }
 
-@media (min-width:0px) {
+@media (min-width: 0px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c1 {
     padding: 2rem;
   }
@@ -63,10 +49,16 @@ exports[`renders correctly 1`] = `
 }
 
 <div
+  backgroundColor="yellow"
   className="c0"
+  mediumBreakpointRowLayout={null}
+  smallBreakpointRowLayout={null}
+  squaredCorners={false}
 >
   <div
     className="c1"
+    mediumBreakpointRowLayout={null}
+    smallBreakpointRowLayout={null}
   >
     <h2>
       Title
@@ -81,9 +73,6 @@ exports[`renders correctly 1`] = `
 exports[`renders correctly 2`] = `
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   border-radius: 1rem;
@@ -93,44 +82,33 @@ exports[`renders correctly 2`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   padding: 2rem;
 }
 
-@media (min-width:0px) {
+@media (min-width: 0px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c1 {
     padding: 2rem;
   }
@@ -141,10 +119,18 @@ exports[`renders correctly 2`] = `
 }
 
 <div
+  backgroundColor="yellow"
   className="c0"
+  mediumBreakpointLayout="Row"
+  mediumBreakpointRowLayout={null}
+  smallBreakpointLayout="Row"
+  smallBreakpointRowLayout={null}
+  squaredCorners={false}
 >
   <div
     className="c1"
+    mediumBreakpointRowLayout={null}
+    smallBreakpointRowLayout={null}
   >
     <h2>
       Title
@@ -173,9 +159,6 @@ exports[`renders correctly with no body 1`] = `
 
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   border-radius: 1rem;
@@ -188,35 +171,33 @@ exports[`renders correctly with no body 1`] = `
   height: auto;
 }
 
-@media (min-width:0px) {
+@media (min-width: 0px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
   }
 }
 
 <div
+  backgroundColor="yellow"
   className="c0"
+  mediumBreakpointRowLayout={null}
+  smallBreakpointRowLayout={null}
+  squaredCorners={false}
 >
   <div
     className="c1"
@@ -224,6 +205,12 @@ exports[`renders correctly with no body 1`] = `
     <div
       className="c2 lazyload"
       height="100%"
+      image={null}
+      images="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+      isBackgroundImage={false}
+      nonObjFitImage=""
+      objFitState={true}
+      setObjFitState={[Function]}
       width="100%"
     >
       <img
@@ -234,6 +221,10 @@ exports[`renders correctly with no body 1`] = `
         data-src={null}
         data-srcset="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
         height="100%"
+        mediumBreakpointRowLayout={null}
+        objFitState={true}
+        objectFit="cover"
+        smallBreakpointRowLayout={null}
         src={null}
         srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
         width="100%"

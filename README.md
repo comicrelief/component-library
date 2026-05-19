@@ -4,7 +4,20 @@ Comic Relief React Component Library
 [![GitHub Actions](https://github.com/comicrelief/component-library/actions/workflows/main.yml/badge.svg)](https://github.com/comicrelief/component-library/actions)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-React components to be shared across Comic Relief applications
+
+
+
+# Rebuild notes:
+### All diffs in main exported files are non-functional:
+- Styled-components & syntax updates => CSS output is identical, issues are around assumed "&" in nested CSS.
+- Confetti updated to newer react-canvas-confetti API => new prop names to activate confetti.
+- _TriggerConfetti.js removed => was likely a private helper no longer needed.
+
+### Have added a couple of scripts I worked on to make deving playwright locally less insanity inducing.
+
+
+
+# React components to be shared across Comic Relief applications
 
 ### Use
 

@@ -43,7 +43,7 @@ const Brand = styled.div`
       width: 100%;
       object-fit: contain;
     }
-    :hover {
+    &:hover {
       border: 0;
     }
   }

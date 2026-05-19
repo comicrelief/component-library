@@ -3,7 +3,7 @@ import 'jest-styled-components';
 import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import PictureOrVideo from './PictureOrVideo';
 
-const defaultData = require('../../../styleguide/data/data').defaultData;
+const defaultData = require('../../../data/data').defaultData;
 
 it('renders Picture with flat props correctly', () => {
   const tree = renderWithTheme(

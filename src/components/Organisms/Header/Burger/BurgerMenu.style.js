@@ -38,7 +38,7 @@ const BurgerWrapper = styled(Link)`
   cursor: pointer;
   transition: all 0.2s;
 
-  :hover {
+  &:hover {
     border: none;
     font-weight: inherit;
   }
@@ -75,7 +75,7 @@ const BurgerWrapper = styled(Link)`
     }
   }
 
-  :hover ${BurgerBar} {
+  &:hover ${BurgerBar} {
     &,
     ::before,
     ::after {

@@ -14,7 +14,7 @@ const NavLinkClass = styled(Link)`
   width: 100%;
   color: ${({ theme }) => theme.color('deep_violet_dark')};
   text-decoration: none;
-  :hover {
+  &:hover {
     border: 0;
     color: ${({ theme }) => theme.color('deep_violet_dark')};
     font-weight: inherit;
@@ -85,7 +85,7 @@ const SubNavItem = styled.li`
   padding: 0;
   height: 100%;
   width: 100%;
-  :hover {
+  &:hover {
     background-color: ${({ theme }) => theme.color('deep_violet_light')};
     span {
       border-bottom: 0;
@@ -132,7 +132,7 @@ const SubNavLinkUnderline = styled(SubNavLink)`
       border-bottom-color: ${({ theme }) => theme.color('deep_violet_dark')};
       top: -22px;
     }
-    :hover::before {
+    &:hover::before {
       border-bottom-color: ${({ theme }) => theme.color('deep_violet_light')};
     }
   }
@@ -167,7 +167,7 @@ const NavLink = styled(NavLinkClass)`
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     padding: 10px 0;
     height: auto;
-    :focus + ${SubNavMenu} {
+    &:focus + ${SubNavMenu} {
       display: flex;
     }
   }
@@ -180,7 +180,7 @@ const NavItem = styled.li`
   ${zIndex('medium')};
   position: relative;
   font-weight: 700;
-  :hover {
+  &:hover {
     li {
       span {
         border-bottom: none;
@@ -193,27 +193,27 @@ const NavItem = styled.li`
       border-bottom: none;
       padding-bottom: 0;
     }
-    :hover {
+    &:hover {
       span {
         border-bottom: none;
         padding-bottom: 0;
       }
     }
   }
-  :hover {
+  &:hover {
     background-color: ${({ theme }) => theme.color('teal_light')};
   }
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     margin: 0 4px;
     padding: 25px 5px;
 
-    :hover > ${SubNavMenu}, :focus-within > ${SubNavMenu} {
+    &:hover > ${SubNavMenu}, &:focus-within > ${SubNavMenu} {
       visibility: visible;
       opacity: 1;
       display: flex;
     }
 
-    :hover {
+    &:hover {
       background-color: transparent;
       ${zIndex('high')};
       span {

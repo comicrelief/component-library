@@ -70,7 +70,7 @@ const CloseButton = styled.button`
   overflow: hidden;
   border: none;
   background: transparent;
-  :before {
+  &:before {
     content: '';
     position: absolute;
     height: 2px;
@@ -83,7 +83,7 @@ const CloseButton = styled.button`
     margin-top: -6px;
     transform: rotate(45deg);
   }
-  :after {
+  &:after {
     content: '';
     position: absolute;
     height: 2px;

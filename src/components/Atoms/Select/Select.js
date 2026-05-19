@@ -29,7 +29,7 @@ const StyledSelect = styled.select`
   color: ${({ theme, greyDescription, hasValue }) => (greyDescription && !hasValue ? 'grey' : theme.color('black'))};
   border-radius: 0.5rem;
   cursor: pointer;
-  :focus {
+  &:focus {
     border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
   }
 

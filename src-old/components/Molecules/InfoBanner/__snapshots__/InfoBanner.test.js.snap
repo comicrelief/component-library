@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c2 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.c2 {
+  font-size: undefined;
+  line-height: normal;
+}
+
+.c2 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c3 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c3 {
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.c3 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c4 {
+  position: relative;
+  display: inline;
+  color: #000000;
+  font-weight: normal;
+}
+
+.c4:hover,
+.c4:focus {
+  color: #000000;
+  text-decoration: none;
+}
+
+.c0 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+}
+
+.c1 {
+  display: flex;
+  align-items: start;
+  width: 100%;
+  margin-bottom: 2rem;
+  flex-direction: column;
+}
+
+@media (min-width: 740px) {
+  .c2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c2 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c3 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c3 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c0 {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 740px) {
+  .c1 {
+    width: calc(100% / 3);
+  }
+}
+
+<section
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h3
+      className="c2"
+    >
+      Project Name
+    </h3>
+    <p
+      className="c3"
+    >
+      Hello There
+    </p>
+  </div>
+  <div
+    className="c1"
+  >
+    <h3
+      className="c2"
+    >
+      End Date
+    </h3>
+    <p
+      className="c3"
+    >
+      1st June 2020
+    </p>
+  </div>
+  <div
+    className="c1"
+  >
+    <h3
+      className="c2"
+    >
+      Funding theme
+    </h3>
+    <p
+      className="c3"
+    >
+      <a
+        buttonType="primary"
+        className="c4"
+        fullWidth={false}
+        home={false}
+        href="cr.com"
+        iconFirst={false}
+        mobileColour={null}
+        target="_self"
+        type="standard"
+        underline={true}
+      >
+        Be happy
+      </a>
+    </p>
+  </div>
+  <div
+    className="c1"
+  >
+    <h3
+      className="c2"
+    >
+      Amount Awarded
+    </h3>
+    <p
+      className="c3"
+    >
+      £2,000,000
+    </p>
+  </div>
+  <div
+    className="c1"
+  >
+    <h3
+      className="c2"
+    >
+      Start Date
+    </h3>
+    <p
+      className="c3"
+    >
+      1st June 2010
+    </p>
+  </div>
+  <div
+    className="c1"
+  >
+    <h3
+      className="c2"
+    >
+      Beneficiary Country
+    </h3>
+    <p
+      className="c3"
+    >
+      Uk
+    </p>
+  </div>
+</section>
+`;
