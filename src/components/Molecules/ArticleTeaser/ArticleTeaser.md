@@ -9,7 +9,7 @@ const defaultData = require('../../../styleguide/data/data').defaultData;
     <div style={{ margin: '1rem', width: 'calc(100% - 2rem)' }}>
       <ArticleTeaser
         href="/test"
-        images={defaultData.images}
+        images={defaultData.newsImage}
         imageLow={defaultData.imageLow}
         date=" 01 July 2019"
         title="News article"

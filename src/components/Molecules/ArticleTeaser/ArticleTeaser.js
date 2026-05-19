@@ -55,7 +55,7 @@ const ArticleTeaser = ({
               alt={alt}
               objectFit="cover"
               width={!isNewsTeaser ? logoSize : '100%'}
-              height="auto"
+              height={!isNewsTeaser ? 'auto' : '100%'}
             />
           </ImageWrapper>
           <CopyWrapper isNewsTeaser={isNewsTeaser}>
