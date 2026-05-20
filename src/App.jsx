@@ -1,9 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { atoms, molecules, organisms } from './demos/index.jsx';
+import styled from 'styled-components';
+import { atoms, molecules, organisms, docs } from './demos/index.jsx';
 import { Layout, Sidebar, SidebarTitle, SidebarItem, Preview, PreviewHeader, PreviewBox, Logo, IsolateButton } from './App.styles.js';
 import crLogo from './components/Atoms/Logo/assets/cr-logo.svg';
 
+const Chevron = styled.span`
+  float: right;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-top: -6px;
+  transition: transform 0.2s;
+  transform: ${({ $open }) => ($open ? 'rotate(0deg)' : 'rotate(-90deg)')};
+`;
+
 const groups = [
+  { label: 'Docs', items: docs },
   { label: 'Atoms', items: atoms },
   { label: 'Molecules', items: molecules },
   { label: 'Organisms', items: organisms },
@@ -19,6 +30,12 @@ function itemFromHash() {
 export default function App() {
   const [selected, setSelected] = useState(itemFromHash);
   const [isIsolated, setIsIsolated] = useState(false);
+  const [openGroups, setOpenGroups] = useState(() =>
+    groups.reduce((acc, g) => ({ ...acc, [g.label]: false }), {})
+  );
+
+  const toggleGroup = label =>
+    setOpenGroups(prev => ({ ...prev, [label]: !prev[label] }));
 
   useEffect(() => {
     const onHashChange = () => setSelected(itemFromHash());
@@ -40,8 +57,11 @@ export default function App() {
         <Logo><img src={crLogo} alt="Comic Relief" /></Logo>
         {groups.map(group => (
           <div key={group.label}>
-            <SidebarTitle>{group.label}</SidebarTitle>
-            {group.items.map(item => (
+            <SidebarTitle onClick={() => toggleGroup(group.label)}>
+              {group.label}
+              <Chevron $open={openGroups[group.label]}>▾</Chevron>
+            </SidebarTitle>
+            {openGroups[group.label] && group.items.map(item => (
               <SidebarItem
                 key={item.name}
                 $active={selected.name === item.name}

@@ -1,5 +1,18 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 import ExampleDisplay from './ExampleDisplay.jsx';
+import ThemeExample from './ThemeExample.jsx';
+
+// Documentation
+import introductionMd from '../../docs/introduction.md?raw';
+import installationMd from '../../docs/installation.md?raw';
+import utilsMd from '../../docs/utils.md?raw';
+
+const DocPage = ({ content }) => (
+  <div style={{ padding: '1rem', maxWidth: '800px', lineHeight: '1.6' }}>
+    <ReactMarkdown>{content}</ReactMarkdown>
+  </div>
+);
 
 // Atom examples
 import ButtonExample from '../components/Atoms/Button/ButtonExample.jsx';
@@ -205,4 +218,11 @@ export const organisms = [
   { name: 'Membership', examples: [<MembershipExample1 />, <MembershipExample2 />] },
   { name: 'RichtextCarousel', demo: demo(RichtextCarouselExample, richtextCarouselExampleSrc) },
   { name: 'WYMDCarousel', demo: demo(WYMDCarouselExample, wymdCarouselExampleSrc) },
+];
+
+export const docs = [
+  { name: 'Introduction', demo: <DocPage content={introductionMd} /> },
+  { name: 'Installation', demo: <DocPage content={installationMd} /> },
+  { name: 'Utils', demo: <DocPage content={utilsMd} /> },
+  { name: 'Theme', demo: <ThemeExample /> },
 ];

@@ -12,7 +12,7 @@ export const Sidebar = styled.nav`
   min-width: 240px;
   background: ${color('grey_5')};
   color: ${color('white')};
-  overflow-y: auto;
+  overflow-y: scroll;
   padding: 1rem 0;
 `;
 
@@ -23,6 +23,12 @@ export const SidebarTitle = styled.div`
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: ${color('red')};
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 export const SidebarItem = styled.button`
@@ -79,7 +85,7 @@ export const Logo = styled.div`
 
   img {
     display: block;
-    width: 65px;
+    width: 50px;
     height: auto;
   }
 `;

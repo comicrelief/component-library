@@ -7,11 +7,11 @@ test.describe('accordian component', () => {
     // accordian elements should be visible
     await expect(page.locator('[data-testid="Accordion-example-1"]')).toBeVisible();
     await expect(page.locator('[data-testid="Accordion-example-1"] [data-preview="Accordion"]')).toBeVisible();
-    // dropdown svg icon should be visible
-    await expect(page.locator('[data-testid="Accordion-example-1"] [data-preview="Accordion"] svg').first()).toBeVisible();
+    // dropdown icon should be visible
+    await expect(page.locator('[data-testid="Accordion-example-1"] [data-preview="Accordion"] img').first()).toBeVisible();
 
     // clicking the accordian should show the paragraph
-    await page.locator('[data-testid="Accordion-example-1"] [data-preview="Accordion"] svg').first().click();
+    await page.locator('[data-testid="Accordion-example-1"] [data-preview="Accordion"] img').first().click();
     await expect(page.locator('[data-testid="Accordion-example-1"] [data-preview="Accordion"] p').first()).toBeVisible();
 
     await page.close();
