@@ -9,24 +9,28 @@ const Container = styled.div`
   border-radius: ${props => (props.squaredCorners ? '0' : `${spacing('md')}`)};
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  ${defaultBoxShadow()}
 
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS, if so make horizontal layout */
   @media ${({ theme }) => theme.allBreakpoints('S')} {
     flex-direction: ${props => ((props.smallBreakpointRowLayout === true) ? 'row' : 'column')};
     background: ${({ theme, backgroundColor, smallBreakpointRowLayout }) => ((smallBreakpointRowLayout === true) ? 'transparent' : theme.color(backgroundColor))};
+    ${({ smallBreakpointRowLayout }) => ((smallBreakpointRowLayout !== true) && defaultBoxShadow())};
   }
 
   /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS, if so make horizontal layout */
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: ${props => ((props.mediumBreakpointRowLayout === true) ? 'row' : 'column')};
     background: ${({ theme, backgroundColor, mediumBreakpointRowLayout }) => ((mediumBreakpointRowLayout === true) ? 'transparent' : theme.color(backgroundColor))};
+    // Reset any box-shadow potentially set above:
+    ${({ mediumBreakpointRowLayout }) => ((mediumBreakpointRowLayout !== true) ? defaultBoxShadow() : css`box-shadow: none;`)};
   }
 
   /* Set desktop and upwards to normal vertical layout */
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     flex-direction: column;
     background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+    // Ensure this breakpoint always uses box-shadows, regardless of any rowLayout config above:
+    ${defaultBoxShadow()}
   }
 `;
 
