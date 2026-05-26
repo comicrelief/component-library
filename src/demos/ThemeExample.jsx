@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Card from '../components/Molecules/Card/Card';
-import Text from '../components/Atoms/Text/Text';
 
 const Grid = styled.div`
   display: flex;
@@ -33,62 +32,62 @@ const Item = styled.div`
 export default function ThemeExample() {
   return (
     <div style={{ padding: '1rem' }}>
-      <Text tag="h3" family="Anton" uppercase color="black" size="l">Primary (CR Theme)</Text>
+      <h2>Primary (CR Theme)</h2>
       <Grid>
-        <Item><Card backgroundColor="white" height="auto"><Text tag="h3" color="black" size="s">DEFAULT / WHITE</Text><Text tag="p">#FFFFFF</Text></Card></Item>
-        <Item><Card backgroundColor="black" height="auto"><Text tag="h3" color="white" size="s">DEFAULT / BLACK</Text><Text tag="p" color="white">#000000</Text></Card></Item>
+        <Item><Card backgroundColor="white" height="auto"><h4>DEFAULT / WHITE</h4><p>#FFFFFF</p></Card></Item>
+        <Item><Card backgroundColor="black" height="auto"><h4 style={{ color: "white"}}>DEFAULT / BLACK</h4><p style={{ color: "white"}}>#000000</p></Card></Item>
       </Grid>
 
       <Grid>
-        <Label><Card backgroundColor="white" height="auto"><Text tag="h3" color="black" size="xs">LIGHT</Text><Text tag="p" size="xxs">Used for light background</Text></Card></Label>
-        <Label><Card backgroundColor="white" height="auto"><Text tag="h3" color="black" size="xs">MEDIUM</Text><Text tag="p" size="xxs">Used as background and highlighted content</Text></Card></Label>
-        <Label><Card backgroundColor="white" height="auto"><Text tag="h3" color="black" size="xs">DEFAULT</Text><Text tag="p" size="xxs">Used on CTA default state and special features</Text></Card></Label>
-        <Label><Card backgroundColor="white" height="auto"><Text tag="h3" color="black" size="xs">DARK</Text><Text tag="p" size="xxs">Special CTA states (secondary and hovers)</Text></Card></Label>
+        <Label><Card backgroundColor="white" height="auto"><h4>LIGHT</h4><p>Used for light background</p></Card></Label>
+        <Label><Card backgroundColor="white" height="auto"><h4>MEDIUM</h4><p>Used as background and highlighted content</p></Card></Label>
+        <Label><Card backgroundColor="white" height="auto"><h4>DEFAULT</h4><p>Used on CTA default state and special features</p></Card></Label>
+        <Label><Card backgroundColor="white" height="auto"><h4>DARK</h4><p>Special CTA states (secondary and hovers)</p></Card></Label>
       </Grid>
 
       <Grid>
-        <Item><Card backgroundColor="grey_light" height="auto"><Text tag="h3" color="black" size="xs">grey_light</Text><Text tag="p">#F4F2F4</Text></Card></Item>
-        <Item><Card backgroundColor="grey_medium" height="auto"><Text tag="h3" color="black" size="xs">grey_medium</Text><Text tag="p">#E1E2E3</Text></Card></Item>
-        <Item><Card backgroundColor="grey" height="auto"><Text tag="h3" color="white" size="xs">grey</Text><Text color="white" tag="p">#969598</Text></Card></Item>
-        <Item><Card backgroundColor="grey_4" height="auto"><Text tag="h3" color="white" size="xs">grey_4</Text><Text color="white" tag="p">#6E6E6E</Text></Card></Item>
-        <Item><Card backgroundColor="grey_dark" height="auto"><Text tag="h3" color="white" size="xs">grey_dark</Text><Text color="white" tag="p">#222222</Text></Card></Item>
+        <Item><Card backgroundColor="grey_light" height="auto"><h4>grey_light</h4><p>#F4F2F4</p></Card></Item>
+        <Item><Card backgroundColor="grey_medium" height="auto"><h4>grey_medium</h4><p>#E1E2E3</p></Card></Item>
+        <Item><Card backgroundColor="grey" height="auto"><h4>grey</h4><p>#969598</p></Card></Item>
+        <Item style={{ color: 'white' }}><Card backgroundColor="grey_4" height="auto"><h4>grey_4</h4><p>#6E6E6E</p></Card></Item>
+        <Item style={{ color: 'white' }}><Card backgroundColor="grey_dark" height="auto"><h4>grey_dark</h4><p>#222222</p></Card></Item>
       </Grid>
 
       <Grid>
-        <Item><Card backgroundColor="coral_light" height="auto"><Text tag="h3" color="black" size="xs">coral_light</Text><Text color="black" tag="p">#FFCECE</Text></Card></Item>
-        <Item><Card backgroundColor="coral" height="auto"><Text tag="h3" color="black" size="xs">coral</Text><Text color="black" tag="p">#F9686D</Text></Card></Item>
-        <Item><Card backgroundColor="red" height="auto"><Text tag="h3" color="white" size="xs">red</Text><Text color="white" tag="p">#E52630</Text></Card></Item>
-        <Item><Card backgroundColor="red_dark" height="auto"><Text tag="h3" color="white" size="xs">red_dark</Text><Text color="white" tag="p">#890B11</Text></Card></Item>
+        <Item><Card backgroundColor="coral_light" height="auto"><h4>coral_light</h4><p>#FFCECE</p></Card></Item>
+        <Item><Card backgroundColor="coral" height="auto"><h4>coral</h4><p>#F9686D</p></Card></Item>
+        <Item><Card backgroundColor="red" height="auto"><h4>red</h4><p>#E52630</p></Card></Item>
+        <Item style={{ color: 'white' }}><Card backgroundColor="red_dark" height="auto"><h4>red_dark</h4><p>#890B11</p></Card></Item>
       </Grid>
 
       <Grid>
-        <Item><Card backgroundColor="blue_light" height="auto"><Text tag="h3" color="black" size="xs">blue_light</Text><Text color="black" tag="p">#BECCF9</Text></Card></Item>
-        <Item><Card backgroundColor="blue_royal" height="auto"><Text tag="h3" color="white" size="xs">blue_royal</Text><Text color="white" tag="p">#6489FC</Text></Card></Item>
-        <Item><Card backgroundColor="blue" height="auto"><Text tag="h3" color="white" size="xs">blue</Text><Text color="white" tag="p">#0565D1</Text></Card></Item>
-        <Item><Card backgroundColor="blue_dark" height="auto"><Text tag="h3" color="white" size="xs">blue_dark</Text><Text color="white" tag="p">#274084</Text></Card></Item>
+        <Item><Card backgroundColor="blue_light" height="auto"><h4>blue_light</h4><p>#BECCF9</p></Card></Item>
+        <Item><Card backgroundColor="blue_royal" height="auto"><h4>blue_royal</h4><p>#6489FC</p></Card></Item>
+        <Item><Card backgroundColor="blue" height="auto"><h4>blue</h4><p color="white" tag="p">#0565D1</p></Card></Item>
+        <Item style={{ color: 'white' }}><Card backgroundColor="blue_dark" height="auto"><h4>blue_dark</h4><p>#274084</p></Card></Item>
       </Grid>
 
       <Grid>
-        <Item><Card backgroundColor="purple_light" height="auto"><Text tag="h3" color="black" size="xs">purple_light</Text><Text color="black" tag="p">#DFC6F6</Text></Card></Item>
-        <Item><Card backgroundColor="lavender" height="auto"><Text tag="h3" color="black" size="xs">lavender</Text><Text color="black" tag="p">#C180F9</Text></Card></Item>
-        <Item><Card backgroundColor="purple" height="auto"><Text tag="h3" color="white" size="xs">purple</Text><Text color="white" tag="p">#6F3AAB</Text></Card></Item>
-        <Item><Card backgroundColor="purple_dark" height="auto"><Text tag="h3" color="white" size="xs">purple_dark</Text><Text color="white" tag="p">#48276E</Text></Card></Item>
+        <Item><Card backgroundColor="purple_light" height="auto"><h4>purple_light</h4><p>#DFC6F6</p></Card></Item>
+        <Item><Card backgroundColor="lavender" height="auto"><h4>lavender</h4><p>#C180F9</p></Card></Item>
+        <Item><Card backgroundColor="purple" height="auto"><h4>purple</h4><p>#6F3AAB</p></Card></Item>
+        <Item style={{ color: 'white' }}><Card backgroundColor="purple_dark" height="auto"><h4>purple_dark</h4><p>#48276E</p></Card></Item>
       </Grid>
 
-      <Text tag="h3" family="Anton" uppercase color="black" size="l">Accent Colours (CR Theme)</Text>
-      <Text tag="h3" color="black" size="xs">Used for highlighted actions and content</Text>
+      <h2 style={{ marginTop: "60px"}}>Accent Colours (CR Theme)</h2>
+      <h4 tag="h4" color="black" size="xs">Used for highlighted actions and content</h4>
       <Grid>
-        <Item><Card backgroundColor="yellow" height="auto"><Text tag="h3" color="black" size="xs">yellow</Text><Text tag="p">#FFE400</Text></Card></Item>
-        <Item><Card backgroundColor="orange" height="auto"><Text tag="h3" color="black" size="xs">orange</Text><Text tag="p">#FF9635</Text></Card></Item>
-        <Item><Card backgroundColor="green" height="auto"><Text tag="h3" color="black" size="xs">green</Text><Text tag="p">#49D267</Text></Card></Item>
-        <Item><Card backgroundColor="teal" height="auto"><Text tag="h3" color="black" size="xs">teal</Text><Text tag="p">#4ECDBE</Text></Card></Item>
+        <Item><Card backgroundColor="yellow" height="auto"><h4>yellow</h4><p>#FFE400</p></Card></Item>
+        <Item><Card backgroundColor="orange" height="auto"><h4>orange</h4><p>#FF9635</p></Card></Item>
+        <Item><Card backgroundColor="green" height="auto"><h4>green</h4><p>#49D267</p></Card></Item>
+        <Item><Card backgroundColor="teal" height="auto"><h4>teal</h4><p>#4ECDBE</p></Card></Item>
       </Grid>
 
-      <Text tag="h3" family="Anton" uppercase color="black" size="l">Additional Colours (CR Theme)</Text>
-      <Text tag="h3" color="black" size="xs">Currently, just one new colour used exclusively in the Donate widget on CRcom and the 2024 Donate build</Text>
+      <h2 style={{ marginTop: "60px"}}>Additional Colours (CR Theme)</h2>
+      <h4>Currently, just one new colour used exclusively in the Donate widget on CRcom and the 2024 Donate build</h4>
       <Grid>
-        <Item><Card backgroundColor="blue_donate" height="auto"><Text tag="h3" color="white" size="xs">blue_donate</Text><Text tag="p" color="white">#2042AD</Text></Card></Item>
-        <Item><Card backgroundColor="blue_donate_interact" height="auto"><Text tag="h3" color="white" size="xs">blue_donate_interact</Text><Text tag="p" color="white">#001A85</Text></Card></Item>
+        <Item style={{ color: 'white' }}><Card backgroundColor="blue_donate" height="auto"><h4>blue_donate</h4><p>#2042AD</p></Card></Item>
+        <Item style={{ color: 'white' }}><Card backgroundColor="blue_donate_interact" height="auto"><h4>blue_donate_interact</h4><p>#001A85</p></Card></Item>
       </Grid>
     </div>
   );

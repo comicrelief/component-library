@@ -23,7 +23,30 @@ test.describe('footer component', () => {
   test('Overrides allowList functionality', async ({ page }) => {
     await page.goto('/#footer');
 
+    await expect(page.locator('[data-testid="Footer-example-2"]')).toBeVisible();
+    // footer social icons should be visible
+    await expect(page.locator('[data-testid="Footer-example-2"] footer[role="banner"] [title="Check out our Facebook page"]')).toBeVisible();
+    await expect(page.locator('[data-testid="Footer-example-2"] footer[role="banner"] [title="Check out our Instagram account"]')).toBeVisible();
+    await expect(page.locator('[data-testid="Footer-example-2"] footer[role="banner"] [title="Check out our Twitter account"]')).toBeVisible();
+    await expect(page.locator('[data-testid="Footer-example-2"] footer[role="banner"] [title="Check out our YouTube channel"]')).toBeVisible();
+
+    // CR logo in the footer should be visible
+    await expect(page.locator('[data-testid="Footer-example-2"] footer[role="banner"] [title="Go to Comic Relief homepage"]')).toBeVisible();
+
+    // footer menu should be visible
+    await expect(page.locator('[data-testid="Footer-example-2"] footer[role="banner"] [aria-label="main-menu"]')).toBeVisible();
+
+    await page.close();
+  });
+
+  test('additional legal line footer', async ({ page }) => {
+    await page.goto('/#footer');
+
     await expect(page.locator('[data-testid="Footer-example-3"]')).toBeVisible();
+
+    // legal line to the top of the footer should be present
+    await expect(page.locator('[data-testid="Footer-example-3"] footer[role="banner"] > div > p')).toContainText('CHICKEN RUN: DAWN OF THE NUGGET ™/ © Aardman. Netflix ™/© Netflix. Used with permission/Wallace & Gromit Ltd. All rights reserved/ Shaun the Sheep © & TM /Morph ©/TM Aardman Animations Ltd. All rights reserved.');
+
     // footer social icons should be visible
     await expect(page.locator('[data-testid="Footer-example-3"] footer[role="banner"] [title="Check out our Facebook page"]')).toBeVisible();
     await expect(page.locator('[data-testid="Footer-example-3"] footer[role="banner"] [title="Check out our Instagram account"]')).toBeVisible();
@@ -35,29 +58,6 @@ test.describe('footer component', () => {
 
     // footer menu should be visible
     await expect(page.locator('[data-testid="Footer-example-3"] footer[role="banner"] [aria-label="main-menu"]')).toBeVisible();
-
-    await page.close();
-  });
-
-  test('additional legal line footer', async ({ page }) => {
-    await page.goto('/#footer');
-
-    await expect(page.locator('[data-testid="Footer-example-5"]')).toBeVisible();
-
-    // legal line to the top of the footer should be present
-    await expect(page.locator('[data-testid="Footer-example-5"] footer[role="banner"] > div > p')).toContainText('CHICKEN RUN: DAWN OF THE NUGGET ™/ © Aardman. Netflix ™/© Netflix. Used with permission/Wallace & Gromit Ltd. All rights reserved/ Shaun the Sheep © & TM /Morph ©/TM Aardman Animations Ltd. All rights reserved.');
-
-    // footer social icons should be visible
-    await expect(page.locator('[data-testid="Footer-example-5"] footer[role="banner"] [title="Check out our Facebook page"]')).toBeVisible();
-    await expect(page.locator('[data-testid="Footer-example-5"] footer[role="banner"] [title="Check out our Instagram account"]')).toBeVisible();
-    await expect(page.locator('[data-testid="Footer-example-5"] footer[role="banner"] [title="Check out our Twitter account"]')).toBeVisible();
-    await expect(page.locator('[data-testid="Footer-example-5"] footer[role="banner"] [title="Check out our YouTube channel"]')).toBeVisible();
-
-    // CR logo in the footer should be visible
-    await expect(page.locator('[data-testid="Footer-example-5"] footer[role="banner"] [title="Go to Comic Relief homepage"]')).toBeVisible();
-
-    // footer menu should be visible
-    await expect(page.locator('[data-testid="Footer-example-5"] footer[role="banner"] [aria-label="main-menu"]')).toBeVisible();
 
     await page.close();
   });

@@ -82,7 +82,7 @@ export default function App() {
           </IsolateButton>
         </PreviewHeader>
         {(currentItem?.examples ?? (currentItem?.demo != null ? [currentItem.demo] : [])).map((example, idx) => (
-          <PreviewBox key={idx} data-testid={`${selected.name}-example-${2 * idx + 1}`}>
+          <PreviewBox key={idx} data-testid={`${selected.name}-example-${idx + 1}`}>
             <div data-preview={selected.name}>
               {example}
             </div>

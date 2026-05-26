@@ -140,22 +140,22 @@ test.describe('impact slider component - 2', () => {
     await page.goto('/#impactslider');
 
     // Ensure that the slider and its handle are visible
-    await expect(page.locator('[data-testid="ImpactSlider-example-3"]')).toBeVisible();
-    await expect(page.locator('[data-testid="ImpactSlider-example-3"] #ImpactSlider > div:nth-child(4)')).toBeVisible();
+    await expect(page.locator('[data-testid="ImpactSlider-example-2"]')).toBeVisible();
+    await expect(page.locator('[data-testid="ImpactSlider-example-2"] #ImpactSlider > div:nth-child(4)')).toBeVisible();
 
-    const moneyBuyElement = page.locator('[data-testid="ImpactSlider-example-3"] [data-testid="impact-slider--moneybuy-1"]');
+    const moneyBuyElement = page.locator('[data-testid="ImpactSlider-example-2"] [data-testid="impact-slider--moneybuy-1"]');
     console.log('Target initially: ', await moneyBuyElement.innerText());
 
-    await setSliderValue(page, 'ImpactSlider-example-3', 45);
+    await setSliderValue(page, 'ImpactSlider-example-2', 45);
 
-    await expect(page.locator('[data-testid="ImpactSlider-example-3"] > [data-preview="ImpactSlider"] > div > div > div > div > p')).toContainText('A donation of £45 could help pay for:');
-    await expect(page.locator('[data-testid="ImpactSlider-example-3"] [data-testid="impact-slider--moneybuy-1"] [data-testid="moneybuy-amount"]')).toContainText('45');
-    await expect(page.locator('[data-testid="ImpactSlider-example-3"] [data-testid="impact-slider--moneybuy-2"] [data-testid="moneybuy-amount"]')).toContainText('4');
-    await expect(page.locator('[data-testid="ImpactSlider-example-3"] [data-testid="impact-slider--moneybuy-3"] [data-testid="moneybuy-amount"]')).toContainText('3');
-    await expect(page.locator('[data-testid="ImpactSlider-example-3"] [data-testid="impact-slider--moneybuy-4"] [data-testid="moneybuy-amount"]')).toContainText('2');
+    await expect(page.locator('[data-testid="ImpactSlider-example-2"] > [data-preview="ImpactSlider"] > div > div > div > div > p')).toContainText('A donation of £45 could help pay for:');
+    await expect(page.locator('[data-testid="ImpactSlider-example-2"] [data-testid="impact-slider--moneybuy-1"] [data-testid="moneybuy-amount"]')).toContainText('45');
+    await expect(page.locator('[data-testid="ImpactSlider-example-2"] [data-testid="impact-slider--moneybuy-2"] [data-testid="moneybuy-amount"]')).toContainText('4');
+    await expect(page.locator('[data-testid="ImpactSlider-example-2"] [data-testid="impact-slider--moneybuy-3"] [data-testid="moneybuy-amount"]')).toContainText('3');
+    await expect(page.locator('[data-testid="ImpactSlider-example-2"] [data-testid="impact-slider--moneybuy-4"] [data-testid="moneybuy-amount"]')).toContainText('2');
 
     // donate now button should have the amount as £45
-    await expect(page.locator('[data-testid="ImpactSlider-example-3"] button[type="submit"]')).toContainText('Donate £45 now');
+    await expect(page.locator('[data-testid="ImpactSlider-example-2"] button[type="submit"]')).toContainText('Donate £45 now');
 
     await page.waitForTimeout(5000);
     await page.close();
