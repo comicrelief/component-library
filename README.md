@@ -8,7 +8,6 @@ Comic Relief Components Library
 ### Recent Rebuild Notes (June 2026):
 #### All diffs in main exported files are non-functional:
 - Styled-Components & syntax updates - CSS output is identical, issues are around assumed "&" in nested CSS.
-- Confetti updated to newer react-canvas-confetti API - new prop names to activate confetti.
 - _TriggerConfetti.js removed - no current usage, was likely a private helper no longer needed.
 
 
