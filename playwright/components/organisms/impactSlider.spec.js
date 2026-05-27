@@ -6,6 +6,12 @@ const SLIDER_MAX = 100;
 async function setSliderValue(page, testid, value) {
   const slider = page.locator(`[data-testid="${testid}"] #ImpactSlider`);
   await slider.scrollIntoViewIfNeeded();
+
+  if (value === SLIDER_MAX) {
+    await slider.press('End');
+    return;
+  }
+
   const box = await slider.boundingBox();
   if (box) {
     const fraction = Math.min((value - SLIDER_MIN) / (SLIDER_MAX - SLIDER_MIN), 0.98);

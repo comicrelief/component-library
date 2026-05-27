@@ -6,9 +6,11 @@ Comic Relief Components Library
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 ### Recent Rebuild Notes (June 2026):
-#### All diffs in main exported files are non-functional:
-- Styled-Components & syntax updates - CSS output is identical, issues are around assumed "&" in nested CSS.
-- _TriggerConfetti.js removed - no current usage, was likely a private helper no longer needed.
+- No more markdown importing Javascript faff in example files, just simple React component examples.
+- Only exception is the code examples visible below each of the components - they are built using a Vite-specific import feature:
+```import buttonExampleSrc from '../components/Atoms/Button/ButtonExample.jsx?raw';```
+- Styled-Components 5 => Styled Components 6 - slight syntax change. Previously usage of nested selector / "&" usage in nested CSS was assumed. It now needs to be explicit (like normal native CSS).
+- Removed _TriggerConfetti.js file. I couldn't find any usage, was likely a private helper no longer needed.
 
 
 ### General Usage
