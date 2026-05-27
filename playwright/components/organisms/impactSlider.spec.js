@@ -8,7 +8,9 @@ async function setSliderValue(page, testid, value) {
   await slider.scrollIntoViewIfNeeded();
 
   if (value === SLIDER_MAX) {
-    await slider.press('End');
+    const input = page.locator(`[data-testid="${testid}"] #ImpactSlider input[type="range"]`).last();
+    await input.focus();
+    await input.press('End');
     return;
   }
 
