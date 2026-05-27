@@ -5,10 +5,7 @@ import { Layout, Sidebar, SidebarTitle, SidebarItem, Preview, PreviewHeader, Pre
 import crLogo from './components/Atoms/Logo/assets/cr-logo.svg';
 
 const Chevron = styled.span`
-  float: right;
-  display: inline-block;
   font-size: 1.2rem;
-  margin-top: -6px;
   transition: transform 0.2s;
   transform: ${({ $open }) => ($open ? 'rotate(0deg)' : 'rotate(-90deg)')};
 `;
@@ -20,8 +17,10 @@ const groups = [
   { label: 'Organisms', items: organisms },
 ];
 
+// unpack all items in all groups into one flay array
 const allItems = groups.flatMap(g => g.items);
 
+// return the item that matches the url element hash tag
 function itemFromHash() {
   const hash = window.location.hash.slice(1).toLowerCase();
   return allItems.find(item => item.name.toLowerCase() === hash) || atoms[0];
@@ -34,8 +33,7 @@ export default function App() {
     groups.reduce((acc, g) => ({ ...acc, [g.label]: false }), {})
   );
 
-  const toggleGroup = label =>
-    setOpenGroups(prev => ({ ...prev, [label]: !prev[label] }));
+  const toggleGroup = label => setOpenGroups(prev => ({ ...prev, [label]: !prev[label] }));
 
   useEffect(() => {
     const onHashChange = () => setSelected(itemFromHash());

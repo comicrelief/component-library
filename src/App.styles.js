@@ -17,6 +17,9 @@ export const Sidebar = styled.nav`
 `;
 
 export const SidebarTitle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1.5rem 1rem 0.75rem;
   font-size: 0.8rem;
   font-weight: 700;
