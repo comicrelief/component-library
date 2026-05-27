@@ -38,7 +38,8 @@ export default function CardExample() {
           smallBreakpointRowLayout={true}
           mediumBreakpointRowLayout={false}
         >
-          <Text tag="h3" size="xl">Title</Text>
+          <Text tag="h3" size="xl">Row layout on small breakpoint only</Text>
+          Row layout on small breakpoint only
           <Text tag="p">
             Your donations make a very real difference to people in the UK and around the world.
           </Text>
@@ -55,7 +56,7 @@ export default function CardExample() {
           smallBreakpointRowLayout={false}
           mediumBreakpointRowLayout={true}
         >
-          <Text tag="h3" size="xl">Title</Text>
+          <Text tag="h3" size="xl">Row layout on medium breakpoint only</Text>
           <Text tag="p">
             Your donations make a very real difference to people in the UK and around the world.
           </Text>
@@ -72,7 +73,7 @@ export default function CardExample() {
           smallBreakpointRowLayout={true}
           mediumBreakpointRowLayout={true}
         >
-          <Text tag="h3" size="xl">Title</Text>
+          <Text tag="h3" size="xl">Row layout on small and medium breakpoints</Text>
           <Text tag="p">
             Your donations make a very real difference to people in the UK and around the world.
           </Text>
