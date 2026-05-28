@@ -1,6 +1,6 @@
 import React from 'react';
 import ExampleDisplay from './ExampleDisplay.jsx';
-import ThemeExample from './ThemeExample.jsx';
+import ThemeExample from '../docs/ThemeExample.jsx';
 import IntroductionDoc from '../docs/IntroductionDoc.jsx';
 import InstallationDoc from '../docs/InstallationDoc.jsx';
 import UtilsDoc from '../docs/UtilsDoc.jsx';
