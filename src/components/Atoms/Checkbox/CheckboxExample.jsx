@@ -25,9 +25,13 @@ export default function CheckboxExample() {
   return (
     <>
       <p>List of checkboxes</p>
+
       <Checkbox id="sport1" name="sport1" value="Tennis" label="Tennis" />
+
       <Checkbox id="sport2" name="sport2" value="Basketball" label="Basketball" />
+
       <Checkbox id="sport3" name="sport3" value="Cycling" label="Cycling" />
+
       <Checkbox
         id="sport4"
         name="sport4"
@@ -40,6 +44,7 @@ export default function CheckboxExample() {
         checkboxBorderChecked="green"
         checkboxBorderFocus="blue"
       />
+
       <br />
       <p>A checkbox with a long label containing links</p>
       <Checkbox id="node_label" name="node_label" value="node_label">
