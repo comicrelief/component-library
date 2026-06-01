@@ -16,6 +16,8 @@ const ExampleContainer = styled.div`
 export default function AmbientVideoExample() {
   return (
     <>
+      <h3>A muted, full-width ambient video component using the HTML5 video element. Ideal for background or decorative video.</h3>
+
       <h3>Default (loop, no controls)</h3>
       <ExampleContainer>
         <AmbientVideo src={video480} poster={defaultData.image} />
@@ -36,7 +38,7 @@ export default function AmbientVideoExample() {
         <AmbientVideo src={video480} poster={defaultData.image} loop={false} />
       </ExampleContainer>
 
-      <h3>Responsive: 1080p above M breakpoint (740px), 480p below</h3>
+      <h3>Responsive: 1080p above M breakpoint (740px), 480p below. Resize the browser to see the switch</h3>
       <ExampleContainer $maxWidth="800px">
         <AmbientVideo src={video1080} srcMobile={videoMobile} poster={defaultData.image} />
       </ExampleContainer>
