@@ -13,76 +13,97 @@ const ExampleContainer = styled.div`
 export default function ButtonExample() {
   return (
     <>
-      <h1>Primary</h1>
+      <h3>Primary</h3>
+
       <ExampleContainer>
         <Button type="button">Primary red button (default)</Button>
       </ExampleContainer>
+
       <ExampleContainer>
         <Button type="button" disabled>Primary red button (default): disabled</Button>
       </ExampleContainer>
+
       <ExampleContainer>
         <Button type="button" color="black">Primary black button</Button>
       </ExampleContainer>
+
       <ExampleContainer>
         <Button type="button" color="black" disabled>Primary black button: disabled</Button>
       </ExampleContainer>
+
       <ExampleContainer $bg="#222222">
         <Button type="button" color="white">Primary white button</Button>
       </ExampleContainer>
+
       <ExampleContainer $bg="#222222">
         <Button type="button" color="white" disabled>Primary white button: disabled</Button>
       </ExampleContainer>
+
       <ExampleContainer $bg="#222222">
         <Button type="button" color="non-existent-colour">Using a non-existent colour will default to red</Button>
       </ExampleContainer>
 
       <br />
-      <h1>Secondary</h1>
+      <h3>Secondary</h3>
+
       <ExampleContainer>
         <Button type="button" buttonType={buttonTypes.SECONDARY}>Secondary red button</Button>
       </ExampleContainer>
+
       <ExampleContainer>
         <Button type="button" buttonType={buttonTypes.SECONDARY} disabled>Secondary red button: disabled</Button>
       </ExampleContainer>
+
       <ExampleContainer>
         <Button type="button" color="black" buttonType={buttonTypes.SECONDARY}>Secondary black button</Button>
       </ExampleContainer>
+
       <ExampleContainer>
         <Button type="button" color="black" buttonType={buttonTypes.SECONDARY} disabled>Secondary black button: disabled</Button>
       </ExampleContainer>
+
       <ExampleContainer $bg="#222222">
         <Button type="button" color="white" buttonType={buttonTypes.SECONDARY}>Secondary white button</Button>
       </ExampleContainer>
+
       <ExampleContainer $bg="#222222">
         <Button type="button" color="white" buttonType={buttonTypes.SECONDARY} disabled>Secondary white button: disabled</Button>
       </ExampleContainer>
 
       <br />
-      <h1>Tertiary</h1>
+      <h3>Tertiary</h3>
+
       <ExampleContainer>
         <Button type="button" buttonType={buttonTypes.TERTIARY}>Tertiary red button</Button>
       </ExampleContainer>
+
       <ExampleContainer>
         <Button type="button" buttonType={buttonTypes.TERTIARY} disabled>Tertiary red button: disabled</Button>
       </ExampleContainer>
+
       <ExampleContainer>
         <Button type="button" color="black" buttonType={buttonTypes.TERTIARY}>Tertiary black button</Button>
       </ExampleContainer>
+
       <ExampleContainer>
         <Button type="button" color="black" buttonType={buttonTypes.TERTIARY} disabled>Tertiary black button: disabled</Button>
       </ExampleContainer>
+
       <ExampleContainer $bg="#222222">
         <Button type="button" color="white" buttonType={buttonTypes.TERTIARY}>Tertiary white button</Button>
       </ExampleContainer>
+
       <ExampleContainer $bg="#222222">
         <Button type="button" color="white" buttonType={buttonTypes.TERTIARY} disabled>Tertiary white button: disabled</Button>
       </ExampleContainer>
 
       <br />
-      <h1>Other</h1>
+      <h3>Other</h3>
+
       <ExampleContainer>
         <Button wrapper>My button as a span</Button>
       </ExampleContainer>
+
       <ExampleContainer>
         <Button type="button" fullWidth>Full-width button</Button>
       </ExampleContainer>
