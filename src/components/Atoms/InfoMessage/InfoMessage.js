@@ -55,9 +55,13 @@ const InfoMessage = ({
 );
 
 InfoMessage.propTypes = {
+  /** Theme colour key from our colour list. */
   backgroundColor: PropTypes.string,
+  /** Value for `data-testid` on the root  (defaults to `info-message`). */
   dataTestId: PropTypes.string,
+  /** Bold line; string for the title */
   title: PropTypes.node.isRequired,
+  /** Normal-weight line; string or include `Link` for inline links */
   message: PropTypes.node.isRequired
 };
 

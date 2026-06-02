@@ -13,13 +13,19 @@ const StyledInput = styled.input`
 export default function LabelExample() {
   return (
     <>
-      <Label label="Wrapping a basic text input">
+      <Label
+        label="Wrapping a basic text input"
+        data-testid="label-basic"
+      >
         <input type="text" name="field-wrapper-test" style={{ maxWidth: '300px' }} />
       </Label>
 
       <br />
 
-      <Label label="Wrapping a styled input">
+      <Label
+        label="Wrapping a styled input"
+        data-testid="label-styled"
+      >
         <StyledInput type="text" name="field-wrapper-test-1" />
       </Label>
     </>

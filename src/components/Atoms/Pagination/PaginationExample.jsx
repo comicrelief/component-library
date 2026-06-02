@@ -10,7 +10,10 @@ export default function PaginationExample() {
         totalPages={6}
         currentPage={2}
         createURL={value => `example.com/page/${value}`}
-        onSelect={(event, value) => { event.preventDefault(); console.log(value); }}
+        onSelect={(event, value) => {
+          event.preventDefault();
+          console.log(value);
+        }}
         showFirst={false}
         showPrevious={false}
         showNext={false}
@@ -21,7 +24,10 @@ export default function PaginationExample() {
         totalPages={6}
         currentPage={4}
         createURL={value => `example.com/page/${value}`}
-        onSelect={(event, value) => { event.preventDefault(); console.log(value); }}
+        onSelect={(event, value) => {
+          event.preventDefault();
+          console.log(value);
+        }}
         showFirst={false}
         showPrevious={false}
         showNext={false}
@@ -35,7 +41,10 @@ export default function PaginationExample() {
         totalPages={10}
         currentPage={1}
         createURL={value => `example.com/page/${value}`}
-        onSelect={(event, value) => { event.preventDefault(); console.log(value); }}
+        onSelect={(event, value) => {
+          event.preventDefault();
+          console.log(value);
+        }}
         showFirst={true}
         showPrevious={true}
         showNext={true}
@@ -47,7 +56,10 @@ export default function PaginationExample() {
         totalPages={10}
         currentPage={3}
         createURL={value => `example.com/page/${value}`}
-        onSelect={(event, value) => { event.preventDefault(); console.log(value); }}
+        onSelect={(event, value) => {
+          event.preventDefault();
+          console.log(value);
+        }}
         showFirst={true}
         showPrevious={true}
         showNext={true}
@@ -60,8 +72,10 @@ export default function PaginationExample() {
         totalPages={10}
         currentPage={5}
         createURL={value => `example.com/page/${value}`}
-        onSelect={(event, value) => { event.preventDefault(); console.log(value); }}
-        showFirst={true}
+        onSelect={(event, value) => {
+          event.preventDefault();
+          console.log(value);
+        }}
         showPrevious={true}
         showNext={true}
         showLast={true}
@@ -73,7 +87,10 @@ export default function PaginationExample() {
         totalPages={10}
         currentPage={10}
         createURL={value => `example.com/page/${value}`}
-        onSelect={(event, value) => { event.preventDefault(); console.log(value); }}
+        onSelect={(event, value) => {
+          event.preventDefault();
+          console.log(value);
+        }}
         showFirst={true}
         showPrevious={true}
         showNext={true}
@@ -88,7 +105,10 @@ export default function PaginationExample() {
         totalPages={10}
         currentPage={5}
         createURL={value => `example.com/page/${value}`}
-        onSelect={(event, value) => { event.preventDefault(); console.log(value); }}
+        onSelect={(event, value) => {
+          event.preventDefault();
+          console.log(value);
+        }}
         showFirst={true}
         showPrevious={true}
         showNext={true}
@@ -110,7 +130,10 @@ export default function PaginationExample() {
         totalPages={20}
         currentPage={10}
         createURL={value => `example.com/page/${value}`}
-        onSelect={(event, value) => { event.preventDefault(); console.log(value); }}
+        onSelect={(event, value) => {
+          event.preventDefault();
+          console.log(value);
+        }}
         showFirst={true}
         showPrevious={true}
         showNext={true}

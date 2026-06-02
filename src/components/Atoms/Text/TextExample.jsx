@@ -6,7 +6,12 @@ export default function TextExample() {
   return (
     <>
       <div style={{ padding: '1rem 0' }}>
-        <Text tag="h1" mobileColor="blue" family="Anton">
+        <Text
+          tag="h1"
+          mobileColor="blue"
+          // To be phased out: tags to use the prescribed family always
+          family="Anton"
+        >
           <span style={{ width: '55px' }}>H1 </span>
         </Text>
         <Text style={{ textTransform: 'none' }} tag="span" size="s">
@@ -42,7 +47,13 @@ export default function TextExample() {
           <b>line height (S / M / L breakpoints):</b> {fontConfig['h3'].small.lineHeight} / {fontConfig['h3'].medium.lineHeight} / {fontConfig['h3'].large.lineHeight}
         </Text>
 
-        <Text tag="h4" family="Montserrat" weight="normal" uppercase>
+        <Text
+          tag="h4"
+          family="Montserrat"
+          weight="normal"
+          // To be phased out: text to always be rendered as typed
+          uppercase
+        >
           <span style={{ width: '55px' }}>H4 </span>
         </Text>
         <Text style={{ textTransform: 'none' }} tag="span" size="s">
@@ -68,7 +79,13 @@ export default function TextExample() {
           Tags to be phased out:
         </Text>
 
-        <Text tag="h5" family="Anton" uppercase weight="normal">
+        <Text
+          tag="h5"
+          family="Anton"
+          uppercase
+          // To be phased-out
+          weight="normal"
+        >
           <span style={{ width: '55px' }}>H5 </span>
         </Text>
         <Text style={{ textTransform: 'none' }} tag="span" size="s">
@@ -129,6 +146,15 @@ export default function TextExample() {
           <p>Proceeding paragraph</p>
           <p>Paragraph, last child</p>
         </div>
+
+        <div style={{backgroundColor: 'aquamarine', padding: '1rem', margin: "1rem 0 1rem"}}>
+          <p>A preceding paragraph</p>
+          <p>A preceding paragraph</p>
+          <h1>H2 with an added margin-top as it follows a p tag</h1>
+          <p>Proceeding paragraph</p>
+          <p>Paragraph, last child</p>
+        </div>
+
       </div>
     </>
   );
