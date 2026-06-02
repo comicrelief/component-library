@@ -2,8 +2,8 @@
 # Checklist
 
 # Atoms
-- [ ] Atoms test run local => Label is failing
-- [ ] Atoms test run remote
+- [X] Atoms test run local => Label is failing
+- [X] Atoms test run remote
 
 ## Results 1
 - [X] js export file diff = Identical
