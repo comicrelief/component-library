@@ -18,7 +18,7 @@ export default function TextExample() {
   return (
     <>
       <Section>
-      <h2>Basic Text:</h2>
+      <h2>Basic Text Elements:</h2>
 
       <Wrapper>
         <Text
@@ -86,7 +86,7 @@ export default function TextExample() {
       </Section>
 
       <Section>
-      <h2>Tags to be phased out:</h2>
+      <h2>Text Elements to be phased out:</h2>
 
       <Wrapper>
         <Text tag="h5" family="Anton" uppercase weight="normal">
@@ -112,7 +112,7 @@ export default function TextExample() {
       </Section>
 
       <Section>
-      <h2>Text styles in context.</h2>
+      <h2>Text Elements in situ / context.</h2>
 
       <Wrapper>
         <p>First paragraph</p>
