@@ -5,8 +5,8 @@ import styled, { withTheme } from 'styled-components';
 const angle = {
   right: '0',
   left: '180deg',
-  down: '-90deg',
-  up: '90deg'
+  down: '90deg',
+  up: '-90deg'
 };
 
 const Icon = styled.svg`
