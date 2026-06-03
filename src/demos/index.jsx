@@ -6,6 +6,8 @@ import InstallationDoc from '../docs/InstallationDoc.jsx';
 import UtilsDoc from '../docs/UtilsDoc.jsx';
 
 // Atom examples
+import IconsExample from '../components/Atoms/Icons/IconsExample.jsx';
+import iconsExampleSrc from '../components/Atoms/Icons/IconsExample.jsx?raw';
 import ButtonExample from '../components/Atoms/Button/ButtonExample.jsx';
 import buttonExampleSrc from '../components/Atoms/Button/ButtonExample.jsx?raw';
 import TextExample from '../components/Atoms/Text/TextExample.jsx';
@@ -30,8 +32,8 @@ import RichTextExample from '../components/Atoms/RichText/RichTextExample.jsx';
 import richTextExampleSrc from '../components/Atoms/RichText/RichTextExample.jsx?raw';
 import PaginationExample from '../components/Atoms/Pagination/PaginationExample.jsx';
 import paginationExampleSrc from '../components/Atoms/Pagination/PaginationExample.jsx?raw';
-import LogoExample from '../components/Atoms/Logo/LogoExample.jsx';
-import logoExampleSrc from '../components/Atoms/Logo/LogoExample.jsx?raw';
+import LogoExample from '../components/Atoms/Logos/LogoExample.jsx';
+import logoExampleSrc from '../components/Atoms/Logos/LogoExample.jsx?raw';
 import PictureExample from '../components/Atoms/Picture/PictureExample.jsx';
 import pictureExampleSrc from '../components/Atoms/Picture/PictureExample.jsx?raw';
 import SocialIconsExample from '../components/Atoms/SocialIcons/SocialIconsExample.jsx';
@@ -148,10 +150,11 @@ export const atoms = [
   { name: 'Confetti', demo: demo(ConfettiExample, confettiExampleSrc) },
   { name: 'ErrorText', demo: demo(ErrorTextExample, errorTextExampleSrc) },
   { name: 'InfoMessage', demo: demo(InfoMessageExample, infoMessageExampleSrc) },
+  { name: 'Icons', demo: demo(IconsExample, iconsExampleSrc) },
   { name: 'Input', demo: demo(InputExample, inputExampleSrc) },
   { name: 'Label', demo: demo(LabelExample, labelExampleSrc) },
   { name: 'Link', demo: demo(LinkExample, linkExampleSrc) },
-  { name: 'Logo', demo: demo(LogoExample, logoExampleSrc) },
+  { name: 'Logos', demo: demo(LogoExample, logoExampleSrc) },
   { name: 'Pagination', demo: demo(PaginationExample, paginationExampleSrc) },
   { name: 'Picture', demo: demo(PictureExample, pictureExampleSrc) },
   { name: 'RadioButton', demo: demo(RadioButtonExample, radioButtonExampleSrc) },

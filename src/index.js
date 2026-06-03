@@ -13,7 +13,7 @@ export { logoRotateAnimation, springScaleAnimation } from './theme/shared/animat
 
 /* Atoms */
 export { default as Text } from './components/Atoms/Text/Text';
-export { default as Logo } from './components/Atoms/Logo/Logo';
+export { default as Logo } from './components/Atoms/Logos/Logo';
 export { default as Picture } from './components/Atoms/Picture/Picture';
 export { default as Link } from './components/Atoms/Link/Link';
 export { default as Button } from './components/Atoms/Button/Button';

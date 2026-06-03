@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { atoms, molecules, organisms, docs } from './demos/index.jsx';
 import { Layout, Sidebar, SidebarTitle, SidebarItem, Preview, PreviewHeader, PreviewBox, Logo, IsolateButton } from './App.styles.js';
-import crLogo from './components/Atoms/Logo/assets/cr-logo.svg';
+import crLogo from './components/Atoms/Logos/assets/cr-logo.svg';
 
 const Chevron = styled.span`
   font-size: 1.2rem;
