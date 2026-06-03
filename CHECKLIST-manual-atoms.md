@@ -1,5 +1,6 @@
 
 # Checklist
+Text example is really messy - ask Andy about this
 
 # Atoms
 - [X] Atoms test run local
