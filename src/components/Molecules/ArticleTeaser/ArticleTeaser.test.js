@@ -210,7 +210,22 @@ it('renders article teaser correctly', () => {
       height: auto;
       position: relative;
       margin-top: auto;
-      padding: 2rem 2.5rem 0 0;
+      padding: 2rem 0 0 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
     }
 
     .c16 .c21 {
@@ -218,7 +233,6 @@ it('renders article teaser correctly', () => {
       -ms-transform: none;
       transform: none;
       top: auto;
-      bottom: -8px;
     }
 
     .c16 span {
@@ -746,7 +760,22 @@ it('renders press realese correctly', () => {
       height: auto;
       position: relative;
       margin-top: auto;
-      padding: 2rem 2.5rem 0 0;
+      padding: 2rem 0 0 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
     }
 
     .c16 .c21 {
@@ -754,7 +783,6 @@ it('renders press realese correctly', () => {
       -ms-transform: none;
       transform: none;
       top: auto;
-      bottom: -8px;
     }
 
     .c16 span {
