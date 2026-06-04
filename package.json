@@ -41,7 +41,7 @@
     "test:e2e:mac:atoms": "playwright test playwright/components/atoms --project=chromium; yarn playwright show-report",
     "test:e2e:mac:molecules": "playwright test playwright/components/molecules --project=chromium; yarn playwright show-report",
     "test:e2e:mac:organisms": "playwright test playwright/components/organisms --project=chromium; yarn playwright show-report",
-    "test:e2e:mac:atoms:link": "playwright test playwright/components/atoms/link.spec.js --project=chromium; yarn playwright show-report",
+    "test:e2e:mac:molecules:accordian": "playwright test playwright/components/molecules/accordian.spec.js --project=chromium; yarn playwright show-report",
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix"
   },

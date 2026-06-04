@@ -1,19 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
 import ArticleTeaser from './ArticleTeaser';
 import { defaultData } from '../../../data/data';
-
-const ExampleWrapper = styled.div`
-  margin: 1rem;
-  width: 300px;
-`;
 
 export default function ArticleTeaserExample() {
   return (
     <>
       <h3>Article teaser</h3>
-      <div style={{ display: 'flex', background: '#E1E2E3' }}>
-        <ExampleWrapper>
+
+      <span> Recreating XS-M breakpoints layout in CRcom (somewhat)</span>
+      <div style={{ display: 'flex', background: '#E1E2E3', maxWidth: '1023px', marginBottom: '2rem', flexFlow: 'wrap', justifyContent: 'space-between' }}>
+        <div style={{ margin: '1rem', width: 'calc(100% - 2rem)' }}>
           <ArticleTeaser
             href="/test"
             images={defaultData.images}
@@ -21,31 +17,108 @@ export default function ArticleTeaserExample() {
             date=" 01 July 2019"
             title="News article"
             alt="Image's description"
-            time="4 min read"
           />
-        </ExampleWrapper>
-        <ExampleWrapper>
+        </div>
+
+        <div style={{ margin: '1rem', width: 'calc(100% - 2rem)' }}>
+          <ArticleTeaser
+            href="/test"
+            images={defaultData.images}
+            imageLow={defaultData.imageLow}
+            title="Article teaser w/no date; used for Prizes, loads, loads, loads, loads, loads, loads, loads, loads, loads, LOADS more copy to mess with the heights a bit"
+            alt="Image's description"
+          />
+        </div>
+
+        <div style={{ margin: '1rem', width: 'calc(100% - 2rem)' }}>
+          <ArticleTeaser
+            href="/test"
+            images={defaultData.images}
+            imageLow={defaultData.imageLow}
+            title="Article teaser w/no date; used for Prizes"
+            alt="Image's description"
+          />
+        </div>
+      </div>
+
+      <span> Recreating L+ breakpoints layout in CRcom (somewhat)</span>
+      <div style={{ display: 'flex', background: '#E1E2E3', maxWidth: '100%', marginBottom: '2rem', flexFlow: 'wrap', justifyContent: 'space-between' }}>
+        <div style={{ margin: '1rem', width: 'calc(33.3% - 2rem)' }}>
           <ArticleTeaser
             href="/test"
             images={defaultData.images}
             imageLow={defaultData.imageLow}
             date=" 01 July 2019"
-            title="News article News article"
+            title="News article"
             alt="Image's description"
-            time="4 min read"
           />
-        </ExampleWrapper>
+        </div>
+
+        <div style={{ margin: '1rem', width: 'calc(33.3% - 2rem)' }}>
+          <ArticleTeaser
+            href="/test"
+            images={defaultData.images}
+            imageLow={defaultData.imageLow}
+            title="Article teaser w/no date; used for Prizes, loads, loads, loads, loads, loads, loads, loads, loads, loads, LOADS more copy to mess with the heights a bit"
+            alt="Image's description"
+          />
+        </div>
+
+        <div style={{ margin: '1rem', width: 'calc(33.3% - 2rem)' }}>
+          <ArticleTeaser
+            href="/test"
+            images={defaultData.images}
+            imageLow={defaultData.imageLow}
+            title="Article teaser w/no date; used for Prizes"
+            alt="Image's description"
+          />
+        </div>
       </div>
 
-      <h3>Press release</h3>
-      <ArticleTeaser
-        href="/test"
-        category=""
-        date=" 01 July 2019"
-        title="Press Release"
-        alt="Image's description"
-        logoSize="80px"
-      />
+      <h3>Article teaser: Press release</h3>
+
+      <div style={{ width: '100%', padding: '1rem' }}>
+        <ArticleTeaser
+          href="/test"
+          category=""
+          date=" 01 July 2019"
+          title="Press Release"
+          alt="Image's description"
+          logoSize="80px"
+        />
+      </div>
+
+      <div style={{ width: '100%', padding: '1rem' }}>
+        <ArticleTeaser
+          href="/test"
+          category=""
+          title="Press Release w/no date"
+          alt="Image's description"
+          logoSize="80px"
+        />
+      </div>
+
+      <div style={{ width: '100%', padding: '1rem' }}>
+        <ArticleTeaser
+          href="/test"
+          category="Red Nose Day"
+          title="Red Nose Day Press Release"
+          date=" 01 July 2019"
+          alt="Image's description"
+          logoSize="80px"
+        />
+      </div>
+
+      <div style={{ width: '100%', padding: '1rem' }}>
+        <ArticleTeaser
+          href="/test"
+          category="Sport Relief"
+          title="Sport Relief Press Release"
+          date=" 01 July 2019"
+          alt="Image's description"
+          logoSize="80px"
+        />
+      </div>
     </>
   );
 }

@@ -28,7 +28,7 @@ export default function CardExample() {
         </Card>
       </ExampleWrapper>
 
-      <h3>Row layout on small breakpoint only</h3>
+      <h3>Card - row layout on small breakpoint only</h3>
       <ExampleWrapper>
         <Card
           imageLow={defaultData.image}
@@ -46,7 +46,7 @@ export default function CardExample() {
         </Card>
       </ExampleWrapper>
 
-      <h3>Row layout on medium breakpoint only</h3>
+      <h3>Card - row layout on medium breakpoint only</h3>
       <ExampleWrapper>
         <Card
           imageLow={defaultData.image}
@@ -63,7 +63,7 @@ export default function CardExample() {
         </Card>
       </ExampleWrapper>
 
-      <h3>Row layout on small and medium breakpoints</h3>
+      <h3>Card - row layout on small and medium breakpoints</h3>
       <ExampleWrapper>
         <Card
           imageLow={defaultData.image}
@@ -80,7 +80,7 @@ export default function CardExample() {
         </Card>
       </ExampleWrapper>
 
-      <h3>No body</h3>
+      <h3>Card - no body</h3>
       <ExampleWrapper>
         <Card imageLow={defaultData.image} images={defaultData.image} />
       </ExampleWrapper>
