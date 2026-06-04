@@ -23,7 +23,11 @@
 
 
 ### Accordion
+- [X] js export file diff = ChevronKeyframes - this wasn't actually passed to the styled component, have got it up and running.
+- [X] js example vs md example = Same examples.
+- [X] playwright test = Identical, just "svg" addition in comment.
+
+### ArticleTeaser
 - [ ] js export file diff = Identical
 - [ ] js example vs md example = Same examples.
-- [ ] playwright test = no test for this component
-## Results 1
+- [ ] playwright test = Identical, just "svg" addition in comment.
