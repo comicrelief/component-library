@@ -63,3 +63,25 @@
 - [X] js example vs md example = Same examples.
 - [X] playwright test = no test for this component
 
+### Countdown
+- [X] js export file diff = Identical
+- [X] js example vs md example = Same examples.
+- [X] playwright test = no test for this component
+
+### Descriptor
+- [X] js export file diff = Identical
+- [X] js example vs md example = Same examples.
+- [X] playwright test = no test for this component
+
+### DoubleCopy
+- [X] js export file diff = Identical
+- [X] js example vs md example = Same examples.
+- [X] playwright test = no test for this component
+
+### EmailSignUP
+- [X] js export file diff = Identical
+- [X] js example vs md example = Same examples.
+- [X] playwright test = no test for this component
+
+
+
