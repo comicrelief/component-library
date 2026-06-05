@@ -56,6 +56,8 @@ import SingleMessageExample from '../components/Molecules/SingleMessage/SingleMe
 import singleMessageExampleSrc from '../components/Molecules/SingleMessage/SingleMessageExample.jsx?raw';
 import SingleMessageDsExample from '../components/Molecules/SingleMessageDS/SingleMessageDsExample.jsx';
 import singleMessageDsExampleSrc from '../components/Molecules/SingleMessageDS/SingleMessageDsExample.jsx?raw';
+import StatsSliceExample from '../components/Molecules/StatsSlice/StatsSliceExample.jsx';
+import statsSliceExampleSrc from '../components/Molecules/StatsSlice/StatsSliceExample.jsx?raw';
 import CardExample from '../components/Molecules/Card/CardExample.jsx';
 import cardExampleSrc from '../components/Molecules/Card/CardExample.jsx?raw';
 import CardDsExample from '../components/Molecules/CardDs/CardDsExample.jsx';
@@ -84,6 +86,8 @@ import TypeaheadExample from '../components/Molecules/Typeahead/TypeaheadExample
 import typeaheadExampleSrc from '../components/Molecules/Typeahead/TypeaheadExample.jsx?raw';
 import SchoolLookupExample from '../components/Molecules/SchoolLookup/SchoolLookupExample.jsx';
 import schoolLookupExampleSrc from '../components/Molecules/SchoolLookup/SchoolLookupExample.jsx?raw';
+import PictureOrVideoExample from '../components/Molecules/PictureOrVideo/PictureOrVideoExample.jsx';
+import pictureOrVideoExampleSrc from '../components/Molecules/PictureOrVideo/PictureOrVideoExample.jsx?raw';
 import PromoExample from '../components/Molecules/Promo/PromoExample.jsx';
 import promoExampleSrc from '../components/Molecules/Promo/PromoExample.jsx?raw';
 import AccordionExample from '../components/Molecules/Accordion/AccordionExample.jsx';
@@ -102,6 +106,10 @@ import HeroBannerExample from '../components/Molecules/HeroBanner/HeroBannerExam
 import heroBannerExampleSrc from '../components/Molecules/HeroBanner/HeroBannerExample.jsx?raw';
 import QuoteSliceExample from '../components/Molecules/QuoteSlice/QuoteSliceExample.jsx';
 import quoteSliceExampleSrc from '../components/Molecules/QuoteSlice/QuoteSliceExample.jsx?raw';
+import MoleculeEmailSignUpExample from '../components/Molecules/EmailSignUp/EmailSignUpExample.jsx';
+import moleculeEmailSignUpExampleSrc from '../components/Molecules/EmailSignUp/EmailSignUpExample.jsx?raw';
+import LookupExample from '../components/Molecules/Lookup/LookupExample.jsx';
+import lookupExampleSrc from '../components/Molecules/Lookup/LookupExample.jsx?raw';
 
 // Organism examples
 import { FooterExample1, FooterExample2, FooterExample3 } from '../components/Organisms/Footer/FooterExample.jsx';
@@ -179,10 +187,12 @@ export const molecules = [
   { name: 'CTASingleCard', demo: demo(CTASingleCardExample, ctaSingleCardExampleSrc) },
   { name: 'Descriptor', demo: demo(DescriptorExample, descriptorExampleSrc) },
   { name: 'DoubleCopy', demo: demo(DoubleCopyExample, doubleCopyExampleSrc) },
+  { name: 'EmailSignUp', demo: demo(MoleculeEmailSignUpExample, moleculeEmailSignUpExampleSrc) },
   { name: 'HeroBanner', demo: demo(HeroBannerExample, heroBannerExampleSrc) },
   { name: 'InfoBanner', demo: demo(InfoBannerExample, infoBannerExampleSrc) },
-  { name: 'Lookup', demo: <Placeholder name="Lookup" /> },
+  { name: 'Lookup', demo: demo(LookupExample, lookupExampleSrc) },
   { name: 'PartnerLink', demo: demo(PartnerLinkExample, partnerLinkExampleSrc) },
+  { name: 'PictureOrVideo', demo: demo(PictureOrVideoExample, pictureOrVideoExampleSrc) },
   { name: 'Promo', demo: demo(PromoExample, promoExampleSrc) },
   { name: 'QuoteSlice', demo: demo(QuoteSliceExample, quoteSliceExampleSrc) },
   { name: 'SchoolLookup', demo: demo(SchoolLookupExample, schoolLookupExampleSrc) },
@@ -192,6 +202,7 @@ export const molecules = [
   { name: 'SimpleSchoolLookup', demo: demo(SimpleSchoolLookupExample, simpleSchoolLookupExampleSrc) },
   { name: 'SingleMessage', demo: demo(SingleMessageExample, singleMessageExampleSrc) },
   { name: 'SingleMessageDs', demo: demo(SingleMessageDsExample, singleMessageDsExampleSrc) },
+  { name: 'StatsSlice', demo: demo(StatsSliceExample, statsSliceExampleSrc) },
   { name: 'Typeahead', demo: demo(TypeaheadExample, typeaheadExampleSrc) },
   { name: 'VideoBanner', demo: demo(VideoBannerExample, videoBannerExampleSrc) },
 ];
