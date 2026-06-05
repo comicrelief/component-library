@@ -24,7 +24,40 @@
 
 
 ### CookieBanner
-- [X] js export file diff = ChevronKeyframes - this wasn't actually passed to the styled component, have got it up and running.
+- [X] js export file diff = Identical
 - [X] js example vs md example = Same examples.
-- [X] playwright test = Identical, just "svg" addition in comment.
+- [X] playwright test = no test for this component
+
+### Donate
+- [X] js export file diff = Identical
+- [X] js example vs md example = Same examples
+- [X] playwright test = only test-id numbers changed
+
+
+
+### DonateBanner !!!!!
+- [X] js export file diff = Identical
+- [X] js example vs md example = needs looking at
+- [X] playwright test = no test for this component
+
+### DynamicGallery !!!
+- [X] js export file diff = Identical
+- [X] js example vs md example = Identical
+- [X] playwright test = needs looking at !!!
+
+### EmailBanner !!!
+- [X] js export file diff = Identical
+- [X] js example vs md example = needs looking at
+- [X] playwright test = Identical
+
+### EmailSignUp
+### Footer
+### FooterNew
+### Header
+### Header2025
+### ImpactSlider
+### MarketingPreferencesDS
+### Membership
+### RichtextCarousel
+### WYMDCarousel
 

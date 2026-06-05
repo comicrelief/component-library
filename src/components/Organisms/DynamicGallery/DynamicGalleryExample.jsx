@@ -11,12 +11,12 @@ export default function DynamicGalleryExample() {
       </div>
 
       <div data-testid="gallery-basic">
-        <h3>Basic gallery (50 nodes)</h3>
+        <h3>Basic gallery</h3>
         <DynamicGallery nodes={createMockGalleryNodes(50)} />
       </div>
 
       <div data-testid="gallery-customised">
-        <h3>Customised (4 columns, load all, 4:3 ratio, blue bg)</h3>
+        <h3>Customised gallery with multiple options</h3>
         <DynamicGallery
           gridWidth={4}
           nodes={createMockGalleryNodes(30)}
@@ -31,7 +31,7 @@ export default function DynamicGalleryExample() {
       </div>
 
       <div data-testid="gallery-max5">
-        <h3>Max 5 columns</h3>
+        <h3>Galler with max 5 columns</h3>
         <DynamicGallery gridWidth={5} nodes={createMockGalleryNodes(5)} />
       </div>
     </>
