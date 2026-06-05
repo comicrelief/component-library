@@ -12,8 +12,10 @@ import {
 } from './EmailSignUp.style';
 import ButtonWithStates from '../../Atoms/ButtonWithStates/ButtonWithStates';
 
+// DEPRECATED: This component is deprecated and will be removed in a future version.
+// Please use EmailBanner instead, which provides the same functionality with improved design.
 import Text from '../../Atoms/Text/Text';
-import { buildEsuValidationSchema, ESU_FIELDS } from './_EmailSignUpConfig';
+import { buildEsuValidationSchema, ESU_FIELDS } from '../shared/emailSignup/emailSignupConfig';
 import ErrorText from '../../Atoms/ErrorText/ErrorText';
 import Confetti from '../../Atoms/Confetti/Confetti';
 
@@ -50,7 +52,7 @@ const EmailSignUp = ({
       containerPadding={containerPadding}
       {...rest}
     >
-      <Title tag="h2" size="xxl" weight="400" family="Anton" uppercase>
+      <Title tag="h2" size="xxl" weight="400" family="Anton">
         {title}
       </Title>
       {!isSubmitted ? (
@@ -106,7 +108,7 @@ const EmailSignUp = ({
               loadingText="Submitting..."
               data-test="subscribe-button"
             >
-              <Text>{normalisedButtonText}</Text>
+              {normalisedButtonText}
             </ButtonWithStates>
           </ButtonWrapper>
         </FormInner>

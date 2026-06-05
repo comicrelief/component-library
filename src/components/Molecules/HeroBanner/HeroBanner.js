@@ -1,58 +1,196 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
-
+import PictureOrVideo from '../PictureOrVideo/PictureOrVideo';
 import Text from '../../Atoms/Text/Text';
+import Link from '../../Atoms/Link/Link';
+import variants from './_variants';
+import ArrowIcon from '../shared/ctaArrow/ArrowIcon';
+import { ArrowIconWrapper, ArrowIconInner } from '../shared/ctaArrow/CtaArrowCircle.style';
+import altCtaUnderline from '../../../theme/shared/assets/alt_cta_underline.svg';
+import { CtaTextUnderline, CtaIconWrapper, CtaText } from '../shared/ctaText/ctaText.style';
+import './local-preview-layout-fixes.css';
 
-const Container = styled.section`
-  min-height: 200px;
-  position: relative;
-  background: ${props => (props.background ? props.background : 'transparent')};
-  color: ${props => props.theme.color('red')};
-`;
+import {
+  Container, CopyOuterWrapper, Copy, MediaWrapper,
+  CopyInnerWrapper, OuterWrapper, CTAWrapper, HeroBannerLink, LogoImageWrapper, LogoImage
+} from './HeroBanner.style';
 
-const Image = styled.img.attrs(() => ({
-  alt: ''
-}))`
-  object-fit: cover;
-  width: 100%;
-  display: block;
-  height: 100%;
-  opacity: 0.5;
-`;
+const HeroBanner = ({
+  // All variants:
+  copyColour = 'black',
+  pageBackgroundColour = 'grey_light',
+  variant = variants.FULL_HEIGHT,
+  copyLeft = true,
+  imageAltText = '',
+  ctaNewTab = false,
+  paddingTop = '0rem',
+  paddingBottom = '2rem',
+  // Text Banner variant
+  textBannerCopyBackgroundColour = 'deep_violet',
+  textBannerCtaColour = 'white',
+  // 'Media' variants (fallbacks to be provided in the CRcom integration, just in case):
+  imageSet = null,
+  imageLow = null,
+  image = null,
+  videoDesktop = null,
+  videoMobile = null,
+  posterDesktop = null,
+  posterMobile = null,
+  videoLoop = true,
+  videoShowFullControls = false,
+  videoShowPlayPause = true,
+  // All variants:
+  children = null,
+  ctaUrl = null,
+  ctaText = null,
+  logoImage = null,
+  logoImageAltText = ''
+}) => {
+  const hasImage = Boolean(imageSet && variant !== variants.TEXT_BANNER);
+  const hasCTA = Boolean(ctaUrl) && Boolean(ctaText);
 
-const Title = styled.h1`
-  position: absolute;
-  margin: 0 auto;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  right: 0;
-  text-align: center;
-`;
+  const copySection = (
+    <Copy
+      variant={variant}
+      copyColour={copyColour}
+      textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}
+    >
+      {children}
 
-/**
- * Hero Banner to be used as Header of landing pages.
- */
+      {(hasCTA) && (
+        <CTAWrapper variant={variant}>
+          {(variant !== variants.TEXT_BANNER) ? (
+            <>
+              <CtaText className="cta">
+                {ctaText}
+                <CtaTextUnderline
+                  src={altCtaUnderline}
+                  alt={ctaText}
+                  className="cta-text-underline"
+                />
+              </CtaText>
 
-const HeroBanner = ({ url, title, background }) => (
-  <Container background={background}>
-    <Image src={url} />
-    <Title>
-      <Text size="xxl" color="white">
-        {title}
-      </Text>
-    </Title>
-  </Container>
-);
+              <CtaIconWrapper>
+                <ArrowIconWrapper $preventHoverColourChange>
+                  <ArrowIconInner>
+                    <ArrowIcon />
+                  </ArrowIconInner>
+                </ArrowIconWrapper>
+              </CtaIconWrapper>
+            </>
+
+          ) : (
+            <Text>
+              <Link
+                href={ctaUrl}
+                type="button"
+                color={textBannerCtaColour}
+                target={ctaNewTab ? 'blank' : 'self'}
+              >
+                {ctaText}
+              </Link>
+            </Text>
+          )
+        }
+        </CTAWrapper>
+      )}
+    </Copy>
+  );
+
+  return (
+    <Container
+      pageBackgroundColour={pageBackgroundColour}
+      paddingTop={paddingTop}
+      paddingBottom={paddingBottom}
+      variant={variant}
+    >
+
+      <OuterWrapper
+        variant={variant}
+        textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}
+      >
+
+        {(hasImage) && (
+          <MediaWrapper variant={variant}>
+            <PictureOrVideo
+              images={imageSet}
+              imageLow={imageLow}
+              image={image}
+              alt={imageAltText}
+              videoDesktop={videoDesktop}
+              videoMobile={videoMobile}
+              posterDesktop={posterDesktop}
+              posterMobile={posterMobile}
+              videoLoop={videoLoop}
+              videoShowFullControls={videoShowFullControls}
+              videoShowPlayPause={videoShowPlayPause}
+              objectFit="cover"
+              width="100%"
+              height="100%"
+            />
+          </MediaWrapper>
+        )}
+
+        <CopyOuterWrapper copyLeft={copyLeft} variant={variant}>
+          <CopyInnerWrapper copyLeft={copyLeft} variant={variant}>
+            {/* Wraps the 'cards' in a link for non-Text Banners (which use CTA buttons) */}
+            {hasCTA && variant !== variants.TEXT_BANNER ? (
+              <HeroBannerLink href={ctaUrl} target={ctaNewTab ? '_blank' : '_self'}>
+                { copySection }
+              </HeroBannerLink>
+            ) : (
+              <>
+                { copySection }
+              </>
+            )}
+          </CopyInnerWrapper>
+        </CopyOuterWrapper>
+
+        {(logoImage && variant !== variants.TEXT_BANNER) && (
+        <LogoImageWrapper imageRight={copyLeft}>
+          <LogoImage
+            imageRight={copyLeft}
+            alt={logoImageAltText}
+            image={logoImage}
+            objectFit="contain"
+          />
+        </LogoImageWrapper>
+        )}
+      </OuterWrapper>
+    </Container>
+  );
+};
 
 HeroBanner.propTypes = {
-  /** Image url */
-  url: PropTypes.string.isRequired,
-  /** Header Title */
-  title: PropTypes.string.isRequired,
-  /** Background Color */
-  background: PropTypes.string.isRequired
+  pageBackgroundColour: PropTypes.string,
+  textBannerCopyBackgroundColour: PropTypes.string,
+  textBannerCtaColour: PropTypes.string,
+  copyColour: PropTypes.string,
+  copyLeft: PropTypes.bool,
+  imageLow: PropTypes.string,
+  imageSet: PropTypes.string,
+  image: PropTypes.string,
+  imageAltText: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  ctaUrl: PropTypes.string,
+  ctaText: PropTypes.string,
+  ctaNewTab: PropTypes.bool,
+  paddingTop: PropTypes.string,
+  paddingBottom: PropTypes.string,
+  logoImage: PropTypes.string,
+  logoImageAltText: PropTypes.string,
+  variant: PropTypes.oneOf([
+    variants.FULL_HEIGHT,
+    variants.HALF_HEIGHT,
+    variants.TEXT_BANNER
+  ]),
+  videoDesktop: PropTypes.string,
+  videoMobile: PropTypes.string,
+  posterDesktop: PropTypes.string,
+  posterMobile: PropTypes.string,
+  videoLoop: PropTypes.bool,
+  videoShowFullControls: PropTypes.bool,
+  videoShowPlayPause: PropTypes.bool
 };
 
 export default HeroBanner;

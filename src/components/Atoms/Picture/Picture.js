@@ -75,6 +75,7 @@ const Picture = ({
   isBackgroundImage = false,
   smallBreakpointRowLayout = null,
   mediumBreakpointRowLayout = null,
+  onLoad,
   ...rest
 }) => {
   const document = typeof window !== 'undefined' ? window.document : null;
@@ -108,6 +109,7 @@ const Picture = ({
         {...rest}
       >
         <Image
+          key={image}
           alt={alt}
           height={height}
           width={width}
@@ -115,6 +117,7 @@ const Picture = ({
           data-src={image}
           className="lazyload"
           objFitState={objFitState}
+          onLoad={onLoad}
         />
       </Wrapper>
     );
@@ -169,7 +172,8 @@ Picture.propTypes = {
   height: PropTypes.string,
   isBackgroundImage: PropTypes.bool,
   smallBreakpointRowLayout: PropTypes.bool,
-  mediumBreakpointRowLayout: PropTypes.bool
+  mediumBreakpointRowLayout: PropTypes.bool,
+  onLoad: PropTypes.func
 };
 
 export default withTheme(Picture);

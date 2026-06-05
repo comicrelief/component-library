@@ -45,7 +45,6 @@ const Signup = ({
   givingType = null,
   ...rest
 }) => {
-  // const [givingType, setGivingType] = useState();
   const [errorMsg, setErrorMsg] = useState(false);
   const [amountDonate, setAmountDonate] = useState(10);
   const [moneyBuyCopy, setMoneyBuyCopy] = useState(true);
@@ -318,6 +317,8 @@ const Signup = ({
             type="submit"
             color={submitButtonColor}
             ref={buttonRef}
+            // Used by analytics:
+            className="Button_DonateWidget"
           >
             {renderButtonText()}
           </Button>

@@ -10,7 +10,7 @@
 
 const colors = {
 
-  /* CAMPAIGN COLOURS */
+  /* RND25 CAMPAIGN COLOURS */
   rnd_25_ruby_red: '#AE001B',
   rnd_25_glitzy_grape: '#A20C51',
   rnd_25_glitzy_blue: '#0F1953',
@@ -19,6 +19,19 @@ const colors = {
   rnd_25_party_pink: '#FF9DEC',
   rnd_25_party_blue: '#004EFF',
   rnd_25_party_lilac: '#B07FEA',
+
+  /* RND26 CAMPAIGN COLOURS */
+  rnd_26_dark_purple: '#7953E8',
+  rnd_26_deep_indigo: '#341A7E',
+  rnd_26_light_purple: '#BA9DFC',
+  rnd_26_teal: '#036D7C',
+  rnd_26_deep_teal: '#024042',
+  rnd_26_green: '#7FFB73',
+  rnd_26_magenta: '#A7268C',
+  rnd_26_deep_magenta: '#601151',
+  rnd_26_yellow: '#F8F440',
+  rnd_26_vibrant_pink: '#E948D5',
+  rnd_26_light_pink: '#FE80EB',
 
   /* GREYSCALE COLOURS */
   black: '#000000',
@@ -30,17 +43,23 @@ const colors = {
   grey_extra_light: '#f0f0f0',
   grey_for_forms: '#666',
   grey_label: '#5C5C5E',
-  // this is the Curtis approved list of 5 greys that will be later numbered grey_1 thru grey_5
-  // grey_1
+
+  grey_1: '#FFFFFF',
   grey_light: '#F4F3F5',
-  // grey_2
   grey_medium: '#E1E2E3',
-  // grey_3
+  grey_2: '#E1E2E3',
+  // TODO: 'grey' is actually 'grey_3'. It is referenced in many places.
+  // We need to rename it to 'grey_3' across all references.
+  // Until then, we need to keep both names for backwards compatibility.
+  // Same story with 'grey_medium' - it should be grey_2, and
+  // grey_dark, should be grey_4.
+  // For the time being we need both of each. I will provision a separate PR.
   grey: '#969598',
-  // grey_4
-  grey_4: '#6E6E6E',
-  // grey_5
+  grey_3: '#969598',
   grey_dark: '#222222',
+  grey_4: '#222222',
+  grey_4_hover: '#3A3A3A',
+  grey_5: '#18181A',
 
   /* GENERAL COLOURS */
   blue: '#0565D1',

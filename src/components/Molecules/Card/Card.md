@@ -3,7 +3,7 @@
 const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
-<div style={{backgroundColor: 'lightblue', padding: '10px'}}>
+<div style={{backgroundColor: 'lightblue', padding: '2rem'}}>
     <Card
       imageLow={defaultData.image}
       images={defaultData.images}
@@ -25,7 +25,7 @@ import Link from '../../Atoms/Link/Link';
 const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
-<div style={{backgroundColor: 'lightblue', padding: '10px'}}>
+<div style={{backgroundColor: 'lightblue', padding: '2rem'}}>
     <Card
       imageLow={defaultData.image}
       images={defaultData.images}
@@ -35,7 +35,7 @@ import Link from '../../Atoms/Link/Link';
       mediumBreakpointRowLayout={false}
     >
       <Text tag="h3" size="xl">
-        Title
+        Row layout on small breakpoint only
       </Text>
       <Text tag="p">
         Your donations make a very real difference to people in the UK and around the world, whether you donate through Red Nose Day, Sport Relief or to Comic Relief at any other time of year. Here are some of the many stories that show how people are changing their lives with your support.
@@ -49,7 +49,7 @@ import Link from '../../Atoms/Link/Link';
 const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
-<div style={{backgroundColor: 'lightblue', padding: '10px'}}>
+<div style={{backgroundColor: 'lightblue', padding: '2rem'}}>
     <Card
       imageLow={defaultData.image}
       images={defaultData.images}
@@ -59,7 +59,7 @@ import Link from '../../Atoms/Link/Link';
       mediumBreakpointRowLayout={true}
     >
       <Text tag="h3" size="xl">
-        Title
+        Row layout on medium breakpoint only
       </Text>
       <Text tag="p">
         Your donations make a very real difference to people in the UK and around the world, whether you donate through Red Nose Day, Sport Relief or to Comic Relief at any other time of year. Here are some of the many stories that show how people are changing their lives with your support.
@@ -73,7 +73,7 @@ import Link from '../../Atoms/Link/Link';
 const defaultData = require('../../../styleguide/data/data').defaultData;import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
-<div style={{backgroundColor: 'lightblue', padding: '10px'}}>
+<div style={{backgroundColor: 'lightblue', padding: '2rem'}}>
     <Card
       imageLow={defaultData.image}
       images={defaultData.images}
@@ -83,7 +83,7 @@ import Link from '../../Atoms/Link/Link';
       mediumBreakpointRowLayout={true}
     >
       <Text tag="h3" size="xl">
-        Title
+        Row layout on small and medium breakpoints
       </Text>
       <Text tag="p">
         Your donations make a very real difference to people in the UK and around the world, whether you donate through Red Nose Day, Sport Relief or to Comic Relief at any other time of year. Here are some of the many stories that show how people are changing their lives with your support.
@@ -97,7 +97,7 @@ import Link from '../../Atoms/Link/Link';
 ```js
 const defaultData = require('../../../styleguide/data/data').defaultData;
 
-<div style={{backgroundColor: 'lightblue', padding: '10px'}}>
+<div style={{backgroundColor: 'lightblue', padding: '2rem'}}>
     <Card
       imageLow={defaultData.image}
       images={defaultData.image}

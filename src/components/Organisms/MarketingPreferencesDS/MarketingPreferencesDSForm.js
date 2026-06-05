@@ -64,7 +64,7 @@ const MarketingPreferencesDSForm = () => {
 
   return (
     <>
-      <Text tag="p" weight="bold">Our default instance:</Text>
+      <Text tag="p" weight="bold" size="s">Our default instance:</Text>
       <FormProvider {...formMethods}>
         <form onSubmit={handleSubmit(customSubmitHandler)} noValidate>
           <MarketingPreferencesDS
@@ -78,7 +78,7 @@ const MarketingPreferencesDSForm = () => {
 
       <Text tag="h3" size="xl">- - - - - - - - - - - - - </Text>
 
-      <Text tag="p" weight="bold">Our customised instance:</Text>
+      <Text tag="p" weight="bold" size="s">Our customised instance:</Text>
       <FormProvider {...formMethodsCustom}>
         <form onSubmit={handleSubmitCustom(customSubmitHandler)} noValidate>
           <MarketingPreferencesDS

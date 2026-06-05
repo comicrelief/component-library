@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import zIndex from '../../../theme/shared/zIndex';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 const Container = styled.div`
   display: flex;
@@ -32,7 +33,7 @@ const Image = styled.div`
 
   img {
     border-radius: 1rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+    ${defaultBoxShadow()}
   }
 `;
 
@@ -56,7 +57,7 @@ const Copy = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+  ${defaultBoxShadow()}
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
   margin: 0 1.5rem 0 0;
 

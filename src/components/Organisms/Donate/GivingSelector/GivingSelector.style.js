@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import spacing from '../../../../theme/shared/spacing';
 import zIndex from '../../../../theme/shared/zIndex';
 import hideVisually from '../../../../theme/shared/hideVisually';
+import defaultBoxShadow from '../../../../theme/shared/boxShadows';
 
 const Switch = styled.span`
   width: 50%;
@@ -14,7 +15,7 @@ const Switch = styled.span`
   transition: left 0.15s ease-out;
   background-color: ${({ theme }) => theme.color('blue_donate')};
   left: 2px;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
+  ${defaultBoxShadow(true)}
 `;
 
 const Wrapper = styled.div`

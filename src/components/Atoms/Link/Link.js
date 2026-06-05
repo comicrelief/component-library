@@ -4,21 +4,23 @@ import PropTypes from 'prop-types';
 import StyledLink, { HelperText, IconWrapper } from './Link.style';
 import allowListed from '../../../utils/allowListed';
 import { getDomain } from '../../../utils/internalLinkHelper';
+import buttonTypes from '../../../theme/crTheme/buttonTypes';
 
 let window = '';
 
 const Link = ({
+  href,
   children,
   color = 'red',
-  mobileColour = null,
-  href,
-  target = null,
   type = 'standard',
   home = false,
   underline = true,
-  icon = null,
   iconFirst = false,
   fullWidth = false,
+  buttonType = buttonTypes.PRIMARY,
+  target = null,
+  mobileColour = null,
+  icon = null,
   ...rest
 }) => {
   const [documentHost, setDocumentHost] = useState('');
@@ -55,7 +57,7 @@ const Link = ({
   return (
     <StyledLink
       {...rest}
-      color={color}
+      $color={color}
       mobileColour={mobileColour}
       href={href}
       target={window}
@@ -64,6 +66,7 @@ const Link = ({
       iconFirst={iconFirst}
       underline={underline}
       fullWidth={fullWidth}
+      buttonType={buttonType}
     >
       {children}
       {window === '_blank' && <HelperText>(opens in new window)</HelperText>}
@@ -74,7 +77,7 @@ const Link = ({
 
 Link.propTypes = {
   /** Link styling. See linkStyles in theme. */
-  type: PropTypes.oneOf(['button', 'standard', 'standard_white']),
+  type: PropTypes.oneOf(['button', 'standard', 'standard_white', 'alt']), // TODO: alt styles based on Hero Banner
   /** Color for button style link. See buttonColors in theme */
   color: PropTypes.string,
   mobileColour: PropTypes.string,
@@ -90,7 +93,14 @@ Link.propTypes = {
   iconFirst: PropTypes.bool,
   /** Embed icons */
   icon: PropTypes.node,
-  fullWidth: PropTypes.bool
+  fullWidth: PropTypes.bool,
+  // Primary will the default for the vast majority of contexts; with
+  // Secondary and Tertirary being manually set by developers where required
+  buttonType: PropTypes.oneOf([
+    buttonTypes.PRIMARY,
+    buttonTypes.SECONDARY,
+    buttonTypes.TERTIARY
+  ])
 };
 
 export default Link;

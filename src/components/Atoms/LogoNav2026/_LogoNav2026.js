@@ -1,0 +1,75 @@
+import React from 'react';
+import styled from 'styled-components';
+import zIndex from '../../../theme/shared/zIndex';
+import crLogoSvg from './assets/cr-logo.svg';
+import crLogoMobSvg from './assets/cr-logo-mob.svg';
+import { pulseInAnimation, pulseOutAnimation } from '../../../theme/shared/animations';
+
+const LogoLink = styled.a`
+  img {
+    ${pulseOutAnimation};
+  }
+  &:hover,
+  &:focus {
+    img {
+      ${pulseInAnimation};
+    }
+  }
+`;
+
+const Image = styled.img`
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 100%; // prevents overflow
+`;
+
+const MobileNavLogo = styled(Image)`
+  ${zIndex('high')}
+  width: 49px;
+  height: 32px;
+  display: block;
+  @media ${({ theme }) => theme.breakpoints2026('S')} {
+    display: none
+  }
+`;
+
+const DesktopNavLogo = styled(Image)`
+  ${zIndex('high')}
+  display: none;
+  @media ${({ theme }) => theme.breakpoints2026('S')} {
+    display: block;
+    width: 132px;
+    height: 20px;
+  }
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
+    width: 162px;
+    height: 25px;
+  }
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    width: 162px;
+    min-width: 162px;
+    height: 46px;
+  }
+`;
+
+const LogoNav2026 = () => (
+  <LogoLink
+    data-testid="LogoLink"
+    href="/"
+    title="Go to Comic Relief homepage"
+  >
+    <MobileNavLogo
+      data-testid="MobileImage"
+      src={crLogoMobSvg}
+      alt="Comic Relief logo"
+    />
+    <DesktopNavLogo
+      data-testid="DesktopImage"
+      src={crLogoSvg}
+      alt="Comic Relief logo"
+    />
+  </LogoLink>
+);
+
+export default LogoNav2026;

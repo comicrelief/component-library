@@ -41,28 +41,28 @@ export default {
       links: [
         {
           title: 'Red Nose Day',
-          path: 'https://www.comicrelief.com/rednoseday/schools',
+          path: 'https://www.comicrelief.com/rednoseday/schools#13',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
           title: 'The New Red Nose',
-          path: 'https://www.comicrelief.com/rednoseday/schools',
+          path: 'https://www.comicrelief.com/rednoseday/schools#14',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
           title: 'Schools',
-          path: 'https://www.comicrelief.com/rednoseday/schools',
+          path: 'https://www.comicrelief.com/rednoseday/schools#15',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
           title: 'The Red Nose Day Nosey Awards',
-          path: 'https://www.comicrelief.com/rednoseday/schools',
+          path: 'https://www.comicrelief.com/rednoseday/schools#16',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
@@ -82,28 +82,28 @@ export default {
         },
         {
           title: 'Our Funding Practice',
-          path: 'https://www.comicrelief.com/our-legacy',
+          path: 'https://www.comicrelief.com/our-legacy#5',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
           title: 'Funding opportunities',
-          path: 'https://www.comicrelief.com/our-legacy',
+          path: 'https://www.comicrelief.com/our-legacy#6',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
           title: 'Our Funding strategy',
-          path: 'https://www.comicrelief.com/our-legacy',
+          path: 'https://www.comicrelief.com/our-legacy#7',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
         },
         {
           title: 'Managing your funding',
-          path: 'https://www.comicrelief.com/our-legacy',
+          path: 'https://www.comicrelief.com/our-legacy#8',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
@@ -145,35 +145,35 @@ export default {
         },
         {
           title: 'Do your own fundraising',
-          url: 'https://www.comicrelief.com/404/',
+          url: 'https://www.comicrelief.com/404#32',
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
           title: 'Regular Donations',
-          url: 'https://www.comicrelief.com/404/',
+          url: 'https://www.comicrelief.com/404#33',
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
           title: 'Run for Comic Relief',
-          url: 'https://www.comicrelief.com/404/',
+          url: 'https://www.comicrelief.com/404#34',
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
           title: 'How to pay in your fundraising money',
-          url: 'https://www.comicrelief.com/404/',
+          url: 'https://www.comicrelief.com/404#35',
           internal: {
             type: 'ContentfulComponentLink'
           }
         },
         {
           title: 'Partners',
-          url: 'https://www.comicrelief.com/404/',
+          url: 'https://www.comicrelief.com/404#36',
           internal: {
             type: 'ContentfulComponentLink'
           }

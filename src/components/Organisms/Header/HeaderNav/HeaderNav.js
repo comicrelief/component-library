@@ -7,7 +7,7 @@ import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import { NavHelper } from '../../../../utils/navHelper';
 import { InternalLinkHelper } from '../../../../utils/internalLinkHelper';
 import allowListed from '../../../../utils/allowListed';
-import menuGroupIcon from './Menu-Group-Icon.svg';
+import menuGroupIcon from '../../../../theme/shared/assets/Menu-Group-Icon.svg';
 
 import {
   Nav,
@@ -85,7 +85,7 @@ const HeaderNav = ({
   return (
     <>
       <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation">
-        <Text id="main-menu" tag="h2">
+        <Text id="main-menu" tag="h2" size="s">
           Main navigation
         </Text>
 

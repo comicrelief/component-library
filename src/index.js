@@ -9,6 +9,7 @@ export { default as allowListed } from './utils/allowListed';
 export { default as spacing } from './theme/shared/spacing';
 export { default as allBreakpoints } from './theme/shared/allBreakpoints';
 export { default as containers } from './theme/shared/containers';
+export { logoRotateAnimation, springScaleAnimation } from './theme/shared/animations';
 
 /* Atoms */
 export { default as Text } from './components/Atoms/Text/Text';
@@ -26,26 +27,31 @@ export { default as Pagination } from './components/Atoms/Pagination/Pagination'
 export { default as SocialIcons } from './components/Atoms/SocialIcons/SocialIcons';
 export { default as TextInputWithDropdown } from './components/Atoms/TextInputWithDropdown/TextInputWithDropdown';
 export { default as ErrorText } from './components/Atoms/ErrorText/ErrorText';
+export { default as InfoMessage } from './components/Atoms/InfoMessage/InfoMessage';
 export { default as Label } from './components/Atoms/Label/Label';
 export { default as ButtonWithStates } from './components/Atoms/ButtonWithStates/ButtonWithStates';
 export { default as Confetti } from './components/Atoms/Confetti/Confetti';
+export { default as AmbientVideo } from './components/Atoms/AmbientVideo/AmbientVideo';
 export { default as External } from './components/Atoms/Icons/External';
 export { default as Internal } from './components/Atoms/Icons/Internal';
 
 /* Molecules */
-export { default as HeroBanner } from './components/Molecules/HeroBanner/HeroBanner';
 export { default as InfoBanner } from './components/Molecules/InfoBanner/InfoBanner';
 export { default as SingleMessage } from './components/Molecules/SingleMessage/SingleMessage';
 export { default as Card } from './components/Molecules/Card/Card';
 export { default as CardDs } from './components/Molecules/CardDs/CardDs';
+export { default as CTAMultiCard } from './components/Molecules/CTA/CTAMultiCard/CTAMultiCard';
+export { default as CTASingleCard } from './components/Molecules/CTA/CTASingleCard/CTASingleCard';
 export { default as Box } from './components/Molecules/Box/Box';
 export { default as ArticleTeaser } from './components/Molecules/ArticleTeaser/ArticleTeaser';
 export { default as Header } from './components/Organisms/Header/Header';
 export { default as Header2025 } from './components/Organisms/Header2025/Header2025';
 export { default as Donate } from './components/Organisms/Donate/Donate';
+export { default as DonateBanner } from './components/Organisms/DonateBanner/DonateBanner';
 export { default as DoubleCopy } from './components/Molecules/DoubleCopy/DoubleCopy';
 export { default as PartnerLink } from './components/Molecules/PartnerLink/PartnerLink';
 export { default as Footer } from './components/Organisms/Footer/Footer';
+export { default as FooterNew } from './components/Organisms/FooterNew/FooterNew';
 export { default as SearchResult } from './components/Molecules/SearchResult/SearchResult';
 export { default as SearchInput } from './components/Molecules/SearchInput/SearchInput';
 export { default as ShareButton } from './components/Molecules/ShareButton/ShareButton';
@@ -63,6 +69,10 @@ export { default as Descriptor } from './components/Molecules/Descriptor/Descrip
 export { default as Lookup } from './components/Molecules/Lookup/Lookup';
 export { default as SimpleSchoolLookup } from './components/Molecules/SimpleSchoolLookup/SimpleSchoolLookup';
 export { default as LogoLinked } from './components/Molecules/LogoLinked/LogoLinked';
+export { default as HeroBanner } from './components/Molecules/HeroBanner/HeroBanner';
+export { default as PictureOrVideo } from './components/Molecules/PictureOrVideo/PictureOrVideo';
+export { default as QuoteSlice } from './components/Molecules/QuoteSlice/QuoteSlice';
+export { default as StatsSlice } from './components/Molecules/StatsSlice/StatsSlice';
 
 /* Organisms */
 export {
@@ -71,6 +81,7 @@ export {
   ESU_FIELDS
 } from './components/Organisms/EmailSignUp/_EmailSignUp';
 export { default as CookieBanner } from './components/Organisms/CookieBanner/CookieBanner';
+export { default as EmailBanner } from './components/Organisms/EmailBanner/EmailBanner';
 export { default as Membership } from './components/Organisms/Membership/Membership';
 export {
   MarketingPreferencesDS,
@@ -80,3 +91,4 @@ export {
 export { default as ImpactSlider } from './components/Organisms/ImpactSlider/ImpactSlider';
 export { default as WYMDCarousel } from './components/Organisms/WYMDCarousel/WYMDCarousel';
 export { default as RichtextCarousel } from './components/Organisms/RichtextCarousel/RichtextCarousel';
+export { default as DynamicGallery } from './components/Organisms/DynamicGallery/DynamicGallery';

@@ -42,7 +42,7 @@ const InfoBanner = ({
 }) => (
   <Container>
     <Info>
-      <Text tag="h3" size="md" uppercase>
+      <Text tag="h3" size="md">
         Project Name
       </Text>
       <Text tag="p" size="s">
@@ -50,7 +50,7 @@ const InfoBanner = ({
       </Text>
     </Info>
     <Info>
-      <Text tag="h3" size="md" uppercase>
+      <Text tag="h3" size="md">
         End Date
       </Text>
       <Text tag="p" size="s">
@@ -58,7 +58,7 @@ const InfoBanner = ({
       </Text>
     </Info>
     <Info>
-      <Text tag="h3" size="md" uppercase>
+      <Text tag="h3" size="md">
         Funding theme
       </Text>
       <Text tag="p" size="s">
@@ -68,7 +68,7 @@ const InfoBanner = ({
       </Text>
     </Info>
     <Info>
-      <Text tag="h3" size="md" uppercase>
+      <Text tag="h3" size="md">
         Amount Awarded
       </Text>
       <Text tag="p" size="s">
@@ -82,7 +82,7 @@ const InfoBanner = ({
       </Text>
     </Info>
     <Info>
-      <Text tag="h3" size="md" uppercase>
+      <Text tag="h3" size="md">
         Start Date
       </Text>
       <Text tag="p" size="s">
@@ -90,7 +90,7 @@ const InfoBanner = ({
       </Text>
     </Info>
     <Info>
-      <Text tag="h3" size="md" uppercase>
+      <Text tag="h3" size="md">
         Beneficiary Country
       </Text>
       <Text tag="p" size="s">

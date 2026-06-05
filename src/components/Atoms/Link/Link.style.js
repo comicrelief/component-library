@@ -1,33 +1,44 @@
 import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 import hideVisually from '../../../theme/shared/hideVisually';
+import fontHelper from '../../../theme/crTheme/fontHelper';
 
 const buttonStyle = () => css`
   display: inline-flex;
   position: relative;
-  padding: 0.5rem 1.25rem;
   text-decoration: none;
-  font-weight: 700;
-  font-size: ${({ theme }) => theme.fontSize('s')};
-  border-radius: 2rem;
-  transition: all 0.3s;
-  height: 3.125rem;
+  transition: all 0.2s;
+  height: 2.5rem;
   width: 100%;
   justify-content: center;
   align-items: center;
+  border: none;
   cursor: pointer;
-  ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+
+  ${({ $color, theme, buttonType }) => (theme.buttonColors($color, buttonType))};
+
+  ${({ theme }) => css` ${fontHelper(theme, 'button')}`}
 
   // Override with mobile-specific colours where available:
-  ${({ mobileColour, theme }) => (mobileColour ? theme.buttonColors(mobileColour) : null)};
+  ${({ mobileColour, theme, buttonType }) => (mobileColour ? theme.buttonColors(mobileColour, buttonType) : null)};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
   }
 
-  // Reinstate general styles for 'desktop':
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    ${({ color, theme }) => (color ? theme.buttonColors(color) : theme.buttonColors('red'))};
+    // I don't *believe* this needs to be reinstated, but leaving in
+    // place for now, just to avoid breaking anything downstream...
+    width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
+
+    // Reinstate standard colours for desktop where appropriate:
+    ${({
+    mobileColour, theme, buttonType, $color
+  }) => (
+    mobileColour && theme.buttonColors($color, buttonType)
+  )};
   }
 `;
 
@@ -44,29 +55,30 @@ export const IconWrapper = styled.span`
   margin-left: ${spacing('md')};
   align-self: center;
   right: ${spacing('m')};
-  ${({ type }) => type === 'standard'
-    && css`
+
+  ${({ type }) => type === 'standard' && css`
+    position: absolute;
+    right: -2rem;
+    top: 0;
+    bottom: 0;
+  `};
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    width: auto;
+    right: auto;
+    position: relative;
+    ${({ type }) => type === 'standard' && css`
       position: absolute;
       right: -2rem;
       top: 0;
       bottom: 0;
     `};
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    width: auto;
-    right: auto;
-    position: relative;
-    ${({ type }) => type === 'standard'
-      && css`
-        position: absolute;
-        right: -2rem;
-        top: 0;
-        bottom: 0;
-      `};
   }
 `;
 
 const StyledLink = styled.a`
   ${props => (props.type === 'button' ? buttonStyle : linkStyle)}
+
   ${({ iconFirst }) => iconFirst
     && css`
       flex-direction: row-reverse;

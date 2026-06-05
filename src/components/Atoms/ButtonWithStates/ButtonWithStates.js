@@ -8,7 +8,7 @@ import Button from '../Button/Button';
 const ButtonWithDisabledState = styled(Button)`
   &:disabled {
     cursor: not-allowed;
-    opacity: 0.75;
+    opacity: 0.5;
   }
 `;
 
@@ -49,7 +49,7 @@ const ButtonWithStates = React.forwardRef(({
 });
 
 ButtonWithStates.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   loadingText: PropTypes.string,
   loading: PropTypes.bool,
   disabled: PropTypes.bool

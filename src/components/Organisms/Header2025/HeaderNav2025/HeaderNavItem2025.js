@@ -6,7 +6,7 @@ import {
   NavItem, NavLink, DesktopNavLink, SubNavMenu, SubNavItem, SubNavLink, ChevronWrapper, StyledText
 } from './HeaderNav2025.style';
 
-import menuGroupIcon from './Menu-Group-Icon.svg';
+import menuGroupIcon from '../../../../theme/shared/assets/Menu-Group-Icon.svg';
 
 const HeaderNavItem2025 = (
   {
@@ -83,7 +83,7 @@ const HeaderNavItem2025 = (
           return (
             <SubNavItem key={`${index}-${thisSubUrl}`}>
               <SubNavLink href={thisSubUrl} inline role="menuitem">
-                <Text>{child.title}</Text>
+                <Text size="s">{child.title}</Text>
               </SubNavLink>
             </SubNavItem>
           );

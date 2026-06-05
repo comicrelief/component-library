@@ -53,7 +53,7 @@ const FooterNav = ({ navItems = {}, ...rest }) => {
 
   return (
     <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation">
-      <Text id="footer-menu" tag="h2">
+      <Text id="footer-menu" tag="h2" size="s">
         Footer navigation
       </Text>
 
@@ -67,7 +67,7 @@ const FooterNav = ({ navItems = {}, ...rest }) => {
             isSubMenuOpen={!!isSubMenuOpen[group.id]}
           >
             {!isSmallBreakpoint ? (
-              <Text color="white" weight="bold">
+              <Text color="white" weight="bold" size="s">
                 {group.title}
               </Text>
             ) : (
@@ -80,7 +80,7 @@ const FooterNav = ({ navItems = {}, ...rest }) => {
                 onClick={toggleSubMenu(group.id)}
                 {...rest}
               >
-                <Text color="white">{group.title}</Text>
+                <Text color="white" size="s">{group.title}</Text>
               </NavLink>
             )}
             {/* Second level of the navigation (ul tag): Child(ren) */}
@@ -105,7 +105,7 @@ const FooterNav = ({ navItems = {}, ...rest }) => {
                       }
                     >
                       <SubNavLink href={thisUrl} inline role="menuitem" {...rest}>
-                        <Text color="white">{child.title}</Text>
+                        <Text color="white" size="s">{child.title}</Text>
                       </SubNavLink>
                     </SubNavItem>
                   );

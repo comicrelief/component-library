@@ -2,8 +2,7 @@ import styled from 'styled-components';
 import Text from '../../Atoms/Text/Text';
 import spacing from '../../../theme/shared/spacing';
 import zIndex from '../../../theme/shared/zIndex';
-
-const boxShadow = 'box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15)';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 const Container = styled.div`
   display: flex;
@@ -19,7 +18,6 @@ const Container = styled.div`
 
 const Subtitle = styled(Text)`
   letter-spacing: 0.03em;
-  text-transform: uppercase;
 `;
 
 const Image = styled.div`
@@ -29,7 +27,7 @@ const Image = styled.div`
   }
   img {
     border-radius: 1rem;
-    ${boxShadow};
+    ${defaultBoxShadow()}
   }
 `;
 
@@ -122,7 +120,7 @@ const Copy = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
-  ${boxShadow};
+  ${defaultBoxShadow()}
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
 
   ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};

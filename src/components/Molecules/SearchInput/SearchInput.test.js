@@ -16,11 +16,20 @@ it('renders correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
     .c6 {
-      font-size: 1rem;
-      line-height: 1rem;
-      text-transform: inherit;
-      line-height: normal;
       font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+
+    .c6 span {
+      font-size: inherit;
+      line-height: inherit;
     }
 
     .c4 {
@@ -53,7 +62,15 @@ it('renders correctly', () => {
 
     .c8 {
       position: relative;
-      font-size: 1.25rem;
+      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-weight: 400;
+      text-transform: inherit;
+      -webkit-letter-spacing: 0;
+      -moz-letter-spacing: 0;
+      -ms-letter-spacing: 0;
+      letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     .c9 {
@@ -78,7 +95,7 @@ it('renders correctly', () => {
       box-sizing: border-box;
       width: 100%;
       height: 48px;
-      padding: 1rem 2.4rem 1rem 1.5rem;
+      padding: 1rem;
       background-color: #F4F3F5;
       border: 1px solid;
       border-color: #969598;
@@ -90,7 +107,7 @@ it('renders correctly', () => {
       border-radius: 0.5rem;
       font-size: inherit;
       z-index: 2;
-      font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+      font-family: inherit;
     }
 
     .c10:focus {
@@ -134,6 +151,34 @@ it('renders correctly', () => {
     }
 
     @media (min-width:740px) {
+      .c6 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c6 {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+
+    @media (min-width:740px) {
+      .c8 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:1024px) {
+      .c8 {
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+      }
+    }
+
+    @media (min-width:740px) {
 
     }
 
@@ -167,13 +212,11 @@ it('renders correctly', () => {
             >
               <span
                 className="c6 c7"
-                color="inherit"
                 dangerouslySetInnerHTML={
                   Object {
                     "__html": "Search",
                   }
                 }
-                size="s"
               />
               <div
                 className="c8"
@@ -183,6 +226,7 @@ it('renders correctly', () => {
                   className="c9"
                 >
                   <input
+                    aria-required={false}
                     className="c10"
                     id="search"
                     name="search"

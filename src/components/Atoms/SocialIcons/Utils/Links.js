@@ -14,6 +14,11 @@ export default campaign => ({
     title: 'Check out our Twitter account',
     id: 'twitter'
   },
+  x: {
+    url: `https://x.com/${campaign}`,
+    title: 'Check out our X account',
+    id: 'x'
+  },
   youtube: {
     url: 'https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw',
     title: 'Check out our YouTube channel',
@@ -23,5 +28,10 @@ export default campaign => ({
     url: `https://www.instagram.com/${campaign}`,
     title: 'Check out our Instagram account',
     id: 'instagram'
+  },
+  tiktok: {
+    url: `https://www.tiktok.com/@${campaign}`,
+    title: 'Check out our TikTok account',
+    id: 'tiktok'
   }
 });

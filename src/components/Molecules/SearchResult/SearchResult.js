@@ -84,10 +84,10 @@ const SearchResult = ({
         />
       </ImageWrapper>
       <CopyWrapper>
-        <Text size="xs" uppercase>
+        <Text size="xs">
           {`${type ? ` ${type} |` : ''} ${date}`}
         </Text>
-        <Title size="xl" tag="h3" uppercase>
+        <Title size="xl" tag="h3">
           {title}
         </Title>
         {copy && (

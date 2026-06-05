@@ -28,7 +28,7 @@ it('renders Column view correctly', () => {
     <CardDs
       target="_blank"
       link="/home"
-      linkLabel="find out more"
+      linkLabel="Find out more"
       imageLow={defaultData.image}
       images={defaultData.images}
       imageAltText="Happy man going to work"

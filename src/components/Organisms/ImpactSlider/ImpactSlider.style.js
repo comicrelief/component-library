@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Text from '../../Atoms/Text/Text';
 import Button from '../../Atoms/Button/Button';
 
@@ -6,19 +6,15 @@ const OuterWrapper = styled.div`
   position: relative;
   max-width: 100%;
   background-color: ${props => props.theme.color(`${props.backgroundColour}`)};
-  padding: 32px 16px;
-
+  ${({ paddingTop, paddingBottom }) => css`padding: ${paddingTop} 1rem ${paddingBottom};`}
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: 50px;
-  }
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    padding: 64px 0;
+    ${({ paddingTop, paddingBottom }) => css`padding: ${paddingTop} 4rem ${paddingBottom};`}
   }
 `;
 
 const InnerWrapper = styled.div`
   width: 100%;
-  max-width: 780px;
+  max-width: 752px;
   margin: 0 auto;
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {

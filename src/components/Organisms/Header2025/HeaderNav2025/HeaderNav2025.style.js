@@ -32,7 +32,7 @@ const NavLinkClass = styled(Link)`
     :focus {
       color: ${({ theme }) => theme.color('red')};
       background-color: ${({ theme }) => theme.color('grey_extra_light')};
-      font-weight: inherit;
+      font-weight: 700;
     }
 
     :focus-within {
@@ -436,7 +436,7 @@ const DonateButtonWrapperBottom = styled.div`
   // Donate button
   a {
     width: calc(100% - 10px);
-    transition: width 0.35s cubic-bezier(0.5, 1.5, 0.5, 0.9);
+    transition: all 0.3s cubic-bezier(0.5, 1.5, 0.5, 0.9);
 
     &:hover,
     &:focus {

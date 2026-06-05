@@ -5,7 +5,6 @@ import zIndex from '../../../theme/shared/zIndex';
 import playIcon from './assets/video--play-icon.svg';
 import playIconHover from './assets/video--play-icon__hover.svg';
 import loadingIcon from './assets/loader.svg';
-import handlePadding from '../../../utils/_utils';
 
 const Container = styled.div`
   display: flex;
@@ -13,10 +12,9 @@ const Container = styled.div`
   flex-direction: column;
   overflow: hidden;
   background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex-direction: ${({ copyFirst }) => (copyFirst === true ? 'row-reverse' : 'row')};
-    ${({ landscapeVideo, hasVideo, fullImage }) => (landscapeVideo && hasVideo && !fullImage ? 'min-height: 0;' : null)};
-  }
+  padding-top: ${({ smPaddingTop }) => smPaddingTop};
+  padding-bottom: ${({ smPaddingBottom }) => smPaddingBottom};
+
   iframe {
     height: 100%;
     width: 100%;
@@ -25,13 +23,20 @@ const Container = styled.div`
     ${({ copyFirst }) => (copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;')};
     ${({ isPlaying }) => (isPlaying ? zIndex('high') : zIndex('base'))};
   }
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    flex-direction: ${({ copyFirst }) => (copyFirst === true ? 'row-reverse' : 'row')};
+    ${({ landscapeVideo, hasVideo, fullImage }) => (landscapeVideo && hasVideo && !fullImage ? 'min-height: 0;' : null)};
+    padding-top: ${({ paddingTop }) => paddingTop};
+    padding-bottom: ${({ paddingBottom }) => paddingBottom};
+  }
 `;
 
 const Copy = styled.div`
   width: 100%;
   ${zIndex('low')};
   ${({ hasVideo, fullImage }) => (hasVideo === true && fullImage === true ? 'display: none;' : null)};
-  padding: ${spacing('l')};
+  padding: 0 ${spacing('l')};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     ${({ vhFull, fullImage }) => (vhFull || fullImage
@@ -44,7 +49,7 @@ const Copy = styled.div`
 
     flex-direction: column;
     justify-content: center;
-    padding: ${spacing('xl')};
+    padding: 0 ${spacing('xl')};
   }
 
   ${props => props.fullImage
@@ -61,23 +66,21 @@ const Copy = styled.div`
     `};
 
   ${props => (props.hasImage
-    ? css`@media ${({ theme }) => theme.allBreakpoints('M')} {
-            width: 50%;
-          }
-        `
+    ? css`
+      @media ${({ theme }) => theme.allBreakpoints('M')} {
+        width: 50%;
+      }
+    `
     : css`
-          @media ${({ theme }) => theme.allBreakpoints('M')} {
-            width: 100%;
-            max-width ${containers.small};
-            padding: ${spacing('xl')};
-          }
-          margin: auto;
-          padding: ${spacing('md')};
-        `)};
-
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    ${({ paddingOption }) => handlePadding(paddingOption)};
-  }
+      margin: auto;
+      padding: 0 ${spacing('md')};
+      
+      @media ${({ theme }) => theme.allBreakpoints('M')} {
+        width: 100%;
+        max-width ${containers.small};
+        padding: 0 ${spacing('xl')};
+      }
+    `)};
 `;
 
 const Media = styled.div`

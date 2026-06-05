@@ -25,7 +25,7 @@ it('renders Promo correctly', () => {
       >
         Curabitur pretium tincidunt lacus
       </Text>
-      <Text tag="p" color="white">
+      <Text tag="p" color="white" size="s">
         Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius,
         turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
       </Text>
@@ -60,7 +60,7 @@ it('renders Promo correctly end position', () => {
       >
         Curabitur pretium tincidunt lacus
       </Text>
-      <Text tag="p" color="white">
+      <Text tag="p" color="white" size="s">
         Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius,
         turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
       </Text>

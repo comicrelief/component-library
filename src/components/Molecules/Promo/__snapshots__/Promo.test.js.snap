@@ -2,27 +2,54 @@
 
 exports[`renders Promo correctly 1`] = `
 .c7 {
-  color: #FFFFFF;
-  font-size: 5rem;
-  line-height: 5rem;
-  text-transform: uppercase;
-  font-weight: normal;
   font-family: 'Anton',Impact,sans-serif;
-  -webkit-letter-spacing: 0.03rem;
-  -moz-letter-spacing: 0.03rem;
-  -ms-letter-spacing: 0.03rem;
-  letter-spacing: 0.03rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.c7 {
+  font-size: 5rem;
+  line-height: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #FFFFFF;
   font-size: 3rem;
   line-height: 3rem;
 }
 
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c8 {
-  color: #FFFFFF;
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c8 {
+  font-size: 1rem;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c2 {
@@ -45,15 +72,11 @@ exports[`renders Promo correctly 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  padding: 0.5rem 1.25rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 3.125rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  height: 2.5rem;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -63,14 +86,34 @@ exports[`renders Promo correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border: none;
   cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
   background-color: #FFFFFF;
   color: #000000;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
-.c9:hover {
-  background-color: #969598;
-  color: #000000;
+.c9:hover,
+.c9:focus,
+.c9:focus-within,
+.c9:focus-visible {
+  background-color: #E1E2E3;
+  outline-offset: 3px;
+}
+
+.c9:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .c0 {
@@ -139,6 +182,20 @@ exports[`renders Promo correctly 1`] = `
 
 @media (min-width:740px) {
   .c7 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c7 {
     font-size: 4rem;
     line-height: 4rem;
     margin-bottom: 2rem;
@@ -154,6 +211,34 @@ exports[`renders Promo correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c9 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c9 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
   .c9 {
     width: auto;
   }
@@ -161,13 +246,7 @@ exports[`renders Promo correctly 1`] = `
 
 @media (min-width:1024px) {
   .c9 {
-    background-color: #FFFFFF;
-    color: #000000;
-  }
-
-  .c9:hover {
-    background-color: #969598;
-    color: #000000;
+    width: auto;
   }
 }
 
@@ -246,22 +325,17 @@ exports[`renders Promo correctly 1`] = `
       >
         <h1
           className="c7"
-          color="white"
-          size="super"
         >
           Curabitur pretium tincidunt lacus
         </h1>
         <p
           className="c8"
-          color="white"
-          size="s"
         >
           Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
         </p>
         <span>
           <a
             className="c9"
-            color="white"
             href="/"
             target="_self"
             type="button"
@@ -277,27 +351,54 @@ exports[`renders Promo correctly 1`] = `
 
 exports[`renders Promo correctly end position 1`] = `
 .c7 {
-  color: #FFFFFF;
-  font-size: 5rem;
-  line-height: 5rem;
-  text-transform: uppercase;
-  font-weight: normal;
   font-family: 'Anton',Impact,sans-serif;
-  -webkit-letter-spacing: 0.03rem;
-  -moz-letter-spacing: 0.03rem;
-  -ms-letter-spacing: 0.03rem;
-  letter-spacing: 0.03rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.c7 {
+  font-size: 5rem;
+  line-height: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #FFFFFF;
   font-size: 3rem;
   line-height: 3rem;
 }
 
+.c7 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c8 {
-  color: #FFFFFF;
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c8 {
+  font-size: 1rem;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c2 {
@@ -320,15 +421,11 @@ exports[`renders Promo correctly end position 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  padding: 0.5rem 1.25rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 3.125rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  height: 2.5rem;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -338,14 +435,34 @@ exports[`renders Promo correctly end position 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border: none;
   cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
   background-color: #FFFFFF;
   color: #000000;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
-.c9:hover {
-  background-color: #969598;
-  color: #000000;
+.c9:hover,
+.c9:focus,
+.c9:focus-within,
+.c9:focus-visible {
+  background-color: #E1E2E3;
+  outline-offset: 3px;
+}
+
+.c9:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .c0 {
@@ -417,6 +534,20 @@ exports[`renders Promo correctly end position 1`] = `
 
 @media (min-width:740px) {
   .c7 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c7 {
     font-size: 4rem;
     line-height: 4rem;
     margin-bottom: 2rem;
@@ -432,6 +563,34 @@ exports[`renders Promo correctly end position 1`] = `
 }
 
 @media (min-width:740px) {
+  .c8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c8 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c9 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c9 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
   .c9 {
     width: auto;
   }
@@ -439,13 +598,7 @@ exports[`renders Promo correctly end position 1`] = `
 
 @media (min-width:1024px) {
   .c9 {
-    background-color: #FFFFFF;
-    color: #000000;
-  }
-
-  .c9:hover {
-    background-color: #969598;
-    color: #000000;
+    width: auto;
   }
 }
 
@@ -532,22 +685,17 @@ exports[`renders Promo correctly end position 1`] = `
       >
         <h1
           className="c7"
-          color="white"
-          size="super"
         >
           Curabitur pretium tincidunt lacus
         </h1>
         <p
           className="c8"
-          color="white"
-          size="s"
         >
           Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
         </p>
         <span>
           <a
             className="c9"
-            color="white"
             href="/"
             target="_self"
             type="button"

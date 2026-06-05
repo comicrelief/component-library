@@ -1,4 +1,4 @@
-# Impact Slider (w/opacity animation)
+# Impact Slider (w/opacity animation & default padding options)
 
 ```js
 const { testImpactSliderItems} = require('../../../styleguide/data/data');
@@ -20,7 +20,7 @@ import Text from '../../Atoms/Text/Text';
   </ImpactSlider>
 ```
 
-# Impact Slider (w/o opacity animation, w/default value)
+# Impact Slider (w/o opacity animation, w/default value & custom padding options)
 ```js
 const { testImpactSliderItems} = require('../../../styleguide/data/data');
 import Text from '../../Atoms/Text/Text';
@@ -35,6 +35,8 @@ import Text from '../../Atoms/Text/Text';
   max={100}
   defaultSliderValue={45}
   backgroundColour="white"
+  paddingTop="6rem"
+  paddingBottom="6rem"
   >
     <Text tag="p" color="black">
       Use this slider to see how your donation can make a difference to lives in the UK and around the globe this winter.

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
 import Text from '../../Atoms/Text/Text';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 // Duration in seconds
 const animationSpeed = 0.75;
@@ -125,7 +126,7 @@ const CarouselWrapper = styled.div`
   margin: 0 auto;
 
   border-radius: 20px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  ${defaultBoxShadow()}
 
   .carousel {
     position: relative;
@@ -333,7 +334,6 @@ const CarouselWrapper = styled.div`
         }
         // END OF DESKTOP
 
-
         .carousel__inner-slide {
           text-align: center;
           display: inline-flex;
@@ -346,6 +346,12 @@ const CarouselWrapper = styled.div`
   }
 `;
 
+const Container = styled.div`
+  background-color:   ${({ theme, backgroundColour }) => theme.color(backgroundColour)};
+  padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 0 ${paddingBottom};`}
+`;
+
 export {
-  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper, Heading, PeopleHelpedText, Including
+  CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper,
+  Heading, PeopleHelpedText, Including, Container
 };

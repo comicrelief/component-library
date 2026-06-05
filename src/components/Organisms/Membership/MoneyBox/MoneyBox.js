@@ -9,7 +9,7 @@ const MoneyBox = styled(Input)`
   input {
     border: 2px solid ${({ theme }) => theme.color('grey_medium')};
     font-size: ${({ theme }) => theme.fontSize('l')};
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: -2px;
     height: auto;
 

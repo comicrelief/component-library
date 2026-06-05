@@ -71,7 +71,7 @@ const RadioButton = React.forwardRef(({
       ref={ref}
     />
     <span />
-    <Text weight="bold">{label}</Text>
+    <Text weight="bold" size="s">{label}</Text>
   </Label>
 ));
 

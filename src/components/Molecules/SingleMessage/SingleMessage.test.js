@@ -17,7 +17,7 @@ it('renders Single Message with Image correctly', () => {
       <Text tag="h1" color="white" size="xxl">
         title
       </Text>
-      <Text tag="p" color="white">
+      <Text tag="p" color="white" size="s">
         description
       </Text>
       <Link href="/" type="button" color="white">
@@ -55,7 +55,7 @@ it('renders Single Message with full width correctly', () => {
       <Text tag="h1" color="white" size="xxl">
         title
       </Text>
-      <Text tag="p" color="white">
+      <Text tag="p" color="white" size="s">
         description
       </Text>
       <Link href="/" type="button" color="white">

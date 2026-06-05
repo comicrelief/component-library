@@ -1,0 +1,1241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`handles data structure correctly 1`] = `
+<div
+  className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 qqegF"
+>
+  <div
+    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 kCDlNQ"
+  >
+    <div
+      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 iFzzWM"
+    >
+      <div
+        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 gAuYUa"
+      >
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 hxglwr"
+        >
+          <a
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            href="/test"
+            rel={null}
+            target="_self"
+            type="standard"
+          >
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+            >
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  test go
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                >
+                  <div
+                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                  >
+                    <span
+                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                    >
+                      <svg
+                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        fill="none"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        width="15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 nEnLi"
+        >
+          <div
+            className="CTACardstyle__CardLink-sc-si8xx1-3 geBvAi"
+          >
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+            >
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 hxglwr"
+        >
+          <a
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            href="/test"
+            rel={null}
+            target="_self"
+            type="standard"
+          >
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+            >
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  test go
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                >
+                  <div
+                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                  >
+                    <span
+                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                    >
+                      <svg
+                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        fill="none"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        width="15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 hxglwr"
+        >
+          <a
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            href="/test-no-image"
+            rel={null}
+            target="_self"
+            type="standard"
+          >
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  Load of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  View card
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                >
+                  <div
+                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                  >
+                    <span
+                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                    >
+                      <svg
+                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        fill="none"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        width="15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders 2 columns layout correctly 1`] = `
+<div
+  className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 qqegF"
+>
+  <div
+    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 cywbFh"
+  >
+    <div
+      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 iFzzWM"
+    >
+      <div
+        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 jrSYsC"
+      >
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 dPhdyR"
+        >
+          <a
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            href="/test"
+            rel={null}
+            target="_self"
+            type="standard"
+          >
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+            >
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  test go
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                >
+                  <div
+                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                  >
+                    <span
+                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                    >
+                      <svg
+                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        fill="none"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        width="15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 cdJZAM"
+        >
+          <div
+            className="CTACardstyle__CardLink-sc-si8xx1-3 geBvAi"
+          >
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+            >
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 dPhdyR"
+        >
+          <a
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            href="/test"
+            rel={null}
+            target="_self"
+            type="standard"
+          >
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+            >
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  test go
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                >
+                  <div
+                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                  >
+                    <span
+                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                    >
+                      <svg
+                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        fill="none"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        width="15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 dPhdyR"
+        >
+          <a
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            href="/test-no-image"
+            rel={null}
+            target="_self"
+            type="standard"
+          >
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  Load of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  View card
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                >
+                  <div
+                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                  >
+                    <span
+                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                    >
+                      <svg
+                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        fill="none"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        width="15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders carousel mode correctly 1`] = `
+<div
+  className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 qqegF"
+>
+  <div
+    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 cywbFh"
+  >
+    <div
+      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 iFzzWM"
+    >
+      <div
+        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 fqrDP"
+      >
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
+        >
+          <a
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            href="/test"
+            rel={null}
+            target="_self"
+            type="standard"
+          >
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+            >
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  test go
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                >
+                  <div
+                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                  >
+                    <span
+                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                    >
+                      <svg
+                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        fill="none"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        width="15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 fOlVWn"
+        >
+          <div
+            className="CTACardstyle__CardLink-sc-si8xx1-3 geBvAi"
+          >
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+            >
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
+        >
+          <a
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            href="/test"
+            rel={null}
+            target="_self"
+            type="standard"
+          >
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+            >
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  test go
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                >
+                  <div
+                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                  >
+                    <span
+                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                    >
+                      <svg
+                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        fill="none"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        width="15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
+        >
+          <a
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            href="/test-no-image"
+            rel={null}
+            target="_self"
+            type="standard"
+          >
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  Load of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  View card
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                >
+                  <div
+                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                  >
+                    <span
+                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                    >
+                      <svg
+                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        fill="none"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        width="15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with data prop 1`] = `
+<div
+  className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 qqegF"
+>
+  <div
+    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 cywbFh"
+  >
+    <div
+      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 iFzzWM"
+    >
+      <div
+        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 fqrDP"
+      >
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
+        >
+          <a
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            href="/test"
+            rel={null}
+            target="_self"
+            type="standard"
+          >
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+            >
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  test go
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                >
+                  <div
+                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                  >
+                    <span
+                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                    >
+                      <svg
+                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        fill="none"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        width="15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 fOlVWn"
+        >
+          <div
+            className="CTACardstyle__CardLink-sc-si8xx1-3 geBvAi"
+          >
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+            >
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
+        >
+          <a
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            href="/test"
+            rel={null}
+            target="_self"
+            type="standard"
+          >
+            <div
+              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+            >
+              <div
+                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
+                height="100%"
+                width="100%"
+              >
+                <img
+                  alt=""
+                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
+                  data-sizes="auto"
+                  data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  height="100%"
+                  src="@component-library/src/styleguide/assets/challenge-1.jpg"
+                  srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  width="100%"
+                />
+              </div>
+            </div>
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  <strong>
+                    Load
+                  </strong>
+                   of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  test go
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                >
+                  <div
+                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                  >
+                    <span
+                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                    >
+                      <svg
+                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        fill="none"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        width="15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
+        >
+          <a
+            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            href="/test-no-image"
+            rel={null}
+            target="_self"
+            type="standard"
+          >
+            <div
+              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+            >
+              <div
+                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+              >
+                <p
+                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                >
+                  Load of text here
+                </p>
+              </div>
+              <div
+                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+              >
+                <span
+                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                >
+                  View card
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    src="mock.asset"
+                  />
+                </span>
+                <div
+                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                >
+                  <div
+                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                  >
+                    <span
+                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                    >
+                      <svg
+                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        fill="none"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        width="15"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M9.58496 1.3501C9.1395 0.88346 8.40641 0.883488 7.96094 1.3501C7.52803 1.80361 7.5281 2.53033 7.96094 2.98389L11.1582 6.3335H1.13672C0.48748 6.3335 0 6.87834 0 7.50049C2.15408e-05 8.12262 0.487494 8.66748 1.13672 8.66748H11.1582L7.96094 12.0171C7.52806 12.4706 7.52899 13.1974 7.96191 13.6509C8.18163 13.8804 8.47556 14.0005 8.77344 14.0005C9.07114 14.0004 9.36533 13.8809 9.58496 13.6509L14.6758 8.31689L14.6748 8.31592L14.6875 8.30322L14.6865 8.30225C14.6954 8.29227 14.7044 8.28494 14.71 8.27783C14.7117 8.27557 14.7133 8.27298 14.7148 8.271C14.7485 8.23215 14.7824 8.18937 14.8135 8.14111L14.8154 8.13818C14.8354 8.1067 14.8493 8.07854 14.8564 8.06396L14.8652 8.04639L14.8662 8.04443L14.8672 8.04346C14.8672 8.04346 14.868 8.0407 14.8691 8.03857C14.8709 8.03524 14.8758 8.02683 14.8799 8.01904L14.8802 8.01851C14.8888 8.00212 14.9034 7.97435 14.917 7.93994V7.93799C14.9303 7.90387 14.9391 7.87297 14.9443 7.854C14.9469 7.8447 14.9498 7.83579 14.9512 7.83057C14.9527 7.82466 14.9535 7.82292 14.9541 7.8208C14.9541 7.8208 14.9542 7.81765 14.9551 7.81494L14.958 7.80615L14.9586 7.80434C14.9631 7.78973 14.9718 7.76131 14.9785 7.72705V7.7251C15.0066 7.57717 15.0066 7.42472 14.9785 7.27686V7.2749L14.958 7.1958L14.9551 7.18604L14.9531 7.18018L14.9512 7.17236C14.9497 7.16652 14.9481 7.15689 14.9453 7.14697C14.9398 7.12707 14.9307 7.09666 14.917 7.06201C14.9032 7.027 14.8885 6.99825 14.8799 6.98193C14.8758 6.97415 14.8709 6.96574 14.8691 6.9624L14.8564 6.93701C14.849 6.92189 14.8351 6.89384 14.8154 6.86279L14.8145 6.86084L14.7529 6.77393C14.7316 6.74671 14.7094 6.72141 14.6875 6.69775C14.6837 6.69353 14.6802 6.68867 14.6758 6.68408L9.58496 1.3501Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

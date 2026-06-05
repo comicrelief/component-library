@@ -2,31 +2,64 @@
 
 exports[`renders correctly 1`] = `
 .c2 {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  text-transform: inherit;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
-.c6 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+.c2 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c4 {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  fill: #000000;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
 }
 
-.c0 {
-  border-radius: 1rem;
-  background: #FFFFFF;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+.c4 {
+  font-size: 1.5rem;
+  line-height: normal;
+}
+
+.c4 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c9 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c9 {
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.c9 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c1 {
@@ -45,6 +78,8 @@ exports[`renders correctly 1`] = `
   width: 100%;
   background: none;
   border: none;
+  color: inherit;
+  -webkit-appearance: none;
   -webkit-transition: bottom 0.1s linear;
   transition: bottom 0.1s linear;
   cursor: pointer;
@@ -58,15 +93,7 @@ exports[`renders correctly 1`] = `
   outline: none;
 }
 
-.c1:focus > div,
-.c1:hover > div {
-  -webkit-animation-name: jiZjjg;
-  animation-name: jiZjjg;
-  -webkit-animation-duration: 0.4s;
-  animation-duration: 0.4s;
-}
-
-.c3 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -80,29 +107,87 @@ exports[`renders correctly 1`] = `
   align-content: center;
 }
 
-.c5 {
+.c7 {
+  height: 24px;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+  -webkit-transition: transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
+}
+
+.c0 {
+  border-radius: 1rem;
+  background: #FFFFFF;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c0:hover {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+}
+
+.c0 .c6 {
+  margin: 0;
+}
+
+.c8 {
   overflow: hidden;
   height: 0;
   visibility: none;
-  -webkit-transition: all 0.2s cubic-bezier(0.21,1.7,0.83,0.68) 0s;
-  transition: all 0.2s cubic-bezier(0.21,1.7,0.83,0.68) 0s;
+  -webkit-transition: all 0.2s cubic-bezier(0,0,0.25,0.82);
+  transition: all 0.2s cubic-bezier(0,0,0.25,0.82);
   padding: 0 2rem;
+}
+
+.c3 {
+  margin-bottom: 0;
+}
+
+@media (min-width:740px) {
+  .c2 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 {
+    font-size: 1.875rem;
+    line-height: 1.875rem;
+  }
 }
 
 @media (min-width:1024px) {
   .c4 {
-    fill: #000000;
+    font-size: 2rem;
+    line-height: 2rem;
   }
 }
 
 @media (min-width:740px) {
-  .c1 {
-    padding: 2rem 3rem;
+  .c9 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c9 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width:740px) {
-  .c5 {
+  .c8 {
     padding: 0 3rem;
   }
 }
@@ -116,38 +201,31 @@ exports[`renders correctly 1`] = `
     onClick={[Function]}
     type="button"
   >
-    <h2
-      className="c2"
-      color="inherit"
-      size="l"
+    <h4
+      className="c2 c3"
     >
-      I am the title
-    </h2>
-    <div
-      className="c3"
-    >
-      <svg
+      <h2
         className="c4"
-        direction="down"
-        fill="#000000"
-        height={24}
-        viewBox="0 0 48 48"
-        width={24}
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <path
-          d="M40 33a1.992 1.992 0 01-1.414-.586L24 17.829 9.414 32.414a2 2 0 11-2.828-2.828l16-16a2 2 0 012.828 0l16 16A2 2 0 0140 33z"
-        />
-      </svg>
+        I am the title
+      </h2>
+    </h4>
+    <div
+      className="c5"
+    >
+      <img
+        alt=""
+        aria-hidden="true"
+        className="c6 c7"
+        src="mock.asset"
+      />
     </div>
   </button>
   <div
-    className="c5"
+    className="c8"
   >
     <p
-      className="c6"
-      color="inherit"
-      size="s"
+      className="c9"
     >
       Name, surname, email and billing address We need these to process your payment, create a receipt and send it to you. Establishment information We use this information to understand which institutions (e.g. schools, companies) raise money for us. Your details will be kept safe and never shared with other organisations; see our Privacy Policy for more information
     </p>

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import spacing from '../../../theme/shared/spacing';
-// import Text from '../../Atoms/Text/Text';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 // Duration in seconds
 const animationSpeed = 0.75;
@@ -53,7 +53,17 @@ const CarouselWrapper = styled.div`
   margin: 0 auto;
 
   border-radius: 20px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  ${defaultBoxShadow()}
+
+  > div:first-child {
+    * {
+      margin-top: 0;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 1.5rem;
+    }
+  }
 
   .carousel {
     position: relative;
@@ -236,13 +246,28 @@ const CarouselWrapper = styled.div`
           align-items: center;
           justify-content: flex-start;
           flex-direction: column;
+
+          .slide-copy-wrapper {
+            font-size: 0.9rem;
+            line-height: 0.9rem;
+
+            * {
+              font-size: inherit;
+              line-height: inherit;
+            }
+          }
         }
       }
     }
   }
 `;
 
+const Container = styled.div`
+  background-color:   ${({ theme, rowBackgroundColour }) => theme.color(rowBackgroundColour)};
+  padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 0 ${paddingBottom}`};
+`;
+
 export {
   CarouselWrapper, SlideCopyWrapper,
-  HeadingCopyWrapper
+  HeadingCopyWrapper, Container
 };

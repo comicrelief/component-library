@@ -6,11 +6,22 @@ import Text from '../../Atoms/Text/Text';
 
     <div>
         <h2 style={{textAlign: 'center'}}>
-            All fields supplied, autoplay on:
+            All fields supplied, autoplay on, default padding:
         </h2>
         <WYMDCarousel data={carouselItemsComplete}/>
     </div>
-    
+```
+
+```js
+const { carouselItemsCompleteWithPadding } = require('../../../styleguide/data/data');
+import Text from '../../Atoms/Text/Text';
+
+    <div>
+        <h2 style={{textAlign: 'center'}}>
+            All fields supplied, autoplay on, custom padding:
+        </h2>
+        <WYMDCarousel data={carouselItemsCompleteWithPadding}/>
+    </div>
 ```
 
 ```js
@@ -23,7 +34,6 @@ import Text from '../../Atoms/Text/Text';
         </h2>
         <WYMDCarousel data={carouselItemsIncomplete}/>
     </div>
-    
 ```
 
 ```js
@@ -36,5 +46,4 @@ import Text from '../../Atoms/Text/Text';
         </h2>
         <WYMDCarousel data={carouselItemsMinimal}/>
     </div>
-    
 ```

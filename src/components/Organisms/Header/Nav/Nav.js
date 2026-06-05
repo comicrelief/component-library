@@ -65,7 +65,7 @@ const MainNav = ({ navItems = {} }) => {
   return (
     <>
       <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation">
-        <Text id="main-menu" tag="h2">
+        <Text id="main-menu" tag="h2" size="s">
           Main navigation
         </Text>
 
@@ -77,10 +77,11 @@ const MainNav = ({ navItems = {} }) => {
 
             /* Determine which field represents our url path */
             let thisUrl = NavHelper(thisFirstChild);
-            const relNoopener = !allowListed(thisUrl) && 'noopener';
+            const relNoopener = !allowListed(thisUrl) ? 'noopener' : 'false';
             const hasSubMenu = group.links && group.links.length > 1;
             const hasPopUp = hasSubMenu ? 'true' : null;
             thisUrl = InternalLinkHelper(thisUrl);
+
             return (
               <NavItem
                 role="none"

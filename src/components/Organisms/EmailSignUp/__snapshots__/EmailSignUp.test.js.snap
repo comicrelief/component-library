@@ -2,23 +2,44 @@
 
 exports[`renders correctly 1`] = `
 .c1 {
-  font-size: 3rem;
-  line-height: 3rem;
-  text-transform: uppercase;
-  font-weight: 400;
   font-family: 'Anton',Impact,sans-serif;
-  -webkit-letter-spacing: 0.03rem;
-  -moz-letter-spacing: 0.03rem;
-  -ms-letter-spacing: 0.03rem;
-  letter-spacing: 0.03rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.c1 {
+  font-size: 3rem;
+  line-height: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+}
+
+.c1 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c4 {
-  font-size: 1rem;
-  line-height: 1rem;
-  text-transform: inherit;
-  line-height: normal;
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c4 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c15 {
@@ -27,15 +48,11 @@ exports[`renders correctly 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  padding: 0.5rem 1.25rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  border-radius: 2rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  height: 3.125rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  height: 2.5rem;
   width: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -47,8 +64,19 @@ exports[`renders correctly 1`] = `
   align-items: center;
   border: none;
   cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
   background-color: #E52630;
   color: #FFFFFF;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c15 > a {
@@ -56,9 +84,17 @@ exports[`renders correctly 1`] = `
   text-decoration: none;
 }
 
-.c15:hover {
+.c15:hover,
+.c15:focus,
+.c15:focus-within,
+.c15:focus-visible {
   background-color: #890B11;
-  color: #FFFFFF;
+  outline-offset: 3px;
+}
+
+.c15:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .c8 {
@@ -76,12 +112,28 @@ exports[`renders correctly 1`] = `
 
 .c10 {
   margin-bottom: 0.5rem;
-  font-weight: normal;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c11 {
   position: relative;
-  font-size: 1.25rem;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  -webkit-letter-spacing: 0;
+  -moz-letter-spacing: 0;
+  -ms-letter-spacing: 0;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 .c12 {
@@ -106,7 +158,7 @@ exports[`renders correctly 1`] = `
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem 2.4rem 1rem 1.5rem;
+  padding: 1rem;
   background-color: #F4F3F5;
   border: 1px solid;
   border-color: #969598;
@@ -118,7 +170,7 @@ exports[`renders correctly 1`] = `
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-family: inherit;
 }
 
 .c13:focus {
@@ -131,7 +183,7 @@ exports[`renders correctly 1`] = `
 
 .c16:disabled {
   cursor: not-allowed;
-  opacity: 0.75;
+  opacity: 0.5;
 }
 
 .c0 {
@@ -221,6 +273,48 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width:740px) {
+  .c1 {
+    font-size: 1.875rem;
+    line-height: 1.875rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c15 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:740px) {
   .c15 {
     width: auto;
   }
@@ -229,8 +323,34 @@ exports[`renders correctly 1`] = `
 @media (min-width:1024px) {
   .c15 {
     width: auto;
-    padding: 1rem 2rem;
-    margin: 0 auto 2rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c10 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:740px) {
+  .c11 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c11 {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -270,8 +390,6 @@ exports[`renders correctly 1`] = `
   >
     <h2
       className="c1 c2"
-      color="inherit"
-      size="xxl"
     >
       sign up letter
     </h2>
@@ -280,8 +398,6 @@ exports[`renders correctly 1`] = `
     >
       <span
         className="c4"
-        color="inherit"
-        size="s"
       >
         <div
           className="c5"
@@ -305,13 +421,11 @@ exports[`renders correctly 1`] = `
         >
           <span
             className="c4 c10"
-            color="inherit"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "First Name",
               }
             }
-            size="s"
           />
           <div
             className="c11"
@@ -342,13 +456,11 @@ exports[`renders correctly 1`] = `
         >
           <span
             className="c4 c10"
-            color="inherit"
             dangerouslySetInnerHTML={
               Object {
                 "__html": "Last Name",
               }
             }
-            size="s"
           />
           <div
             className="c11"
@@ -380,13 +492,11 @@ exports[`renders correctly 1`] = `
       >
         <span
           className="c4 c10"
-          color="inherit"
           dangerouslySetInnerHTML={
             Object {
               "__html": "Email Address",
             }
           }
-          size="s"
         />
         <div
           className="c11"
@@ -416,17 +526,12 @@ exports[`renders correctly 1`] = `
       >
         <button
           className="c15 c16"
+          color="red"
           data-test="subscribe-button"
           disabled={true}
           type="submit"
         >
-          <span
-            className="c4"
-            color="inherit"
-            size="s"
-          >
-            Subscribe
-          </span>
+          Subscribe
           <div
             className=""
           />
@@ -438,8 +543,6 @@ exports[`renders correctly 1`] = `
     >
       <span
         className="c4"
-        color="inherit"
-        size="s"
       >
         <div
           className="c5"

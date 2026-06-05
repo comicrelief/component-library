@@ -56,7 +56,7 @@ export default {
       links: [
         {
           title: 'Single menu link',
-          path: 'https://www.comicrelief.com/rednoseday/schools',
+          path: 'https://www.comicrelief.com/rednoseday/schools#6',
           internal: {
             type: 'ContentfulPageLandingPage'
           }
@@ -89,7 +89,7 @@ export default {
       links: [
         {
           title: 'Schools & youth',
-          path: 'https://www.comicrelief.com/rednoseday/schools',
+          path: 'https://www.comicrelief.com/rednoseday/schools#7',
           internal: {
             type: 'ContentfulPageLandingPage'
           }

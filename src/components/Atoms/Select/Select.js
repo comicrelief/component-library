@@ -78,6 +78,7 @@ const Select = React.forwardRef(
           error={errorMsg}
           defaultValue={defaultValue}
           required={optional === false}
+          aria-required={optional === false}
           hasValue={!!value}
           greyDescription={greyDescription}
           ref={ref}

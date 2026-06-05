@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Text from '../Text/Text';
 import spacing from '../../../theme/shared/spacing';
 import hideVisually from '../../../theme/shared/hideVisually';
+import fontHelper from '../../../theme/crTheme/fontHelper';
 
 const getLabelColor = ({ theme, errorMsg }) => {
   if (errorMsg) {
@@ -26,14 +27,17 @@ const LabelElement = styled.label`
     top: 0;
     right: 0;
     content: 'Optional';
-    font-family: ${theme.fontFamilies(theme.font.regular)};
+    font-family: inherit;
     font-size: ${theme.fontSize('s')};
   }`}
 `;
 
 const VisibleText = styled(Text)`
   margin-bottom: ${spacing('sm')};
-  font-weight: normal;
+
+  ${({ theme }) => (css`
+    ${fontHelper(theme, 'formFieldLabel')}
+  `)};
 `;
 
 const HiddenText = styled(Text)`${hideVisually}`;

@@ -3,6 +3,7 @@ import styled, { css, keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 import Text from '../../../Atoms/Text/Text';
 import CloseCross from '../assets/close.svg';
+import defaultBoxShadow from '../../../../theme/shared/boxShadows';
 
 const closeDuration = 0.6;
 
@@ -42,7 +43,7 @@ const StyledPopUp = styled.div`
     animation: ${closeDuration}s ${props.fadeClose} ease forwards;
   `}
   background-color: ${({ theme }) => theme.color('blue_light')};
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+  ${defaultBoxShadow()}
   border-radius: 0.5rem;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
