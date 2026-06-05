@@ -36,12 +36,15 @@ const CtaWrapper = styled.div`
   height: auto;
   position: relative;
   margin-top: auto;
-  padding: 2rem 2.5rem 0 0;
+  padding: 2rem 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 
   ${CtaIconWrapper} {
     transform: none;
     top: auto;
-    bottom: -8px;
   }
 
   span {
