@@ -50,8 +50,23 @@
 - [X] js example vs md example = needs looking at
 - [X] playwright test = Identical
 
+
+
+
+
 ### EmailSignUp
+- [X] js export file diff => tiny change => removed unneeded {} wrapper for RichText prop
+- [ ] js example vs md example = needs looking at
+- [ ] playwright test = no test for this component
+
+
+
+
+
 ### Footer
+- [ ] js export file diff = Identical
+- [ ] js example vs md example = needs looking at
+- [ ] playwright test = no test for this component
 ### FooterNew
 ### Header
 ### Header2025

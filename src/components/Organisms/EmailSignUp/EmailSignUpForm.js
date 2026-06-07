@@ -42,7 +42,6 @@ const EmailSignUpForm = () => {
   );
   const privacyCopy = (
     <RichText
-      // eslint-disable-next-line react/jsx-curly-brace-presence
       markup={
         '<p>Our <a class="link link--white inline" href="/privacy-notice">Privacy Policy</a> describes how we handle and protect your information.<br><br>If you are under 18, please make sure you have your parents’ permission before providing us with any personal details.</p>'
       }
