@@ -6,6 +6,7 @@ import { primaryLinksList, secondaryLinksList } from './dev-data/data';
 export default function FooterNewExample() {
   return (
     <div>
+
       <h3>FooterNew with email signup</h3>
       <FooterNew
         primaryLinksList={primaryLinksList}
@@ -20,7 +21,7 @@ export default function FooterNewExample() {
         showTikTokSocialIcon
         showYouTubeSocialIcon
         animateRotate
-        onNewsletterSubmit={email => console.log('Newsletter submitted. Normally at this point, the frontend would run its own function to send.', email)}
+        onNewsletterSubmit={(email) => console.log('Newsletter submitted. Normally at this point, the frontend would run its own function to send.', email)}
       />
 
       <h3>FooterNew without email signup</h3>
@@ -38,6 +39,7 @@ export default function FooterNewExample() {
         showYouTubeSocialIcon
         animateRotate
       />
+
     </div>
   );
 }
