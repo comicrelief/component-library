@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import styled, { withTheme } from 'styled-components';
 
 const angle = {
-  right: '180deg',
-  left: '0',
-  down: '-90deg',
-  up: '90deg'
+  right: '0',
+  left: '180deg',
+  down: '90deg',
+  up: '-90deg'
 };
 
 const Icon = styled.svg`

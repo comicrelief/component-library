@@ -161,18 +161,35 @@ it('renders article teaser correctly', () => {
   padding: 2rem 2.5rem 0 0;
 }
 
-.c16 .c21 {
-  transform: none;
-  top: auto;
-  bottom: -8px;
-}
+    .c16 {
+      width: 100%;
+      height: auto;
+      position: relative;
+      margin-top: auto;
+      padding: 2rem 0 0 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+    }
 
-.c16 span {
-  font-weight: bold;
-  font-size: 1rem;
-  transition: color 0.15s 0.1s;
-  color: #E52630;
-}
+    .c16 .c21 {
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+      top: auto;
+    }
 
 .c2 {
   padding: 0;
@@ -632,18 +649,35 @@ it('renders press realese correctly', () => {
   padding: 2rem 2.5rem 0 0;
 }
 
-.c16 .c21 {
-  transform: none;
-  top: auto;
-  bottom: -8px;
-}
+    .c16 {
+      width: 100%;
+      height: auto;
+      position: relative;
+      margin-top: auto;
+      padding: 2rem 0 0 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+    }
 
-.c16 span {
-  font-weight: bold;
-  font-size: 1rem;
-  transition: color 0.15s 0.1s;
-  color: #E52630;
-}
+    .c16 .c21 {
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+      top: auto;
+    }
 
 .c2 {
   padding: 0;
