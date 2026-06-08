@@ -60,22 +60,19 @@ await page.evaluate(sel => document.querySelector(sel).dispatchEvent(new FocusEv
 - [X] js example vs md example = Same
 - [X] playwright test = just syntax change to testid
 
-
-
-# more looking at
-### Header !!!!
+### Header
 - [X] js export file diff = Identical
-- [ ] js example vs md example: Same but:
+- [X] js example vs md example: Same but:
 title, topCopy, privacyCopy, successCopy, plus initialState = ... are dead code in the Header.md example.
 - [X] playwright test = just syntax change to testid
 
-
-
 ### Header2025 !!!!
 - [X] js export file diff = Identical
-- [ ] js example vs md example = needs looking at
-- [ ] playwright test = just syntax change to testid
+- [X] js example vs md example = Same, but with dead code similar to Header
+- [X] playwright test = no test
 
+
+# more looking at
 ### ImpactSlider !!!!
 - [X] js export file diff = Identical
 - [ ] js example vs md example = Same

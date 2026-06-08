@@ -18,7 +18,11 @@ const ExampleWrapper = styled.div`
 `;
 
 const donateButton = (
-  <Link color="red" type="button" href="/donation">
+  <Link
+    color="red"
+    type="button"
+    href="/donation"
+  >
     Donate
   </Link>
 );

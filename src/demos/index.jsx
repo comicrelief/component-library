@@ -129,10 +129,7 @@ import header2025ExampleSrc from '../components/Organisms/Header2025/Header2025E
 import { DonateExample1, DonateExample2, DonateExample3, DonateExample4, DonateExample5, DonateExample6, DonateExample7, DonateExample8, DonateExample9, DonateExample10, DonateExample11, DonateExample12, DonateExample13, DonateExample14, DonateExample15, DonateExample16, DonateExample17, DonateExample18, DonateExample19, DonateExample20, DonateExample21, DonateExample22 } from '../components/Organisms/Donate/DonateExample.jsx';
 import CookieBannerExample from '../components/Organisms/CookieBanner/CookieBannerExample.jsx';
 import cookieBannerExampleSrc from '../components/Organisms/CookieBanner/CookieBannerExample.jsx?raw';
-import ImpactSliderExample1 from '../components/Organisms/ImpactSlider/ImpactSliderExample1.jsx';
-import impactSliderExample1Src from '../components/Organisms/ImpactSlider/ImpactSliderExample1.jsx?raw';
-import ImpactSliderExample2 from '../components/Organisms/ImpactSlider/ImpactSliderExample2.jsx';
-import impactSliderExample2Src from '../components/Organisms/ImpactSlider/ImpactSliderExample2.jsx?raw';
+import { ImpactSliderExample1, ImpactSliderExample2 } from '../components/Organisms/ImpactSlider/ImpactSliderExample.jsx';
 import WYMDCarouselExample from '../components/Organisms/WYMDCarousel/WYMDCarouselExample.jsx';
 import wymdCarouselExampleSrc from '../components/Organisms/WYMDCarousel/WYMDCarouselExample.jsx?raw';
 import RichtextCarouselExample from '../components/Organisms/RichtextCarousel/RichtextCarouselExample.jsx';
@@ -218,7 +215,7 @@ export const organisms = [
   { name: 'FooterNew', demo: demo(FooterNewExample, footerNewExampleSrc) },
   { name: 'Header', examples: [<HeaderExample1 />, <HeaderExample2 />, <HeaderExample3 />, <HeaderExample4 />, <HeaderExample5 />] },
   { name: 'Header2025', demo: demo(Header2025Example, header2025ExampleSrc) },
-  { name: 'ImpactSlider', examples: [demo(ImpactSliderExample1, impactSliderExample1Src), demo(ImpactSliderExample2, impactSliderExample2Src)] },
+  { name: 'ImpactSlider', examples: [<ImpactSliderExample1 />, <ImpactSliderExample2 />] },
   { name: 'MarketingPreferencesDSForm', demo: demo(MarketingPreferencesDSExample, marketingPreferencesDSExampleSrc) },
   { name: 'Membership', examples: [<MembershipExample1 />, <MembershipExample2 />] },
   { name: 'RichtextCarousel', demo: demo(RichtextCarouselExample, richtextCarouselExampleSrc) },

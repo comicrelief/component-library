@@ -3,10 +3,10 @@ import ImpactSlider from './ImpactSlider';
 import Text from '../../Atoms/Text/Text';
 import { testImpactSliderItems } from '../../../data/data';
 
-export default function ImpactSliderExample() {
+export function ImpactSliderExample1() {
   return (
     <>
-      <h3>With opacity animation</h3>
+      <h3>Impact Slider (w/opacity animation & default padding options)</h3>
       <ImpactSlider
         heading="Your donations will change lives"
         donateLink="https://donation-staging.spa.comicrelief.com"
@@ -15,14 +15,20 @@ export default function ImpactSliderExample() {
         items={testImpactSliderItems}
         step={5}
         max={100}
-        opacityAnimation={true}
+        opacityAnimation
       >
         <Text tag="p" color="black">
           Use this slider to see how your donation can make a difference to lives in the UK and around the globe this winter.
         </Text>
       </ImpactSlider>
+    </>
+  );
+}
 
-      <h3>Without opacity animation, with default value</h3>
+export function ImpactSliderExample2() {
+  return (
+    <>
+      <h3>Impact Slider (w/o opacity animation, w/default value & custom padding options)</h3>
       <ImpactSlider
         heading="Your donations will change lives"
         donateLink="https://donation-staging.spa.comicrelief.com"
