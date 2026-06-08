@@ -115,7 +115,7 @@ test.describe('donate component', () => {
     await page.close();
   });
 
-  test('Donate-example-2 - high value cart', async ({ page }) => {
+  test('Donate-example-1 - high value cart', async ({ page }) => {
     await page.goto('/#donate');
 
     await expect(page.locator('[data-testid="Donate-example-2"]')).toBeVisible();
@@ -170,7 +170,7 @@ test.describe('donate component', () => {
     await page.close();
   });
 
-  test('Donate-example-3 - Single Giving', async ({ page }) => {
+  test('Donate-example-2 - Single Giving', async ({ page }) => {
     await page.goto('/#donate');
 
     await expect(page.locator('[data-testid="Donate-example-3"]')).toBeVisible();
@@ -225,7 +225,7 @@ test.describe('donate component', () => {
     await page.close();
   });
 
-  test('Donate-example-4 - Single Giving "No Money Buys"', async ({ page }) => {
+  test('Donate-example-3 - Single Giving "No Money Buys"', async ({ page }) => {
     await page.goto('/#donate');
 
     await expect(page.locator('[data-testid="Donate-example-4"]')).toBeVisible();
@@ -255,7 +255,7 @@ test.describe('donate component', () => {
     await page.close();
   });
 
-  test('Donate-example-5 - Single Giving "No Money Buys" with overridden manual input value', async ({ page }) => {
+  test('Donate-example-4 - Single Giving "No Money Buys" with overridden manual input value', async ({ page }) => {
     await page.goto('/#donate');
 
     await expect(page.locator('[data-testid="Donate-example-5"]')).toBeVisible();

@@ -6,13 +6,41 @@ import { defaultData as desktopPictures, mobileImages as mobilePictures } from '
 import videoDesktop from '../../Atoms/AmbientVideo/big-buck-bunny-1080p-30sec.mp4';
 import videoMobile from '../../Atoms/AmbientVideo/thetestdatacom_480p_example.mp4';
 
-const imageL = { images: desktopPictures.images, imageLow: desktopPictures.imageLow, alt: 'Background image' };
-const imageM = { images: desktopPictures.images, imageLow: desktopPictures.imageLow, alt: 'Background image' };
-const imageS = { images: mobilePictures.images, imageLow: mobilePictures.imageLow, alt: 'Background image' };
+const imageL = {
+  images: desktopPictures.images,
+  imageLow: desktopPictures.imageLow,
+  alt: 'Background image'
+};
 
-const videoImageL = { images: desktopPictures.images, imageLow: desktopPictures.imageLow, alt: 'Video poster' };
-const videoImageM = { images: desktopPictures.images, imageLow: desktopPictures.imageLow, alt: 'Video poster' };
-const videoImageS = { images: mobilePictures.images, imageLow: mobilePictures.imageLow, alt: 'Video poster' };
+const imageM = {
+  images: desktopPictures.images,
+  imageLow: desktopPictures.imageLow,
+  alt: 'Background image'
+};
+
+const imageS = {
+  images: mobilePictures.images,
+  imageLow: mobilePictures.imageLow,
+  alt: 'Background image'
+};
+
+const videoImageL = {
+  images: desktopPictures.images,
+  imageLow: desktopPictures.imageLow,
+  alt: 'Video poster'
+};
+
+const videoImageM = {
+  images: desktopPictures.images,
+  imageLow: desktopPictures.imageLow,
+  alt: 'Video poster'
+};
+
+const videoImageS = {
+  images: mobilePictures.images,
+  imageLow: mobilePictures.imageLow,
+  alt: 'Video poster'
+};
 
 export default function DonateBannerExample() {
   return (

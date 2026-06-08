@@ -31,22 +31,25 @@ export function EmailBannerExample1() {
   return (
     <EmailBannerInstance>
       {formMethods => (
-        <EmailBanner
-          pageBackgroundColour="grey_light"
-          paddingAbove="0rem"
-          paddingBelow="2rem"
-          orientation="right"
-          imageL={imageL}
-          imageM={imageM}
-          imageS={imageS}
-          title="Stay in the know!"
-          bodyCopy={bodyCopy}
-          privacyCopy={privacyCopy}
-          successCopy={successCopy}
-          ctaText="Sign up"
-          formContext={formMethods}
-          onSubmit={data => console.log(data)}
-        />
+        <>
+          <h3>Image banner (widget right), custom padding + background</h3>
+          <EmailBanner
+            pageBackgroundColour="grey_light"
+            paddingAbove="0rem"
+            paddingBelow="2rem"
+            orientation="right"
+            imageL={imageL}
+            imageM={imageM}
+            imageS={imageS}
+            title="Stay in the know!"
+            bodyCopy={bodyCopy}
+            privacyCopy={privacyCopy}
+            successCopy={successCopy}
+            ctaText="Sign up"
+            formContext={formMethods}
+            onSubmit={data => console.log(data)}
+          />
+        </>
       )}
     </EmailBannerInstance>
   );
@@ -56,22 +59,25 @@ export function EmailBannerExample2() {
   return (
     <EmailBannerInstance>
       {formMethods => (
-        <EmailBanner
-          pageBackgroundColour="grey_light"
-          paddingAbove="2rem"
-          paddingBelow="2rem"
-          orientation="left"
-          imageL={imageL}
-          imageM={imageM}
-          imageS={imageS}
-          title="Stay in the know!"
-          bodyCopy={bodyCopy}
-          privacyCopy={privacyCopy}
-          successCopy={successCopy}
-          ctaText="Sign up"
-          formContext={formMethods}
-          onSubmit={data => console.log(data)}
-        />
+        <>
+          <h3>Image banner (widget left)</h3>
+          <EmailBanner
+            pageBackgroundColour="grey_light"
+            paddingAbove="2rem"
+            paddingBelow="2rem"
+            orientation="left"
+            imageL={imageL}
+            imageM={imageM}
+            imageS={imageS}
+            title="Stay in the know!"
+            bodyCopy={bodyCopy}
+            privacyCopy={privacyCopy}
+            successCopy={successCopy}
+            ctaText="Sign up"
+            formContext={formMethods}
+            onSubmit={data => console.log(data)}
+          />
+        </>
       )}
     </EmailBannerInstance>
   );
@@ -81,25 +87,28 @@ export function EmailBannerExample3() {
   return (
     <EmailBannerInstance>
       {formMethods => (
-        <EmailBanner
-          pageBackgroundColour="grey_light"
-          paddingAbove="0rem"
-          paddingBelow="2rem"
-          orientation="right"
-          imageL={videoImageL}
-          imageM={videoImageM}
-          imageS={videoImageS}
-          videoDesktop={videoDesktop}
-          videoMobile={videoMobile}
-          videoLoop
-          title="Stay in the know!"
-          bodyCopy={bodyCopy}
-          privacyCopy={privacyCopy}
-          successCopy={successCopy}
-          ctaText="Sign up"
-          formContext={formMethods}
-          onSubmit={data => console.log(data)}
-        />
+        <>
+          <h3>Image banner with Ambient Video (looping)</h3>
+          <EmailBanner
+            pageBackgroundColour="grey_light"
+            paddingAbove="0rem"
+            paddingBelow="2rem"
+            orientation="right"
+            imageL={videoImageL}
+            imageM={videoImageM}
+            imageS={videoImageS}
+            videoDesktop={videoDesktop}
+            videoMobile={videoMobile}
+            videoLoop
+            title="Stay in the know!"
+            bodyCopy={bodyCopy}
+            privacyCopy={privacyCopy}
+            successCopy={successCopy}
+            ctaText="Sign up"
+            formContext={formMethods}
+            onSubmit={data => console.log(data)}
+          />
+        </>
       )}
     </EmailBannerInstance>
   );
@@ -109,22 +118,25 @@ export function EmailBannerExample4() {
   return (
     <EmailBannerInstance>
       {formMethods => (
-        <EmailBanner
-          emailWidgetIsTextOnly
-          pageBackgroundColour="rnd_25_glitzy_grape"
-          componentBackgroundColour="deep_violet_dark"
-          copyColor="white"
-          paddingAbove="2rem"
-          paddingBelow="2rem"
-          orientation="right"
-          title="Stay in the know!"
-          bodyCopy={bodyCopy}
-          privacyCopy={privacyCopy}
-          successCopy={successCopy}
-          ctaText="Sign up"
-          formContext={formMethods}
-          onSubmit={data => console.log(data)}
-        />
+        <>
+          <h3>Text-only widget (no image), custom widget background + text colour</h3>
+          <EmailBanner
+            emailWidgetIsTextOnly
+            pageBackgroundColour="rnd_25_glitzy_grape"
+            componentBackgroundColour="deep_violet_dark"
+            copyColor="white"
+            paddingAbove="2rem"
+            paddingBelow="2rem"
+            orientation="right"
+            title="Stay in the know!"
+            bodyCopy={bodyCopy}
+            privacyCopy={privacyCopy}
+            successCopy={successCopy}
+            ctaText="Sign up"
+            formContext={formMethods}
+            onSubmit={data => console.log(data)}
+          />
+        </>
       )}
     </EmailBannerInstance>
   );
@@ -134,22 +146,25 @@ export function EmailBannerExample5() {
   return (
     <EmailBannerInstance>
       {formMethods => (
-        <EmailBanner
-          emailWidgetIsTextOnly
-          pageBackgroundColour="grey_light"
-          componentBackgroundColour="white"
-          copyColor="black"
-          paddingAbove="2rem"
-          paddingBelow="2rem"
-          orientation="right"
-          title="Stay in the know!"
-          bodyCopy={bodyCopy}
-          privacyCopy={privacyCopy}
-          successCopy={successCopy}
-          ctaText="Sign up"
-          formContext={formMethods}
-          onSubmit={data => console.log(data)}
-        />
+        <>
+          <h3>Text-only widget (no image), standard colours</h3>
+          <EmailBanner
+            emailWidgetIsTextOnly
+            pageBackgroundColour="grey_light"
+            componentBackgroundColour="white"
+            copyColor="black"
+            paddingAbove="2rem"
+            paddingBelow="2rem"
+            orientation="right"
+            title="Stay in the know!"
+            bodyCopy={bodyCopy}
+            privacyCopy={privacyCopy}
+            successCopy={successCopy}
+            ctaText="Sign up"
+            formContext={formMethods}
+            onSubmit={data => console.log(data)}
+          />
+        </>
       )}
     </EmailBannerInstance>
   );
