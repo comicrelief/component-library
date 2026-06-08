@@ -16,12 +16,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 }
 
 .c18 {
-  transform: rotate(0);
+  transform: rotate(180deg);
   fill: #000000;
 }
 
 .c20 {
-  transform: rotate(180deg);
+  transform: rotate(0);
   fill: #000000;
 }
 
@@ -638,12 +638,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 
 exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 .c12 {
-  transform: rotate(0);
+  transform: rotate(180deg);
   fill: #000000;
 }
 
 .c14 {
-  transform: rotate(180deg);
+  transform: rotate(0);
   fill: #000000;
 }
 

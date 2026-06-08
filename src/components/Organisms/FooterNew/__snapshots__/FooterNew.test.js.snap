@@ -226,7 +226,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 .c25 {
-  transform: rotate(180deg);
+  transform: rotate(0);
   fill: #FFFFFF;
 }
 
@@ -1642,7 +1642,7 @@ exports[`renders correctly 1`] = `
 }
 
 .c25 {
-  transform: rotate(180deg);
+  transform: rotate(0);
   fill: #FFFFFF;
 }
 
