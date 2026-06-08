@@ -66,20 +66,15 @@ await page.evaluate(sel => document.querySelector(sel).dispatchEvent(new FocusEv
 title, topCopy, privacyCopy, successCopy, plus initialState = ... are dead code in the Header.md example.
 - [X] playwright test = just syntax change to testid
 
-### Header2025 !!!!
+### Header2025
 - [X] js export file diff = Identical
 - [X] js example vs md example = Same, but with dead code similar to Header
 - [X] playwright test = no test
 
-
-# more looking at
-### ImpactSlider !!!!
+### ImpactSlider
 - [X] js export file diff = Identical
 - [X] js example vs md example = Same
-- [ ] playwright test =
-
-
-
+- [ ] playwright test = changes as failing around new dom structure and clicking the slider not sequencing.
 
 ### MarketingPreferencesDS
 - [X] js export file diff = Identical
