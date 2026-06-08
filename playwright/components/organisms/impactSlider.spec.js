@@ -1,14 +1,26 @@
 const { test, expect } = require('@playwright/test');
 
+// The range component is a "click anywhere on the track to jump to that value" slider,
+// so the value at any point along its width maps linearly between these bounds.
 const SLIDER_MIN = 5;
 const SLIDER_MAX = 100;
 
+// On master, each test repeated ~25 lines of inline drag simulation: locate the slider,
+// grab its bounding box, mouse.down(), then loop mouse.move() + re-read the bounding box
+// until the displayed amount matched the target position. That loop was slow, flakey
+// (it could spin indefinitely if the amount never landed exactly on targetPosition due to
+// rounding), and duplicated across every test. Since the slider responds to a single click
+// at the desired position, we can skip the drag entirely and click straight to the target -
+// faster and far more reliable. This helper centralises that click-to-value logic so each
+// test just calls `setSliderValue(page, testid, value)`.
 async function setSliderValue(page, testid, value) {
   const slider = page.locator(`[data-testid="${testid}"] #ImpactSlider`);
   await slider.scrollIntoViewIfNeeded();
 
   const box = await slider.boundingBox();
   if (box) {
+    // Map the requested £ value onto a 0-1 fraction of the track's width. Capped at 0.98
+    // so we never click right at the track's edge, where the handle can be clipped/unreliable.
     const fraction = Math.min((value - SLIDER_MIN) / (SLIDER_MAX - SLIDER_MIN), 0.98);
     const clickX = box.x + box.width * fraction;
     const clickY = box.y + box.height / 2;
