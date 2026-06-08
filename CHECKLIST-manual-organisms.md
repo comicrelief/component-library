@@ -75,8 +75,8 @@ title, topCopy, privacyCopy, successCopy, plus initialState = ... are dead code 
 # more looking at
 ### ImpactSlider !!!!
 - [X] js export file diff = Identical
-- [ ] js example vs md example = Same
-- [ ] playwright test = just syntax change to testid
+- [X] js example vs md example = Same
+- [ ] playwright test =
 
 
 
