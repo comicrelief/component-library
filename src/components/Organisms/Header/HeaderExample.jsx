@@ -15,107 +15,122 @@ const donateLink = (
 
 export function HeaderExample1() {
   return (
-    <Header
-      navItems={data}
-      rotate="true"
-      metaIcons={donateLink}
-    />
+    <>
+      <h3>Comic Relief header</h3>
+      <Header
+        navItems={data}
+        rotate="true"
+        metaIcons={donateLink}
+      />
+    </>
   );
 }
 
 export function HeaderExample2() {
   return (
-    <Header
-      navItems={data}
-      campaign="Sport Relief"
-      logoUrl="/sportrelief"
-      metaIcons={donateLink}
-    />
+    <>
+      <h3>Sport Relief header</h3>
+      <Header
+        navItems={data}
+        campaign="Sport Relief"
+        logoUrl="/sportrelief"
+        metaIcons={donateLink}
+      />
+    </>
   );
 }
 
 export function HeaderExample3() {
   return (
-    <Header
-      navItems={data}
-      campaign="Pride"
-      metaIcons={donateLink}
-    />
+    <>
+      <h3>Pride header</h3>
+      <Header
+        navItems={data}
+        campaign="Pride"
+        metaIcons={donateLink}
+      />
+    </>
   );
 }
 
 export function HeaderExample4() {
   return (
-    <Header
-      navItems={data}
-      rotate="true"
-      metaIcons={
-        <>
-          {donateLink}
-          <div>
-            <Icon
-              icon={searchIcon}
-              title="Search"
-              target="self"
-              role="button"
-              href="/search"
-              brand="comicrelief"
-              tabIndex="0"
-              id="search"
-            />
-          </div>
-        </>
-      }
-    />
+    <>
+      <h3>Comic Relief header with Search</h3>
+      <Header
+        navItems={data}
+        rotate="true"
+        metaIcons={
+          <>
+            {donateLink}
+            <div>
+              <Icon
+                icon={searchIcon}
+                title="Search"
+                target="self"
+                role="button"
+                href="/search"
+                brand="comicrelief"
+                tabIndex="0"
+                id="search"
+              />
+            </div>
+          </>
+        }
+      />
+    </>
   );
 }
 
 export function HeaderExample5() {
   return (
-    <Header
-      navItems={data}
-      rotate="true"
-      metaIcons={
-        <>
-          {donateLink}
-          <div>
-            <Icon
-              icon={searchIcon}
-              title="Search"
-              target="self"
-              role="button"
-              href="/search"
-              brand="comicrelief"
-              tabIndex="0"
-              id="search"
-            />
-          </div>
-          <div>
-            <Icon
-              icon={shopIcon}
-              title="Shop"
-              target="_blank"
-              role="button"
-              href="https://shop.comicrelief.com"
-              brand="comicrelief"
-              tabIndex="0"
-              id="shop"
-            />
-          </div>
-          <div>
-            <Icon
-              icon={payinIcon}
-              title="Payin"
-              target="_blank"
-              role="button"
-              href="https://donation.comicrelief.com/?cartId=rnd23-fundraisingpayin"
-              brand="comicrelief"
-              tabIndex="0"
-              id="payin"
-            />
-          </div>
-        </>
-      }
-    />
+    <>
+      <h3>Comic Relief header with Search and Shop</h3>
+      <Header
+        navItems={data}
+        rotate="true"
+        metaIcons={
+          <>
+            {donateLink}
+            <div>
+              <Icon
+                icon={searchIcon}
+                title="Search"
+                target="self"
+                role="button"
+                href="/search"
+                brand="comicrelief"
+                tabIndex="0"
+                id="search"
+              />
+            </div>
+            <div>
+              <Icon
+                icon={shopIcon}
+                title="Shop"
+                target="_blank"
+                role="button"
+                href="https://shop.comicrelief.com"
+                brand="comicrelief"
+                tabIndex="0"
+                id="shop"
+              />
+            </div>
+            <div>
+              <Icon
+                icon={payinIcon}
+                title="Payin"
+                target="_blank"
+                role="button"
+                href="https://donation.comicrelief.com/?cartId=rnd23-fundraisingpayin"
+                brand="comicrelief"
+                tabIndex="0"
+                id="payin"
+              />
+            </div>
+          </>
+        }
+      />
+    </>
   );
 }

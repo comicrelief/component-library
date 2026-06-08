@@ -1,5 +1,3 @@
-
-
 # Checklist Manual Organisms
 
 # Organisms
@@ -21,8 +19,6 @@
 - [X] js example vs md example = Same examples.
 - [X] playwright test = Identical
 
-
-
 ### CookieBanner
 - [X] js export file diff = Identical
 - [X] js example vs md example = Same examples.
@@ -41,7 +37,7 @@
 ### DynamicGallery
 - [X] js export file diff = Identical
 - [X] js example vs md example = Identical
-- [ ] playwright test = same but more specificity around data-testid
+- [ ] playwright test = same but more specificity around testid
 
 ### EmailBanner
 - [X] js export file diff = Identical
@@ -57,30 +53,33 @@ await page.evaluate(sel => document.querySelector(sel).dispatchEvent(new FocusEv
 ### Footer
 - [X] js export file diff = Identical
 - [X] js example vs md example = Same
-- [X] playwright test = just syntax change to data-testid
+- [X] playwright test = just syntax change to testid
 
 ### FooterNew
 - [X] js export file diff = Identical
 - [X] js example vs md example = Same
-- [X] playwright test = just syntax change to data-testid
+- [X] playwright test = just syntax change to testid
 
 
 
 # more looking at
 ### Header !!!!
 - [X] js export file diff = Identical
-- [ ] js example vs md example = needs looking at
-- [ ] playwright test = just syntax change to data-testid
+- [ ] js example vs md example: Same but:
+title, topCopy, privacyCopy, successCopy, plus initialState = ... are dead code in the Header.md example.
+- [X] playwright test = just syntax change to testid
+
+
 
 ### Header2025 !!!!
 - [X] js export file diff = Identical
 - [ ] js example vs md example = needs looking at
-- [ ] playwright test = just syntax change to data-testid
+- [ ] playwright test = just syntax change to testid
 
 ### ImpactSlider !!!!
 - [X] js export file diff = Identical
 - [ ] js example vs md example = Same
-- [ ] playwright test = just syntax change to data-testid
+- [ ] playwright test = just syntax change to testid
 
 
 
