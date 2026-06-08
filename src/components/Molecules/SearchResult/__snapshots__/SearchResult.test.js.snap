@@ -172,21 +172,12 @@ exports[`renders correctly in minimalist form 1`] = `
     >
       <div
         className="c4"
-        height="auto"
-        image={null}
-        images={null}
-        isBackgroundImage={false}
-        nonObjFitImage={null}
-        objFitState={true}
-        width="100%"
       >
         <img
           alt="Image's description"
           className="c5 lazyload"
           data-src={null}
           height="auto"
-          objFitState={true}
-          objectFit="cover"
           width="100%"
         />
       </div>
@@ -414,21 +405,12 @@ exports[`renders correctly with copy 1`] = `
     >
       <div
         className="c4"
-        height="auto"
-        image={null}
-        images={null}
-        isBackgroundImage={false}
-        nonObjFitImage={null}
-        objFitState={true}
-        width="100%"
       >
         <img
           alt="Image's description"
           className="c5 lazyload"
           data-src={null}
           height="auto"
-          objFitState={true}
-          objectFit="cover"
           width="100%"
         />
       </div>
@@ -628,21 +610,12 @@ exports[`renders correctly with date 1`] = `
     >
       <div
         className="c4"
-        height="auto"
-        image={null}
-        images={null}
-        isBackgroundImage={false}
-        nonObjFitImage={null}
-        objFitState={true}
-        width="100%"
       >
         <img
           alt="Image's description"
           className="c5 lazyload"
           data-src={null}
           height="auto"
-          objFitState={true}
-          objectFit="cover"
           width="100%"
         />
       </div>
@@ -837,21 +810,12 @@ exports[`renders correctly with date and type 1`] = `
     >
       <div
         className="c4"
-        height="auto"
-        image={null}
-        images={null}
-        isBackgroundImage={false}
-        nonObjFitImage={null}
-        objFitState={true}
-        width="100%"
       >
         <img
           alt="Image's description"
           className="c5 lazyload"
           data-src={null}
           height="auto"
-          objFitState={true}
-          objectFit="cover"
           width="100%"
         />
       </div>

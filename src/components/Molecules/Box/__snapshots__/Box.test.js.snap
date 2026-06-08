@@ -74,15 +74,7 @@ exports[`renders correctly 1`] = `
   >
     <div
       className="c2 lazyload"
-      height="auto"
-      image={null}
-      images="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
-      isBackgroundImage={false}
-      nonObjFitImage=""
-      objFitState={true}
-      setObjFitState={[Function]}
       squaredCorners={false}
-      width="100%"
     >
       <img
         alt=""
@@ -92,10 +84,6 @@ exports[`renders correctly 1`] = `
         data-src={null}
         data-srcset="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
         height="auto"
-        mediumBreakpointRowLayout={null}
-        objFitState={true}
-        objectFit="none"
-        smallBreakpointRowLayout={null}
         src={null}
         srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
         width="100%"

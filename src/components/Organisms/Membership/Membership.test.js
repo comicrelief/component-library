@@ -518,21 +518,12 @@ it('renders correctly', () => {
   <div
     backgroundColor="orange_light"
     className="c1 c2"
-    height="100%"
-    image={null}
-    images={null}
-    isBackgroundImage={false}
-    nonObjFitImage={null}
-    objFitState={true}
-    width="100%"
   >
     <img
       alt="Background image"
       className="c3 lazyload"
       data-src={null}
       height="100%"
-      objFitState={true}
-      objectFit="cover"
       width="100%"
     />
   </div>

@@ -340,21 +340,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         >
           <div
             className="c5"
-            height="auto"
-            image="image1.jpg"
-            images={null}
-            isBackgroundImage={false}
-            nonObjFitImage="image1.jpg"
-            objFitState={true}
-            width="100%"
           >
             <img
               alt=""
               className="c6 lazyload"
               data-src="image1.jpg"
               height="auto"
-              objFitState={true}
-              objectFit="cover"
               onLoad={[Function]}
               width="100%"
             />
@@ -385,21 +376,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         >
           <div
             className="c5"
-            height="auto"
-            image="image2.jpg"
-            images={null}
-            isBackgroundImage={false}
-            nonObjFitImage="image2.jpg"
-            objFitState={true}
-            width="100%"
           >
             <img
               alt=""
               className="c6 lazyload"
               data-src="image2.jpg"
               height="auto"
-              objFitState={true}
-              objectFit="cover"
               onLoad={[Function]}
               width="100%"
             />
@@ -430,21 +412,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         >
           <div
             className="c5"
-            height="auto"
-            image="image3.jpg"
-            images={null}
-            isBackgroundImage={false}
-            nonObjFitImage="image3.jpg"
-            objFitState={true}
-            width="100%"
           >
             <img
               alt=""
               className="c6 lazyload"
               data-src="image3.jpg"
               height="auto"
-              objFitState={true}
-              objectFit="cover"
               onLoad={[Function]}
               width="100%"
             />

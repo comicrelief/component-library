@@ -10,25 +10,25 @@ import 'lazysizes/plugins/blur-up/ls.blur-up';
 const IMAGE_FALLBACK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
 const Wrapper = styled.div`
-  ${({ objFitState, nonObjFitImage }) => (!objFitState && nonObjFitImage) && `background-image: url(${nonObjFitImage}); background-size: cover; background-position: center;`};
+  ${({ $objFitState, $nonObjFitImage }) => (!$objFitState && $nonObjFitImage) && `background-image: url(${$nonObjFitImage}); background-size: cover; background-position: center;`};
   display: block;
-  width: ${props => (props.width ? props.width : '100%')};
-  height: ${props => (props.height ? props.height : '100%')};
+  width: ${props => (props.$width ? props.$width : '100%')};
+  height: ${props => (props.$height ? props.$height : '100%')};
   position: relative;
-  ${({ isBackgroundImage }) => isBackgroundImage && 'position: absolute; bottom: 0px; left: 0px; right: 0px; height: 100%;'};
+  ${({ $isBackgroundImage }) => $isBackgroundImage && 'position: absolute; bottom: 0px; left: 0px; right: 0px; height: 100%;'};
   `;
 
 const Image = styled.img`
   width: ${props => (props.width ? props.width : '100%')};
   height: ${props => (props.height ? props.height : 'auto')};
   display: block;
-  object-fit: ${props => (props.objectFit === 'none' && 'none')
-    || (props.objectFit === 'cover' && 'cover')
-    || (props.objectFit === 'contain' && 'contain')};
-  ${({ objectFit, objFitState }) => (objectFit !== 'none' && !objFitState) && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
+  object-fit: ${props => (props.$objectFit === 'none' && 'none')
+    || (props.$objectFit === 'cover' && 'cover')
+    || (props.$objectFit === 'contain' && 'contain')};
+  ${({ $objectFit, $objFitState }) => ($objectFit !== 'none' && !$objFitState) && 'visibility: hidden;'}; // Allows image to provide the container height, but make it invisible
 
   /* Check for Cards/smallBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
-  ${({ smallBreakpointRowLayout }) => (smallBreakpointRowLayout === true) && css`
+  ${({ $smallBreakpointRowLayout }) => ($smallBreakpointRowLayout === true) && css`
     @media ${({ theme }) => theme.allBreakpoints('S')} {
       border-radius: ${spacing('md')};
       width: 80px;
@@ -43,7 +43,7 @@ const Image = styled.img`
   `}
 
   /* Check for Cards/mediumBreakpointRowLayout prop coming from the CMS and adjust styling for row view */
-  ${({ mediumBreakpointRowLayout }) => (mediumBreakpointRowLayout === true) && css`
+  ${({ $mediumBreakpointRowLayout }) => ($mediumBreakpointRowLayout === true) && css`
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       border-radius: ${spacing('md')};
       width: 96px;
@@ -52,7 +52,7 @@ const Image = styled.img`
   `}
 
   /* Check for Cards/smallBreakpointRowLayout or mediumBreakpointRowLayout prop coming from the CMS and adjust styling back to normal */
-  ${({ smallBreakpointRowLayout, mediumBreakpointRowLayout }) => ((smallBreakpointRowLayout === true) || (mediumBreakpointRowLayout === true)) && css`
+  ${({ $smallBreakpointRowLayout, $mediumBreakpointRowLayout }) => (($smallBreakpointRowLayout === true) || ($mediumBreakpointRowLayout === true)) && css`
       @media ${({ theme }) => theme.allBreakpoints('L')} {
         padding: none;
         border-radius: 0;
@@ -99,13 +99,11 @@ const Picture = ({
   if (!images) {
     return (
       <Wrapper
-        height={height}
-        width={width}
-        image={image}
-        images={images}
-        isBackgroundImage={isBackgroundImage}
-        nonObjFitImage={nonObjFitImage}
-        objFitState={objFitState}
+        $height={height}
+        $width={width}
+        $isBackgroundImage={isBackgroundImage}
+        $nonObjFitImage={nonObjFitImage}
+        $objFitState={objFitState}
         {...rest}
       >
         <Image
@@ -113,10 +111,10 @@ const Picture = ({
           alt={alt}
           height={height}
           width={width}
-          objectFit={objectFit}
+          $objectFit={objectFit}
           data-src={image}
           className="lazyload"
-          objFitState={objFitState}
+          $objFitState={objFitState}
           onLoad={onLoad}
         />
       </Wrapper>
@@ -125,22 +123,19 @@ const Picture = ({
 
   return (
     <Wrapper
-      height={height}
-      width={width}
-      image={image}
-      images={images}
-      setObjFitState={setObjFitState}
+      $height={height}
+      $width={width}
       className="lazyload"
-      isBackgroundImage={isBackgroundImage}
-      nonObjFitImage={nonObjFitImage}
-      objFitState={objFitState}
+      $isBackgroundImage={isBackgroundImage}
+      $nonObjFitImage={nonObjFitImage}
+      $objFitState={objFitState}
       {...rest}
     >
       <Image
         alt={alt}
         height={height}
         width={width}
-        objectFit={objectFit}
+        $objectFit={objectFit}
         src={image}
         srcSet={IMAGE_FALLBACK}
         data-src={image}
@@ -148,9 +143,9 @@ const Picture = ({
         data-sizes="auto"
         data-lowsrc={imageLow}
         className="lazyload"
-        objFitState={objFitState}
-        smallBreakpointRowLayout={smallBreakpointRowLayout}
-        mediumBreakpointRowLayout={mediumBreakpointRowLayout}
+        $objFitState={objFitState}
+        $smallBreakpointRowLayout={smallBreakpointRowLayout}
+        $mediumBreakpointRowLayout={mediumBreakpointRowLayout}
       />
     </Wrapper>
   );

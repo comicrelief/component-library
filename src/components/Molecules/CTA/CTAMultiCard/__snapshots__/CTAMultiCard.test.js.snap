@@ -43,14 +43,6 @@ exports[`handles data structure correctly 1`] = `
             >
               <div
                 className="Picture__Wrapper-sc-1x3z81z-0 hBrAKv lazyload"
-                height="100%"
-                image="@component-library/src/styleguide/assets/challenge-1.jpg"
-                images="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                isBackgroundImage={false}
-                nonObjFitImage="@component-library/src/styleguide/assets/challenge-1.jpg"
-                objFitState={true}
-                setObjFitState={[Function]}
-                width="100%"
               >
                 <img
                   alt=""
@@ -60,10 +52,6 @@ exports[`handles data structure correctly 1`] = `
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
                   height="100%"
-                  mediumBreakpointRowLayout={null}
-                  objFitState={true}
-                  objectFit="cover"
-                  smallBreakpointRowLayout={null}
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                   width="100%"
@@ -140,14 +128,6 @@ exports[`handles data structure correctly 1`] = `
             >
               <div
                 className="Picture__Wrapper-sc-1x3z81z-0 hBrAKv lazyload"
-                height="100%"
-                image="@component-library/src/styleguide/assets/challenge-1.jpg"
-                images="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                isBackgroundImage={false}
-                nonObjFitImage="@component-library/src/styleguide/assets/challenge-1.jpg"
-                objFitState={true}
-                setObjFitState={[Function]}
-                width="100%"
               >
                 <img
                   alt=""
@@ -157,10 +137,6 @@ exports[`handles data structure correctly 1`] = `
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
                   height="100%"
-                  mediumBreakpointRowLayout={null}
-                  objFitState={true}
-                  objectFit="cover"
-                  smallBreakpointRowLayout={null}
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                   width="100%"
@@ -211,14 +187,6 @@ exports[`handles data structure correctly 1`] = `
             >
               <div
                 className="Picture__Wrapper-sc-1x3z81z-0 hBrAKv lazyload"
-                height="100%"
-                image="@component-library/src/styleguide/assets/challenge-1.jpg"
-                images="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                isBackgroundImage={false}
-                nonObjFitImage="@component-library/src/styleguide/assets/challenge-1.jpg"
-                objFitState={true}
-                setObjFitState={[Function]}
-                width="100%"
               >
                 <img
                   alt=""
@@ -228,10 +196,6 @@ exports[`handles data structure correctly 1`] = `
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
                   height="100%"
-                  mediumBreakpointRowLayout={null}
-                  objFitState={true}
-                  objectFit="cover"
-                  smallBreakpointRowLayout={null}
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                   width="100%"
@@ -413,14 +377,6 @@ exports[`renders 2 columns layout correctly 1`] = `
             >
               <div
                 className="Picture__Wrapper-sc-1x3z81z-0 hBrAKv lazyload"
-                height="100%"
-                image="@component-library/src/styleguide/assets/challenge-1.jpg"
-                images="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                isBackgroundImage={false}
-                nonObjFitImage="@component-library/src/styleguide/assets/challenge-1.jpg"
-                objFitState={true}
-                setObjFitState={[Function]}
-                width="100%"
               >
                 <img
                   alt=""
@@ -430,10 +386,6 @@ exports[`renders 2 columns layout correctly 1`] = `
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
                   height="100%"
-                  mediumBreakpointRowLayout={null}
-                  objFitState={true}
-                  objectFit="cover"
-                  smallBreakpointRowLayout={null}
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                   width="100%"
@@ -510,14 +462,6 @@ exports[`renders 2 columns layout correctly 1`] = `
             >
               <div
                 className="Picture__Wrapper-sc-1x3z81z-0 hBrAKv lazyload"
-                height="100%"
-                image="@component-library/src/styleguide/assets/challenge-1.jpg"
-                images="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                isBackgroundImage={false}
-                nonObjFitImage="@component-library/src/styleguide/assets/challenge-1.jpg"
-                objFitState={true}
-                setObjFitState={[Function]}
-                width="100%"
               >
                 <img
                   alt=""
@@ -527,10 +471,6 @@ exports[`renders 2 columns layout correctly 1`] = `
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
                   height="100%"
-                  mediumBreakpointRowLayout={null}
-                  objFitState={true}
-                  objectFit="cover"
-                  smallBreakpointRowLayout={null}
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                   width="100%"
@@ -581,14 +521,6 @@ exports[`renders 2 columns layout correctly 1`] = `
             >
               <div
                 className="Picture__Wrapper-sc-1x3z81z-0 hBrAKv lazyload"
-                height="100%"
-                image="@component-library/src/styleguide/assets/challenge-1.jpg"
-                images="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                isBackgroundImage={false}
-                nonObjFitImage="@component-library/src/styleguide/assets/challenge-1.jpg"
-                objFitState={true}
-                setObjFitState={[Function]}
-                width="100%"
               >
                 <img
                   alt=""
@@ -598,10 +530,6 @@ exports[`renders 2 columns layout correctly 1`] = `
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
                   height="100%"
-                  mediumBreakpointRowLayout={null}
-                  objFitState={true}
-                  objectFit="cover"
-                  smallBreakpointRowLayout={null}
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                   width="100%"
@@ -783,14 +711,6 @@ exports[`renders carousel mode correctly 1`] = `
             >
               <div
                 className="Picture__Wrapper-sc-1x3z81z-0 hBrAKv lazyload"
-                height="100%"
-                image="@component-library/src/styleguide/assets/challenge-1.jpg"
-                images="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                isBackgroundImage={false}
-                nonObjFitImage="@component-library/src/styleguide/assets/challenge-1.jpg"
-                objFitState={true}
-                setObjFitState={[Function]}
-                width="100%"
               >
                 <img
                   alt=""
@@ -800,10 +720,6 @@ exports[`renders carousel mode correctly 1`] = `
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
                   height="100%"
-                  mediumBreakpointRowLayout={null}
-                  objFitState={true}
-                  objectFit="cover"
-                  smallBreakpointRowLayout={null}
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                   width="100%"
@@ -880,14 +796,6 @@ exports[`renders carousel mode correctly 1`] = `
             >
               <div
                 className="Picture__Wrapper-sc-1x3z81z-0 hBrAKv lazyload"
-                height="100%"
-                image="@component-library/src/styleguide/assets/challenge-1.jpg"
-                images="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                isBackgroundImage={false}
-                nonObjFitImage="@component-library/src/styleguide/assets/challenge-1.jpg"
-                objFitState={true}
-                setObjFitState={[Function]}
-                width="100%"
               >
                 <img
                   alt=""
@@ -897,10 +805,6 @@ exports[`renders carousel mode correctly 1`] = `
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
                   height="100%"
-                  mediumBreakpointRowLayout={null}
-                  objFitState={true}
-                  objectFit="cover"
-                  smallBreakpointRowLayout={null}
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                   width="100%"
@@ -951,14 +855,6 @@ exports[`renders carousel mode correctly 1`] = `
             >
               <div
                 className="Picture__Wrapper-sc-1x3z81z-0 hBrAKv lazyload"
-                height="100%"
-                image="@component-library/src/styleguide/assets/challenge-1.jpg"
-                images="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                isBackgroundImage={false}
-                nonObjFitImage="@component-library/src/styleguide/assets/challenge-1.jpg"
-                objFitState={true}
-                setObjFitState={[Function]}
-                width="100%"
               >
                 <img
                   alt=""
@@ -968,10 +864,6 @@ exports[`renders carousel mode correctly 1`] = `
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
                   height="100%"
-                  mediumBreakpointRowLayout={null}
-                  objFitState={true}
-                  objectFit="cover"
-                  smallBreakpointRowLayout={null}
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                   width="100%"
@@ -1153,14 +1045,6 @@ exports[`renders correctly with data prop 1`] = `
             >
               <div
                 className="Picture__Wrapper-sc-1x3z81z-0 hBrAKv lazyload"
-                height="100%"
-                image="@component-library/src/styleguide/assets/challenge-1.jpg"
-                images="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                isBackgroundImage={false}
-                nonObjFitImage="@component-library/src/styleguide/assets/challenge-1.jpg"
-                objFitState={true}
-                setObjFitState={[Function]}
-                width="100%"
               >
                 <img
                   alt=""
@@ -1170,10 +1054,6 @@ exports[`renders correctly with data prop 1`] = `
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
                   height="100%"
-                  mediumBreakpointRowLayout={null}
-                  objFitState={true}
-                  objectFit="cover"
-                  smallBreakpointRowLayout={null}
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                   width="100%"
@@ -1250,14 +1130,6 @@ exports[`renders correctly with data prop 1`] = `
             >
               <div
                 className="Picture__Wrapper-sc-1x3z81z-0 hBrAKv lazyload"
-                height="100%"
-                image="@component-library/src/styleguide/assets/challenge-1.jpg"
-                images="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                isBackgroundImage={false}
-                nonObjFitImage="@component-library/src/styleguide/assets/challenge-1.jpg"
-                objFitState={true}
-                setObjFitState={[Function]}
-                width="100%"
               >
                 <img
                   alt=""
@@ -1267,10 +1139,6 @@ exports[`renders correctly with data prop 1`] = `
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
                   height="100%"
-                  mediumBreakpointRowLayout={null}
-                  objFitState={true}
-                  objectFit="cover"
-                  smallBreakpointRowLayout={null}
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                   width="100%"
@@ -1321,14 +1189,6 @@ exports[`renders correctly with data prop 1`] = `
             >
               <div
                 className="Picture__Wrapper-sc-1x3z81z-0 hBrAKv lazyload"
-                height="100%"
-                image="@component-library/src/styleguide/assets/challenge-1.jpg"
-                images="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                isBackgroundImage={false}
-                nonObjFitImage="@component-library/src/styleguide/assets/challenge-1.jpg"
-                objFitState={true}
-                setObjFitState={[Function]}
-                width="100%"
               >
                 <img
                   alt=""
@@ -1338,10 +1198,6 @@ exports[`renders correctly with data prop 1`] = `
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
                   height="100%"
-                  mediumBreakpointRowLayout={null}
-                  objFitState={true}
-                  objectFit="cover"
-                  smallBreakpointRowLayout={null}
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                   width="100%"

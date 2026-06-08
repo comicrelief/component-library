@@ -258,14 +258,6 @@ exports[`renders Promo correctly 1`] = `
   >
     <div
       className="c2 lazyload"
-      height="100%"
-      image="mock.asset"
-      images="mock.asset"
-      isBackgroundImage={false}
-      nonObjFitImage="mock.asset"
-      objFitState={true}
-      setObjFitState={[Function]}
-      width="100%"
     >
       <img
         alt=""
@@ -275,10 +267,6 @@ exports[`renders Promo correctly 1`] = `
         data-src="mock.asset"
         data-srcset="mock.asset"
         height="100%"
-        mediumBreakpointRowLayout={null}
-        objFitState={true}
-        objectFit="cover"
-        smallBreakpointRowLayout={null}
         src="mock.asset"
         srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
         width="100%"
@@ -600,14 +588,6 @@ exports[`renders Promo correctly end position 1`] = `
   >
     <div
       className="c2 lazyload"
-      height="100%"
-      image="mock.asset"
-      images="mock.asset"
-      isBackgroundImage={false}
-      nonObjFitImage="mock.asset"
-      objFitState={true}
-      setObjFitState={[Function]}
-      width="100%"
     >
       <img
         alt=""
@@ -617,10 +597,6 @@ exports[`renders Promo correctly end position 1`] = `
         data-src="mock.asset"
         data-srcset="mock.asset"
         height="100%"
-        mediumBreakpointRowLayout={null}
-        objFitState={true}
-        objectFit="cover"
-        smallBreakpointRowLayout={null}
         src="mock.asset"
         srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
         width="100%"
