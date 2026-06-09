@@ -64,6 +64,7 @@ const OuterWrapper = styled.div`
     ${({ variant }) => (variant && css`
       ${handleVariant(variant)}
     `)}
+  }
 
   ${playPauseReveal}
 `;
