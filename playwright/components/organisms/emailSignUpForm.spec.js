@@ -91,18 +91,9 @@ test.describe('Email Signup Form component', () => {
     await expect(page.locator('label[for="email"]  div ~ span')).toContainText('Please enter a valid email address');
 
     // enter valid inputs should not show error messages
-    //
-    // EmailSignUpForm runs react-hook-form in mode: 'onBlur' (see EmailSignUpForm.js),
-    // so a field's validation - and therefore whether its error message clears - only
-    // re-runs once that field actually blurs. Each field above this point was left holding
-    // an invalid value with a visible error (e.g. first-name still had '1234567' from the
-    // numeric-input check at line 35-37). `.fill('')` + `.type(...)` only fires React's
-    // onChange handlers, not a blur, so the stale error would otherwise persist and
-    // react-hook-form's validity state wouldn't reflect the freshly-typed valid value.
-    // `.blur()` triggers a real native blur/focusout that bubbles up to where React's
-    // synthetic event system listens, so the registered `onBlur` handler runs and clears it.
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').fill('');
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').type('test firstname');
+    // .blur() triggers a blur/ click / focus outside.
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').blur();
 
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').fill('');
