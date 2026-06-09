@@ -30,6 +30,10 @@ const Button = styled.button`
   &:hover {
     color: inherit; // text was flashing white on focus on safari without this.
     outline: none;
+    > div {
+      animation-name: ${ChevronKeyframes};
+      animation-duration: 0.4s;
+    }
   }
 
   padding: ${spacing('l')};
@@ -97,7 +101,7 @@ const Accordion = ({
 
   return (
     <Container {...rest}>
-      <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'} ChevronKeyframes={ChevronKeyframes} type="button">
+      <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'} type="button">
         <StyledText tag={textTag} weight={weight}>
           {title}
         </StyledText>

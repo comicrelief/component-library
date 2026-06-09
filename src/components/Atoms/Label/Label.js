@@ -22,7 +22,7 @@ const LabelElement = styled.label`
   color: ${getLabelColor};
 
   ${({ optional, theme }) => optional === true && `
-  :after {
+  &:after {
     position: absolute;
     top: 0;
     right: 0;

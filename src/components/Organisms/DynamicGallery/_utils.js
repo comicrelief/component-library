@@ -1,5 +1,7 @@
 import React, { isValidElement } from 'react';
-import { defaultData } from '../../../styleguide/data/data';
+import { defaultData } from '../../../data/data';
+import tall from '../../../assets/tall.jpg';
+import wide from '../../../assets/wide.jpg';
 
 /**
  * mocking function to create nodes for the dynamic gallery
@@ -12,8 +14,8 @@ export default function createMockGalleryNodes(nodeCount = 10) {
     defaultData.promoImage,
     defaultData.heroBannerImage,
     defaultData.image,
-    'tall.jpg',
-    'wide.jpg'
+    tall,
+    wide
   ];
 
   const nodes = [];

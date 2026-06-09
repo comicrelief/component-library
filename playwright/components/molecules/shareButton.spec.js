@@ -6,12 +6,12 @@ test.describe('share button component', () => {
     await page.goto('/#sharebutton');
 
     // accordian elements should be visible
-    await expect(page.locator('[data-testid="ShareButton-example-0"]')).toBeVisible();
+    await expect(page.locator('[data-testid="ShareButton-example-1"]')).toBeVisible();
     await expect(page.locator('[data-preview="ShareButton"]')).toBeVisible();
 
-    await expect(page.locator('[data-preview="ShareButton"] > div > div > div:nth-child(1) > ul > li:nth-child(1) > a > img')).toBeVisible();
+    await expect(page.locator('[data-testid="ShareButton-example-1"] a[title="Share on Facebook"] img').first()).toBeVisible();
 
-    const facebookShareButton  = page.locator('[data-preview="ShareButton"] > div > div > div:nth-child(1) > ul > li:nth-child(1) > a');
+    const facebookShareButton  = page.locator('[data-testid="ShareButton-example-1"] a[title="Share on Facebook"]').first();
 
     // Get the 'title' attribute
     const placeholderAttribute = await facebookShareButton.getAttribute('title');
@@ -19,7 +19,7 @@ test.describe('share button component', () => {
     // Verify the 'title' attribute
     expect(placeholderAttribute).toBe('Share on Facebook');
 
-    const twitterShareButton  = page.locator('[data-preview="ShareButton"] > div > div > div:nth-child(1) > ul > li:nth-child(2) > a');
+    const twitterShareButton  = page.locator('[data-testid="ShareButton-example-1"] a[title="Share on Twitter"]').first();
 
     // Get the 'title' attribute
     const twiiterPlaceholderAttribute = await twitterShareButton.getAttribute('title');

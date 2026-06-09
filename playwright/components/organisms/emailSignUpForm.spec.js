@@ -93,12 +93,18 @@ test.describe('Email Signup Form component', () => {
     // enter valid inputs should not show error messages
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').fill('');
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').type('test firstname');
+    // .blur() triggers a blur/ click / focus outside.
+    await page.locator('[data-testid="EmailSignUpForm-example-1"] #first-name').blur();
 
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').fill('');
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').type('test lastname');
+    await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').blur();
 
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #email').fill(''); // clear the email field
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #email').type('email-signup@email.sls.comicrelief.com');
+    // Blur the final field too, so handleSubmit (EmailSignUpForm.js:24) sees a
+    // fully-validated, up-to-date form before we click submit.
+    await page.locator('[data-testid="EmailSignUpForm-example-1"] #email').blur();
 
     // submit the ESU form
     await page.locator('[data-testid="EmailSignUpForm-example-1"] button[type="submit"]').click();

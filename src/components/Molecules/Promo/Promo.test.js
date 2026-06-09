@@ -5,7 +5,7 @@ import Promo from './Promo';
 import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
-const defaultData = require('../../../styleguide/data/data').defaultData;
+const defaultData = require('../../../data/data').defaultData;
 it('renders Promo correctly', () => {
   const tree = renderWithTheme(
     <Promo

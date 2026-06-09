@@ -1,14 +1,22 @@
-Comic Relief React Component Library
+
+Comic Relief Components Library
 --------------
 
 [![GitHub Actions](https://github.com/comicrelief/component-library/actions/workflows/main.yml/badge.svg)](https://github.com/comicrelief/component-library/actions)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-React components to be shared across Comic Relief applications
+### Recent Rebuild Notes (June 2026):
+- No more markdown importing Javascript faff in example files, just simple React component examples.
+- Only exception is the code examples visible below each of the components - they are built using a Vite-specific import feature:
+```import buttonExampleSrc from '../components/Atoms/Button/ButtonExample.jsx?raw';```
+- Styled-Components 5 => Styled Components 6 - slight syntax change. Previously usage of nested selector / "&" usage in nested CSS was assumed. It now needs to be explicit (like normal native CSS).
+- Removed _TriggerConfetti.js file. I couldn't find any usage, was likely a private helper no longer needed.
 
-### Use
 
-CR-CL has a dependency of Styled-components.
+### General Usage
+#### Main Dependencies
+- Vite
+- Styled Components
 
 #### Install the package
 ```
@@ -35,7 +43,7 @@ $ yarn install
 
 To start the dev build and server:
 ```
-$ yarn styleguide
+$ yarn dev
 ```
 
 To test:

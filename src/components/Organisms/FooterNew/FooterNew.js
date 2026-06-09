@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import Logo from '../../Atoms/Logo/Logo';
+import Logo from '../../Atoms/Logos/Logo';
 import SocialIcons from '../../Atoms/SocialIcons/SocialIcons';
 import EmailSignUp from '../../Molecules/EmailSignUp/EmailSignUp';
 import PrimaryNav from './Nav/PrimaryNav';

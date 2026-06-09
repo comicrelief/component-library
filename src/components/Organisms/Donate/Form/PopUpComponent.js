@@ -65,9 +65,9 @@ const Button = styled.button`
   width: 30px;
   height: 30px;
   margin: 3px;
-  :active,
-  :focus,
-  :hover {
+  &:active,
+  &:focus,
+  &:hover {
     outline: none;
     border: 1px solid ${({ theme }) => theme.color('grey')};
   }

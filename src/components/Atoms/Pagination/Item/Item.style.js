@@ -44,7 +44,7 @@ const StyledItem = styled.a`
   }) => {
     if (!(selected || disabled)) {
       return css`
-        :hover {
+        &:hover {
           background: ${theme.color(backgroundColorOnHover)};
           color: ${theme.color(colorOnHover)};
         }

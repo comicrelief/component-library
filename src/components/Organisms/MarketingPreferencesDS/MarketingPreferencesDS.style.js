@@ -177,7 +177,7 @@ const CheckInput = styled.input`
     float: left;
     border-radius: 0.5rem;
   }
-  :checked + span {
+  &:checked + span {
     background: url(${checkBoxIcon}) no-repeat center ${({ theme }) => theme.color('white')};
     background-size: contain;
   }

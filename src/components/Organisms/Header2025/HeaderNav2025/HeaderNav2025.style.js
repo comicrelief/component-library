@@ -20,22 +20,22 @@ const NavLinkClass = styled(Link)`
   transition: color ${transitionDuration}s ease;
   text-decoration: none;
 
-  :hover,
-  :focus,
-  :focus-within {
+  &:hover,
+  &:focus,
+  &:focus-within {
     border: 0;
   }
 
   // No hover state for mobile, so targetting Medium+:
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    :hover,
-    :focus {
+    &:hover,
+    &:focus {
       color: ${({ theme }) => theme.color('red')};
       background-color: ${({ theme }) => theme.color('grey_extra_light')};
       font-weight: 700;
     }
 
-    :focus-within {
+    &:focus-within {
       // Reset the colour of a parent...
       background-color: ${({ theme }) => theme.color('white')};
 
@@ -210,9 +210,9 @@ const NavLink = styled(NavLinkClass)`
       padding: 10px 14px 10px 0;
     `)}
 
-    :hover,
-    :focus-within,
-    :focus {
+    &:hover,
+    &:focus-within,
+    &:focus {
       + ${SubNavMenu} {
       display: flex;
       opacity: 1;
@@ -250,9 +250,9 @@ const NavItem = styled.li`
       padding-bottom: 0;
     }
 
-    :hover,
-    :focus,
-    :focus-within {
+    &:hover,
+    &:focus,
+    &:focus-within {
       span {
         border-bottom: none;
         padding-bottom: 0;
@@ -265,9 +265,9 @@ const NavItem = styled.li`
     transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
   }
 
-  :hover,
-  :focus,
-  :focus-within {
+  &:hover,
+  &:focus,
+  &:focus-within {
     li {
       span {
         border-bottom: none;
@@ -294,19 +294,19 @@ const NavItem = styled.li`
     padding: 25px 0px;
     border-bottom: none;
 
-    :hover,
-    :focus,
-    :focus-within {
-      > ${SubNavMenu}, :focus-within > ${SubNavMenu} {
+    &:hover,
+    &:focus,
+    &:focus-within {
+      > ${SubNavMenu}, &:focus-within > ${SubNavMenu} {
         visibility: visible;
         opacity: 1;
         display: flex;
       }
     }
 
-    :hover,
-    :focus,
-    :focus-within {
+    &:hover,
+    &:focus,
+    &:focus-within {
       background-color: transparent;
       ${zIndex('high')};
 

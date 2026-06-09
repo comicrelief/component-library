@@ -2,7 +2,7 @@ import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import CardDs from './CardDs';
-import { defaultData }  from '../../../styleguide/data/data';import { Internal } from '../../Atoms/Icons/index';
+import { defaultData }  from '../../../data/data';import { Internal } from '../../Atoms/Icons/index';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(

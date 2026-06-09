@@ -5,9 +5,6 @@ exports[`renders coral_light variant with message containing a link 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -23,12 +20,12 @@ exports[`renders coral_light variant with message containing a link 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
+  color: #E52630;
 }
 
 .c4:hover,
 .c4:focus {
   color: #000000;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -36,16 +33,8 @@ exports[`renders coral_light variant with message containing a link 1`] = `
   background-color: #FFCECE;
   border-radius: 1rem;
   padding: 2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   text-align: center;
   gap: 1rem;
@@ -57,9 +46,6 @@ exports[`renders coral_light variant with message containing a link 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -71,9 +57,6 @@ exports[`renders coral_light variant with message containing a link 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -81,46 +64,45 @@ exports[`renders coral_light variant with message containing a link 1`] = `
 }
 
 .c3 a {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c1 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c2 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c3 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c3 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -142,10 +124,16 @@ exports[`renders coral_light variant with message containing a link 1`] = `
     You can only donate between £1.00 and £25,000.00 at a time. If you need help,
      
     <a
+      buttonType="primary"
       className="c4"
+      fullWidth={false}
+      home={false}
       href="/contact"
+      iconFirst={false}
+      mobileColour={null}
       target="_self"
       type="standard"
+      underline={true}
     >
       contact us
     </a>
@@ -159,9 +147,6 @@ exports[`renders default blue_light variant 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -176,16 +161,8 @@ exports[`renders default blue_light variant 1`] = `
   background-color: #BECCF9;
   border-radius: 1rem;
   padding: 2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   text-align: center;
   gap: 1rem;
@@ -197,9 +174,6 @@ exports[`renders default blue_light variant 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -211,9 +185,6 @@ exports[`renders default blue_light variant 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -221,46 +192,45 @@ exports[`renders default blue_light variant 1`] = `
 }
 
 .c3 a {
-  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c1 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c1 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c2 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c2 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c3 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c3 {
     font-size: 1.125rem;
     line-height: 1.375rem;
@@ -279,7 +249,7 @@ exports[`renders default blue_light variant 1`] = `
   <p
     className="c1 c3"
   >
-    If you are, please select the ‘Pay in Fundraising’ tab above. If not, please continue with your donation.
+    If you are, please select the 'Pay in Fundraising' tab above. If not, please continue with your donation.
   </p>
 </div>
 `;

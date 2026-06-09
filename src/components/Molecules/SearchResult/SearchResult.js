@@ -27,7 +27,7 @@ const Item = styled(Link)`
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: row;
   }
-  :hover {
+  &:hover {
     border: 0;
     font-weight: normal;
   }

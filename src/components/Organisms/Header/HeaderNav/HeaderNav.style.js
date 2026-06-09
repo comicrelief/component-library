@@ -18,9 +18,9 @@ const NavLinkClass = styled(Link)`
   color: ${({ theme }) => theme.color('black')};
   transition: color ${transitionDuration}s ease;
 
-  :hover,
-  :focus,
-  :focus-within {
+  &:hover,
+  &:focus,
+  &:focus-within {
     border: 0;
     color: ${({ theme }) => theme.color('red')};
     font-weight: inherit;
@@ -116,9 +116,9 @@ const SubNavItem = styled.li`
     font-weight: 100;
   }
 
-  :hover,
-  :focus,
-  :focus-within {
+  &:hover,
+  &:focus,
+  &:focus-within {
     background-color: ${({ theme }) => theme.color('grey_extra_light')};
     + span {
       border-bottom: 0;
@@ -168,9 +168,9 @@ const NavLink = styled(NavLinkClass)`
     padding: 10px 0;
     padding: 10px 15px 15px 0;
     height: auto;
-    :hover,
-    :focus-within,
-    :focus {
+    &:hover,
+    &:focus-within,
+    &:focus {
       + ${SubNavMenu} {
       display: flex;
       opacity: 1;
@@ -208,9 +208,9 @@ const NavItem = styled.li`
     transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
   }
 
-  :hover,
-  :focus,
-  :focus-within {
+  &:hover,
+  &:focus,
+  &:focus-within {
     li {
       span {
         border-bottom: none;

@@ -231,9 +231,9 @@ const Button = styled.button`
   border: none;
   ${defaultBoxShadow()}
   appearance: none;
-  :active,
-  :focus,
-  :hover {
+  &:active,
+  &:focus,
+  &:hover {
     outline: none;
     background-color: ${({ theme }) => theme.color('coral_dark')};
   }

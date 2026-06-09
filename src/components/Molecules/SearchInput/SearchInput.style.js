@@ -35,7 +35,7 @@ const SearchField = styled(Input)`
     border: 0;
     outline: ${({ theme }) => theme.color('red')};
     background: none;
-    :focus {
+    &:focus {
       border: 0;
     }
     @media ${({ theme }) => theme.allBreakpoints('M')} {
