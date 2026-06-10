@@ -255,7 +255,7 @@ const Signup = ({
           )}
           <FormFieldset>
             <Label size="s" weight="500" color="black">
-              Enter another amount
+              {otherAmountText}
             </Label>
             <AmountField
               $hideMoneyBuys={hideMoneyBuys}
@@ -313,12 +313,11 @@ Signup.propTypes = {
   cartID: PropTypes.string.isRequired,
   donateLink: PropTypes.string.isRequired,
   otherAmountText: PropTypes.string.isRequired,
+  monthlyOtherAmountText: PropTypes.string,
   mbshipID: PropTypes.string.isRequired,
   donateOrientation: PropTypes.oneOf(['left', 'right']),
   hideMoneyBuys: PropTypes.bool,
   data: PropTypes.objectOf(PropTypes.shape),
-  chooseAmountText: PropTypes.string,
-  monthlyChooseAmountText: PropTypes.string,
   submitButtonColor: PropTypes.string,
   changeGivingType: PropTypes.func.isRequired,
   givingType: PropTypes.string,

@@ -31,8 +31,6 @@ const DonateBanner = ({
   subtitle = '',
   monthlyTitle = '',
   monthlySubtitle = '',
-  chooseAmountText = null,
-  monthlyChooseAmountText = null,
   otherAmountText = 'will help us fund amazing projects in the UK and around the world.',
   monthlyOtherAmountText = '',
   hideMoneyBuys = false,
@@ -141,14 +139,12 @@ const DonateBanner = ({
 
           <Form
             data={data}
-            otherAmountText={thisOtherAmountText}
             cartID={cartID}
             clientID={clientID}
             mbshipID={mbshipID}
             donateLink={donateLink}
             hideMoneyBuys={hideMoneyBuys}
-            chooseAmountText={chooseAmountText}
-            monthlyChooseAmountText={monthlyChooseAmountText}
+            otherAmountText={thisOtherAmountText}
             donateWidgetIsTextOnly={donateWidgetIsTextOnly}
             hasTopImage={shouldRenderTopImage}
             shouldShowTitleSection={shouldShowTitleSection}
@@ -178,8 +174,6 @@ DonateBanner.propTypes = {
   subtitle: PropTypes.string,
   monthlyTitle: PropTypes.string,
   monthlySubtitle: PropTypes.string,
-  chooseAmountText: PropTypes.string,
-  monthlyChooseAmountText: PropTypes.string,
   otherAmountText: PropTypes.string,
   monthlyOtherAmountText: PropTypes.string,
   hideMoneyBuys: PropTypes.bool,

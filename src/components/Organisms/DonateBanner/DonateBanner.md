@@ -43,7 +43,7 @@ const imageS = {
 />;
 ```
 
-## Image banner (widget left), monthly title/subtitle + choose amount text overrides, hidden moneybuys
+## Image banner (widget left), monthly title/subtitle + amount text overrides, hidden moneybuys
 
 ```js
 import data from './dev-data/data';
@@ -85,8 +85,8 @@ const imageS = {
   subtitle="Your support can help people facing the toughest times."
   monthlyTitle="Give monthly"
   monthlySubtitle="A regular gift helps fund long-term impact."
-  chooseAmountText="Choose a one-off amount"
-  monthlyChooseAmountText="Choose a monthly amount"
+  otherAmountText="Choose a one-off amount"
+  monthlyOtherAmountText="Choose a monthly amount"
   hideMoneyBuys
 />;
 ```
@@ -111,7 +111,7 @@ import data from './dev-data/data-single';
   cartID="default-comicrelief"
   title="Donate now"
   subtitle="Make a difference today."
-  chooseAmountText="Enter an amount to give"
+  otherAmountText ="Enter an amount to give"
   hideMoneyBuys
 />;
 ```
