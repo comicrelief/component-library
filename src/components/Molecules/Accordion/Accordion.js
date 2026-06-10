@@ -66,9 +66,6 @@ const Copy = styled.div`
   visibility: none;
   transition: all 0.2s cubic-bezier(0, 0, 0.25, 0.82);
   padding: 0 ${spacing('l')};
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: 0 ${spacing('lg')};
-  }
 
   ${({ isOpen, contentBottomPadding }) => (isOpen && css`
     height: auto;
