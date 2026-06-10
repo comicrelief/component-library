@@ -313,7 +313,6 @@ Signup.propTypes = {
   cartID: PropTypes.string.isRequired,
   donateLink: PropTypes.string.isRequired,
   otherAmountText: PropTypes.string.isRequired,
-  monthlyOtherAmountText: PropTypes.string,
   mbshipID: PropTypes.string.isRequired,
   donateOrientation: PropTypes.oneOf(['left', 'right']),
   hideMoneyBuys: PropTypes.bool,
