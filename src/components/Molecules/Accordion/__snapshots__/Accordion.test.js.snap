@@ -186,12 +186,6 @@ exports[`renders correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
-  .c8 {
-    padding: 0 3rem;
-  }
-}
-
 <div
   className="c0"
 >
