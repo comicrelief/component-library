@@ -6,6 +6,8 @@ import InstallationDoc from '../docs/InstallationDoc.jsx';
 import UtilsDoc from '../docs/UtilsDoc.jsx';
 
 // Atom examples
+import ArrowExample from '../components/Atoms/Icons/ArrowExample.jsx';
+import arrowExampleSrc from '../components/Atoms/Icons/ArrowExample.jsx?raw';
 import IconsExample from '../components/Atoms/Icons/IconsExample.jsx';
 import iconsExampleSrc from '../components/Atoms/Icons/IconsExample.jsx?raw';
 import ButtonExample from '../components/Atoms/Button/ButtonExample.jsx';
@@ -149,6 +151,7 @@ const demo = (Component, src) => (
 
 export const atoms = [
   { name: 'AmbientVideo', demo: demo(AmbientVideoExample, ambientVideoExampleSrc) },
+  { name: 'Arrow', demo: demo(ArrowExample, arrowExampleSrc) },
   { name: 'Button', demo: demo(ButtonExample, buttonExampleSrc) },
   { name: 'ButtonWithStates', demo: demo(ButtonWithStatesExample, buttonWithStatesExampleSrc) },
   { name: 'Checkbox', demo: demo(CheckboxExample, checkboxExampleSrc) },
