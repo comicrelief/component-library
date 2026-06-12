@@ -98,6 +98,7 @@ test.describe('Email Signup Form component', () => {
 
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').fill('');
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').type('test lastname');
+    // .blur() triggers a blur/ click / focus outside.
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #last-name').blur();
 
     await page.locator('[data-testid="EmailSignUpForm-example-1"] #email').fill(''); // clear the email field
