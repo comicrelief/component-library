@@ -1,5 +1,5 @@
 
-Comic Relief Components Library
+Comic Relief Component Library
 --------------
 
 [![GitHub Actions](https://github.com/comicrelief/component-library/actions/workflows/main.yml/badge.svg)](https://github.com/comicrelief/component-library/actions)
