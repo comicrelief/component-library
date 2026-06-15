@@ -95,27 +95,10 @@ it('renders article teaser correctly', () => {
   text-decoration: none;
 }
 
-.c20 {
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-}
-
-.c22 {
-  height: 2rem;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  content: "";
-}
-
-.c18 {
-  position: relative;
+.c26 {
+  display: inline-block;
+  color: #FFFFFF;
+  fill: currentColor;
 }
 
 .c25 {
@@ -137,6 +120,29 @@ it('renders article teaser correctly', () => {
   justify-content: center;
   flex-shrink: 0;
   overflow: hidden;
+}
+
+.c20 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+}
+
+.c22 {
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  content: "";
+}
+
+.c18 {
+  position: relative;
 }
 
 .c8 {
@@ -226,12 +232,6 @@ it('renders article teaser correctly', () => {
 .c12 {
   display: block;
   margin-bottom: 1rem;
-}
-
-.c26 {
-  display: inline-block;
-  color: #FFFFFF;
-  fill: currentColor;
 }
 
 @media (min-width: 740px) {
@@ -557,27 +557,10 @@ it('renders press realese correctly', () => {
   text-decoration: none;
 }
 
-.c20 {
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-}
-
-.c22 {
-  height: 2rem;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  content: "";
-}
-
-.c18 {
-  position: relative;
+.c26 {
+  display: inline-block;
+  color: #FFFFFF;
+  fill: currentColor;
 }
 
 .c25 {
@@ -599,6 +582,29 @@ it('renders press realese correctly', () => {
   justify-content: center;
   flex-shrink: 0;
   overflow: hidden;
+}
+
+.c20 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+}
+
+.c22 {
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  content: "";
+}
+
+.c18 {
+  position: relative;
 }
 
 .c8 {
@@ -690,12 +696,6 @@ it('renders press realese correctly', () => {
 .c12 {
   display: block;
   margin-bottom: 1rem;
-}
-
-.c26 {
-  display: inline-block;
-  color: #FFFFFF;
-  fill: currentColor;
 }
 
 @media (min-width: 740px) {
