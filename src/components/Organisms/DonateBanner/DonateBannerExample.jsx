@@ -81,8 +81,8 @@ export default function DonateBannerExample() {
         subtitle="Your support can help people facing the toughest times."
         monthlyTitle="Give monthly"
         monthlySubtitle="A regular gift helps fund long-term impact."
-        chooseAmountText="Choose a one-off amount"
-        monthlyChooseAmountText="Choose a monthly amount"
+        otherAmountText="Choose a one-off amount"
+        monthlyOtherAmountText="Choose a monthly amount"
         hideMoneyBuys
       />
 
@@ -102,7 +102,7 @@ export default function DonateBannerExample() {
         cartID="default-comicrelief"
         title="Donate now"
         subtitle="Make a difference today."
-        chooseAmountText="Enter an amount to give"
+        otherAmountText="Enter an amount to give"
         hideMoneyBuys
       />
 
