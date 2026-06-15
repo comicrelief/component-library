@@ -139,7 +139,6 @@ const DonateBanner = ({
 
           <Form
             data={data}
-            otherAmountText={thisOtherAmountText}
             cartID={cartID}
             clientID={clientID}
             mbshipID={mbshipID}
