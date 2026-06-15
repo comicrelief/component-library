@@ -144,6 +144,7 @@ const DonateBanner = ({
             mbshipID={mbshipID}
             donateLink={donateLink}
             hideMoneyBuys={hideMoneyBuys}
+            otherAmountText={thisOtherAmountText}
             donateWidgetIsTextOnly={donateWidgetIsTextOnly}
             hasTopImage={shouldRenderTopImage}
             shouldShowTitleSection={shouldShowTitleSection}
