@@ -63,7 +63,7 @@ export default function DonateBannerExample() {
         subtitle="Please help us fund life-changing projects in the UK and around the world."
       />
 
-      <h3>Image banner (widget left), monthly title/subtitle + choose amount text overrides, hidden moneybuys</h3>
+      <h3>Image banner (widget left), monthly title/subtitle + amount text overrides, hidden moneybuys</h3>
       <DonateBanner
         pageBackgroundColour="grey_light"
         paddingAbove="2rem"

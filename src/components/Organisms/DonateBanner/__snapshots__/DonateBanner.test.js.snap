@@ -638,7 +638,7 @@ exports[`Monthly donation renders correctly 1`] = `
               <span
                 className="c16 c17"
               >
-                Enter another amount
+                will help us fund amazing projects in the UK and around the world.
               </span>
               <label
                 className="c18 c19"
@@ -670,14 +670,12 @@ exports[`Monthly donation renders correctly 1`] = `
                   >
                     <input
                       aria-required={false}
-                      chooseAmountText={null}
                       className="c24"
                       error={false}
                       id="mbship-1--MoneyBuy-userInput"
                       inputBorderColor={false}
                       max="25000"
                       min="1"
-                      monthlyChooseAmountText={null}
                       name="membership_amount"
                       onChange={[Function]}
                       pattern="^[0-9]+([,.][0-9]{0,2})?$"
@@ -1422,7 +1420,7 @@ exports[`Single donation renders correctly 1`] = `
               <span
                 className="c19 c20"
               >
-                Enter another amount
+                will help us fund amazing projects in the UK and around the world.
               </span>
               <label
                 className="c11 c21"
@@ -1454,14 +1452,12 @@ exports[`Single donation renders correctly 1`] = `
                   >
                     <input
                       aria-required={false}
-                      chooseAmountText={null}
                       className="c23"
                       error={false}
                       id="mbship-1--MoneyBuy-userInput"
                       inputBorderColor={false}
                       max="25000"
                       min="1"
-                      monthlyChooseAmountText={null}
                       name="membership_amount"
                       onChange={[Function]}
                       pattern="^[0-9]+([,.][0-9]{0,2})?$"
@@ -1947,7 +1943,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
               <span
                 className="c11 c12"
               >
-                Enter another amount
+                will help us fund amazing projects in the UK and around the world.
               </span>
               <label
                 className="c13 c14"
@@ -1979,14 +1975,12 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                   >
                     <input
                       aria-required={false}
-                      chooseAmountText="Overridden choose amount text"
                       className="c19"
                       error={false}
                       id="mbship-1--MoneyBuy-userInput"
                       inputBorderColor={false}
                       max="25000"
                       min="1"
-                      monthlyChooseAmountText={null}
                       name="membership_amount"
                       onChange={[Function]}
                       pattern="^[0-9]+([,.][0-9]{0,2})?$"
@@ -2738,7 +2732,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
               <span
                 className="c18 c19"
               >
-                Enter another amount
+                will help us fund amazing projects in the UK and around the world.
               </span>
               <label
                 className="c20 c21"
@@ -2770,14 +2764,12 @@ exports[`Text-only donate widget renders correctly 1`] = `
                   >
                     <input
                       aria-required={false}
-                      chooseAmountText="Enter an amount to give"
                       className="c26"
                       error={false}
                       id="mbship-4--MoneyBuy-userInput"
                       inputBorderColor={false}
                       max="25000"
                       min="1"
-                      monthlyChooseAmountText={null}
                       name="membership_amount"
                       onChange={[Function]}
                       pattern="^[0-9]+([,.][0-9]{0,2})?$"
