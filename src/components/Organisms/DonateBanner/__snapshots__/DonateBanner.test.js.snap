@@ -637,9 +637,7 @@ exports[`Monthly donation renders correctly 1`] = `
             >
               <span
                 className="c16 c17"
-              >
-                will help us fund amazing projects in the UK and around the world.
-              </span>
+              />
               <label
                 className="c18 c19"
                 errorMsg=""
@@ -1419,9 +1417,7 @@ exports[`Single donation renders correctly 1`] = `
             >
               <span
                 className="c19 c20"
-              >
-                will help us fund amazing projects in the UK and around the world.
-              </span>
+              />
               <label
                 className="c11 c21"
                 errorMsg=""
@@ -1942,9 +1938,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
             >
               <span
                 className="c11 c12"
-              >
-                will help us fund amazing projects in the UK and around the world.
-              </span>
+              />
               <label
                 className="c13 c14"
                 errorMsg=""
@@ -2731,9 +2725,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
             >
               <span
                 className="c18 c19"
-              >
-                will help us fund amazing projects in the UK and around the world.
-              </span>
+              />
               <label
                 className="c20 c21"
                 errorMsg=""
