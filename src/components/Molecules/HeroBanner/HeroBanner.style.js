@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import variants from './_variants';
 import { bounceUpAnimation, playPauseReveal } from '../../../theme/shared/animations';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
+import { ArrowIconWrapper, ArrowIconInner } from '../shared/ctaArrow/CtaArrowCircle.style';
 import Picture from '../../Atoms/Picture/Picture';
 
 // Lil helper function to streamline things somewhat:
@@ -231,6 +232,14 @@ const HeroBannerLink = styled.a`
     &:hover {
       img.cta-text-underline {
         opacity: 1;
+      }
+    }
+  }
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    &:hover {
+      ${ArrowIconWrapper} ${ArrowIconInner} {
+        transform: scale(1.2);
       }
     }
   }
