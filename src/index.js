@@ -34,6 +34,7 @@ export { default as Confetti } from './components/Atoms/Confetti/Confetti';
 export { default as AmbientVideo } from './components/Atoms/AmbientVideo/AmbientVideo';
 export { default as External } from './components/Atoms/Icons/External';
 export { default as Internal } from './components/Atoms/Icons/Internal';
+export { default as Icon } from './components/Atoms/SocialIcons/Icon/Icon';
 
 /* Molecules */
 export { default as InfoBanner } from './components/Molecules/InfoBanner/InfoBanner';
@@ -44,19 +45,12 @@ export { default as CTAMultiCard } from './components/Molecules/CTA/CTAMultiCard
 export { default as CTASingleCard } from './components/Molecules/CTA/CTASingleCard/CTASingleCard';
 export { default as Box } from './components/Molecules/Box/Box';
 export { default as ArticleTeaser } from './components/Molecules/ArticleTeaser/ArticleTeaser';
-export { default as Header } from './components/Organisms/Header/Header';
-export { default as Header2025 } from './components/Organisms/Header2025/Header2025';
-export { default as Donate } from './components/Organisms/Donate/Donate';
-export { default as DonateBanner } from './components/Organisms/DonateBanner/DonateBanner';
 export { default as DoubleCopy } from './components/Molecules/DoubleCopy/DoubleCopy';
 export { default as PartnerLink } from './components/Molecules/PartnerLink/PartnerLink';
-export { default as Footer } from './components/Organisms/Footer/Footer';
-export { default as FooterNew } from './components/Organisms/FooterNew/FooterNew';
 export { default as SearchResult } from './components/Molecules/SearchResult/SearchResult';
 export { default as SearchInput } from './components/Molecules/SearchInput/SearchInput';
 export { default as ShareButton } from './components/Molecules/ShareButton/ShareButton';
 export { default as VideoBanner } from './components/Molecules/VideoBanner/VideoBanner';
-export { default as Icon } from './components/Atoms/SocialIcons/Icon/Icon';
 export { default as Typeahead } from './components/Molecules/Typeahead/Typeahead';
 export { default as SchoolLookup } from './components/Molecules/SchoolLookup/SchoolLookup';
 export { default as SingleMessageDs } from './components/Molecules/SingleMessageDS/SingleMessageDs';
@@ -83,6 +77,12 @@ export {
 export { default as CookieBanner } from './components/Organisms/CookieBanner/CookieBanner';
 export { default as EmailBanner } from './components/Organisms/EmailBanner/EmailBanner';
 export { default as Membership } from './components/Organisms/Membership/Membership';
+export { default as Header } from './components/Organisms/Header/Header';
+export { default as Header2025 } from './components/Organisms/Header2025/Header2025';
+export { default as Donate } from './components/Organisms/Donate/Donate';
+export { default as DonateBanner } from './components/Organisms/DonateBanner/DonateBanner';
+export { default as Footer } from './components/Organisms/Footer/Footer';
+export { default as FooterNew } from './components/Organisms/FooterNew/FooterNew';
 export {
   MarketingPreferencesDS,
   setInitialValues,
