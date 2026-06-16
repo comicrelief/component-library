@@ -94,8 +94,16 @@ const Promo = ({
       </Media>
 
       <Wrapper $copyLeft={copyLeft}>
-        <Gradient $hasVideo={hasVideo} $behindTextGradient={behindTextGradient} $copyLeft={copyLeft}>
-          <Copy $position={position} $hasVideo={hasVideo} $behindTextGradient={behindTextGradient}>
+        <Gradient
+          $hasVideo={hasVideo}
+          $behindTextGradient={behindTextGradient}
+          $copyLeft={copyLeft}
+        >
+          <Copy
+            $position={position}
+            $hasVideo={hasVideo}
+            $behindTextGradient={behindTextGradient}
+          >
             {children}
           </Copy>
         </Gradient>

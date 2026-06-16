@@ -9,8 +9,7 @@ const PromoVideoButton = ({
   videoProgress,
   isPlaying,
   blackPlayButton,
-  isRestarting,
-  behindTextGradient // consumed to prevent DOM forwarding
+  isRestarting
 }) => (
   <PlayButtonWrapper className="weewee">
     <PlayButton
@@ -38,8 +37,7 @@ PromoVideoButton.propTypes = {
   videoProgress: PropTypes.number,
   isPlaying: PropTypes.bool,
   blackPlayButton: PropTypes.bool,
-  isRestarting: PropTypes.bool,
-  behindTextGradient: PropTypes.string
+  isRestarting: PropTypes.bool
 };
 
 export default PromoVideoButton;
