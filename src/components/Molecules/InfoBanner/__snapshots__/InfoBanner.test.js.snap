@@ -151,16 +151,10 @@ exports[`renders correctly 1`] = `
       className="c3"
     >
       <a
-        buttonType="primary"
         className="c4"
-        fullWidth={false}
-        home={false}
         href="cr.com"
-        iconFirst={false}
-        mobileColour={null}
         target="_self"
         type="standard"
-        underline={true}
       >
         Be happy
       </a>

@@ -635,9 +635,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
           >
             <label
               className="c18 c19"
-              errorMsg=""
               htmlFor="mship-4--MoneyBuy-userInput"
-              optional={null}
             >
               <span
                 className="c20 c21"
@@ -649,17 +647,14 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
               />
               <div
                 className="c22"
-                error={false}
               >
                 <div
                   className="c23"
-                  error={false}
                 >
                   <input
                     aria-label="Input a different amount"
                     aria-required={false}
                     className="c24"
-                    error={false}
                     id="mship-4--MoneyBuy-userInput"
                     inputBorderColor={false}
                     max="25000"
@@ -668,7 +663,6 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
                     onChange={[Function]}
                     pattern="[^[0-9]+([,.][0-9]+)?$]"
                     placeholder="0.00"
-                    prefixLength={0}
                     required={false}
                     step="0.01"
                     type="string"
@@ -1351,9 +1345,7 @@ exports[`Monthly donation renders correctly 1`] = `
             </span>
             <label
               className="c19 c20"
-              errorMsg=""
               htmlFor="mship-1--MoneyBuy-userInput"
-              optional={null}
             >
               <span
                 className="c21 c22"
@@ -1365,17 +1357,14 @@ exports[`Monthly donation renders correctly 1`] = `
               />
               <div
                 className="c23"
-                error={false}
               >
                 <div
                   className="c24"
-                  error={false}
                 >
                   <input
                     aria-label="Input a different amount"
                     aria-required={false}
                     className="c25"
-                    error={false}
                     id="mship-1--MoneyBuy-userInput"
                     inputBorderColor={false}
                     max="25000"
@@ -1384,7 +1373,6 @@ exports[`Monthly donation renders correctly 1`] = `
                     onChange={[Function]}
                     pattern="[^[0-9]+([,.][0-9]+)?$]"
                     placeholder="0.00"
-                    prefixLength={0}
                     required={false}
                     step="0.01"
                     type="string"
@@ -2034,9 +2022,7 @@ exports[`Single donation renders correctly 1`] = `
           >
             <label
               className="c12 c13"
-              errorMsg=""
               htmlFor="mship-1--moneyBuy-box1"
-              optional={null}
             >
               <span
                 className="c14 c15"
@@ -2048,23 +2034,19 @@ exports[`Single donation renders correctly 1`] = `
               />
               <div
                 className="c16"
-                error={false}
               >
                 <div
                   className="c17"
-                  error={false}
                 >
                   <input
                     aria-label="£10"
                     aria-required={false}
                     className="c18"
-                    error={false}
                     id="mship-1--moneyBuy-box1"
                     isSelected={false}
                     name="mship-1--moneyBuy1"
                     onClick={[Function]}
                     placeholder=""
-                    prefixLength={0}
                     required={false}
                     type="button"
                     value="£ 10"
@@ -2074,9 +2056,7 @@ exports[`Single donation renders correctly 1`] = `
             </label>
             <label
               className="c12 c19"
-              errorMsg=""
               htmlFor="mship-1--moneyBuy-box2"
-              optional={null}
             >
               <span
                 className="c14 c15"
@@ -2088,23 +2068,19 @@ exports[`Single donation renders correctly 1`] = `
               />
               <div
                 className="c16"
-                error={false}
               >
                 <div
                   className="c17"
-                  error={false}
                 >
                   <input
                     aria-label="£20"
                     aria-required={false}
                     className="c18"
-                    error={false}
                     id="mship-1--moneyBuy-box2"
                     isSelected={true}
                     name="mship-1--moneyBuy2"
                     onClick={[Function]}
                     placeholder=""
-                    prefixLength={0}
                     required={false}
                     type="button"
                     value="£ 20"
@@ -2114,9 +2090,7 @@ exports[`Single donation renders correctly 1`] = `
             </label>
             <label
               className="c12 c13"
-              errorMsg=""
               htmlFor="mship-1--moneyBuy-box3"
-              optional={null}
             >
               <span
                 className="c14 c15"
@@ -2128,23 +2102,19 @@ exports[`Single donation renders correctly 1`] = `
               />
               <div
                 className="c16"
-                error={false}
               >
                 <div
                   className="c17"
-                  error={false}
                 >
                   <input
                     aria-label="£30"
                     aria-required={false}
                     className="c18"
-                    error={false}
                     id="mship-1--moneyBuy-box3"
                     isSelected={false}
                     name="mship-1--moneyBuy3"
                     onClick={[Function]}
                     placeholder=""
-                    prefixLength={0}
                     required={false}
                     type="button"
                     value="£ 30"
@@ -2163,9 +2133,7 @@ exports[`Single donation renders correctly 1`] = `
             </span>
             <label
               className="c12 c23"
-              errorMsg=""
               htmlFor="mship-1--MoneyBuy-userInput"
-              optional={null}
             >
               <span
                 className="c14 c15"
@@ -2177,17 +2145,14 @@ exports[`Single donation renders correctly 1`] = `
               />
               <div
                 className="c16"
-                error={false}
               >
                 <div
                   className="c17"
-                  error={false}
                 >
                   <input
                     aria-label="Input a different amount"
                     aria-required={false}
                     className="c18"
-                    error={false}
                     id="mship-1--MoneyBuy-userInput"
                     inputBorderColor={false}
                     max="25000"
@@ -2196,7 +2161,6 @@ exports[`Single donation renders correctly 1`] = `
                     onChange={[Function]}
                     pattern="[^[0-9]+([,.][0-9]+)?$]"
                     placeholder="0.00"
-                    prefixLength={0}
                     required={false}
                     step="0.01"
                     type="string"
@@ -2707,9 +2671,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
           >
             <label
               className="c12 c13"
-              errorMsg=""
               htmlFor="mship-1--MoneyBuy-userInput"
-              optional={null}
             >
               <span
                 className="c14 c15"
@@ -2721,17 +2683,14 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
               />
               <div
                 className="c16"
-                error={false}
               >
                 <div
                   className="c17"
-                  error={false}
                 >
                   <input
                     aria-label="Input a different amount"
                     aria-required={false}
                     className="c18"
-                    error={false}
                     id="mship-1--MoneyBuy-userInput"
                     inputBorderColor={false}
                     max="25000"
@@ -2740,7 +2699,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                     onChange={[Function]}
                     pattern="[^[0-9]+([,.][0-9]+)?$]"
                     placeholder="0.00"
-                    prefixLength={0}
                     required={false}
                     step="0.01"
                     type="string"

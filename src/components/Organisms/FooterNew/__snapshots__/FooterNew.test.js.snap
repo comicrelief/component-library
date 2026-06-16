@@ -854,23 +854,14 @@ exports[`does not render copyright text when not supplied 1`] = `
       >
         <a
           animateRotate={true}
-          buttonType="primary"
           className="c3 c4"
-          fullWidth={false}
-          home={false}
           href="/"
-          iconFirst={false}
-          mobileColour={null}
           target="_self"
           title="Go to Comic Relief homepage"
           type="standard"
-          underline={true}
         >
           <div
             className="c5"
-            rotate={0}
-            sizeMd="72px"
-            sizeSm="59px"
           >
             <img
               alt="Comic Relief logo"
@@ -914,9 +905,7 @@ exports[`does not render copyright text when not supplied 1`] = `
                   >
                     <label
                       className="c15 c16"
-                      errorMsg=""
                       htmlFor="email-signup"
-                      optional={true}
                     >
                       <span
                         className="c17 c18"
@@ -928,22 +917,18 @@ exports[`does not render copyright text when not supplied 1`] = `
                       />
                       <div
                         className="c19"
-                        error={false}
                       >
                         <div
                           className="c20"
-                          error={false}
                         >
                           <input
                             aria-required={false}
                             className="c21"
-                            error={false}
                             id="email-signup"
                             name="email"
                             onBlur={[Function]}
                             onChange={[Function]}
                             placeholder="Enter your email address"
-                            prefixLength={0}
                             required={false}
                             type="email"
                           />
@@ -955,10 +940,7 @@ exports[`does not render copyright text when not supplied 1`] = `
                     className="c22"
                   >
                     <button
-                      buttonType="primary"
                       className="c23 c24"
-                      color="white"
-                      fullWidth={false}
                       type="submit"
                     >
                       <span
@@ -975,10 +957,7 @@ exports[`does not render copyright text when not supplied 1`] = `
                         >
                           <svg
                             className="c25"
-                            colour="white"
-                            direction="right"
                             height={18}
-                            mobileColour={null}
                             viewBox="0 0 15 15"
                             width={18}
                             xmlns="http://www.w3.org/2000/svg"
@@ -1000,18 +979,14 @@ exports[`does not render copyright text when not supplied 1`] = `
           >
             <ul
               className="c27"
-              newStyle={true}
             >
               <li
                 className="c28"
-                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-facebook"
                   href="https://www.facebook.com/comicrelief"
-                  isHeader={false}
-                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our Facebook page"
@@ -1019,21 +994,17 @@ exports[`does not render copyright text when not supplied 1`] = `
                   <img
                     alt="facebook"
                     className="c31"
-                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
                 className="c28"
-                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-instagram"
                   href="https://www.instagram.com/comicrelief"
-                  isHeader={false}
-                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our Instagram account"
@@ -1041,21 +1012,17 @@ exports[`does not render copyright text when not supplied 1`] = `
                   <img
                     alt="instagram"
                     className="c31"
-                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
                 className="c28"
-                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-x"
                   href="https://x.com/comicrelief"
-                  isHeader={false}
-                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our X account"
@@ -1063,21 +1030,17 @@ exports[`does not render copyright text when not supplied 1`] = `
                   <img
                     alt="x"
                     className="c31"
-                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
                 className="c28"
-                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-tiktok"
                   href="https://www.tiktok.com/@comicrelief"
-                  isHeader={false}
-                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our TikTok account"
@@ -1085,21 +1048,17 @@ exports[`does not render copyright text when not supplied 1`] = `
                   <img
                     alt="tiktok"
                     className="c31"
-                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
                 className="c28"
-                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-youtube"
                   href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
-                  isHeader={false}
-                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our YouTube channel"
@@ -1107,7 +1066,6 @@ exports[`does not render copyright text when not supplied 1`] = `
                   <img
                     alt="youtube"
                     className="c31"
-                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
@@ -1120,23 +1078,14 @@ exports[`does not render copyright text when not supplied 1`] = `
         >
           <a
             animateRotate={true}
-            buttonType="primary"
             className="c3 c4"
-            fullWidth={false}
-            home={false}
             href="/"
-            iconFirst={false}
-            mobileColour={null}
             target="_self"
             title="Go to Comic Relief homepage"
             type="standard"
-            underline={true}
           >
             <div
               className="c33"
-              rotate={0}
-              sizeMd="59px"
-              sizeSm="59px"
             >
               <img
                 alt="Comic Relief logo"
@@ -1151,23 +1100,14 @@ exports[`does not render copyright text when not supplied 1`] = `
         >
           <a
             animateRotate={true}
-            buttonType="primary"
             className="c3 c4"
-            fullWidth={false}
-            home={false}
             href="/"
-            iconFirst={false}
-            mobileColour={null}
             target="_self"
             title="Go to Comic Relief homepage"
             type="standard"
-            underline={true}
           >
             <div
               className="c33"
-              rotate={0}
-              sizeMd="59px"
-              sizeSm="59px"
             >
               <img
                 alt="Comic Relief logo"
@@ -1187,16 +1127,10 @@ exports[`does not render copyright text when not supplied 1`] = `
           className="c36"
         >
           <a
-            buttonType="primary"
             className="c3 c37"
-            fullWidth={false}
-            home={false}
             href="/contact-us"
-            iconFirst={false}
-            mobileColour={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <span
               className="c17 c38"
@@ -1209,16 +1143,10 @@ exports[`does not render copyright text when not supplied 1`] = `
           className="c36"
         >
           <a
-            buttonType="primary"
             className="c3 c37"
-            fullWidth={false}
-            home={false}
             href="https://www.comicrelief.com/frequently-asked-questions"
-            iconFirst={false}
-            mobileColour={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <span
               className="c17 c38"
@@ -1233,18 +1161,14 @@ exports[`does not render copyright text when not supplied 1`] = `
       >
         <ul
           className="c27"
-          newStyle={true}
         >
           <li
             className="c28"
-            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-facebook"
               href="https://www.facebook.com/comicrelief"
-              isHeader={false}
-              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our Facebook page"
@@ -1252,21 +1176,17 @@ exports[`does not render copyright text when not supplied 1`] = `
               <img
                 alt="facebook"
                 className="c31"
-                invertColor={true}
                 src="mock.asset"
               />
             </a>
           </li>
           <li
             className="c28"
-            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-instagram"
               href="https://www.instagram.com/comicrelief"
-              isHeader={false}
-              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our Instagram account"
@@ -1274,21 +1194,17 @@ exports[`does not render copyright text when not supplied 1`] = `
               <img
                 alt="instagram"
                 className="c31"
-                invertColor={true}
                 src="mock.asset"
               />
             </a>
           </li>
           <li
             className="c28"
-            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-x"
               href="https://x.com/comicrelief"
-              isHeader={false}
-              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our X account"
@@ -1296,21 +1212,17 @@ exports[`does not render copyright text when not supplied 1`] = `
               <img
                 alt="x"
                 className="c31"
-                invertColor={true}
                 src="mock.asset"
               />
             </a>
           </li>
           <li
             className="c28"
-            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-tiktok"
               href="https://www.tiktok.com/@comicrelief"
-              isHeader={false}
-              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our TikTok account"
@@ -1318,21 +1230,17 @@ exports[`does not render copyright text when not supplied 1`] = `
               <img
                 alt="tiktok"
                 className="c31"
-                invertColor={true}
                 src="mock.asset"
               />
             </a>
           </li>
           <li
             className="c28"
-            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-youtube"
               href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
-              isHeader={false}
-              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our YouTube channel"
@@ -1340,7 +1248,6 @@ exports[`does not render copyright text when not supplied 1`] = `
               <img
                 alt="youtube"
                 className="c31"
-                invertColor={true}
                 src="mock.asset"
               />
             </a>
@@ -1356,16 +1263,10 @@ exports[`does not render copyright text when not supplied 1`] = `
           className="c41"
         >
           <a
-            buttonType="primary"
             className="c3 c42"
-            fullWidth={false}
-            home={false}
             href="https://www.comicrelief.com/terms-of-use"
-            iconFirst={false}
-            mobileColour={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <span
               className="c17 c43"
@@ -1378,16 +1279,10 @@ exports[`does not render copyright text when not supplied 1`] = `
           className="c41"
         >
           <a
-            buttonType="primary"
             className="c3 c42"
-            fullWidth={false}
-            home={false}
             href="https://www.comicrelief.com/privacy-notice"
-            iconFirst={false}
-            mobileColour={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <span
               className="c17 c43"
@@ -2268,23 +2163,14 @@ exports[`renders correctly 1`] = `
       >
         <a
           animateRotate={true}
-          buttonType="primary"
           className="c3 c4"
-          fullWidth={false}
-          home={false}
           href="/"
-          iconFirst={false}
-          mobileColour={null}
           target="_self"
           title="Go to Comic Relief homepage"
           type="standard"
-          underline={true}
         >
           <div
             className="c5"
-            rotate={0}
-            sizeMd="72px"
-            sizeSm="59px"
           >
             <img
               alt="Comic Relief logo"
@@ -2328,9 +2214,7 @@ exports[`renders correctly 1`] = `
                   >
                     <label
                       className="c15 c16"
-                      errorMsg=""
                       htmlFor="email-signup"
-                      optional={true}
                     >
                       <span
                         className="c17 c18"
@@ -2342,22 +2226,18 @@ exports[`renders correctly 1`] = `
                       />
                       <div
                         className="c19"
-                        error={false}
                       >
                         <div
                           className="c20"
-                          error={false}
                         >
                           <input
                             aria-required={false}
                             className="c21"
-                            error={false}
                             id="email-signup"
                             name="email"
                             onBlur={[Function]}
                             onChange={[Function]}
                             placeholder="Enter your email address"
-                            prefixLength={0}
                             required={false}
                             type="email"
                           />
@@ -2369,10 +2249,7 @@ exports[`renders correctly 1`] = `
                     className="c22"
                   >
                     <button
-                      buttonType="primary"
                       className="c23 c24"
-                      color="white"
-                      fullWidth={false}
                       type="submit"
                     >
                       <span
@@ -2389,10 +2266,7 @@ exports[`renders correctly 1`] = `
                         >
                           <svg
                             className="c25"
-                            colour="white"
-                            direction="right"
                             height={18}
-                            mobileColour={null}
                             viewBox="0 0 15 15"
                             width={18}
                             xmlns="http://www.w3.org/2000/svg"
@@ -2414,18 +2288,14 @@ exports[`renders correctly 1`] = `
           >
             <ul
               className="c27"
-              newStyle={true}
             >
               <li
                 className="c28"
-                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-facebook"
                   href="https://www.facebook.com/comicrelief"
-                  isHeader={false}
-                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our Facebook page"
@@ -2433,21 +2303,17 @@ exports[`renders correctly 1`] = `
                   <img
                     alt="facebook"
                     className="c31"
-                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
                 className="c28"
-                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-instagram"
                   href="https://www.instagram.com/comicrelief"
-                  isHeader={false}
-                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our Instagram account"
@@ -2455,21 +2321,17 @@ exports[`renders correctly 1`] = `
                   <img
                     alt="instagram"
                     className="c31"
-                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
                 className="c28"
-                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-x"
                   href="https://x.com/comicrelief"
-                  isHeader={false}
-                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our X account"
@@ -2477,21 +2339,17 @@ exports[`renders correctly 1`] = `
                   <img
                     alt="x"
                     className="c31"
-                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
                 className="c28"
-                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-tiktok"
                   href="https://www.tiktok.com/@comicrelief"
-                  isHeader={false}
-                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our TikTok account"
@@ -2499,21 +2357,17 @@ exports[`renders correctly 1`] = `
                   <img
                     alt="tiktok"
                     className="c31"
-                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
                 className="c28"
-                newStyle={true}
               >
                 <a
                   className="c29 c30"
                   data-test="icon-youtube"
                   href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
-                  isHeader={false}
-                  newStyle={true}
                   rel="noopener noreferrer"
                   target="_blank"
                   title="Check out our YouTube channel"
@@ -2521,7 +2375,6 @@ exports[`renders correctly 1`] = `
                   <img
                     alt="youtube"
                     className="c31"
-                    invertColor={true}
                     src="mock.asset"
                   />
                 </a>
@@ -2534,23 +2387,14 @@ exports[`renders correctly 1`] = `
         >
           <a
             animateRotate={true}
-            buttonType="primary"
             className="c3 c4"
-            fullWidth={false}
-            home={false}
             href="/"
-            iconFirst={false}
-            mobileColour={null}
             target="_self"
             title="Go to Comic Relief homepage"
             type="standard"
-            underline={true}
           >
             <div
               className="c33"
-              rotate={0}
-              sizeMd="59px"
-              sizeSm="59px"
             >
               <img
                 alt="Comic Relief logo"
@@ -2565,23 +2409,14 @@ exports[`renders correctly 1`] = `
         >
           <a
             animateRotate={true}
-            buttonType="primary"
             className="c3 c4"
-            fullWidth={false}
-            home={false}
             href="/"
-            iconFirst={false}
-            mobileColour={null}
             target="_self"
             title="Go to Comic Relief homepage"
             type="standard"
-            underline={true}
           >
             <div
               className="c33"
-              rotate={0}
-              sizeMd="59px"
-              sizeSm="59px"
             >
               <img
                 alt="Comic Relief logo"
@@ -2601,16 +2436,10 @@ exports[`renders correctly 1`] = `
           className="c36"
         >
           <a
-            buttonType="primary"
             className="c3 c37"
-            fullWidth={false}
-            home={false}
             href="/contact-us"
-            iconFirst={false}
-            mobileColour={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <span
               className="c17 c38"
@@ -2623,16 +2452,10 @@ exports[`renders correctly 1`] = `
           className="c36"
         >
           <a
-            buttonType="primary"
             className="c3 c37"
-            fullWidth={false}
-            home={false}
             href="https://www.comicrelief.com/frequently-asked-questions"
-            iconFirst={false}
-            mobileColour={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <span
               className="c17 c38"
@@ -2647,18 +2470,14 @@ exports[`renders correctly 1`] = `
       >
         <ul
           className="c27"
-          newStyle={true}
         >
           <li
             className="c28"
-            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-facebook"
               href="https://www.facebook.com/comicrelief"
-              isHeader={false}
-              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our Facebook page"
@@ -2666,21 +2485,17 @@ exports[`renders correctly 1`] = `
               <img
                 alt="facebook"
                 className="c31"
-                invertColor={true}
                 src="mock.asset"
               />
             </a>
           </li>
           <li
             className="c28"
-            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-instagram"
               href="https://www.instagram.com/comicrelief"
-              isHeader={false}
-              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our Instagram account"
@@ -2688,21 +2503,17 @@ exports[`renders correctly 1`] = `
               <img
                 alt="instagram"
                 className="c31"
-                invertColor={true}
                 src="mock.asset"
               />
             </a>
           </li>
           <li
             className="c28"
-            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-x"
               href="https://x.com/comicrelief"
-              isHeader={false}
-              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our X account"
@@ -2710,21 +2521,17 @@ exports[`renders correctly 1`] = `
               <img
                 alt="x"
                 className="c31"
-                invertColor={true}
                 src="mock.asset"
               />
             </a>
           </li>
           <li
             className="c28"
-            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-tiktok"
               href="https://www.tiktok.com/@comicrelief"
-              isHeader={false}
-              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our TikTok account"
@@ -2732,21 +2539,17 @@ exports[`renders correctly 1`] = `
               <img
                 alt="tiktok"
                 className="c31"
-                invertColor={true}
                 src="mock.asset"
               />
             </a>
           </li>
           <li
             className="c28"
-            newStyle={true}
           >
             <a
               className="c29 c30"
               data-test="icon-youtube"
               href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
-              isHeader={false}
-              newStyle={true}
               rel="noopener noreferrer"
               target="_blank"
               title="Check out our YouTube channel"
@@ -2754,7 +2557,6 @@ exports[`renders correctly 1`] = `
               <img
                 alt="youtube"
                 className="c31"
-                invertColor={true}
                 src="mock.asset"
               />
             </a>
@@ -2770,16 +2572,10 @@ exports[`renders correctly 1`] = `
           className="c41"
         >
           <a
-            buttonType="primary"
             className="c3 c42"
-            fullWidth={false}
-            home={false}
             href="https://www.comicrelief.com/terms-of-use"
-            iconFirst={false}
-            mobileColour={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <span
               className="c17 c43"
@@ -2792,16 +2588,10 @@ exports[`renders correctly 1`] = `
           className="c41"
         >
           <a
-            buttonType="primary"
             className="c3 c42"
-            fullWidth={false}
-            home={false}
             href="https://www.comicrelief.com/privacy-notice"
-            iconFirst={false}
-            mobileColour={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <span
               className="c17 c43"

@@ -183,16 +183,10 @@ it('renders correctly', () => {
   >
     Hello! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about
     <a
-      buttonType="primary"
       className="c3 c4"
-      fullWidth={false}
-      home={false}
       href="https://www.comicrelief.com/cookies-policy"
-      iconFirst={false}
-      mobileColour={null}
       target="_self"
       type="standard_white"
-      underline={true}
     >
       our use of cookies
     </a>
@@ -202,33 +196,21 @@ it('renders correctly', () => {
     className="c1 c2"
   >
     <a
-      buttonType="primary"
       className="c5 c6"
-      fullWidth={false}
-      home={false}
       href="/comic"
-      iconFirst={false}
-      mobileColour={null}
       onClick={[Function]}
       target="_self"
       type="button"
-      underline={true}
     >
       Accept
     </a>
     Or click
     <a
-      buttonType="primary"
       className="c3 c4"
-      fullWidth={false}
-      home={false}
       href=""
-      iconFirst={false}
-      mobileColour={null}
       onClick={[Function]}
       target="_self"
       type="standard_white"
-      underline={true}
     >
       here
     </a>

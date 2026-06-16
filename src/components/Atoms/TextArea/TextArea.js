@@ -6,7 +6,7 @@ import spacing from '../../../theme/shared/spacing';
 import Label from '../Label/Label';
 import ErrorText from '../ErrorText/ErrorText';
 
-const StyledTextArea = styled.textarea`${({ theme, error }) => css`
+const StyledTextArea = styled.textarea`${({ theme, $error }) => css`
   box-sizing: border-box;
   width: 100%;
   margin: 0;
@@ -15,7 +15,7 @@ const StyledTextArea = styled.textarea`${({ theme, error }) => css`
   background-color: ${theme.color('grey_light')};
   border: 1px solid;
   border-radius: 0.5rem;
-  border-color: ${error ? theme.color('red') : theme.color('grey_medium')};
+  border-color: ${$error ? theme.color('red') : theme.color('grey_medium')};
   box-shadow: none;
   appearance: none;
   color: ${theme.color('black')};
@@ -45,7 +45,7 @@ const TextArea = React.forwardRef(({
       {...rest}
       placeholder={placeholder}
       rows={rows}
-      error={!!errorMsg}
+      $error={!!errorMsg}
       id={id}
       aria-describedby={id}
       ref={ref}

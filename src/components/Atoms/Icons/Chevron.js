@@ -10,14 +10,14 @@ const angle = {
 };
 
 const Icon = styled.svg`
-  transform: ${({ direction }) => `rotate(${angle[direction]})`};
+  transform: ${({ $direction }) => `rotate(${angle[$direction]})`};
 
   // Mobile-colour if available, else use standard prop
-  fill: ${({ mobileColour, colour, theme }) => (mobileColour ? theme.color(mobileColour) : theme.color(colour))};
+  fill: ${({ $mobileColour, $colour, theme }) => ($mobileColour ? theme.color($mobileColour) : theme.color($colour))};
 
   // Reinstate standard styles for 'desktop', adding a fallback for good measure:
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    fill: ${({ colour, theme }) => (colour ? theme.color(colour) : theme.color('white'))};
+    fill: ${({ $colour, theme }) => ($colour ? theme.color($colour) : theme.color('white'))};
   }
 `;
 
@@ -25,12 +25,12 @@ const Chevron = ({
   colour = 'white', mobileColour = null, theme, size = 24, direction = 'up', ...rest
 }) => (
   <Icon
-    direction={direction}
+    $direction={direction}
     width={size}
     height={size}
     fill={theme.color(colour)}
-    colour={colour}
-    mobileColour={mobileColour}
+    $colour={colour}
+    $mobileColour={mobileColour}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 48 48"
     {...rest}

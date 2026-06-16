@@ -7,39 +7,36 @@ it('renders correctly', () => {
   const tree = renderWithTheme(<Logo rotate />).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-    .c1 {
-      object-fit: cover;
-      width: 100%;
-      display: block;
-      height: auto;
-      margin-right: 1rem;
-    }
+.c1 {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  height: auto;
+  margin-right: 1rem;
+}
 
-    .c0 {
-      display: inline-block;
-      z-index: 3;
-      width: 51px;
-      transform: rotate(-14deg);
-      vertical-align: bottom;
-    }
+.c0 {
+  display: inline-block;
+  z-index: 3;
+  width: 51px;
+  transform: rotate(-14deg);
+  vertical-align: bottom;
+}
 
-    @media (min-width: 1150px) {
-      .c0 {
-        width: 70px;
-      }
-    }
+@media (min-width: 1150px) {
+  .c0 {
+    width: 70px;
+  }
+}
 
-    <div
-      className="c0"
-      rotate={1}
-      sizeMd="70px"
-      sizeSm="51px"
-    >
-      <img
-        alt="Comic Relief logo"
-        className="c1"
-        src="mock.asset"
-      />
-    </div>
-  `);
+<div
+  className="c0"
+>
+  <img
+    alt="Comic Relief logo"
+    className="c1"
+    src="mock.asset"
+  />
+</div>
+`);
 });

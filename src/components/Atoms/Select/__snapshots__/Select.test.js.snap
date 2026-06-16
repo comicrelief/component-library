@@ -95,8 +95,6 @@ exports[`renders correctly 1`] = `
 
 <label
   className="c0"
-  errorMsg=""
-  optional={false}
 >
   <span
     className="c1 c2"
@@ -110,10 +108,6 @@ exports[`renders correctly 1`] = `
     aria-required={true}
     className="c3"
     defaultValue=""
-    error=""
-    greyDescription={false}
-    hasValue={false}
-    hideArrow={false}
     onChange={[Function]}
     required={true}
   >

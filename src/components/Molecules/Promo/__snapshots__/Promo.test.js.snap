@@ -301,16 +301,10 @@ exports[`renders Promo correctly 1`] = `
         </p>
         <span>
           <a
-            buttonType="primary"
             className="c9"
-            fullWidth={false}
-            home={false}
             href="/"
-            iconFirst={false}
-            mobileColour={null}
             target="_self"
             type="button"
-            underline={true}
           >
             Show me this
           </a>
@@ -631,16 +625,10 @@ exports[`renders Promo correctly end position 1`] = `
         </p>
         <span>
           <a
-            buttonType="primary"
             className="c9"
-            fullWidth={false}
-            home={false}
             href="/"
-            iconFirst={false}
-            mobileColour={null}
             target="_self"
             type="button"
-            underline={true}
           >
             Show me this
           </a>

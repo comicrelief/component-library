@@ -21,29 +21,29 @@ const InputFieldContainer = styled.div`
   position: relative;
   width: 100%;
   display: flex;
-  ${({ error }) => error && 'flex-direction: row;'};
+  ${({ $error }) => $error && 'flex-direction: row;'};
   justify-content: flex-end;
   align-items: center;
-  ${({ maxPxWidthMediumBreakpoint, maxPxWidthLargeBreakpoint, theme }) => css`
+  ${({ $maxPxWidthMediumBreakpoint, $maxPxWidthLargeBreakpoint, theme }) => css`
     @media ${theme.allBreakpoints('M')} {
-      ${maxPxWidthMediumBreakpoint && `max-width: ${maxPxWidthMediumBreakpoint}px;`}
+      ${$maxPxWidthMediumBreakpoint && `max-width: ${$maxPxWidthMediumBreakpoint}px;`}
     }
     @media ${theme.allBreakpoints('L')} {
-      ${maxPxWidthLargeBreakpoint && `max-width: ${maxPxWidthLargeBreakpoint}px;`}
+      ${$maxPxWidthLargeBreakpoint && `max-width: ${$maxPxWidthLargeBreakpoint}px;`}
     }
   `}
 `;
 
-const InputField = styled.input`${({ theme, error, prefixLength }) => css`
+const InputField = styled.input`${({ theme, $error, $prefixLength }) => css`
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 48px;
   padding: 1rem;
-  ${prefixLength > 0 ? `padding-left: ${getPrefixWidth(prefixLength)};` : ''}
+  ${$prefixLength > 0 ? `padding-left: ${getPrefixWidth($prefixLength)};` : ''}
   background-color: ${theme.color('grey_light')};
   border: 1px solid;
-  border-color: ${error ? theme.color('red') : theme.color('grey')};
+  border-color: ${$error ? theme.color('red') : theme.color('grey')};
   box-shadow: none;
   appearance: none;
   color: ${theme.color('black')};
@@ -74,7 +74,7 @@ const Prefix = styled.div`
   ${zIndex('high')}
   display: flex;
   height: 100%;
-  width: ${({ length }) => getPrefixWidth(length)};
+  width: ${({ $length }) => getPrefixWidth($length)};
   justify-content: center;
   align-items: center;
   color: ${({ theme }) => theme.color('grey_dark')};
@@ -125,20 +125,20 @@ const Input = React.forwardRef(
         {description}
       </DescriptionWrapper>
       )}
-      <InputWrapper error={Boolean(errorMsg)}>
-        {prefix && <Prefix length={prefix.length}>{prefix}</Prefix>}
+      <InputWrapper>
+        {prefix && <Prefix $length={prefix.length}>{prefix}</Prefix>}
         <InputFieldContainer
-          maxPxWidthMediumBreakpoint={maxPxWidthMediumBreakpoint}
-          maxPxWidthLargeBreakpoint={maxPxWidthLargeBreakpoint}
-          error={Boolean(errorMsg)}
+          $maxPxWidthMediumBreakpoint={maxPxWidthMediumBreakpoint}
+          $maxPxWidthLargeBreakpoint={maxPxWidthLargeBreakpoint}
+          $error={Boolean(errorMsg)}
         >
           <InputField
             id={id}
             type={type}
             placeholder={placeholder}
-            error={Boolean(errorMsg)}
+            $error={Boolean(errorMsg)}
             ref={ref}
-            prefixLength={prefix.length}
+            $prefixLength={prefix.length}
             required={optional === false}
             aria-required={optional === false}
             aria-describedby={description ? `${id}-description` : undefined}

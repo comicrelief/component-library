@@ -642,9 +642,7 @@ exports[`Monthly donation renders correctly 1`] = `
               </span>
               <label
                 className="c18 c19"
-                errorMsg=""
                 htmlFor="mbship-1--MoneyBuy-userInput"
-                optional={null}
               >
                 <span
                   className="c7 c20"
@@ -656,22 +654,18 @@ exports[`Monthly donation renders correctly 1`] = `
                 />
                 <div
                   className="c21"
-                  error={false}
                 >
                   <div
                     className="c22"
-                    length={1}
                   >
                     £
                   </div>
                   <div
                     className="c23"
-                    error={false}
                   >
                     <input
                       aria-required={false}
                       className="c24"
-                      error={false}
                       id="mbship-1--MoneyBuy-userInput"
                       inputBorderColor={false}
                       max="25000"
@@ -680,7 +674,6 @@ exports[`Monthly donation renders correctly 1`] = `
                       onChange={[Function]}
                       pattern="^[0-9]+([,.][0-9]{0,2})?$"
                       placeholder="0.00"
-                      prefixLength={1}
                       required={false}
                       step="0.01"
                       type="string"
@@ -1298,9 +1291,7 @@ exports[`Single donation renders correctly 1`] = `
             >
               <label
                 className="c11 c12"
-                errorMsg=""
                 htmlFor="mbship-1--moneyBuy-box1"
-                optional={null}
               >
                 <span
                   className="c7 c13"
@@ -1312,22 +1303,18 @@ exports[`Single donation renders correctly 1`] = `
                 />
                 <div
                   className="c14"
-                  error={false}
                 >
                   <div
                     className="c15"
-                    error={false}
                   >
                     <input
                       aria-required={false}
                       className="c16"
-                      error={false}
                       id="mbship-1--moneyBuy-box1"
                       isSelected={false}
                       name="mbship-1--moneyBuy1"
                       onClick={[Function]}
                       placeholder=""
-                      prefixLength={0}
                       required={false}
                       type="button"
                       value="£ 10"
@@ -1337,9 +1324,7 @@ exports[`Single donation renders correctly 1`] = `
               </label>
               <label
                 className="c11 c17"
-                errorMsg=""
                 htmlFor="mbship-1--moneyBuy-box2"
-                optional={null}
               >
                 <span
                   className="c7 c13"
@@ -1351,22 +1336,18 @@ exports[`Single donation renders correctly 1`] = `
                 />
                 <div
                   className="c14"
-                  error={false}
                 >
                   <div
                     className="c15"
-                    error={false}
                   >
                     <input
                       aria-required={false}
                       className="c16"
-                      error={false}
                       id="mbship-1--moneyBuy-box2"
                       isSelected={true}
                       name="mbship-1--moneyBuy2"
                       onClick={[Function]}
                       placeholder=""
-                      prefixLength={0}
                       required={false}
                       type="button"
                       value="£ 20"
@@ -1376,9 +1357,7 @@ exports[`Single donation renders correctly 1`] = `
               </label>
               <label
                 className="c11 c12"
-                errorMsg=""
                 htmlFor="mbship-1--moneyBuy-box3"
-                optional={null}
               >
                 <span
                   className="c7 c13"
@@ -1390,22 +1369,18 @@ exports[`Single donation renders correctly 1`] = `
                 />
                 <div
                   className="c14"
-                  error={false}
                 >
                   <div
                     className="c15"
-                    error={false}
                   >
                     <input
                       aria-required={false}
                       className="c16"
-                      error={false}
                       id="mbship-1--moneyBuy-box3"
                       isSelected={false}
                       name="mbship-1--moneyBuy3"
                       onClick={[Function]}
                       placeholder=""
-                      prefixLength={0}
                       required={false}
                       type="button"
                       value="£ 30"
@@ -1424,9 +1399,7 @@ exports[`Single donation renders correctly 1`] = `
               </span>
               <label
                 className="c11 c21"
-                errorMsg=""
                 htmlFor="mbship-1--MoneyBuy-userInput"
-                optional={null}
               >
                 <span
                   className="c7 c13"
@@ -1438,22 +1411,18 @@ exports[`Single donation renders correctly 1`] = `
                 />
                 <div
                   className="c14"
-                  error={false}
                 >
                   <div
                     className="c22"
-                    length={1}
                   >
                     £
                   </div>
                   <div
                     className="c15"
-                    error={false}
                   >
                     <input
                       aria-required={false}
                       className="c23"
-                      error={false}
                       id="mbship-1--MoneyBuy-userInput"
                       inputBorderColor={false}
                       max="25000"
@@ -1462,7 +1431,6 @@ exports[`Single donation renders correctly 1`] = `
                       onChange={[Function]}
                       pattern="^[0-9]+([,.][0-9]{0,2})?$"
                       placeholder="0.00"
-                      prefixLength={1}
                       required={false}
                       step="0.01"
                       type="string"
@@ -1947,9 +1915,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
               </span>
               <label
                 className="c13 c14"
-                errorMsg=""
                 htmlFor="mbship-1--MoneyBuy-userInput"
-                optional={null}
               >
                 <span
                   className="c7 c15"
@@ -1961,22 +1927,18 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                 />
                 <div
                   className="c16"
-                  error={false}
                 >
                   <div
                     className="c17"
-                    length={1}
                   >
                     £
                   </div>
                   <div
                     className="c18"
-                    error={false}
                   >
                     <input
                       aria-required={false}
                       className="c19"
-                      error={false}
                       id="mbship-1--MoneyBuy-userInput"
                       inputBorderColor={false}
                       max="25000"
@@ -1985,7 +1947,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                       onChange={[Function]}
                       pattern="^[0-9]+([,.][0-9]{0,2})?$"
                       placeholder="0.00"
-                      prefixLength={1}
                       required={false}
                       step="0.01"
                       type="string"
@@ -2736,9 +2697,7 @@ exports[`Text-only donate widget renders correctly 1`] = `
               </span>
               <label
                 className="c20 c21"
-                errorMsg=""
                 htmlFor="mbship-4--MoneyBuy-userInput"
-                optional={null}
               >
                 <span
                   className="c9 c22"
@@ -2750,22 +2709,18 @@ exports[`Text-only donate widget renders correctly 1`] = `
                 />
                 <div
                   className="c23"
-                  error={false}
                 >
                   <div
                     className="c24"
-                    length={1}
                   >
                     £
                   </div>
                   <div
                     className="c25"
-                    error={false}
                   >
                     <input
                       aria-required={false}
                       className="c26"
-                      error={false}
                       id="mbship-4--MoneyBuy-userInput"
                       inputBorderColor={false}
                       max="25000"
@@ -2774,7 +2729,6 @@ exports[`Text-only donate widget renders correctly 1`] = `
                       onChange={[Function]}
                       pattern="^[0-9]+([,.][0-9]{0,2})?$"
                       placeholder="0.00"
-                      prefixLength={1}
                       required={false}
                       step="0.01"
                       type="string"

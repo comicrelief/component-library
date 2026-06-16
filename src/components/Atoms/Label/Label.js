@@ -7,8 +7,8 @@ import spacing from '../../../theme/shared/spacing';
 import hideVisually from '../../../theme/shared/hideVisually';
 import fontHelper from '../../../theme/crTheme/fontHelper';
 
-const getLabelColor = ({ theme, errorMsg }) => {
-  if (errorMsg) {
+const getLabelColor = ({ theme, $errorMsg }) => {
+  if ($errorMsg) {
     return theme.color('red');
   }
   return theme.color('black');
@@ -21,7 +21,7 @@ const LabelElement = styled.label`
   flex-direction: column;
   color: ${getLabelColor};
 
-  ${({ optional, theme }) => optional === true && `
+  ${({ $optional, theme }) => $optional === true && `
   &:after {
     position: absolute;
     top: 0;
@@ -69,8 +69,8 @@ const Label = ({
   ...rest
 }) => (
   <LabelElement
-    optional={optional}
-    errorMsg={errorMsg}
+    $optional={optional}
+    $errorMsg={errorMsg}
     {...rest}
   >
     <LabelText
@@ -93,8 +93,8 @@ Label.propTypes = {
 };
 
 LabelElement.propTypes = {
-  optional: PropTypes.bool,
-  errorMsg: PropTypes.string
+  $optional: PropTypes.bool,
+  $errorMsg: PropTypes.string
 };
 
 LabelText.propTypes = {

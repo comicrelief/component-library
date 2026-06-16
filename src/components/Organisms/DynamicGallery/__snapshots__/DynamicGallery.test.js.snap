@@ -522,10 +522,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
             </span>
             <svg
               className="c18"
-              colour="black"
-              direction="left"
               height={16}
-              mobileColour={null}
               viewBox="0 0 15 15"
               width={16}
               xmlns="http://www.w3.org/2000/svg"
@@ -547,10 +544,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
             </span>
             <svg
               className="c20"
-              colour="black"
-              direction="right"
               height={16}
-              mobileColour={null}
               viewBox="0 0 15 15"
               width={16}
               xmlns="http://www.w3.org/2000/svg"
@@ -940,10 +934,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
             </span>
             <svg
               className="c12"
-              colour="black"
-              direction="left"
               height={16}
-              mobileColour={null}
               viewBox="0 0 15 15"
               width={16}
               xmlns="http://www.w3.org/2000/svg"
@@ -965,10 +956,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
             </span>
             <svg
               className="c14"
-              colour="black"
-              direction="right"
               height={16}
-              mobileColour={null}
               viewBox="0 0 15 15"
               width={16}
               xmlns="http://www.w3.org/2000/svg"

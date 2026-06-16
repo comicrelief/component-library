@@ -125,9 +125,7 @@ exports[`renders correctly with no value and no options 1`] = `
 >
   <label
     className="c1 TextInputWithDropdown__input"
-    errorMsg=""
     htmlFor="text-input-with-dropdown"
-    optional={null}
   >
     <span
       className="c2 c3"
@@ -139,22 +137,18 @@ exports[`renders correctly with no value and no options 1`] = `
     />
     <div
       className="c4"
-      error={false}
     >
       <div
         className="c5"
-        error={false}
       >
         <input
           aria-required={false}
           autoComplete="off"
           className="c6"
-          error={false}
           id="text-input-with-dropdown"
           name="query"
           onChange={[Function]}
           placeholder=""
-          prefixLength={0}
           required={false}
           type="text"
           value=""
@@ -290,9 +284,7 @@ exports[`renders correctly with value and no options 1`] = `
 >
   <label
     className="c1 TextInputWithDropdown__input"
-    errorMsg=""
     htmlFor="text-input-with-dropdown"
-    optional={null}
   >
     <span
       className="c2 c3"
@@ -304,22 +296,18 @@ exports[`renders correctly with value and no options 1`] = `
     />
     <div
       className="c4"
-      error={false}
     >
       <div
         className="c5"
-        error={false}
       >
         <input
           aria-required={false}
           autoComplete="off"
           className="c6"
-          error={false}
           id="text-input-with-dropdown"
           name="query"
           onChange={[Function]}
           placeholder=""
-          prefixLength={0}
           required={false}
           type="text"
           value="bikes"
@@ -494,9 +482,7 @@ exports[`renders correctly with value and options 1`] = `
 >
   <label
     className="c1 TextInputWithDropdown__input"
-    errorMsg=""
     htmlFor="text-input-with-dropdown"
-    optional={null}
   >
     <span
       className="c2 c3"
@@ -508,22 +494,18 @@ exports[`renders correctly with value and options 1`] = `
     />
     <div
       className="c4"
-      error={false}
     >
       <div
         className="c5"
-        error={false}
       >
         <input
           aria-required={false}
           autoComplete="off"
           className="c6"
-          error={false}
           id="text-input-with-dropdown"
           name="query"
           onChange={[Function]}
           placeholder=""
-          prefixLength={0}
           required={false}
           type="text"
           value="c"
@@ -533,7 +515,6 @@ exports[`renders correctly with value and options 1`] = `
   </label>
   <div
     className="c7 TextInputWithDropdown__options"
-    hideBorder={false}
   >
     <ul
       className="c8"

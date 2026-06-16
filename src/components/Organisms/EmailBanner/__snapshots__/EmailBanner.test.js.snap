@@ -492,7 +492,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
               className="c8"
             >
               <div
-                align="left"
                 className="c9"
                 dangerouslySetInnerHTML={
                   {
@@ -512,9 +511,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
                 >
                   <label
                     className="c13"
-                    errorMsg=""
                     htmlFor="first-name"
-                    optional={null}
                   >
                     <span
                       className="c14 c15"
@@ -526,22 +523,18 @@ exports[`Image banner left orientation renders correctly 1`] = `
                     />
                     <div
                       className="c16"
-                      error={false}
                     >
                       <div
                         className="c17"
-                        error={false}
                       >
                         <input
                           aria-required={true}
                           className="c18"
-                          error={false}
                           id="first-name"
                           name="firstName"
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="Enter your first name"
-                          prefixLength={0}
                           required={false}
                           type="text"
                         />
@@ -554,9 +547,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
                 >
                   <label
                     className="c13"
-                    errorMsg=""
                     htmlFor="last-name"
-                    optional={null}
                   >
                     <span
                       className="c14 c15"
@@ -568,22 +559,18 @@ exports[`Image banner left orientation renders correctly 1`] = `
                     />
                     <div
                       className="c16"
-                      error={false}
                     >
                       <div
                         className="c17"
-                        error={false}
                       >
                         <input
                           aria-required={true}
                           className="c18"
-                          error={false}
                           id="last-name"
                           name="lastName"
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="Enter your last name"
-                          prefixLength={0}
                           required={false}
                           type="text"
                         />
@@ -597,9 +584,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
               >
                 <label
                   className="c13"
-                  errorMsg=""
                   htmlFor="email"
-                  optional={null}
                 >
                   <span
                     className="c14 c15"
@@ -611,22 +596,18 @@ exports[`Image banner left orientation renders correctly 1`] = `
                   />
                   <div
                     className="c16"
-                    error={false}
                   >
                     <div
                       className="c17"
-                      error={false}
                     >
                       <input
                         aria-required={true}
                         className="c18"
-                        error={false}
                         id="email"
                         name="email"
                         onBlur={[Function]}
                         onChange={[Function]}
                         placeholder="example@youremail.com"
-                        prefixLength={0}
                         required={false}
                         type="email"
                       />
@@ -639,7 +620,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
               className="c19"
             >
               <div
-                align="left"
                 className="c9"
                 dangerouslySetInnerHTML={
                   {
@@ -652,18 +632,14 @@ exports[`Image banner left orientation renders correctly 1`] = `
               className="c20"
             >
               <button
-                buttonType="primary"
                 className="c21 c22"
-                color="red"
                 data-test="subscribe-button"
                 disabled={false}
-                fullWidth={false}
                 type="submit"
               >
                 Sign up
                 <div
                   className=""
-                  withMargin={false}
                 />
               </button>
             </div>
@@ -1167,7 +1143,6 @@ exports[`Image banner renders correctly 1`] = `
               className="c8"
             >
               <div
-                align="left"
                 className="c9"
                 dangerouslySetInnerHTML={
                   {
@@ -1187,9 +1162,7 @@ exports[`Image banner renders correctly 1`] = `
                 >
                   <label
                     className="c13"
-                    errorMsg=""
                     htmlFor="first-name"
-                    optional={null}
                   >
                     <span
                       className="c14 c15"
@@ -1201,22 +1174,18 @@ exports[`Image banner renders correctly 1`] = `
                     />
                     <div
                       className="c16"
-                      error={false}
                     >
                       <div
                         className="c17"
-                        error={false}
                       >
                         <input
                           aria-required={true}
                           className="c18"
-                          error={false}
                           id="first-name"
                           name="firstName"
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="Enter your first name"
-                          prefixLength={0}
                           required={false}
                           type="text"
                         />
@@ -1229,9 +1198,7 @@ exports[`Image banner renders correctly 1`] = `
                 >
                   <label
                     className="c13"
-                    errorMsg=""
                     htmlFor="last-name"
-                    optional={null}
                   >
                     <span
                       className="c14 c15"
@@ -1243,22 +1210,18 @@ exports[`Image banner renders correctly 1`] = `
                     />
                     <div
                       className="c16"
-                      error={false}
                     >
                       <div
                         className="c17"
-                        error={false}
                       >
                         <input
                           aria-required={true}
                           className="c18"
-                          error={false}
                           id="last-name"
                           name="lastName"
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="Enter your last name"
-                          prefixLength={0}
                           required={false}
                           type="text"
                         />
@@ -1272,9 +1235,7 @@ exports[`Image banner renders correctly 1`] = `
               >
                 <label
                   className="c13"
-                  errorMsg=""
                   htmlFor="email"
-                  optional={null}
                 >
                   <span
                     className="c14 c15"
@@ -1286,22 +1247,18 @@ exports[`Image banner renders correctly 1`] = `
                   />
                   <div
                     className="c16"
-                    error={false}
                   >
                     <div
                       className="c17"
-                      error={false}
                     >
                       <input
                         aria-required={true}
                         className="c18"
-                        error={false}
                         id="email"
                         name="email"
                         onBlur={[Function]}
                         onChange={[Function]}
                         placeholder="example@youremail.com"
-                        prefixLength={0}
                         required={false}
                         type="email"
                       />
@@ -1314,7 +1271,6 @@ exports[`Image banner renders correctly 1`] = `
               className="c19"
             >
               <div
-                align="left"
                 className="c9"
                 dangerouslySetInnerHTML={
                   {
@@ -1327,18 +1283,14 @@ exports[`Image banner renders correctly 1`] = `
               className="c20"
             >
               <button
-                buttonType="primary"
                 className="c21 c22"
-                color="red"
                 data-test="subscribe-button"
                 disabled={false}
-                fullWidth={false}
                 type="submit"
               >
                 Sign up
                 <div
                   className=""
-                  withMargin={false}
                 />
               </button>
             </div>
@@ -1842,7 +1794,6 @@ exports[`Text-only email widget renders correctly 1`] = `
               className="c8"
             >
               <div
-                align="left"
                 className="c9"
                 dangerouslySetInnerHTML={
                   {
@@ -1862,9 +1813,7 @@ exports[`Text-only email widget renders correctly 1`] = `
                 >
                   <label
                     className="c13"
-                    errorMsg=""
                     htmlFor="first-name"
-                    optional={null}
                   >
                     <span
                       className="c14 c15"
@@ -1876,22 +1825,18 @@ exports[`Text-only email widget renders correctly 1`] = `
                     />
                     <div
                       className="c16"
-                      error={false}
                     >
                       <div
                         className="c17"
-                        error={false}
                       >
                         <input
                           aria-required={true}
                           className="c18"
-                          error={false}
                           id="first-name"
                           name="firstName"
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="Enter your first name"
-                          prefixLength={0}
                           required={false}
                           type="text"
                         />
@@ -1904,9 +1849,7 @@ exports[`Text-only email widget renders correctly 1`] = `
                 >
                   <label
                     className="c13"
-                    errorMsg=""
                     htmlFor="last-name"
-                    optional={null}
                   >
                     <span
                       className="c14 c15"
@@ -1918,22 +1861,18 @@ exports[`Text-only email widget renders correctly 1`] = `
                     />
                     <div
                       className="c16"
-                      error={false}
                     >
                       <div
                         className="c17"
-                        error={false}
                       >
                         <input
                           aria-required={true}
                           className="c18"
-                          error={false}
                           id="last-name"
                           name="lastName"
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="Enter your last name"
-                          prefixLength={0}
                           required={false}
                           type="text"
                         />
@@ -1947,9 +1886,7 @@ exports[`Text-only email widget renders correctly 1`] = `
               >
                 <label
                   className="c13"
-                  errorMsg=""
                   htmlFor="email"
-                  optional={null}
                 >
                   <span
                     className="c14 c15"
@@ -1961,22 +1898,18 @@ exports[`Text-only email widget renders correctly 1`] = `
                   />
                   <div
                     className="c16"
-                    error={false}
                   >
                     <div
                       className="c17"
-                      error={false}
                     >
                       <input
                         aria-required={true}
                         className="c18"
-                        error={false}
                         id="email"
                         name="email"
                         onBlur={[Function]}
                         onChange={[Function]}
                         placeholder="example@youremail.com"
-                        prefixLength={0}
                         required={false}
                         type="email"
                       />
@@ -1989,7 +1922,6 @@ exports[`Text-only email widget renders correctly 1`] = `
               className="c19"
             >
               <div
-                align="left"
                 className="c9"
                 dangerouslySetInnerHTML={
                   {
@@ -2002,18 +1934,14 @@ exports[`Text-only email widget renders correctly 1`] = `
               className="c20"
             >
               <button
-                buttonType="primary"
                 className="c21 c22"
-                color="red"
                 data-test="subscribe-button"
                 disabled={false}
-                fullWidth={false}
                 type="submit"
               >
                 Sign up
                 <div
                   className=""
-                  withMargin={false}
                 />
               </button>
             </div>
@@ -2517,7 +2445,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
               className="c8"
             >
               <div
-                align="left"
                 className="c9"
                 dangerouslySetInnerHTML={
                   {
@@ -2537,9 +2464,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                 >
                   <label
                     className="c13"
-                    errorMsg=""
                     htmlFor="first-name"
-                    optional={null}
                   >
                     <span
                       className="c14 c15"
@@ -2551,22 +2476,18 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                     />
                     <div
                       className="c16"
-                      error={false}
                     >
                       <div
                         className="c17"
-                        error={false}
                       >
                         <input
                           aria-required={true}
                           className="c18"
-                          error={false}
                           id="first-name"
                           name="firstName"
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="Enter your first name"
-                          prefixLength={0}
                           required={false}
                           type="text"
                         />
@@ -2579,9 +2500,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                 >
                   <label
                     className="c13"
-                    errorMsg=""
                     htmlFor="last-name"
-                    optional={null}
                   >
                     <span
                       className="c14 c15"
@@ -2593,22 +2512,18 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                     />
                     <div
                       className="c16"
-                      error={false}
                     >
                       <div
                         className="c17"
-                        error={false}
                       >
                         <input
                           aria-required={true}
                           className="c18"
-                          error={false}
                           id="last-name"
                           name="lastName"
                           onBlur={[Function]}
                           onChange={[Function]}
                           placeholder="Enter your last name"
-                          prefixLength={0}
                           required={false}
                           type="text"
                         />
@@ -2622,9 +2537,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
               >
                 <label
                   className="c13"
-                  errorMsg=""
                   htmlFor="email"
-                  optional={null}
                 >
                   <span
                     className="c14 c15"
@@ -2636,22 +2549,18 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                   />
                   <div
                     className="c16"
-                    error={false}
                   >
                     <div
                       className="c17"
-                      error={false}
                     >
                       <input
                         aria-required={true}
                         className="c18"
-                        error={false}
                         id="email"
                         name="email"
                         onBlur={[Function]}
                         onChange={[Function]}
                         placeholder="example@youremail.com"
-                        prefixLength={0}
                         required={false}
                         type="email"
                       />
@@ -2664,7 +2573,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
               className="c19"
             >
               <div
-                align="left"
                 className="c9"
                 dangerouslySetInnerHTML={
                   {
@@ -2677,18 +2585,14 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
               className="c20"
             >
               <button
-                buttonType="primary"
                 className="c21 c22"
-                color="red"
                 data-test="subscribe-button"
                 disabled={false}
-                fullWidth={false}
                 type="submit"
               >
                 Sign up
                 <div
                   className=""
-                  withMargin={false}
                 />
               </button>
             </div>

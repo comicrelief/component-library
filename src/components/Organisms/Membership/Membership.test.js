@@ -568,9 +568,7 @@ it('renders correctly', () => {
           >
             <label
               className="c14 c15"
-              errorMsg=""
               htmlFor="mship-1--moneyBuy-box1"
-              optional={null}
             >
               <span
                 className="c16 c17"
@@ -582,25 +580,21 @@ it('renders correctly', () => {
               />
               <div
                 className="c18"
-                error={false}
               >
                 <div
                   className="c19"
-                  error={false}
                 >
                   <input
                     aria-label="£5"
                     aria-required={false}
                     boxBorderColor=""
                     className="c20"
-                    error={false}
                     id="mship-1--moneyBuy-box1"
                     isInputMatchBox="5"
                     isSelected={false}
                     name="mship-1--moneyBuy1"
                     onClick={[Function]}
                     placeholder=""
-                    prefixLength={0}
                     required={false}
                     type="button"
                     value="£ 5"
@@ -610,9 +604,7 @@ it('renders correctly', () => {
             </label>
             <label
               className="c14 c21"
-              errorMsg=""
               htmlFor="mship-1--moneyBuy-box2"
-              optional={null}
             >
               <span
                 className="c16 c17"
@@ -624,25 +616,21 @@ it('renders correctly', () => {
               />
               <div
                 className="c18"
-                error={false}
               >
                 <div
                   className="c19"
-                  error={false}
                 >
                   <input
                     aria-label="£10"
                     aria-required={false}
                     boxBorderColor=""
                     className="c20"
-                    error={false}
                     id="mship-1--moneyBuy-box2"
                     isInputMatchBox="10"
                     isSelected={true}
                     name="mship-1--moneyBuy2"
                     onClick={[Function]}
                     placeholder=""
-                    prefixLength={0}
                     required={false}
                     type="button"
                     value="£ 10"
@@ -652,9 +640,7 @@ it('renders correctly', () => {
             </label>
             <label
               className="c14 c15"
-              errorMsg=""
               htmlFor="mship-1--moneyBuy-box3"
-              optional={null}
             >
               <span
                 className="c16 c17"
@@ -666,25 +652,21 @@ it('renders correctly', () => {
               />
               <div
                 className="c18"
-                error={false}
               >
                 <div
                   className="c19"
-                  error={false}
                 >
                   <input
                     aria-label="£20"
                     aria-required={false}
                     boxBorderColor=""
                     className="c20"
-                    error={false}
                     id="mship-1--moneyBuy-box3"
                     isInputMatchBox="20"
                     isSelected={false}
                     name="mship-1--moneyBuy3"
                     onClick={[Function]}
                     placeholder=""
-                    prefixLength={0}
                     required={false}
                     type="button"
                     value="£ 20"
@@ -703,9 +685,7 @@ it('renders correctly', () => {
             </span>
             <label
               className="c14 c25"
-              errorMsg=""
               htmlFor="mship-1--MoneyBuy-userInput"
-              optional={null}
             >
               <span
                 className="c16 c17"
@@ -717,17 +697,14 @@ it('renders correctly', () => {
               />
               <div
                 className="c18"
-                error={false}
               >
                 <div
                   className="c19"
-                  error={false}
                 >
                   <input
                     aria-label="Input a different amount"
                     aria-required={false}
                     className="c20"
-                    error={false}
                     id="mship-1--MoneyBuy-userInput"
                     inputBorderColor={false}
                     max="25000"
@@ -738,7 +715,6 @@ it('renders correctly', () => {
                     onKeyPress={[Function]}
                     pattern="[^[0-9]+([,.][0-9]+)?$]"
                     placeholder="0.00"
-                    prefixLength={0}
                     required={false}
                     step="0.01"
                     type="number"

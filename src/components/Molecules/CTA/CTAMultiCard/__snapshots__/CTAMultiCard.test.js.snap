@@ -24,19 +24,13 @@ exports[`handles data structure correctly 1`] = `
           isCarousel={false}
         >
           <a
-            buttonType="primary"
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
-            fullWidth={false}
-            home={false}
             href="/test"
-            iconFirst={false}
             isCarousel={false}
             isInteractive={true}
-            mobileColour={null}
             rel={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 cVegjR"
@@ -172,19 +166,13 @@ exports[`handles data structure correctly 1`] = `
           isCarousel={false}
         >
           <a
-            buttonType="primary"
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
-            fullWidth={false}
-            home={false}
             href="/test"
-            iconFirst={false}
             isCarousel={false}
             isInteractive={true}
-            mobileColour={null}
             rel={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 cVegjR"
@@ -271,19 +259,13 @@ exports[`handles data structure correctly 1`] = `
           isCarousel={false}
         >
           <a
-            buttonType="primary"
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
-            fullWidth={false}
-            home={false}
             href="/test-no-image"
-            iconFirst={false}
             isCarousel={false}
             isInteractive={true}
-            mobileColour={null}
             rel={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <div
               className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 gynktb"
@@ -370,19 +352,13 @@ exports[`renders 2 columns layout correctly 1`] = `
           isCarousel={true}
         >
           <a
-            buttonType="primary"
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
-            fullWidth={false}
-            home={false}
             href="/test"
-            iconFirst={false}
             isCarousel={true}
             isInteractive={true}
-            mobileColour={null}
             rel={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 cVegjR"
@@ -518,19 +494,13 @@ exports[`renders 2 columns layout correctly 1`] = `
           isCarousel={true}
         >
           <a
-            buttonType="primary"
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
-            fullWidth={false}
-            home={false}
             href="/test"
-            iconFirst={false}
             isCarousel={true}
             isInteractive={true}
-            mobileColour={null}
             rel={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 cVegjR"
@@ -617,19 +587,13 @@ exports[`renders 2 columns layout correctly 1`] = `
           isCarousel={true}
         >
           <a
-            buttonType="primary"
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
-            fullWidth={false}
-            home={false}
             href="/test-no-image"
-            iconFirst={false}
             isCarousel={true}
             isInteractive={true}
-            mobileColour={null}
             rel={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <div
               className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 gynktb"
@@ -716,19 +680,13 @@ exports[`renders carousel mode correctly 1`] = `
           isCarousel={true}
         >
           <a
-            buttonType="primary"
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
-            fullWidth={false}
-            home={false}
             href="/test"
-            iconFirst={false}
             isCarousel={true}
             isInteractive={true}
-            mobileColour={null}
             rel={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 cVegjR"
@@ -864,19 +822,13 @@ exports[`renders carousel mode correctly 1`] = `
           isCarousel={true}
         >
           <a
-            buttonType="primary"
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
-            fullWidth={false}
-            home={false}
             href="/test"
-            iconFirst={false}
             isCarousel={true}
             isInteractive={true}
-            mobileColour={null}
             rel={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 cVegjR"
@@ -963,19 +915,13 @@ exports[`renders carousel mode correctly 1`] = `
           isCarousel={true}
         >
           <a
-            buttonType="primary"
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
-            fullWidth={false}
-            home={false}
             href="/test-no-image"
-            iconFirst={false}
             isCarousel={true}
             isInteractive={true}
-            mobileColour={null}
             rel={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <div
               className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 gynktb"
@@ -1062,19 +1008,13 @@ exports[`renders correctly with data prop 1`] = `
           isCarousel={true}
         >
           <a
-            buttonType="primary"
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
-            fullWidth={false}
-            home={false}
             href="/test"
-            iconFirst={false}
             isCarousel={true}
             isInteractive={true}
-            mobileColour={null}
             rel={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 cVegjR"
@@ -1210,19 +1150,13 @@ exports[`renders correctly with data prop 1`] = `
           isCarousel={true}
         >
           <a
-            buttonType="primary"
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
-            fullWidth={false}
-            home={false}
             href="/test"
-            iconFirst={false}
             isCarousel={true}
             isInteractive={true}
-            mobileColour={null}
             rel={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 cVegjR"
@@ -1309,19 +1243,13 @@ exports[`renders correctly with data prop 1`] = `
           isCarousel={true}
         >
           <a
-            buttonType="primary"
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
-            fullWidth={false}
-            home={false}
             href="/test-no-image"
-            iconFirst={false}
             isCarousel={true}
             isInteractive={true}
-            mobileColour={null}
             rel={null}
             target="_self"
             type="standard"
-            underline={true}
           >
             <div
               className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 gynktb"

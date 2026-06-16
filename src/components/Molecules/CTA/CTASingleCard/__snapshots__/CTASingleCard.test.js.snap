@@ -385,20 +385,14 @@ exports[`renders correctly with data prop 1`] = `
       isFullWidth={true}
     >
       <a
-        buttonType="primary"
         className="c3 c4"
-        fullWidth={false}
-        home={false}
         href="/test"
-        iconFirst={false}
         isCarousel={false}
         isInteractive={true}
         isSingleCard={true}
-        mobileColour={null}
         rel={null}
         target="_self"
         type="standard"
-        underline={true}
       >
         <div
           className="c5 c6"
@@ -808,20 +802,14 @@ exports[`renders correctly without image 1`] = `
       isFullWidth={true}
     >
       <a
-        buttonType="primary"
         className="c3 c4"
-        fullWidth={false}
-        home={false}
         href="/test-no-image"
-        iconFirst={false}
         isCarousel={false}
         isInteractive={true}
         isSingleCard={true}
-        mobileColour={null}
         rel={null}
         target="_self"
         type="standard"
-        underline={true}
       >
         <div
           className="c5"

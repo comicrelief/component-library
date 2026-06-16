@@ -19,14 +19,14 @@ const StyledSelect = styled.select`
   height: 48px;
   font-weight: 400;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
-  background: ${({ theme, hideArrow }) => (hideArrow
+  background: ${({ theme, $hideArrow }) => ($hideArrow
     ? theme.color('grey_light')
     : `${theme.color('grey_light')} url(${dropDownIcon}) calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat`)};
   border: 1px solid;
-  border-color: ${({ theme, error }) => (error ? theme.color('red') : theme.color('grey'))};
+  border-color: ${({ theme, $error }) => ($error ? theme.color('red') : theme.color('grey'))};
   box-shadow: none;
   appearance: none;
-  color: ${({ theme, greyDescription, hasValue }) => (greyDescription && !hasValue ? 'grey' : theme.color('black'))};
+  color: ${({ theme, $greyDescription, $hasValue }) => ($greyDescription && !$hasValue ? 'grey' : theme.color('black'))};
   border-radius: 0.5rem;
   cursor: pointer;
   &:focus {
@@ -75,14 +75,14 @@ const Select = React.forwardRef(
             }
           }}
           {...rest}
-          error={errorMsg}
+          $error={errorMsg}
           defaultValue={defaultValue}
           required={optional === false}
           aria-required={optional === false}
-          hasValue={!!value}
-          greyDescription={greyDescription}
+          $hasValue={!!value}
+          $greyDescription={greyDescription}
           ref={ref}
-          hideArrow={hideArrow}
+          $hideArrow={hideArrow}
         >
 
           {/* empty string "" is falsy so will show */

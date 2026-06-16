@@ -27,16 +27,10 @@ it('renders a standard styled link correctly', () => {
 }
 
 <a
-  buttonType="primary"
   className="c0"
-  fullWidth={false}
-  home={false}
   href="/test"
-  iconFirst={false}
-  mobileColour={null}
   target="_self"
   type="standard"
-  underline={true}
 >
   A standard link
 </a>
@@ -104,16 +98,10 @@ it('renders a button with an icon', () => {
 }
 
 <a
-  buttonType="primary"
   className="c0"
-  fullWidth={false}
-  home={false}
   href="/test"
-  iconFirst={false}
-  mobileColour={null}
   target="_self"
   type="standard"
-  underline={true}
 >
   Internal link
   <span
@@ -175,16 +163,10 @@ it('renders a standard styled link correctly with target blank and assistive tex
 }
 
 <a
-  buttonType="primary"
   className="c0"
-  fullWidth={false}
-  home={false}
   href="/test"
-  iconFirst={false}
-  mobileColour={null}
   target="_blank"
   type="standard"
-  underline={true}
 >
   A standard link
   <span
@@ -267,16 +249,10 @@ it('renders link styled as button correctly', () => {
 }
 
 <a
-  buttonType="primary"
   className="c0"
-  fullWidth={false}
-  home={false}
   href="/test"
-  iconFirst={false}
-  mobileColour={null}
   target="_self"
   type="button"
-  underline={true}
 >
   A yellow button
 </a>

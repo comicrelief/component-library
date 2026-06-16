@@ -369,18 +369,12 @@ it('renders article teaser correctly', () => {
   isNewsTeaser={true}
 >
   <a
-    buttonType="primary"
     category={null}
     className="c1 c2"
-    fullWidth={false}
-    home={false}
     href="/test"
-    iconFirst={false}
     isNewsTeaser={true}
-    mobileColour={null}
     target="_self"
     type="standard"
-    underline={false}
   >
     <div
       className="c3 c4"
@@ -803,18 +797,12 @@ it('renders press realese correctly', () => {
   isNewsTeaser={false}
 >
   <a
-    buttonType="primary"
     category=""
     className="c1 c2"
-    fullWidth={false}
-    home={false}
     href="/test"
-    iconFirst={false}
     isNewsTeaser={false}
-    mobileColour={null}
     target="_self"
     type="standard"
-    underline={false}
   >
     <div
       className="c3 c4"

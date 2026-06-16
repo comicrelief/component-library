@@ -124,16 +124,10 @@ exports[`renders coral_light variant with message containing a link 1`] = `
     You can only donate between £1.00 and £25,000.00 at a time. If you need help,
      
     <a
-      buttonType="primary"
       className="c4"
-      fullWidth={false}
-      home={false}
       href="/contact"
-      iconFirst={false}
-      mobileColour={null}
       target="_self"
       type="standard"
-      underline={true}
     >
       contact us
     </a>

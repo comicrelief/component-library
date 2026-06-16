@@ -146,7 +146,7 @@ exports[`renders correctly 1`] = `
   flex-wrap: nowrap;
   gap: 0;
   list-style-type: none;
-  justify-content: flex-start;
+  justify-content: center;
   margin: 0 auto 0 0;
   padding: 0;
   align-items: center;
@@ -593,18 +593,14 @@ exports[`renders correctly 1`] = `
         >
           <ul
             className="c3"
-            newStyle={false}
           >
             <li
               className="c4"
-              newStyle={false}
             >
               <a
                 className="c5 c6"
                 data-test="icon-facebook"
                 href="https://www.facebook.com/comicrelief"
-                isHeader={false}
-                newStyle={false}
                 rel="noopener noreferrer"
                 target="_blank"
                 title="Check out our Facebook page"
@@ -612,21 +608,17 @@ exports[`renders correctly 1`] = `
                 <img
                   alt="facebook"
                   className="c7"
-                  invertColor={false}
                   src="mock.asset"
                 />
               </a>
             </li>
             <li
               className="c4"
-              newStyle={false}
             >
               <a
                 className="c5 c6"
                 data-test="icon-instagram"
                 href="https://www.instagram.com/comicrelief"
-                isHeader={false}
-                newStyle={false}
                 rel="noopener noreferrer"
                 target="_blank"
                 title="Check out our Instagram account"
@@ -634,21 +626,17 @@ exports[`renders correctly 1`] = `
                 <img
                   alt="instagram"
                   className="c7"
-                  invertColor={false}
                   src="mock.asset"
                 />
               </a>
             </li>
             <li
               className="c4"
-              newStyle={false}
             >
               <a
                 className="c5 c6"
                 data-test="icon-twitter"
                 href="https://twitter.com/comicrelief"
-                isHeader={false}
-                newStyle={false}
                 rel="noopener noreferrer"
                 target="_blank"
                 title="Check out our Twitter account"
@@ -656,21 +644,17 @@ exports[`renders correctly 1`] = `
                 <img
                   alt="twitter"
                   className="c7"
-                  invertColor={false}
                   src="mock.asset"
                 />
               </a>
             </li>
             <li
               className="c4"
-              newStyle={false}
             >
               <a
                 className="c5 c6"
                 data-test="icon-youtube"
                 href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
-                isHeader={false}
-                newStyle={false}
                 rel="noopener noreferrer"
                 target="_blank"
                 title="Check out our YouTube channel"
@@ -678,7 +662,6 @@ exports[`renders correctly 1`] = `
                 <img
                   alt="youtube"
                   className="c7"
-                  invertColor={false}
                   src="mock.asset"
                 />
               </a>
@@ -686,23 +669,14 @@ exports[`renders correctly 1`] = `
           </ul>
         </div>
         <a
-          buttonType="primary"
           className="c8 c9"
-          fullWidth={false}
-          home={false}
           href="/"
-          iconFirst={false}
-          mobileColour={null}
           target="_self"
           title="Go to Comic Relief homepage"
           type="standard"
-          underline={true}
         >
           <div
             className="c10"
-            rotate={0}
-            sizeMd="72px"
-            sizeSm="48px"
           >
             <img
               alt="Comic Relief logo"
@@ -751,19 +725,13 @@ exports[`renders correctly 1`] = `
                 column={false}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://www.comicrelief.com/#"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -777,19 +745,13 @@ exports[`renders correctly 1`] = `
                 column={false}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://www.comicrelief.com/update-your-preferences"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -823,19 +785,13 @@ exports[`renders correctly 1`] = `
                 column={true}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="/contact-us"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -849,19 +805,13 @@ exports[`renders correctly 1`] = `
                 column={true}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://giftaid.comicrelief.com/update"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -875,19 +825,13 @@ exports[`renders correctly 1`] = `
                 column={true}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://www.comicrelief.com/frequently-asked-questions"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -901,19 +845,13 @@ exports[`renders correctly 1`] = `
                 column={true}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://www.comicrelief.com/red-nose-days-frequently-asked-questions"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -947,19 +885,13 @@ exports[`renders correctly 1`] = `
                 column={true}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://www.comicrelief.com/about-comic-relief"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -973,19 +905,13 @@ exports[`renders correctly 1`] = `
                 column={true}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://www.comicrelief.com/about-comic-relief/history"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -999,19 +925,13 @@ exports[`renders correctly 1`] = `
                 column={true}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://www.comicrelief.com/about-comic-relief/finances"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -1025,19 +945,13 @@ exports[`renders correctly 1`] = `
                 column={true}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://www.comicrelief.com/working-with-us"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -1051,19 +965,13 @@ exports[`renders correctly 1`] = `
                 column={true}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://www.comicrelief.com/about-comic-relief/meet-the-team"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -1077,19 +985,13 @@ exports[`renders correctly 1`] = `
                 column={true}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://www.sportrelief.com/"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -1123,19 +1025,13 @@ exports[`renders correctly 1`] = `
                 column={false}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://www.comicrelief.com/careers"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -1149,19 +1045,13 @@ exports[`renders correctly 1`] = `
                 column={false}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://app.beapplied.com/org/comic-relief"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -1195,19 +1085,13 @@ exports[`renders correctly 1`] = `
                 column={false}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://www.comicrelief.com/news"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -1221,19 +1105,13 @@ exports[`renders correctly 1`] = `
                 column={false}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://www.comicrelief.com/press-releases"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -1267,19 +1145,13 @@ exports[`renders correctly 1`] = `
                 column={false}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="/homepage"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -1293,19 +1165,13 @@ exports[`renders correctly 1`] = `
                 column={false}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="/this-is-a-test"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -1319,19 +1185,13 @@ exports[`renders correctly 1`] = `
                 column={false}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://www.yahoo.com"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_blank"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -1350,19 +1210,13 @@ exports[`renders correctly 1`] = `
                 column={false}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://www.sportrelief.com"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"
@@ -1376,19 +1230,13 @@ exports[`renders correctly 1`] = `
                 column={false}
               >
                 <a
-                  buttonType="primary"
                   className="c8 c19 c20"
-                  fullWidth={false}
-                  home={false}
                   href="https://bing.com"
-                  iconFirst={false}
                   inline={true}
-                  mobileColour={null}
                   overrideallowList={false}
                   role="menuitem"
                   target="_blank"
                   type="standard"
-                  underline={true}
                 >
                   <span
                     className="c21"

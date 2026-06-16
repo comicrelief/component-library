@@ -176,9 +176,7 @@ it('renders correctly', () => {
       >
         <label
           className="c4 c5"
-          errorMsg=""
           htmlFor="search"
-          optional={null}
         >
           <span
             className="c6 c7"
@@ -190,21 +188,17 @@ it('renders correctly', () => {
           />
           <div
             className="c8"
-            error={false}
           >
             <div
               className="c9"
-              error={false}
             >
               <input
                 aria-required={false}
                 className="c10"
-                error={false}
                 id="search"
                 name="search"
                 onChange={[Function]}
                 placeholder=""
-                prefixLength={0}
                 required={false}
                 role="searchbox"
                 type="text"

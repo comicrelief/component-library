@@ -8,9 +8,9 @@ import checkBoxIcon from './assets/tick.svg';
 // This label wraps both the input and the span that is the visual square checkbox you see */
 const Label = styled.label`
   display: flex;
-  ${({ hasLabelAsString }) => hasLabelAsString && 'align-items: center;'}
+  ${({ $hasLabelAsString }) => $hasLabelAsString && 'align-items: center;'}
   margin-bottom: 8px;
-  ${({ theme, labelColour }) => labelColour && `color: ${theme.color(labelColour)}`}
+  ${({ theme, $labelColour }) => $labelColour && `color: ${theme.color($labelColour)}`}
 `;
 
 const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
@@ -31,8 +31,8 @@ const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
     width: 24px;
     height: 24px;
     border-radius: 4px;
-    background-color: ${({ theme, checkboxBg }) => (checkboxBg ? theme.color(checkboxBg) : theme.color('white'))};
-    border: 1px solid ${({ theme, checkboxBorder }) => (checkboxBorder ? theme.color(checkboxBorder) : theme.color('grey'))};
+    background-color: ${({ theme, $checkboxBg }) => ($checkboxBg ? theme.color($checkboxBg) : theme.color('white'))};
+    border: 1px solid ${({ theme, $checkboxBorder }) => ($checkboxBorder ? theme.color($checkboxBorder) : theme.color('grey'))};
     float: left;
     flex-shrink: 0;
   }
@@ -40,12 +40,12 @@ const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
   &:checked + span {
     background: url(${checkBoxIcon}) no-repeat center;
     background-size: contain;
-    background-color: ${({ theme, checkboxBgChecked }) => (checkboxBgChecked ? theme.color(checkboxBgChecked) : theme.color('red'))};
-    border: 1px solid ${({ theme, checkboxBorderChecked }) => (checkboxBorderChecked ? theme.color(checkboxBorderChecked) : theme.color('red'))};
+    background-color: ${({ theme, $checkboxBgChecked }) => ($checkboxBgChecked ? theme.color($checkboxBgChecked) : theme.color('red'))};
+    border: 1px solid ${({ theme, $checkboxBorderChecked }) => ($checkboxBorderChecked ? theme.color($checkboxBorderChecked) : theme.color('red'))};
   }
   /* Visual checkbox when focused */
   &:focus + span {
-    border: 1px solid ${({ theme, checkboxBorderFocus }) => (checkboxBorderFocus ? theme.color(checkboxBorderFocus) : theme.color('red'))};
+    border: 1px solid ${({ theme, $checkboxBorderFocus }) => ($checkboxBorderFocus ? theme.color($checkboxBorderFocus) : theme.color('red'))};
   }
 `;
 
@@ -63,8 +63,8 @@ const Checkbox = React.forwardRef(({
   ...rest
 }, ref) => (
   <Label
-    hasLabelAsString={!!label}
-    labelColour={labelColour}
+    $hasLabelAsString={!!label}
+    $labelColour={labelColour}
     htmlFor={rest.id || name}
   >
     <StyledCheckboxInput
@@ -73,11 +73,11 @@ const Checkbox = React.forwardRef(({
       name={name}
       value={value}
       ref={ref}
-      checkboxBg={checkboxBg}
-      checkboxBorder={checkboxBorder}
-      checkboxBgChecked={checkboxBgChecked}
-      checkboxBorderChecked={checkboxBorderChecked}
-      checkboxBorderFocus={checkboxBorderFocus}
+      $checkboxBg={checkboxBg}
+      $checkboxBorder={checkboxBorder}
+      $checkboxBgChecked={checkboxBgChecked}
+      $checkboxBorderChecked={checkboxBorderChecked}
+      $checkboxBorderFocus={checkboxBorderFocus}
     />
     <span />
     {label ? <Text weight="bold" size="s">{label}</Text> : children}

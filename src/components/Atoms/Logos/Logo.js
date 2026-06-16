@@ -20,11 +20,11 @@ const Image = styled.img`
 const LogoWrapper = styled.div`
   display: inline-block;
   ${zIndex('high')}
-  width: ${props => props.sizeSm};
-  transform: ${props => (props.rotate ? 'rotate(-14deg)' : 'inherit')};
+  width: ${props => props.$sizeSm};
+  transform: ${props => (props.$rotate ? 'rotate(-14deg)' : 'inherit')};
   vertical-align: bottom; // height fix
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    width: ${props => props.sizeMd};
+    width: ${props => props.$sizeMd};
   }
 `;
 
@@ -44,7 +44,7 @@ const themeSwitcher = theme => {
 const Logo = ({
   rotate = false, sizeSm = '51px', sizeMd = '70px', campaign = 'Comic Relief'
 }) => (
-  <LogoWrapper rotate={rotate ? 1 : 0} sizeSm={sizeSm} sizeMd={sizeMd}>
+  <LogoWrapper $rotate={rotate ? 1 : 0} $sizeSm={sizeSm} $sizeMd={sizeMd}>
     <Image
       src={themeSwitcher(campaign)}
       alt={

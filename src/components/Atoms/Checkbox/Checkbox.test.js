@@ -89,7 +89,6 @@ it('renders correctly', () => {
 
 <label
     className="c0"
-    hasLabelAsString={true}
     htmlFor="sport1"
   >
     <input
@@ -182,7 +181,6 @@ it('renders correctly', () => {
 
 <label
     className="c0"
-    hasLabelAsString={true}
     htmlFor="sport2"
   >
     <input

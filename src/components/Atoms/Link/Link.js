@@ -58,15 +58,15 @@ const Link = ({
     <StyledLink
       {...rest}
       $color={color}
-      mobileColour={mobileColour}
+      $mobileColour={mobileColour}
       href={href}
       target={window}
       type={type}
-      home={home}
-      iconFirst={iconFirst}
-      underline={underline}
-      fullWidth={fullWidth}
-      buttonType={buttonType}
+      $home={home}
+      $iconFirst={iconFirst}
+      $underline={underline}
+      $fullWidth={fullWidth}
+      $buttonType={buttonType}
     >
       {children}
       {window === '_blank' && <HelperText>(opens in new window)</HelperText>}

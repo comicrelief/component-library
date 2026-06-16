@@ -498,16 +498,10 @@ exports[`renders Single Message with Image correctly 1`] = `
       description
     </p>
     <a
-      buttonType="primary"
       className="c8"
-      fullWidth={false}
-      home={false}
       href="/"
-      iconFirst={false}
-      mobileColour={null}
       target="_self"
       type="button"
-      underline={true}
     >
       CTA
     </a>
@@ -1050,16 +1044,10 @@ exports[`renders Single Message with full width correctly 1`] = `
       description
     </p>
     <a
-      buttonType="primary"
       className="c8"
-      fullWidth={false}
-      home={false}
       href="/"
-      iconFirst={false}
-      mobileColour={null}
       target="_self"
       type="button"
-      underline={true}
     >
       CTA
     </a>

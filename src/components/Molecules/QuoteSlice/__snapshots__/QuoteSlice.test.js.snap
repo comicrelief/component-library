@@ -247,16 +247,10 @@ exports[`renders a Quote Slice with basic props 1`] = `
         Body text
       </span>
       <a
-        buttonType="primary"
         className="c8 c9"
-        fullWidth={false}
-        home={false}
         href="http://www.google.com"
-        iconFirst={false}
-        mobileColour={null}
         target="_blank"
         type="button"
-        underline={true}
       >
         An external link
         <span

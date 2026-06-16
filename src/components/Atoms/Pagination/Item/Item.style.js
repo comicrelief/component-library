@@ -6,47 +6,47 @@ const StyledItem = styled.a`
   text-align: center;
   text-decoration: none;
   font-weight: 700;
-  cursor: ${({ selected, disabled }) => (selected || disabled ? 'default' : 'pointer')};
+  cursor: ${({ $selected, $disabled }) => ($selected || $disabled ? 'default' : 'pointer')};
   background: ${({
     theme,
-    selected,
-    disabled,
-    backgroundColor,
-    selectedBackgroundColor,
-    disabledBackgroundColor
+    $selected,
+    $disabled,
+    $backgroundColor,
+    $selectedBackgroundColor,
+    $disabledBackgroundColor
   }) => {
-    let processedBackgroundColor = backgroundColor;
-    if (disabled) {
-      processedBackgroundColor = disabledBackgroundColor;
-    } else if (selected) {
-      processedBackgroundColor = selectedBackgroundColor;
+    let processedBackgroundColor = $backgroundColor;
+    if ($disabled) {
+      processedBackgroundColor = $disabledBackgroundColor;
+    } else if ($selected) {
+      processedBackgroundColor = $selectedBackgroundColor;
     }
     return theme.color(processedBackgroundColor);
   }};
   color: ${({
     theme,
-    selected,
-    disabled,
-    color,
-    selectedColor,
-    disabledColor
+    $selected,
+    $disabled,
+    $color,
+    $selectedColor,
+    $disabledColor
   }) => {
-    let processedColor = color;
-    if (disabled) {
-      processedColor = disabledColor;
-    } else if (selected) {
-      processedColor = selectedColor;
+    let processedColor = $color;
+    if ($disabled) {
+      processedColor = $disabledColor;
+    } else if ($selected) {
+      processedColor = $selectedColor;
     }
     return theme.color(processedColor);
   }};
   ${({
-    theme, selected, disabled, backgroundColorOnHover, colorOnHover
+    theme, $selected, $disabled, $backgroundColorOnHover, $colorOnHover
   }) => {
-    if (!(selected || disabled)) {
+    if (!($selected || $disabled)) {
       return css`
         &:hover {
-          background: ${theme.color(backgroundColorOnHover)};
-          color: ${theme.color(colorOnHover)};
+          background: ${theme.color($backgroundColorOnHover)};
+          color: ${theme.color($colorOnHover)};
         }
       `;
     }

@@ -140,16 +140,10 @@ it('renders correctly', () => {
 }
 
 <a
-  buttonType="primary"
   className="c0 c1"
-  fullWidth={false}
-  home={false}
   href="https://www.comicrelief.com"
-  iconFirst={false}
-  mobileColour={null}
   target="_self"
   type="standard"
-  underline={true}
 >
   <div
     className="c2 lazyload"

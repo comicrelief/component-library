@@ -154,16 +154,10 @@ exports[`renders correctly in minimalist form 1`] = `
   className="c0"
 >
   <a
-    buttonType="primary"
     className="c1 c2"
-    fullWidth={false}
-    home={false}
     href="/test"
-    iconFirst={false}
-    mobileColour={null}
     target="_self"
     type="standard"
-    underline={true}
   >
     <div
       className="c3"
@@ -387,16 +381,10 @@ exports[`renders correctly with copy 1`] = `
   className="c0"
 >
   <a
-    buttonType="primary"
     className="c1 c2"
-    fullWidth={false}
-    home={false}
     href="/test"
-    iconFirst={false}
-    mobileColour={null}
     target="_self"
     type="standard"
-    underline={true}
   >
     <div
       className="c3"
@@ -592,16 +580,10 @@ exports[`renders correctly with date 1`] = `
   className="c0"
 >
   <a
-    buttonType="primary"
     className="c1 c2"
-    fullWidth={false}
-    home={false}
     href="/test"
-    iconFirst={false}
-    mobileColour={null}
     target="_self"
     type="standard"
-    underline={true}
   >
     <div
       className="c3"
@@ -792,16 +774,10 @@ exports[`renders correctly with date and type 1`] = `
   className="c0"
 >
   <a
-    buttonType="primary"
     className="c1 c2"
-    fullWidth={false}
-    home={false}
     href="/test"
-    iconFirst={false}
-    mobileColour={null}
     target="_self"
     type="standard"
-    underline={true}
   >
     <div
       className="c3"

@@ -324,7 +324,6 @@ exports[`renders correctly 1`] = `
         className="c4"
       >
         <div
-          align="left"
           className="c5"
           dangerouslySetInnerHTML={
             {
@@ -343,9 +342,7 @@ exports[`renders correctly 1`] = `
       >
         <label
           className="c8 c9"
-          errorMsg=""
           htmlFor="first-name"
-          optional={null}
         >
           <span
             className="c4 c10"
@@ -357,22 +354,18 @@ exports[`renders correctly 1`] = `
           />
           <div
             className="c11"
-            error={false}
           >
             <div
               className="c12"
-              error={false}
             >
               <input
                 aria-required={true}
                 className="c13"
-                error={false}
                 id="first-name"
                 name="firstName"
                 onBlur={[Function]}
                 onChange={[Function]}
                 placeholder="Enter your first name"
-                prefixLength={0}
                 required={false}
                 textColour="white"
                 type="text"
@@ -382,9 +375,7 @@ exports[`renders correctly 1`] = `
         </label>
         <label
           className="c8 c9"
-          errorMsg=""
           htmlFor="last-name"
-          optional={null}
         >
           <span
             className="c4 c10"
@@ -396,22 +387,18 @@ exports[`renders correctly 1`] = `
           />
           <div
             className="c11"
-            error={false}
           >
             <div
               className="c12"
-              error={false}
             >
               <input
                 aria-required={true}
                 className="c13"
-                error={false}
                 id="last-name"
                 name="lastName"
                 onBlur={[Function]}
                 onChange={[Function]}
                 placeholder="Enter your last name"
-                prefixLength={0}
                 required={false}
                 textColour="white"
                 type="text"
@@ -422,9 +409,7 @@ exports[`renders correctly 1`] = `
       </div>
       <label
         className="c8 c9"
-        errorMsg=""
         htmlFor="email"
-        optional={null}
       >
         <span
           className="c4 c10"
@@ -436,22 +421,18 @@ exports[`renders correctly 1`] = `
         />
         <div
           className="c11"
-          error={false}
         >
           <div
             className="c12"
-            error={false}
           >
             <input
               aria-required={true}
               className="c13"
-              error={false}
               id="email"
               name="email"
               onBlur={[Function]}
               onChange={[Function]}
               placeholder="example@youremail.com"
-              prefixLength={0}
               required={false}
               textColour="white"
               type="email"
@@ -464,18 +445,14 @@ exports[`renders correctly 1`] = `
         className="c14"
       >
         <button
-          buttonType="primary"
           className="c15 c16"
-          color="red"
           data-test="subscribe-button"
           disabled={true}
-          fullWidth={false}
           type="submit"
         >
           Subscribe
           <div
             className=""
-            withMargin={false}
           />
         </button>
       </div>
@@ -488,7 +465,6 @@ exports[`renders correctly 1`] = `
         className="c4"
       >
         <div
-          align="left"
           className="c5"
           dangerouslySetInnerHTML={
             {

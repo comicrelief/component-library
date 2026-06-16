@@ -132,9 +132,7 @@ it('renders correctly', () => {
 
 <label
   className="c0"
-  errorMsg=""
   htmlFor="Accessibility info go here"
-  optional={null}
 >
   <span
     className="c1 c2"
@@ -146,20 +144,16 @@ it('renders correctly', () => {
   />
   <div
     className="c3"
-    error={false}
   >
     <div
       className="c4"
-      error={false}
     >
       <input
         aria-required={false}
         className="c5"
-        error={false}
         id="Accessibility info go here"
         name="fullname"
         placeholder="This is the hint text"
-        prefixLength={0}
         required={false}
         type="text"
       />
@@ -311,9 +305,7 @@ it('renders with responsive max widths correctly', () => {
 
 <label
   className="c0"
-  errorMsg=""
   htmlFor="input-example-7"
-  optional={null}
 >
   <span
     className="c1 c2"
@@ -325,22 +317,16 @@ it('renders with responsive max widths correctly', () => {
   />
   <div
     className="c3"
-    error={false}
   >
     <div
       className="c4"
-      error={false}
-      maxPxWidthLargeBreakpoint={250}
-      maxPxWidthMediumBreakpoint={150}
     >
       <input
         aria-required={false}
         className="c5"
-        error={false}
         id="input-example-7"
         name="responsive-width"
         placeholder="This input has responsive max widths"
-        prefixLength={0}
         required={false}
         type="text"
       />
