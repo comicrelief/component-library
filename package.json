@@ -76,6 +76,7 @@
     "@babel/preset-react": "^7.24.0",
     "@playwright/test": "^1.38.1",
     "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.5.0",
     "babel-jest": "^29.7.0",
     "babel-plugin-styled-components": "^2.1.4",
     "dotenv": "^17.4.2",

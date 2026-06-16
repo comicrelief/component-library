@@ -1,8 +1,14 @@
 import { defineConfig, transformWithEsbuild } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
+import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
+  css: {
+    postcss: {
+      plugins: [autoprefixer()],
+    },
+  },
   plugins: [
     {
       name: 'treat-js-as-jsx',
