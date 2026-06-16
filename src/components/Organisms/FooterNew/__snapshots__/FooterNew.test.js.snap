@@ -898,7 +898,6 @@ exports[`does not render copyright text when not supplied 1`] = `
                 </div>
                 <div
                   className="c13"
-                  error={false}
                 >
                   <div
                     className="c14"
@@ -2207,7 +2206,6 @@ exports[`renders correctly 1`] = `
                 </div>
                 <div
                   className="c13"
-                  error={false}
                 >
                   <div
                     className="c14"
