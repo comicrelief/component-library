@@ -630,10 +630,7 @@ exports[`Stats Slices with a single node should render 1`] = `
 }
 
 <div
-  backgroundColour="teal_dark"
   className="c0"
-  paddingBottom="2rem"
-  paddingTop="2rem"
 >
   <div
     className="c1"
@@ -662,8 +659,6 @@ exports[`Stats Slices with a single node should render 1`] = `
               <div
                 className="c8"
                 data-ease="none"
-                delay={80}
-                duration="2000ms"
               >
                 <div>
                    
@@ -711,8 +706,6 @@ exports[`Stats Slices with a single node should render 1`] = `
               <div
                 className="c9"
                 data-ease="none"
-                delay={160}
-                duration="2000ms"
               >
                 <div>
                    
@@ -760,8 +753,6 @@ exports[`Stats Slices with a single node should render 1`] = `
               <div
                 className="c10"
                 data-ease="none"
-                delay={240}
-                duration="2000ms"
               >
                 <div>
                    
@@ -809,8 +800,6 @@ exports[`Stats Slices with a single node should render 1`] = `
               <div
                 className="c11"
                 data-ease="none"
-                delay={320}
-                duration="1600ms"
               >
                 <div>
                    
@@ -831,8 +820,6 @@ exports[`Stats Slices with a single node should render 1`] = `
               <div
                 className="c12"
                 data-ease="none"
-                delay={400}
-                duration="2000ms"
               >
                 <div>
                    
@@ -880,8 +867,6 @@ exports[`Stats Slices with a single node should render 1`] = `
               <div
                 className="c13"
                 data-ease="none"
-                delay={480}
-                duration="2000ms"
               >
                 <div>
                    
@@ -929,8 +914,6 @@ exports[`Stats Slices with a single node should render 1`] = `
               <div
                 className="c14"
                 data-ease="none"
-                delay={560}
-                duration="2000ms"
               >
                 <div>
                    
@@ -978,8 +961,6 @@ exports[`Stats Slices with a single node should render 1`] = `
               <div
                 className="c15"
                 data-ease="none"
-                delay={640}
-                duration="1600ms"
               >
                 <div>
                    
@@ -1000,8 +981,6 @@ exports[`Stats Slices with a single node should render 1`] = `
               <div
                 className="c16"
                 data-ease="none"
-                delay={720}
-                duration="2000ms"
               >
                 <div>
                    
@@ -1049,8 +1028,6 @@ exports[`Stats Slices with a single node should render 1`] = `
               <div
                 className="c17"
                 data-ease="none"
-                delay={800}
-                duration="2000ms"
               >
                 <div>
                    
@@ -1098,8 +1075,6 @@ exports[`Stats Slices with a single node should render 1`] = `
               <div
                 className="c18"
                 data-ease="none"
-                delay={880}
-                duration="2000ms"
               >
                 <div>
                    
@@ -1147,8 +1122,6 @@ exports[`Stats Slices with a single node should render 1`] = `
               <div
                 className="c19"
                 data-ease="none"
-                delay={960}
-                duration="1600ms"
               >
                 <div>
                    
@@ -1169,8 +1142,6 @@ exports[`Stats Slices with a single node should render 1`] = `
               <div
                 className="c20"
                 data-ease="none"
-                delay={1040}
-                duration="2000ms"
               >
                 <div>
                    
@@ -1218,8 +1189,6 @@ exports[`Stats Slices with a single node should render 1`] = `
               <div
                 className="c21"
                 data-ease="none"
-                delay={1120}
-                duration="2000ms"
               >
                 <div>
                    
@@ -1904,10 +1873,7 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
 }
 
 <div
-  backgroundColour="teal_dark"
   className="c0"
-  paddingBottom="2rem"
-  paddingTop="2rem"
 >
   <div
     className="c1"
@@ -1936,8 +1902,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c8"
                 data-ease="cubic"
-                delay={80}
-                duration="2000ms"
               >
                 <div>
                    
@@ -1985,8 +1949,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c9"
                 data-ease="cubic"
-                delay={160}
-                duration="2000ms"
               >
                 <div>
                    
@@ -2034,8 +1996,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c10"
                 data-ease="cubic"
-                delay={240}
-                duration="2000ms"
               >
                 <div>
                    
@@ -2083,8 +2043,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c11"
                 data-ease="cubic"
-                delay={320}
-                duration="1600ms"
               >
                 <div>
                    
@@ -2105,8 +2063,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c12"
                 data-ease="cubic"
-                delay={400}
-                duration="2000ms"
               >
                 <div>
                    
@@ -2154,8 +2110,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c13"
                 data-ease="cubic"
-                delay={480}
-                duration="2000ms"
               >
                 <div>
                    
@@ -2203,8 +2157,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c14"
                 data-ease="cubic"
-                delay={560}
-                duration="2000ms"
               >
                 <div>
                    
@@ -2252,8 +2204,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c15"
                 data-ease="cubic"
-                delay={640}
-                duration="1600ms"
               >
                 <div>
                    
@@ -2274,8 +2224,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c16"
                 data-ease="cubic"
-                delay={720}
-                duration="2000ms"
               >
                 <div>
                    
@@ -2323,8 +2271,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c17"
                 data-ease="cubic"
-                delay={800}
-                duration="2000ms"
               >
                 <div>
                    
@@ -2372,8 +2318,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c18"
                 data-ease="cubic"
-                delay={880}
-                duration="2000ms"
               >
                 <div>
                    
@@ -2421,8 +2365,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c19"
                 data-ease="cubic"
-                delay={960}
-                duration="1600ms"
               >
                 <div>
                    
@@ -2443,8 +2385,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c20"
                 data-ease="cubic"
-                delay={1040}
-                duration="2000ms"
               >
                 <div>
                    
@@ -2492,8 +2432,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c21"
                 data-ease="cubic"
-                delay={1120}
-                duration="2000ms"
               >
                 <div>
                    
@@ -2568,8 +2506,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c8"
                 data-ease="cubic"
-                delay={80}
-                duration="2000ms"
               >
                 <div>
                    
@@ -2617,8 +2553,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c9"
                 data-ease="cubic"
-                delay={160}
-                duration="2000ms"
               >
                 <div>
                    
@@ -2666,8 +2600,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c10"
                 data-ease="cubic"
-                delay={240}
-                duration="2000ms"
               >
                 <div>
                    
@@ -2715,8 +2647,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c11"
                 data-ease="cubic"
-                delay={320}
-                duration="1600ms"
               >
                 <div>
                    
@@ -2737,8 +2667,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c12"
                 data-ease="cubic"
-                delay={400}
-                duration="2000ms"
               >
                 <div>
                    
@@ -2786,8 +2714,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c13"
                 data-ease="cubic"
-                delay={480}
-                duration="2000ms"
               >
                 <div>
                    
@@ -2835,8 +2761,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c14"
                 data-ease="cubic"
-                delay={560}
-                duration="2000ms"
               >
                 <div>
                    
@@ -2884,8 +2808,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c15"
                 data-ease="cubic"
-                delay={640}
-                duration="1600ms"
               >
                 <div>
                    
@@ -2906,8 +2828,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c16"
                 data-ease="cubic"
-                delay={720}
-                duration="2000ms"
               >
                 <div>
                    
@@ -2955,8 +2875,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c17"
                 data-ease="cubic"
-                delay={800}
-                duration="2000ms"
               >
                 <div>
                    
@@ -3004,8 +2922,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c18"
                 data-ease="cubic"
-                delay={880}
-                duration="2000ms"
               >
                 <div>
                    
@@ -3053,8 +2969,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c19"
                 data-ease="cubic"
-                delay={960}
-                duration="1600ms"
               >
                 <div>
                    
@@ -3075,8 +2989,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c20"
                 data-ease="cubic"
-                delay={1040}
-                duration="2000ms"
               >
                 <div>
                    
@@ -3124,8 +3036,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c21"
                 data-ease="cubic"
-                delay={1120}
-                duration="2000ms"
               >
                 <div>
                    
@@ -3200,8 +3110,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c8"
                 data-ease="cubic"
-                delay={80}
-                duration="2000ms"
               >
                 <div>
                    
@@ -3249,8 +3157,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c9"
                 data-ease="cubic"
-                delay={160}
-                duration="2000ms"
               >
                 <div>
                    
@@ -3298,8 +3204,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c10"
                 data-ease="cubic"
-                delay={240}
-                duration="2000ms"
               >
                 <div>
                    
@@ -3347,8 +3251,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c11"
                 data-ease="cubic"
-                delay={320}
-                duration="1600ms"
               >
                 <div>
                    
@@ -3369,8 +3271,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c12"
                 data-ease="cubic"
-                delay={400}
-                duration="2000ms"
               >
                 <div>
                    
@@ -3418,8 +3318,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c13"
                 data-ease="cubic"
-                delay={480}
-                duration="2000ms"
               >
                 <div>
                    
@@ -3467,8 +3365,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c14"
                 data-ease="cubic"
-                delay={560}
-                duration="2000ms"
               >
                 <div>
                    
@@ -3516,8 +3412,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c15"
                 data-ease="cubic"
-                delay={640}
-                duration="1600ms"
               >
                 <div>
                    
@@ -3538,8 +3432,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c16"
                 data-ease="cubic"
-                delay={720}
-                duration="2000ms"
               >
                 <div>
                    
@@ -3587,8 +3479,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c17"
                 data-ease="cubic"
-                delay={800}
-                duration="2000ms"
               >
                 <div>
                    
@@ -3636,8 +3526,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c18"
                 data-ease="cubic"
-                delay={880}
-                duration="2000ms"
               >
                 <div>
                    
@@ -3685,8 +3573,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c19"
                 data-ease="cubic"
-                delay={960}
-                duration="1600ms"
               >
                 <div>
                    
@@ -3707,8 +3593,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c20"
                 data-ease="cubic"
-                delay={1040}
-                duration="2000ms"
               >
                 <div>
                    
@@ -3756,8 +3640,6 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
               <div
                 className="c21"
                 data-ease="cubic"
-                delay={1120}
-                duration="2000ms"
               >
                 <div>
                    

@@ -20,11 +20,11 @@ const ProgressRing = ({
   }, [videoProgress, thisCircumference]);
 
   return (
-    <ProgressRingWrapper videoProgress={videoProgress}>
+    <ProgressRingWrapper>
       <ProgressRingSVG height={thisRadius * 2} width={thisRadius * 2}>
         <ProgressRingCircle
           strokeDasharray={`${thisCircumference} ${thisCircumference}`}
-          strokeDashOffsetStyle={thisDashOffset}
+          $strokeDashOffsetStyle={thisDashOffset}
           strokeWidth={`${thisStroke}`}
           r={`${initNormRadius}`}
           cx={`${thisRadius}`}

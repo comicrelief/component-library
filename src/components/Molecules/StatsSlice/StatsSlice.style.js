@@ -5,8 +5,8 @@ import fontHelper from '../../../theme/crTheme/fontHelper';
 export const OuterWrapper = styled.div`
   display: flex;
   justify-content: center;
-  padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 1rem ${paddingBottom}`};
-  background: ${({ theme, backgroundColour }) => theme.color(backgroundColour)};
+  padding: ${({ $paddingTop, $paddingBottom }) => `${$paddingTop} 1rem ${$paddingBottom}`};
+  background: ${({ theme, $backgroundColour }) => theme.color($backgroundColour)};
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     padding-inline: 2rem;
@@ -70,7 +70,7 @@ export const ValueUnderline = styled.img`
   animation-name: ${clipIn};
   animation-duration: 0.7s;
   animation-timing-function: cubic-bezier(0.219, -0.011, 0.164, 0.987);
-  animation-delay: ${({ delay }) => delay}ms;
+  animation-delay: ${({ $delay }) => $delay}ms;
   animation-fill-mode: both;
 
   // ease = none and reduced motion both disable the transition
@@ -114,9 +114,9 @@ export const AnimatedDigit = styled.div`
   top: 0;
   left: 0;
 
-  transition-delay: ${({ delay }) => delay}ms;
+  transition-delay: ${({ $delay }) => $delay}ms;
   transition-property: transform;
-  transition-duration: ${({ duration }) => duration};
+  transition-duration: ${({ $duration }) => $duration};
 
   // ease = none and reduced motion both disable the transition
   @media (prefers-reduced-motion: reduce) {

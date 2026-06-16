@@ -220,11 +220,7 @@ exports[`renders a Quote Slice with basic props 1`] = `
 }
 
 <div
-  backgroundColour="teal_dark"
   className="c0"
-  paddingBottom="2rem"
-  paddingTop="2rem"
-  textColour="white"
 >
   <div
     className="c1"
@@ -237,7 +233,6 @@ exports[`renders a Quote Slice with basic props 1`] = `
     >
       <h2
         className="c4 c5"
-        ratio={1}
       >
         Heading
       </h2>
@@ -319,11 +314,7 @@ exports[`renders an empty Quote Slice with no options set 1`] = `
 }
 
 <div
-  backgroundColour="teal_dark"
   className="c0"
-  paddingBottom="2rem"
-  paddingTop="2rem"
-  textColour="white"
 >
   <div
     className="c1"

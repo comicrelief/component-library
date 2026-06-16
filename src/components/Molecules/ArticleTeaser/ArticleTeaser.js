@@ -44,10 +44,10 @@ const ArticleTeaser = ({
   const thisCampaignLogo = !isNewsTeaser && handleCampaignLogo(category);
 
   return (
-    <OuterWrapper isNewsTeaser={isNewsTeaser}>
-      <Link href={href} type="standard" category={category} isNewsTeaser={isNewsTeaser} underline={false}>
-        <InnerWrapper isNewsTeaser={isNewsTeaser}>
-          <ImageWrapper isNewsTeaser={isNewsTeaser}>
+    <OuterWrapper>
+      <Link href={href} type="standard" category={category} $isNewsTeaser={isNewsTeaser} underline={false}>
+        <InnerWrapper $isNewsTeaser={isNewsTeaser}>
+          <ImageWrapper $isNewsTeaser={isNewsTeaser}>
             <Image
               imageLow={isNewsTeaser ? imageLow : thisCampaignLogo}
               images={isNewsTeaser ? images : thisCampaignLogo}
@@ -58,14 +58,14 @@ const ArticleTeaser = ({
               height={!isNewsTeaser ? 'auto' : '100%'}
             />
           </ImageWrapper>
-          <CopyWrapper isNewsTeaser={isNewsTeaser}>
+          <CopyWrapper $isNewsTeaser={isNewsTeaser}>
             {date && (
               <Date size="xs" weight="bold">
                 {date}
               </Date>
             )}
             <Title
-              time={time}
+              $time={time}
               tag="h4"
             >
               {title}

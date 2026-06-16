@@ -248,13 +248,10 @@ exports[`renders Promo correctly 1`] = `
 }
 
 <div
-  backgroundColor="blue_dark"
   className="c0"
-  position="none"
 >
   <div
     className="c1"
-    imageRight={false}
   >
     <div
       className="c2 lazyload"
@@ -275,19 +272,12 @@ exports[`renders Promo correctly 1`] = `
   </div>
   <div
     className="c4"
-    copyLeft={false}
   >
     <div
-      behindTextGradient="none"
       className="c5"
-      copyLeft={false}
-      hasVideo={false}
     >
       <div
-        behindTextGradient="none"
         className="c6"
-        hasVideo={false}
-        position="none"
       >
         <h1
           className="c7"
@@ -572,13 +562,10 @@ exports[`renders Promo correctly end position 1`] = `
 }
 
 <div
-  backgroundColor="blue_dark"
   className="c0"
-  position="end"
 >
   <div
     className="c1"
-    imageRight={false}
   >
     <div
       className="c2 lazyload"
@@ -599,19 +586,12 @@ exports[`renders Promo correctly end position 1`] = `
   </div>
   <div
     className="c4"
-    copyLeft={false}
   >
     <div
-      behindTextGradient="none"
       className="c5"
-      copyLeft={false}
-      hasVideo={false}
     >
       <div
-        behindTextGradient="none"
         className="c6"
-        hasVideo={false}
-        position="end"
       >
         <h1
           className="c7"

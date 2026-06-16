@@ -18,10 +18,10 @@ const Card = ({
   ...rest
 }) => (
   <Container
-    backgroundColor={backgroundColor}
-    squaredCorners={squaredCorners}
-    smallBreakpointRowLayout={smallBreakpointRowLayout}
-    mediumBreakpointRowLayout={mediumBreakpointRowLayout}
+    $backgroundColor={backgroundColor}
+    $squaredCorners={squaredCorners}
+    $smallBreakpointRowLayout={smallBreakpointRowLayout}
+    $mediumBreakpointRowLayout={mediumBreakpointRowLayout}
     {...rest}
   >
     {imageLow ? (
@@ -42,8 +42,8 @@ const Card = ({
     {children
       ? (
         <Copy
-          smallBreakpointRowLayout={smallBreakpointRowLayout}
-          mediumBreakpointRowLayout={mediumBreakpointRowLayout}
+          $smallBreakpointRowLayout={smallBreakpointRowLayout}
+          $mediumBreakpointRowLayout={mediumBreakpointRowLayout}
         >
           {children}
         </Copy>

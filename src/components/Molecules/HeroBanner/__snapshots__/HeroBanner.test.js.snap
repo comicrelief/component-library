@@ -205,19 +205,12 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
 
 <div
   className="c0"
-  paddingBottom="2rem"
-  paddingTop="0rem"
-  pageBackgroundColour="teal_light"
-  variant="full_height_media"
 >
   <div
     className="c1"
-    textBannerCopyBackgroundColour="deep_violet"
-    variant="full_height_media"
   >
     <div
       className="c2"
-      variant="full_height_media"
     >
       <div
         className="c3 lazyload"
@@ -238,19 +231,12 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
     </div>
     <div
       className="c5"
-      copyLeft={true}
-      variant="full_height_media"
     >
       <div
         className="c6"
-        copyLeft={true}
-        variant="full_height_media"
       >
         <div
           className="c7"
-          copyColour="black"
-          textBannerCopyBackgroundColour="deep_violet"
-          variant="full_height_media"
         >
           <h1
             className="c8"
@@ -474,19 +460,12 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
 
 <div
   className="c0"
-  paddingBottom="2rem"
-  paddingTop="0rem"
-  pageBackgroundColour="teal_light"
-  variant="half_height_media"
 >
   <div
     className="c1"
-    textBannerCopyBackgroundColour="deep_violet"
-    variant="half_height_media"
   >
     <div
       className="c2"
-      variant="half_height_media"
     >
       <div
         className="c3 lazyload"
@@ -507,19 +486,12 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
     </div>
     <div
       className="c5"
-      copyLeft={false}
-      variant="half_height_media"
     >
       <div
         className="c6"
-        copyLeft={false}
-        variant="half_height_media"
       >
         <div
           className="c7"
-          copyColour="black"
-          textBannerCopyBackgroundColour="deep_violet"
-          variant="half_height_media"
         >
           <h1
             className="c8"
@@ -711,31 +683,18 @@ exports[`renders "Text Banner" Hero Banner correctly 1`] = `
 
 <div
   className="c0"
-  paddingBottom="2rem"
-  paddingTop="0rem"
-  pageBackgroundColour="teal_light"
-  variant="text_banner"
 >
   <div
     className="c1"
-    textBannerCopyBackgroundColour="deep_violet"
-    variant="text_banner"
   >
     <div
       className="c2"
-      copyLeft={false}
-      variant="text_banner"
     >
       <div
         className="c3"
-        copyLeft={false}
-        variant="text_banner"
       >
         <div
           className="c4"
-          copyColour="black"
-          textBannerCopyBackgroundColour="deep_violet"
-          variant="text_banner"
         >
           <h1
             className="c5"
@@ -994,19 +953,12 @@ exports[`renders "Text Banner" Hero Banner correctly 2`] = `
 
 <div
   className="c0"
-  paddingBottom="2rem"
-  paddingTop="2rem"
-  pageBackgroundColour="teal_light"
-  variant="full_height_media"
 >
   <div
     className="c1"
-    textBannerCopyBackgroundColour="deep_violet"
-    variant="full_height_media"
   >
     <div
       className="c2"
-      variant="full_height_media"
     >
       <div
         className="c3 lazyload"
@@ -1027,19 +979,12 @@ exports[`renders "Text Banner" Hero Banner correctly 2`] = `
     </div>
     <div
       className="c5"
-      copyLeft={true}
-      variant="full_height_media"
     >
       <div
         className="c6"
-        copyLeft={true}
-        variant="full_height_media"
       >
         <div
           className="c7"
-          copyColour="black"
-          textBannerCopyBackgroundColour="deep_violet"
-          variant="full_height_media"
         >
           <h1
             className="c8"
@@ -1056,11 +1001,9 @@ exports[`renders "Text Banner" Hero Banner correctly 2`] = `
     </div>
     <div
       className="c10"
-      imageRight={true}
     >
       <div
         className="c11 c12"
-        imageRight={true}
       >
         <img
           alt=""

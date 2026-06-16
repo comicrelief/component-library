@@ -179,21 +179,17 @@ exports[`renders Column view correctly 1`] = `
 
 <div
   className="c0"
-  isCarousel={true}
 >
   <a
     aria-hidden="true"
     className="c1"
     data-image-cta-copy="Find out more"
     href="/home"
-    isCarousel={true}
     tabIndex="-1"
     target="_blank"
   >
     <div
       className="c2"
-      hasLink="/home"
-      isCarousel={true}
     >
       <div
         className="c3 lazyload"
@@ -214,18 +210,12 @@ exports[`renders Column view correctly 1`] = `
     </div>
   </a>
   <div
-    backgroundColor="white"
     className="c5"
-    hasImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
-    hasLink="/home"
-    isCarousel={true}
   >
     Column view
   </div>
   <div
     className="c6"
-    hasImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
-    isCarousel={true}
   >
     <a
       className="c7"
@@ -481,7 +471,6 @@ exports[`renders correctly 1`] = `
   >
     <div
       className="c2"
-      hasLink="/home"
     >
       <div
         className="c3 lazyload"
@@ -502,16 +491,12 @@ exports[`renders correctly 1`] = `
     </div>
   </a>
   <div
-    backgroundColor="white"
     className="c5"
-    hasImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
-    hasLink="/home"
   >
     Text body copy description
   </div>
   <div
     className="c6"
-    hasImage="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
   >
     <a
       className="c7"

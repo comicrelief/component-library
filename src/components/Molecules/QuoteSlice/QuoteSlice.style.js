@@ -8,9 +8,9 @@ const OuterWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 1rem ${paddingBottom}`};
-  background-color: ${({ theme, backgroundColour }) => theme.color(backgroundColour)};
-  color: ${({ theme, textColour }) => theme.color(textColour)};
+  padding: ${({ $paddingTop, $paddingBottom }) => `${$paddingTop} 1rem ${$paddingBottom}`};
+  background-color: ${({ theme, $backgroundColour }) => theme.color($backgroundColour)};
+  color: ${({ theme, $textColour }) => theme.color($textColour)};
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     padding-left: 2rem;
@@ -61,7 +61,7 @@ const Heading = styled(Text)`
   line-height: 1;
   text-align: center;
   text-wrap: balance;
-  --ratio: ${({ ratio }) => ratio || 1};
+  --ratio: ${({ $ratio }) => $ratio || 1};
   font-size: clamp(1.5rem, calc(var(--ratio) * 3rem), 3rem);
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {

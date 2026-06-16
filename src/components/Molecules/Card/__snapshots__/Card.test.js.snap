@@ -51,16 +51,10 @@ exports[`renders correctly 1`] = `
 }
 
 <div
-  backgroundColor="yellow"
   className="c0"
-  mediumBreakpointRowLayout={null}
-  smallBreakpointRowLayout={null}
-  squaredCorners={false}
 >
   <div
     className="c1"
-    mediumBreakpointRowLayout={null}
-    smallBreakpointRowLayout={null}
   >
     <h2>
       Title
@@ -123,18 +117,12 @@ exports[`renders correctly 2`] = `
 }
 
 <div
-  backgroundColor="yellow"
   className="c0"
   mediumBreakpointLayout="Row"
-  mediumBreakpointRowLayout={null}
   smallBreakpointLayout="Row"
-  smallBreakpointRowLayout={null}
-  squaredCorners={false}
 >
   <div
     className="c1"
-    mediumBreakpointRowLayout={null}
-    smallBreakpointRowLayout={null}
   >
     <h2>
       Title
@@ -199,11 +187,7 @@ exports[`renders correctly with no body 1`] = `
 }
 
 <div
-  backgroundColor="yellow"
   className="c0"
-  mediumBreakpointRowLayout={null}
-  smallBreakpointRowLayout={null}
-  squaredCorners={false}
 >
   <div
     className="c1"

@@ -133,39 +133,14 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 }
 
 <div
-  backgroundColor="purple"
   className="c0"
-  copyFirst={false}
-  fullImage={false}
-  hasVideo={false}
   id="single-msg__5"
-  isPlaying={false}
-  landscapeVideo={false}
-  paddingBottom="0rem"
-  paddingTop="0rem"
-  smPaddingBottom="0rem"
-  smPaddingTop="0rem"
-  vhFull={true}
 >
   <div
     className="c1"
-    doubleImage={null}
-    fullImage={false}
-    hasVideo={false}
-    isBuffering={false}
-    isPlaying={false}
-    landscapeVideo={false}
-    vhFull={true}
   >
     <div
       className="c2"
-      doubleImage={null}
-      fullImage={false}
-      hasVideo={false}
-      isBuffering={false}
-      isPlaying={false}
-      landscapeVideo={false}
-      vhFull={true}
     >
       <div
         className="c3 lazyload"
@@ -187,13 +162,6 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   </div>
   <div
     className="c5"
-    copyFirst={false}
-    fullImage={false}
-    hasImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
-    hasVideo={false}
-    paddingBottom="2rem"
-    paddingTop="2rem"
-    vhFull={true}
   >
     <p
       className="c6"
@@ -425,39 +393,14 @@ exports[`renders Single Message with Image correctly 1`] = `
 }
 
 <div
-  backgroundColor="purple"
   className="c0"
-  copyFirst={false}
-  fullImage={false}
-  hasVideo={false}
   id="single-msg__1"
-  isPlaying={false}
-  landscapeVideo={false}
-  paddingBottom="0rem"
-  paddingTop="0rem"
-  smPaddingBottom="0rem"
-  smPaddingTop="0rem"
-  vhFull={false}
 >
   <div
     className="c1"
-    doubleImage={null}
-    fullImage={false}
-    hasVideo={false}
-    isBuffering={false}
-    isPlaying={false}
-    landscapeVideo={false}
-    vhFull={false}
   >
     <div
       className="c2"
-      doubleImage={null}
-      fullImage={false}
-      hasVideo={false}
-      isBuffering={false}
-      isPlaying={false}
-      landscapeVideo={false}
-      vhFull={false}
     >
       <div
         className="c3 lazyload"
@@ -479,13 +422,6 @@ exports[`renders Single Message with Image correctly 1`] = `
   </div>
   <div
     className="c5"
-    copyFirst={false}
-    fullImage={false}
-    hasImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
-    hasVideo={false}
-    paddingBottom="2rem"
-    paddingTop="2rem"
-    vhFull={false}
   >
     <h1
       className="c6"
@@ -637,39 +573,14 @@ exports[`renders Single Message with double image correctly 1`] = `
 }
 
 <div
-  backgroundColor="yellow"
   className="c0"
-  copyFirst={false}
-  fullImage={false}
-  hasVideo={false}
   id="single-msg__6"
-  isPlaying={false}
-  landscapeVideo={false}
-  paddingBottom="0rem"
-  paddingTop="0rem"
-  smPaddingBottom="0rem"
-  smPaddingTop="0rem"
-  vhFull={false}
 >
   <div
     className="c1"
-    doubleImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
-    fullImage={false}
-    hasVideo={false}
-    isBuffering={false}
-    isPlaying={false}
-    landscapeVideo={false}
-    vhFull={false}
   >
     <div
       className="c2"
-      doubleImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
-      fullImage={false}
-      hasVideo={false}
-      isBuffering={false}
-      isPlaying={false}
-      landscapeVideo={false}
-      vhFull={false}
     >
       <div
         className="c3 lazyload"
@@ -690,8 +601,6 @@ exports[`renders Single Message with double image correctly 1`] = `
     </div>
     <div
       className="c2"
-      doubleImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
-      vhFull={false}
     >
       <div
         className="c3 lazyload"
@@ -713,13 +622,6 @@ exports[`renders Single Message with double image correctly 1`] = `
   </div>
   <div
     className="c5"
-    copyFirst={false}
-    fullImage={false}
-    hasImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
-    hasVideo={false}
-    paddingBottom="2rem"
-    paddingTop="2rem"
-    vhFull={false}
   >
     <p
       className="c6"
@@ -971,39 +873,14 @@ exports[`renders Single Message with full width correctly 1`] = `
 }
 
 <div
-  backgroundColor="purple"
   className="c0"
-  copyFirst={false}
-  fullImage={true}
-  hasVideo={false}
   id="single-msg__3"
-  isPlaying={false}
-  landscapeVideo={false}
-  paddingBottom="0rem"
-  paddingTop="0rem"
-  smPaddingBottom="0rem"
-  smPaddingTop="0rem"
-  vhFull={false}
 >
   <div
     className="c1"
-    doubleImage={null}
-    fullImage={true}
-    hasVideo={false}
-    isBuffering={false}
-    isPlaying={false}
-    landscapeVideo={false}
-    vhFull={false}
   >
     <div
       className="c2"
-      doubleImage={null}
-      fullImage={true}
-      hasVideo={false}
-      isBuffering={false}
-      isPlaying={false}
-      landscapeVideo={false}
-      vhFull={false}
     >
       <div
         className="c3 lazyload"
@@ -1025,13 +902,6 @@ exports[`renders Single Message with full width correctly 1`] = `
   </div>
   <div
     className="c5"
-    copyFirst={false}
-    fullImage={true}
-    hasImage="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
-    hasVideo={false}
-    paddingBottom="2rem"
-    paddingTop="2rem"
-    vhFull={false}
   >
     <h1
       className="c6"
@@ -1131,39 +1001,14 @@ exports[`renders Single Message with full width image and no text correctly 1`] 
 }
 
 <div
-  backgroundColor="purple"
   className="c0"
-  copyFirst={false}
-  fullImage={true}
-  hasVideo={false}
   id="single-msg__4"
-  isPlaying={false}
-  landscapeVideo={false}
-  paddingBottom="0rem"
-  paddingTop="0rem"
-  smPaddingBottom="0rem"
-  smPaddingTop="0rem"
-  vhFull={false}
 >
   <div
     className="c1"
-    doubleImage={null}
-    fullImage={true}
-    hasVideo={false}
-    isBuffering={false}
-    isPlaying={false}
-    landscapeVideo={false}
-    vhFull={false}
   >
     <div
       className="c2"
-      doubleImage={null}
-      fullImage={true}
-      hasVideo={false}
-      isBuffering={false}
-      isPlaying={false}
-      landscapeVideo={false}
-      vhFull={false}
     >
       <div
         className="c3 lazyload"
@@ -1275,29 +1120,11 @@ exports[`renders Single Message with no Image correctly 1`] = `
 }
 
 <div
-  backgroundColor="purple"
   className="c0"
-  copyFirst={false}
-  fullImage={false}
-  hasVideo={false}
   id="single-msg__2"
-  isPlaying={false}
-  landscapeVideo={false}
-  paddingBottom="2rem"
-  paddingTop="2rem"
-  smPaddingBottom="2rem"
-  smPaddingTop="2rem"
-  vhFull={false}
 >
   <div
     className="c1"
-    copyFirst={false}
-    fullImage={false}
-    hasImage={false}
-    hasVideo={false}
-    paddingBottom="2rem"
-    paddingTop="2rem"
-    vhFull={false}
   >
     <p
       className="c2"

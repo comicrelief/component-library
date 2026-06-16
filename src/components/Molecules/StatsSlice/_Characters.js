@@ -33,8 +33,8 @@ export function AnimatedStringCharacter({
       <SpacingCharacter>{character}</SpacingCharacter>
       <AnimatedDigit
         ref={digitRef}
-        duration={characterDuration}
-        delay={delay}
+        $duration={characterDuration}
+        $delay={delay}
         data-ease={ease}
       >
         <div>&nbsp;</div>
@@ -66,8 +66,8 @@ export function AnimatedNumberCharacter({
       <SpacingCharacter>{character}</SpacingCharacter>
       <AnimatedDigit
         ref={digitRef}
-        duration={characterDuration}
-        delay={delay}
+        $duration={characterDuration}
+        $delay={delay}
         data-ease={ease}
       >
         <div>&nbsp;</div>

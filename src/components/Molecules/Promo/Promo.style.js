@@ -9,23 +9,23 @@ const Container = styled.div`
   position: relative;
   flex-direction: column;
   overflow: hidden;
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  background: ${({ theme, $backgroundColor }) => theme.color($backgroundColor)};
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     flex-direction: row;
   }
-  ${({ position }) => position === 'upper' && css`
+  ${({ $position }) => $position === 'upper' && css`
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     @media ${({ theme }) => theme.allBreakpoints('L')} {
       clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
   `}
-  ${({ position }) => position === 'lower' && css`
+  ${({ $position }) => $position === 'lower' && css`
     clip-path: polygon(0 10%,100% 0,100% 100%,0 100%);
     @media ${({ theme }) => theme.allBreakpoints('L')} {
       clip-path: polygon(0 15%,100% 0,100% 100%,0 100%);
     }
   `}
-  ${({ position }) => position === 'end' && css`
+  ${({ $position }) => $position === 'end' && css`
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 101%);
     border-radius: 0 0 0 2rem;
     @media ${({ theme }) => theme.allBreakpoints('L')} {
@@ -46,7 +46,7 @@ const Wrapper = styled.div`
   align-items: center;
   position: relative;
 
-  ${({ copyLeft }) => !copyLeft && 'justify-content: flex-end'};
+  ${({ $copyLeft }) => !$copyLeft && 'justify-content: flex-end'};
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     min-height: calc(100vh - 90px);
   }
@@ -62,7 +62,7 @@ const Copy = styled.div`
     padding: ${spacing('xxl')} ${spacing('m')};
   }
 
-  ${({ position }) => position === 'lower' && css`
+  ${({ $position }) => $position === 'lower' && css`
     padding: ${spacing('xl')} ${spacing('m')};
     @media ${({ theme }) => theme.allBreakpoints('L')} {
       padding: 6rem ${spacing('m')};
@@ -103,15 +103,15 @@ const Gradient = styled.div`
     top: 0;
     left: 0;
 
-    ${({ copyLeft }) => (!copyLeft) && css`
+    ${({ $copyLeft }) => (!$copyLeft) && css`
       left: auto;
       right: 0;
     `};
 
-    ${({ hasVideo, behindTextGradient }) => (hasVideo !== false && behindTextGradient !== 'none') && css`
+    ${({ $hasVideo, $behindTextGradient }) => ($hasVideo !== false && $behindTextGradient !== 'none') && css`
       overflow: hidden;
-      background-color:${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
-      box-shadow: 0px 0px 50px 60px ${behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
+      background-color:${$behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
+      box-shadow: 0px 0px 50px 60px ${$behindTextGradient === 'black' ? 'rgba(0,0,0,0.5)' : 'rgba(255, 255, 255, 0.5)'};
    `};
   }
 `;

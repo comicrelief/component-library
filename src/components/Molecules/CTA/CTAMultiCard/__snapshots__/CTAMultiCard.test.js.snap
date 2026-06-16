@@ -5,7 +5,6 @@ exports[`handles data structure correctly 1`] = `
   className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 ktuUJR"
 >
   <div
-    backgroundColor="white"
     className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 jTdLyp"
   >
     <div
@@ -13,21 +12,13 @@ exports[`handles data structure correctly 1`] = `
     >
       <div
         className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 souje"
-        columns={3}
-        isCarousel={false}
-        useSplideCarousel={false}
       >
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-4 hjXEoP"
-          columns={3}
-          hasLink={true}
-          isCarousel={false}
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
             href="/test"
-            isCarousel={false}
-            isInteractive={true}
             rel={null}
             target="_self"
             type="standard"
@@ -112,14 +103,9 @@ exports[`handles data structure correctly 1`] = `
         </div>
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-4 eseoFy"
-          columns={3}
-          hasLink={false}
-          isCarousel={false}
         >
           <div
             className="CTACardstyle__CardLink-sc-si8xx1-3 gyQApU"
-            isCarousel={false}
-            isInteractive={false}
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 cVegjR"
@@ -161,15 +147,10 @@ exports[`handles data structure correctly 1`] = `
         </div>
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-4 hjXEoP"
-          columns={3}
-          hasLink={true}
-          isCarousel={false}
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
             href="/test"
-            isCarousel={false}
-            isInteractive={true}
             rel={null}
             target="_self"
             type="standard"
@@ -254,15 +235,10 @@ exports[`handles data structure correctly 1`] = `
         </div>
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-4 hjXEoP"
-          columns={3}
-          hasLink={true}
-          isCarousel={false}
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
             href="/test-no-image"
-            isCarousel={false}
-            isInteractive={true}
             rel={null}
             target="_self"
             type="standard"
@@ -333,7 +309,6 @@ exports[`renders 2 columns layout correctly 1`] = `
   className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 ktuUJR"
 >
   <div
-    backgroundColor="transparent"
     className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 kCFZDg"
   >
     <div
@@ -341,21 +316,13 @@ exports[`renders 2 columns layout correctly 1`] = `
     >
       <div
         className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 kIbkZO"
-        columns={2}
-        isCarousel={true}
-        useSplideCarousel={false}
       >
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-4 kTsTUB"
-          columns={2}
-          hasLink={true}
-          isCarousel={true}
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
             href="/test"
-            isCarousel={true}
-            isInteractive={true}
             rel={null}
             target="_self"
             type="standard"
@@ -440,14 +407,9 @@ exports[`renders 2 columns layout correctly 1`] = `
         </div>
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-4 hzEwtQ"
-          columns={2}
-          hasLink={false}
-          isCarousel={true}
         >
           <div
             className="CTACardstyle__CardLink-sc-si8xx1-3 gyQApU"
-            isCarousel={true}
-            isInteractive={false}
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 cVegjR"
@@ -489,15 +451,10 @@ exports[`renders 2 columns layout correctly 1`] = `
         </div>
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-4 kTsTUB"
-          columns={2}
-          hasLink={true}
-          isCarousel={true}
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
             href="/test"
-            isCarousel={true}
-            isInteractive={true}
             rel={null}
             target="_self"
             type="standard"
@@ -582,15 +539,10 @@ exports[`renders 2 columns layout correctly 1`] = `
         </div>
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-4 kTsTUB"
-          columns={2}
-          hasLink={true}
-          isCarousel={true}
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
             href="/test-no-image"
-            isCarousel={true}
-            isInteractive={true}
             rel={null}
             target="_self"
             type="standard"
@@ -661,7 +613,6 @@ exports[`renders carousel mode correctly 1`] = `
   className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 ktuUJR"
 >
   <div
-    backgroundColor="transparent"
     className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 kCFZDg"
   >
     <div
@@ -669,21 +620,13 @@ exports[`renders carousel mode correctly 1`] = `
     >
       <div
         className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 lnGDvP"
-        columns={3}
-        isCarousel={true}
-        useSplideCarousel={false}
       >
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-4 iLnsYy"
-          columns={3}
-          hasLink={true}
-          isCarousel={true}
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
             href="/test"
-            isCarousel={true}
-            isInteractive={true}
             rel={null}
             target="_self"
             type="standard"
@@ -768,14 +711,9 @@ exports[`renders carousel mode correctly 1`] = `
         </div>
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-4 fIFzsn"
-          columns={3}
-          hasLink={false}
-          isCarousel={true}
         >
           <div
             className="CTACardstyle__CardLink-sc-si8xx1-3 gyQApU"
-            isCarousel={true}
-            isInteractive={false}
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 cVegjR"
@@ -817,15 +755,10 @@ exports[`renders carousel mode correctly 1`] = `
         </div>
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-4 iLnsYy"
-          columns={3}
-          hasLink={true}
-          isCarousel={true}
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
             href="/test"
-            isCarousel={true}
-            isInteractive={true}
             rel={null}
             target="_self"
             type="standard"
@@ -910,15 +843,10 @@ exports[`renders carousel mode correctly 1`] = `
         </div>
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-4 iLnsYy"
-          columns={3}
-          hasLink={true}
-          isCarousel={true}
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
             href="/test-no-image"
-            isCarousel={true}
-            isInteractive={true}
             rel={null}
             target="_self"
             type="standard"
@@ -989,7 +917,6 @@ exports[`renders correctly with data prop 1`] = `
   className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 ktuUJR"
 >
   <div
-    backgroundColor="transparent"
     className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 kCFZDg"
   >
     <div
@@ -997,21 +924,13 @@ exports[`renders correctly with data prop 1`] = `
     >
       <div
         className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 lnGDvP"
-        columns={3}
-        isCarousel={true}
-        useSplideCarousel={false}
       >
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-4 iLnsYy"
-          columns={3}
-          hasLink={true}
-          isCarousel={true}
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
             href="/test"
-            isCarousel={true}
-            isInteractive={true}
             rel={null}
             target="_self"
             type="standard"
@@ -1096,14 +1015,9 @@ exports[`renders correctly with data prop 1`] = `
         </div>
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-4 fIFzsn"
-          columns={3}
-          hasLink={false}
-          isCarousel={true}
         >
           <div
             className="CTACardstyle__CardLink-sc-si8xx1-3 gyQApU"
-            isCarousel={true}
-            isInteractive={false}
           >
             <div
               className="CTACardstyle__ImageWrapper-sc-si8xx1-0 cVegjR"
@@ -1145,15 +1059,10 @@ exports[`renders correctly with data prop 1`] = `
         </div>
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-4 iLnsYy"
-          columns={3}
-          hasLink={true}
-          isCarousel={true}
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
             href="/test"
-            isCarousel={true}
-            isInteractive={true}
             rel={null}
             target="_self"
             type="standard"
@@ -1238,15 +1147,10 @@ exports[`renders correctly with data prop 1`] = `
         </div>
         <div
           className="CTACardstyle__CardWrapper-sc-si8xx1-4 iLnsYy"
-          columns={3}
-          hasLink={true}
-          isCarousel={true}
         >
           <a
             className="Linkstyle__StyledLink-sc-t360tr-1 hOnWnU CTACardstyle__CardLink-sc-si8xx1-3 gusHpY"
             href="/test-no-image"
-            isCarousel={true}
-            isInteractive={true}
             rel={null}
             target="_self"
             type="standard"

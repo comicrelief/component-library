@@ -370,33 +370,23 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 <div
-  backgroundColor="transparent"
   className="c0"
-  paddingAbove="1rem"
-  paddingBelow="2rem"
 >
   <div
     className="c1"
   >
     <div
       className="c2"
-      hasLink={true}
-      isCarousel={false}
-      isFullWidth={true}
     >
       <a
         className="c3 c4"
         href="/test"
-        isCarousel={false}
-        isInteractive={true}
-        isSingleCard={true}
         rel={null}
         target="_self"
         type="standard"
       >
         <div
           className="c5 c6"
-          isSingleCard={true}
         >
           <div
             className="c7 lazyload"
@@ -417,7 +407,6 @@ exports[`renders correctly with data prop 1`] = `
         </div>
         <div
           className="c9"
-          isSingleCard={true}
         >
           <div
             className="c10"
@@ -787,33 +776,23 @@ exports[`renders correctly without image 1`] = `
 }
 
 <div
-  backgroundColor="transparent"
   className="c0"
-  paddingAbove="1rem"
-  paddingBelow="2rem"
 >
   <div
     className="c1"
   >
     <div
       className="c2"
-      hasLink={true}
-      isCarousel={false}
-      isFullWidth={true}
     >
       <a
         className="c3 c4"
         href="/test-no-image"
-        isCarousel={false}
-        isInteractive={true}
-        isSingleCard={true}
         rel={null}
         target="_self"
         type="standard"
       >
         <div
           className="c5"
-          isSingleCard={true}
         >
           <div
             className="c6"

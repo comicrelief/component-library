@@ -22,7 +22,7 @@ const Image = styled.div`
   height: auto;
   flex-basis: calc(100% / 3);
   img {
-    border-radius: ${props => (props.squaredCorners ? '0' : '1rem')};
+    border-radius: ${props => (props.$squaredCorners ? '0' : '1rem')};
     overflow: hidden;
   }
 `;
@@ -55,7 +55,7 @@ const Box = ({
 }) => (
   <Container {...rest}>
     {imageLow ? (
-      <Image squaredCorners={squaredCorners}>
+      <Image $squaredCorners={squaredCorners}>
         <Picture
           alt={imageAltText}
           imageLow={imageLow}

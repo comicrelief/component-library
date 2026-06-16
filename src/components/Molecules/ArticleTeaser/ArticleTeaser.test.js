@@ -366,23 +366,19 @@ it('renders article teaser correctly', () => {
 
 <article
   className="c0"
-  isNewsTeaser={true}
 >
   <a
     category={null}
     className="c1 c2"
     href="/test"
-    isNewsTeaser={true}
     target="_self"
     type="standard"
   >
     <div
       className="c3 c4"
-      isNewsTeaser={true}
     >
       <div
         className="c5"
-        isNewsTeaser={true}
       >
         <div
           className="c6 c7 c8"
@@ -403,7 +399,6 @@ it('renders article teaser correctly', () => {
       </div>
       <div
         className="c10"
-        isNewsTeaser={true}
       >
         <span
           className="c11 c12"
@@ -412,7 +407,6 @@ it('renders article teaser correctly', () => {
         </span>
         <h4
           className="c13 c14"
-          time={null}
         >
           News article
         </h4>
@@ -794,23 +788,19 @@ it('renders press realese correctly', () => {
 
 <article
   className="c0"
-  isNewsTeaser={false}
 >
   <a
     category=""
     className="c1 c2"
     href="/test"
-    isNewsTeaser={false}
     target="_self"
     type="standard"
   >
     <div
       className="c3 c4"
-      isNewsTeaser={false}
     >
       <div
         className="c5"
-        isNewsTeaser={false}
       >
         <div
           className="c6 c7 c8"
@@ -831,7 +821,6 @@ it('renders press realese correctly', () => {
       </div>
       <div
         className="c10"
-        isNewsTeaser={false}
       >
         <span
           className="c11 c12"
@@ -840,7 +829,6 @@ it('renders press realese correctly', () => {
         </span>
         <h4
           className="c13 c14"
-          time={null}
         >
           Press Release
         </h4>

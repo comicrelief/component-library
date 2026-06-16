@@ -62,10 +62,10 @@ const QuoteSlice = ({
 
   return (
     <OuterWrapper
-      backgroundColour={pageBackgroundColour}
-      textColour={textColour}
-      paddingTop={paddingTop}
-      paddingBottom={paddingBottom}
+      $backgroundColour={pageBackgroundColour}
+      $textColour={textColour}
+      $paddingTop={paddingTop}
+      $paddingBottom={paddingBottom}
     >
       <InnerWrapper>
         <PictureWrapper>
@@ -99,7 +99,7 @@ const QuoteSlice = ({
         </PictureWrapper>
         <TextWrapper>
           {heading && (
-            <Heading tag="h2" ratio={ratio}>
+            <Heading tag="h2" $ratio={ratio}>
               {heading}
             </Heading>
           )}

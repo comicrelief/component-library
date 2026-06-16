@@ -32,9 +32,9 @@ const CTASingleCard = ({ data }) => {
 
   return (
     <SingleCardWrapper
-      paddingAbove={paddingAbove}
-      paddingBelow={paddingBelow}
-      backgroundColor={sectionBackgroundColour}
+      $paddingAbove={paddingAbove}
+      $paddingBelow={paddingBelow}
+      $backgroundColor={sectionBackgroundColour}
     >
       <SingleCardInner>
         <CTACard

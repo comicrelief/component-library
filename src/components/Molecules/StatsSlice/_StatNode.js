@@ -113,7 +113,7 @@ export default function StatNodeComponent({
         {isVisible && (
         <ValueUnderline
           src={altCtaUnderline}
-          delay={startDelayRef.current + duration * 1.5}
+          $delay={startDelayRef.current + duration * 1.5}
           data-ease={ease}
         />
         )}

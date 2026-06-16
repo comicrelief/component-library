@@ -51,14 +51,14 @@ const HeroBanner = ({
 
   const copySection = (
     <Copy
-      variant={variant}
-      copyColour={copyColour}
-      textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}
+      $variant={variant}
+      $copyColour={copyColour}
+      $textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}
     >
       {children}
 
       {(hasCTA) && (
-        <CTAWrapper variant={variant}>
+        <CTAWrapper $variant={variant}>
           {(variant !== variants.TEXT_BANNER) ? (
             <>
               <CtaText className="cta">
@@ -99,19 +99,18 @@ const HeroBanner = ({
 
   return (
     <Container
-      pageBackgroundColour={pageBackgroundColour}
-      paddingTop={paddingTop}
-      paddingBottom={paddingBottom}
-      variant={variant}
+      $pageBackgroundColour={pageBackgroundColour}
+      $paddingTop={paddingTop}
+      $paddingBottom={paddingBottom}
+      $variant={variant}
     >
 
       <OuterWrapper
-        variant={variant}
-        textBannerCopyBackgroundColour={textBannerCopyBackgroundColour}
+        $variant={variant}
       >
 
         {(hasImage) && (
-          <MediaWrapper variant={variant}>
+          <MediaWrapper $variant={variant}>
             <PictureOrVideo
               images={imageSet}
               imageLow={imageLow}
@@ -131,8 +130,8 @@ const HeroBanner = ({
           </MediaWrapper>
         )}
 
-        <CopyOuterWrapper copyLeft={copyLeft} variant={variant}>
-          <CopyInnerWrapper copyLeft={copyLeft} variant={variant}>
+        <CopyOuterWrapper $copyLeft={copyLeft} $variant={variant}>
+          <CopyInnerWrapper $copyLeft={copyLeft} $variant={variant}>
             {/* Wraps the 'cards' in a link for non-Text Banners (which use CTA buttons) */}
             {hasCTA && variant !== variants.TEXT_BANNER ? (
               <HeroBannerLink href={ctaUrl} target={ctaNewTab ? '_blank' : '_self'}>
@@ -147,9 +146,9 @@ const HeroBanner = ({
         </CopyOuterWrapper>
 
         {(logoImage && variant !== variants.TEXT_BANNER) && (
-        <LogoImageWrapper imageRight={copyLeft}>
+        <LogoImageWrapper $imageRight={copyLeft}>
           <LogoImage
-            imageRight={copyLeft}
+            $imageRight={copyLeft}
             alt={logoImageAltText}
             image={logoImage}
             objectFit="contain"

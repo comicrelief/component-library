@@ -48,20 +48,20 @@ const CTACard = ({
   return (
     <CardWrapper
       key={id}
-      isCarousel={isCarousel}
-      isFullWidth={effectiveIsFullWidth}
-      columns={columns}
-      hasLink={hasLink}
+      $isCarousel={isCarousel}
+      $isFullWidth={effectiveIsFullWidth}
+      $columns={columns}
+      $hasLink={hasLink}
     >
       <CardLink
         as={hasLink ? Link : 'div'}
         {...(hasLink ? { href: link, target, rel: external } : {})}
-        isCarousel={isCarousel}
-        isSingleCard={isSingleCard}
-        isInteractive={hasLink}
+        $isCarousel={isCarousel}
+        $isSingleCard={isSingleCard}
+        $isInteractive={hasLink}
       >
         {imageLow && (
-          <ImageWrapper isSingleCard={isSingleCard}>
+          <ImageWrapper $isSingleCard={isSingleCard}>
             <Picture
               alt={description}
               imageLow={imageLow}
@@ -73,7 +73,7 @@ const CTACard = ({
             />
           </ImageWrapper>
         )}
-        <CopyAndLinkSection isSingleCard={isSingleCard}>
+        <CopyAndLinkSection $isSingleCard={isSingleCard}>
           <Copy>
             {isSingleCard && label && (
               <CardLabel>

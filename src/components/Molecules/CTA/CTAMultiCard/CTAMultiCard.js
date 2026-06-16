@@ -53,15 +53,15 @@ const CTAMultiCard = ({ data }) => {
   return (
     <CardsQueryWrapper>
       <CardsSection
-        backgroundColor={cardsBackground}
-        paddingAbove={paddingAbove}
-        paddingBelow={paddingBelow}
+        $backgroundColor={cardsBackground}
+        $paddingAbove={paddingAbove}
+        $paddingBelow={paddingBelow}
       >
         <CardsInner>
           <CardsContainer
-            columns={columns}
-            isCarousel={carouselOfCards}
-            useSplideCarousel={useSplideCarousel}
+            $columns={columns}
+            $isCarousel={carouselOfCards}
+            $useSplideCarousel={useSplideCarousel}
           >
             {useSplideCarousel ? (
               <Splide

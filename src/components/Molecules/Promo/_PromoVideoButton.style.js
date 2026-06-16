@@ -45,11 +45,11 @@ const PlayButton = styled.button`
     outline-width: medium;
   }
 
-  ${({ blackPlayButton }) => blackPlayButton && css`
+  ${({ $blackPlayButton }) => $blackPlayButton && css`
     background: ${({ theme }) => theme.color('black')};
   `}
 
-  ${({ copyLeft }) => !copyLeft && css`
+  ${({ $copyLeft }) => !$copyLeft && css`
     right: auto;
     left: 10px;
   `}
@@ -58,7 +58,7 @@ const PlayButton = styled.button`
     top: 20px;
     right: 20px;
 
-      ${({ copyLeft }) => !copyLeft && css`
+      ${({ $copyLeft }) => !$copyLeft && css`
       right: auto;
       left: 20px;
     `}
@@ -82,17 +82,17 @@ const ProgressRingCircle = styled.circle`
 
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
-    stroke-dashoffset: ${({ strokeDashOffsetStyle }) => strokeDashOffsetStyle};
+    stroke-dashoffset: ${({ $strokeDashOffsetStyle }) => $strokeDashOffsetStyle};
     stroke: white; // need to changed based on Promo settings
     fill: transparent;
 
     // White button, black stroke
-    ${({ blackPlayButton }) => !blackPlayButton && css`
+    ${({ $blackPlayButton }) => !$blackPlayButton && css`
       stroke: ${({ theme }) => theme.color('black')};
     `}
 
     // Cancel the animation
-    ${({ isRestarting }) => (isRestarting) && css`
+    ${({ $isRestarting }) => ($isRestarting) && css`
      transition: none;
     `}
 `;
@@ -103,20 +103,20 @@ const Icon = styled.span`
   background: no-repeat center/50% url(${playWhite}) transparent;
 
   // Black button, white icons
-  ${({ blackPlayButton, isPlaying }) => (blackPlayButton && !isPlaying) && css`
+  ${({ $blackPlayButton, $isPlaying }) => ($blackPlayButton && !$isPlaying) && css`
     background-image: url(${playWhite});
   `}
 
-  ${({ blackPlayButton, isPlaying }) => (blackPlayButton && isPlaying) && css`
+  ${({ $blackPlayButton, $isPlaying }) => ($blackPlayButton && $isPlaying) && css`
     background-image: url(${pauseWhite});
   `}
 
   // White button, black icons
-  ${({ blackPlayButton, isPlaying }) => (!blackPlayButton && !isPlaying) && css`
+  ${({ $blackPlayButton, $isPlaying }) => (!$blackPlayButton && !$isPlaying) && css`
     background-image: url(${playBlack});
   `}
 
-  ${({ blackPlayButton, isPlaying }) => (!blackPlayButton && isPlaying) && css`
+  ${({ $blackPlayButton, $isPlaying }) => (!$blackPlayButton && $isPlaying) && css`
     background-image: url(${pauseBlack});
   `}
 `;

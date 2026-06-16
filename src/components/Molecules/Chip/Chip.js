@@ -11,7 +11,7 @@ const Chip = ({
       onChange={handleToggle}
       type="checkbox"
       value={category}
-      color={color}
+      $color={color}
       checked={checked}
     />
     <span />

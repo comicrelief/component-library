@@ -93,7 +93,6 @@ it('renders article teaser correctly', () => {
   <input
     checked={false}
     className="c1"
-    color="purple"
     onChange={[Function]}
     type="checkbox"
     value="Gender Justice"

@@ -70,7 +70,6 @@ exports[`renders correctly 1`] = `
 >
   <div
     className="c1"
-    squaredCorners={false}
   >
     <div
       className="c2 lazyload"
