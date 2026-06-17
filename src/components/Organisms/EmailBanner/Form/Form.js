@@ -53,8 +53,8 @@ const EmailForm = ({
       {isSubmitSuccessful && <Confetti trigger={isSubmitSuccessful} />}
 
       <Form
-        hasTopImage={hasTopImage}
-        showTitleSection={showTitleSection}
+        $hasTopImage={hasTopImage}
+        $showTitleSection={showTitleSection}
         onSubmit={handleSubmit(onSubmit)}
         noValidate
         data-test="email-banner"

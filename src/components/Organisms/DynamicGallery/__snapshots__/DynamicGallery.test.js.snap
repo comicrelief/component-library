@@ -310,14 +310,9 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 
 <div
   className="c0 gallery-container"
-  paddingBottom="2rem"
-  paddingTop="0rem"
-  pageBackgroundColour="transparent"
-  textColour="black"
 >
   <div
     className="c1 gallery-grid"
-    maxWidth="1500px"
     onKeyDown={[Function]}
   >
     <div
@@ -328,15 +323,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         caption=""
         className="c3 gallery-node"
         data-node-index={0}
-        focusOutlineColour="black"
         onPointerUp={[Function]}
         tabIndex={0}
         title=""
       >
         <div
           className="c4 gallery-node-image"
-          maxHeight="undefinedpx"
-          minHeight="undefinedpx"
         >
           <div
             className="c5"
@@ -364,15 +356,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         caption=""
         className="c3 gallery-node"
         data-node-index={1}
-        focusOutlineColour="black"
         onPointerUp={[Function]}
         tabIndex={0}
         title=""
       >
         <div
           className="c4 gallery-node-image"
-          maxHeight="undefinedpx"
-          minHeight="undefinedpx"
         >
           <div
             className="c5"
@@ -400,15 +389,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
         caption=""
         className="c3 gallery-node"
         data-node-index={2}
-        focusOutlineColour="black"
         onPointerUp={[Function]}
         tabIndex={0}
         title=""
       >
         <div
           className="c4 gallery-node-image"
-          maxHeight="undefinedpx"
-          minHeight="undefinedpx"
         >
           <div
             className="c5"
@@ -430,14 +416,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
     </div>
     <div
       className="c8"
-      isEmpty={false}
     >
       No images to display
     </div>
   </div>
   <div
     className="c9"
-    isOpen={false}
   >
     <div
       className="c10"
@@ -830,26 +814,19 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 
 <div
   className="c0 gallery-container"
-  paddingBottom="2rem"
-  paddingTop="0rem"
-  pageBackgroundColour="transparent"
-  textColour="black"
 >
   <div
     className="c1 gallery-grid"
-    maxWidth="1500px"
     onKeyDown={[Function]}
   >
     <div
       className="c2"
-      isEmpty={true}
     >
       No images to display
     </div>
   </div>
   <div
     className="c3"
-    isOpen={false}
   >
     <div
       className="c4"

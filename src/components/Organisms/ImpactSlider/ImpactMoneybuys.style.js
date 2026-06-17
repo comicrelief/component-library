@@ -31,7 +31,7 @@ const Moneybuy = styled.div`
     opacity: 1;
     padding: 16px 40px;
 
-    ${props => props.isInactive && css`
+    ${props => props.$isInactive && css`
         opacity: 0.5;
     `}
 
@@ -51,7 +51,7 @@ const OrLabel = styled(Text)`
 `;
 
 const MoneybuyImage = styled.span`
-    background: center / 65% no-repeat url("${props => props.imageURL}"),
+    background: center / 65% no-repeat url("${props => props.$imageURL}"),
     ${props => props.theme.color('grey_extra_light')};
     width: 48px;
     height: 48px;

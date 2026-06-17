@@ -50,7 +50,7 @@ const NavLinkClass = styled(Link)`
   > div {
     height: auto;
     transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
-    ${({ isExpanded }) => (isExpanded && css`
+    ${({ $isExpanded }) => ($isExpanded && css`
       transform: rotate(-180deg);
     `)}
   }
@@ -60,7 +60,7 @@ const NavLinkClass = styled(Link)`
  * Navigation menu
  */
 const Nav = styled.nav`
-  display: ${({ isExpandable }) => (isExpandable ? 'block' : 'none')};
+  display: ${({ $isExpandable }) => ($isExpandable ? 'block' : 'none')};
   width: 100%;
   position: absolute;
   top: 75px;
@@ -100,8 +100,8 @@ const Nav = styled.nav`
  * Sub Navigation Menu (second level)
  */
 const SubNavMenu = styled.ul`
-  visibility: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'visible' : 'hidden')};
-  display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
+  visibility: ${({ $isSubMenuOpen }) => ($isSubMenuOpen ? 'visible' : 'hidden')};
+  display: ${({ $isSubMenuOpen }) => ($isSubMenuOpen ? 'flex' : 'none')};
   padding: 0;
   position: relative;
   list-style: none outside;
@@ -192,7 +192,7 @@ const NavLink = styled(NavLinkClass)`
   gap: 4px;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
 
-  ${({ isExpanded, theme }) => (isExpanded && css`
+  ${({ $isExpanded, theme }) => ($isExpanded && css`
     &,
     &:hover,
     &:focus-within,
@@ -206,7 +206,7 @@ const NavLink = styled(NavLinkClass)`
     height: auto;
 
     // Additional room for the chevron:
-    ${({ hasSubMenu }) => (hasSubMenu && css`
+    ${({ $hasSubMenu }) => ($hasSubMenu && css`
       padding: 10px 14px 10px 0;
     `)}
 
@@ -220,7 +220,7 @@ const NavLink = styled(NavLinkClass)`
   }
 
   @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
-    ${({ hasSubMenu }) => (hasSubMenu && css`
+    ${({ $hasSubMenu }) => ($hasSubMenu && css`
       padding: 10px 16px 10px 0;
     `)}
   }

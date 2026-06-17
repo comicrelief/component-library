@@ -6,14 +6,14 @@ import defaultBoxShadow from '../../../theme/shared/boxShadows';
 const animationSpeed = 0.75;
 
 const SlideCopyWrapper = styled.div`
-  background: ${({ theme, nodeBackgroundColour }) => theme.color(nodeBackgroundColour)};
-  height: ${props => props.mobileHeight}px;
+  background: ${({ theme, $nodeBackgroundColour }) => theme.color($nodeBackgroundColour)};
+  height: ${props => props.$mobileHeight}px;
   width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 25px;
-  border: 1px dashed ${({ theme, nodeOutlineColour }) => theme.color(nodeOutlineColour)};
+  border: 1px dashed ${({ theme, $nodeOutlineColour }) => theme.color($nodeOutlineColour)};
   border-radius: 20px;
   position: relative;
   overflow: visible;
@@ -26,16 +26,16 @@ const SlideCopyWrapper = styled.div`
     width: 34%;
     right: calc(-34% - 0px);
     height: 2px;
-    border-bottom: 1px dashed ${({ theme, nodeOutlineColour }) => theme.color(nodeOutlineColour)};
+    border-bottom: 1px dashed ${({ theme, $nodeOutlineColour }) => theme.color($nodeOutlineColour)};
   }
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    height: ${props => props.tabletHeight}px;
+    height: ${props => props.$tabletHeight}px;
     width: 85%;
   }
 
     @media ${({ theme }) => theme.allBreakpoints('L')} {
-    height: ${props => props.desktopHeight}px;
+    height: ${props => props.$desktopHeight}px;
   }
 `;
 
@@ -46,7 +46,7 @@ const HeadingCopyWrapper = styled.div`
 // Unfortunately having to target plugin-created markup ye olde fashioned way:
 const CarouselWrapper = styled.div`
   height: 100%;
-  background: ${({ theme, carouselBackgroundColour }) => theme.color(carouselBackgroundColour)};
+  background: ${({ theme, $carouselBackgroundColour }) => theme.color($carouselBackgroundColour)};
   
   max-width: 760px;
   padding: 2.5rem ${spacing('l')} 3.5rem;
@@ -91,9 +91,9 @@ const CarouselWrapper = styled.div`
         width: 50%;
         height: 100%;
         transition: opacity 0.2s linear;
-        background: ${({ theme, carouselBackgroundColour }) => css`
-          linear-gradient(90deg, ${theme.color(carouselBackgroundColour)},
-          ${theme.color(carouselBackgroundColour)}7a, ${theme.color(carouselBackgroundColour)}00);
+        background: ${({ theme, $carouselBackgroundColour }) => css`
+          linear-gradient(90deg, ${theme.color($carouselBackgroundColour)},
+          ${theme.color($carouselBackgroundColour)}7a, ${theme.color($carouselBackgroundColour)}00);
         `};
       }
 
@@ -123,9 +123,9 @@ const CarouselWrapper = styled.div`
         left: auto;
         right: 0;
 
-        background: ${({ theme, carouselBackgroundColour }) => css`
-          linear-gradient(90deg, ${theme.color(carouselBackgroundColour)}00,
-          ${theme.color(carouselBackgroundColour)}7a, ${theme.color(carouselBackgroundColour)});
+        background: ${({ theme, $carouselBackgroundColour }) => css`
+          linear-gradient(90deg, ${theme.color($carouselBackgroundColour)}00,
+          ${theme.color($carouselBackgroundColour)}7a, ${theme.color($carouselBackgroundColour)});
         `};
       }
     }
@@ -146,12 +146,12 @@ const CarouselWrapper = styled.div`
 
       .carousel__slide {
         // 'Mobile'
-        padding-bottom: ${props => props.mobileHeight}px !important;
+        padding-bottom: ${props => props.$mobileHeight}px !important;
 
         // 'Tablet' (and up) tweaks for the 3-visible layout
         @media ${({ theme }) => theme.allBreakpoints('M')} {
 
-          padding-bottom: ${props => props.tabletHeight}px !important;
+          padding-bottom: ${props => props.$tabletHeight}px !important;
 
           // All slides:
           .carousel__inner-slide {
@@ -216,7 +216,7 @@ const CarouselWrapper = styled.div`
 
         // 'Desktop'
         @media ${({ theme }) => theme.allBreakpoints('L')} {
-          padding-bottom: ${props => props.desktopHeight}px !important;
+          padding-bottom: ${props => props.$desktopHeight}px !important;
 
           // First
           &.carousel__slide--visible {
@@ -263,8 +263,8 @@ const CarouselWrapper = styled.div`
 `;
 
 const Container = styled.div`
-  background-color:   ${({ theme, rowBackgroundColour }) => theme.color(rowBackgroundColour)};
-  padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 0 ${paddingBottom}`};
+  background-color:   ${({ theme, $rowBackgroundColour }) => theme.color($rowBackgroundColour)};
+  padding: ${({ $paddingTop, $paddingBottom }) => `${$paddingTop} 0 ${$paddingBottom}`};
 `;
 
 export {

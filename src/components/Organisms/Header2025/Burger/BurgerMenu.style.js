@@ -53,7 +53,7 @@ const BurgerWrapper = styled(Link)`
       display: inline-block;
     }
 
-    ${({ isExpandable }) => isExpandable && ' background-color: transparent'};
+    ${({ $isExpandable }) => $isExpandable && ' background-color: transparent'};
 
     ::before,
     ::after {
@@ -66,12 +66,12 @@ const BurgerWrapper = styled(Link)`
 
     ::before {
       top: -0.5rem;
-      ${({ isExpandable }) => isExpandable && ' transform:rotate(135deg); top: 0;'};
+      ${({ $isExpandable }) => $isExpandable && ' transform:rotate(135deg); top: 0;'};
     }
 
     ::after {
       top: 0.5rem;
-      ${({ isExpandable }) => isExpandable && ' transform:rotate(-135deg); top: 0;'};
+      ${({ $isExpandable }) => $isExpandable && ' transform:rotate(-135deg); top: 0;'};
     }
   }
 
@@ -79,15 +79,15 @@ const BurgerWrapper = styled(Link)`
     &,
     ::before,
     ::after {
-      background-color: ${({ theme, isExpandable }) => !isExpandable && theme.color('grey')};
+      background-color: ${({ theme, $isExpandable }) => !$isExpandable && theme.color('grey')};
     }
 
     ::before {
-      ${({ isExpandable }) => !isExpandable && 'top: -0.6rem;'};
+      ${({ $isExpandable }) => !$isExpandable && 'top: -0.6rem;'};
     }
 
     ::after {
-      ${({ isExpandable }) => !isExpandable && 'top: 0.6rem;'};
+      ${({ $isExpandable }) => !$isExpandable && 'top: 0.6rem;'};
     }
   }
 

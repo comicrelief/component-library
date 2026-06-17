@@ -307,10 +307,7 @@ exports[`renders correctly 1`] = `
   onSubmit={[Function]}
 >
   <div
-    backgroundColour="deep_violet_dark"
     className="c0"
-    containerPadding={true}
-    textColour="white"
   >
     <h2
       className="c1 c2"
@@ -338,7 +335,6 @@ exports[`renders correctly 1`] = `
     >
       <div
         className="c7"
-        columnLayout={false}
       >
         <label
           className="c8 c9"
@@ -367,7 +363,6 @@ exports[`renders correctly 1`] = `
                 onChange={[Function]}
                 placeholder="Enter your first name"
                 required={false}
-                textColour="white"
                 type="text"
               />
             </div>
@@ -400,7 +395,6 @@ exports[`renders correctly 1`] = `
                 onChange={[Function]}
                 placeholder="Enter your last name"
                 required={false}
-                textColour="white"
                 type="text"
               />
             </div>
@@ -434,14 +428,12 @@ exports[`renders correctly 1`] = `
               onChange={[Function]}
               placeholder="example@youremail.com"
               required={false}
-              textColour="white"
               type="email"
             />
           </div>
         </div>
       </label>
       <div
-        buttonColour="red"
         className="c14"
       >
         <button
@@ -459,7 +451,6 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       className="c17"
-      textColour="white"
     >
       <span
         className="c4"

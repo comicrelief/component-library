@@ -125,7 +125,7 @@ const MoreNestedSubNavMenu = styled(SubNavMenu)`
     border: 0;
     box-shadow: none;
 
-    ${({ isSubMenuOpen }) => (isSubMenuOpen && css`
+    ${({ $isSubMenuOpen }) => ($isSubMenuOpen && css`
       // Calculating a realistic height ceiling (8 subnav items) 
       // to make animation as slick as possible
       max-height: calc(54px * 8);
@@ -170,7 +170,7 @@ const MoreNavNestedLink = styled(NavLink)`
     height: auto;
   }
 
-  ${({ isSubMenuOpen }) => (isSubMenuOpen && css`
+  ${({ $isSubMenuOpen }) => ($isSubMenuOpen && css`
     color: ${({ theme }) => theme.color('red')};
 
     > ${ChevronWrapper} {

@@ -7,13 +7,13 @@ export const OuterWrapper = styled.div`
   align-items: center;
   gap: 1rem;
   position: relative;
-  background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
-  padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 1rem ${paddingBottom}`};
-  color: ${({ theme, textColour }) => theme.color(textColour)};
+  background: ${({ theme, $pageBackgroundColour }) => theme.color($pageBackgroundColour)};
+  padding: ${({ $paddingTop, $paddingBottom }) => `${$paddingTop} 1rem ${$paddingBottom}`};
+  color: ${({ theme, $textColour }) => theme.color($textColour)};
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     gap: 1rem;
-    padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 2rem ${paddingBottom}`};
+    padding: ${({ $paddingTop, $paddingBottom }) => `${$paddingTop} 2rem ${$paddingBottom}`};
   }
 `;
 
@@ -21,7 +21,7 @@ export const ImageGrid = styled.div`
   display: flex;
   gap: 1rem;
   width: 100%;
-  max-width: ${({ maxWidth }) => maxWidth};
+  max-width: ${({ $maxWidth }) => $maxWidth};
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     gap: 2rem;
@@ -40,7 +40,7 @@ export const Column = styled.div`
 `;
 
 export const EmptyMessage = styled.div`
-  display: ${({ isEmpty }) => (isEmpty ? 'block' : 'none')};
+  display: ${({ $isEmpty }) => ($isEmpty ? 'block' : 'none')};
 `;
 
 const GalleryNodeBase = css`
@@ -54,7 +54,7 @@ const GalleryNodeBase = css`
   text-align: left;
 
   &:focus-visible {
-    outline: 2px solid ${({ focusOutlineColour }) => focusOutlineColour};
+    outline: 2px solid ${({ $focusOutlineColour }) => $focusOutlineColour};
     outline-offset: 0.5rem;
     border-radius: 1rem;
   }
@@ -84,8 +84,8 @@ export const ImageContainer = styled.div`
  display: flex;
   height: auto;
   width: 100%;
-  min-height: ${({ minHeight }) => minHeight};
-  max-height: ${({ maxHeight }) => maxHeight};
+  min-height: ${({ $minHeight }) => $minHeight};
+  max-height: ${({ $maxHeight }) => $maxHeight};
   overflow: hidden;
   border-radius: 1rem;
   background: rgba(0, 0, 0, 0.05);

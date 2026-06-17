@@ -689,7 +689,6 @@ exports[`renders correctly 1`] = `
       <nav
         aria-label="main-menu"
         className="c12"
-        isExpandable={false}
         role="navigation"
       >
         <h2
@@ -705,7 +704,6 @@ exports[`renders correctly 1`] = `
           <li
             className="c15"
             index={0}
-            isSubMenuOpen={false}
             role="none"
           >
             <span
@@ -716,13 +714,10 @@ exports[`renders correctly 1`] = `
             <ul
               aria-label="Hear from us"
               className="c17"
-              column={false}
-              isSubMenuOpen={false}
               role="list"
             >
               <li
                 className="c18"
-                column={false}
               >
                 <a
                   className="c8 c19 c20"
@@ -742,7 +737,6 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c18"
-                column={false}
               >
                 <a
                   className="c8 c19 c20"
@@ -765,7 +759,6 @@ exports[`renders correctly 1`] = `
           <li
             className="c15"
             index={1}
-            isSubMenuOpen={false}
             role="none"
           >
             <span
@@ -776,13 +769,10 @@ exports[`renders correctly 1`] = `
             <ul
               aria-label="Get in touch"
               className="c22"
-              column={true}
-              isSubMenuOpen={false}
               role="list"
             >
               <li
                 className="c23"
-                column={true}
               >
                 <a
                   className="c8 c19 c20"
@@ -802,7 +792,6 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c23"
-                column={true}
               >
                 <a
                   className="c8 c19 c20"
@@ -822,7 +811,6 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c23"
-                column={true}
               >
                 <a
                   className="c8 c19 c20"
@@ -842,7 +830,6 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c23"
-                column={true}
               >
                 <a
                   className="c8 c19 c20"
@@ -865,7 +852,6 @@ exports[`renders correctly 1`] = `
           <li
             className="c15"
             index={2}
-            isSubMenuOpen={false}
             role="none"
           >
             <span
@@ -876,13 +862,10 @@ exports[`renders correctly 1`] = `
             <ul
               aria-label="About us"
               className="c22"
-              column={true}
-              isSubMenuOpen={false}
               role="list"
             >
               <li
                 className="c23"
-                column={true}
               >
                 <a
                   className="c8 c19 c20"
@@ -902,7 +885,6 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c23"
-                column={true}
               >
                 <a
                   className="c8 c19 c20"
@@ -922,7 +904,6 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c23"
-                column={true}
               >
                 <a
                   className="c8 c19 c20"
@@ -942,7 +923,6 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c23"
-                column={true}
               >
                 <a
                   className="c8 c19 c20"
@@ -962,7 +942,6 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c23"
-                column={true}
               >
                 <a
                   className="c8 c19 c20"
@@ -982,7 +961,6 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c23"
-                column={true}
               >
                 <a
                   className="c8 c19 c20"
@@ -1005,7 +983,6 @@ exports[`renders correctly 1`] = `
           <li
             className="c15"
             index={3}
-            isSubMenuOpen={false}
             role="none"
           >
             <span
@@ -1016,13 +993,10 @@ exports[`renders correctly 1`] = `
             <ul
               aria-label="Careers"
               className="c17"
-              column={false}
-              isSubMenuOpen={false}
               role="list"
             >
               <li
                 className="c18"
-                column={false}
               >
                 <a
                   className="c8 c19 c20"
@@ -1042,7 +1016,6 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c18"
-                column={false}
               >
                 <a
                   className="c8 c19 c20"
@@ -1065,7 +1038,6 @@ exports[`renders correctly 1`] = `
           <li
             className="c15"
             index={4}
-            isSubMenuOpen={false}
             role="none"
           >
             <span
@@ -1076,13 +1048,10 @@ exports[`renders correctly 1`] = `
             <ul
               aria-label="News"
               className="c17"
-              column={false}
-              isSubMenuOpen={false}
               role="list"
             >
               <li
                 className="c18"
-                column={false}
               >
                 <a
                   className="c8 c19 c20"
@@ -1102,7 +1071,6 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c18"
-                column={false}
               >
                 <a
                   className="c8 c19 c20"
@@ -1125,7 +1093,6 @@ exports[`renders correctly 1`] = `
           <li
             className="c15"
             index={5}
-            isSubMenuOpen={false}
             role="none"
           >
             <span
@@ -1136,13 +1103,10 @@ exports[`renders correctly 1`] = `
             <ul
               aria-label="Legal"
               className="c17"
-              column={false}
-              isSubMenuOpen={false}
               role="list"
             >
               <li
                 className="c18"
-                column={false}
               >
                 <a
                   className="c8 c19 c20"
@@ -1162,7 +1126,6 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c18"
-                column={false}
               >
                 <a
                   className="c8 c19 c20"
@@ -1182,7 +1145,6 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c18"
-                column={false}
               >
                 <a
                   className="c8 c19 c20"
@@ -1207,7 +1169,6 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c18"
-                column={false}
               >
                 <a
                   className="c8 c19 c20"
@@ -1227,7 +1188,6 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c18"
-                column={false}
               >
                 <a
                   className="c8 c19 c20"

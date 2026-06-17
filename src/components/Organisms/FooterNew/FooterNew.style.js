@@ -264,7 +264,7 @@ const Brand = styled(Link)`
     border: 0;
   }
 
-  ${({ animateRotate }) => logoRotateAnimation(animateRotate)}
+  ${({ $animateRotate }) => logoRotateAnimation($animateRotate)}
 `;
 
 const FooterCopyright = styled.div`

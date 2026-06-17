@@ -76,7 +76,7 @@ const MarketingPreferencesDS = ({
       {!mp_permissionEmail.disableOption && (
       <FormField
         className={`field-email ${emailChoice && 'selected'}`}
-        isError={hasEmailError}
+        $isError={hasEmailError}
       >
         <CheckboxWrapper>
           <OptInCheckbox
@@ -89,7 +89,7 @@ const MarketingPreferencesDS = ({
         </CheckboxWrapper>
 
         <MaybeDisabled disabled={disableEmailInput}>
-          <ShowHideInputWrapper show={showEmailField}>
+          <ShowHideInputWrapper $show={showEmailField}>
             <ExtraInfo>
               Please confirm the email address we will use to
               <b> email </b>
@@ -114,7 +114,7 @@ const MarketingPreferencesDS = ({
       {!mp_permissionPost.disableOption && (
       <FormField
         className={`field-post ${postChoice && 'selected'}`}
-        isError={hasPostError}
+        $isError={hasPostError}
       >
         <CheckboxWrapper>
           <OptInCheckbox
@@ -126,7 +126,7 @@ const MarketingPreferencesDS = ({
           />
         </CheckboxWrapper>
         <MaybeDisabled disabled={disablePostInput}>
-          <ShowHideInputWrapper show={showPostFields}>
+          <ShowHideInputWrapper $show={showPostFields}>
             <ExtraInfo>
               Please confirm the address we will use to
               <b> post </b>
@@ -189,7 +189,7 @@ const MarketingPreferencesDS = ({
       {!mp_permissionSMS.disableOption && (
       <FormField
         className={`field-sms ${smsChoice && 'selected'}`}
-        isError={hasSMSError}
+        $isError={hasSMSError}
       >
         <CheckboxWrapper>
           <OptInCheckbox
@@ -201,7 +201,7 @@ const MarketingPreferencesDS = ({
           />
         </CheckboxWrapper>
         <MaybeDisabled disabled={disableSMSInput}>
-          <ShowHideInputWrapper show={showSMSField}>
+          <ShowHideInputWrapper $show={showSMSField}>
             <ExtraInfo>
               Please confirm the mobile number we will use to
               <b> text </b>
@@ -224,7 +224,7 @@ const MarketingPreferencesDS = ({
       {!mp_permissionPhone.disableOption && (
       <FormField
         className={`field-phone ${phoneChoice && 'selected'}`}
-        isError={hasPhoneError}
+        $isError={hasPhoneError}
       >
         <CheckboxWrapper>
           <OptInCheckbox
@@ -236,7 +236,7 @@ const MarketingPreferencesDS = ({
           />
         </CheckboxWrapper>
         <MaybeDisabled disabled={disablePhoneInput}>
-          <ShowHideInputWrapper show={showPhoneField}>
+          <ShowHideInputWrapper $show={showPhoneField}>
             <ExtraInfo>
               Please confirm the telephone number we will use to
               <b> phone </b>

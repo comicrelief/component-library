@@ -546,29 +546,20 @@ exports[`Monthly donation renders correctly 1`] = `
 <div
   className="c0"
   id="mbship-1"
-  paddingAbove="0rem"
-  paddingBelow="2rem"
-  pageBackgroundColour="grey_light"
 >
   <div
     className="c1"
-    componentBackgroundColour="white"
   >
     <div
       aria-live="polite"
       className="c2"
-      hasTopImage={false}
-      noTitlesAtAll={false}
-      showTitleSection={false}
     >
       <div
         className="c3"
       >
         <form
           className="c4"
-          hasTopImage={false}
           onSubmit={[Function]}
-          shouldShowTitleSection={false}
         >
           <fieldset
             className="c5"
@@ -604,7 +595,6 @@ exports[`Monthly donation renders correctly 1`] = `
                   value="Single"
                 />
                 <label
-                  active={false}
                   className="c12"
                   htmlFor="give-once--mbship-1"
                 >
@@ -621,7 +611,6 @@ exports[`Monthly donation renders correctly 1`] = `
                   value="Monthly"
                 />
                 <label
-                  active={false}
                   className="c12"
                   htmlFor="give-monthly--mbship-1"
                 >
@@ -692,7 +681,6 @@ exports[`Monthly donation renders correctly 1`] = `
             </p>
             <button
               className="c26 Button_DonateWidget"
-              color="red"
               type="submit"
             >
               Donate £10 monthly
@@ -1245,29 +1233,20 @@ exports[`Single donation renders correctly 1`] = `
 <div
   className="c0"
   id="mbship-1"
-  paddingAbove="2rem"
-  paddingBelow="2rem"
-  pageBackgroundColour="grey_light"
 >
   <div
     className="c1"
-    componentBackgroundColour="white"
   >
     <div
       aria-live="polite"
       className="c2"
-      hasTopImage={false}
-      noTitlesAtAll={false}
-      showTitleSection={false}
     >
       <div
         className="c3"
       >
         <form
           className="c4"
-          hasTopImage={false}
           onSubmit={[Function]}
-          shouldShowTitleSection={false}
         >
           <fieldset
             className="c5"
@@ -1450,7 +1429,6 @@ exports[`Single donation renders correctly 1`] = `
             </p>
             <button
               className="c25 Button_DonateWidget"
-              color="red"
               type="submit"
             >
               Donate £20 now
@@ -1864,29 +1842,20 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 <div
   className="c0"
   id="mbship-1"
-  paddingAbove="0rem"
-  paddingBelow="0rem"
-  pageBackgroundColour="grey_light"
 >
   <div
     className="c1"
-    componentBackgroundColour="white"
   >
     <div
       aria-live="polite"
       className="c2"
-      hasTopImage={false}
-      noTitlesAtAll={false}
-      showTitleSection={false}
     >
       <div
         className="c3"
       >
         <form
           className="c4"
-          hasTopImage={false}
           onSubmit={[Function]}
-          shouldShowTitleSection={false}
         >
           <fieldset
             className="c5"
@@ -1958,7 +1927,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
             </div>
             <button
               className="c20 Button_DonateWidget"
-              color="red"
               type="submit"
             >
               Donate £10 monthly
@@ -2601,29 +2569,20 @@ exports[`Text-only donate widget renders correctly 1`] = `
 <div
   className="c0"
   id="mbship-4"
-  paddingAbove="2rem"
-  paddingBelow="2rem"
-  pageBackgroundColour="grey_light"
 >
   <div
     className="c1"
-    componentBackgroundColour="deep_violet_dark"
   >
     <div
       aria-live="polite"
       className="c2"
-      hasTopImage={false}
-      noTitlesAtAll={false}
-      showTitleSection={false}
     >
       <div
         className="c3"
       >
         <form
           className="c4"
-          hasTopImage={false}
           onSubmit={[Function]}
-          shouldShowTitleSection={false}
         >
           <fieldset
             className="c5"
@@ -2659,7 +2618,6 @@ exports[`Text-only donate widget renders correctly 1`] = `
                   value="Single"
                 />
                 <label
-                  active={true}
                   className="c13"
                   htmlFor="give-once--mbship-4"
                 >
@@ -2676,7 +2634,6 @@ exports[`Text-only donate widget renders correctly 1`] = `
                   value="Monthly"
                 />
                 <label
-                  active={false}
                   className="c14"
                   htmlFor="give-monthly--mbship-4"
                 >
@@ -2740,7 +2697,6 @@ exports[`Text-only donate widget renders correctly 1`] = `
             </div>
             <button
               className="c27 Button_DonateWidget"
-              color="red"
               type="submit"
             >
               Donate £50 now

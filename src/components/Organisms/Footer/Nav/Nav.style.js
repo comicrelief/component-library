@@ -34,7 +34,7 @@ const Nav = styled.nav`
 const SubNavMenu = styled.ul`
   display: flex;
   transition: max-height 0.5s ease;
-  max-height: ${({ isSubMenuOpen }) => (isSubMenuOpen ? '400px' : '0px')};
+  max-height: ${({ $isSubMenuOpen }) => ($isSubMenuOpen ? '400px' : '0px')};
   overflow: hidden;
   padding: 0;
   position: relative;
@@ -42,7 +42,7 @@ const SubNavMenu = styled.ul`
   flex-direction: column;
 
   > li a {
-    display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'inline' : 'none')};
+    display: ${({ $isSubMenuOpen }) => ($isSubMenuOpen ? 'inline' : 'none')};
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
@@ -56,7 +56,7 @@ const SubNavMenu = styled.ul`
     max-height: none;
     height: auto;
 
-    ${({ column }) => (column === true ? 'flex-direction: row; flex-wrap: wrap;' : null)};
+    ${({ $column }) => ($column === true ? 'flex-direction: row; flex-wrap: wrap;' : null)};
 
     > li a {
       display: inline;
@@ -79,7 +79,7 @@ const SubNavItem = styled.li`
     margin-top: 12px;
     padding: 0;
 
-    ${({ column }) => (column === true ? 'flex: 0 0 100%;' : null)};
+    ${({ $column }) => ($column === true ? 'flex: 0 0 100%;' : null)};
 
     a {
       background-color: inherit;
@@ -101,7 +101,7 @@ const SubNavItem = styled.li`
   }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    ${({ column }) => (column === true ? 'flex: 0 0 100%;' : null)};
+    ${({ $column }) => ($column === true ? 'flex: 0 0 100%;' : null)};
   }
 `;
 
@@ -188,8 +188,8 @@ const NavItem = styled.li`
       color: ${({ theme }) => theme.color('white')};
       font-weight: 100;
       transition: transform 0.2s ease;
-      transform: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'rotate(0deg)' : 'rotate(180deg)')};
-      top: ${({ isSubMenuOpen }) => (isSubMenuOpen ? '6px' : '0')};
+      transform: ${({ $isSubMenuOpen }) => ($isSubMenuOpen ? 'rotate(0deg)' : 'rotate(180deg)')};
+      top: ${({ $isSubMenuOpen }) => ($isSubMenuOpen ? '6px' : '0')};
       right: -25px;
     }
 

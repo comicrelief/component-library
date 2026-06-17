@@ -71,7 +71,7 @@ const AssociatedFieldsName = styled.span`
   }
 `;
 
-const FormField = styled.div`${({ theme, isError }) => css`
+const FormField = styled.div`${({ theme, $isError }) => css`
   position: relative;
   margin-bottom: ${spacing('md')};
   width: 100%;
@@ -84,9 +84,9 @@ const FormField = styled.div`${({ theme, isError }) => css`
   border: 1px solid ${theme.color('grey')};
 
   &.selected {
-    background-color: ${isError ? theme.color('red') : theme.color('blue_donate')};
+    background-color: ${$isError ? theme.color('red') : theme.color('blue_donate')};
     &:hover {
-      background-color: ${isError ? theme.color('red_dark') : theme.color('blue_donate')};
+      background-color: ${$isError ? theme.color('red_dark') : theme.color('blue_donate')};
       border-color: ${theme.color('grey_4')};
     }
 
@@ -184,7 +184,7 @@ const CheckInput = styled.input`
 `;
 
 const ShowHideInputWrapper = styled.div`
-  display: ${({ show }) => (show ? 'block' : 'none')};
+  display: ${({ $show }) => ($show ? 'block' : 'none')};
   width: 100%;
 
   label {

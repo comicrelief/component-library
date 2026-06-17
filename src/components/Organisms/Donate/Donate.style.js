@@ -14,12 +14,12 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   height: auto;
-  background-color: ${({ theme, mobileBackgroundColor }) => theme.color(mobileBackgroundColor)};
+  background-color: ${({ theme, $mobileBackgroundColor }) => theme.color($mobileBackgroundColor)};
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     flex-direction: row;
     align-items: center;
     justify-content: inherit;
-    background-color: ${({ theme, desktopOverlayColor }) => theme.color(desktopOverlayColor)};
+    background-color: ${({ theme, $desktopOverlayColor }) => theme.color($desktopOverlayColor)};
   }
 `;
 
@@ -35,7 +35,7 @@ const BgImage = styled(Picture)`
   left: 0;
   right: 0;
   height: 100%;
-  ${({ backgroundColor }) => backgroundColor !== 'transparent' && `
+  ${({ $backgroundColor }) => $backgroundColor !== 'transparent' && `
     opacity: 0.4;
   `}
 `;
@@ -50,9 +50,9 @@ const Wrapper = styled.div`
   width: 100%;
   // TO-DO: this condition is WRONG and needs fixing (should be 'false'), but deploy this change will
   // require a lot of content updates down the line in order to bring the pages back to the desired layout
-  flex-direction: ${({ formAlignRight }) => (formAlignRight === true ? 'row-reverse' : 'row')};
+  flex-direction: ${({ $formAlignRight }) => ($formAlignRight === true ? 'row-reverse' : 'row')};
 
-  ${({ noTitlesAtAll }) => noTitlesAtAll === true && css`
+  ${({ $noTitlesAtAll }) => $noTitlesAtAll === true && css`
     justify-content: center;
   `};
 
@@ -63,7 +63,7 @@ const Wrapper = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     display: flex;
     padding: ${spacing('xl')} 0;
-    ${({ paddingOption }) => handlePadding(paddingOption)};
+    ${({ $paddingOption }) => handlePadding($paddingOption)};
   }
 `;
 
@@ -225,7 +225,7 @@ const Button = styled.button`
   font-weight: bold;
   cursor: pointer;
   min-height: 48px;
-  background: ${({ theme, color }) => theme.color(color)};
+  background: ${({ theme, $color }) => theme.color($color)};
   text-decoration: none;
   border-radius: 2rem;
   border: none;

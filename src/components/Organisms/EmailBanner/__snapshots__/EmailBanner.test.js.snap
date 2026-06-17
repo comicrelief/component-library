@@ -454,20 +454,13 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 <div
   className="c0"
-  paddingAbove="2rem"
-  paddingBelow="2rem"
-  pageBackgroundColour="grey_light"
 >
   <div
     className="c1"
-    componentBackgroundColour="white"
   >
     <div
       aria-live="polite"
       className="c2"
-      hasTopImage={false}
-      noTitlesAtAll={false}
-      showTitleSection={false}
     >
       <div
         className="c3"
@@ -475,10 +468,8 @@ exports[`Image banner left orientation renders correctly 1`] = `
         <form
           className="c4"
           data-test="email-banner"
-          hasTopImage={false}
           noValidate={true}
           onSubmit={[Function]}
-          showTitleSection={false}
         >
           <fieldset
             className="c5"
@@ -1105,20 +1096,13 @@ exports[`Image banner renders correctly 1`] = `
 
 <div
   className="c0"
-  paddingAbove="0rem"
-  paddingBelow="2rem"
-  pageBackgroundColour="grey_light"
 >
   <div
     className="c1"
-    componentBackgroundColour="white"
   >
     <div
       aria-live="polite"
       className="c2"
-      hasTopImage={false}
-      noTitlesAtAll={false}
-      showTitleSection={false}
     >
       <div
         className="c3"
@@ -1126,10 +1110,8 @@ exports[`Image banner renders correctly 1`] = `
         <form
           className="c4"
           data-test="email-banner"
-          hasTopImage={false}
           noValidate={true}
           onSubmit={[Function]}
-          showTitleSection={false}
         >
           <fieldset
             className="c5"
@@ -1756,20 +1738,13 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 <div
   className="c0"
-  paddingAbove="2rem"
-  paddingBelow="2rem"
-  pageBackgroundColour="grey_light"
 >
   <div
     className="c1"
-    componentBackgroundColour="white"
   >
     <div
       aria-live="polite"
       className="c2"
-      hasTopImage={false}
-      noTitlesAtAll={false}
-      showTitleSection={false}
     >
       <div
         className="c3"
@@ -1777,10 +1752,8 @@ exports[`Text-only email widget renders correctly 1`] = `
         <form
           className="c4"
           data-test="email-banner"
-          hasTopImage={false}
           noValidate={true}
           onSubmit={[Function]}
-          showTitleSection={false}
         >
           <fieldset
             className="c5"
@@ -2407,20 +2380,13 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 
 <div
   className="c0"
-  paddingAbove="2rem"
-  paddingBelow="2rem"
-  pageBackgroundColour="rnd_25_glitzy_grape"
 >
   <div
     className="c1"
-    componentBackgroundColour="deep_violet_dark"
   >
     <div
       aria-live="polite"
       className="c2"
-      hasTopImage={false}
-      noTitlesAtAll={false}
-      showTitleSection={false}
     >
       <div
         className="c3"
@@ -2428,10 +2394,8 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
         <form
           className="c4"
           data-test="email-banner"
-          hasTopImage={false}
           noValidate={true}
           onSubmit={[Function]}
-          showTitleSection={false}
         >
           <fieldset
             className="c5"

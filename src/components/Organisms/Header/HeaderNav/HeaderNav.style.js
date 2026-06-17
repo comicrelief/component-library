@@ -31,7 +31,7 @@ const NavLinkClass = styled(Link)`
  * Navigation menu
  */
 const Nav = styled.nav`
-  display: ${({ isExpandable }) => (isExpandable ? 'block' : 'none')};
+  display: ${({ $isExpandable }) => ($isExpandable ? 'block' : 'none')};
   width: 100%;
   position: absolute;
   top: 75px;
@@ -66,8 +66,8 @@ const Nav = styled.nav`
  * Sub Navigation Menu (second level)
  */
 const SubNavMenu = styled.ul`
-  visibility: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'visible' : 'hidden')};
-  display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
+  visibility: ${({ $isSubMenuOpen }) => ($isSubMenuOpen ? 'visible' : 'hidden')};
+  display: ${({ $isSubMenuOpen }) => ($isSubMenuOpen ? 'flex' : 'none')};
   padding: 0;
   position: relative;
   list-style: none outside;
@@ -83,7 +83,7 @@ const SubNavMenu = styled.ul`
   // DESKTOP:
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     display: flex;
-    visibility: ${({ isFocussed }) => (isFocussed ? 'visible' : 'hidden')};
+    visibility: ${({ $isFocussed }) => ($isFocussed ? 'visible' : 'hidden')};
     width: 330px;
     height: auto;
     padding: 0;

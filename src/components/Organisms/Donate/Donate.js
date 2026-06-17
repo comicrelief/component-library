@@ -87,8 +87,8 @@ const Donate = ({
 
   return (
     <Container
-      mobileBackgroundColor={mobileBackgroundColor}
-      desktopOverlayColor={desktopOverlayColor}
+      $mobileBackgroundColor={mobileBackgroundColor}
+      $desktopOverlayColor={desktopOverlayColor}
       id={mbshipID}
       key={overrideValue}
     >
@@ -107,7 +107,7 @@ const Donate = ({
 
       {isDesktop && images ? (
         <BgImage
-          backgroundColor={desktopOverlayColor}
+          $backgroundColor={desktopOverlayColor}
           image={image}
           images={images}
           imageLow={imageLow}
@@ -119,12 +119,12 @@ const Donate = ({
         />
       ) : null}
 
-      <Wrapper formAlignRight={formAlignRight} aria-live="polite" noTitlesAtAll={noTitlesAtAll} paddingOption={paddingOption}>
+      <Wrapper $formAlignRight={formAlignRight} aria-live="polite" $noTitlesAtAll={noTitlesAtAll} $paddingOption={paddingOption}>
 
         {/* Only render if there is SOME title copy; otherwise,
         we need to the space to centre-align the form */}
         { !noTitlesAtAll && (
-        <TitleWrapperOuter formAlignRight={formAlignRight}>
+        <TitleWrapperOuter $formAlignRight={formAlignRight}>
           <TitleWrapperInner>
             {showCopy && (
             <>

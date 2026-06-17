@@ -52,7 +52,7 @@ const FooterNav = ({ navItems = {}, ...rest }) => {
   }, []);
 
   return (
-    <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation">
+    <Nav aria-label="main-menu" $isExpandable={isExpandable} role="navigation">
       <Text id="footer-menu" tag="h2" size="s">
         Footer navigation
       </Text>
@@ -64,7 +64,7 @@ const FooterNav = ({ navItems = {}, ...rest }) => {
             role="none"
             key={`${group.id}-${group.title}`}
             index={index}
-            isSubMenuOpen={!!isSubMenuOpen[group.id]}
+            $isSubMenuOpen={!!isSubMenuOpen[group.id]}
           >
             {!isSmallBreakpoint ? (
               <Text color="white" weight="bold" size="s">
@@ -88,8 +88,8 @@ const FooterNav = ({ navItems = {}, ...rest }) => {
               <SubNavMenu
                 role="list"
                 aria-label={group.title}
-                isSubMenuOpen={!!isSubMenuOpen[group.id]}
-                column={group.links.length % 2 === 0 && group.links.length > 2}
+                $isSubMenuOpen={!!isSubMenuOpen[group.id]}
+                $column={group.links.length % 2 === 0 && group.links.length > 2}
               >
                 {group.links.map(child => {
                   /* Determine which field represents our url path */
@@ -100,7 +100,7 @@ const FooterNav = ({ navItems = {}, ...rest }) => {
                   return (
                     <SubNavItem
                       key={thisUrl}
-                      column={
+                      $column={
                         group.links.length % 2 === 0 && group.links.length > 2
                       }
                     >

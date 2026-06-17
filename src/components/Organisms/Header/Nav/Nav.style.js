@@ -25,7 +25,7 @@ const NavLinkClass = styled(Link)`
  * Navigation menu
  */
 const Nav = styled.nav`
-  display: ${({ isExpandable }) => (isExpandable ? 'block' : 'none')};
+  display: ${({ $isExpandable }) => ($isExpandable ? 'block' : 'none')};
   width: 100%;
   position: absolute;
   top: 75px;
@@ -56,7 +56,7 @@ const Nav = styled.nav`
  * Sub Navigation Menu (second level)
  */
 const SubNavMenu = styled.ul`
-  display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
+  display: ${({ $isSubMenuOpen }) => ($isSubMenuOpen ? 'flex' : 'none')};
   padding: 0;
   position: relative;
   list-style: none outside;
@@ -69,7 +69,7 @@ const SubNavMenu = styled.ul`
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     display: none;
-    display: ${({ isKeyPressed }) => (isKeyPressed ? 'flex' : 'none')};
+    display: ${({ $isKeyPressed }) => ($isKeyPressed ? 'flex' : 'none')};
     top: 90px;
     position: absolute;
     padding: 0 0 20px;

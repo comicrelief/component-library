@@ -853,7 +853,6 @@ exports[`does not render copyright text when not supplied 1`] = `
         className="c2"
       >
         <a
-          animateRotate={true}
           className="c3 c4"
           href="/"
           target="_self"
@@ -1076,7 +1075,6 @@ exports[`does not render copyright text when not supplied 1`] = `
           className="c32"
         >
           <a
-            animateRotate={true}
             className="c3 c4"
             href="/"
             target="_self"
@@ -1098,7 +1096,6 @@ exports[`does not render copyright text when not supplied 1`] = `
           className="c34"
         >
           <a
-            animateRotate={true}
             className="c3 c4"
             href="/"
             target="_self"
@@ -2161,7 +2158,6 @@ exports[`renders correctly 1`] = `
         className="c2"
       >
         <a
-          animateRotate={true}
           className="c3 c4"
           href="/"
           target="_self"
@@ -2384,7 +2380,6 @@ exports[`renders correctly 1`] = `
           className="c32"
         >
           <a
-            animateRotate={true}
             className="c3 c4"
             href="/"
             target="_self"
@@ -2406,7 +2401,6 @@ exports[`renders correctly 1`] = `
           className="c34"
         >
           <a
-            animateRotate={true}
             className="c3 c4"
             href="/"
             target="_self"

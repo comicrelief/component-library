@@ -775,17 +775,11 @@ exports[`renders the customised padding version correctly:
 }
 
 <div
-  backgroundColour="teal_light"
   className="c0"
-  paddingBottom="4rem"
-  paddingTop="4rem"
 >
   <div
     className="c1 CarouselWrapper"
-    desktopHeight={475}
     id="7zdR84QkZwrTh9NWx2H926"
-    mobileHeight={425}
-    tabletHeight={450}
   >
     <p
       className="c2 c3"
@@ -2025,17 +2019,11 @@ exports[`renders the default padding version correctly:
 }
 
 <div
-  backgroundColour="grey_light"
   className="c0"
-  paddingBottom="2rem"
-  paddingTop="2rem"
 >
   <div
     className="c1 CarouselWrapper"
-    desktopHeight={475}
     id="7zdR84QkZwrTh9NWx2H926"
-    mobileHeight={425}
-    tabletHeight={450}
   >
     <p
       className="c2 c3"

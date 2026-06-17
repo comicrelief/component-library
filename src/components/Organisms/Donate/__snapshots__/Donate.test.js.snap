@@ -536,20 +536,14 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 
 <div
   className="c0"
-  desktopOverlayColor="blue_dark"
   id="mship-4"
-  mobileBackgroundColor="blue_dark"
 >
   <div
     aria-live="polite"
     className="c1"
-    formAlignRight={false}
-    noTitlesAtAll={false}
-    paddingOption={null}
   >
     <div
       className="c2"
-      formAlignRight={false}
     >
       <div
         className="c3"
@@ -586,7 +580,6 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
             value="Single"
           />
           <label
-            active={true}
             className="c9"
             htmlFor="give-once--mship-4"
           >
@@ -603,7 +596,6 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
             value="Monthly"
           />
           <label
-            active={false}
             className="c10"
             htmlFor="give-monthly--mship-4"
           >
@@ -682,7 +674,6 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
           </p>
           <button
             className="c26 Button_DonateWidget"
-            color="red"
             type="submit"
           >
             Donate £345.67 now
@@ -1241,20 +1232,14 @@ exports[`Monthly donation renders correctly 1`] = `
 
 <div
   className="c0"
-  desktopOverlayColor="transparent"
   id="mship-1"
-  mobileBackgroundColor="blue_dark"
 >
   <div
     aria-live="polite"
     className="c1"
-    formAlignRight={true}
-    noTitlesAtAll={false}
-    paddingOption={null}
   >
     <div
       className="c2"
-      formAlignRight={true}
     >
       <div
         className="c3"
@@ -1291,7 +1276,6 @@ exports[`Monthly donation renders correctly 1`] = `
             value="Single"
           />
           <label
-            active={false}
             className="c9"
             htmlFor="give-once--mship-1"
           >
@@ -1308,7 +1292,6 @@ exports[`Monthly donation renders correctly 1`] = `
             value="Monthly"
           />
           <label
-            active={false}
             className="c9"
             htmlFor="give-monthly--mship-1"
           >
@@ -1391,7 +1374,6 @@ exports[`Monthly donation renders correctly 1`] = `
           </p>
           <button
             className="c27 Button_DonateWidget"
-            color="red"
             type="submit"
           >
             Donate £10 monthly
@@ -1968,20 +1950,14 @@ exports[`Single donation renders correctly 1`] = `
 
 <div
   className="c0"
-  desktopOverlayColor="transparent"
   id="mship-1"
-  mobileBackgroundColor="blue_dark"
 >
   <div
     aria-live="polite"
     className="c1"
-    formAlignRight={false}
-    noTitlesAtAll={false}
-    paddingOption={null}
   >
     <div
       className="c2"
-      formAlignRight={false}
     >
       <div
         className="c3"
@@ -2180,7 +2156,6 @@ exports[`Single donation renders correctly 1`] = `
           </p>
           <button
             className="c25 Button_DonateWidget"
-            color="red"
             type="submit"
           >
             Donate £20 now
@@ -2617,20 +2592,14 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 
 <div
   className="c0"
-  desktopOverlayColor="transparent"
   id="mship-1"
-  mobileBackgroundColor="blue_dark"
 >
   <div
     aria-live="polite"
     className="c1"
-    formAlignRight={false}
-    noTitlesAtAll={false}
-    paddingOption={null}
   >
     <div
       className="c2"
-      formAlignRight={false}
     >
       <div
         className="c3"
@@ -2717,7 +2686,6 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
           </p>
           <button
             className="c20 Button_DonateWidget"
-            color="red"
             type="submit"
           >
             Donate £10 monthly

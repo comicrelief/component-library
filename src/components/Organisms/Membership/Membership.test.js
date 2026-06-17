@@ -510,13 +510,10 @@ it('renders correctly', () => {
 }
 
 <div
-  backgroundColor="orange_light"
   className="c0"
-  formAligntRight={false}
   id="mship-1"
 >
   <div
-    backgroundColor="orange_light"
     className="c1 c2"
   >
     <img
@@ -706,7 +703,6 @@ it('renders correctly', () => {
                     aria-required={false}
                     className="c20"
                     id="mship-1--MoneyBuy-userInput"
-                    inputBorderColor={false}
                     max="25000"
                     min="1"
                     name="membership_amount"

@@ -202,8 +202,8 @@ const Signup = ({
   return (
     <FormWrapper $orientation={donateOrientation}>
       <Form
-        hasTopImage={hasTopImage}
-        shouldShowTitleSection={shouldShowTitleSection}
+        $hasTopImage={hasTopImage}
+        $shouldShowTitleSection={shouldShowTitleSection}
         onSubmit={e => submitDonation(
           e,
           amountDonate,
@@ -294,7 +294,7 @@ const Signup = ({
 
           <Button
             type="submit"
-            color={submitButtonColor}
+            $color={submitButtonColor}
             ref={buttonRef}
             // Used by analytics:
             className="Button_DonateWidget"

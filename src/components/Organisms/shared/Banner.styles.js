@@ -16,17 +16,17 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: auto;
-  background-color: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)};
+  background-color: ${({ theme, $pageBackgroundColour }) => theme.color($pageBackgroundColour)};
   width: 100%;
-  padding: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} ${spacing('md')} ${paddingBelow} ${spacing('md')}`};
+  padding: ${({ $paddingAbove, $paddingBelow }) => `${$paddingAbove} ${spacing('md')} ${$paddingBelow} ${spacing('md')}`};
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding: ${({ paddingAbove, paddingBelow }) => `${paddingAbove} ${spacing('l')} ${paddingBelow} ${spacing('l')}`};
+    padding: ${({ $paddingAbove, $paddingBelow }) => `${$paddingAbove} ${spacing('l')} ${$paddingBelow} ${spacing('l')}`};
   }
 `;
 
 const InnerContainer = styled.div`
   position: relative;
-  background-color: ${({ theme, componentBackgroundColour }) => theme.color(componentBackgroundColour)};
+  background-color: ${({ theme, $componentBackgroundColour }) => theme.color($componentBackgroundColour)};
   border-radius: 1rem;
   overflow: hidden;
   padding: none;
@@ -57,11 +57,11 @@ const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  ${({ hasTopImage, showTitleSection }) => hasTopImage && !showTitleSection && css`
+  ${({ $hasTopImage, $showTitleSection }) => $hasTopImage && !$showTitleSection && css`
     padding: 0;
   `}
 
-  ${({ noTitlesAtAll }) => noTitlesAtAll === true && css`
+  ${({ $noTitlesAtAll }) => $noTitlesAtAll === true && css`
     justify-content: center;
   `}
 

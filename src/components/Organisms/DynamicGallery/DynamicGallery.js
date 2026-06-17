@@ -195,10 +195,10 @@ const DynamicGallery = ({
     <OuterWrapper
       className="gallery-container"
       ref={containerRef}
-      pageBackgroundColour={pageBackgroundColour}
-      textColour={textColour}
-      paddingTop={paddingTop}
-      paddingBottom={paddingBottom}
+      $pageBackgroundColour={pageBackgroundColour}
+      $textColour={textColour}
+      $paddingTop={paddingTop}
+      $paddingBottom={paddingBottom}
     >
       <LightboxContext.Provider
         value={{
@@ -211,7 +211,7 @@ const DynamicGallery = ({
           setFocusedNode
         }}
       >
-        <ImageGrid className="gallery-grid" maxWidth={maxWidth} onKeyDown={event => handleKeyDown(event)}>
+        <ImageGrid className="gallery-grid" $maxWidth={maxWidth} onKeyDown={event => handleKeyDown(event)}>
           {hasNodes
           && Array(columnCount)
             .fill(null)
@@ -235,7 +235,7 @@ const DynamicGallery = ({
               );
             })}
 
-          <EmptyMessage isEmpty={!hasNodes}>No images to display</EmptyMessage>
+          <EmptyMessage $isEmpty={!hasNodes}>No images to display</EmptyMessage>
         </ImageGrid>
         <Lightbox />
         {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
