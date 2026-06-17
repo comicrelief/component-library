@@ -1,41 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-.c1 {
-  font-family: 'Anton',Impact,sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-}
-
-.c1 {
-  font-size: 3rem;
-  line-height: normal;
-  font-family: 'Anton',Impact,sans-serif;
-  font-weight: 400;
-}
-
-.c1 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.c4 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c4 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
 .c15 {
   display: inline-flex;
   position: relative;
@@ -74,6 +39,46 @@ exports[`renders correctly 1`] = `
 .c15:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.c16:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c1 {
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.c1 {
+  font-size: 3rem;
+  line-height: normal;
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+}
+
+.c1 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c4 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c4 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c8 {
@@ -136,11 +141,6 @@ exports[`renders correctly 1`] = `
 
 .c5 {
   text-align: left;
-}
-
-.c16:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
 }
 
 .c0 {
@@ -207,6 +207,32 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c15 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c15 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c15 {
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c15 {
+    width: auto;
+  }
+}
+
+@media (min-width: 740px) {
   .c1 {
     font-size: 1.875rem;
     line-height: 1.875rem;
@@ -231,32 +257,6 @@ exports[`renders correctly 1`] = `
   .c4 {
     font-size: 1.125rem;
     line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c15 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c15 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c15 {
-    width: auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c15 {
-    width: auto;
   }
 }
 

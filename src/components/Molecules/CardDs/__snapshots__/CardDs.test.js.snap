@@ -1,18 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Column view correctly 1`] = `
-.c3 {
-  display: block;
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-
-.c4 {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+.c9 {
+  fill: #FFFFFF;
 }
 
 .c8 {
@@ -58,8 +48,18 @@ exports[`renders Column view correctly 1`] = `
   opacity: 0.5;
 }
 
-.c9 {
-  fill: #FFFFFF;
+.c3 {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c4 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .c0 {
@@ -106,6 +106,12 @@ exports[`renders Column view correctly 1`] = `
   z-index: 2;
 }
 
+@media (min-width: 1024px) {
+  .c9 {
+    fill: #FFFFFF;
+  }
+}
+
 @media (min-width: 740px) {
   .c8 {
     width: auto;
@@ -137,12 +143,6 @@ exports[`renders Column view correctly 1`] = `
 @media (min-width: 1024px) {
   .c7 {
     width: auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c9 {
-    fill: #FFFFFF;
   }
 }
 
@@ -251,18 +251,8 @@ exports[`renders Column view correctly 1`] = `
 `;
 
 exports[`renders correctly 1`] = `
-.c3 {
-  display: block;
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-
-.c4 {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+.c9 {
+  fill: #FFFFFF;
 }
 
 .c8 {
@@ -308,8 +298,18 @@ exports[`renders correctly 1`] = `
   opacity: 0.5;
 }
 
-.c9 {
-  fill: #FFFFFF;
+.c3 {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c4 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .c0 {
@@ -356,6 +356,12 @@ exports[`renders correctly 1`] = `
   z-index: 2;
 }
 
+@media (min-width: 1024px) {
+  .c9 {
+    fill: #FFFFFF;
+  }
+}
+
 @media (min-width: 740px) {
   .c8 {
     width: auto;
@@ -387,12 +393,6 @@ exports[`renders correctly 1`] = `
 @media (min-width: 1024px) {
   .c7 {
     width: auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c9 {
-    fill: #FFFFFF;
   }
 }
 

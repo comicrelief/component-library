@@ -1,38 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Image banner left orientation renders correctly 1`] = `
-.c6 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c6 {
-  color: #000000;
-}
-
-.c6 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.c14 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c14 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
 .c21 {
   display: inline-flex;
   position: relative;
@@ -71,6 +39,43 @@ exports[`Image banner left orientation renders correctly 1`] = `
 .c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.c22:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c6 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c6 {
+  color: #000000;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c14 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c14 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c13 {
@@ -133,11 +138,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 .c9 {
   text-align: left;
-}
-
-.c22:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
 }
 
 .c0 {
@@ -275,6 +275,32 @@ exports[`Image banner left orientation renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c21 {
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    width: auto;
+  }
+}
+
+@media (min-width: 740px) {
   .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
@@ -299,32 +325,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
   .c14 {
     font-size: 1.125rem;
     line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c21 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c21 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c21 {
-    width: auto;
   }
 }
 
@@ -652,38 +652,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
 `;
 
 exports[`Image banner renders correctly 1`] = `
-.c6 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c6 {
-  color: #000000;
-}
-
-.c6 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.c14 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c14 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
 .c21 {
   display: inline-flex;
   position: relative;
@@ -722,6 +690,43 @@ exports[`Image banner renders correctly 1`] = `
 .c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.c22:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c6 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c6 {
+  color: #000000;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c14 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c14 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c13 {
@@ -784,11 +789,6 @@ exports[`Image banner renders correctly 1`] = `
 
 .c9 {
   text-align: left;
-}
-
-.c22:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
 }
 
 .c0 {
@@ -926,6 +926,32 @@ exports[`Image banner renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c21 {
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    width: auto;
+  }
+}
+
+@media (min-width: 740px) {
   .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
@@ -950,32 +976,6 @@ exports[`Image banner renders correctly 1`] = `
   .c14 {
     font-size: 1.125rem;
     line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c21 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c21 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c21 {
-    width: auto;
   }
 }
 
@@ -1303,38 +1303,6 @@ exports[`Image banner renders correctly 1`] = `
 `;
 
 exports[`Text-only email widget renders correctly 1`] = `
-.c6 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c6 {
-  color: #000000;
-}
-
-.c6 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.c14 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c14 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
 .c21 {
   display: inline-flex;
   position: relative;
@@ -1373,6 +1341,43 @@ exports[`Text-only email widget renders correctly 1`] = `
 .c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.c22:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c6 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c6 {
+  color: #000000;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c14 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c14 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c13 {
@@ -1435,11 +1440,6 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 .c9 {
   text-align: left;
-}
-
-.c22:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
 }
 
 .c0 {
@@ -1577,6 +1577,32 @@ exports[`Text-only email widget renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c21 {
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    width: auto;
+  }
+}
+
+@media (min-width: 740px) {
   .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
@@ -1601,32 +1627,6 @@ exports[`Text-only email widget renders correctly 1`] = `
   .c14 {
     font-size: 1.125rem;
     line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c21 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c21 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c21 {
-    width: auto;
   }
 }
 
@@ -1954,38 +1954,6 @@ exports[`Text-only email widget renders correctly 1`] = `
 `;
 
 exports[`Text-only email widget with copyColor renders correctly 1`] = `
-.c6 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c6 {
-  color: #000000;
-}
-
-.c6 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.c14 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c14 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
 .c21 {
   display: inline-flex;
   position: relative;
@@ -2024,6 +1992,43 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 .c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.c22:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c6 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c6 {
+  color: #000000;
+}
+
+.c6 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c14 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c14 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c13 {
@@ -2086,11 +2091,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 
 .c9 {
   text-align: left;
-}
-
-.c22:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
 }
 
 .c0 {
@@ -2228,6 +2228,32 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c21 {
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    width: auto;
+  }
+}
+
+@media (min-width: 740px) {
   .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
@@ -2252,32 +2278,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   .c14 {
     font-size: 1.125rem;
     line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c21 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c21 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c21 {
-    width: auto;
   }
 }
 

@@ -42,20 +42,6 @@ exports[`renders correctly 1`] = `
   line-height: inherit;
 }
 
-.c3 {
-  display: block;
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-
-.c4 {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
 .c12 {
   display: inline-flex;
   margin-left: 1rem;
@@ -97,6 +83,20 @@ exports[`renders correctly 1`] = `
 .c11:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.c3 {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c4 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .c13 {

@@ -39,20 +39,6 @@ exports[`renders correctly in minimalist form 1`] = `
   line-height: inherit;
 }
 
-.c4 {
-  display: block;
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-
-.c5 {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
 .c1 {
   position: relative;
   display: inline;
@@ -65,6 +51,20 @@ exports[`renders correctly in minimalist form 1`] = `
 .c1:focus {
   color: #000000;
   text-decoration: none;
+}
+
+.c4 {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c5 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .c0 {
@@ -252,20 +252,6 @@ exports[`renders correctly with copy 1`] = `
   line-height: inherit;
 }
 
-.c4 {
-  display: block;
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-
-.c5 {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
 .c1 {
   position: relative;
   display: inline;
@@ -278,6 +264,20 @@ exports[`renders correctly with copy 1`] = `
 .c1:focus {
   color: #000000;
   text-decoration: none;
+}
+
+.c4 {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c5 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .c0 {
@@ -465,20 +465,6 @@ exports[`renders correctly with date 1`] = `
   line-height: inherit;
 }
 
-.c4 {
-  display: block;
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-
-.c5 {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
 .c1 {
   position: relative;
   display: inline;
@@ -491,6 +477,20 @@ exports[`renders correctly with date 1`] = `
 .c1:focus {
   color: #000000;
   text-decoration: none;
+}
+
+.c4 {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c5 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .c0 {
@@ -659,20 +659,6 @@ exports[`renders correctly with date and type 1`] = `
   line-height: inherit;
 }
 
-.c4 {
-  display: block;
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-
-.c5 {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
 .c1 {
   position: relative;
   display: inline;
@@ -685,6 +671,20 @@ exports[`renders correctly with date and type 1`] = `
 .c1:focus {
   color: #000000;
   text-decoration: none;
+}
+
+.c4 {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c5 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .c0 {

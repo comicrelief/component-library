@@ -37,20 +37,6 @@ it('renders correctly', () => {
   line-height: inherit;
 }
 
-.c2 {
-  display: block;
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-
-.c3 {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: none;
-}
-
 .c0 {
   position: relative;
   display: inline;
@@ -63,6 +49,20 @@ it('renders correctly', () => {
 .c0:focus {
   color: #000000;
   text-decoration: none;
+}
+
+.c2 {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c3 {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: none;
 }
 
 .c6 {

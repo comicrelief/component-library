@@ -46,20 +46,6 @@ exports[`renders Promo correctly 1`] = `
   line-height: inherit;
 }
 
-.c2 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c3 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
 .c9 {
   display: inline-flex;
   position: relative;
@@ -94,6 +80,20 @@ exports[`renders Promo correctly 1`] = `
 .c9:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.c2 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c3 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .c0 {
@@ -351,20 +351,6 @@ exports[`renders Promo correctly end position 1`] = `
   line-height: inherit;
 }
 
-.c2 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c3 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
 .c9 {
   display: inline-flex;
   position: relative;
@@ -399,6 +385,20 @@ exports[`renders Promo correctly end position 1`] = `
 .c9:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.c2 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c3 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .c0 {

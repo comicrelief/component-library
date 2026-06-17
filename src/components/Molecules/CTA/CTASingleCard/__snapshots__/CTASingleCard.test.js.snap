@@ -15,20 +15,6 @@ exports[`renders correctly with data prop 1`] = `
   line-height: inherit;
 }
 
-.c7 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c8 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
 .c3 {
   position: relative;
   display: inline;
@@ -43,10 +29,18 @@ exports[`renders correctly with data prop 1`] = `
   text-decoration: none;
 }
 
-.c23 {
-  display: inline-block;
-  color: #FFFFFF;
-  fill: currentColor;
+.c7 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c8 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .c22 {
@@ -75,6 +69,12 @@ exports[`renders correctly with data prop 1`] = `
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+.c23 {
+  display: inline-block;
+  color: #FFFFFF;
+  fill: currentColor;
 }
 
 .c6 {
@@ -501,12 +501,6 @@ exports[`renders correctly without image 1`] = `
   text-decoration: none;
 }
 
-.c19 {
-  display: inline-block;
-  color: #FFFFFF;
-  fill: currentColor;
-}
-
 .c18 {
   display: inline-flex;
   align-items: center;
@@ -533,6 +527,12 @@ exports[`renders correctly without image 1`] = `
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+.c19 {
+  display: inline-block;
+  color: #FFFFFF;
+  fill: currentColor;
 }
 
 .c11 {

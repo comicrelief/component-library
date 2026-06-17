@@ -81,20 +81,21 @@ exports[`renders correctly 1`] = `
   line-height: inherit;
 }
 
-.c11 {
-  object-fit: cover;
-  width: 100%;
+.c5 {
+  text-decoration: none;
+  cursor: pointer;
   display: block;
-  height: auto;
-  margin-right: 1rem;
+  position: relative;
+  transition: opacity 0.2s;
 }
 
-.c10 {
-  display: inline-block;
-  z-index: 3;
-  width: 48px;
-  transform: inherit;
-  vertical-align: bottom;
+.c5:hover,
+.c5:focus {
+  opacity: 0.6;
+}
+
+.c7 {
+  width: 100%;
 }
 
 .c8 {
@@ -124,21 +125,20 @@ exports[`renders correctly 1`] = `
   width: 1px;
 }
 
-.c5 {
-  text-decoration: none;
-  cursor: pointer;
-  display: block;
-  position: relative;
-  transition: opacity 0.2s;
-}
-
-.c5:hover,
-.c5:focus {
-  opacity: 0.6;
-}
-
-.c7 {
+.c11 {
+  object-fit: cover;
   width: 100%;
+  display: block;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.c10 {
+  display: inline-block;
+  z-index: 3;
+  width: 48px;
+  transform: inherit;
+  vertical-align: bottom;
 }
 
 .c3 {

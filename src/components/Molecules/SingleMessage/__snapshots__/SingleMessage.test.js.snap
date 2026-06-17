@@ -213,20 +213,6 @@ exports[`renders Single Message with Image correctly 1`] = `
   line-height: inherit;
 }
 
-.c3 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c4 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
 .c8 {
   display: inline-flex;
   position: relative;
@@ -261,6 +247,20 @@ exports[`renders Single Message with Image correctly 1`] = `
 .c8:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.c3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c4 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .c0 {
@@ -673,20 +673,6 @@ exports[`renders Single Message with full width correctly 1`] = `
   line-height: inherit;
 }
 
-.c3 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c4 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
 .c8 {
   display: inline-flex;
   position: relative;
@@ -721,6 +707,20 @@ exports[`renders Single Message with full width correctly 1`] = `
 .c8:disabled {
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.c3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c4 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .c0 {

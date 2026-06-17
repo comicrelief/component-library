@@ -117,20 +117,6 @@ it('renders correctly', () => {
   line-height: inherit;
 }
 
-.c1 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c3 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
 .c14 {
   width: 100%;
   position: relative;
@@ -187,6 +173,20 @@ it('renders correctly', () => {
 
 .c20:focus {
   border: 1px solid #666;
+}
+
+.c1 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c3 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .c15 {

@@ -50,6 +50,10 @@ it('renders a button with an icon', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
+.c2 {
+  fill: #FFFFFF;
+}
+
 .c1 {
   display: inline-flex;
   margin-left: 1rem;
@@ -75,8 +79,10 @@ it('renders a button with an icon', () => {
   text-decoration: none;
 }
 
-.c2 {
-  fill: #FFFFFF;
+@media (min-width: 1024px) {
+  .c2 {
+    fill: #FFFFFF;
+  }
 }
 
 @media (min-width: 740px) {
@@ -88,12 +94,6 @@ it('renders a button with an icon', () => {
     right: -2rem;
     top: 0;
     bottom: 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c2 {
-    fill: #FFFFFF;
   }
 }
 
