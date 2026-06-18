@@ -1,5 +1,5 @@
-import 'jest-styled-components';
 import React from 'react';
+import 'jest-styled-components';
 import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import QuoteSlice from './QuoteSlice';
 import { defaultData } from '../../../data/data';

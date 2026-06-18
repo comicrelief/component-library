@@ -1,5 +1,5 @@
-import 'jest-styled-components';
 import React from 'react';
+import 'jest-styled-components';
 import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import StatsSlice from './StatsSlice';
 import './_test-utils';
