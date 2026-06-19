@@ -23,7 +23,8 @@ export default function CardExample() {
           <Text tag="h3" size="xl">Title</Text>
           <Text tag="p">
             Your donations make a very real difference to people in the UK and around the world,
-            whether you donate through Red Nose Day, Sport Relief or to Comic Relief at any other time of year.
+            whether you donate through Red Nose Day, Sport Relief or to Comic Relief at any other
+            time of year.
           </Text>
         </Card>
       </ExampleWrapper>
@@ -35,11 +36,10 @@ export default function CardExample() {
           images={defaultData.images}
           backgroundColor="red"
           height="auto"
-          smallBreakpointRowLayout={true}
+          smallBreakpointRowLayout
           mediumBreakpointRowLayout={false}
         >
           <Text tag="h3" size="xl">Row layout on small breakpoint only</Text>
-          Row layout on small breakpoint only
           <Text tag="p">
             Your donations make a very real difference to people in the UK and around the world.
           </Text>
@@ -54,7 +54,7 @@ export default function CardExample() {
           backgroundColor="orange"
           height="auto"
           smallBreakpointRowLayout={false}
-          mediumBreakpointRowLayout={true}
+          mediumBreakpointRowLayout
         >
           <Text tag="h3" size="xl">Row layout on medium breakpoint only</Text>
           <Text tag="p">
@@ -70,8 +70,8 @@ export default function CardExample() {
           images={defaultData.images}
           backgroundColor="purple"
           height="auto"
-          smallBreakpointRowLayout={true}
-          mediumBreakpointRowLayout={true}
+          smallBreakpointRowLayout
+          mediumBreakpointRowLayout
         >
           <Text tag="h3" size="xl">Row layout on small and medium breakpoints</Text>
           <Text tag="p">
