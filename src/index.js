@@ -3,11 +3,12 @@ export { default as crTheme } from './theme/crTheme/theme';
 export { default as ThemeProvider } from './theme/ThemeProvider';
 
 /* Utils */
-export { default as allBreakpoints } from './theme/shared/allBreakpoints';
+export { default as allBreakpoints, breakpointValues } from './theme/shared/allBreakpoints';
 export { default as allowListed } from './utils/allowListed';
 export { default as containers } from './theme/shared/containers';
+export { default as defaultBoxShadow } from './theme/shared/boxShadows';
 export { default as hideVisually } from './theme/shared/hideVisually';
-export { logoRotateAnimation, springScaleAnimation } from './theme/shared/animations';
+export { logoRotateAnimation, springScaleAnimation, bounceUpAnimation } from './theme/shared/animations';
 export { default as spacing } from './theme/shared/spacing';
 export { default as zIndex } from './theme/shared/zIndex';
 
