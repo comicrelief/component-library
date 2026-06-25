@@ -55,7 +55,7 @@ it('renders article teaser correctly', () => {
 }
 
 .c1 +span {
-  background: url(mock.asset) no-repeat center;
+  background: url("mock.asset") no-repeat center;
   background-size: 24px;
   margin-right: 1rem;
   width: 40px;

@@ -10,7 +10,7 @@ import 'lazysizes/plugins/blur-up/ls.blur-up';
 const IMAGE_FALLBACK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
 const Wrapper = styled.div`
-  ${({ $objFitState, $nonObjFitImage }) => (!$objFitState && $nonObjFitImage) && `background-image: url(${$nonObjFitImage}); background-size: cover; background-position: center;`};
+  ${({ $objFitState, $nonObjFitImage }) => (!$objFitState && $nonObjFitImage) && `background-image: url("${$nonObjFitImage}"); background-size: cover; background-position: center;`};
   display: block;
   width: ${props => (props.$width ? props.$width : '100%')};
   height: ${props => (props.$height ? props.$height : '100%')};

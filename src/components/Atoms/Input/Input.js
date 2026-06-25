@@ -60,7 +60,7 @@ const InputField = styled.input`${({ theme, $error, $prefixLength }) => css`
 const ErrorIconWrapper = styled.div`
   position: absolute;
   right: 0.6rem;
-  background: url(${alertIcon}) center/contain no-repeat;
+  background: url("${alertIcon}") center/contain no-repeat;
   --iconSize: 19px;
   width: var(--iconSize);
   height: var(--iconSize);

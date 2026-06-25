@@ -24,10 +24,10 @@ const OuterWrapper = styled.div`
     overflow: hidden;
     z-index: -1;
     content:
-      url(${EmailIconWhite})
-      url(${PhoneIconWhite})
-      url(${PostIconWhite})
-      url(${SMSIconWhite});
+      url("${EmailIconWhite}")
+      url("${PhoneIconWhite}")
+      url("${PostIconWhite}")
+      url("${SMSIconWhite}");
   }
 `;
 
@@ -55,19 +55,19 @@ const AssociatedFieldsName = styled.span`
   background-position: left center;
 
   &.icon-mp_permissionEmail {
-    background-image: url(${EmailIcon})
+    background-image: url("${EmailIcon}")
   }
 
   &.icon-mp_permissionPhone {
-    background-image: url(${PhoneIcon})
+    background-image: url("${PhoneIcon}")
   }
 
   &.icon-mp_permissionPost {
-    background-image: url(${PostIcon})
+    background-image: url("${PostIcon}")
   }
 
   &.icon-mp_permissionSMS {
-    background-image: url(${SMSIcon})
+    background-image: url("${SMSIcon}")
   }
 `;
 
@@ -91,19 +91,19 @@ const FormField = styled.div`${({ theme, $isError }) => css`
     }
 
     span.icon-mp_permissionEmail {
-      background-image: url(${EmailIconWhite});
+      background-image: url("${EmailIconWhite}");
     }
 
     span.icon-mp_permissionPhone {
-      background-image: url(${PhoneIconWhite});
+      background-image: url("${PhoneIconWhite}");
     }
 
     span.icon-mp_permissionPost {
-      background-image: url(${PostIconWhite});
+      background-image: url("${PostIconWhite}");
     }
 
     span.icon-mp_permissionSMS {
-      background-image: url(${SMSIconWhite});
+      background-image: url("${SMSIconWhite}");
     }
 
     > div {
@@ -178,7 +178,7 @@ const CheckInput = styled.input`
     border-radius: 0.5rem;
   }
   &:checked + span {
-    background: url(${checkBoxIcon}) no-repeat center ${({ theme }) => theme.color('white')};
+    background: url("${checkBoxIcon}") no-repeat center ${({ theme }) => theme.color('white')};
     background-size: contain;
   }
 `;

@@ -317,7 +317,7 @@ const NavMetaIcons = styled.div`
         content: "";
         width: 20px;
         height: 20px;
-        background-image: url(${Arrow});
+        background-image: url("${Arrow}");
         background-size: 100%;
         background-repeat: no-repeat;
       }

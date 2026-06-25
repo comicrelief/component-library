@@ -63,7 +63,7 @@ it('renders correctly', () => {
 }
 
 .c1:checked+span {
-  background: url(mock.asset) no-repeat center;
+  background: url("mock.asset") no-repeat center;
   background-size: contain;
   background-color: #E52630;
   border: 1px solid #E52630;
@@ -155,7 +155,7 @@ it('renders correctly', () => {
 }
 
 .c1:checked+span {
-  background: url(mock.asset) no-repeat center;
+  background: url("mock.asset") no-repeat center;
   background-size: contain;
   background-color: #E52630;
   border: 1px solid #E52630;

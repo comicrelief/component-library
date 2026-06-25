@@ -14,7 +14,7 @@ const PlayButtonWrapper = styled.div`
   &:after {
     content: "";
     // Preload all button icons
-    background-image: url(${playWhite}), url(${pauseWhite}), url(${playBlack}), url(${pauseBlack}), none;
+    background-image: url("${playWhite}"), url("${pauseWhite}"), url("${playBlack}"), url("${pauseBlack}"), none;
   }
 `;
 
@@ -100,24 +100,24 @@ const ProgressRingCircle = styled.circle`
 const Icon = styled.span`
   height: 50px;
   width: 50px;
-  background: no-repeat center/50% url(${playWhite}) transparent;
+  background: no-repeat center/50% url("${playWhite}") transparent;
 
   // Black button, white icons
   ${({ $blackPlayButton, $isPlaying }) => ($blackPlayButton && !$isPlaying) && css`
-    background-image: url(${playWhite});
+    background-image: url("${playWhite}");
   `}
 
   ${({ $blackPlayButton, $isPlaying }) => ($blackPlayButton && $isPlaying) && css`
-    background-image: url(${pauseWhite});
+    background-image: url("${pauseWhite}");
   `}
 
   // White button, black icons
   ${({ $blackPlayButton, $isPlaying }) => (!$blackPlayButton && !$isPlaying) && css`
-    background-image: url(${playBlack});
+    background-image: url("${playBlack}");
   `}
 
   ${({ $blackPlayButton, $isPlaying }) => (!$blackPlayButton && $isPlaying) && css`
-    background-image: url(${pauseBlack});
+    background-image: url("${pauseBlack}");
   `}
 `;
 

@@ -115,7 +115,7 @@ const PlayButton = styled.button`
   text-indent: -9999px;
   background: rgba(0, 0, 0, 0) center no-repeat;
   background-size: 70px;
-  background-image: ${({ $isBuffering }) => ($isBuffering === true ? `url(${loadingIcon})` : `url(${playIcon})`)};
+  background-image: ${({ $isBuffering }) => ($isBuffering === true ? `url("${loadingIcon}")` : `url("${playIcon}")`)};
 
   ${({ $copyFirst }) => ($copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;')};
 
@@ -123,7 +123,7 @@ const PlayButton = styled.button`
 
   &:focus,
   &:hover {
-    background-image: ${({ $isBuffering }) => ($isBuffering === true ? `url(${loadingIcon})` : `url(${playIconHover})`)};
+    background-image: ${({ $isBuffering }) => ($isBuffering === true ? `url("${loadingIcon}")` : `url("${playIconHover}")`)};
   }
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {

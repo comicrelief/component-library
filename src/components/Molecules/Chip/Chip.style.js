@@ -89,7 +89,7 @@ const CheckInput = styled.input`
   margin: 0;
   border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
   + span {
-    background: url(${({ value }) => selectIcon(value)}) no-repeat center;
+    background: url("${({ value }) => selectIcon(value)}") no-repeat center;
     background-size: 24px;
     margin-right: ${spacing('md')};
     width: 40px;
@@ -129,7 +129,7 @@ const ClearButton = styled.button`
 
   &:before {
     content: '';
-    background: url(${clear}) no-repeat center;
+    background: url("${clear}") no-repeat center;
     width: 20px;
     height: 20px;
     display: block;

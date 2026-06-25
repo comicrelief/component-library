@@ -38,7 +38,7 @@ const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
   }
   /* Visual checkbox when ticked */
   &:checked + span {
-    background: url(${checkBoxIcon}) no-repeat center;
+    background: url("${checkBoxIcon}") no-repeat center;
     background-size: contain;
     background-color: ${({ theme, $checkboxBgChecked }) => ($checkboxBgChecked ? theme.color($checkboxBgChecked) : theme.color('red'))};
     border: 1px solid ${({ theme, $checkboxBorderChecked }) => ($checkboxBorderChecked ? theme.color($checkboxBorderChecked) : theme.color('red'))};

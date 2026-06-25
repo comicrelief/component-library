@@ -31,7 +31,7 @@ exports[`renders AmbientVideo when video props are provided correctly 1`] = `
 .c8 {
   width: 24px;
   height: 24px;
-  background-image: url(mock.asset);
+  background-image: url("mock.asset");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
