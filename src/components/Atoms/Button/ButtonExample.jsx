@@ -1,14 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import Button from './Button';
 import buttonTypes from '../../../theme/crTheme/buttonTypes';
-
-const ExampleContainer = styled.div`
-  background-color: ${({ $bg }) => $bg || '#ddd'};
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-`;
+import { ExampleContainer } from '../../../utils/ExampleWrapper';
 
 export default function ButtonExample() {
   return (

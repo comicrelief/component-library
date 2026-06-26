@@ -6,11 +6,7 @@ import { defaultData } from '../../../data/data';
 import video480_30sec from './big-buck-bunny-480p-30sec.mp4';
 import video480 from './thetestdatacom_480p_example.mp4';
 import video1080 from './big-buck-bunny-1080p-30sec.mp4';
-
-const ExampleContainer = styled.div`
-  margin: 0 0 35px;
-  border: 1px solid lightgrey;
-`;
+import { ExampleContainer } from '../../../utils/ExampleWrapper';
 
 const ExampleWrapper = styled.div`
   width: 100%;
