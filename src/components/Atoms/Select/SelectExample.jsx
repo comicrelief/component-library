@@ -6,6 +6,7 @@ export default function SelectExample() {
     <>
       <h4>DROPDOWN MENU</h4>
       <Select
+        id="one"
         label="Label"
         description="Please choose an option"
         defaultValue="Option four"
@@ -14,12 +15,13 @@ export default function SelectExample() {
           { value: 'Option one', displayValue: 'The first option' },
           { value: 'Option two', displayValue: 'The second option' },
           { value: 'Option three', displayValue: 'The third option' },
-          { value: 'Option four', displayValue: 'The fourth option' },
+          { value: 'Option four', displayValue: 'The fourth option' }
         ]}
       />
 
       <h4>DROPDOWN MENU with error</h4>
       <Select
+        id="two"
         label="Label"
         errorMsg="This is an error message"
         description="Please choose an option"
@@ -28,19 +30,20 @@ export default function SelectExample() {
           { value: 'Option one', displayValue: 'The first option' },
           { value: 'Option two', displayValue: 'The second option' },
           { value: 'Option three', displayValue: 'The third option' },
-          { value: 'Option four', displayValue: 'The fourth option' },
+          { value: 'Option four', displayValue: 'The fourth option' }
         ]}
       />
 
       <h4>DROPDOWN MENU - hide arrow / just one option</h4>
       <Select
+        id="three"
         label="Label"
         errorMsg="This is an error message"
         description="Select an option"
         greyDescription
-        hideArrow={true}
+        hideArrow
         options={[
-          { value: 'Option one', displayValue: 'The first option' },
+          { value: 'Option one', displayValue: 'The first option' }
         ]}
       />
     </>

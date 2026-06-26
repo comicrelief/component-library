@@ -43,6 +43,7 @@ const Select = React.forwardRef(
     {
       errorMsg,
       description,
+      id,
       label,
       options,
       hideLabel = false,
@@ -68,13 +69,7 @@ const Select = React.forwardRef(
         optional={optional}
       >
         <StyledSelect
-          onChange={e => {
-            setValue(e.currentTarget.value);
-            if (onChange) {
-              onChange(e);
-            }
-          }}
-          {...rest}
+          id={id}
           $error={errorMsg}
           defaultValue={defaultValue}
           required={optional === false}
@@ -83,6 +78,13 @@ const Select = React.forwardRef(
           $greyDescription={greyDescription}
           ref={ref}
           $hideArrow={hideArrow}
+          {...rest}
+          onChange={e => {
+            setValue(e.currentTarget.value);
+            if (onChange) {
+              onChange(e);
+            }
+          }}
         >
 
           {/* empty string "" is falsy so will show */
@@ -105,6 +107,7 @@ const Select = React.forwardRef(
 );
 
 Select.propTypes = {
+  id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   hideLabel: PropTypes.bool,
   errorMsg: PropTypes.string.isRequired,
