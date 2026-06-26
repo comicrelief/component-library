@@ -19,8 +19,8 @@ const Wrapper = styled.div`
   `;
 
 const Image = styled.img`
-  width: ${props => (props.width ? props.width : '100%')};
-  height: ${props => (props.height ? props.height : 'auto')};
+  width: ${props => (props.$width ? props.$width : '100%')};
+  height: ${props => (props.$height ? props.$height : 'auto')};
   display: block;
   object-fit: ${props => (props.$objectFit === 'none' && 'none')
     || (props.$objectFit === 'cover' && 'cover')
@@ -109,8 +109,8 @@ const Picture = ({
         <Image
           key={image}
           alt={alt}
-          height={height}
-          width={width}
+          $height={height}
+          $width={width}
           $objectFit={objectFit}
           data-src={image}
           className="lazyload"
@@ -133,8 +133,8 @@ const Picture = ({
     >
       <Image
         alt={alt}
-        height={height}
-        width={width}
+        $height={height}
+        $width={width}
         $objectFit={objectFit}
         src={image}
         srcSet={IMAGE_FALLBACK}

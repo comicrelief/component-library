@@ -520,8 +520,6 @@ it('renders correctly', () => {
       alt="Background image"
       className="c3 lazyload"
       data-src={null}
-      height="100%"
-      width="100%"
     />
   </div>
   <div

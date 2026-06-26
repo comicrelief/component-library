@@ -337,9 +337,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
               alt=""
               className="c6 lazyload"
               data-src="image1.jpg"
-              height="auto"
               onLoad={[Function]}
-              width="100%"
             />
           </div>
         </div>
@@ -370,9 +368,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
               alt=""
               className="c6 lazyload"
               data-src="image2.jpg"
-              height="auto"
               onLoad={[Function]}
-              width="100%"
             />
           </div>
         </div>
@@ -403,9 +399,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
               alt=""
               className="c6 lazyload"
               data-src="image3.jpg"
-              height="auto"
               onLoad={[Function]}
-              width="100%"
             />
           </div>
         </div>

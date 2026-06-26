@@ -408,10 +408,8 @@ exports[`handles data structure correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
@@ -492,10 +490,8 @@ exports[`handles data structure correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
@@ -540,10 +536,8 @@ exports[`handles data structure correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
@@ -1110,10 +1104,8 @@ exports[`renders 2 columns layout correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
@@ -1194,10 +1186,8 @@ exports[`renders 2 columns layout correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
@@ -1242,10 +1232,8 @@ exports[`renders 2 columns layout correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
@@ -1792,10 +1780,8 @@ exports[`renders carousel mode correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
@@ -1876,10 +1862,8 @@ exports[`renders carousel mode correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
@@ -1924,10 +1908,8 @@ exports[`renders carousel mode correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
@@ -2474,10 +2456,8 @@ exports[`renders correctly with data prop 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
@@ -2558,10 +2538,8 @@ exports[`renders correctly with data prop 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
@@ -2606,10 +2584,8 @@ exports[`renders correctly with data prop 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>

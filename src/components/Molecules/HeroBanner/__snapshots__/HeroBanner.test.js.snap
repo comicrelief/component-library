@@ -241,10 +241,8 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
           data-sizes="auto"
           data-src="mock.asset"
           data-srcset="mock.asset"
-          height="100%"
           src="mock.asset"
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-          width="100%"
         />
       </div>
     </div>
@@ -514,10 +512,8 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
           data-sizes="auto"
           data-src="mock.asset"
           data-srcset="mock.asset"
-          height="100%"
           src="mock.asset"
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-          width="100%"
         />
       </div>
     </div>
@@ -1042,10 +1038,8 @@ exports[`renders "Text Banner" Hero Banner correctly 2`] = `
           data-sizes="auto"
           data-src="mock.asset"
           data-srcset="mock.asset"
-          height="100%"
           src="mock.asset"
           srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-          width="100%"
         />
       </div>
     </div>
@@ -1081,8 +1075,6 @@ exports[`renders "Text Banner" Hero Banner correctly 2`] = `
           alt=""
           className="c13 lazyload"
           data-src="mock.asset"
-          height="auto"
-          width="100%"
         />
       </div>
     </div>
