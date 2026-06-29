@@ -2,10 +2,11 @@ import React from 'react';
 import ImpactSlider from './ImpactSlider';
 import Text from '../../Atoms/Text/Text';
 import { testImpactSliderItems } from '../../../data/data';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 export function ImpactSliderExample1() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Impact Slider (w/opacity animation & default padding options)</h3>
       <ImpactSlider
         heading="Your donations will change lives"
@@ -21,13 +22,13 @@ export function ImpactSliderExample1() {
           Use this slider to see how your donation can make a difference to lives in the UK and around the globe this winter.
         </Text>
       </ImpactSlider>
-    </>
+    </ExampleContainer>
   );
 }
 
 export function ImpactSliderExample2() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Impact Slider (w/o opacity animation, w/default value & custom padding options)</h3>
       <ImpactSlider
         heading="Your donations will change lives"
@@ -44,6 +45,6 @@ export function ImpactSliderExample2() {
           Use this slider to see how your donation can make a difference to lives in the UK and around the globe this winter.
         </Text>
       </ImpactSlider>
-    </>
+    </ExampleContainer>
   );
 }

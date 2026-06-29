@@ -2,10 +2,11 @@ import React from 'react';
 import Membership from './Membership';
 import data from './dev-data/data';
 import { defaultData } from '../../../data/data';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 export function MembershipExample1() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Form align right</h3>
       <Membership
         alt="Background image"
@@ -21,13 +22,13 @@ export function MembershipExample1() {
         subtitle="Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Join now and help save lives."
         otherDescription="Your donation will help us fund amazing projects in the UK and around the world."
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function MembershipExample2() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Form align left</h3>
       <Membership
         backgroundColor="orange_light"
@@ -42,6 +43,6 @@ export function MembershipExample2() {
         subtitle="Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Join now and help save lives."
         otherDescription="Your donation will help us fund amazing projects in the UK and around the world."
       />
-    </>
+    </ExampleContainer>
   );
 }

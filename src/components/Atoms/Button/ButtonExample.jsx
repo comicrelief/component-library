@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import buttonTypes from '../../../theme/crTheme/buttonTypes';
-import { ExampleContainer } from '../../../utils/ExampleWrapper';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 export default function ButtonExample() {
   return (

@@ -6,6 +6,7 @@ import Icon from '../../Atoms/SocialIcons/Icon/Icon';
 import searchIcon from './assets/icon--search--2023.svg';
 import shopIcon from './assets/icon--shop--2023.svg';
 import payinIcon from './assets/PayIn.svg';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 const donateLink = (
   <Link color="green" type="button" href="/donation">
@@ -15,20 +16,20 @@ const donateLink = (
 
 export function HeaderExample1() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Comic Relief header</h3>
       <Header
         navItems={data}
         rotate="true"
         metaIcons={donateLink}
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function HeaderExample2() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Sport Relief header</h3>
       <Header
         navItems={data}
@@ -36,26 +37,26 @@ export function HeaderExample2() {
         logoUrl="/sportrelief"
         metaIcons={donateLink}
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function HeaderExample3() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Pride header</h3>
       <Header
         navItems={data}
         campaign="Pride"
         metaIcons={donateLink}
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function HeaderExample4() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Comic Relief header with Search</h3>
       <Header
         navItems={data}
@@ -78,13 +79,13 @@ export function HeaderExample4() {
           </>
         }
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function HeaderExample5() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Comic Relief header with Search and Shop</h3>
       <Header
         navItems={data}
@@ -131,6 +132,6 @@ export function HeaderExample5() {
           </>
         }
       />
-    </>
+    </ExampleContainer>
   );
 }

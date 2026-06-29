@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Arrow from './Arrow';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 const Grid = styled.div`
   display: flex;
@@ -28,10 +29,6 @@ const Label = styled.p`
   text-align: center;
 `;
 
-const Section = styled.div`
-  padding: 1rem;
-`;
-
 const directions = ['up', 'down', 'left', 'right'];
 const colours = ['black', 'red', 'white'];
 
@@ -39,7 +36,7 @@ export default function ArrowExample() {
   return (
     <div style={{ padding: '1rem' }}>
 
-      <Section>
+      <ExampleContainer>
         <h3>Directions</h3>
         <Grid>
           {directions.map(dir => (
@@ -49,9 +46,9 @@ export default function ArrowExample() {
             </IconCard>
           ))}
         </Grid>
-      </Section>
+      </ExampleContainer>
 
-      <Section>
+      <ExampleContainer>
         <h3>Colours</h3>
         <Grid>
           {colours.map(colour => (
@@ -61,9 +58,9 @@ export default function ArrowExample() {
             </IconCard>
           ))}
         </Grid>
-      </Section>
+      </ExampleContainer>
 
-      <Section>
+      <ExampleContainer>
         <h3>Sizes</h3>
         <Grid>
           {[16, 24, 32, 48, 64].map(size => (
@@ -73,7 +70,7 @@ export default function ArrowExample() {
             </IconCard>
           ))}
         </Grid>
-      </Section>
+      </ExampleContainer>
 
     </div>
   );

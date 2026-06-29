@@ -1,5 +1,6 @@
 import React from 'react';
 import Descriptor from './Descriptor';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 const loremIpsum = `Description go here...
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -11,23 +12,27 @@ eu fugiat nulla pariatur.`;
 export default function DescriptorExample() {
   return (
     <>
-      <Descriptor
-        title="Title"
-        date="15/06/2020"
-        tags={['Tag1', 'tag2', 'tag3', 'tag4']}
-        categories={['How we Fund', 'Children Survive & Thrive']}
-      >
-        {loremIpsum}
-      </Descriptor>
+      <ExampleContainer>
+        <Descriptor
+          title="Title"
+          date="15/06/2020"
+          tags={['Tag1', 'tag2', 'tag3', 'tag4']}
+          categories={['How we Fund', 'Children Survive & Thrive']}
+        >
+          {loremIpsum}
+        </Descriptor>
+      </ExampleContainer>
 
-      <Descriptor
-        title="Title"
-        date="15/06/2020"
-        tags={['Tag1', 'tag2', 'tag3', 'tag4']}
-        categories={['Environment', 'Social Tech', 'Sport for Change']}
-      >
-        {loremIpsum}
-      </Descriptor>
+      <ExampleContainer>
+        <Descriptor
+          title="Title"
+          date="15/06/2020"
+          tags={['Tag1', 'tag2', 'tag3', 'tag4']}
+          categories={['Environment', 'Social Tech', 'Sport for Change']}
+        >
+          {loremIpsum}
+        </Descriptor>
+      </ExampleContainer>
     </>
   );
 }

@@ -1,11 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import CTAMultiCard from './CTAMultiCard';
+import { ExampleContainer } from '../../../../demos/SharedStyles';
 
-const ExampleWrapper = styled.div`
-  background: #E1E2E3;
-  width: 100%;
-`;
 import Text from '../../../Atoms/Text/Text';
 import ctaMultiCardExampleData from './example_data.json';
 import challengeExampleImage from '../../../../assets/challenge-1.jpg';
@@ -63,15 +59,15 @@ export default function CTAMultiCardExample() {
 
   return (
     <>
-      <h3>Desktop Grid (3 columns), carousel on mobile</h3>
-      <ExampleWrapper>
+      <ExampleContainer>
+        <h3>Desktop Grid (3 columns), carousel on mobile</h3>
         <CTAMultiCard data={data3col} />
-      </ExampleWrapper>
+      </ExampleContainer>
 
-      <h3>2 cards (2 columns)</h3>
-      <ExampleWrapper>
+      <ExampleContainer>
+        <h3>2 cards (2 columns)</h3>
         <CTAMultiCard data={data2col} />
-      </ExampleWrapper>
+      </ExampleContainer>
     </>
   );
 }

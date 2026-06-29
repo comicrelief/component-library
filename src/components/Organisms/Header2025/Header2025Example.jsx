@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import Header2025 from './Header2025';
 import data from './data/data';
 import dataExtended from './data/data-extended';
@@ -11,11 +10,7 @@ import searchIcon from './assets/icon--search--2023.svg';
 import shopIcon from './assets/icon--shop--2023.svg';
 import payinIcon from './assets/PayIn.svg';
 import esuIcon from './assets/Post.svg';
-
-const ExampleWrapper = styled.div`
-  margin: 0 0 35px;
-  border: 1px solid lightgrey;
-`;
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 const donateButton = (
   <Link
@@ -87,34 +82,34 @@ const fullMetaIcons = (
 export default function Header2025Example() {
   return (
     <div>
-      <ExampleWrapper>
+      <ExampleContainer>
         <h3>Comic Relief header</h3>
         <Header2025
           navItems={data}
           rotate="true"
           donateButton={donateButton}
         />
-      </ExampleWrapper>
+      </ExampleContainer>
 
-      <ExampleWrapper>
+      <ExampleContainer>
         <h3>Sport Relief header</h3>
         <Header2025
           navItems={data}
           campaign="Sport Relief"
           donateButton={donateButton}
         />
-      </ExampleWrapper>
+      </ExampleContainer>
 
-      <ExampleWrapper>
+      <ExampleContainer>
         <h3>Pride header</h3>
         <Header2025
           navItems={data}
           campaign="Pride"
           donateButton={donateButton}
         />
-      </ExampleWrapper>
+      </ExampleContainer>
 
-      <ExampleWrapper>
+      <ExampleContainer>
         <h3>Comic Relief header with Search</h3>
         <Header2025
           navItems={data}
@@ -136,9 +131,9 @@ export default function Header2025Example() {
             </div>
           }
         />
-      </ExampleWrapper>
+      </ExampleContainer>
 
-      <ExampleWrapper>
+      <ExampleContainer>
         <h3>Full header (standard nav)</h3>
         <Header2025
           navItems={data}
@@ -146,9 +141,9 @@ export default function Header2025Example() {
           donateButton={donateButton}
           metaIcons={fullMetaIcons}
         />
-      </ExampleWrapper>
+      </ExampleContainer>
 
-      <ExampleWrapper>
+      <ExampleContainer>
         <h3>Full header (extended nav)</h3>
         <Header2025
           navItems={dataExtended}
@@ -156,9 +151,9 @@ export default function Header2025Example() {
           donateButton={donateButton}
           metaIcons={fullMetaIcons}
         />
-      </ExampleWrapper>
+      </ExampleContainer>
 
-      <ExampleWrapper>
+      <ExampleContainer>
         <h3>Full header (live nav, 60 character limit)</h3>
         <Header2025
           navItems={dataLive}
@@ -166,9 +161,9 @@ export default function Header2025Example() {
           donateButton={donateButton}
           metaIcons={fullMetaIcons}
         />
-      </ExampleWrapper>
+      </ExampleContainer>
 
-      <ExampleWrapper>
+      <ExampleContainer>
         <h3>Full header (live nav, 50 character limit)</h3>
         <Header2025
           showBoxShadow
@@ -178,9 +173,9 @@ export default function Header2025Example() {
           donateButton={donateButton}
           metaIcons={fullMetaIcons}
         />
-      </ExampleWrapper>
+      </ExampleContainer>
 
-      <ExampleWrapper>
+      <ExampleContainer>
         <h3>Minimal header</h3>
         <Header2025
           showBoxShadow
@@ -190,7 +185,7 @@ export default function Header2025Example() {
           donateButton={donateButton}
           metaIcons={fullMetaIcons}
         />
-      </ExampleWrapper>
+      </ExampleContainer>
     </div>
   );
 }

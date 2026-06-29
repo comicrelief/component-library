@@ -1,8 +1,11 @@
 import React from 'react';
 import ErrorText from './ErrorText';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 export default function ErrorTextExample() {
   return (
-    <ErrorText size="error">This is an error</ErrorText>
+    <ExampleContainer>
+      <ErrorText size="error">This is an error</ErrorText>
+    </ExampleContainer>
   );
 }

@@ -1,15 +1,16 @@
 import React from 'react';
 import MarketingPreferencesDSForm from './MarketingPreferencesDSForm';
 import Text from '../../Atoms/Text/Text';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 export default function MarketingPreferencesDSExample() {
   return (
-    <>
+    <ExampleContainer>
       <Text tag="p">This MarketingPreferencesDSForm component exists purely to show the MarketingPreferencesDS component functioning within the Component Library; applications are to provide their own react-hook-form form and validation, based on these.</Text>
 
       <Text tag="p">Below are a default instance (using default configuration) and a customised version, which removes one option entirely, and tweaks the 'required' status for one field.</Text>
 
       <MarketingPreferencesDSForm />
-    </>
+    </ExampleContainer>
   );
 }

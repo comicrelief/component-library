@@ -1,24 +1,24 @@
 import React from 'react';
 import SocialIcons from './SocialIcons';
-import Wrapper from '../../../demos/Wrapper';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 export default function SocialIconsExample() {
   return (
     <>
       <h3>Comic Relief</h3>
-      <Wrapper $themeColor="red">
+      <ExampleContainer $bg="black">
         <SocialIcons campaign="comicrelief" />
-      </Wrapper>
+      </ExampleContainer>
 
       <h3>Red Nose Day</h3>
-      <Wrapper $themeColor="red">
+      <ExampleContainer $bg="black">
         <SocialIcons campaign="rednoseday" />
-      </Wrapper>
+      </ExampleContainer>
 
       <h3>Sport Relief with self target</h3>
-      <Wrapper $themeColor="red">
+      <ExampleContainer $bg="black">
         <SocialIcons campaign="sportrelief" target="self" />
-      </Wrapper>
+      </ExampleContainer>
     </>
   );
 }

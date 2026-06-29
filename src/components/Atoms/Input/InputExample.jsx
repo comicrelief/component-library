@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Input from './Input';
 import Text from '../Text/Text';
-import { ExampleContainer } from '../../../utils/ExampleWrapper';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 const ItalicText = styled(Text).attrs({ weight: 'normal' })`
   font-style: italic;

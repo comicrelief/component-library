@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import StatsSlice from './StatsSlice';
-
-const Wrapper = styled.div`
-  margin-bottom: 50px;
-`;
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 const ANIMATION_NODES = [{
   title: "123",
@@ -17,22 +13,22 @@ export default function StatsSliceExample() {
 
   return (
     <>
-      <Wrapper>
+      <ExampleContainer>
         <h3>Empty stats</h3>
         <p>Renders <code>null</code> when no nodes are provided.</p>
         <StatsSlice />
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <h3>Basic stats</h3>
         <StatsSlice ease="none" nodes={[{
           title: "123",
           stat: "123,456,789.02",
           body: "Short body should still fill 100% width"
         }]}  />
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <h3>Multiple stats</h3>
         <StatsSlice ease="none" nodes={[{
           title: "123",
@@ -59,9 +55,9 @@ export default function StatsSliceExample() {
           stat: "$800bn raised",
           body: "Ut enim ad minima veniam, quis nostrum exercitationem."
         }]}  />
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <h3>With animation (cubic)</h3>
         <p>
           The animation is scroll-triggered via IntersectionObserver in production.
@@ -75,7 +71,7 @@ export default function StatsSliceExample() {
           Replay
         </button>
         <StatsSlice key={animKey} nodes={ANIMATION_NODES} />
-      </Wrapper>
+      </ExampleContainer>
     </>
   );
 }

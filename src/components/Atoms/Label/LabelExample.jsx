@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Label from './Label';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 const StyledInput = styled.input`
   max-width: 300px;
@@ -13,21 +14,25 @@ const StyledInput = styled.input`
 export default function LabelExample() {
   return (
     <>
-      <Label
-        label="Wrapping a basic text input"
-        data-testid="label-basic"
-      >
-        <input type="text" name="field-wrapper-test" style={{ maxWidth: '300px' }} />
-      </Label>
+      <ExampleContainer>
+        <Label
+          label="Wrapping a basic text input"
+          data-testid="label-basic"
+        >
+          <input type="text" name="field-wrapper-test" style={{ maxWidth: '300px' }} />
+        </Label>
+      </ExampleContainer>
 
       <br />
 
-      <Label
-        label="Wrapping a styled input"
-        data-testid="label-styled"
-      >
-        <StyledInput type="text" name="field-wrapper-test-1" />
-      </Label>
+      <ExampleContainer>
+        <Label
+          label="Wrapping a styled input"
+          data-testid="label-styled"
+        >
+          <StyledInput type="text" name="field-wrapper-test-1" />
+        </Label>
+      </ExampleContainer>
     </>
   );
 }

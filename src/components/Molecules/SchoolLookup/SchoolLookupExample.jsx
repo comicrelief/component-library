@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SchoolLookup from './SchoolLookup';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 export default function SchoolLookupExample() {
   const [enterManually, setEnterManually] = useState(false);
@@ -9,9 +10,11 @@ export default function SchoolLookupExample() {
   }
 
   return (
-    <SchoolLookup
-      onSelect={school => alert(JSON.stringify(school, null, 2))}
-      fetchErrorHandler={() => setEnterManually(true)}
-    />
+    <ExampleContainer>
+      <SchoolLookup
+        onSelect={school => alert(JSON.stringify(school, null, 2))}
+        fetchErrorHandler={() => setEnterManually(true)}
+      />
+    </ExampleContainer>
   );
 }

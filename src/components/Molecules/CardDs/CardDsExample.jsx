@@ -1,22 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
 import CardDs from './CardDs';
 import Text from '../../Atoms/Text/Text';
 import { Internal, Download } from '../../Atoms/Icons/index';
 import { defaultData } from '../../../data/data';
-
-const ExampleWrapper = styled.div`
-  display: flex;
-  padding: 2rem 0;
-  background: #E1E2E3;
-  justify-content: space-around;
-`;
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 export default function CardDsExample() {
   return (
     <>
-      <h3>CardDs:  Image, Text & Link</h3>
-      <ExampleWrapper>
+      <ExampleContainer>
+        <h3>CardDs:  Image, Text & Link</h3>
         <CardDs
           target="_blank"
           link="/home"
@@ -47,10 +40,10 @@ export default function CardDsExample() {
               Sponsorship pledge: £500
           </Text>
         </CardDs>
-      </ExampleWrapper>
+      </ExampleContainer>
 
-      <h3>CardDs: Text & Link</h3>
-      <ExampleWrapper>
+      <ExampleContainer>
+        <h3>CardDs: Text & Link</h3>
         <CardDs
           target="blank"
           link="/home"
@@ -64,20 +57,20 @@ export default function CardDsExample() {
           </Text>
           <Text tag="p">Text body copy description</Text>
         </CardDs>
-      </ExampleWrapper>
+      </ExampleContainer>
 
-      <h3>CardDs: Text only</h3>
-      <ExampleWrapper>
+      <ExampleContainer>
+        <h3>CardDs: Text only</h3>
         <CardDs backgroundColor="white" height="auto">
           <Text tag="h3" color="purple" size="xl">
             Title
           </Text>
           <Text tag="p">Text body copy description</Text>
         </CardDs>
-      </ExampleWrapper>
+      </ExampleContainer>
 
-      <h3>CardDs: Image & Text, No Link</h3>
-      <ExampleWrapper>
+      <ExampleContainer>
+        <h3>CardDs: Image & Text, No Link</h3>
         <CardDs
           target="_blank"
           imageLow={defaultData.image}
@@ -92,10 +85,10 @@ export default function CardDsExample() {
           </Text>
           <Text tag="p">Text body copy description</Text>
         </CardDs>
-      </ExampleWrapper>
+      </ExampleContainer>
 
-      <h3>CardDs: Only column view for use in CardsCarousel</h3>
-      <ExampleWrapper>
+      <ExampleContainer>
+        <h3>CardDs: Only column view for use in CardsCarousel</h3>
         <CardDs
           target="_blank"
           link="/home"
@@ -113,7 +106,7 @@ export default function CardDsExample() {
           </Text>
           <Text tag="p">Text body copy description</Text>
         </CardDs>
-      </ExampleWrapper>
+      </ExampleContainer>
     </>
   );
 }

@@ -1,19 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
 import Card from './Card';
 import Text from '../../Atoms/Text/Text';
 import { defaultData } from '../../../data/data';
-
-const ExampleWrapper = styled.div`
-  background-color: lightblue;
-  padding: 10px;
-`;
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 export default function CardExample() {
   return (
     <>
-      <h3>Default</h3>
-      <ExampleWrapper>
+      <ExampleContainer>
+        <h3>Default</h3>
         <Card
           imageLow={defaultData.image}
           images={defaultData.images}
@@ -27,10 +22,10 @@ export default function CardExample() {
             time of year.
           </Text>
         </Card>
-      </ExampleWrapper>
+      </ExampleContainer>
 
-      <h3>Card - row layout on small breakpoint only</h3>
-      <ExampleWrapper>
+      <ExampleContainer>
+        <h3>Card - row layout on small breakpoint only</h3>
         <Card
           imageLow={defaultData.image}
           images={defaultData.images}
@@ -44,10 +39,10 @@ export default function CardExample() {
             Your donations make a very real difference to people in the UK and around the world.
           </Text>
         </Card>
-      </ExampleWrapper>
+      </ExampleContainer>
 
-      <h3>Card - row layout on medium breakpoint only</h3>
-      <ExampleWrapper>
+      <ExampleContainer>
+        <h3>Card - row layout on medium breakpoint only</h3>
         <Card
           imageLow={defaultData.image}
           images={defaultData.images}
@@ -61,10 +56,10 @@ export default function CardExample() {
             Your donations make a very real difference to people in the UK and around the world.
           </Text>
         </Card>
-      </ExampleWrapper>
+      </ExampleContainer>
 
-      <h3>Card - row layout on small and medium breakpoints</h3>
-      <ExampleWrapper>
+      <ExampleContainer>
+        <h3>Card - row layout on small and medium breakpoints</h3>
         <Card
           imageLow={defaultData.image}
           images={defaultData.images}
@@ -78,12 +73,12 @@ export default function CardExample() {
             Your donations make a very real difference to people in the UK and around the world.
           </Text>
         </Card>
-      </ExampleWrapper>
+      </ExampleContainer>
 
-      <h3>Card - no body</h3>
-      <ExampleWrapper>
+      <ExampleContainer>
+        <h3>Card - no body</h3>
         <Card imageLow={defaultData.image} images={defaultData.image} />
-      </ExampleWrapper>
+      </ExampleContainer>
     </>
   );
 }

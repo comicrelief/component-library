@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Lookup from './Lookup';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 const MOCK_CITIES = [
   { id: 1, name: 'London', country: 'UK' },
@@ -32,54 +33,60 @@ export default function LookupExample() {
 
   return (
     <>
-      <h3>Default</h3>
-      <p style={{ marginBottom: '1rem' }}>
-        Type a city name (min 2 chars) and click Search or press Enter. Try &ldquo;lon&rdquo;, &ldquo;man&rdquo;, or &ldquo;xyz&rdquo; to see no results.
-      </p>
-      <Lookup
-        name="city-lookup"
-        label="Search for a city"
-        placeholder="e.g. London"
-        buttonText="Search"
-        lookupHandler={mockLookup}
-        mapOptionToString={city => `${city.name}, ${city.country}`}
-        onSelect={city => setSelected(city)}
-        dropdownInstruction="Select a city from the list below"
-      />
-      {selected && (
-        <p style={{ marginTop: '1rem' }}>
-          Selected: <strong>{selected.name}, {selected.country}</strong>
+      <ExampleContainer>
+        <h3>Default</h3>
+        <p style={{ marginBottom: '1rem' }}>
+          Type a city name (min 2 chars) and click Search or press Enter. Try &ldquo;lon&rdquo;, &ldquo;man&rdquo;, or &ldquo;xyz&rdquo; to see no results.
         </p>
-      )}
+        <Lookup
+          name="city-lookup"
+          label="Search for a city"
+          placeholder="e.g. London"
+          buttonText="Search"
+          lookupHandler={mockLookup}
+          mapOptionToString={city => `${city.name}, ${city.country}`}
+          onSelect={city => setSelected(city)}
+          dropdownInstruction="Select a city from the list below"
+        />
+        {selected && (
+          <p style={{ marginTop: '1rem' }}>
+            Selected: <strong>{selected.name}, {selected.country}</strong>
+          </p>
+        )}
+      </ExampleContainer>
 
-      <h3 style={{ marginTop: '2rem' }}>Service error state</h3>
-      <p style={{ marginBottom: '1rem' }}>
-        This example&apos;s lookup handler always throws — showing how errors surface to the user.
-      </p>
-      <Lookup
-        name="city-lookup-error"
-        label="Search for a city"
-        placeholder="e.g. London"
-        buttonText="Search"
-        lookupHandler={mockLookupError}
-        mapOptionToString={city => city.name}
-        onSelect={() => {}}
-      />
+      <ExampleContainer>
+        <h3 style={{ marginTop: '2rem' }}>Service error state</h3>
+        <p style={{ marginBottom: '1rem' }}>
+          This example&apos;s lookup handler always throws — showing how errors surface to the user.
+        </p>
+        <Lookup
+          name="city-lookup-error"
+          label="Search for a city"
+          placeholder="e.g. London"
+          buttonText="Search"
+          lookupHandler={mockLookupError}
+          mapOptionToString={city => city.name}
+          onSelect={() => {}}
+        />
+      </ExampleContainer>
 
-      <h3 style={{ marginTop: '2rem' }}>Custom no-results message</h3>
-      <p style={{ marginBottom: '1rem' }}>
-        Try searching for &ldquo;xyz&rdquo; to see the custom no-results message.
-      </p>
-      <Lookup
-        name="city-lookup-noresults"
-        label="Search for a city"
-        placeholder="e.g. London"
-        buttonText="Search"
-        lookupHandler={mockLookup}
-        mapOptionToString={city => city.name}
-        onSelect={() => {}}
-        noResultsMessage="No cities matched your search — please try a different term."
-      />
+      <ExampleContainer>
+        <h3 style={{ marginTop: '2rem' }}>Custom no-results message</h3>
+        <p style={{ marginBottom: '1rem' }}>
+          Try searching for &ldquo;xyz&rdquo; to see the custom no-results message.
+        </p>
+        <Lookup
+          name="city-lookup-noresults"
+          label="Search for a city"
+          placeholder="e.g. London"
+          buttonText="Search"
+          lookupHandler={mockLookup}
+          mapOptionToString={city => city.name}
+          onSelect={() => {}}
+          noResultsMessage="No cities matched your search — please try a different term."
+        />
+      </ExampleContainer>
     </>
   );
 }

@@ -2,20 +2,20 @@ import React from 'react';
 import Link from './Link';
 import buttonTypes from '../../../theme/crTheme/buttonTypes';
 import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from '../Icons/index';
-import Wrapper from '../../../demos/Wrapper';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 export default function LinkExample() {
   return (
     <>
       <h3>Standard links</h3>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link href="#anchor" target="blank">
           Link standard
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link
           href="#anchor"
           target="blank"
@@ -23,83 +23,83 @@ export default function LinkExample() {
         >
           Link standard icon
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper $bg="#222">
+      <ExampleContainer $bg="#222">
         <Link href="#anchor" type="standard_white">
           Link standard white
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
       <h3>Link as Buttons</h3>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link color="black" href="#anchor" target="self" type="button">
           Link as button
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link color="red" href="/test" target="self" type="button">
           Link as button
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link color="yellow" href="/test" target="blank" type="button">
           Link as button
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
       <h3>Link as Secondary</h3>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link color="red" href="#anchor" target="self" type="button" buttonType={buttonTypes.SECONDARY}>
           Link as button (secondary)
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link color="black" href="/test" target="self" type="button" buttonType={buttonTypes.SECONDARY}>
           Link as button (secondary)
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper $bg="#222">
+      <ExampleContainer $bg="#222">
         <Link color="white" href="/test" target="blank" type="button" buttonType={buttonTypes.SECONDARY}>
           Link as button (secondary)
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
       <h3>Link as Tertiary</h3>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link color="red" href="#anchor" target="self" type="button" buttonType={buttonTypes.TERTIARY}>
           Link as button (tertiary)
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link color="black" href="/test" target="self" type="button" buttonType={buttonTypes.TERTIARY}>
           Link as button (tertiary)
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper $bg="#222">
+      <ExampleContainer $bg="#222">
         <Link color="white" href="/test" target="blank" type="button" buttonType={buttonTypes.TERTIARY}>
           Link as button (tertiary)
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link color="red" href="/test" target="blank" type="button" fullWidth>
           Link as full-width red button
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
       <h3>Iconography</h3>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link
           color="red"
           mobileColour="blue"
@@ -110,9 +110,9 @@ export default function LinkExample() {
         >
           Internal link, 'blue' with red icon on tablet and mobile
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link
           color="blue"
           mobileColour="black"
@@ -123,9 +123,9 @@ export default function LinkExample() {
         >
           External link (black on mobile, blue on desktop)
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link
           color="red"
           href="#anchor"
@@ -135,9 +135,9 @@ export default function LinkExample() {
         >
           Download link (blue mobile-tablet icon, white desktop icon)
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link
           color="red"
           href="#anchor"
@@ -147,9 +147,9 @@ export default function LinkExample() {
         >
           Favourite link (blue mobile-tablet icon, white desktop icon)
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link
           color="red"
           href="#anchor"
@@ -159,9 +159,9 @@ export default function LinkExample() {
         >
           Chevron Up (blue mobile-tablet icon, white desktop icon)
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link
           color="red"
           href="#anchor"
@@ -171,9 +171,9 @@ export default function LinkExample() {
         >
           Chevron Down (blue mobile-tablet icon, white desktop icon)
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link
           color="red"
           href="#anchor"
@@ -183,9 +183,9 @@ export default function LinkExample() {
         >
           Chevron Left (blue mobile-tablet icon, white desktop icon)
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link
           color="red"
           href="#anchor"
@@ -195,9 +195,9 @@ export default function LinkExample() {
         >
           Chevron Right (blue mobile-tablet icon, white desktop icon)
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link
           color="red"
           href="#anchor"
@@ -208,9 +208,9 @@ export default function LinkExample() {
         >
           Arrow Left (blue mobile-tablet icon, white desktop icon)
         </Link>
-      </Wrapper>
+      </ExampleContainer>
 
-      <Wrapper>
+      <ExampleContainer>
         <Link
           color="red"
           href="#anchor"
@@ -220,7 +220,7 @@ export default function LinkExample() {
         >
           At Sign (blue mobile-tablet icon, white desktop icon)
         </Link>
-      </Wrapper>
+      </ExampleContainer>
     </>
   );
 }

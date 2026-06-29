@@ -5,13 +5,14 @@ import dataHighValue from './dev-data/data-high-value';
 import dataSingle from './dev-data/data-single';
 import dataMonthly from './dev-data/data-monthly';
 import { defaultData, mobileImages } from '../../../data/data';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 const desktopPictures = defaultData;
 const mobilePictures = mobileImages;
 
 export function DonateExample1() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Form align right, with red desktop overlay and purple mobile background colour, with a blue submit button and 'no top padding' option</h3>
       <Donate
         alt="Background image"
@@ -32,13 +33,13 @@ export function DonateExample1() {
         subtitle="Please help us fund life-changing projects in the UK and around the world."
         paddingOption="upper_off"
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample2() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Form align left, with custom message after choosing an "Other amount" to donate, high value cart, and 'no bottom padding' option</h3>
       <Donate
         mobileBackgroundColor="blue_dark"
@@ -59,13 +60,13 @@ export function DonateExample2() {
         otherAmountText="Overridden via the 'Other amount text' prop"
         paddingOption="lower_off"
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample3() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Single Giving, with 'no padding' option</h3>
       <Donate
         mobileBackgroundColor="blue_dark"
@@ -85,13 +86,13 @@ export function DonateExample3() {
         subtitle="Please help us fund life-changing projects in the UK and around the world."
         paddingOption="both_off"
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample4() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Single Giving "No Money Buys"</h3>
       <Donate
         mobileBackgroundColor="blue_dark"
@@ -111,7 +112,7 @@ export function DonateExample4() {
         noMoneyBuys
         subtitle="Please help us fund life-changing projects in the UK and around the world."
       />
-    </>
+    </ExampleContainer>
   );
 }
 
@@ -127,7 +128,7 @@ export function DonateExample5() {
   }, []);
 
   return (
-    <>
+    <ExampleContainer>
       <h3>Single Giving "No Money Buys" with overridden manual input value</h3>
       <Donate
         mobileBackgroundColor="blue_dark"
@@ -148,7 +149,7 @@ export function DonateExample5() {
         otherAmountValue={amountDonate}
         otherAmountText="Here's an otherAmountText override"
       />
-    </>
+    </ExampleContainer>
   );
 }
 
@@ -164,7 +165,7 @@ export function DonateExample6() {
   }, []);
 
   return (
-    <>
+    <ExampleContainer>
       <h3>Form align right, with red desktop overlay and purple mobile background colour, with a blue submit button, with overridden manual input value</h3>
       <Donate
         alt="Background image"
@@ -182,13 +183,13 @@ export function DonateExample6() {
         subtitle="Please help us fund life-changing projects in the UK and around the world."
         otherAmountValue={amountDonate}
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample7() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Form align left, with custom message after choosing an "Other amount" to donate, high value cart.</h3>
       <Donate
         mobileBackgroundColor="blue_dark"
@@ -207,13 +208,13 @@ export function DonateExample7() {
         subtitle="Please help us fund life-changing projects in the UK and around the world."
         otherAmountText="Overridden via the 'Other amount text' prop"
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample8() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Form align right, but no copy, so ACTUALLY centre-aligns</h3>
       <Donate
         alt="Background image"
@@ -237,13 +238,13 @@ export function DonateExample8() {
         monthlyTitle=""
         monthlySubtitle=""
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample9() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Form align left - no subtitle</h3>
       <Donate
         mobileBackgroundColor="transparent"
@@ -261,13 +262,13 @@ export function DonateExample9() {
         title="Donate Now"
         subtitle=""
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample10() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Single Giving - no subtitle</h3>
       <Donate
         mobileBackgroundColor="blue_dark"
@@ -285,13 +286,13 @@ export function DonateExample10() {
         title="Donate Now"
         subtitle=""
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample11() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Single Giving "No Money Buys"</h3>
       <Donate
         mobileBackgroundColor="blue_dark"
@@ -310,13 +311,13 @@ export function DonateExample11() {
         noMoneyBuys
         subtitle=""
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample12() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Single Giving "No Money Buys", no background image, blue background; overriding 'choose amount' text</h3>
       <Donate
         desktopOverlayColor="blue_dark"
@@ -333,13 +334,13 @@ export function DonateExample12() {
         subtitle=""
         chooseAmountText="Overridden via the 'choose amount text' prop"
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample13() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Forcing mobile layout via isDesktop override; needed to pass parent prop for external media queries, red background</h3>
       <Donate
         alt="Background image"
@@ -360,13 +361,13 @@ export function DonateExample13() {
         subtitle="Please help us fund life-changing projects in the UK and around the world."
         isDesktopOverride={false}
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample14() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Additional copy for BOTH giving types</h3>
       <Donate
         alt="Background image"
@@ -388,13 +389,13 @@ export function DonateExample14() {
         additionalSingleCopy="Some additional single giving copy - Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa."
         additionalMonthlyCopy="Some additional regular giving copy! - Quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos."
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample15() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Additional copy for monthly only</h3>
       <Donate
         alt="Background image"
@@ -415,13 +416,13 @@ export function DonateExample15() {
         subtitle="Please help us fund life-changing projects in the UK and around the world."
         additionalMonthlyCopy="Some additional regular giving copy! - Quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos."
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample16() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Additional copy for single only</h3>
       <Donate
         alt="Background image"
@@ -442,13 +443,13 @@ export function DonateExample16() {
         subtitle="Please help us fund life-changing projects in the UK and around the world."
         additionalSingleCopy="Some additional single giving copy - Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa."
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample17() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Default monthly giving type</h3>
       <Donate
         alt="Background image"
@@ -469,13 +470,13 @@ export function DonateExample17() {
         subtitle="Please help us fund life-changing projects in the UK and around the world."
         defaultGivingType="monthly"
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample18() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Monthly ONLY</h3>
       <Donate
         alt="Background image"
@@ -495,13 +496,13 @@ export function DonateExample18() {
         title="Donate Now"
         subtitle="Please help us fund life-changing projects in the UK and around the world."
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample19() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Monthly ONLY, no moneybuys</h3>
       <Donate
         alt="Background image"
@@ -522,13 +523,13 @@ export function DonateExample19() {
         subtitle="Please help us fund life-changing projects in the UK and around the world."
         noMoneyBuys
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample20() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Monthly 'Choose Amount' and 'Other Amount' copy overrides</h3>
       <Donate
         alt="Background image"
@@ -552,13 +553,13 @@ export function DonateExample20() {
         monthlyChooseAmountText="monthlyChooseAmountText here"
         monthlyOtherAmountText="monthlyOtherAmountText here"
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample21() {
   return (
-    <>
+    <ExampleContainer>
       <h3>Monthly Title and Subtitle overrides</h3>
       <Donate
         alt="Background image"
@@ -582,13 +583,13 @@ export function DonateExample21() {
         monthlyTitle="Monthly Title here"
         monthlySubtitle="Monthly Subtitle here"
       />
-    </>
+    </ExampleContainer>
   );
 }
 
 export function DonateExample22() {
   return (
-    <>
+    <ExampleContainer>
       <h3>All monthly overrides</h3>
       <Donate
         alt="Background image"
@@ -614,6 +615,6 @@ export function DonateExample22() {
         monthlyChooseAmountText="monthlyChooseAmountText here"
         monthlyOtherAmountText="monthlyOtherAmountText here"
       />
-    </>
+    </ExampleContainer>
   );
 }

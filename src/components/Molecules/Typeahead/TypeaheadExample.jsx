@@ -1,5 +1,6 @@
 import React from 'react';
 import Typeahead from './Typeahead';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 const suggestions = async suggestion => {
   const response = await fetch(
@@ -11,14 +12,16 @@ const suggestions = async suggestion => {
 
 export default function TypeaheadExample() {
   return (
-    <Typeahead
-      optionFetcher={suggestions}
-      onSelect={suggestion => alert(JSON.stringify(suggestion, null, 2))}
-      id="typeahead-test"
-      label="Typeahead test (word/phrase suggestions)"
-      name="suggestion"
-      placeholder="Start searching..."
-      notFoundMessage="Sorry, we couldn't find anything"
-    />
+    <ExampleContainer>
+      <Typeahead
+        optionFetcher={suggestions}
+        onSelect={suggestion => alert(JSON.stringify(suggestion, null, 2))}
+        id="typeahead-test"
+        label="Typeahead test (word/phrase suggestions)"
+        name="suggestion"
+        placeholder="Start searching..."
+        notFoundMessage="Sorry, we couldn't find anything"
+      />
+    </ExampleContainer>
   );
 }

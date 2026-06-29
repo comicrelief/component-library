@@ -1,12 +1,19 @@
 import React from 'react';
 import RadioButton from './RadioButton';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 export default function RadioButtonExample() {
   return (
     <>
-      <RadioButton name="gender" value="male" label="Male" />
-      <RadioButton name="gender" value="female" label="Female" />
-      <RadioButton name="gender" value="other" label="other" />
+      <ExampleContainer>
+        <RadioButton name="gender" value="male" label="Male" />
+      </ExampleContainer>
+      <ExampleContainer>
+        <RadioButton name="gender" value="female" label="Female" />
+      </ExampleContainer>
+      <ExampleContainer>
+        <RadioButton name="gender" value="other" label="other" />
+      </ExampleContainer>
     </>
   );
 }

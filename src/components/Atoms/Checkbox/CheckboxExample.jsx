@@ -2,6 +2,7 @@ import React from 'react';
 import Checkbox from './Checkbox';
 import Text from '../Text/Text';
 import Link from '../Link/Link';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 const LongLabel = () => (
   <div>
@@ -25,31 +26,40 @@ export default function CheckboxExample() {
   return (
     <>
       <p>List of checkboxes</p>
+      <ExampleContainer>
+        <Checkbox id="sport1" name="sport1" value="Tennis" label="Tennis" />
+      </ExampleContainer>
 
-      <Checkbox id="sport1" name="sport1" value="Tennis" label="Tennis" />
+      <ExampleContainer>
+        <Checkbox id="sport2" name="sport2" value="Basketball" label="Basketball" />
+      </ExampleContainer>
 
-      <Checkbox id="sport2" name="sport2" value="Basketball" label="Basketball" />
+      <ExampleContainer>
+        <Checkbox id="sport3" name="sport3" value="Cycling" label="Cycling" />
+      </ExampleContainer>
 
-      <Checkbox id="sport3" name="sport3" value="Cycling" label="Cycling" />
-
-      <Checkbox
-        id="sport4"
-        name="sport4"
-        value="Football (with wacky styling to test props)"
-        label="Football (with wacky styling to test props)"
-        labelColour="purple_dark"
-        checkboxBg="white"
-        checkboxBorder="black"
-        checkboxBgChecked="green"
-        checkboxBorderChecked="green"
-        checkboxBorderFocus="blue"
-      />
+      <ExampleContainer>
+        <Checkbox
+          id="sport4"
+          name="sport4"
+          value="Football (with wacky styling to test props)"
+          label="Football (with wacky styling to test props)"
+          labelColour="purple_dark"
+          checkboxBg="white"
+          checkboxBorder="black"
+          checkboxBgChecked="green"
+          checkboxBorderChecked="green"
+          checkboxBorderFocus="blue"
+        />
+      </ExampleContainer>
 
       <br />
       <p>A checkbox with a long label containing links</p>
-      <Checkbox id="node_label" name="node_label" value="node_label">
-        <LongLabel />
-      </Checkbox>
+      <ExampleContainer>
+        <Checkbox id="node_label" name="node_label" value="node_label">
+          <LongLabel />
+        </Checkbox>
+      </ExampleContainer>
     </>
   );
 }

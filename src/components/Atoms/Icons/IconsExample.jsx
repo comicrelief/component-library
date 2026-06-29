@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Arrow, AtSign, Chevron, CtaArrow, Download, External, Favourite, Internal } from './index';
 import Cross from './Cross';
 import Curve from './Curve';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 const Grid = styled.div`
   display: flex;
@@ -30,17 +31,13 @@ const Name = styled.p`
   text-align: center;
 `;
 
-const Section = styled.div`
-  padding: 1rem;
-`;
-
 const directions = ['up', 'down', 'left', 'right'];
 
 export default function IconsExample() {
   return (
     <div style={{ padding: '1rem' }}>
 
-      <Section>
+      <ExampleContainer>
         <h3>Standard Icons</h3>
         <p style={{ fontSize: '0.85rem', color: '#666' }}>Shown at size=48, colour="black"</p>
         <Grid>
@@ -58,9 +55,9 @@ export default function IconsExample() {
             </IconCard>
           ))}
         </Grid>
-      </Section>
+      </ExampleContainer>
 
-      <Section>
+      <ExampleContainer>
         <h3>Arrow — directions</h3>
         <Grid>
           {directions.map(dir => (
@@ -70,9 +67,9 @@ export default function IconsExample() {
             </IconCard>
           ))}
         </Grid>
-      </Section>
+      </ExampleContainer>
 
-      <Section>
+      <ExampleContainer>
         <h3>Chevron — directions</h3>
         <Grid>
           {directions.map(dir => (
@@ -82,9 +79,9 @@ export default function IconsExample() {
             </IconCard>
           ))}
         </Grid>
-      </Section>
+      </ExampleContainer>
 
-      <Section>
+      <ExampleContainer>
         <h3>CtaArrow — directions</h3>
         <Grid>
           {directions.map(dir => (
@@ -94,14 +91,14 @@ export default function IconsExample() {
             </IconCard>
           ))}
         </Grid>
-      </Section>
+      </ExampleContainer>
 
-      <Section>
+      <ExampleContainer>
         <h3>Curve</h3>
-        <Section style={{ background: '#f4f2f4', borderRadius: '6px', overflow: 'hidden' }}>
+        <ExampleContainer style={{ background: '#f4f2f4', borderRadius: '6px', overflow: 'hidden' }}>
           <Curve />
-        </Section>
-      </Section>
+        </ExampleContainer>
+      </ExampleContainer>
 
     </div>
   );

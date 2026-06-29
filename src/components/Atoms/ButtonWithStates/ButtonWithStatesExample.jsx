@@ -1,6 +1,6 @@
 import React from 'react';
 import ButtonWithStates from './ButtonWithStates';
-import { ExampleContainer } from '../../../utils/ExampleWrapper';
+import { ExampleContainer } from '../../../demos/SharedStyles';
 
 export default function ButtonWithStatesExample() {
   return (
