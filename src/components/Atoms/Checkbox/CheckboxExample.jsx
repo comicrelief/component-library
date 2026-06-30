@@ -27,15 +27,15 @@ export default function CheckboxExample() {
     <>
       <p>List of checkboxes</p>
       <ExampleContainer>
-        <Checkbox id="sport1" name="sport1" value="Tennis" label="Tennis" />
+        <Checkbox id="sport1" name="sport1" value="Tennis" label="Tennis" data-testid="checkbox-tennis" />
       </ExampleContainer>
 
       <ExampleContainer>
-        <Checkbox id="sport2" name="sport2" value="Basketball" label="Basketball" />
+        <Checkbox id="sport2" name="sport2" value="Basketball" label="Basketball" data-testid="checkbox-basketball" />
       </ExampleContainer>
 
       <ExampleContainer>
-        <Checkbox id="sport3" name="sport3" value="Cycling" label="Cycling" />
+        <Checkbox id="sport3" name="sport3" value="Cycling" label="Cycling" data-testid="checkbox-cycling" />
       </ExampleContainer>
 
       <ExampleContainer>
@@ -50,13 +50,14 @@ export default function CheckboxExample() {
           checkboxBgChecked="green"
           checkboxBorderChecked="green"
           checkboxBorderFocus="blue"
+          data-testid="checkbox-football"
         />
       </ExampleContainer>
 
       <br />
       <p>A checkbox with a long label containing links</p>
       <ExampleContainer>
-        <Checkbox id="node_label" name="node_label" value="node_label">
+        <Checkbox id="node_label" name="node_label" value="node_label" data-testid="checkbox-terms">
           <LongLabel />
         </Checkbox>
       </ExampleContainer>

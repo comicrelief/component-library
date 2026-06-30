@@ -61,15 +61,18 @@ const Checkbox = React.forwardRef(({
   checkboxBorderFocus,
   name,
   ...rest
-}, ref) => (
+}, ref) => {
+  const { 'data-testid': testid, ...inputProps } = rest;
+  return (
   <Label
     $hasLabelAsString={!!label}
     $labelColour={labelColour}
-    htmlFor={rest.id || name}
+    htmlFor={inputProps.id || name}
+    data-testid={testid}
   >
     <StyledCheckboxInput
-      {...rest}
-      id={rest.id || name}
+      {...inputProps}
+      id={inputProps.id || name}
       name={name}
       value={value}
       ref={ref}
@@ -82,7 +85,8 @@ const Checkbox = React.forwardRef(({
     <span />
     {label ? <Text weight="bold" size="s">{label}</Text> : children}
   </Label>
-));
+  );
+});
 
 Checkbox.propTypes = {
   name: PropTypes.string.isRequired,
