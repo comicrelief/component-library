@@ -16,8 +16,7 @@ const imageObj = {
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 400px;
-  marginBottom: 2rem;
+  height: 600px;
 `;
 
 export default function PictureOrVideoExample() {
