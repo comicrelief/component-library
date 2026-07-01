@@ -63,18 +63,18 @@ const RadioButton = React.forwardRef(({
 }, ref) => {
   const { 'data-testid': testid, ...inputProps } = rest;
   return (
-  <Label htmlFor={value} data-testid={testid}>
-    <StyledRadioInput
-      type="radio"
-      {...inputProps}
-      name={name}
-      value={value}
-      id={value}
-      ref={ref}
-    />
-    <span />
-    <Text weight="bold" size="s">{label}</Text>
-  </Label>
+    <Label htmlFor={value} data-testid={testid}>
+      <StyledRadioInput
+        type="radio"
+        {...inputProps}
+        name={name}
+        value={value}
+        id={value}
+        ref={ref}
+      />
+      <span />
+      <Text weight="bold" size="s">{label}</Text>
+    </Label>
   );
 });
 

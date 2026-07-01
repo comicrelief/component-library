@@ -64,27 +64,27 @@ const Checkbox = React.forwardRef(({
 }, ref) => {
   const { 'data-testid': testid, ...inputProps } = rest;
   return (
-  <Label
-    $hasLabelAsString={!!label}
-    $labelColour={labelColour}
-    htmlFor={inputProps.id || name}
-    data-testid={testid}
-  >
-    <StyledCheckboxInput
-      {...inputProps}
-      id={inputProps.id || name}
-      name={name}
-      value={value}
-      ref={ref}
-      $checkboxBg={checkboxBg}
-      $checkboxBorder={checkboxBorder}
-      $checkboxBgChecked={checkboxBgChecked}
-      $checkboxBorderChecked={checkboxBorderChecked}
-      $checkboxBorderFocus={checkboxBorderFocus}
-    />
-    <span />
-    {label ? <Text weight="bold" size="s">{label}</Text> : children}
-  </Label>
+    <Label
+      $hasLabelAsString={!!label}
+      $labelColour={labelColour}
+      htmlFor={inputProps.id || name}
+      data-testid={testid}
+    >
+      <StyledCheckboxInput
+        {...inputProps}
+        id={inputProps.id || name}
+        name={name}
+        value={value}
+        ref={ref}
+        $checkboxBg={checkboxBg}
+        $checkboxBorder={checkboxBorder}
+        $checkboxBgChecked={checkboxBgChecked}
+        $checkboxBorderChecked={checkboxBorderChecked}
+        $checkboxBorderFocus={checkboxBorderFocus}
+      />
+      <span />
+      {label ? <Text weight="bold" size="s">{label}</Text> : children}
+    </Label>
   );
 });
 
