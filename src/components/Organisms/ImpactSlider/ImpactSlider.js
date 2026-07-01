@@ -40,7 +40,7 @@ const ImpactSlider = ({
         <Copy>
           {children}
         </Copy>
-        <CurrentAmountCopy tag="p" size="s">
+        <CurrentAmountCopy tag="p" size="s" data-testid="impact-slider-amount-text">
           A donation of
           {' '}
           £
