@@ -9,27 +9,25 @@ test.describe('select component', () => {
     await expect(page.locator('[data-testid="Select-example-1"]')).toBeVisible();
     await expect(page.locator('[data-preview="Select"]')).toBeVisible();
 
-    // ensure select dropdown values are visible
-    await page.locator('[data-preview="Select"] label:nth-child(2) > select').click();
+    // get the first select (DROPDOWN MENU)
+    const selectOne = page.locator('select[data-testid="select-one"]');
 
-    await page.locator('[data-preview="Select"] label:nth-child(2) > select').selectOption('The first option');
-    await expect(page.locator('[data-preview="Select"] label:nth-child(2) > select > option[value="Option one"]')).toHaveValue('Option one');
+    await selectOne.selectOption('The first option');
+    await expect(selectOne).toHaveValue('Option one');
 
-    await page.locator('[data-preview="Select"] label:nth-child(2) > select').selectOption('The second option');
-    await expect(page.locator('[data-preview="Select"] label:nth-child(2) > select > option[value="Option two"]')).toHaveValue('Option two');
+    await selectOne.selectOption('The second option');
+    await expect(selectOne).toHaveValue('Option two');
 
-    await page.locator('[data-preview="Select"] label:nth-child(2) > select').selectOption('The third option');
-    await expect(page.locator('[data-preview="Select"] label:nth-child(2) > select > option[value="Option three"]')).toHaveValue('Option three');
+    await selectOne.selectOption('The third option');
+    await expect(selectOne).toHaveValue('Option three');
 
-    await page.locator('[data-preview="Select"] label:nth-child(2) > select').selectOption('The fourth option');
-    await expect(page.locator('[data-preview="Select"] label:nth-child(2) > select > option[value="Option four"]')).toHaveValue('Option four');
+    await selectOne.selectOption('The fourth option');
+    await expect(selectOne).toHaveValue('Option four');
 
-    await page.locator('[data-preview="Select"] label:nth-child(4) > select').selectOption('The second option');
-
-    const optionElement = page.locator('[data-preview="Select"] label:nth-child(4) > select > option[value="Option two"]');
-    const isSelected = await optionElement.evaluate(option => option.selected);
-
-    expect(isSelected).toBe(true);
+    // get the second select (DROPDOWN MENU with error)
+    const selectTwo = page.locator('select[data-testid="select-two"]');
+    await selectTwo.selectOption('The second option');
+    await expect(selectTwo).toHaveValue('Option two');
 
     await page.close();
   });

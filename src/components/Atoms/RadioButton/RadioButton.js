@@ -60,11 +60,13 @@ const Label = styled.label`
 
 const RadioButton = React.forwardRef(({
   label, name, value, ...rest
-}, ref) => (
-  <Label htmlFor={value}>
+}, ref) => {
+  const { 'data-testid': testid, ...inputProps } = rest;
+  return (
+  <Label htmlFor={value} data-testid={testid}>
     <StyledRadioInput
       type="radio"
-      {...rest}
+      {...inputProps}
       name={name}
       value={value}
       id={value}
@@ -73,7 +75,8 @@ const RadioButton = React.forwardRef(({
     <span />
     <Text weight="bold" size="s">{label}</Text>
   </Label>
-));
+  );
+});
 
 RadioButton.propTypes = {
   name: PropTypes.string.isRequired,

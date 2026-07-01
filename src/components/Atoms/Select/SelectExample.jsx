@@ -13,6 +13,7 @@ export default function SelectExample() {
           description="Please choose an option"
           defaultValue="Option four"
           errorMsg=""
+          data-testid="select-one"
           options={[
             { value: 'Option one', displayValue: 'The first option' },
             { value: 'Option two', displayValue: 'The second option' },
@@ -30,6 +31,7 @@ export default function SelectExample() {
           errorMsg="This is an error message"
           description="Please choose an option"
           greyDescription
+          data-testid="select-two"
           options={[
             { value: 'Option one', displayValue: 'The first option' },
             { value: 'Option two', displayValue: 'The second option' },
@@ -48,6 +50,7 @@ export default function SelectExample() {
           description="Select an option"
           greyDescription
           hideArrow
+          data-testid="select-three"
           options={[
             { value: 'Option one', displayValue: 'The first option' }
           ]}

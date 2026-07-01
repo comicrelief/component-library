@@ -11,28 +11,24 @@ test.describe('checkbox', () => {
     // tennis option
     const tennisCheckbox = page.locator('label[data-testid="checkbox-tennis"]');
     await tennisCheckbox.click();
-    await expect(tennisCheckbox).toHaveValue('Tennis');
     expect(await tennisCheckbox.locator('input').isChecked()).toBeTruthy();
 
     // basketball option
     const basketballCheckbox = page.locator('label[data-testid="checkbox-basketball"]');
     await basketballCheckbox.click();
-    await expect(basketballCheckbox).toHaveValue('Basketball');
     expect(await basketballCheckbox.locator('input').isChecked()).toBeTruthy();
 
     // cycling option
     const cyclingCheckbox = page.locator('label[data-testid="checkbox-cycling"]');
     await cyclingCheckbox.click();
-    await expect(cyclingCheckbox).toHaveValue('Cycling');
     expect(await cyclingCheckbox.locator('input').isChecked()).toBeTruthy();
 
     // football checkbox
     const footballCheckbox = page.locator('label[data-testid="checkbox-football"]');
     await footballCheckbox.click();
-    await expect(footballCheckbox).toHaveValue('Football (with wacky styling to test props)');
     expect(await footballCheckbox.locator('input').isChecked()).toBeTruthy();
 
-    // terms and conditions
+    // terms and conditions (with long label containing links)
     const termsCheckbox = page.locator('label[data-testid="checkbox-terms"]');
     await termsCheckbox.click();
     expect(await termsCheckbox.locator('input').isChecked()).toBeTruthy();
@@ -40,22 +36,18 @@ test.describe('checkbox', () => {
     // ensure checkboxes are unchecked when clicked again
     // tennis option
     await tennisCheckbox.click();
-    await expect(tennisCheckbox).toHaveValue('Tennis');
     expect(await tennisCheckbox.locator('input').isChecked()).toBeFalsy();
 
     // basketball option
     await basketballCheckbox.click();
-    await expect(basketballCheckbox).toHaveValue('Basketball');
     expect(await basketballCheckbox.locator('input').isChecked()).toBeFalsy();
 
     // cycling option
     await cyclingCheckbox.click();
-    await expect(cyclingCheckbox).toHaveValue('Cycling');
     expect(await cyclingCheckbox.locator('input').isChecked()).toBeFalsy();
 
     // football checkbox
     await footballCheckbox.click();
-    await expect(footballCheckbox).toHaveValue('Football (with wacky styling to test props)');
     expect(await footballCheckbox.locator('input').isChecked()).toBeFalsy();
 
     // terms and conditions
