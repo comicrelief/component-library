@@ -13,9 +13,9 @@ export const CardsQueryWrapper = styled.div`
 
 export const CardsSection = styled.div`
   width: 100%;
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  padding-top: ${({ paddingAbove }) => paddingAbove};
-  padding-bottom: ${({ paddingBelow }) => paddingBelow};
+  background: ${({ theme, $backgroundColor }) => theme.color($backgroundColor)};
+  padding-top: ${({ $paddingAbove }) => $paddingAbove};
+  padding-bottom: ${({ $paddingBelow }) => $paddingBelow};
   padding-inline: 1rem;
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     padding-inline: 2rem;
@@ -51,7 +51,7 @@ const CardsContainer = styled.div`
   }
 
   /* Ensure 2-column layout behaves itself at L+. Applies when Splide is not active. */
-  ${({ columns, useSplideCarousel }) => !useSplideCarousel && columns === 2 && css`
+  ${({ $columns, $useSplideCarousel }) => !$useSplideCarousel && $columns === 2 && css`
     @media (min-width: ${breakpointValues.L}px) {
       display: grid;
       grid-template-columns: repeat(2, minmax(443px, 560px));
@@ -73,9 +73,9 @@ const CardsContainer = styled.div`
   `}
 
   // Carousel mode - horizontal scroll container (M and below)
-  ${({ isCarousel }) => isCarousel && css`
+  ${({ $isCarousel }) => $isCarousel && css`
     @media (max-width: ${breakpointValues.L - 1}px) {
-      ${({ useSplideCarousel }) => (useSplideCarousel ? css`
+      ${({ $useSplideCarousel }) => ($useSplideCarousel ? css`
         display: block;
         cursor: grab;
         width: 100%;

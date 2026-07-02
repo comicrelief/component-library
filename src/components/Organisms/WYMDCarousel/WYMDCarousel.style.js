@@ -208,12 +208,12 @@ const CarouselWrapper = styled.div`
 
       .carousel__slide {
         // 'Mobile'
-        padding-bottom: ${props => props.mobileHeight}px !important;
+        padding-bottom: ${props => props.$mobileHeight}px !important;
 
         // 'Tablet' (and up) tweaks for the 3-visible layout
         @media ${({ theme }) => theme.allBreakpoints('M')} {
 
-          padding-bottom: ${props => props.tabletHeight}px !important;
+          padding-bottom: ${props => props.$tabletHeight}px !important;
 
           // All slides:
           .carousel__inner-slide {
@@ -290,7 +290,7 @@ const CarouselWrapper = styled.div`
 
         // 'Desktop'
         @media ${({ theme }) => theme.allBreakpoints('L')} {
-          padding-bottom: ${props => props.desktopHeight}px !important;
+          padding-bottom: ${props => props.$desktopHeight}px !important;
 
           // First
           &.carousel__slide--visible {
@@ -347,8 +347,8 @@ const CarouselWrapper = styled.div`
 `;
 
 const Container = styled.div`
-  background-color:   ${({ theme, backgroundColour }) => theme.color(backgroundColour)};
-  padding: ${({ paddingTop, paddingBottom }) => `${paddingTop} 0 ${paddingBottom};`}
+  background-color:   ${({ theme, $backgroundColour }) => theme.color($backgroundColour)};
+  padding: ${({ $paddingTop, $paddingBottom }) => `${$paddingTop} 0 ${$paddingBottom};`}
 `;
 
 export {

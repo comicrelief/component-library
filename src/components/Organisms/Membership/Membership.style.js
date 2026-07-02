@@ -6,7 +6,7 @@ import spacing from '../../../theme/shared/spacing';
 import Picture from '../../Atoms/Picture/Picture';
 
 const Container = styled.div`
-  background-color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  background-color: ${({ theme, $backgroundColor }) => theme.color($backgroundColor)};
   position: relative;
   display: flex;
   justify-content: center;
@@ -17,7 +17,7 @@ const Container = styled.div`
     min-height: 750px;
     height: 100vh;
     max-height: 900px;
-    flex-direction: ${({ formAligntRight }) => (formAligntRight ? 'row-reverse' : 'row')};
+    flex-direction: ${({ $formAligntRight }) => ($formAligntRight ? 'row-reverse' : 'row')};
   }
 `;
 
@@ -28,8 +28,8 @@ const BgImage = styled(Picture)`
   right: 0;
   height: auto;
 
-  :before {
-    color: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  &:before {
+    color: ${({ theme, $backgroundColor }) => theme.color($backgroundColor)};
     content: '';
     position: absolute;
     width: 100%;
@@ -39,7 +39,7 @@ const BgImage = styled(Picture)`
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     height: 100%;
 
-    :before {
+    &:before {
       content: none;
     }
   }
@@ -117,7 +117,7 @@ const MoneyBuys = styled.div`
       padding: ${spacing('md')};
     }
 
-    :hover input {
+    &:hover input {
       border-color: ${({ theme }) => theme.color('red')};
     }
   }
@@ -156,9 +156,9 @@ const AmountField = styled(Input)`
     border: 2px solid ${({ theme }) => theme.color('grey_medium')};
     background: transparent;
     padding: ${spacing('sm')} ${spacing('md')} ${spacing('sm')} ${spacing('l')};
-    ${({ inputBorderColor, theme }) => inputBorderColor && `border: 2px solid ${theme.color('red')};`}
+    ${({ $inputBorderColor, theme }) => $inputBorderColor && `border: 2px solid ${theme.color('red')};`}
 
-    :focus {
+    &:focus {
       border: 2px solid ${({ theme }) => theme.color('red')};
     }
   }
@@ -175,12 +175,12 @@ const Button = styled.button`
   font-weight: bold;
   cursor: pointer;
   padding: ${spacing('md')} ${spacing('sm')};
-  background: ${({ theme, color }) => (color ? theme.color(color) : theme.color('red'))};
+  background: ${({ theme, $color }) => ($color ? theme.color($color) : theme.color('red'))};
   border: none;
   border-radius: 100px;
-  :active,
-  :focus,
-  :hover {
+  &:active,
+  &:focus,
+  &:hover {
     background-color: ${({ theme }) => theme.color('coral_dark')};
   }
 

@@ -71,18 +71,18 @@ const RichtextCarousel = ({
 
   return (
     <Container
-      paddingTop={paddingTop}
-      paddingBottom={paddingBottom}
-      rowBackgroundColour={rowBackgroundColour}
+      $paddingTop={paddingTop}
+      $paddingBottom={paddingBottom}
+      $rowBackgroundColour={rowBackgroundColour}
     >
 
       <CarouselWrapper
         className="CarouselWrapper"
         id={thisID}
-        mobileHeight={mobileHeight}
-        tabletHeight={tabletHeight}
-        desktopHeight={desktopHeight}
-        carouselBackgroundColour={carouselBackgroundColour}
+        $mobileHeight={mobileHeight}
+        $tabletHeight={tabletHeight}
+        $desktopHeight={desktopHeight}
+        $carouselBackgroundColour={carouselBackgroundColour}
       >
 
         <HeadingCopyWrapper>
@@ -121,11 +121,11 @@ const RichtextCarousel = ({
 
                   <SlideCopyWrapper
                     className="slide-copy-wrapper"
-                    mobileHeight={mobileHeight}
-                    tabletHeight={tabletHeight}
-                    desktopHeight={desktopHeight}
-                    nodeBackgroundColour={nodeBackgroundColour}
-                    nodeOutlineColour={nodeOutlineColour}
+                    $mobileHeight={mobileHeight}
+                    $tabletHeight={tabletHeight}
+                    $desktopHeight={desktopHeight}
+                    $nodeBackgroundColour={nodeBackgroundColour}
+                    $nodeOutlineColour={nodeOutlineColour}
                   >
                     {theseItems[index].copy}
                   </SlideCopyWrapper>

@@ -29,7 +29,7 @@ const GivingSelector = ({
           checked={givingType === 'single'}
           onChange={() => handleGivingTypeChange('single', givingType)}
         />
-        <Label active={givingType === 'single'} htmlFor={`give-once--${mbshipID}`}>
+        <Label $active={givingType === 'single'} htmlFor={`give-once--${mbshipID}`}>
           Single
         </Label>
         <input
@@ -42,7 +42,7 @@ const GivingSelector = ({
           checked={givingType === 'monthly'}
           onChange={() => handleGivingTypeChange('monthly', givingType)}
         />
-        <Label active={givingType === 'monthly'} htmlFor={`give-monthly--${mbshipID}`}>
+        <Label $active={givingType === 'monthly'} htmlFor={`give-monthly--${mbshipID}`}>
           Monthly
         </Label>
         <Switch />

@@ -109,16 +109,16 @@ export default function DynamicGalleryColumn({
               aria-label={bodyText}
               title={bodyText}
               data-node-index={nodeIndex}
-              focusOutlineColour={focusOutlineColour}
+              $focusOutlineColour={focusOutlineColour}
               onPointerUp={useLightbox ? () => handlePointerUp(node) : undefined}
               tabIndex={0}
             >
               <ImageContainer
                 className="gallery-node-image"
                 // eslint-disable-next-line prefer-template
-                minHeight={String(minHeight) + 'px'}
+                $minHeight={String(minHeight) + 'px'}
                 // eslint-disable-next-line prefer-template
-                maxHeight={String(maxHeight) + 'px'}
+                $maxHeight={String(maxHeight) + 'px'}
               >
                 <Picture
                   image={node.image}

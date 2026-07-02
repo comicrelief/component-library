@@ -30,17 +30,17 @@ const ImpactSlider = ({
 
   return (
     <OuterWrapper
-      backgroundColour={backgroundColour}
+      $backgroundColour={backgroundColour}
       id={rowID}
-      paddingTop={paddingTop}
-      paddingBottom={paddingBottom}
+      $paddingTop={paddingTop}
+      $paddingBottom={paddingBottom}
     >
       <InnerWrapper>
         <Text tag="h1" family="Anton" weight="normal" size="xl">{heading}</Text>
         <Copy>
           {children}
         </Copy>
-        <CurrentAmountCopy tag="p" size="s">
+        <CurrentAmountCopy tag="p" size="s" data-testid="impact-slider-amount-text">
           A donation of
           {' '}
           £

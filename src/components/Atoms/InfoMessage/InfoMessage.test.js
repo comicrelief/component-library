@@ -9,7 +9,7 @@ it('renders default blue_light variant', () => {
   const renderer = renderWithTheme(
     <InfoMessage
       title="Are you trying to pay in your fundraising money?"
-      message="If you are, please select the ‘Pay in Fundraising’ tab above. If not, please continue with your donation."
+      message="If you are, please select the 'Pay in Fundraising' tab above. If not, please continue with your donation."
     />
   );
   expect(renderer.toJSON()).toMatchSnapshot();

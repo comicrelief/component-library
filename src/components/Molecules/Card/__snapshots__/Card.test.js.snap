@@ -3,9 +3,6 @@
 exports[`renders correctly 1`] = `
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   border-radius: 1rem;
@@ -14,47 +11,36 @@ exports[`renders correctly 1`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   padding: 2rem;
 }
 
-@media (min-width:0px) {
+@media (min-width: 0px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
     box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
     box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
     box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c1 {
     padding: 2rem;
   }
@@ -83,9 +69,6 @@ exports[`renders correctly 1`] = `
 exports[`renders correctly 2`] = `
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   border-radius: 1rem;
@@ -94,47 +77,36 @@ exports[`renders correctly 2`] = `
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   padding: 2rem;
 }
 
-@media (min-width:0px) {
+@media (min-width: 0px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
     box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
     box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
     box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c1 {
     padding: 2rem;
   }
@@ -146,6 +118,8 @@ exports[`renders correctly 2`] = `
 
 <div
   className="c0"
+  mediumBreakpointLayout="Row"
+  smallBreakpointLayout="Row"
 >
   <div
     className="c1"
@@ -177,9 +151,6 @@ exports[`renders correctly with no body 1`] = `
 
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   border-radius: 1rem;
@@ -191,30 +162,24 @@ exports[`renders correctly with no body 1`] = `
   height: auto;
 }
 
-@media (min-width:0px) {
+@media (min-width: 0px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
     box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
     box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
     background: #FFE400;
     box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
@@ -229,8 +194,6 @@ exports[`renders correctly with no body 1`] = `
   >
     <div
       className="c2 lazyload"
-      height="100%"
-      width="100%"
     >
       <img
         alt=""
@@ -239,10 +202,8 @@ exports[`renders correctly with no body 1`] = `
         data-sizes="auto"
         data-src={null}
         data-srcset="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
-        height="100%"
         src={null}
         srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-        width="100%"
       />
     </div>
   </div>

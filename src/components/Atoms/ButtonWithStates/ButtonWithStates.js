@@ -12,7 +12,7 @@ const ButtonWithDisabledState = styled(Button)`
   }
 `;
 
-const LoaderContainer = styled.div`${({ withMargin }) => (withMargin ? `
+const LoaderContainer = styled.div`${({ $withMargin }) => ($withMargin ? `
   margin-top: ${spacing('xsm')};
   margin-left: ${spacing('md')};
 ` : '')}`;
@@ -41,7 +41,7 @@ const ButtonWithStates = React.forwardRef(({
   return (
     <ButtonWithDisabledState ref={ref} disabled={disabled} {...rest}>
       {loading ? loadingText : children}
-      <LoaderContainer ref={getLoaderColour} withMargin={loading}>
+      <LoaderContainer ref={getLoaderColour} $withMargin={loading}>
         <ScaleLoader height={16} width={2} loading={loading} color={loaderColour} />
       </LoaderContainer>
     </ButtonWithDisabledState>

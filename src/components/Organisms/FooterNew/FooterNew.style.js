@@ -260,11 +260,11 @@ const LogosContainer = styled.div`
 const Brand = styled(Link)`
   color: transparent;
   border: 0;
-  :hover {
+  &:hover {
     border: 0;
   }
 
-  ${({ animateRotate }) => logoRotateAnimation(animateRotate)}
+  ${({ $animateRotate }) => logoRotateAnimation($animateRotate)}
 `;
 
 const FooterCopyright = styled.div`

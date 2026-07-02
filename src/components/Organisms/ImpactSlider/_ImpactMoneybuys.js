@@ -13,8 +13,8 @@ const Moneybuys = ({ items, currentAmount, opacityAnimation }) => (
 
       return (
         <Fragment key={item.poundsPerItem}>
-          <Moneybuy isInactive={isInactive} data-testid={`impact-slider--moneybuy-${index + 1}`}>
-            <MoneybuyImage imageURL={item.imageURL} />
+          <Moneybuy $isInactive={isInactive} data-testid={`impact-slider--moneybuy-${index + 1}`}>
+            <MoneybuyImage $imageURL={item.imageURL} />
             <MoneybuyAmount tag="p" family="Anton" weight="normal" size="xl" data-testid="moneybuy-amount">{thisAmount}</MoneybuyAmount>
             <MoneybuyDescription tag="p" size="s" data-testid="moneybuy-description">{item.description}</MoneybuyDescription>
           </Moneybuy>

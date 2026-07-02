@@ -59,9 +59,9 @@ const Label = styled.label`
   border: none;
   transition: color 0.15s ease-out;
   ${zIndex('medium')};
-  cursor: ${({ active }) => (active === true ? 'default' : 'pointer')};
+  cursor: ${({ $active }) => ($active === true ? 'default' : 'pointer')};
   border-radius: 2rem;
-  color: ${({ active, theme }) => (active === true ? theme.color('white') : theme.color('black'))};
+  color: ${({ $active, theme }) => ($active === true ? theme.color('white') : theme.color('black'))};
 
   &:active:focus {
     box-shadow: none;

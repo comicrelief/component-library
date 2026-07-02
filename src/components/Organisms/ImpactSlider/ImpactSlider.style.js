@@ -5,10 +5,10 @@ import Button from '../../Atoms/Button/Button';
 const OuterWrapper = styled.div`
   position: relative;
   max-width: 100%;
-  background-color: ${props => props.theme.color(`${props.backgroundColour}`)};
-  ${({ paddingTop, paddingBottom }) => css`padding: ${paddingTop} 1rem ${paddingBottom};`}
+  background-color: ${props => props.theme.color(`${props.$backgroundColour}`)};
+  ${({ $paddingTop, $paddingBottom }) => css`padding: ${$paddingTop} 1rem ${$paddingBottom};`}
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    ${({ paddingTop, paddingBottom }) => css`padding: ${paddingTop} 4rem ${paddingBottom};`}
+    ${({ $paddingTop, $paddingBottom }) => css`padding: ${$paddingTop} 4rem ${$paddingBottom};`}
   }
 `;
 

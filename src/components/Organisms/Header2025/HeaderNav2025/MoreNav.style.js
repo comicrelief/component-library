@@ -21,7 +21,7 @@ const MoreNavLabel = styled(Text)`
     display: flex;
 
     // Divider
-    :before {
+    &:before {
       content: '';
       position: absolute;
       width: 0;
@@ -39,7 +39,7 @@ const MoreNavLabel = styled(Text)`
     font-size: 1rem;
 
     // Divider
-    :before {
+    &:before {
       content: '';
       position: absolute;
       width: 0;
@@ -66,8 +66,8 @@ const MoreNavItem = styled(NavItem)`
       transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
     }
 
-    :hover,
-    :focus {
+    &:hover,
+    &:focus {
       // Chevron icon:
       ${MoreNavLabel} {
         color: ${({ theme }) => theme.color('red')};
@@ -81,9 +81,9 @@ const MoreNavItem = styled(NavItem)`
       }
     }
 
-    :hover,
-    :focus,
-    :focus-within {
+    &:hover,
+    &:focus,
+    &:focus-within {
      > ${MoreNavLabel} {
       border-bottom: none;
       padding-bottom: 10px;
@@ -97,7 +97,7 @@ const MoreNavItem = styled(NavItem)`
       }
     }
 
-    :focus {
+    &:focus {
       > ${MoreSubNavMenu} {
         // Annoyingly having to strongarm styles here;
         visibility: hidden !important;
@@ -125,7 +125,7 @@ const MoreNestedSubNavMenu = styled(SubNavMenu)`
     border: 0;
     box-shadow: none;
 
-    ${({ isSubMenuOpen }) => (isSubMenuOpen && css`
+    ${({ $isSubMenuOpen }) => ($isSubMenuOpen && css`
       // Calculating a realistic height ceiling (8 subnav items) 
       // to make animation as slick as possible
       max-height: calc(54px * 8);
@@ -143,9 +143,9 @@ const MoreSubNavItem = styled(SubNavItem)`
     transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
   }
 
-  :hover, 
-  :focus,
-  :focus-within {
+  &:hover,
+  &:focus,
+  &:focus-within {
     > a {
       color: ${({ theme }) => theme.color('red')};
     }
@@ -170,7 +170,7 @@ const MoreNavNestedLink = styled(NavLink)`
     height: auto;
   }
 
-  ${({ isSubMenuOpen }) => (isSubMenuOpen && css`
+  ${({ $isSubMenuOpen }) => ($isSubMenuOpen && css`
     color: ${({ theme }) => theme.color('red')};
 
     > ${ChevronWrapper} {

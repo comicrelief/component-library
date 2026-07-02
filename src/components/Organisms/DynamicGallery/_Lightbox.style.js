@@ -11,7 +11,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 2000;
-  visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
+  visibility: ${({ $isOpen }) => ($isOpen ? 'visible' : 'hidden')};
 `;
 
 export const Backdrop = styled.div`
@@ -117,7 +117,7 @@ export const NavButton = styled.button`
     }
   }
 
-  :focus-visible {
+  &:focus-visible {
     outline: 2px solid ${({ theme }) => theme.color('red')};
   }
 `;

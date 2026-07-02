@@ -20,22 +20,22 @@ const NavLinkClass = styled(Link)`
   transition: color ${transitionDuration}s ease;
   text-decoration: none;
 
-  :hover,
-  :focus,
-  :focus-within {
+  &:hover,
+  &:focus,
+  &:focus-within {
     border: 0;
   }
 
   // No hover state for mobile, so targetting Medium+:
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    :hover,
-    :focus {
+    &:hover,
+    &:focus {
       color: ${({ theme }) => theme.color('red')};
       background-color: ${({ theme }) => theme.color('grey_extra_light')};
       font-weight: 700;
     }
 
-    :focus-within {
+    &:focus-within {
       // Reset the colour of a parent...
       background-color: ${({ theme }) => theme.color('white')};
 
@@ -50,7 +50,7 @@ const NavLinkClass = styled(Link)`
   > div {
     height: auto;
     transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
-    ${({ isExpanded }) => (isExpanded && css`
+    ${({ $isExpanded }) => ($isExpanded && css`
       transform: rotate(-180deg);
     `)}
   }
@@ -60,7 +60,7 @@ const NavLinkClass = styled(Link)`
  * Navigation menu
  */
 const Nav = styled.nav`
-  display: ${({ isExpandable }) => (isExpandable ? 'block' : 'none')};
+  display: ${({ $isExpandable }) => ($isExpandable ? 'block' : 'none')};
   width: 100%;
   position: absolute;
   top: 75px;
@@ -100,8 +100,8 @@ const Nav = styled.nav`
  * Sub Navigation Menu (second level)
  */
 const SubNavMenu = styled.ul`
-  visibility: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'visible' : 'hidden')};
-  display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
+  visibility: ${({ $isSubMenuOpen }) => ($isSubMenuOpen ? 'visible' : 'hidden')};
+  display: ${({ $isSubMenuOpen }) => ($isSubMenuOpen ? 'flex' : 'none')};
   padding: 0;
   position: relative;
   list-style: none outside;
@@ -192,7 +192,7 @@ const NavLink = styled(NavLinkClass)`
   gap: 4px;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
 
-  ${({ isExpanded, theme }) => (isExpanded && css`
+  ${({ $isExpanded, theme }) => ($isExpanded && css`
     &,
     &:hover,
     &:focus-within,
@@ -206,13 +206,13 @@ const NavLink = styled(NavLinkClass)`
     height: auto;
 
     // Additional room for the chevron:
-    ${({ hasSubMenu }) => (hasSubMenu && css`
+    ${({ $hasSubMenu }) => ($hasSubMenu && css`
       padding: 10px 14px 10px 0;
     `)}
 
-    :hover,
-    :focus-within,
-    :focus {
+    &:hover,
+    &:focus-within,
+    &:focus {
       + ${SubNavMenu} {
       display: flex;
       opacity: 1;
@@ -220,7 +220,7 @@ const NavLink = styled(NavLinkClass)`
   }
 
   @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
-    ${({ hasSubMenu }) => (hasSubMenu && css`
+    ${({ $hasSubMenu }) => ($hasSubMenu && css`
       padding: 10px 16px 10px 0;
     `)}
   }
@@ -250,9 +250,9 @@ const NavItem = styled.li`
       padding-bottom: 0;
     }
 
-    :hover,
-    :focus,
-    :focus-within {
+    &:hover,
+    &:focus,
+    &:focus-within {
       span {
         border-bottom: none;
         padding-bottom: 0;
@@ -265,9 +265,9 @@ const NavItem = styled.li`
     transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
   }
 
-  :hover,
-  :focus,
-  :focus-within {
+  &:hover,
+  &:focus,
+  &:focus-within {
     li {
       span {
         border-bottom: none;
@@ -294,19 +294,19 @@ const NavItem = styled.li`
     padding: 25px 0px;
     border-bottom: none;
 
-    :hover,
-    :focus,
-    :focus-within {
-      > ${SubNavMenu}, :focus-within > ${SubNavMenu} {
+    &:hover,
+    &:focus,
+    &:focus-within {
+      > ${SubNavMenu}, &:focus-within > ${SubNavMenu} {
         visibility: visible;
         opacity: 1;
         display: flex;
       }
     }
 
-    :hover,
-    :focus,
-    :focus-within {
+    &:hover,
+    &:focus,
+    &:focus-within {
       background-color: transparent;
       ${zIndex('high')};
 
@@ -379,7 +379,7 @@ const NavMetaIcons = styled.div`
         content: "";
         width: 20px;
         height: 20px;
-        background-image: url(${Arrow});
+        background-image: url("${Arrow}");
         background-size: 100%;
         background-repeat: no-repeat;
       }

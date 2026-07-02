@@ -151,6 +151,7 @@ const Options = React.forwardRef(({
   activeOption,
   closeDropdown,
   resetActiveOption,
+  hideBorder,
   ...rest
 }, ref) => {
   // Reset 'activeOption' when the list is unfocused.
@@ -166,7 +167,7 @@ const Options = React.forwardRef(({
   };
 
   return (
-    <Dropdown {...rest}>
+    <Dropdown {...rest} $hideBorder={hideBorder}>
       <DropdownList
         ref={ref}
         role="listbox"

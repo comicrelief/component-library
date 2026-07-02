@@ -85,10 +85,10 @@ const SingleMessage = ({
   // Break-out video markup into its own function
   const renderVideoPlayers = () => (
     <VideoWrapper
-      isPlaying={isPlaying}
-      isBuffering={isBuffering}
+      $isPlaying={isPlaying}
+      $isBuffering={isBuffering}
       key={uniqueID}
-      landscapeVideo={landscapeVideo}
+      $landscapeVideo={landscapeVideo}
     >
       <div id={uniqueID} />
     </VideoWrapper>
@@ -140,30 +140,30 @@ const SingleMessage = ({
     <UID name={id => `single-msg__${id}`}>
       {id => (
         <Container
-          backgroundColor={backgroundColor}
-          copyFirst={copyFirst}
-          vhFull={vhFull}
+          $backgroundColor={backgroundColor}
+          $copyFirst={copyFirst}
+          $vhFull={vhFull}
           id={`${id}`}
-          isPlaying={isPlaying}
-          hasVideo={hasVideo}
-          landscapeVideo={landscapeVideo}
-          fullImage={fullImage}
+          $isPlaying={isPlaying}
+          $hasVideo={hasVideo}
+          $landscapeVideo={landscapeVideo}
+          $fullImage={fullImage}
           ref={thisRef}
-          paddingTop={thisPaddingTop}
-          paddingBottom={thisPaddingBottom}
-          smPaddingTop={thisSmPaddingTop}
-          smPaddingBottom={thisSmPaddingBottom}
+          $paddingTop={thisPaddingTop}
+          $paddingBottom={thisPaddingBottom}
+          $smPaddingTop={thisSmPaddingTop}
+          $smPaddingBottom={thisSmPaddingBottom}
         >
           {imageSet || imageSet2 ? (
             <>
               <Media
-                doubleImage={doubleImage}
-                isPlaying={isPlaying}
-                isBuffering={isBuffering}
-                hasVideo={hasVideo}
-                landscapeVideo={landscapeVideo}
-                fullImage={fullImage}
-                vhFull={vhFull}
+                $doubleImage={doubleImage}
+                $isPlaying={isPlaying}
+                $isBuffering={isBuffering}
+                $hasVideo={hasVideo}
+                $landscapeVideo={landscapeVideo}
+                $fullImage={fullImage}
+                $vhFull={vhFull}
               >
                 {hasVideo
                   && hasParentID
@@ -171,13 +171,13 @@ const SingleMessage = ({
 
                 {imageSet || image ? (
                   <Image
-                    doubleImage={doubleImage}
-                    vhFull={vhFull}
-                    isPlaying={isPlaying}
-                    isBuffering={isBuffering}
-                    hasVideo={hasVideo}
-                    fullImage={fullImage}
-                    landscapeVideo={landscapeVideo}
+                    $doubleImage={doubleImage}
+                    $vhFull={vhFull}
+                    $isPlaying={isPlaying}
+                    $isBuffering={isBuffering}
+                    $hasVideo={hasVideo}
+                    $fullImage={fullImage}
+                    $landscapeVideo={landscapeVideo}
                   >
                     <Picture
                       alt={imageAltText}
@@ -191,7 +191,7 @@ const SingleMessage = ({
                   </Image>
                 ) : null}
                 {imageSet2 || image2 ? (
-                  <Image doubleImage={doubleImage} vhFull={vhFull}>
+                  <Image $doubleImage={doubleImage} $vhFull={vhFull}>
                     <Picture
                       alt={imageAltText2}
                       imageLow={imageLow}
@@ -206,9 +206,9 @@ const SingleMessage = ({
 
                 {hasVideo ? (
                   <PlayButton
-                    copyFirst={copyFirst}
-                    isPlaying={isPlaying}
-                    isBuffering={isBuffering}
+                    $copyFirst={copyFirst}
+                    $isPlaying={isPlaying}
+                    $isBuffering={isBuffering}
                     onClick={() => handlePlay(getID(thisRef.current))}
                   >
                     Play video
@@ -219,13 +219,13 @@ const SingleMessage = ({
           ) : null}
           {children ? (
             <Copy
-              fullImage={fullImage}
-              hasImage={hasImage}
-              copyFirst={copyFirst}
-              hasVideo={hasVideo}
-              vhFull={vhFull}
-              paddingTop={paddingTop}
-              paddingBottom={paddingBottom}
+              $fullImage={fullImage}
+              $hasImage={hasImage}
+              $copyFirst={copyFirst}
+              $hasVideo={hasVideo}
+              $vhFull={vhFull}
+              $paddingTop={paddingTop}
+              $paddingBottom={paddingBottom}
             >
               {children}
             </Copy>

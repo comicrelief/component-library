@@ -62,12 +62,12 @@ const EmailBanner = ({
 
   return (
     <Container
-      paddingAbove={paddingAbove}
-      paddingBelow={paddingBelow}
-      pageBackgroundColour={pageBackgroundColour}
+      $paddingAbove={paddingAbove}
+      $paddingBelow={paddingBelow}
+      $pageBackgroundColour={pageBackgroundColour}
     >
       <InnerContainer
-        componentBackgroundColour={componentBackgroundColour}
+        $componentBackgroundColour={componentBackgroundColour}
         $emailWidgetIsTextOnly={emailWidgetIsTextOnly}
       >
         {(shouldRenderTopImage || shouldShowDesktopImage) && (
@@ -91,9 +91,9 @@ const EmailBanner = ({
 
         <Wrapper
           aria-live="polite"
-          noTitlesAtAll={noTitlesAtAll}
-          hasTopImage={shouldRenderTopImage}
-          showTitleSection={showTitleSection}
+          $noTitlesAtAll={noTitlesAtAll}
+          $hasTopImage={shouldRenderTopImage}
+          $showTitleSection={showTitleSection}
         >
           {showTitleSection && (
           <TitleWrapperOuter $orientation={orientation}>

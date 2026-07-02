@@ -3,7 +3,7 @@ import "jest-styled-components";
 
 import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
 import VideoBanner from "./VideoBanner";
-import poster from "../../../styleguide/assets/VideoBannerPosterImage.png";
+import poster from "../../../assets/VideoBannerPosterImage.png";
 
 it("renders correctly", () => {
   const src =

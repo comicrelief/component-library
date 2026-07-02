@@ -315,7 +315,7 @@ const Signup = ({
 
           <Button
             type="submit"
-            color={submitButtonColor}
+            $color={submitButtonColor}
             ref={buttonRef}
             // Used by analytics:
             className="Button_DonateWidget"

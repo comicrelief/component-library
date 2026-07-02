@@ -13,7 +13,7 @@ const BurgerMenu = ({ toggle, isExpandable }) => (
     inline
     underline={false}
     onClick={toggle}
-    isExpandable={isExpandable}
+    $isExpandable={isExpandable}
   >
     <BurgerHiddenText>Open and close nav menu</BurgerHiddenText>
     <BurgerBar />

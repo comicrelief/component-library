@@ -30,6 +30,10 @@ const Button = styled.button`
   &:hover {
     color: inherit; // text was flashing white on focus on safari without this.
     outline: none;
+    > div {
+      animation-name: ${ChevronKeyframes};
+      animation-duration: 0.4s;
+    }
   }
 
   padding: ${spacing('l')};
@@ -43,7 +47,7 @@ const Icon = styled.div`
 
 const MenuGroupIcon = styled.img`
   height: 24px;
-  transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
+  transform: ${({ $isOpen }) => ($isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
   transition: transform 0.15s ease-in-out;
 `;
 
@@ -70,14 +74,14 @@ const Copy = styled.div`
     padding: 0 ${spacing('lg')};
   }
 
-  ${({ isOpen, contentBottomPadding }) => (isOpen && css`
+  ${({ $isOpen, $contentBottomPadding }) => ($isOpen && css`
     height: auto;
     visibility: visible;
     transition: all 0.2s cubic-bezier(0.21, 1.7, 0.83, 0.68) 0s;
-    padding: 0 ${spacing('l')} ${contentBottomPadding || spacing('l')};
+    padding: 0 ${spacing('l')} ${$contentBottomPadding || spacing('l')};
 
     @media ${({ theme }) => theme.allBreakpoints('M')} {
-      padding: 0 ${spacing('l')} ${contentBottomPadding || spacing('l')};
+      padding: 0 ${spacing('l')} ${$contentBottomPadding || spacing('l')};
     }
   `)}
 `;
@@ -97,15 +101,15 @@ const Accordion = ({
 
   return (
     <Container {...rest}>
-      <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'} ChevronKeyframes={ChevronKeyframes} type="button">
+      <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'} type="button">
         <StyledText tag={textTag} weight={weight}>
           {title}
         </StyledText>
         <Icon>
-          <MenuGroupIcon src={menuGroupIcon} alt="" aria-hidden="true" isOpen={isOpen} />
+          <MenuGroupIcon src={menuGroupIcon} alt="" aria-hidden="true" $isOpen={isOpen} />
         </Icon>
       </Button>
-      <Copy isOpen={isOpen} contentBottomPadding={contentBottomPadding}>
+      <Copy $isOpen={isOpen} $contentBottomPadding={contentBottomPadding}>
         {children}
       </Copy>
     </Container>

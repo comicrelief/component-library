@@ -64,7 +64,7 @@ const MainNav = ({ navItems = {} }) => {
   }, []);
   return (
     <>
-      <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation">
+      <Nav aria-label="main-menu" $isExpandable={isExpandable} role="navigation">
         <Text id="main-menu" tag="h2" size="s">
           Main navigation
         </Text>
@@ -87,7 +87,7 @@ const MainNav = ({ navItems = {} }) => {
                 role="none"
                 key={group.id}
                 index={index}
-                isSubMenuOpen={!!isSubMenuOpen[group.id]}
+                $isSubMenuOpen={!!isSubMenuOpen[group.id]}
               >
                 {isMobile ? (
                   <NavLink
@@ -133,8 +133,8 @@ const MainNav = ({ navItems = {} }) => {
                 {hasSubMenu && (
                   <SubNavMenu
                     role="list"
-                    isKeyPressed={!!isKeyPressed[group.title]}
-                    isSubMenuOpen={!!isSubMenuOpen[group.id]}
+                    $isKeyPressed={!!isKeyPressed[group.title]}
+                    $isSubMenuOpen={!!isSubMenuOpen[group.id]}
                   >
                     {group.links.map((child, childIndex) => {
                       let thisSubUrl = NavHelper(child);

@@ -35,7 +35,7 @@ export const FormWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     flex-direction: row;
     align-items: center;
-    ${({ error }) => error && `
+    ${({ $error }) => $error && `
     align-items: flex-start;
   `}
   }

@@ -13,7 +13,7 @@ const ImageWrapper = styled.div`
   border-radius: 1rem 1rem 0 0;
 
   // Side-by-side layout: fixed proportion for image (1/3 width) with min/max constraints
-  ${({ isSingleCard }) => isSingleCard && css`
+  ${({ $isSingleCard }) => $isSingleCard && css`
     @media ${({ theme }) => theme.breakpoints2026('M')} {
       width: calc(100% / 3);
       min-width: 292px;
@@ -42,7 +42,7 @@ const ImageWrapper = styled.div`
     display: block;
 
     // Side-by-side layout: image should fill height on desktop
-    ${({ isSingleCard }) => isSingleCard && css`
+    ${({ $isSingleCard }) => $isSingleCard && css`
       @media ${({ theme }) => theme.breakpoints2026('M')} {
         height: 100%;
         object-fit: cover;
@@ -87,11 +87,11 @@ const CardLink = styled.a`
   ${defaultBoxShadow()}
   text-decoration: none;
   overflow: hidden;
-  cursor: ${({ isInteractive }) => (isInteractive ? 'pointer' : 'default')};
+  cursor: ${({ $isInteractive }) => ($isInteractive ? 'pointer' : 'default')};
   box-sizing: border-box;
 
   // Side-by-side layout for single card desktop view
-  ${({ isSingleCard }) => isSingleCard && css`
+  ${({ $isSingleCard }) => $isSingleCard && css`
     @media ${({ theme }) => theme.breakpoints2026('M')} {
       flex-direction: row;
       align-items: stretch;
@@ -104,7 +104,7 @@ const CardLink = styled.a`
     }
   `}
 
-  ${({ isInteractive }) => isInteractive && css`
+  ${({ $isInteractive }) => $isInteractive && css`
     img {
       ${imageZoom({ initialScale: 1 })}
     }
@@ -155,12 +155,12 @@ const CardWrapper = styled.div`
   align-self: stretch;
   border-radius: 1rem;
 
-  ${({ hasLink }) => (!hasLink && css`
+  ${({ $hasLink }) => (!$hasLink && css`
     ${defaultBoxShadow()}
   `)}
 
   // Full width mode - always full width, no constraints
-  ${({ isFullWidth }) => isFullWidth && css`
+  ${({ $isFullWidth }) => $isFullWidth && css`
     width: 100%;
     max-width: 100%;
 
@@ -178,7 +178,7 @@ const CardWrapper = styled.div`
   `}
 
   // Carousel mode - fixed card width in horizontal scroll (L and below)
-  ${({ isCarousel, isFullWidth }) => isCarousel && !isFullWidth && css`
+  ${({ $isCarousel, $isFullWidth }) => $isCarousel && !$isFullWidth && css`
     @media (max-width: ${breakpointValues.L - 1}px) {
       scroll-snap-align: start;
       flex: 0 0 309px;
@@ -188,7 +188,7 @@ const CardWrapper = styled.div`
   `}
 
   // Below L: max-width rules vary by layout
-  ${({ isCarousel, isFullWidth }) => !isCarousel && !isFullWidth && css`
+  ${({ $isCarousel, $isFullWidth }) => !$isCarousel && !$isFullWidth && css`
     /* Below M: stacked cards, keep them centred */
     @media (max-width: ${breakpointValues.M - 1}px) {
       /* In mobile stack view we want cards to fill the container width */
@@ -199,7 +199,7 @@ const CardWrapper = styled.div`
 
     @media (min-width: ${breakpointValues.M}px) and (max-width: ${breakpointValues.L - 1}px) {
       align-self: stretch;
-      ${({ columns }) => (columns === 3
+      ${({ $columns }) => ($columns === 3
     ? css`
               flex: 0 0 100%;
               max-width: 309px;
@@ -215,7 +215,7 @@ const CardWrapper = styled.div`
        * This matches the 3-col behaviour (1-per-row, centered), and avoids
        * the nightmare of "full width column" cards
        */
-      ${({ columns }) => columns === 2 && css`
+      ${({ $columns }) => $columns === 2 && css`
         @container cta-multi-card (max-width: 705px) {
           flex: 0 0 100%;
           width: min(100%, 345px);
@@ -226,10 +226,10 @@ const CardWrapper = styled.div`
     }
   `}
 
-  ${({ isFullWidth }) => !isFullWidth && css`
+  ${({ $isFullWidth }) => !$isFullWidth && css`
     @media (min-width: ${breakpointValues.L}px) {
-      ${({ columns }) => (
-    columns === 3
+      ${({ $columns }) => (
+    $columns === 3
       ? css`
               flex: 0 1 auto;
               width: clamp(261px, calc((100% - 4rem) / 3), 363px);
@@ -259,7 +259,7 @@ const CopyAndLinkSection = styled.div`
   border-radius: 0 0 1rem 1rem;
 
   // Side-by-side layout: text section takes remaining width (2/3) with min/max constraints
-  ${({ isSingleCard }) => isSingleCard && css`
+  ${({ $isSingleCard }) => $isSingleCard && css`
     @media ${({ theme }) => theme.breakpoints2026('M')} {
       width: calc(200% / 3);
       min-width: 384px;

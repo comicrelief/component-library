@@ -62,8 +62,8 @@ const Promo = ({
   }, [hasVideo, videoSrc, mobileVideoSrc, mobilePoster, poster]);
 
   return (
-    <Container backgroundColor={backgroundColor} position={position}>
-      <Media imageRight={copyLeft}>
+    <Container $backgroundColor={backgroundColor} $position={position}>
+      <Media>
         {(hasImage && !hasVideo) && (
         <Picture
           alt={imageAltText}
@@ -93,9 +93,17 @@ const Promo = ({
         )}
       </Media>
 
-      <Wrapper copyLeft={copyLeft}>
-        <Gradient hasVideo={hasVideo} behindTextGradient={behindTextGradient} copyLeft={copyLeft}>
-          <Copy position={position} hasVideo={hasVideo} behindTextGradient={behindTextGradient}>
+      <Wrapper $copyLeft={copyLeft}>
+        <Gradient
+          $hasVideo={hasVideo}
+          $behindTextGradient={behindTextGradient}
+          $copyLeft={copyLeft}
+        >
+          <Copy
+            $position={position}
+            $hasVideo={hasVideo}
+            $behindTextGradient={behindTextGradient}
+          >
             {children}
           </Copy>
         </Gradient>

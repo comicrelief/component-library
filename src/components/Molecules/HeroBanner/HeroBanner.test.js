@@ -5,7 +5,7 @@ import HeroBanner from './HeroBanner';
 import Text from '../../Atoms/Text/Text';
 import variants from './_variants';
 
-const defaultData = require('../../../styleguide/data/data').defaultData;
+const defaultData = require('../../../data/data').defaultData;
 
 it('renders "Full Height Media" Hero Banner correctly', () => {
   const tree = renderWithTheme(

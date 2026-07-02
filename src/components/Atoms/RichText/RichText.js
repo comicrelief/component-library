@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 export const Inner = styled.div`
-  text-align: ${props => props.align};
+  text-align: ${props => props.$align};
 `;
 
 const RichText = ({ align = 'left', markup = '', ...rest }) => (
   <Inner
-    align={align}
+    $align={align}
     dangerouslySetInnerHTML={{ __html: markup }}
     {...rest}
   />

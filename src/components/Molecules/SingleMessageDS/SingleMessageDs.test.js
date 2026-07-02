@@ -4,7 +4,7 @@ import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import SingleMessageDs from './SingleMessageDs';
 import Text from '../../Atoms/Text/Text';
 import Download from '../../Atoms/Icons/Download';
-import { defaultData } from '../../../styleguide/data/data';
+import { defaultData } from '../../../data/data';
 it('renders correctly', () => {
   const tree = renderWithTheme(
     <SingleMessageDs

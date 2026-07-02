@@ -2,7 +2,7 @@ import React from 'react';
 import 'jest-styled-components';
 import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import SingleMessage from './SingleMessage';
-import { defaultData }  from '../../../styleguide/data/data';import Text from '../../Atoms/Text/Text';
+import { defaultData }  from '../../../data/data';import Text from '../../Atoms/Text/Text';
 import Link from '../../Atoms/Link/Link';
 
 it('renders Single Message with Image correctly', () => {

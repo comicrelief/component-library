@@ -8,9 +8,9 @@ import checkBoxIcon from './assets/tick.svg';
 // This label wraps both the input and the span that is the visual square checkbox you see */
 const Label = styled.label`
   display: flex;
-  ${({ hasLabelAsString }) => hasLabelAsString && 'align-items: center;'}
+  ${({ $hasLabelAsString }) => $hasLabelAsString && 'align-items: center;'}
   margin-bottom: 8px;
-  ${({ theme, labelColour }) => labelColour && `color: ${theme.color(labelColour)}`}
+  ${({ theme, $labelColour }) => $labelColour && `color: ${theme.color($labelColour)}`}
 `;
 
 const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
@@ -26,26 +26,26 @@ const StyledCheckboxInput = styled.input.attrs({ type: 'checkbox' })`
   width: 1px;
 
   /* This span is actually the visual square Checkbox you see */
-  + span {
+  & + span {
     margin-right: 12px;
     width: 24px;
     height: 24px;
     border-radius: 4px;
-    background-color: ${({ theme, checkboxBg }) => (checkboxBg ? theme.color(checkboxBg) : theme.color('white'))};
-    border: 1px solid ${({ theme, checkboxBorder }) => (checkboxBorder ? theme.color(checkboxBorder) : theme.color('grey'))};
+    background-color: ${({ theme, $checkboxBg }) => ($checkboxBg ? theme.color($checkboxBg) : theme.color('white'))};
+    border: 1px solid ${({ theme, $checkboxBorder }) => ($checkboxBorder ? theme.color($checkboxBorder) : theme.color('grey'))};
     float: left;
     flex-shrink: 0;
   }
   /* Visual checkbox when ticked */
-  :checked + span {
-    background: url(${checkBoxIcon}) no-repeat center;
+  &:checked + span {
+    background: url("${checkBoxIcon}") no-repeat center;
     background-size: contain;
-    background-color: ${({ theme, checkboxBgChecked }) => (checkboxBgChecked ? theme.color(checkboxBgChecked) : theme.color('red'))};
-    border: 1px solid ${({ theme, checkboxBorderChecked }) => (checkboxBorderChecked ? theme.color(checkboxBorderChecked) : theme.color('red'))};
+    background-color: ${({ theme, $checkboxBgChecked }) => ($checkboxBgChecked ? theme.color($checkboxBgChecked) : theme.color('red'))};
+    border: 1px solid ${({ theme, $checkboxBorderChecked }) => ($checkboxBorderChecked ? theme.color($checkboxBorderChecked) : theme.color('red'))};
   }
   /* Visual checkbox when focused */
-  :focus + span {
-    border: 1px solid ${({ theme, checkboxBorderFocus }) => (checkboxBorderFocus ? theme.color(checkboxBorderFocus) : theme.color('red'))};
+  &:focus + span {
+    border: 1px solid ${({ theme, $checkboxBorderFocus }) => ($checkboxBorderFocus ? theme.color($checkboxBorderFocus) : theme.color('red'))};
   }
 `;
 
@@ -61,28 +61,32 @@ const Checkbox = React.forwardRef(({
   checkboxBorderFocus,
   name,
   ...rest
-}, ref) => (
-  <Label
-    hasLabelAsString={!!label}
-    labelColour={labelColour}
-    htmlFor={rest.id || name}
-  >
-    <StyledCheckboxInput
-      {...rest}
-      id={rest.id || name}
-      name={name}
-      value={value}
-      ref={ref}
-      checkboxBg={checkboxBg}
-      checkboxBorder={checkboxBorder}
-      checkboxBgChecked={checkboxBgChecked}
-      checkboxBorderChecked={checkboxBorderChecked}
-      checkboxBorderFocus={checkboxBorderFocus}
-    />
-    <span />
-    {label ? <Text weight="bold" size="s">{label}</Text> : children}
-  </Label>
-));
+}, ref) => {
+  const { 'data-testid': testid, ...inputProps } = rest;
+  return (
+    <Label
+      $hasLabelAsString={!!label}
+      $labelColour={labelColour}
+      htmlFor={inputProps.id || name}
+      data-testid={testid}
+    >
+      <StyledCheckboxInput
+        {...inputProps}
+        id={inputProps.id || name}
+        name={name}
+        value={value}
+        ref={ref}
+        $checkboxBg={checkboxBg}
+        $checkboxBorder={checkboxBorder}
+        $checkboxBgChecked={checkboxBgChecked}
+        $checkboxBorderChecked={checkboxBorderChecked}
+        $checkboxBorderFocus={checkboxBorderFocus}
+      />
+      <span />
+      {label ? <Text weight="bold" size="s">{label}</Text> : children}
+    </Label>
+  );
+});
 
 Checkbox.propTypes = {
   name: PropTypes.string.isRequired,

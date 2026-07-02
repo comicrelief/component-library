@@ -70,16 +70,16 @@ const WYMDCarousel = ({ data }) => {
 
   return (
     <Container
-      paddingTop={paddingTop}
-      paddingBottom={paddingBottom}
-      backgroundColour={backgroundColour}
+      $paddingTop={paddingTop}
+      $paddingBottom={paddingBottom}
+      $backgroundColour={backgroundColour}
     >
       <CarouselWrapper
         className="CarouselWrapper"
         id={thisID}
-        mobileHeight={mobileHeight}
-        tabletHeight={tabletHeight}
-        desktopHeight={desktopHeight}
+        $mobileHeight={mobileHeight}
+        $tabletHeight={tabletHeight}
+        $desktopHeight={desktopHeight}
       >
 
         <Heading tag="p" weight="bold">

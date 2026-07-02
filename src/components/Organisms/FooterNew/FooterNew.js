@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import Logo from '../../Atoms/Logo/Logo';
+import Logo from '../../Atoms/Logos/Logo';
 import SocialIcons from '../../Atoms/SocialIcons/SocialIcons';
 import EmailSignUp from '../../Molecules/EmailSignUp/EmailSignUp';
 import PrimaryNav from './Nav/PrimaryNav';
@@ -79,7 +79,7 @@ const FooterNew = ({
           )}
 
           <LogosContainer $mobileOnly>
-            <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
+            <Brand href="/" title={`Go to ${campaign} homepage`} $animateRotate={animateRotate}>
               <Logo sizeSm="59px" sizeMd="72px" rotate={false} campaign={campaign} />
             </Brand>
           </LogosContainer>
@@ -109,12 +109,12 @@ const FooterNew = ({
               </SocialIconWrapper>
             </TopSectionLeft>
             <LogosContainer $desktopOnly $showCRLogoOnly>
-              <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
+              <Brand href="/" title={`Go to ${campaign} homepage`} $animateRotate={animateRotate}>
                 <Logo sizeSm="59px" sizeMd="59px" rotate={false} campaign={campaign} />
               </Brand>
             </LogosContainer>
             <LogosContainer $desktopOnly $showPairedLogos>
-              <Brand href="/" title={`Go to ${campaign} homepage`} animateRotate={animateRotate}>
+              <Brand href="/" title={`Go to ${campaign} homepage`} $animateRotate={animateRotate}>
                 <Logo sizeSm="59px" sizeMd="59px" rotate={false} campaign={campaign} />
               </Brand>
               {showFundraisingRegulatorLogo && <FundraisingRegulatorLogo animateOnHover noMargin />}

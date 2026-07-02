@@ -19,17 +19,17 @@ const StyledSelect = styled.select`
   height: 48px;
   font-weight: 400;
   font-family: ${({ theme }) => theme.fontFamilies(theme.font.regular)};
-  background: ${({ theme, hideArrow }) => (hideArrow
+  background: ${({ theme, $hideArrow }) => ($hideArrow
     ? theme.color('grey_light')
-    : `${theme.color('grey_light')} url(${dropDownIcon}) calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat`)};
+    : `${theme.color('grey_light')} url("${dropDownIcon}") calc(100% - 1.5rem) 14px/20px 1.5rem no-repeat`)};
   border: 1px solid;
-  border-color: ${({ theme, error }) => (error ? theme.color('red') : theme.color('grey'))};
+  border-color: ${({ theme, $error }) => ($error ? theme.color('red') : theme.color('grey'))};
   box-shadow: none;
   appearance: none;
-  color: ${({ theme, greyDescription, hasValue }) => (greyDescription && !hasValue ? 'grey' : theme.color('black'))};
+  color: ${({ theme, $greyDescription, $hasValue }) => ($greyDescription && !$hasValue ? 'grey' : theme.color('black'))};
   border-radius: 0.5rem;
   cursor: pointer;
-  :focus {
+  &:focus {
     border: 1px solid ${({ theme }) => theme.color('grey_for_forms')};
   }
 
@@ -43,6 +43,7 @@ const Select = React.forwardRef(
     {
       errorMsg,
       description,
+      id,
       label,
       options,
       hideLabel = false,
@@ -68,21 +69,22 @@ const Select = React.forwardRef(
         optional={optional}
       >
         <StyledSelect
+          id={id}
+          $error={errorMsg}
+          defaultValue={defaultValue}
+          required={optional === false}
+          aria-required={optional === false}
+          $hasValue={!!value}
+          $greyDescription={greyDescription}
+          ref={ref}
+          $hideArrow={hideArrow}
+          {...rest}
           onChange={e => {
             setValue(e.currentTarget.value);
             if (onChange) {
               onChange(e);
             }
           }}
-          {...rest}
-          error={errorMsg}
-          defaultValue={defaultValue}
-          required={optional === false}
-          aria-required={optional === false}
-          hasValue={!!value}
-          greyDescription={greyDescription}
-          ref={ref}
-          hideArrow={hideArrow}
         >
 
           {/* empty string "" is falsy so will show */
@@ -105,6 +107,7 @@ const Select = React.forwardRef(
 );
 
 Select.propTypes = {
+  id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   hideLabel: PropTypes.bool,
   errorMsg: PropTypes.string.isRequired,

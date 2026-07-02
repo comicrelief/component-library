@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const SingleCardSection = styled.div`
-  padding-top: ${({ paddingAbove }) => paddingAbove};
-  padding-bottom: ${({ paddingBelow }) => paddingBelow};
+  padding-top: ${({ $paddingAbove }) => $paddingAbove};
+  padding-bottom: ${({ $paddingBelow }) => $paddingBelow};
   padding-inline: 1rem;
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     padding-inline: 2rem;
@@ -11,7 +11,7 @@ export const SingleCardSection = styled.div`
     padding-inline: 4rem;
   }
   width: 100%;
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  background: ${({ theme, $backgroundColor }) => theme.color($backgroundColor)};
 `;
 
 export const SingleCardInner = styled.div`

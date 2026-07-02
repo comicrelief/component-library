@@ -47,9 +47,9 @@ const EmailSignUp = ({
 
   return (
     <ESUWrapper
-      backgroundColour={backgroundColour}
-      textColour={textColour}
-      containerPadding={containerPadding}
+      $backgroundColour={backgroundColour}
+      $textColour={textColour}
+      $containerPadding={containerPadding}
       {...rest}
     >
       <Title tag="h2" size="xxl" weight="400" family="Anton">
@@ -71,9 +71,9 @@ const EmailSignUp = ({
       )}
       {!isSubmitSuccessful && (
         <FormInner>
-          <NameWrapper columnLayout={columnLayout}>
+          <NameWrapper $columnLayout={columnLayout}>
             <InputField
-              textColour={textColour}
+              $textColour={textColour}
               fieldName={ESU_FIELDS.FIRST_NAME}
               id="first-name"
               type="text"
@@ -82,7 +82,7 @@ const EmailSignUp = ({
               formContext={formContext}
             />
             <InputField
-              textColour={textColour}
+              $textColour={textColour}
               fieldName={ESU_FIELDS.LAST_NAME}
               id="last-name"
               type="text"
@@ -92,7 +92,7 @@ const EmailSignUp = ({
             />
           </NameWrapper>
           <InputField
-            textColour={textColour}
+            $textColour={textColour}
             fieldName={ESU_FIELDS.EMAIL}
             id="email"
             type="email"
@@ -100,7 +100,7 @@ const EmailSignUp = ({
             placeholder="example@youremail.com"
             formContext={formContext}
           />
-          <ButtonWrapper buttonColour={buttonColour}>
+          <ButtonWrapper $buttonColour={buttonColour}>
             <ButtonWithStates
               type="submit"
               disabled={!isValid || isSubmitting}
@@ -124,7 +124,7 @@ const EmailSignUp = ({
       )}
 
       <PrivacyCopyWrapper
-        textColour={textColour}
+        $textColour={textColour}
       >
         <Text>{privacyCopy}</Text>
       </PrivacyCopyWrapper>

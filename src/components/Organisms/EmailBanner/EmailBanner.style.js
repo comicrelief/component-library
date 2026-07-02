@@ -26,7 +26,7 @@ const Form = styled.form`
   margin-left: auto;
   margin-right: auto;
 
-  ${({ hasTopImage, showTitleSection }) => hasTopImage && !showTitleSection && css`
+  ${({ $hasTopImage, $showTitleSection }) => $hasTopImage && !$showTitleSection && css`
     margin-top: 0;
   `}
 

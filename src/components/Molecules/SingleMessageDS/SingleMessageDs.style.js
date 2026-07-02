@@ -9,10 +9,10 @@ const Container = styled.div`
   position: relative;
   flex-direction: column;
   justify-content: space-around;
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  background: ${({ theme, $backgroundColor }) => theme.color($backgroundColor)};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex-direction: ${({ imageLeft }) => (imageLeft ? 'row' : 'row-reverse')};
+    flex-direction: ${({ $imageLeft }) => ($imageLeft ? 'row' : 'row-reverse')};
   }
 `;
 
@@ -32,7 +32,7 @@ const Image = styled.div`
 `;
 
 const MediaLink = styled.a`
-  ${({ imageLeft }) => (imageLeft
+  ${({ $imageLeft }) => ($imageLeft
     ? `margin-right: ${spacing('m')}`
     : `margin-left: ${spacing('m')}`)};
 
@@ -70,7 +70,7 @@ const CloseButton = styled.button`
   overflow: hidden;
   border: none;
   background: transparent;
-  :before {
+  &:before {
     content: '';
     position: absolute;
     height: 2px;
@@ -83,7 +83,7 @@ const CloseButton = styled.button`
     margin-top: -6px;
     transform: rotate(45deg);
   }
-  :after {
+  &:after {
     content: '';
     position: absolute;
     height: 2px;
@@ -108,7 +108,7 @@ const CTA = styled.div`
   }
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    ${({ hasImage }) => !hasImage && `bottom: -${spacing('m')};`}
+    ${({ $hasImage }) => !$hasImage && `bottom: -${spacing('m')};`}
   }
 `;
 
@@ -121,11 +121,11 @@ const Copy = styled.div`
   flex-direction: column;
   border-radius: 1rem;
   ${defaultBoxShadow()}
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  background: ${({ theme, $backgroundColor }) => theme.color($backgroundColor)};
 
-  ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
+  ${({ $hasLink }) => $hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
 
-  ${({ imageLeft }) => (imageLeft
+  ${({ $imageLeft }) => ($imageLeft
     ? `margin: -${spacing('m')} 0 ${spacing('m')} ${spacing('m')}; ${CTA} { right: ${spacing('m')};}`
     : `margin: -${spacing('m')} ${spacing('m')} ${spacing('m')} 0; ${CTA} { left: ${spacing('m')};}`
   )};
@@ -140,9 +140,9 @@ const Copy = styled.div`
     flex-basis: calc(50% + 1.5rem);
     padding: ${spacing('l')};
 
-    ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
+    ${({ $hasLink }) => $hasLink && `padding-bottom: calc(${spacing('l')} + ${spacing('m')})`};
 
-    ${({ imageLeft }) => (imageLeft
+    ${({ $imageLeft }) => ($imageLeft
     ? `margin: ${spacing('l')} 0 ${spacing('m')} -${spacing('m')}`
     : `margin: ${spacing('l')} -${spacing('m')} ${spacing('m')} 0`)};
   }
@@ -150,9 +150,9 @@ const Copy = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
     padding: calc(${spacing('m')} * 2);
 
-    ${({ hasLink }) => hasLink && `padding-bottom: calc(${spacing('m')} * 3)`};
+    ${({ $hasLink }) => $hasLink && `padding-bottom: calc(${spacing('m')} * 3)`};
 
-    margin: ${({ imageLeft }) => (imageLeft
+    margin: ${({ $imageLeft }) => ($imageLeft
     ? `${spacing('l')} 0 ${spacing('m')} -${spacing('l')}`
     : `${spacing('l')} -${spacing('l')} ${spacing('m')} 0`)};
   }

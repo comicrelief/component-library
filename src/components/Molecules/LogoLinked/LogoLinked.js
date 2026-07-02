@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Logo from '../../Atoms/Logo/Logo';
+import Logo from '../../Atoms/Logos/Logo';
 import { logoRotateAnimation } from '../../../theme/shared/animations';
 
 const TitleLabel = styled.span`

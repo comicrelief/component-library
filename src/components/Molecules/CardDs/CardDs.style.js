@@ -8,9 +8,9 @@ const Container = styled.div`
   flex-direction: column;
   height: 100%;
   width: 100%;
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  background: ${({ theme, $backgroundColor }) => theme.color($backgroundColor)};
 
-  ${({ isCarousel, theme }) => !isCarousel && css`
+  ${({ $isCarousel, theme }) => !$isCarousel && css`
     @media ${theme.allBreakpoints('M')} {
       flex-direction: row;
     }
@@ -25,7 +25,7 @@ const Image = styled.div`
   height: auto;
   margin: 0 0 0 1.5rem;
 
-  ${({ isCarousel, theme }) => !isCarousel && css`
+  ${({ $isCarousel, theme }) => !$isCarousel && css`
     @media ${theme.allBreakpoints('M')} {
       margin: 0 -1.5rem 0 1.5rem;
     }
@@ -40,7 +40,7 @@ const Image = styled.div`
 const MediaLink = styled.a`
   width: 100%;
 
-  ${({ isCarousel, theme }) => !isCarousel && css`
+  ${({ $isCarousel, theme }) => !$isCarousel && css`
     @media ${theme.allBreakpoints('M')} {
       width: calc(50% + 6rem);
     }
@@ -53,12 +53,12 @@ const MediaLink = styled.a`
 
 const Copy = styled.div`
   padding: 2rem;
-  ${({ hasLink }) => hasLink && 'padding-bottom: 4rem'};
+  ${({ $hasLink }) => $hasLink && 'padding-bottom: 4rem'};
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
   ${defaultBoxShadow()}
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  background: ${({ theme, $backgroundColor }) => theme.color($backgroundColor)};
   margin: 0 1.5rem 0 0;
 
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
@@ -67,11 +67,11 @@ const Copy = styled.div`
 
   ${zIndex('low')};
 
-  ${({ hasImage, isCarousel, theme }) => hasImage && css`
+  ${({ $hasImage, $isCarousel, theme }) => $hasImage && css`
     margin-top: -3rem;
     min-height: 10rem;
 
-    ${!isCarousel && css`
+    ${!$isCarousel && css`
       @media ${theme.allBreakpoints('M')} {
         margin: 1.5rem 0 -1.5rem -1.5rem;
         width: calc(50% + 6rem);
@@ -96,10 +96,10 @@ const CTA = styled.div`
     right: 2rem;
   }
 
-  ${({ isCarousel, theme }) => !isCarousel && css`
+  ${({ $isCarousel, theme }) => !$isCarousel && css`
     @media ${theme.allBreakpoints('M')} {
       bottom: -3rem;
-      ${({ hasImage }) => !hasImage && 'bottom: -1.5rem;'};
+      ${({ $hasImage }) => !$hasImage && 'bottom: -1.5rem;'};
     }
   `};
 `;

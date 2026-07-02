@@ -11,7 +11,7 @@ const Button = React.forwardRef(({
   buttonType = buttonTypes.PRIMARY,
   ...rest
 }, ref) => (
-  <StyledButton {...rest} as={wrapper ? 'span' : 'button'} ref={ref} fullWidth={fullWidth} color={color} buttonType={buttonType}>
+  <StyledButton {...rest} as={wrapper ? 'span' : 'button'} ref={ref} $fullWidth={fullWidth} $color={color} $buttonType={buttonType}>
     {children}
   </StyledButton>
 ));

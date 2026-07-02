@@ -35,8 +35,8 @@ export default function Confetti({ trigger, duration = 3000 }) {
   const refAnimationInstance = useRef(null);
   const [intervalId, setIntervalId] = useState();
 
-  const getInstance = useCallback(instance => {
-    refAnimationInstance.current = instance;
+  const getInstance = useCallback(({ confetti }) => {
+    refAnimationInstance.current = confetti;
   }, []);
 
   const nextTickAnimation = useCallback(() => {
@@ -91,7 +91,7 @@ export default function Confetti({ trigger, duration = 3000 }) {
 
   return (
     <>
-      <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles} />
+      <ReactCanvasConfetti onInit={getInstance} style={canvasStyles} />
     </>
   );
 }

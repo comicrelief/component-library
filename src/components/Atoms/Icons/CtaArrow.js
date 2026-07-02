@@ -13,10 +13,10 @@ const angle = {
 const defaultSize = 32;
 
 const Icon = styled.svg`
-  transform: ${({ direction }) => `rotate(${angle[direction]})`};
+  transform: ${({ $direction }) => `rotate(${angle[$direction]})`};
 
   rect {
-    fill: ${({ theme, colour }) => (theme.color(colour))};
+    fill: ${({ theme, $colour }) => (theme.color($colour))};
   }
 
   path {
@@ -34,10 +34,9 @@ const CtaArrow = ({
     width={size}
     height={size}
     viewBox={`0 0 ${size} ${size}`}
-    direction={direction}
-    colour={colour}
+    $direction={direction}
+    $colour={colour}
     xmlns="http://www.w3.org/2000/svg"
-    defaultSize={defaultSize}
     {...rest}
   >
     <rect width={size} height={size} rx={size / 2} />

@@ -1,58 +1,426 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`handles data structure correctly 1`] = `
+.c13 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c13 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c5 {
+  position: relative;
+  display: inline;
+  color: #000000;
+  font-weight: normal;
+  color: #E52630;
+}
+
+.c5:hover,
+.c5:focus {
+  color: #000000;
+  text-decoration: none;
+}
+
+.c9 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c10 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c23 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transform: scale(1);
+  transform-origin: center;
+}
+
+.c21 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #E52630;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.c19 {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.c24 {
+  display: inline-block;
+  color: #FFFFFF;
+  fill: currentColor;
+}
+
+.c8 {
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: transparent;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.c8 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.c16 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #E52630;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.c18 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c6 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  flex: 1 1 auto;
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.c6 img {
+  transform: scale(1);
+  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+}
+
+.c26 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  flex: 1 1 auto;
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: default;
+  box-sizing: border-box;
+}
+
+.c4 {
+  width: auto;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  border-radius: 1rem;
+}
+
+.c25 {
+  width: auto;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c11 {
+  width: 100%;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c12 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.c14 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.c0 {
+  container-type: inline-size;
+  container-name: cta-multi-card;
+  width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  background: #FFFFFF;
+  padding-inline: 1rem;
+}
+
+.c2 {
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.c3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+@media (min-width: 740px) {
+  .c13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c13 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c21 {
+    background: #222222;
+  }
+}
+
+@media (min-width: 740px) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c16 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c16 {
+    color: #222222;
+  }
+}
+
+@media (min-width: 740px) {
+  .c6 {
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transform-origin: center;
+    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  }
+
+  .c6:hover,
+  .c6:focus {
+    transform: translateY(-10px);
+  }
+
+  .c6:hover {
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+  }
+
+  .c6:hover .c7 img {
+    transform: scale(1.06);
+  }
+
+  .c6:hover .c15 {
+    text-decoration: none;
+  }
+
+  .c6:hover .c17 {
+    opacity: 1;
+  }
+
+  .c6:hover .c20 .c22 {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width:739px) {
+  .c4 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+@media (min-width:740px) and (max-width:1023px) {
+  .c4 {
+    align-self: stretch;
+    flex: 0 0 100%;
+    max-width: 309px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    flex: 0 1 auto;
+    width: clamp(261px,calc((100% - 4rem) / 3),363px);
+    align-self: stretch;
+  }
+}
+
+@media (max-width:739px) {
+  .c25 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+@media (min-width:740px) and (max-width:1023px) {
+  .c25 {
+    align-self: stretch;
+    flex: 0 0 100%;
+    max-width: 309px;
+  }
+}
+
+@media (min-width:1024px) {
+  .c25 {
+    flex: 0 1 auto;
+    width: clamp(261px,calc((100% - 4rem) / 3),363px);
+    align-self: stretch;
+  }
+}
+
+@media (min-width: 740px) {
+  .c1 {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c1 {
+    padding-inline: 4rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c3 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c3 {
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+}
+
 <div
-  className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 qqegF"
+  className="c0"
 >
   <div
-    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 kCDlNQ"
+    className="c1"
   >
     <div
-      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 iFzzWM"
+      className="c2"
     >
       <div
-        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 gAuYUa"
+        className="c3"
       >
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 hxglwr"
+          className="c4"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            className="c5 c6"
             href="/test"
             rel={null}
             target="_self"
             type="standard"
           >
             <div
-              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+              className="c7 c8"
             >
               <div
-                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
-                height="100%"
-                width="100%"
+                className="c9 lazyload"
               >
                 <img
                   alt=""
-                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  className="c10 lazyload"
                   data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
             <div
-              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+              className="c11"
             >
               <div
-                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+                className="c12"
               >
                 <p
-                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                  className="c13"
                 >
                   <strong>
                     Load
@@ -61,30 +429,30 @@ exports[`handles data structure correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+                className="c14"
               >
                 <span
-                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                  className="c15 c16"
                 >
                   test go
                   <img
                     alt=""
                     aria-hidden="true"
-                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    className="c17 c18"
                     src="mock.asset"
                   />
                 </span>
                 <div
-                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                  className="c19"
                 >
                   <div
-                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                    className="c20 c21"
                   >
                     <span
-                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                      className="c22 c23"
                     >
                       <svg
-                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        className="c24"
                         fill="none"
                         height="15"
                         viewBox="0 0 15 15"
@@ -104,41 +472,37 @@ exports[`handles data structure correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 nEnLi"
+          className="c25"
         >
           <div
-            className="CTACardstyle__CardLink-sc-si8xx1-3 geBvAi"
+            className="c26"
           >
             <div
-              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+              className="c7 c8"
             >
               <div
-                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
-                height="100%"
-                width="100%"
+                className="c9 lazyload"
               >
                 <img
                   alt=""
-                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  className="c10 lazyload"
                   data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
             <div
-              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+              className="c11"
             >
               <div
-                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+                className="c12"
               >
                 <p
-                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                  className="c13"
                 >
                   <strong>
                     Load
@@ -150,45 +514,41 @@ exports[`handles data structure correctly 1`] = `
           </div>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 hxglwr"
+          className="c4"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            className="c5 c6"
             href="/test"
             rel={null}
             target="_self"
             type="standard"
           >
             <div
-              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+              className="c7 c8"
             >
               <div
-                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
-                height="100%"
-                width="100%"
+                className="c9 lazyload"
               >
                 <img
                   alt=""
-                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  className="c10 lazyload"
                   data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
             <div
-              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+              className="c11"
             >
               <div
-                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+                className="c12"
               >
                 <p
-                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                  className="c13"
                 >
                   <strong>
                     Load
@@ -197,30 +557,30 @@ exports[`handles data structure correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+                className="c14"
               >
                 <span
-                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                  className="c15 c16"
                 >
                   test go
                   <img
                     alt=""
                     aria-hidden="true"
-                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    className="c17 c18"
                     src="mock.asset"
                   />
                 </span>
                 <div
-                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                  className="c19"
                 >
                   <div
-                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                    className="c20 c21"
                   >
                     <span
-                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                      className="c22 c23"
                     >
                       <svg
-                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        className="c24"
                         fill="none"
                         height="15"
                         viewBox="0 0 15 15"
@@ -240,52 +600,52 @@ exports[`handles data structure correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 hxglwr"
+          className="c4"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            className="c5 c6"
             href="/test-no-image"
             rel={null}
             target="_self"
             type="standard"
           >
             <div
-              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+              className="c11"
             >
               <div
-                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+                className="c12"
               >
                 <p
-                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                  className="c13"
                 >
                   Load of text here
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+                className="c14"
               >
                 <span
-                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                  className="c15 c16"
                 >
                   View card
                   <img
                     alt=""
                     aria-hidden="true"
-                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    className="c17 c18"
                     src="mock.asset"
                   />
                 </span>
                 <div
-                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                  className="c19"
                 >
                   <div
-                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                    className="c20 c21"
                   >
                     <span
-                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                      className="c22 c23"
                     >
                       <svg
-                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        className="c24"
                         fill="none"
                         height="15"
                         viewBox="0 0 15 15"
@@ -311,58 +671,452 @@ exports[`handles data structure correctly 1`] = `
 `;
 
 exports[`renders 2 columns layout correctly 1`] = `
+.c13 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c13 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c5 {
+  position: relative;
+  display: inline;
+  color: #000000;
+  font-weight: normal;
+  color: #E52630;
+}
+
+.c5:hover,
+.c5:focus {
+  color: #000000;
+  text-decoration: none;
+}
+
+.c9 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c10 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c23 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transform: scale(1);
+  transform-origin: center;
+}
+
+.c21 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #E52630;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.c19 {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.c24 {
+  display: inline-block;
+  color: #FFFFFF;
+  fill: currentColor;
+}
+
+.c8 {
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: transparent;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.c8 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.c16 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #E52630;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.c18 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c6 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  flex: 1 1 auto;
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.c6 img {
+  transform: scale(1);
+  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+}
+
+.c26 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  flex: 1 1 auto;
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: default;
+  box-sizing: border-box;
+}
+
+.c4 {
+  width: auto;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  border-radius: 1rem;
+}
+
+.c25 {
+  width: auto;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c11 {
+  width: 100%;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c12 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.c14 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.c0 {
+  container-type: inline-size;
+  container-name: cta-multi-card;
+  width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  background: transparent;
+  padding-inline: 1rem;
+}
+
+.c2 {
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.c3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+@media (min-width: 740px) {
+  .c13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c13 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c21 {
+    background: #222222;
+  }
+}
+
+@media (min-width: 740px) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c16 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c16 {
+    color: #222222;
+  }
+}
+
+@media (min-width: 740px) {
+  .c6 {
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transform-origin: center;
+    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  }
+
+  .c6:hover,
+  .c6:focus {
+    transform: translateY(-10px);
+  }
+
+  .c6:hover {
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+  }
+
+  .c6:hover .c7 img {
+    transform: scale(1.06);
+  }
+
+  .c6:hover .c15 {
+    text-decoration: none;
+  }
+
+  .c6:hover .c17 {
+    opacity: 1;
+  }
+
+  .c6:hover .c20 .c22 {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width:1023px) {
+  .c4 {
+    scroll-snap-align: start;
+    flex: 0 0 309px;
+    width: 309px;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    flex: 0 1 auto;
+    width: 100%;
+    align-self: stretch;
+  }
+}
+
+@media (max-width:1023px) {
+  .c25 {
+    scroll-snap-align: start;
+    flex: 0 0 309px;
+    width: 309px;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c25 {
+    flex: 0 1 auto;
+    width: 100%;
+    align-self: stretch;
+  }
+}
+
+@media (min-width: 740px) {
+  .c1 {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c1 {
+    padding-inline: 4rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c3 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c3 {
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c3 {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(443px,560px));
+    justify-content: center;
+    align-items: stretch;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .c3>*:last-child:nth-child(odd) {
+    grid-column: 1/-1;
+    justify-self: center;
+    width: min(100%,560px);
+  }
+}
+
+@media (max-width:1023px) {
+  .c3 {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c3::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 <div
-  className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 qqegF"
+  className="c0"
 >
   <div
-    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 cywbFh"
+    className="c1"
   >
     <div
-      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 iFzzWM"
+      className="c2"
     >
       <div
-        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 jrSYsC"
+        className="c3"
       >
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 dPhdyR"
+          className="c4"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            className="c5 c6"
             href="/test"
             rel={null}
             target="_self"
             type="standard"
           >
             <div
-              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+              className="c7 c8"
             >
               <div
-                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
-                height="100%"
-                width="100%"
+                className="c9 lazyload"
               >
                 <img
                   alt=""
-                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  className="c10 lazyload"
                   data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
             <div
-              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+              className="c11"
             >
               <div
-                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+                className="c12"
               >
                 <p
-                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                  className="c13"
                 >
                   <strong>
                     Load
@@ -371,30 +1125,30 @@ exports[`renders 2 columns layout correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+                className="c14"
               >
                 <span
-                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                  className="c15 c16"
                 >
                   test go
                   <img
                     alt=""
                     aria-hidden="true"
-                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    className="c17 c18"
                     src="mock.asset"
                   />
                 </span>
                 <div
-                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                  className="c19"
                 >
                   <div
-                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                    className="c20 c21"
                   >
                     <span
-                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                      className="c22 c23"
                     >
                       <svg
-                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        className="c24"
                         fill="none"
                         height="15"
                         viewBox="0 0 15 15"
@@ -414,41 +1168,37 @@ exports[`renders 2 columns layout correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 cdJZAM"
+          className="c25"
         >
           <div
-            className="CTACardstyle__CardLink-sc-si8xx1-3 geBvAi"
+            className="c26"
           >
             <div
-              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+              className="c7 c8"
             >
               <div
-                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
-                height="100%"
-                width="100%"
+                className="c9 lazyload"
               >
                 <img
                   alt=""
-                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  className="c10 lazyload"
                   data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
             <div
-              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+              className="c11"
             >
               <div
-                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+                className="c12"
               >
                 <p
-                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                  className="c13"
                 >
                   <strong>
                     Load
@@ -460,45 +1210,41 @@ exports[`renders 2 columns layout correctly 1`] = `
           </div>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 dPhdyR"
+          className="c4"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            className="c5 c6"
             href="/test"
             rel={null}
             target="_self"
             type="standard"
           >
             <div
-              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+              className="c7 c8"
             >
               <div
-                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
-                height="100%"
-                width="100%"
+                className="c9 lazyload"
               >
                 <img
                   alt=""
-                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  className="c10 lazyload"
                   data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
             <div
-              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+              className="c11"
             >
               <div
-                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+                className="c12"
               >
                 <p
-                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                  className="c13"
                 >
                   <strong>
                     Load
@@ -507,30 +1253,30 @@ exports[`renders 2 columns layout correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+                className="c14"
               >
                 <span
-                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                  className="c15 c16"
                 >
                   test go
                   <img
                     alt=""
                     aria-hidden="true"
-                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    className="c17 c18"
                     src="mock.asset"
                   />
                 </span>
                 <div
-                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                  className="c19"
                 >
                   <div
-                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                    className="c20 c21"
                   >
                     <span
-                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                      className="c22 c23"
                     >
                       <svg
-                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        className="c24"
                         fill="none"
                         height="15"
                         viewBox="0 0 15 15"
@@ -550,52 +1296,52 @@ exports[`renders 2 columns layout correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 dPhdyR"
+          className="c4"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            className="c5 c6"
             href="/test-no-image"
             rel={null}
             target="_self"
             type="standard"
           >
             <div
-              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+              className="c11"
             >
               <div
-                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+                className="c12"
               >
                 <p
-                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                  className="c13"
                 >
                   Load of text here
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+                className="c14"
               >
                 <span
-                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                  className="c15 c16"
                 >
                   View card
                   <img
                     alt=""
                     aria-hidden="true"
-                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    className="c17 c18"
                     src="mock.asset"
                   />
                 </span>
                 <div
-                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                  className="c19"
                 >
                   <div
-                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                    className="c20 c21"
                   >
                     <span
-                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                      className="c22 c23"
                     >
                       <svg
-                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        className="c24"
                         fill="none"
                         height="15"
                         viewBox="0 0 15 15"
@@ -621,58 +1367,432 @@ exports[`renders 2 columns layout correctly 1`] = `
 `;
 
 exports[`renders carousel mode correctly 1`] = `
+.c13 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c13 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c5 {
+  position: relative;
+  display: inline;
+  color: #000000;
+  font-weight: normal;
+  color: #E52630;
+}
+
+.c5:hover,
+.c5:focus {
+  color: #000000;
+  text-decoration: none;
+}
+
+.c9 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c10 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c23 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transform: scale(1);
+  transform-origin: center;
+}
+
+.c21 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #E52630;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.c19 {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.c24 {
+  display: inline-block;
+  color: #FFFFFF;
+  fill: currentColor;
+}
+
+.c8 {
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: transparent;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.c8 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.c16 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #E52630;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.c18 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c6 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  flex: 1 1 auto;
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.c6 img {
+  transform: scale(1);
+  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+}
+
+.c26 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  flex: 1 1 auto;
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: default;
+  box-sizing: border-box;
+}
+
+.c4 {
+  width: auto;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  border-radius: 1rem;
+}
+
+.c25 {
+  width: auto;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c11 {
+  width: 100%;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c12 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.c14 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.c0 {
+  container-type: inline-size;
+  container-name: cta-multi-card;
+  width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  background: transparent;
+  padding-inline: 1rem;
+}
+
+.c2 {
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.c3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+@media (min-width: 740px) {
+  .c13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c13 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c21 {
+    background: #222222;
+  }
+}
+
+@media (min-width: 740px) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c16 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c16 {
+    color: #222222;
+  }
+}
+
+@media (min-width: 740px) {
+  .c6 {
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transform-origin: center;
+    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  }
+
+  .c6:hover,
+  .c6:focus {
+    transform: translateY(-10px);
+  }
+
+  .c6:hover {
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+  }
+
+  .c6:hover .c7 img {
+    transform: scale(1.06);
+  }
+
+  .c6:hover .c15 {
+    text-decoration: none;
+  }
+
+  .c6:hover .c17 {
+    opacity: 1;
+  }
+
+  .c6:hover .c20 .c22 {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width:1023px) {
+  .c4 {
+    scroll-snap-align: start;
+    flex: 0 0 309px;
+    width: 309px;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    flex: 0 1 auto;
+    width: clamp(261px,calc((100% - 4rem) / 3),363px);
+    align-self: stretch;
+  }
+}
+
+@media (max-width:1023px) {
+  .c25 {
+    scroll-snap-align: start;
+    flex: 0 0 309px;
+    width: 309px;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c25 {
+    flex: 0 1 auto;
+    width: clamp(261px,calc((100% - 4rem) / 3),363px);
+    align-self: stretch;
+  }
+}
+
+@media (min-width: 740px) {
+  .c1 {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c1 {
+    padding-inline: 4rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c3 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c3 {
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width:1023px) {
+  .c3 {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c3::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 <div
-  className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 qqegF"
+  className="c0"
 >
   <div
-    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 cywbFh"
+    className="c1"
   >
     <div
-      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 iFzzWM"
+      className="c2"
     >
       <div
-        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 fqrDP"
+        className="c3"
       >
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
+          className="c4"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            className="c5 c6"
             href="/test"
             rel={null}
             target="_self"
             type="standard"
           >
             <div
-              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+              className="c7 c8"
             >
               <div
-                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
-                height="100%"
-                width="100%"
+                className="c9 lazyload"
               >
                 <img
                   alt=""
-                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  className="c10 lazyload"
                   data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
             <div
-              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+              className="c11"
             >
               <div
-                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+                className="c12"
               >
                 <p
-                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                  className="c13"
                 >
                   <strong>
                     Load
@@ -681,30 +1801,30 @@ exports[`renders carousel mode correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+                className="c14"
               >
                 <span
-                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                  className="c15 c16"
                 >
                   test go
                   <img
                     alt=""
                     aria-hidden="true"
-                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    className="c17 c18"
                     src="mock.asset"
                   />
                 </span>
                 <div
-                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                  className="c19"
                 >
                   <div
-                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                    className="c20 c21"
                   >
                     <span
-                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                      className="c22 c23"
                     >
                       <svg
-                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        className="c24"
                         fill="none"
                         height="15"
                         viewBox="0 0 15 15"
@@ -724,41 +1844,37 @@ exports[`renders carousel mode correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 fOlVWn"
+          className="c25"
         >
           <div
-            className="CTACardstyle__CardLink-sc-si8xx1-3 geBvAi"
+            className="c26"
           >
             <div
-              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+              className="c7 c8"
             >
               <div
-                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
-                height="100%"
-                width="100%"
+                className="c9 lazyload"
               >
                 <img
                   alt=""
-                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  className="c10 lazyload"
                   data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
             <div
-              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+              className="c11"
             >
               <div
-                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+                className="c12"
               >
                 <p
-                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                  className="c13"
                 >
                   <strong>
                     Load
@@ -770,45 +1886,41 @@ exports[`renders carousel mode correctly 1`] = `
           </div>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
+          className="c4"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            className="c5 c6"
             href="/test"
             rel={null}
             target="_self"
             type="standard"
           >
             <div
-              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+              className="c7 c8"
             >
               <div
-                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
-                height="100%"
-                width="100%"
+                className="c9 lazyload"
               >
                 <img
                   alt=""
-                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  className="c10 lazyload"
                   data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
             <div
-              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+              className="c11"
             >
               <div
-                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+                className="c12"
               >
                 <p
-                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                  className="c13"
                 >
                   <strong>
                     Load
@@ -817,30 +1929,30 @@ exports[`renders carousel mode correctly 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+                className="c14"
               >
                 <span
-                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                  className="c15 c16"
                 >
                   test go
                   <img
                     alt=""
                     aria-hidden="true"
-                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    className="c17 c18"
                     src="mock.asset"
                   />
                 </span>
                 <div
-                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                  className="c19"
                 >
                   <div
-                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                    className="c20 c21"
                   >
                     <span
-                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                      className="c22 c23"
                     >
                       <svg
-                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        className="c24"
                         fill="none"
                         height="15"
                         viewBox="0 0 15 15"
@@ -860,52 +1972,52 @@ exports[`renders carousel mode correctly 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
+          className="c4"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            className="c5 c6"
             href="/test-no-image"
             rel={null}
             target="_self"
             type="standard"
           >
             <div
-              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+              className="c11"
             >
               <div
-                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+                className="c12"
               >
                 <p
-                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                  className="c13"
                 >
                   Load of text here
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+                className="c14"
               >
                 <span
-                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                  className="c15 c16"
                 >
                   View card
                   <img
                     alt=""
                     aria-hidden="true"
-                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    className="c17 c18"
                     src="mock.asset"
                   />
                 </span>
                 <div
-                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                  className="c19"
                 >
                   <div
-                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                    className="c20 c21"
                   >
                     <span
-                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                      className="c22 c23"
                     >
                       <svg
-                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        className="c24"
                         fill="none"
                         height="15"
                         viewBox="0 0 15 15"
@@ -931,58 +2043,432 @@ exports[`renders carousel mode correctly 1`] = `
 `;
 
 exports[`renders correctly with data prop 1`] = `
+.c13 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c13 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c5 {
+  position: relative;
+  display: inline;
+  color: #000000;
+  font-weight: normal;
+  color: #E52630;
+}
+
+.c5:hover,
+.c5:focus {
+  color: #000000;
+  text-decoration: none;
+}
+
+.c9 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c10 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.c23 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transform: scale(1);
+  transform-origin: center;
+}
+
+.c21 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #E52630;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.c19 {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.c24 {
+  display: inline-block;
+  color: #FFFFFF;
+  fill: currentColor;
+}
+
+.c8 {
+  width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: transparent;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.c8 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.c16 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #E52630;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.c18 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c6 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  flex: 1 1 auto;
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.c6 img {
+  transform: scale(1);
+  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+}
+
+.c26 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  flex: 1 1 auto;
+  background: transparent;
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: default;
+  box-sizing: border-box;
+}
+
+.c4 {
+  width: auto;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  border-radius: 1rem;
+}
+
+.c25 {
+  width: auto;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+}
+
+.c11 {
+  width: 100%;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  flex: 1;
+  min-height: 0;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.c12 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.c14 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.c0 {
+  container-type: inline-size;
+  container-name: cta-multi-card;
+  width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  background: transparent;
+  padding-inline: 1rem;
+}
+
+.c2 {
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.c3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+@media (min-width: 740px) {
+  .c13 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c13 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c21 {
+    background: #222222;
+  }
+}
+
+@media (min-width: 740px) {
+  .c16 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c16 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c16 {
+    color: #222222;
+  }
+}
+
+@media (min-width: 740px) {
+  .c6 {
+    transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
+    transform-origin: center;
+    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+  }
+
+  .c6:hover,
+  .c6:focus {
+    transform: translateY(-10px);
+  }
+
+  .c6:hover {
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+  }
+
+  .c6:hover .c7 img {
+    transform: scale(1.06);
+  }
+
+  .c6:hover .c15 {
+    text-decoration: none;
+  }
+
+  .c6:hover .c17 {
+    opacity: 1;
+  }
+
+  .c6:hover .c20 .c22 {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width:1023px) {
+  .c4 {
+    scroll-snap-align: start;
+    flex: 0 0 309px;
+    width: 309px;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c4 {
+    flex: 0 1 auto;
+    width: clamp(261px,calc((100% - 4rem) / 3),363px);
+    align-self: stretch;
+  }
+}
+
+@media (max-width:1023px) {
+  .c25 {
+    scroll-snap-align: start;
+    flex: 0 0 309px;
+    width: 309px;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width:1024px) {
+  .c25 {
+    flex: 0 1 auto;
+    width: clamp(261px,calc((100% - 4rem) / 3),363px);
+    align-self: stretch;
+  }
+}
+
+@media (min-width: 740px) {
+  .c1 {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c1 {
+    padding-inline: 4rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c3 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c3 {
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width:1023px) {
+  .c3 {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .c3::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 <div
-  className="CTAMultiCardstyle__CardsQueryWrapper-sc-gsdqzv-0 qqegF"
+  className="c0"
 >
   <div
-    className="CTAMultiCardstyle__CardsSection-sc-gsdqzv-1 cywbFh"
+    className="c1"
   >
     <div
-      className="CTAMultiCardstyle__CardsInner-sc-gsdqzv-2 iFzzWM"
+      className="c2"
     >
       <div
-        className="CTAMultiCardstyle__CardsContainer-sc-gsdqzv-3 fqrDP"
+        className="c3"
       >
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
+          className="c4"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            className="c5 c6"
             href="/test"
             rel={null}
             target="_self"
             type="standard"
           >
             <div
-              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+              className="c7 c8"
             >
               <div
-                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
-                height="100%"
-                width="100%"
+                className="c9 lazyload"
               >
                 <img
                   alt=""
-                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  className="c10 lazyload"
                   data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
             <div
-              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+              className="c11"
             >
               <div
-                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+                className="c12"
               >
                 <p
-                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                  className="c13"
                 >
                   <strong>
                     Load
@@ -991,30 +2477,30 @@ exports[`renders correctly with data prop 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+                className="c14"
               >
                 <span
-                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                  className="c15 c16"
                 >
                   test go
                   <img
                     alt=""
                     aria-hidden="true"
-                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    className="c17 c18"
                     src="mock.asset"
                   />
                 </span>
                 <div
-                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                  className="c19"
                 >
                   <div
-                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                    className="c20 c21"
                   >
                     <span
-                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                      className="c22 c23"
                     >
                       <svg
-                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        className="c24"
                         fill="none"
                         height="15"
                         viewBox="0 0 15 15"
@@ -1034,41 +2520,37 @@ exports[`renders correctly with data prop 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 fOlVWn"
+          className="c25"
         >
           <div
-            className="CTACardstyle__CardLink-sc-si8xx1-3 geBvAi"
+            className="c26"
           >
             <div
-              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+              className="c7 c8"
             >
               <div
-                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
-                height="100%"
-                width="100%"
+                className="c9 lazyload"
               >
                 <img
                   alt=""
-                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  className="c10 lazyload"
                   data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
             <div
-              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+              className="c11"
             >
               <div
-                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+                className="c12"
               >
                 <p
-                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                  className="c13"
                 >
                   <strong>
                     Load
@@ -1080,45 +2562,41 @@ exports[`renders correctly with data prop 1`] = `
           </div>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
+          className="c4"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            className="c5 c6"
             href="/test"
             rel={null}
             target="_self"
             type="standard"
           >
             <div
-              className="CTACardstyle__ImageWrapper-sc-si8xx1-0 etphrL"
+              className="c7 c8"
             >
               <div
-                className="Picture__Wrapper-sc-1x3z81z-0 eioWif lazyload"
-                height="100%"
-                width="100%"
+                className="c9 lazyload"
               >
                 <img
                   alt=""
-                  className="Picture__Image-sc-1x3z81z-1 cFGEzv lazyload"
+                  className="c10 lazyload"
                   data-lowsrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAcIBAb/xAAjEAACAgIBBAIDAAAAAAAAAAABAgMEABEGBRIhMQdBE1Fh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgT/xAAaEQADAQADAAAAAAAAAAAAAAAAAQIDERIT/9oADAMBAAIRAxEAPwBzRcrjVY+0tonyT41nG8y+SLFTkgpQTVFpoqiRZGHc2/egf4RrMM12OHpNi3LsrAjO2vsKCcQtvkbTW570sMUt6xphJKnd+Ma9A78ZRWcS+SWNLpNMqAdQidVaSxErEA6ZgCNj9YZNPTOTpJW7+ovdlnLHyjgAD6GGPug+bP/Z"
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
-                  height="100%"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                  width="100%"
                 />
               </div>
             </div>
             <div
-              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+              className="c11"
             >
               <div
-                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+                className="c12"
               >
                 <p
-                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                  className="c13"
                 >
                   <strong>
                     Load
@@ -1127,30 +2605,30 @@ exports[`renders correctly with data prop 1`] = `
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+                className="c14"
               >
                 <span
-                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                  className="c15 c16"
                 >
                   test go
                   <img
                     alt=""
                     aria-hidden="true"
-                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    className="c17 c18"
                     src="mock.asset"
                   />
                 </span>
                 <div
-                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                  className="c19"
                 >
                   <div
-                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                    className="c20 c21"
                   >
                     <span
-                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                      className="c22 c23"
                     >
                       <svg
-                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        className="c24"
                         fill="none"
                         height="15"
                         viewBox="0 0 15 15"
@@ -1170,52 +2648,52 @@ exports[`renders correctly with data prop 1`] = `
           </a>
         </div>
         <div
-          className="CTACardstyle__CardWrapper-sc-si8xx1-4 anAmi"
+          className="c4"
         >
           <a
-            className="Linkstyle__StyledLink-sc-t360tr-1 iydhqO CTACardstyle__CardLink-sc-si8xx1-3 udrPq"
+            className="c5 c6"
             href="/test-no-image"
             rel={null}
             target="_self"
             type="standard"
           >
             <div
-              className="CTACardstyle__CopyAndLinkSection-sc-si8xx1-5 bmuAep"
+              className="c11"
             >
               <div
-                className="CTACardstyle__Copy-sc-si8xx1-6 csgKNf"
+                className="c12"
               >
                 <p
-                  className="Text__BaseText-sc-1snl0ya-0 ffxkcd"
+                  className="c13"
                 >
                   Load of text here
                 </p>
               </div>
               <div
-                className="CTACardstyle__CTA-sc-si8xx1-8 eluKFv"
+                className="c14"
               >
                 <span
-                  className="CTACardstyle__CTAText-sc-si8xx1-1 dQjaWt"
+                  className="c15 c16"
                 >
                   View card
                   <img
                     alt=""
                     aria-hidden="true"
-                    className="CTACardstyle__CTATextUnderline-sc-si8xx1-2 jSsByL"
+                    className="c17 c18"
                     src="mock.asset"
                   />
                 </span>
                 <div
-                  className="CtaArrowCirclestyle__ArrowIconOuter-sc-1eai4ad-2 hRwDxh"
+                  className="c19"
                 >
                   <div
-                    className="CtaArrowCirclestyle__ArrowIconWrapper-sc-1eai4ad-1 dlHKrX"
+                    className="c20 c21"
                   >
                     <span
-                      className="CtaArrowCirclestyle__ArrowIconInner-sc-1eai4ad-0 jXJGXA"
+                      className="c22 c23"
                     >
                       <svg
-                        className="ArrowIcon__StyledArrowIcon-sc-1iwl330-0 hLeEyo"
+                        className="c24"
                         fill="none"
                         height="15"
                         viewBox="0 0 15 15"

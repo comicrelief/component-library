@@ -1,5 +1,5 @@
-import 'jest-styled-components';
 import React from 'react';
+import 'jest-styled-components';
 import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
 import DynamicGallery from './DynamicGallery';
 
@@ -26,7 +26,7 @@ it('handle a Dynamic Gallery with mocked gallery nodes', () => {
       image: 'image3.jpg',
       title: 'Image 3',
       caption: 'Caption 3',
-      body: 'Body 3'  
+      body: 'Body 3'
     }
   ]
   const galleryEl = renderWithTheme(<DynamicGallery nodes={nodes} />).toJSON();

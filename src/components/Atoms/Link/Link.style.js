@@ -17,27 +17,27 @@ const buttonStyle = () => css`
   padding: 0.6rem 1rem;
   border-radius: 0.5rem;
 
-  ${({ $color, theme, buttonType }) => (theme.buttonColors($color, buttonType))};
+  ${({ $color, theme, $buttonType }) => (theme.buttonColors($color, $buttonType))};
 
   ${({ theme }) => css` ${fontHelper(theme, 'button')}`}
 
   // Override with mobile-specific colours where available:
-  ${({ mobileColour, theme, buttonType }) => (mobileColour ? theme.buttonColors(mobileColour, buttonType) : null)};
+  ${({ $mobileColour, theme, $buttonType }) => ($mobileColour ? theme.buttonColors($mobileColour, $buttonType) : null)};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
+    width: ${({ $fullWidth }) => ($fullWidth ? '100%' : 'auto')};
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     // I don't *believe* this needs to be reinstated, but leaving in
     // place for now, just to avoid breaking anything downstream...
-    width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
+    width: ${({ $fullWidth }) => ($fullWidth ? '100%' : 'auto')};
 
     // Reinstate standard colours for desktop where appropriate:
     ${({
-    mobileColour, theme, buttonType, $color
+    $mobileColour, theme, $buttonType, $color
   }) => (
-    mobileColour && theme.buttonColors($color, buttonType)
+    $mobileColour && theme.buttonColors($color, $buttonType)
   )};
   }
 `;
@@ -48,6 +48,7 @@ const linkStyle = () => css`
   ${({ type, theme }) => (type
     ? theme.linkStyles(type)
     : theme.linkStyles('standard'))};
+  ${({ $color, theme }) => $color && css`color: ${theme.color($color)};`}
 `;
 
 export const IconWrapper = styled.span`
@@ -79,7 +80,7 @@ export const IconWrapper = styled.span`
 const StyledLink = styled.a`
   ${props => (props.type === 'button' ? buttonStyle : linkStyle)}
 
-  ${({ iconFirst }) => iconFirst
+  ${({ $iconFirst }) => $iconFirst
     && css`
       flex-direction: row-reverse;
       span[type="button"] {

@@ -8,55 +8,51 @@ test.describe('checkbox', () => {
     await expect(page.locator('[data-testid="Checkbox-example-1"]')).toBeVisible();
     await expect(page.locator('[data-preview="Checkbox"]')).toBeVisible();
 
-    // ensure checkboxes are checked when clicked
     // tennis option
-    await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(2)').click();
-    await expect(page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(2)')).toHaveValue('Tennis');
-    expect(await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(2)').isChecked()).toBeTruthy();
+    const tennisCheckbox = page.locator('label[data-testid="checkbox-tennis"]');
+    await tennisCheckbox.click();
+    expect(await tennisCheckbox.locator('input').isChecked()).toBeTruthy();
 
     // basketball option
-    await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(3)').click();
-    await expect(page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(3)')).toHaveValue('Basketball');
-    expect(await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(3)').isChecked()).toBeTruthy();
+    const basketballCheckbox = page.locator('label[data-testid="checkbox-basketball"]');
+    await basketballCheckbox.click();
+    expect(await basketballCheckbox.locator('input').isChecked()).toBeTruthy();
 
     // cycling option
-    await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(4)').click();
-    await expect(page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(4)')).toHaveValue('Cycling');
-    expect(await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(4)').isChecked()).toBeTruthy();
+    const cyclingCheckbox = page.locator('label[data-testid="checkbox-cycling"]');
+    await cyclingCheckbox.click();
+    expect(await cyclingCheckbox.locator('input').isChecked()).toBeTruthy();
 
     // football checkbox
-    await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(5)').click();
-    await expect(page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(5)')).toHaveValue('Football (with wacky styling to test props)');
-    expect(await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(5)').isChecked()).toBeTruthy();
+    const footballCheckbox = page.locator('label[data-testid="checkbox-football"]');
+    await footballCheckbox.click();
+    expect(await footballCheckbox.locator('input').isChecked()).toBeTruthy();
 
-    // terms and conditions
-    await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(8)').click();
-    expect(await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(8)').isChecked()).toBeTruthy();
+    // terms and conditions (with long label containing links)
+    const termsCheckbox = page.locator('label[data-testid="checkbox-terms"]');
+    await termsCheckbox.click();
+    expect(await termsCheckbox.locator('input').isChecked()).toBeTruthy();
 
     // ensure checkboxes are unchecked when clicked again
     // tennis option
-    await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(2)').click();
-    await expect(page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(2)')).toHaveValue('Tennis');
-    expect(await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(2)').isChecked()).toBeFalsy();
+    await tennisCheckbox.click();
+    expect(await tennisCheckbox.locator('input').isChecked()).toBeFalsy();
 
     // basketball option
-    await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(3)').click();
-    await expect(page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(3)')).toHaveValue('Basketball');
-    expect(await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(3)').isChecked()).toBeFalsy();
+    await basketballCheckbox.click();
+    expect(await basketballCheckbox.locator('input').isChecked()).toBeFalsy();
 
     // cycling option
-    await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(4)').click();
-    await expect(page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(4)')).toHaveValue('Cycling');
-    expect(await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(4)').isChecked()).toBeFalsy();
+    await cyclingCheckbox.click();
+    expect(await cyclingCheckbox.locator('input').isChecked()).toBeFalsy();
 
     // football checkbox
-    await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(5)').click();
-    await expect(page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(5)')).toHaveValue('Football (with wacky styling to test props)');
-    expect(await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(5)').isChecked()).toBeFalsy();
+    await footballCheckbox.click();
+    expect(await footballCheckbox.locator('input').isChecked()).toBeFalsy();
 
     // terms and conditions
-    await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(8)').click();
-    expect(await page.locator('[data-testid="Checkbox-example-1"] div > label:nth-child(8)').isChecked()).toBeFalsy();
+    await termsCheckbox.click();
+    expect(await termsCheckbox.locator('input').isChecked()).toBeFalsy();
 
     await page.close();
   });

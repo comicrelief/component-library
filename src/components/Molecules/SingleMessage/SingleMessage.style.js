@@ -11,39 +11,39 @@ const Container = styled.div`
   position: relative;
   flex-direction: column;
   overflow: hidden;
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
-  padding-top: ${({ smPaddingTop }) => smPaddingTop};
-  padding-bottom: ${({ smPaddingBottom }) => smPaddingBottom};
+  background: ${({ theme, $backgroundColor }) => theme.color($backgroundColor)};
+  padding-top: ${({ $smPaddingTop }) => $smPaddingTop};
+  padding-bottom: ${({ $smPaddingBottom }) => $smPaddingBottom};
 
   iframe {
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
-    ${({ copyFirst }) => (copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;')};
-    ${({ isPlaying }) => (isPlaying ? zIndex('high') : zIndex('base'))};
+    ${({ $copyFirst }) => ($copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;')};
+    ${({ $isPlaying }) => ($isPlaying ? zIndex('high') : zIndex('base'))};
   }
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex-direction: ${({ copyFirst }) => (copyFirst === true ? 'row-reverse' : 'row')};
-    ${({ landscapeVideo, hasVideo, fullImage }) => (landscapeVideo && hasVideo && !fullImage ? 'min-height: 0;' : null)};
-    padding-top: ${({ paddingTop }) => paddingTop};
-    padding-bottom: ${({ paddingBottom }) => paddingBottom};
+    flex-direction: ${({ $copyFirst }) => ($copyFirst === true ? 'row-reverse' : 'row')};
+    ${({ $landscapeVideo, $hasVideo, $fullImage }) => ($landscapeVideo && $hasVideo && !$fullImage ? 'min-height: 0;' : null)};
+    padding-top: ${({ $paddingTop }) => $paddingTop};
+    padding-bottom: ${({ $paddingBottom }) => $paddingBottom};
   }
 `;
 
 const Copy = styled.div`
   width: 100%;
   ${zIndex('low')};
-  ${({ hasVideo, fullImage }) => (hasVideo === true && fullImage === true ? 'display: none;' : null)};
+  ${({ $hasVideo, $fullImage }) => ($hasVideo === true && $fullImage === true ? 'display: none;' : null)};
   padding: 0 ${spacing('l')};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    ${({ vhFull, fullImage }) => (vhFull || fullImage
+    ${({ $vhFull, $fullImage }) => ($vhFull || $fullImage
     ? 'min-height: calc(100vh - 5.625rem); flex-direction: column; justify-content: center;'
     : 'height: auto;')};
 
-    ${({ hasVideo, fullImage }) => (hasVideo === true && fullImage === true
+    ${({ $hasVideo, $fullImage }) => ($hasVideo === true && $fullImage === true
     ? 'display: none;'
     : 'display: flex;')};
 
@@ -52,7 +52,7 @@ const Copy = styled.div`
     padding: 0 ${spacing('xl')};
   }
 
-  ${props => props.fullImage
+  ${props => props.$fullImage
     && css`
       @media ${({ theme }) => theme.allBreakpoints('M')} {
         position: absolute;
@@ -60,12 +60,12 @@ const Copy = styled.div`
         right: 0;
         top: 50%;
         transform: translateY(-50%);
-        ${props.copyFirst ? css`left: 0;` : null}
+        ${props.$copyFirst ? css`left: 0;` : null}
         width: 50%;
       }
     `};
 
-  ${props => (props.hasImage
+  ${props => (props.$hasImage
     ? css`
       @media ${({ theme }) => theme.allBreakpoints('M')} {
         width: 50%;
@@ -74,7 +74,7 @@ const Copy = styled.div`
     : css`
       margin: auto;
       padding: 0 ${spacing('md')};
-      
+
       @media ${({ theme }) => theme.allBreakpoints('M')} {
         width: 100%;
         max-width ${containers.small};
@@ -85,20 +85,20 @@ const Copy = styled.div`
 
 const Media = styled.div`
   width: 100%;
-  ${({ fullImage }) => (fullImage ? 'height: 200px;' : 'height: 280px;')};
+  ${({ $fullImage }) => ($fullImage ? 'height: 200px;' : 'height: 280px;')};
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     height: auto;
-    width: ${({ fullImage }) => (fullImage ? '100%' : '50%')};
-    ${({ fullImage }) => (fullImage ? 'min-height: 500px;' : null)};
-    ${({ vhFull, fullImage }) => (vhFull && fullImage ? 'min-height: calc(100vh - 5.625rem);' : null)};
+    width: ${({ $fullImage }) => ($fullImage ? '100%' : '50%')};
+    ${({ $fullImage }) => ($fullImage ? 'min-height: 500px;' : null)};
+    ${({ $vhFull, $fullImage }) => ($vhFull && $fullImage ? 'min-height: calc(100vh - 5.625rem);' : null)};
   }
   position: relative;
-  ${({ doubleImage }) => doubleImage && 'display: flex; flex-direction: column'};
-  ${({ hasVideo }) => (hasVideo
+  ${({ $doubleImage }) => $doubleImage && 'display: flex; flex-direction: column'};
+  ${({ $hasVideo }) => ($hasVideo
     ? 'height: auto; overflow: hidden; padding-bottom: 56.25%;'
     : null)};
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    padding-bottom: ${({ landscapeVideo, hasVideo }) => (landscapeVideo && hasVideo ? 'calc(56.25% / 2);' : '0;')};
+    padding-bottom: ${({ $landscapeVideo, $hasVideo }) => ($landscapeVideo && $hasVideo ? 'calc(56.25% / 2);' : '0;')};
   }
 `;
 
@@ -115,15 +115,15 @@ const PlayButton = styled.button`
   text-indent: -9999px;
   background: rgba(0, 0, 0, 0) center no-repeat;
   background-size: 70px;
-  background-image: ${({ isBuffering }) => (isBuffering === true ? `url(${loadingIcon})` : `url(${playIcon})`)};
+  background-image: ${({ $isBuffering }) => ($isBuffering === true ? `url("${loadingIcon}")` : `url("${playIcon}")`)};
 
-  ${({ copyFirst }) => (copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;')};
+  ${({ $copyFirst }) => ($copyFirst === true ? 'left: auto; right: 0;' : 'left: 0; right: auto;')};
 
-  display: ${({ isPlaying }) => (isPlaying ? 'none' : 'block')};
+  display: ${({ $isPlaying }) => ($isPlaying ? 'none' : 'block')};
 
   &:focus,
   &:hover {
-    background-image: ${({ isBuffering }) => (isBuffering === true ? `url(${loadingIcon})` : `url(${playIconHover})`)};
+    background-image: ${({ $isBuffering }) => ($isBuffering === true ? `url("${loadingIcon}")` : `url("${playIconHover}")`)};
   }
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
@@ -134,14 +134,14 @@ const PlayButton = styled.button`
 const Image = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     img {
-      position: ${({ fullImage, vhFull }) => (fullImage || vhFull ? 'absolute' : null)};
+      position: ${({ $fullImage, $vhFull }) => ($fullImage || $vhFull ? 'absolute' : null)};
     }
   }
   width: 100%;
   height: 100%;
-  ${({ doubleImage }) => doubleImage && 'height: 50%'};
-  ${({ isPlaying }) => (isPlaying ? zIndex('base') : zIndex('low'))};
-  ${({ hasVideo }) => (hasVideo ? 'position: absolute; top: 0; left: 0;' : null)};
+  ${({ $doubleImage }) => $doubleImage && 'height: 50%'};
+  ${({ $isPlaying }) => ($isPlaying ? zIndex('base') : zIndex('low'))};
+  ${({ $hasVideo }) => ($hasVideo ? 'position: absolute; top: 0; left: 0;' : null)};
 `;
 
 const VideoWrapper = styled.div`
@@ -150,7 +150,7 @@ const VideoWrapper = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  ${({ isPlaying }) => (isPlaying ? zIndex('medium') : zIndex('base'))};
+  ${({ $isPlaying }) => ($isPlaying ? zIndex('medium') : zIndex('base'))};
 `;
 
 export {

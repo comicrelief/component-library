@@ -74,7 +74,7 @@ const MoreNav = ({
                 aria-haspopup={hasPopUp}
                 role={hasPopUp ? 'button' : 'link'}
                 onClick={e => handleNestedLinkClick(e, child.id, hasPopUp)}
-                isSubMenuOpen={Boolean(openedSubMenu[child.id])}
+                $isSubMenuOpen={Boolean(openedSubMenu[child.id])}
                 aria-expanded={Boolean(openedSubMenu[child.id])}
               >
                 {thisFirstChild.title}
@@ -91,7 +91,7 @@ const MoreNav = ({
                 {hasSubMenu && (
                 <MoreNestedSubNavMenu
                   role="list"
-                  isSubMenuOpen={Boolean(openedSubMenu[child.id])}
+                  $isSubMenuOpen={Boolean(openedSubMenu[child.id])}
                 >
                   {child.links.map(subChild => {
                     let thisSubUrl = navHelper(subChild);

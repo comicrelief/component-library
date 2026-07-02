@@ -201,7 +201,7 @@ const Lightbox = () => {
   const bodyText = extractNodeText(selectedNode?.lightboxBody);
 
   return (
-    <Container isOpen={hasNode}>
+    <Container $isOpen={hasNode}>
       <Backdrop
         onPointerUp={() => handleBackdropClick()}
       />

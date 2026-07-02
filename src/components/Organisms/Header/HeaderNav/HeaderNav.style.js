@@ -18,9 +18,9 @@ const NavLinkClass = styled(Link)`
   color: ${({ theme }) => theme.color('black')};
   transition: color ${transitionDuration}s ease;
 
-  :hover,
-  :focus,
-  :focus-within {
+  &:hover,
+  &:focus,
+  &:focus-within {
     border: 0;
     color: ${({ theme }) => theme.color('red')};
     font-weight: inherit;
@@ -31,7 +31,7 @@ const NavLinkClass = styled(Link)`
  * Navigation menu
  */
 const Nav = styled.nav`
-  display: ${({ isExpandable }) => (isExpandable ? 'block' : 'none')};
+  display: ${({ $isExpandable }) => ($isExpandable ? 'block' : 'none')};
   width: 100%;
   position: absolute;
   top: 75px;
@@ -66,8 +66,8 @@ const Nav = styled.nav`
  * Sub Navigation Menu (second level)
  */
 const SubNavMenu = styled.ul`
-  visibility: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'visible' : 'hidden')};
-  display: ${({ isSubMenuOpen }) => (isSubMenuOpen ? 'flex' : 'none')};
+  visibility: ${({ $isSubMenuOpen }) => ($isSubMenuOpen ? 'visible' : 'hidden')};
+  display: ${({ $isSubMenuOpen }) => ($isSubMenuOpen ? 'flex' : 'none')};
   padding: 0;
   position: relative;
   list-style: none outside;
@@ -83,7 +83,7 @@ const SubNavMenu = styled.ul`
   // DESKTOP:
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {
     display: flex;
-    visibility: ${({ isFocussed }) => (isFocussed ? 'visible' : 'hidden')};
+    visibility: ${({ $isFocussed }) => ($isFocussed ? 'visible' : 'hidden')};
     width: 330px;
     height: auto;
     padding: 0;
@@ -116,9 +116,9 @@ const SubNavItem = styled.li`
     font-weight: 100;
   }
 
-  :hover,
-  :focus,
-  :focus-within {
+  &:hover,
+  &:focus,
+  &:focus-within {
     background-color: ${({ theme }) => theme.color('grey_extra_light')};
     + span {
       border-bottom: 0;
@@ -168,9 +168,9 @@ const NavLink = styled(NavLinkClass)`
     padding: 10px 0;
     padding: 10px 15px 15px 0;
     height: auto;
-    :hover,
-    :focus-within,
-    :focus {
+    &:hover,
+    &:focus-within,
+    &:focus {
       + ${SubNavMenu} {
       display: flex;
       opacity: 1;
@@ -208,9 +208,9 @@ const NavItem = styled.li`
     transition: transform 0.35s cubic-bezier(0.41, 1.64, 0.41, 0.8);
   }
 
-  :hover,
-  :focus,
-  :focus-within {
+  &:hover,
+  &:focus,
+  &:focus-within {
     li {
       span {
         border-bottom: none;
@@ -317,7 +317,7 @@ const NavMetaIcons = styled.div`
         content: "";
         width: 20px;
         height: 20px;
-        background-image: url(${Arrow});
+        background-image: url("${Arrow}");
         background-size: 100%;
         background-repeat: no-repeat;
       }

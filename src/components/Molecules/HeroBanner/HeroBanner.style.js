@@ -29,12 +29,12 @@ const Container = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  background: ${({ theme, pageBackgroundColour }) => theme.color(pageBackgroundColour)}; 
-  justify-content: center; 
-  ${({ paddingTop, paddingBottom }) => css`padding: ${paddingTop} 0 ${paddingBottom};`}
+  background: ${({ theme, $pageBackgroundColour }) => theme.color($pageBackgroundColour)};
+  justify-content: center;
+  ${({ $paddingTop, $paddingBottom }) => css`padding: ${$paddingTop} 0 ${$paddingBottom};`}
 
-  ${({ variant, paddingTop, paddingBottom }) => (variant === variants.TEXT_BANNER && css`
-    padding: ${paddingTop} 1rem ${paddingBottom};
+  ${({ $variant, $paddingTop, $paddingBottom }) => ($variant === variants.TEXT_BANNER && css`
+    padding: ${$paddingTop} 1rem ${$paddingBottom};
 
     @media ${({ theme }) => theme.breakpoints2026('M')} {
       padding-left: 2rem; padding-right: 2rem;
@@ -42,7 +42,7 @@ const Container = styled.div`
   `)};
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    ${({ paddingTop, paddingBottom }) => css`padding: ${paddingTop} 2rem ${paddingBottom};`}
+    ${({ $paddingTop, $paddingBottom }) => css`padding: ${$paddingTop} 2rem ${$paddingBottom};`}
     align-items: center;
   }
 `;
@@ -62,17 +62,18 @@ const OuterWrapper = styled.div`
     overflow: hidden;
     ${defaultBoxShadow()}
 
-    ${({ variant }) => (variant && css`
-      ${handleVariant(variant)}
+    ${({ $variant }) => ($variant && css`
+      ${handleVariant($variant)}
     `)}
-
+  }
+    
   ${playPauseReveal}
 `;
 
 const MediaWrapper = styled.div`
   width: 100%;
   height: 100%;
-    
+
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     position: absolute;
     top: 0;
@@ -86,7 +87,7 @@ const MediaWrapper = styled.div`
       transform: scale(1.02);
       transition: transform 0.4s cubic-bezier(0.68, -1.15, 0.265, 2.35);
 
-      ${({ variant }) => (variant === variants.HALF_HEIGHT && 'min-height: 450px;')};  
+      ${({ $variant }) => ($variant === variants.HALF_HEIGHT && 'min-height: 450px;')};
    }
 
     &:has(+ div a:hover) {
@@ -103,12 +104,12 @@ const CopyOuterWrapper = styled.div`
   left: 0;
   right: 0;
   display: flex;
-  width: calc(100% - (2 * 1rem)); 
-  
-  ${({ variant }) => (variant !== variants.TEXT_BANNER ? 'margin: -2rem 1rem 0;' : 'margin: 0; width: 100%;')}
+  width: calc(100% - (2 * 1rem));
+
+  ${({ $variant }) => ($variant !== variants.TEXT_BANNER ? 'margin: -2rem 1rem 0;' : 'margin: 0; width: 100%;')}
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
-    ${({ variant }) => (variant !== variants.TEXT_BANNER
+    ${({ $variant }) => ($variant !== variants.TEXT_BANNER
     ? 'margin: -2rem 2rem 0rem; width: calc(100% - (2 * 2rem));'
     : 'margin: 0; width: 100%;')}
   }
@@ -119,18 +120,18 @@ const CopyOuterWrapper = styled.div`
     left: auto;
     height: 100%;
     width: 100%;
-    ${({ variant }) => (variant !== variants.TEXT_BANNER && 'max-width: 1200px;')}
+    ${({ $variant }) => ($variant !== variants.TEXT_BANNER && 'max-width: 1200px;')}
     display: flex;
     align-items: center;
     margin: 0 auto;
 
-    justify-content: ${({ variant, copyLeft }) => {
-    if (variant === variants.TEXT_BANNER) return 'center';
-    return copyLeft ? 'flex-start' : 'flex-end';
+    justify-content: ${({ $variant, $copyLeft }) => {
+    if ($variant === variants.TEXT_BANNER) return 'center';
+    return $copyLeft ? 'flex-start' : 'flex-end';
   }};
 
-    ${({ variant }) => (variant && css`
-      ${handleVariant(variant)}
+    ${({ $variant }) => ($variant && css`
+      ${handleVariant($variant)}
     `)}
   }
 `;
@@ -138,22 +139,22 @@ const CopyOuterWrapper = styled.div`
 const Copy = styled.div`
   width: 100%;
   border-radius: 1rem;
-  padding: ${({ variant }) => (variant === variants.TEXT_BANNER ? '3rem 2rem' : '2rem')};
-  color: ${({ theme, copyColour }) => theme.color(copyColour)};
+  padding: ${({ $variant }) => ($variant === variants.TEXT_BANNER ? '3rem 2rem' : '2rem')};
+  color: ${({ theme, $copyColour }) => theme.color($copyColour)};
   ${defaultBoxShadow()}
 
-  background-color: ${({ theme, variant, textBannerCopyBackgroundColour }) => (variant === variants.TEXT_BANNER
-    ? theme.color(textBannerCopyBackgroundColour)
+  background-color: ${({ theme, $variant, $textBannerCopyBackgroundColour }) => ($variant === variants.TEXT_BANNER
+    ? theme.color($textBannerCopyBackgroundColour)
     : theme.color('white')
   )};
 
-  ${({ variant, theme }) => (variant !== variants.TEXT_BANNER && `
+  ${({ $variant, theme }) => ($variant !== variants.TEXT_BANNER && `
     @media ${theme.breakpoints2026('L')} {
       padding: 2rem;
     }
   `)};
 
-  ${({ variant, theme }) => (variant === variants.TEXT_BANNER && `
+  ${({ $variant, theme }) => ($variant === variants.TEXT_BANNER && `
     text-align: center;
     @media ${theme.breakpoints2026('M')} {
       padding: 4rem 11%;
@@ -161,7 +162,7 @@ const Copy = styled.div`
   `)};
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
-    width: ${({ variant }) => (variant !== variants.TEXT_BANNER ? '92%' : '100%')};
+    width: ${({ $variant }) => ($variant !== variants.TEXT_BANNER ? '92%' : '100%')};
   }
 `;
 
@@ -175,14 +176,14 @@ const CopyInnerWrapper = styled.div`
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     height: auto;
 
-    ${({ variant }) => (variant === variants.TEXT_BANNER ? css`width: 100%;` : css`width: 50%;`)};
+    ${({ $variant }) => ($variant === variants.TEXT_BANNER ? css`width: 100%;` : css`width: 50%;`)};
 
-    ${({ variant }) => (variant === variants.TEXT_BANNER ? css`margin: 0;` : css`margin: 2rem 0;`)};   
+    ${({ $variant }) => ($variant === variants.TEXT_BANNER ? css`margin: 0;` : css`margin: 2rem 0;`)};
 
-    justify-content: ${({ copyLeft }) => (copyLeft
+    justify-content: ${({ $copyLeft }) => ($copyLeft
     ? css` flex-end;`
     : css` flex-start;`
-  )};    
+  )};
   }
 `;
 
@@ -192,9 +193,9 @@ const CTAWrapper = styled.div`
   position: relative;
   margin-top: 2rem;
 
-  ${({ variant }) => (variant !== variants.TEXT_BANNER && css`
+  ${({ $variant }) => ($variant !== variants.TEXT_BANNER && css`
     padding-right: 2.5rem;
-    
+
     span {
       font-weight: bold;
       color: ${({ theme }) => theme.color('red')};
@@ -222,8 +223,8 @@ const HeroBannerLink = styled.a`
     ${bounceUpAnimation(true, 10, 2, true)}
 
     // As the link is now wrapping the content, it'll take over width duties from 'Copy':
-    width: ${({ variant }) => (variant !== variants.TEXT_BANNER ? '92%' : '100%')};
-    
+    width: ${({ $variant }) => ($variant !== variants.TEXT_BANNER ? '92%' : '100%')};
+
     > div {
       width: 100%;
     }
@@ -261,10 +262,10 @@ const LogoImageWrapper = styled.div`
     width: 160px;
     height: 100px;
 
-    ${({ imageRight }) => (imageRight
+    ${({ $imageRight }) => ($imageRight
     ? css` right: 0;`
     : css` left: 0;`
-  )};   
+  )};
   }
 `;
 
@@ -278,7 +279,7 @@ const LogoImage = styled(Picture)`
     object-position: top right;
 
     @media ${({ theme }) => theme.breakpoints2026('L')} {
-      ${({ imageRight }) => (!imageRight && css`object-position: top left;`)};
+      ${({ $imageRight }) => (!$imageRight && css`object-position: top left;`)};
     }
   }
 `;

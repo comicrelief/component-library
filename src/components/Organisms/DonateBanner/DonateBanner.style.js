@@ -26,7 +26,7 @@ const Form = styled.form`
   margin-left: auto;
   margin-right: auto;
 
-  ${({ hasTopImage, shouldShowTitleSection }) => hasTopImage && !shouldShowTitleSection && css`
+  ${({ $hasTopImage, $shouldShowTitleSection }) => $hasTopImage && !$shouldShowTitleSection && css`
     margin-top: 0;
   `}
 
@@ -182,7 +182,7 @@ const Button = styled.button`
   font-weight: bold;
   min-height: 44px;
   cursor: pointer;
-  background: ${({ theme, color }) => theme.color(color)};
+  background: ${({ theme, $color }) => theme.color($color)};
   text-decoration: none;
   border-radius: 0.5rem;
   border: none;

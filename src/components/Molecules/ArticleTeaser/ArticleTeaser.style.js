@@ -20,14 +20,14 @@ const InnerWrapper = styled.div`
   border-radius: 1rem;
   overflow: hidden;
   background-color: ${({ theme }) => theme.color('white')};
-  flex-direction: ${({ isNewsTeaser }) => (!isNewsTeaser ? 'row' : 'column')};
+  flex-direction: ${({ $isNewsTeaser }) => (!$isNewsTeaser ? 'row' : 'column')};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: row;
   }
 
     @media ${({ theme }) => theme.allBreakpoints('L')} {
-    flex-direction: ${({ isNewsTeaser }) => isNewsTeaser && 'column'};
+    flex-direction: ${({ $isNewsTeaser }) => $isNewsTeaser && 'column'};
   }
 `;
 
@@ -63,7 +63,7 @@ const Link = styled(link)`
   padding: 0;
   display: flex;
   height: 100%;
-  align-items: ${({ isNewsTeaser }) => (!isNewsTeaser) && 'center'};
+  align-items: ${({ $isNewsTeaser }) => (!$isNewsTeaser) && 'center'};
   text-decoration: none;
   color: inherit;
   width: 100%;
@@ -98,15 +98,15 @@ const Link = styled(link)`
 
     ${Image} img {
       // Only set up imageZoom pre-zoom defaults when we actually need them:
-      ${({ isNewsTeaser }) => css`
-        ${imageZoom({ initialScale: (isNewsTeaser ? 1.02 : 0.9) })}
+      ${({ $isNewsTeaser }) => css`
+        ${imageZoom({ initialScale: ($isNewsTeaser ? 1.02 : 0.9) })}
       `}
     }
-      
+
     &:hover {
       ${Image} img {
-        ${({ isNewsTeaser }) => css`
-          ${imageZoom({ zoomed: true, finalScale: (isNewsTeaser ? 1.04 : 1) })}
+        ${({ $isNewsTeaser }) => css`
+          ${imageZoom({ zoomed: true, finalScale: ($isNewsTeaser ? 1.04 : 1) })}
         `}
       }
 
@@ -140,11 +140,11 @@ const ImageWrapper = styled.div`
   justify-content: center;
   position: relative;
 
-  ${({ isNewsTeaser }) => (!isNewsTeaser) && css`
+  ${({ $isNewsTeaser }) => (!$isNewsTeaser) && css`
     padding: 1rem 0px 1rem 2rem;
   `};
 
-  ${({ isNewsTeaser }) => isNewsTeaser && css`
+  ${({ $isNewsTeaser }) => $isNewsTeaser && css`
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       width: 45%;
     }
@@ -162,11 +162,11 @@ const CopyWrapper = styled.div`
   flex-direction: column;
   width: 100%;
 
-  ${({ isNewsTeaser }) => isNewsTeaser && css`
+  ${({ $isNewsTeaser }) => $isNewsTeaser && css`
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       width: 55%;
     }
-      
+
     @media ${({ theme }) => theme.allBreakpoints('L')} {
       width: 100%;
     }
@@ -174,7 +174,7 @@ const CopyWrapper = styled.div`
 `;
 
 const Title = styled(Text)`
-  margin: ${({ time }) => (time ? `0 0 ${spacing('md')}` : '0')};
+  margin: ${({ $time }) => ($time ? `0 0 ${spacing('md')}` : '0')};
 `;
 
 const Date = styled(Text)`

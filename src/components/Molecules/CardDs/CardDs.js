@@ -24,8 +24,7 @@ const CardDs = ({
 }) => {
   const Media = (
     <Image
-      hasLink={link}
-      isCarousel={isCarousel}
+      $isCarousel={isCarousel}
     >
       <Picture
         alt={imageAltText}
@@ -43,7 +42,7 @@ const CardDs = ({
     if (imageLow && link) {
       return (
         <MediaLink
-          isCarousel={isCarousel}
+          $isCarousel={isCarousel}
           aria-hidden="true"
           tabIndex="-1"
           href={link}
@@ -65,22 +64,22 @@ const CardDs = ({
 
   return (
     <Container
-      isCarousel={isCarousel}
+      $isCarousel={isCarousel}
       {...rest}
     >
       {hasMedia()}
       <Copy
-        isCarousel={isCarousel}
-        hasImage={imageLow}
-        hasLink={link}
-        backgroundColor={backgroundColor}
+        $isCarousel={isCarousel}
+        $hasImage={imageLow}
+        $hasLink={link}
+        $backgroundColor={backgroundColor}
       >
         {children}
       </Copy>
       {link && (
         <CTA
-          hasImage={imageLow}
-          isCarousel={isCarousel}
+          $hasImage={imageLow}
+          $isCarousel={isCarousel}
         >
           <Link
             rel={external}

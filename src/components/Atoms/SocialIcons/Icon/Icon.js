@@ -22,7 +22,7 @@ const StyledLink = styled.a`
   }
 
   // 'isHeader' is only set and passed in Header2025, so the pre-existing Header isn't affected:
-  ${({ isHeader }) => isHeader && css`
+  ${({ $isHeader }) => $isHeader && css`
     overflow: hidden;
     padding-right: 0px;
     transition: padding-right ${RevealTextSpeed}s cubic-bezier(0.5, 1.5, 0.5, 0.75);
@@ -69,7 +69,7 @@ const StyledLink = styled.a`
   // New style is rounded square buttons with dark grey background, and animation.
   // When we've moved fully to the new design,
   // this prop and the old styles can be removed.
-  ${({ newStyle }) => newStyle && css`
+  ${({ $newStyle }) => $newStyle && css`
     background-color: ${({ theme }) => theme.color('grey_4')};
     border-radius: 0.5rem;
     padding: 0.5rem;
@@ -112,7 +112,7 @@ const RevealText = styled(Text)`
 
 const StyledImage = styled.img`
   width: 100%;
-  ${({ invertColor }) => invertColor && css`
+  ${({ $invertColor }) => $invertColor && css`
     filter: brightness(0) invert(1);
   `}
 `;
@@ -132,10 +132,10 @@ const Icon = ({
     title={title}
     rel="noopener noreferrer"
     data-test={`${isHeader ? 'header' : 'icon'}-${kebabCase(id)}`}
-    isHeader={isHeader}
-    newStyle={newStyle}
+    $isHeader={isHeader}
+    $newStyle={newStyle}
   >
-    <StyledImage src={icon} alt={brand} invertColor={invertColor} />
+    <StyledImage src={icon} alt={brand} $invertColor={invertColor} />
     { isHeader && (
       <RevealText>{title}</RevealText>
     )}

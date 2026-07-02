@@ -19,18 +19,18 @@ const StyledButton = styled.button`
     text-decoration: none;
   }
 
-  ${({ color, theme, buttonType }) => (theme.buttonColors(color, buttonType))};
+  ${({ $color, theme, $buttonType }) => (theme.buttonColors($color, $buttonType))};
 
   ${({ theme }) => css`${fontHelper(theme, 'button')}`}
-  
+
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
+    width: ${({ $fullWidth }) => ($fullWidth ? '100%' : 'auto')};
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     // I don't *believe* this needs to be reinstated, but leaving in
     // place for now, just to avoid breaking anything downstream...
-    width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
+    width: ${({ $fullWidth }) => ($fullWidth ? '100%' : 'auto')};
   }
 `;
 

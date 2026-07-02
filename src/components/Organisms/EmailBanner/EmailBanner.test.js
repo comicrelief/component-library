@@ -7,7 +7,7 @@ import EmailBanner from './EmailBanner';
 import RichText from '../../Atoms/RichText/RichText';
 import { buildEsuValidationSchema } from '../shared/emailSignup/emailSignupConfig';
 
-const defaultData = require('../../../styleguide/data/data').defaultData;
+const defaultData = require('../../../data/data').defaultData;
 
 const EmailBannerWithFormContext = (props) => {
   const validationSchema = buildEsuValidationSchema({});

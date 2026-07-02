@@ -19,7 +19,7 @@ const HeaderNavItem2025 = (
     role="none"
     key={`${index}-${thisID}--item`}
     index={index}
-    isSubMenuOpen={!!openedSubMenu}
+    $isSubMenuOpen={!!openedSubMenu}
   >
     {isNotDesktop ? (
       <NavLink
@@ -31,7 +31,7 @@ const HeaderNavItem2025 = (
         onClick={hasPopUp ? e => toggleSubMenu(e, thisID) : null}
         role="button"
         key={`${index}-${thisID}--link`}
-        isExpanded={!!openedSubMenu[thisID]}
+        $isExpanded={!!openedSubMenu[thisID]}
       >
         {thisFirstChild.title}
         {hasSubMenu && (
@@ -48,7 +48,7 @@ const HeaderNavItem2025 = (
           rel={relNoopener}
           aria-haspopup={hasPopUp}
           key={`${index}-${thisID}`}
-          hasSubMenu={hasSubMenu}
+          $hasSubMenu={hasSubMenu}
           {...rest}
         >
           {thisFirstChild.title}
@@ -68,7 +68,7 @@ const HeaderNavItem2025 = (
     {hasSubMenu && (
       <SubNavMenu
         role="list"
-        isSubMenuOpen={!!openedSubMenu[thisID]}
+        $isSubMenuOpen={!!openedSubMenu[thisID]}
         key={`${index}-${thisID}--sub-item`}
       >
         {group.links.map((child, childIndex) => {

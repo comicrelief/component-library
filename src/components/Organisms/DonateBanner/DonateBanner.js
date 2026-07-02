@@ -83,13 +83,13 @@ const DonateBanner = ({
 
   return (
     <Container
-      paddingAbove={paddingAbove}
-      paddingBelow={paddingBelow}
-      pageBackgroundColour={pageBackgroundColour}
+      $paddingAbove={paddingAbove}
+      $paddingBelow={paddingBelow}
+      $pageBackgroundColour={pageBackgroundColour}
       id={mbshipID}
     >
       <InnerContainer
-        componentBackgroundColour={componentBackgroundColour}
+        $componentBackgroundColour={componentBackgroundColour}
       >
         {(shouldRenderTopImage || shouldShowDesktopImage) && (
           <PictureOrVideo
@@ -112,9 +112,9 @@ const DonateBanner = ({
 
         <Wrapper
           aria-live="polite"
-          noTitlesAtAll={noTitlesAtAll}
-          hasTopImage={shouldRenderTopImage}
-          showTitleSection={shouldShowTitleSection}
+          $noTitlesAtAll={noTitlesAtAll}
+          $hasTopImage={shouldRenderTopImage}
+          $showTitleSection={shouldShowTitleSection}
         >
           {shouldShowTitleSection && (
           <TitleWrapperOuter $orientation={donateOrientation}>

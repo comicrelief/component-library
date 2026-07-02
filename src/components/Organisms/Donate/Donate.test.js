@@ -5,7 +5,7 @@ import Donate from './Donate';
 import data from './dev-data/data';
 import singleData from './dev-data/data-single';
 
-const defaultData = require('../../../styleguide/data/data').defaultData;
+const defaultData = require('../../../data/data').defaultData;
 
 it('Monthly donation renders correctly', () => {
   const tree = renderWithTheme(

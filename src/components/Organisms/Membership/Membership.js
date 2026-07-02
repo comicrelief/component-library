@@ -23,12 +23,12 @@ const Membership = ({
   otherDescription
 }) => (
   <Container
-    formAligntRight={formAligntRight}
-    backgroundColor={backgroundColor}
+    $formAligntRight={formAligntRight}
+    $backgroundColor={backgroundColor}
     id={mbshipID}
   >
     <BgImage
-      backgroundColor={backgroundColor}
+      $backgroundColor={backgroundColor}
       image={image}
       images={images}
       imageLow={imageLow}

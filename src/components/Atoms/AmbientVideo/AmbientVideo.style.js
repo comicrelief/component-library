@@ -68,7 +68,7 @@ const ReducedMotionFallback = styled.div`
 const PlayPauseIcon = styled.span`
   width: 24px;
   height: 24px;
-  background-image: url(${({ $icon }) => $icon});
+  background-image: url("${({ $icon }) => $icon}");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

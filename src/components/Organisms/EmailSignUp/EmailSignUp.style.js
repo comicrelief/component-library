@@ -8,9 +8,9 @@ const ESUWrapper = styled.div`
   display: flex;
   flex-direction: column;
   font-size: ${({ theme }) => theme.fontSize('s')};
-  color: ${({ theme, textColour }) => theme.color(textColour)};
-  background-color: ${({ theme, backgroundColour }) => theme.color(backgroundColour)};
-  padding: ${({ containerPadding }) => (containerPadding ? spacing('m') : 0)};
+  color: ${({ theme, $textColour }) => theme.color($textColour)};
+  background-color: ${({ theme, $backgroundColour }) => theme.color($backgroundColour)};
+  padding: ${({ $containerPadding }) => ($containerPadding ? spacing('m') : 0)};
 `;
 
 const TopCopyWrapper = styled.div`
@@ -21,7 +21,7 @@ const TopCopyWrapper = styled.div`
 const ButtonWrapper = styled.div`
   margin-top: ${spacing('md')};
   button {
-    background-color: ${({ theme, buttonColour }) => theme.color(buttonColour)};
+    background-color: ${({ theme, $buttonColour }) => theme.color($buttonColour)};
   }
 `;
 
@@ -35,7 +35,7 @@ const PrivacyCopyWrapper = styled.div`
     line-height: ${({ theme }) => theme.fontSize('xl')};
     a {
       font-size: ${({ theme }) => theme.fontSize('s')};
-      color: ${({ theme, textColour }) => theme.color(textColour)};
+      color: ${({ theme, $textColour }) => theme.color($textColour)};
     }
   }
 `;
@@ -53,8 +53,8 @@ const NameWrapper = styled.div`
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     justify-content: start;
-    flex-direction: ${({ columnLayout }) => (columnLayout ? 'column' : 'row')};
-    gap: ${({ columnLayout }) => (columnLayout ? 0 : spacing('md'))};
+    flex-direction: ${({ $columnLayout }) => ($columnLayout ? 'column' : 'row')};
+    gap: ${({ $columnLayout }) => ($columnLayout ? 0 : spacing('md'))};
 )};
 
   }
@@ -65,7 +65,7 @@ const InputField = styled(TextInput)`
   margin-bottom: ${spacing('md')};
 
   & > span:first-child {
-    color: ${({ theme, textColour }) => theme.color(textColour)};
+    color: ${({ theme, $textColour }) => theme.color($textColour)};
   }
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {

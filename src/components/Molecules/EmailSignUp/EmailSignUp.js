@@ -23,7 +23,7 @@ const EmailSignUp = ({ formContext, ...rest }) => {
           Subscribe to our newsletter
         </StyledLabel>
       </LabelWrapper>
-      <FormWrapper error={!!errorMsg}>
+      <FormWrapper $error={!!errorMsg}>
         <InputWrapper>
           <StyledEmailInput
             name="email"

@@ -84,7 +84,7 @@ const HeaderNav = ({
 
   return (
     <>
-      <Nav aria-label="main-menu" isExpandable={isExpandable} role="navigation">
+      <Nav aria-label="main-menu" $isExpandable={isExpandable} role="navigation">
         <Text id="main-menu" tag="h2" size="s">
           Main navigation
         </Text>
@@ -109,7 +109,7 @@ const HeaderNav = ({
                 role="none"
                 key={`${thisID}-item`}
                 index={index}
-                isSubMenuOpen={!!isSubMenuOpen[thisID]}
+                $isSubMenuOpen={!!isSubMenuOpen[thisID]}
               >
                 {isNotDesktop ? (
                   <NavLink
@@ -157,8 +157,8 @@ const HeaderNav = ({
                 {hasSubMenu && (
                   <SubNavMenu
                     role="list"
-                    isFocussed={!!isTabFocussed[group.title]}
-                    isSubMenuOpen={!!isSubMenuOpen[thisID]}
+                    $isFocussed={!!isTabFocussed[group.title]}
+                    $isSubMenuOpen={!!isSubMenuOpen[thisID]}
                     key={thisID}
                   >
                     {group.links.map((child, childIndex) => {

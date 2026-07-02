@@ -3,7 +3,7 @@ import "jest-styled-components";
 
 import renderWithTheme from "../../../../tests/hoc/shallowWithTheme";
 import WYMDCarousel from "./WYMDCarousel";
-const { carouselItemsComplete, carouselItemsCompleteWithPadding } = require("../../../styleguide/data/data");
+const { carouselItemsComplete, carouselItemsCompleteWithPadding } = require("../../../data/data");
 
 it("renders the default padding version correctly", () => {
   const tree = renderWithTheme(

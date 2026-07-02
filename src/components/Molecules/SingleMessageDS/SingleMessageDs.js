@@ -51,7 +51,7 @@ const SingleMessageDs = ({
     if (imageLow && link) {
       return (
         <MediaLink
-          imageLeft={imageLeft}
+          $imageLeft={imageLeft}
           aria-hidden="true"
           tabIndex="-1"
           href={link}
@@ -66,7 +66,7 @@ const SingleMessageDs = ({
     if (imageLow && youTubeId) {
       return (
         <MediaLink
-          imageLeft={imageLeft}
+          $imageLeft={imageLeft}
           aria-hidden="true"
           tabIndex="-1"
           href={youTubeId}
@@ -123,20 +123,20 @@ const SingleMessageDs = ({
   };
 
   return (
-    <Container {...rest} imageLeft={imageLeft}>
+    <Container {...rest} $imageLeft={imageLeft}>
       {hasLink()}
       <Copy
-        hasImage={imageLow}
-        hasLink={link}
-        backgroundColor={backgroundColor}
-        imageLeft={imageLeft}
+        $hasImage={imageLow}
+        $hasLink={link}
+        $backgroundColor={backgroundColor}
+        $imageLeft={imageLeft}
       >
         <Subtitle color={ctaBgColor} size="s" weight="bold" family="Montserrat">
           {subtitle}
         </Subtitle>
         {children}
         {link && (
-        <CTA hasImage={imageLow}>
+        <CTA $hasImage={imageLow}>
           <Link
             rel={external}
             color={ctaBgColor}

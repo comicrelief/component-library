@@ -5,25 +5,25 @@ test.describe('radio button component', () => {
 
     await page.goto('/#radiobutton');
 
-    // confetti component should be visible
+    // radio button component should be visible
     await expect(page.locator('[data-testid="RadioButton-example-1"]')).toBeVisible();
     await expect(page.locator('[data-preview="RadioButton"]')).toBeVisible();
 
     // ensure radio buttons are checked when clicked
     // male option
-    await page.locator('[data-preview="RadioButton"] div > label:nth-child(1)').click();
-    await expect(page.locator('[data-preview="RadioButton"] div > label:nth-child(1)')).toHaveValue('male');
-    expect(await page.locator('[data-preview="RadioButton"] div > label:nth-child(1)').isChecked()).toBeTruthy();
+    const maleRadio = page.locator('label[data-testid="radio-male"]');
+    await maleRadio.click();
+    expect(await maleRadio.locator('input').isChecked()).toBeTruthy();
 
     // female option
-    await page.locator('[data-preview="RadioButton"] div > label:nth-child(2)').click();
-    await expect(page.locator('[data-preview="RadioButton"] div > label:nth-child(2)')).toHaveValue('female');
-    expect(await page.locator('[data-preview="RadioButton"] div > label:nth-child(2)').isChecked()).toBeTruthy();
+    const femaleRadio = page.locator('label[data-testid="radio-female"]');
+    await femaleRadio.click();
+    expect(await femaleRadio.locator('input').isChecked()).toBeTruthy();
 
     // other option
-    await page.locator('[data-preview="RadioButton"] div > label:nth-child(3)').click();
-    await expect(page.locator('[data-preview="RadioButton"] div > label:nth-child(3)')).toHaveValue('other');
-    expect(await page.locator('[data-preview="RadioButton"] div > label:nth-child(3)').isChecked()).toBeTruthy();
+    const otherRadio = page.locator('label[data-testid="radio-other"]');
+    await otherRadio.click();
+    expect(await otherRadio.locator('input').isChecked()).toBeTruthy();
 
     await page.close();
   });

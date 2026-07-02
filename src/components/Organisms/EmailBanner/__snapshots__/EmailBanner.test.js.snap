@@ -1,13 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Image banner left orientation renders correctly 1`] = `
+.c21 {
+  display: inline-flex;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.2s;
+  height: 2.5rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #E52630;
+  color: #FFFFFF;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c21 >a {
+  text-decoration: none;
+}
+
+.c21:hover,
+.c21:focus,
+.c21:focus-within,
+.c21:focus-visible {
+  background-color: #890B11;
+  outline-offset: 3px;
+}
+
+.c21:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c22:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .c6 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -26,9 +68,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -39,70 +78,10 @@ exports[`Image banner left orientation renders correctly 1`] = `
   line-height: inherit;
 }
 
-.c21 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  height: 2.5rem;
-  width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-  padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
-  background-color: #E52630;
-  color: #FFFFFF;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c21 > a {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c21:hover,
-.c21:focus,
-.c21:focus-within,
-.c21:focus-visible {
-  background-color: #890B11;
-  outline-offset: 3px;
-}
-
-.c21:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
 .c13 {
   width: 100%;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   color: #000000;
 }
@@ -112,9 +91,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -125,9 +101,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -136,17 +109,8 @@ exports[`Image banner left orientation renders correctly 1`] = `
 .c17 {
   position: relative;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -160,8 +124,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
   border: 1px solid;
   border-color: #969598;
   box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
@@ -178,27 +140,11 @@ exports[`Image banner left orientation renders correctly 1`] = `
   text-align: left;
 }
 
-.c22:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   height: auto;
   background-color: #F4F3F5;
@@ -220,16 +166,12 @@ exports[`Image banner left orientation renders correctly 1`] = `
 .c1:hover button[data-play-pause],
 .c1:focus-within button[data-play-pause] {
   opacity: 0.8;
-  -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
 
 .c2 {
   position: relative;
   text-align: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   display: block;
   width: 100%;
@@ -244,20 +186,9 @@ exports[`Image banner left orientation renders correctly 1`] = `
 }
 
 .c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
@@ -291,9 +222,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -301,12 +229,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
 }
 
 .c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0;
   width: 100%;
@@ -323,9 +246,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -354,115 +274,99 @@ exports[`Image banner left orientation renders correctly 1`] = `
   min-height: 48px;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c21 {
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    width: auto;
+  }
+}
+
+@media (min-width: 740px) {
   .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c6 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c14 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
-  .c21 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c21 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width:1024px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c16 {
     font-size: 1.25rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
     padding: 2rem 2rem 2rem 2rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c1 {
     min-height: 700px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
     max-width: 1500px;
     margin-left: auto;
@@ -470,42 +374,27 @@ exports[`Image banner left orientation renders correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c2 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     padding: 2rem;
     gap: 2rem;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c3 {
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 0;
     flex: 1 1 0;
     min-width: 0;
     width: auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
-    -webkit-order: 1;
-    -ms-flex-order: 1;
     order: 1;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c4 {
     width: 100%;
     margin-right: auto;
@@ -513,7 +402,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c4 {
     border-radius: 1rem;
     max-width: 461px;
@@ -523,41 +412,41 @@ exports[`Image banner left orientation renders correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c5 {
     padding: 2rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c20 button {
     padding: 1rem 2rem;
   }
@@ -596,7 +485,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
               <div
                 className="c9"
                 dangerouslySetInnerHTML={
-                  Object {
+                  {
                     "__html": "<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>",
                   }
                 }
@@ -618,7 +507,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
                     <span
                       className="c14 c15"
                       dangerouslySetInnerHTML={
-                        Object {
+                        {
                           "__html": "First name",
                         }
                       }
@@ -626,7 +515,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
                     <div
                       className="c16"
                     >
-                      
                       <div
                         className="c17"
                       >
@@ -641,10 +529,8 @@ exports[`Image banner left orientation renders correctly 1`] = `
                           required={false}
                           type="text"
                         />
-                        
                       </div>
                     </div>
-                    
                   </label>
                 </div>
                 <div
@@ -657,7 +543,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
                     <span
                       className="c14 c15"
                       dangerouslySetInnerHTML={
-                        Object {
+                        {
                           "__html": "Last name",
                         }
                       }
@@ -665,7 +551,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
                     <div
                       className="c16"
                     >
-                      
                       <div
                         className="c17"
                       >
@@ -680,10 +565,8 @@ exports[`Image banner left orientation renders correctly 1`] = `
                           required={false}
                           type="text"
                         />
-                        
                       </div>
                     </div>
-                    
                   </label>
                 </div>
               </div>
@@ -697,7 +580,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
                   <span
                     className="c14 c15"
                     dangerouslySetInnerHTML={
-                      Object {
+                      {
                         "__html": "Email address",
                       }
                     }
@@ -705,7 +588,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
                   <div
                     className="c16"
                   >
-                    
                     <div
                       className="c17"
                     >
@@ -720,10 +602,8 @@ exports[`Image banner left orientation renders correctly 1`] = `
                         required={false}
                         type="email"
                       />
-                      
                     </div>
                   </div>
-                  
                 </label>
               </div>
             </div>
@@ -733,8 +613,8 @@ exports[`Image banner left orientation renders correctly 1`] = `
               <div
                 className="c9"
                 dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
+                  {
+                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>",
                   }
                 }
               />
@@ -744,7 +624,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
             >
               <button
                 className="c21 c22"
-                color="red"
                 data-test="subscribe-button"
                 disabled={false}
                 type="submit"
@@ -764,13 +643,55 @@ exports[`Image banner left orientation renders correctly 1`] = `
 `;
 
 exports[`Image banner renders correctly 1`] = `
+.c21 {
+  display: inline-flex;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.2s;
+  height: 2.5rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #E52630;
+  color: #FFFFFF;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c21 >a {
+  text-decoration: none;
+}
+
+.c21:hover,
+.c21:focus,
+.c21:focus-within,
+.c21:focus-visible {
+  background-color: #890B11;
+  outline-offset: 3px;
+}
+
+.c21:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c22:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .c6 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -789,9 +710,6 @@ exports[`Image banner renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -802,70 +720,10 @@ exports[`Image banner renders correctly 1`] = `
   line-height: inherit;
 }
 
-.c21 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  height: 2.5rem;
-  width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-  padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
-  background-color: #E52630;
-  color: #FFFFFF;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c21 > a {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c21:hover,
-.c21:focus,
-.c21:focus-within,
-.c21:focus-visible {
-  background-color: #890B11;
-  outline-offset: 3px;
-}
-
-.c21:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
 .c13 {
   width: 100%;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   color: #000000;
 }
@@ -875,9 +733,6 @@ exports[`Image banner renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -888,9 +743,6 @@ exports[`Image banner renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -899,17 +751,8 @@ exports[`Image banner renders correctly 1`] = `
 .c17 {
   position: relative;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -923,8 +766,6 @@ exports[`Image banner renders correctly 1`] = `
   border: 1px solid;
   border-color: #969598;
   box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
@@ -941,27 +782,11 @@ exports[`Image banner renders correctly 1`] = `
   text-align: left;
 }
 
-.c22:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   height: auto;
   background-color: #F4F3F5;
@@ -983,16 +808,12 @@ exports[`Image banner renders correctly 1`] = `
 .c1:hover button[data-play-pause],
 .c1:focus-within button[data-play-pause] {
   opacity: 0.8;
-  -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
 
 .c2 {
   position: relative;
   text-align: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   display: block;
   width: 100%;
@@ -1007,20 +828,9 @@ exports[`Image banner renders correctly 1`] = `
 }
 
 .c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
@@ -1054,9 +864,6 @@ exports[`Image banner renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 700;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -1064,12 +871,7 @@ exports[`Image banner renders correctly 1`] = `
 }
 
 .c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0;
   width: 100%;
@@ -1086,9 +888,6 @@ exports[`Image banner renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -1117,115 +916,99 @@ exports[`Image banner renders correctly 1`] = `
   min-height: 48px;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c21 {
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    width: auto;
+  }
+}
+
+@media (min-width: 740px) {
   .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c6 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c14 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
-  .c21 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c21 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width:1024px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c16 {
     font-size: 1.25rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
     padding: 0rem 2rem 2rem 2rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c1 {
     min-height: 700px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
     max-width: 1500px;
     margin-left: auto;
@@ -1233,42 +1016,27 @@ exports[`Image banner renders correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c2 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     padding: 2rem;
     gap: 2rem;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c3 {
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 0;
     flex: 1 1 0;
     min-width: 0;
     width: auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
-    -webkit-order: 2;
-    -ms-flex-order: 2;
     order: 2;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c4 {
     width: 100%;
     margin-right: auto;
@@ -1276,7 +1044,7 @@ exports[`Image banner renders correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c4 {
     border-radius: 1rem;
     max-width: 461px;
@@ -1286,41 +1054,41 @@ exports[`Image banner renders correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c5 {
     padding: 2rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c20 button {
     padding: 1rem 2rem;
   }
@@ -1359,7 +1127,7 @@ exports[`Image banner renders correctly 1`] = `
               <div
                 className="c9"
                 dangerouslySetInnerHTML={
-                  Object {
+                  {
                     "__html": "<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>",
                   }
                 }
@@ -1381,7 +1149,7 @@ exports[`Image banner renders correctly 1`] = `
                     <span
                       className="c14 c15"
                       dangerouslySetInnerHTML={
-                        Object {
+                        {
                           "__html": "First name",
                         }
                       }
@@ -1389,7 +1157,6 @@ exports[`Image banner renders correctly 1`] = `
                     <div
                       className="c16"
                     >
-                      
                       <div
                         className="c17"
                       >
@@ -1404,10 +1171,8 @@ exports[`Image banner renders correctly 1`] = `
                           required={false}
                           type="text"
                         />
-                        
                       </div>
                     </div>
-                    
                   </label>
                 </div>
                 <div
@@ -1420,7 +1185,7 @@ exports[`Image banner renders correctly 1`] = `
                     <span
                       className="c14 c15"
                       dangerouslySetInnerHTML={
-                        Object {
+                        {
                           "__html": "Last name",
                         }
                       }
@@ -1428,7 +1193,6 @@ exports[`Image banner renders correctly 1`] = `
                     <div
                       className="c16"
                     >
-                      
                       <div
                         className="c17"
                       >
@@ -1443,10 +1207,8 @@ exports[`Image banner renders correctly 1`] = `
                           required={false}
                           type="text"
                         />
-                        
                       </div>
                     </div>
-                    
                   </label>
                 </div>
               </div>
@@ -1460,7 +1222,7 @@ exports[`Image banner renders correctly 1`] = `
                   <span
                     className="c14 c15"
                     dangerouslySetInnerHTML={
-                      Object {
+                      {
                         "__html": "Email address",
                       }
                     }
@@ -1468,7 +1230,6 @@ exports[`Image banner renders correctly 1`] = `
                   <div
                     className="c16"
                   >
-                    
                     <div
                       className="c17"
                     >
@@ -1483,10 +1244,8 @@ exports[`Image banner renders correctly 1`] = `
                         required={false}
                         type="email"
                       />
-                      
                     </div>
                   </div>
-                  
                 </label>
               </div>
             </div>
@@ -1496,8 +1255,8 @@ exports[`Image banner renders correctly 1`] = `
               <div
                 className="c9"
                 dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
+                  {
+                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>",
                   }
                 }
               />
@@ -1507,7 +1266,6 @@ exports[`Image banner renders correctly 1`] = `
             >
               <button
                 className="c21 c22"
-                color="red"
                 data-test="subscribe-button"
                 disabled={false}
                 type="submit"
@@ -1527,13 +1285,55 @@ exports[`Image banner renders correctly 1`] = `
 `;
 
 exports[`Text-only email widget renders correctly 1`] = `
+.c21 {
+  display: inline-flex;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.2s;
+  height: 2.5rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #E52630;
+  color: #FFFFFF;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c21 >a {
+  text-decoration: none;
+}
+
+.c21:hover,
+.c21:focus,
+.c21:focus-within,
+.c21:focus-visible {
+  background-color: #890B11;
+  outline-offset: 3px;
+}
+
+.c21:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c22:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .c6 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -1552,9 +1352,6 @@ exports[`Text-only email widget renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -1565,70 +1362,10 @@ exports[`Text-only email widget renders correctly 1`] = `
   line-height: inherit;
 }
 
-.c21 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  height: 2.5rem;
-  width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-  padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
-  background-color: #E52630;
-  color: #FFFFFF;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c21 > a {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c21:hover,
-.c21:focus,
-.c21:focus-within,
-.c21:focus-visible {
-  background-color: #890B11;
-  outline-offset: 3px;
-}
-
-.c21:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
 .c13 {
   width: 100%;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   color: #000000;
 }
@@ -1638,9 +1375,6 @@ exports[`Text-only email widget renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -1651,9 +1385,6 @@ exports[`Text-only email widget renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -1662,17 +1393,8 @@ exports[`Text-only email widget renders correctly 1`] = `
 .c17 {
   position: relative;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -1686,8 +1408,6 @@ exports[`Text-only email widget renders correctly 1`] = `
   border: 1px solid;
   border-color: #969598;
   box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
@@ -1704,27 +1424,11 @@ exports[`Text-only email widget renders correctly 1`] = `
   text-align: left;
 }
 
-.c22:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   height: auto;
   background-color: #F4F3F5;
@@ -1746,16 +1450,12 @@ exports[`Text-only email widget renders correctly 1`] = `
 .c1:hover button[data-play-pause],
 .c1:focus-within button[data-play-pause] {
   opacity: 0.8;
-  -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
 
 .c2 {
   position: relative;
   text-align: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   display: block;
   width: 100%;
@@ -1770,20 +1470,9 @@ exports[`Text-only email widget renders correctly 1`] = `
 }
 
 .c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
@@ -1817,9 +1506,6 @@ exports[`Text-only email widget renders correctly 1`] = `
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 2rem;
   line-height: 2rem;
@@ -1827,12 +1513,7 @@ exports[`Text-only email widget renders correctly 1`] = `
 }
 
 .c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0;
   width: 100%;
@@ -1849,9 +1530,6 @@ exports[`Text-only email widget renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -1880,115 +1558,99 @@ exports[`Text-only email widget renders correctly 1`] = `
   min-height: 48px;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c21 {
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    width: auto;
+  }
+}
+
+@media (min-width: 740px) {
   .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c6 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c14 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
-  .c21 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c21 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width:1024px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c16 {
     font-size: 1.25rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
     padding: 2rem 2rem 2rem 2rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c1 {
     min-height: 700px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
     max-width: 1500px;
     margin-left: auto;
@@ -1996,42 +1658,27 @@ exports[`Text-only email widget renders correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c2 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     padding: 2rem;
     gap: 2rem;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c3 {
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 0;
     flex: 1 1 0;
     min-width: 0;
     width: auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
-    -webkit-order: 2;
-    -ms-flex-order: 2;
     order: 2;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c4 {
     width: 100%;
     margin-right: auto;
@@ -2039,7 +1686,7 @@ exports[`Text-only email widget renders correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c4 {
     border-radius: 1rem;
     max-width: 461px;
@@ -2049,41 +1696,41 @@ exports[`Text-only email widget renders correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c5 {
     padding: 2rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     font-size: 2.5rem;
     line-height: 2.5rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     font-size: 3rem;
     line-height: 3rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c20 button {
     padding: 1rem 2rem;
   }
@@ -2122,7 +1769,7 @@ exports[`Text-only email widget renders correctly 1`] = `
               <div
                 className="c9"
                 dangerouslySetInnerHTML={
-                  Object {
+                  {
                     "__html": "<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>",
                   }
                 }
@@ -2144,7 +1791,7 @@ exports[`Text-only email widget renders correctly 1`] = `
                     <span
                       className="c14 c15"
                       dangerouslySetInnerHTML={
-                        Object {
+                        {
                           "__html": "First name",
                         }
                       }
@@ -2152,7 +1799,6 @@ exports[`Text-only email widget renders correctly 1`] = `
                     <div
                       className="c16"
                     >
-                      
                       <div
                         className="c17"
                       >
@@ -2167,10 +1813,8 @@ exports[`Text-only email widget renders correctly 1`] = `
                           required={false}
                           type="text"
                         />
-                        
                       </div>
                     </div>
-                    
                   </label>
                 </div>
                 <div
@@ -2183,7 +1827,7 @@ exports[`Text-only email widget renders correctly 1`] = `
                     <span
                       className="c14 c15"
                       dangerouslySetInnerHTML={
-                        Object {
+                        {
                           "__html": "Last name",
                         }
                       }
@@ -2191,7 +1835,6 @@ exports[`Text-only email widget renders correctly 1`] = `
                     <div
                       className="c16"
                     >
-                      
                       <div
                         className="c17"
                       >
@@ -2206,10 +1849,8 @@ exports[`Text-only email widget renders correctly 1`] = `
                           required={false}
                           type="text"
                         />
-                        
                       </div>
                     </div>
-                    
                   </label>
                 </div>
               </div>
@@ -2223,7 +1864,7 @@ exports[`Text-only email widget renders correctly 1`] = `
                   <span
                     className="c14 c15"
                     dangerouslySetInnerHTML={
-                      Object {
+                      {
                         "__html": "Email address",
                       }
                     }
@@ -2231,7 +1872,6 @@ exports[`Text-only email widget renders correctly 1`] = `
                   <div
                     className="c16"
                   >
-                    
                     <div
                       className="c17"
                     >
@@ -2246,10 +1886,8 @@ exports[`Text-only email widget renders correctly 1`] = `
                         required={false}
                         type="email"
                       />
-                      
                     </div>
                   </div>
-                  
                 </label>
               </div>
             </div>
@@ -2259,8 +1897,8 @@ exports[`Text-only email widget renders correctly 1`] = `
               <div
                 className="c9"
                 dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
+                  {
+                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>",
                   }
                 }
               />
@@ -2270,7 +1908,6 @@ exports[`Text-only email widget renders correctly 1`] = `
             >
               <button
                 className="c21 c22"
-                color="red"
                 data-test="subscribe-button"
                 disabled={false}
                 type="submit"
@@ -2290,13 +1927,55 @@ exports[`Text-only email widget renders correctly 1`] = `
 `;
 
 exports[`Text-only email widget with copyColor renders correctly 1`] = `
+.c21 {
+  display: inline-flex;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.2s;
+  height: 2.5rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #E52630;
+  color: #FFFFFF;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c21 >a {
+  text-decoration: none;
+}
+
+.c21:hover,
+.c21:focus,
+.c21:focus-within,
+.c21:focus-visible {
+  background-color: #890B11;
+  outline-offset: 3px;
+}
+
+.c21:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.c22:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .c6 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -2315,9 +1994,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -2328,70 +2004,10 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   line-height: inherit;
 }
 
-.c21 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  height: 2.5rem;
-  width: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  cursor: pointer;
-  padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
-  background-color: #E52630;
-  color: #FFFFFF;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c21 > a {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c21:hover,
-.c21:focus,
-.c21:focus-within,
-.c21:focus-visible {
-  background-color: #890B11;
-  outline-offset: 3px;
-}
-
-.c21:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
 .c13 {
   width: 100%;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   color: #000000;
 }
@@ -2401,9 +2017,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -2414,9 +2027,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -2425,17 +2035,8 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 .c17 {
   position: relative;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -2449,8 +2050,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   border: 1px solid;
   border-color: #969598;
   box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
@@ -2467,27 +2066,11 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   text-align: left;
 }
 
-.c22:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
 .c0 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   height: auto;
   background-color: #A20C51;
@@ -2509,16 +2092,12 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 .c1:hover button[data-play-pause],
 .c1:focus-within button[data-play-pause] {
   opacity: 0.8;
-  -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
 
 .c2 {
   position: relative;
   text-align: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   display: block;
   width: 100%;
@@ -2533,20 +2112,9 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 }
 
 .c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
@@ -2580,9 +2148,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 2rem;
   line-height: 2rem;
@@ -2590,12 +2155,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 }
 
 .c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 0;
   width: 100%;
@@ -2612,9 +2172,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
-  -webkit-letter-spacing: 0;
-  -moz-letter-spacing: 0;
-  -ms-letter-spacing: 0;
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -2643,115 +2200,99 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   min-height: 48px;
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
+  .c21 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c21 {
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c21 {
+    width: auto;
+  }
+}
+
+@media (min-width: 740px) {
   .c6 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c6 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c14 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c14 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
-  .c21 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width:1024px) {
-  .c21 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:740px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width:1024px) {
-  .c21 {
-    width: auto;
-  }
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c15 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c16 {
     font-size: 1.25rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:740px) {
-
-}
-
-@media (min-width:1024px) {
-
-}
-
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c0 {
     padding: 2rem 2rem 2rem 2rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c1 {
     min-height: 700px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
     max-width: 1500px;
     margin-left: auto;
@@ -2759,42 +2300,27 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c2 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     padding: 2rem;
     gap: 2rem;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c3 {
-    -webkit-flex: 1 1 0;
-    -ms-flex: 1 1 0;
     flex: 1 1 0;
     min-width: 0;
     width: auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
-    -webkit-order: 2;
-    -ms-flex-order: 2;
     order: 2;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c4 {
     width: 100%;
     margin-right: auto;
@@ -2802,7 +2328,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c4 {
     border-radius: 1rem;
     max-width: 461px;
@@ -2812,41 +2338,41 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c5 {
     padding: 2rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c7 {
     font-size: 2.5rem;
     line-height: 2.5rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c7 {
     font-size: 3rem;
     line-height: 3rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:740px) {
+@media (min-width: 740px) {
   .c20 button {
     padding: 1rem 2rem;
   }
@@ -2885,7 +2411,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
               <div
                 className="c9"
                 dangerouslySetInnerHTML={
-                  Object {
+                  {
                     "__html": "<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>",
                   }
                 }
@@ -2907,7 +2433,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                     <span
                       className="c14 c15"
                       dangerouslySetInnerHTML={
-                        Object {
+                        {
                           "__html": "First name",
                         }
                       }
@@ -2915,7 +2441,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                     <div
                       className="c16"
                     >
-                      
                       <div
                         className="c17"
                       >
@@ -2930,10 +2455,8 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                           required={false}
                           type="text"
                         />
-                        
                       </div>
                     </div>
-                    
                   </label>
                 </div>
                 <div
@@ -2946,7 +2469,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                     <span
                       className="c14 c15"
                       dangerouslySetInnerHTML={
-                        Object {
+                        {
                           "__html": "Last name",
                         }
                       }
@@ -2954,7 +2477,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                     <div
                       className="c16"
                     >
-                      
                       <div
                         className="c17"
                       >
@@ -2969,10 +2491,8 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                           required={false}
                           type="text"
                         />
-                        
                       </div>
                     </div>
-                    
                   </label>
                 </div>
               </div>
@@ -2986,7 +2506,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                   <span
                     className="c14 c15"
                     dangerouslySetInnerHTML={
-                      Object {
+                      {
                         "__html": "Email address",
                       }
                     }
@@ -2994,7 +2514,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                   <div
                     className="c16"
                   >
-                    
                     <div
                       className="c17"
                     >
@@ -3009,10 +2528,8 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                         required={false}
                         type="email"
                       />
-                      
                     </div>
                   </div>
-                  
                 </label>
               </div>
             </div>
@@ -3022,8 +2539,8 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
               <div
                 className="c9"
                 dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href=\\"/privacy-notice\\">Privacy Policy</a>. You can unsubscribe at any time.</p>",
+                  {
+                    "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>",
                   }
                 }
               />
@@ -3033,7 +2550,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
             >
               <button
                 className="c21 c22"
-                color="red"
                 data-test="subscribe-button"
                 disabled={false}
                 type="submit"
