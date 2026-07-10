@@ -17,10 +17,11 @@ export default defineConfig({
         return transformWithEsbuild(code, id, {
           loader: 'jsx',
           jsx: 'automatic',
+          jsxImportSource: 'react',
         });
       },
     },
-    react({ include: /\.(jsx|js)$/ }),
+    react({ jsxImportSource: 'react', include: /\.(jsx|js)$/ }),
   ],
   build: {
     lib: {
@@ -30,11 +31,13 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'styled-components'],
+      external: ['react', 'react-dom', 'react/jsx-runtime', 'react-is', 'styled-components'],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
+          'react/jsx-runtime': 'React.jsx',
+          'react-is': 'ReactIs',
           'styled-components': 'styled',
         },
       },
@@ -45,6 +48,7 @@ export default defineConfig({
       loader: {
         '.js': 'jsx',
       },
+      jsxImportSource: 'react',
     },
   },
 });
