@@ -72,7 +72,7 @@ const AmbientVideo = ({
   const VideoWrapper = showPlayPause ? WrapperWithHover : Wrapper;
 
   return (
-    <VideoWrapper>
+    <VideoWrapper data-testid="AmbientVideoWrapper">
       <StyledVideo
         ref={videoRef}
         poster={effectivePoster}
@@ -83,6 +83,7 @@ const AmbientVideo = ({
         onEnded={handleEnded}
         onPlay={handlePlay}
         onPause={handlePause}
+        data-testid="AmbientVideo"
       >
         {mobileSrc ? (
           <source src={mobileSrc} type="video/mp4" media={belowLBreakpointMediaString} />
@@ -100,8 +101,8 @@ const AmbientVideo = ({
         <ReducedMotionFallback>Video playback not supported</ReducedMotionFallback>
       )}
       {showPlayPause && (
-        <PlayPauseButton type="button" onClick={handlePlayPauseClick} aria-label={isPlaying ? 'Pause' : 'Play'} data-play-pause={isPlaying ? 'pause' : 'play'}>
-          <PlayPauseIcon $icon={normaliseSrc(isPlaying ? PauseIcon : PlayIcon)} aria-hidden />
+        <PlayPauseButton type="button" onClick={handlePlayPauseClick} aria-label={isPlaying ? 'Pause' : 'Play'} data-play-pause={isPlaying ? 'pause' : 'play'} data-testid="PlayPauseButton">
+          <PlayPauseIcon $icon={normaliseSrc(isPlaying ? PauseIcon : PlayIcon)} aria-hidden data-testid="PlayPauseIcon" />
         </PlayPauseButton>
       )}
     </VideoWrapper>

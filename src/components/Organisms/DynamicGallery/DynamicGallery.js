@@ -199,6 +199,7 @@ const DynamicGallery = ({
       $textColour={textColour}
       $paddingTop={paddingTop}
       $paddingBottom={paddingBottom}
+      data-testid="DynamicGalleryOuterWrapper"
     >
       <LightboxContext.Provider
         value={{
@@ -211,7 +212,7 @@ const DynamicGallery = ({
           setFocusedNode
         }}
       >
-        <ImageGrid className="gallery-grid" $maxWidth={maxWidth} onKeyDown={event => handleKeyDown(event)}>
+        <ImageGrid className="gallery-grid" $maxWidth={maxWidth} onKeyDown={event => handleKeyDown(event)} data-testid="DynamicGalleryImageGrid">
           {hasNodes
           && Array(columnCount)
             .fill(null)
@@ -235,11 +236,11 @@ const DynamicGallery = ({
               );
             })}
 
-          <EmptyMessage $isEmpty={!hasNodes}>No images to display</EmptyMessage>
+          <EmptyMessage $isEmpty={!hasNodes} data-testid="DynamicGalleryEmptyMessage">No images to display</EmptyMessage>
         </ImageGrid>
         <Lightbox />
         {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
-        <FocusTrap className="gallery-focus-trap" tabIndex={0}>
+        <FocusTrap className="gallery-focus-trap" tabIndex={0} data-testid="DynamicGalleryFocusTrap">
           <span>End of gallery</span>
         </FocusTrap>
       </LightboxContext.Provider>

@@ -28,8 +28,9 @@ const StatsSlice = ({
       $backgroundColour={pageBackgroundColour}
       $paddingTop={paddingTop}
       $paddingBottom={paddingBottom}
+      data-testid="StatsSliceOuterWrapper"
     >
-      <InnerWrapper>
+      <InnerWrapper data-testid="StatsSliceInnerWrapper">
         {nodes?.map((node, index) => {
           const key = index + String(node.title);
           const nodeComponent = (

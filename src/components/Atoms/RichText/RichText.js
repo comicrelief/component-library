@@ -11,6 +11,7 @@ const RichText = ({ align = 'left', markup = '', ...rest }) => (
     $align={align}
     dangerouslySetInnerHTML={{ __html: markup }}
     {...rest}
+    data-testid="RichText"
   />
 );
 

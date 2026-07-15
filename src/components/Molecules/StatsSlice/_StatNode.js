@@ -62,9 +62,9 @@ export default function StatNodeComponent({
   let characterDelay = startDelayRef.current;
 
   return (
-    <StatContainer>
-      <ValueContainer>
-        <StatValue aria-hidden="true" ref={elRef}>
+    <StatContainer data-testid="StatContainer">
+      <ValueContainer data-testid="ValueContainer">
+        <StatValue aria-hidden="true" ref={elRef} data-testid="StatValue">
           {wordObjList.map((wordObj, wordIndex) => {
             // slightly gnarly here as we need to create a span for each word,
             // then the characters within that span;
@@ -74,7 +74,7 @@ export default function StatNodeComponent({
             // but that's unlikely to be a problem in practice
             const wordKey = String(wordIndex) + wordObj.word;
             return (
-              <Word key={wordKey}>
+              <Word key={wordKey} data-testid={`StatWord-${wordIndex}`}>
                 {wordObj.map(({ character, type }, characterIndex) => {
                   const characterKey = String(characterIndex) + character;
                   // update the character delay for the next character;
@@ -115,11 +115,12 @@ export default function StatNodeComponent({
           src={altCtaUnderline}
           $delay={startDelayRef.current + duration * 1.5}
           data-ease={ease}
+          data-testid="ValueUnderline"
         />
         )}
-        <AccessibleValue>{stat}</AccessibleValue>
+        <AccessibleValue data-testid="AccessibleValue">{stat}</AccessibleValue>
       </ValueContainer>
-      <Body>{body}</Body>
+      <Body data-testid="StatBody">{body}</Body>
     </StatContainer>
   );
 }

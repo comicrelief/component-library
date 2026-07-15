@@ -89,7 +89,7 @@ export default function DynamicGalleryColumn({
   const NodeComponent = useLightbox ? InteractiveGalleryNode : GalleryNode;
 
   return (
-    <Column ref={elRef} className="gallery-column">
+    <Column ref={elRef} className="gallery-column" data-testid="GalleryColumn">
       {nodes
         .map((node, nodeIndex) => {
           // only render nodes that are in the current column;
@@ -112,6 +112,7 @@ export default function DynamicGalleryColumn({
               $focusOutlineColour={focusOutlineColour}
               onPointerUp={useLightbox ? () => handlePointerUp(node) : undefined}
               tabIndex={0}
+              data-testid={`GalleryNode-${nodeIndex}`}
             >
               <ImageContainer
                 className="gallery-node-image"
@@ -119,6 +120,7 @@ export default function DynamicGalleryColumn({
                 $minHeight={String(minHeight) + 'px'}
                 // eslint-disable-next-line prefer-template
                 $maxHeight={String(maxHeight) + 'px'}
+                data-testid={`GalleryImageContainer-${nodeIndex}`}
               >
                 <Picture
                   image={node.image}
@@ -136,7 +138,7 @@ export default function DynamicGalleryColumn({
                   }}
                 />
               </ImageContainer>
-              <Details>
+              <Details data-testid={`GalleryDetails-${nodeIndex}`}>
                 {node.gridBody && <div>{node.gridBody}</div>}
                 {node.gridCaption && <div>{node.gridCaption}</div>}
               </Details>

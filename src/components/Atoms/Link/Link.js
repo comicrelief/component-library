@@ -67,10 +67,11 @@ const Link = ({
       $underline={underline}
       $fullWidth={fullWidth}
       $buttonType={buttonType}
+      data-testid="Link"
     >
       {children}
-      {window === '_blank' && <HelperText>(opens in new window)</HelperText>}
-      {hasIcon && <IconWrapper type={type}>{icon}</IconWrapper>}
+      {window === '_blank' && <HelperText data-testid="LinkHelperText">(opens in new window)</HelperText>}
+      {hasIcon && <IconWrapper type={type} data-testid="LinkIconWrapper">{icon}</IconWrapper>}
     </StyledLink>
   );
 };

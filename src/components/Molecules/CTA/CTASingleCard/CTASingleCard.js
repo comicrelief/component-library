@@ -35,8 +35,9 @@ const CTASingleCard = ({ data }) => {
       $paddingAbove={paddingAbove}
       $paddingBelow={paddingBelow}
       $backgroundColor={sectionBackgroundColour}
+      data-testid="CTASingleCardWrapper"
     >
-      <SingleCardInner>
+      <SingleCardInner data-testid="CTASingleCardInner">
         <CTACard
           card={card}
           isCarousel={false}

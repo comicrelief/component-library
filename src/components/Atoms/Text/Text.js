@@ -90,6 +90,7 @@ const Text = ({
     $family={family}
     $mobileColor={mobileColor}
     $textAlign={textAlign}
+    data-testid="Text"
   >
     {children}
   </BaseText>

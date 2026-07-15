@@ -91,7 +91,7 @@ export default function Confetti({ trigger, duration = 3000 }) {
 
   return (
     <>
-      <ReactCanvasConfetti onInit={getInstance} style={canvasStyles} />
+      <ReactCanvasConfetti onInit={getInstance} style={canvasStyles} data-testid="Confetti" />
     </>
   );
 }

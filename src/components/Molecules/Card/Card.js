@@ -23,9 +23,10 @@ const Card = ({
     $smallBreakpointRowLayout={smallBreakpointRowLayout}
     $mediumBreakpointRowLayout={mediumBreakpointRowLayout}
     {...rest}
+    data-testid="CardContainer"
   >
     {imageLow ? (
-      <Wrapper>
+      <Wrapper data-testid="CardWrapper">
         <Picture
           alt={imageAltText}
           imageLow={imageLow}
@@ -44,6 +45,7 @@ const Card = ({
         <Copy
           $smallBreakpointRowLayout={smallBreakpointRowLayout}
           $mediumBreakpointRowLayout={mediumBreakpointRowLayout}
+          data-testid="CardCopy"
         >
           {children}
         </Copy>

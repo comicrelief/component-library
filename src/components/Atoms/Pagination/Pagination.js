@@ -114,6 +114,7 @@ const Pagination = ({
       colorOnHover={colorOnHover}
       backgroundColorOnHover={backgroundColorOnHover}
       {...restProps}
+      data-testid="Pagination"
     />
   );
 };
