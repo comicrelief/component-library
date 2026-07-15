@@ -783,19 +783,16 @@ exports[`renders the customised padding version correctly:
   >
     <p
       className="c2 c3"
-      data-testid="Text"
     >
       Over the past two years, we've supported
     </p>
     <h1
       className="c4 c5"
-      data-testid="Text"
     >
       11.7 million people
     </h1>
     <p
       className="c6 c7"
-      data-testid="Text"
     >
       including...
     </p>
@@ -883,7 +880,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <h1
                       className="c10"
-                      data-testid="Text"
                     >
                       1,000
                     </h1>
@@ -893,7 +889,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <p
                       className="c6"
-                      data-testid="Text"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>
@@ -935,7 +930,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <h1
                       className="c10"
-                      data-testid="Text"
                     >
                       750,000
                     </h1>
@@ -945,7 +939,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <p
                       className="c6"
-                      data-testid="Text"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>
@@ -987,7 +980,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <h1
                       className="c10"
-                      data-testid="Text"
                     >
                       3,000
                     </h1>
@@ -997,7 +989,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <p
                       className="c6"
-                      data-testid="Text"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>
@@ -1039,7 +1030,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <h1
                       className="c10"
-                      data-testid="Text"
                     >
                       4,000
                     </h1>
@@ -1049,7 +1039,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <p
                       className="c6"
-                      data-testid="Text"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>
@@ -1091,7 +1080,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <h1
                       className="c10"
-                      data-testid="Text"
                     >
                       5,000
                     </h1>
@@ -1101,7 +1089,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <p
                       className="c6"
-                      data-testid="Text"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>
@@ -1143,7 +1130,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <h1
                       className="c10"
-                      data-testid="Text"
                     >
                       6,000
                     </h1>
@@ -1153,7 +1139,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <p
                       className="c6"
-                      data-testid="Text"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>
@@ -1195,7 +1180,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <h1
                       className="c10"
-                      data-testid="Text"
                     >
                       7,000
                     </h1>
@@ -1205,7 +1189,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <p
                       className="c6"
-                      data-testid="Text"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>
@@ -1247,7 +1230,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <h1
                       className="c10"
-                      data-testid="Text"
                     >
                       8,000
                     </h1>
@@ -1257,7 +1239,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <p
                       className="c6"
-                      data-testid="Text"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>
@@ -1299,7 +1280,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <h1
                       className="c10"
-                      data-testid="Text"
                     >
                       9,000
                     </h1>
@@ -1309,7 +1289,6 @@ exports[`renders the customised padding version correctly:
                   >
                     <p
                       className="c6"
-                      data-testid="Text"
                     >
                       children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                     </p>
@@ -2048,19 +2027,16 @@ exports[`renders the default padding version correctly:
   >
     <p
       className="c2 c3"
-      data-testid="Text"
     >
       Over the past two years, we've supported
     </p>
     <h1
       className="c4 c5"
-      data-testid="Text"
     >
       11.7 million people
     </h1>
     <p
       className="c6 c7"
-      data-testid="Text"
     >
       including...
     </p>

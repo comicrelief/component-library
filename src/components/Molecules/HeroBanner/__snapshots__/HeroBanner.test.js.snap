@@ -259,13 +259,11 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
         >
           <h1
             className="c8"
-            data-testid="Text"
           >
             Curabitur pretium tincidunt lacus
           </h1>
           <p
             className="c9"
-            data-testid="Text"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
@@ -534,13 +532,11 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
         >
           <h1
             className="c8"
-            data-testid="Text"
           >
             Curabitur pretium tincidunt lacus
           </h1>
           <p
             className="c9"
-            data-testid="Text"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
@@ -755,13 +751,11 @@ exports[`renders "Text Banner" Hero Banner correctly 1`] = `
         >
           <h1
             className="c5"
-            data-testid="Text"
           >
             Curabitur pretium tincidunt lacus
           </h1>
           <p
             className="c6"
-            data-testid="Text"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
@@ -1066,13 +1060,11 @@ exports[`renders "Text Banner" Hero Banner correctly 2`] = `
         >
           <h1
             className="c8"
-            data-testid="Text"
           >
             Full Height: Copy Left w/Logo (Right on L+)
           </h1>
           <p
             className="c9"
-            data-testid="Text"
           >
             SQUARE-ISH logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more overlappy example here.
           </p>

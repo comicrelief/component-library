@@ -101,7 +101,6 @@ it('renders correctly', () => {
     <span />
     <span
       className="c2"
-      data-testid="Text"
     >
       Tennis
     </span>
@@ -194,7 +193,6 @@ it('renders correctly', () => {
     <span />
     <span
       className="c2"
-      data-testid="Text"
     >
       Handball
     </span>

@@ -214,7 +214,6 @@ it('renders article teaser correctly', () => {
     >
       <span
         className="c3 c4"
-        data-testid="Text"
       >
         15/06/2020
       </span>
@@ -240,7 +239,6 @@ it('renders article teaser correctly', () => {
     </div>
     <h3
       className="c7 c8"
-      data-testid="Text"
     >
       Title
     </h3>
@@ -249,25 +247,21 @@ it('renders article teaser correctly', () => {
     >
       <span
         className="c10 c11"
-        data-testid="Text"
       >
         tag1
       </span>
       <span
         className="c10 c11"
-        data-testid="Text"
       >
         tag2
       </span>
       <span
         className="c10 c11"
-        data-testid="Text"
       >
         tag3
       </span>
       <span
         className="c10 c11"
-        data-testid="Text"
       >
         tag4
       </span>

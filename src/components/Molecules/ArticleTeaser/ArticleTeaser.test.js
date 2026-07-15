@@ -370,7 +370,6 @@ it('renders article teaser correctly', () => {
   <a
     category={null}
     className="c1 c2"
-    data-testid="Link"
     href="/test"
     target="_self"
     type="standard"
@@ -403,13 +402,11 @@ it('renders article teaser correctly', () => {
       >
         <span
           className="c11 c12"
-          data-testid="Text"
         >
            01 July 2019
         </span>
         <h4
           className="c13 c14"
-          data-testid="Text"
         >
           News article
         </h4>
@@ -418,7 +415,6 @@ it('renders article teaser correctly', () => {
         >
           <span
             className="c17 c18"
-            data-testid="Text"
           >
             Read more
             <img
@@ -796,7 +792,6 @@ it('renders press realese correctly', () => {
   <a
     category=""
     className="c1 c2"
-    data-testid="Link"
     href="/test"
     target="_self"
     type="standard"
@@ -829,13 +824,11 @@ it('renders press realese correctly', () => {
       >
         <span
           className="c11 c12"
-          data-testid="Text"
         >
            01 July 2019
         </span>
         <h4
           className="c13 c14"
-          data-testid="Text"
         >
           Press Release
         </h4>
@@ -844,7 +837,6 @@ it('renders press realese correctly', () => {
         >
           <span
             className="c17 c18"
-            data-testid="Text"
           >
             Read more
             <img

@@ -281,20 +281,17 @@ exports[`renders Promo correctly 1`] = `
       >
         <h1
           className="c7"
-          data-testid="Text"
         >
           Curabitur pretium tincidunt lacus
         </h1>
         <p
           className="c8"
-          data-testid="Text"
         >
           Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
         </p>
         <span>
           <a
             className="c9"
-            data-testid="Link"
             href="/"
             target="_self"
             type="button"
@@ -598,20 +595,17 @@ exports[`renders Promo correctly end position 1`] = `
       >
         <h1
           className="c7"
-          data-testid="Text"
         >
           Curabitur pretium tincidunt lacus
         </h1>
         <p
           className="c8"
-          data-testid="Text"
         >
           Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo, est eros bibendum elit, nec luctus magna sollicitudin.
         </p>
         <span>
           <a
             className="c9"
-            data-testid="Link"
             href="/"
             target="_self"
             type="button"

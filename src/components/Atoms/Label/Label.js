@@ -72,7 +72,6 @@ const Label = ({
     $optional={optional}
     $errorMsg={errorMsg}
     {...rest}
-    data-testid="Label"
   >
     <LabelText
       label={label}

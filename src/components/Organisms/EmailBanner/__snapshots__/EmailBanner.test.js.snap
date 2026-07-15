@@ -476,7 +476,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
           >
             <span
               className="c6 c7"
-              data-testid="Text"
             >
               Stay in the know!
             </span>
@@ -490,7 +489,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
                     "__html": "<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>",
                   }
                 }
-                data-testid="RichText"
               />
             </div>
             <div
@@ -504,7 +502,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
                 >
                   <label
                     className="c13"
-                    data-testid="Label"
                     htmlFor="first-name"
                   >
                     <span
@@ -514,7 +511,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
                           "__html": "First name",
                         }
                       }
-                      data-testid="Text"
                     />
                     <div
                       className="c16"
@@ -542,7 +538,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
                 >
                   <label
                     className="c13"
-                    data-testid="Label"
                     htmlFor="last-name"
                   >
                     <span
@@ -552,7 +547,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
                           "__html": "Last name",
                         }
                       }
-                      data-testid="Text"
                     />
                     <div
                       className="c16"
@@ -581,7 +575,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
               >
                 <label
                   className="c13"
-                  data-testid="Label"
                   htmlFor="email"
                 >
                   <span
@@ -591,7 +584,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
                         "__html": "Email address",
                       }
                     }
-                    data-testid="Text"
                   />
                   <div
                     className="c16"
@@ -625,7 +617,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
                     "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>",
                   }
                 }
-                data-testid="RichText"
               />
             </div>
             <div
@@ -634,7 +625,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
               <button
                 className="c21 c22"
                 data-test="subscribe-button"
-                data-testid="Button"
+                data-testid="ButtonWithStates"
                 disabled={false}
                 type="submit"
               >
@@ -1129,7 +1120,6 @@ exports[`Image banner renders correctly 1`] = `
           >
             <span
               className="c6 c7"
-              data-testid="Text"
             >
               Stay in the know!
             </span>
@@ -1143,7 +1133,6 @@ exports[`Image banner renders correctly 1`] = `
                     "__html": "<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>",
                   }
                 }
-                data-testid="RichText"
               />
             </div>
             <div
@@ -1157,7 +1146,6 @@ exports[`Image banner renders correctly 1`] = `
                 >
                   <label
                     className="c13"
-                    data-testid="Label"
                     htmlFor="first-name"
                   >
                     <span
@@ -1167,7 +1155,6 @@ exports[`Image banner renders correctly 1`] = `
                           "__html": "First name",
                         }
                       }
-                      data-testid="Text"
                     />
                     <div
                       className="c16"
@@ -1195,7 +1182,6 @@ exports[`Image banner renders correctly 1`] = `
                 >
                   <label
                     className="c13"
-                    data-testid="Label"
                     htmlFor="last-name"
                   >
                     <span
@@ -1205,7 +1191,6 @@ exports[`Image banner renders correctly 1`] = `
                           "__html": "Last name",
                         }
                       }
-                      data-testid="Text"
                     />
                     <div
                       className="c16"
@@ -1234,7 +1219,6 @@ exports[`Image banner renders correctly 1`] = `
               >
                 <label
                   className="c13"
-                  data-testid="Label"
                   htmlFor="email"
                 >
                   <span
@@ -1244,7 +1228,6 @@ exports[`Image banner renders correctly 1`] = `
                         "__html": "Email address",
                       }
                     }
-                    data-testid="Text"
                   />
                   <div
                     className="c16"
@@ -1278,7 +1261,6 @@ exports[`Image banner renders correctly 1`] = `
                     "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>",
                   }
                 }
-                data-testid="RichText"
               />
             </div>
             <div
@@ -1287,7 +1269,7 @@ exports[`Image banner renders correctly 1`] = `
               <button
                 className="c21 c22"
                 data-test="subscribe-button"
-                data-testid="Button"
+                data-testid="ButtonWithStates"
                 disabled={false}
                 type="submit"
               >
@@ -1782,7 +1764,6 @@ exports[`Text-only email widget renders correctly 1`] = `
           >
             <span
               className="c6 c7"
-              data-testid="Text"
             >
               Stay in the know!
             </span>
@@ -1796,7 +1777,6 @@ exports[`Text-only email widget renders correctly 1`] = `
                     "__html": "<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>",
                   }
                 }
-                data-testid="RichText"
               />
             </div>
             <div
@@ -1810,7 +1790,6 @@ exports[`Text-only email widget renders correctly 1`] = `
                 >
                   <label
                     className="c13"
-                    data-testid="Label"
                     htmlFor="first-name"
                   >
                     <span
@@ -1820,7 +1799,6 @@ exports[`Text-only email widget renders correctly 1`] = `
                           "__html": "First name",
                         }
                       }
-                      data-testid="Text"
                     />
                     <div
                       className="c16"
@@ -1848,7 +1826,6 @@ exports[`Text-only email widget renders correctly 1`] = `
                 >
                   <label
                     className="c13"
-                    data-testid="Label"
                     htmlFor="last-name"
                   >
                     <span
@@ -1858,7 +1835,6 @@ exports[`Text-only email widget renders correctly 1`] = `
                           "__html": "Last name",
                         }
                       }
-                      data-testid="Text"
                     />
                     <div
                       className="c16"
@@ -1887,7 +1863,6 @@ exports[`Text-only email widget renders correctly 1`] = `
               >
                 <label
                   className="c13"
-                  data-testid="Label"
                   htmlFor="email"
                 >
                   <span
@@ -1897,7 +1872,6 @@ exports[`Text-only email widget renders correctly 1`] = `
                         "__html": "Email address",
                       }
                     }
-                    data-testid="Text"
                   />
                   <div
                     className="c16"
@@ -1931,7 +1905,6 @@ exports[`Text-only email widget renders correctly 1`] = `
                     "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>",
                   }
                 }
-                data-testid="RichText"
               />
             </div>
             <div
@@ -1940,7 +1913,7 @@ exports[`Text-only email widget renders correctly 1`] = `
               <button
                 className="c21 c22"
                 data-test="subscribe-button"
-                data-testid="Button"
+                data-testid="ButtonWithStates"
                 disabled={false}
                 type="submit"
               >
@@ -2435,7 +2408,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
           >
             <span
               className="c6 c7"
-              data-testid="Text"
             >
               Stay in the know!
             </span>
@@ -2449,7 +2421,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                     "__html": "<p>Sign up for exclusive news, stories and updates about everything Comic Relief.</p>",
                   }
                 }
-                data-testid="RichText"
               />
             </div>
             <div
@@ -2463,7 +2434,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                 >
                   <label
                     className="c13"
-                    data-testid="Label"
                     htmlFor="first-name"
                   >
                     <span
@@ -2473,7 +2443,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                           "__html": "First name",
                         }
                       }
-                      data-testid="Text"
                     />
                     <div
                       className="c16"
@@ -2501,7 +2470,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                 >
                   <label
                     className="c13"
-                    data-testid="Label"
                     htmlFor="last-name"
                   >
                     <span
@@ -2511,7 +2479,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                           "__html": "Last name",
                         }
                       }
-                      data-testid="Text"
                     />
                     <div
                       className="c16"
@@ -2540,7 +2507,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
               >
                 <label
                   className="c13"
-                  data-testid="Label"
                   htmlFor="email"
                 >
                   <span
@@ -2550,7 +2516,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                         "__html": "Email address",
                       }
                     }
-                    data-testid="Text"
                   />
                   <div
                     className="c16"
@@ -2584,7 +2549,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                     "__html": "<p>By agreeing to subscribe to our emails and clicking the button to sign up, you are consenting to the terms of our <a href="/privacy-notice">Privacy Policy</a>. You can unsubscribe at any time.</p>",
                   }
                 }
-                data-testid="RichText"
               />
             </div>
             <div
@@ -2593,7 +2557,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
               <button
                 className="c21 c22"
                 data-test="subscribe-button"
-                data-testid="Button"
+                data-testid="ButtonWithStates"
                 disabled={false}
                 type="submit"
               >

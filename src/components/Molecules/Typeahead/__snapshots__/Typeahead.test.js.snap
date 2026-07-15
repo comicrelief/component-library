@@ -126,7 +126,6 @@ exports[`renders correctly 1`] = `
 >
   <label
     className="c1 TextInputWithDropdown__input"
-    data-testid="Label"
     htmlFor="typeahead-test"
   >
     <span
@@ -136,7 +135,6 @@ exports[`renders correctly 1`] = `
           "__html": "Typeahead test",
         }
       }
-      data-testid="Text"
     />
     <div
       className="c4"

@@ -311,7 +311,6 @@ exports[`renders correctly 1`] = `
   >
     <h2
       className="c1 c2"
-      data-testid="Text"
     >
       sign up letter
     </h2>
@@ -320,7 +319,6 @@ exports[`renders correctly 1`] = `
     >
       <span
         className="c4"
-        data-testid="Text"
       >
         <div
           className="c5"
@@ -329,7 +327,6 @@ exports[`renders correctly 1`] = `
               "__html": "<h1> Top Copy</h1> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
             }
           }
-          data-testid="RichText"
         />
       </span>
     </div>
@@ -341,7 +338,6 @@ exports[`renders correctly 1`] = `
       >
         <label
           className="c8 c9"
-          data-testid="Label"
           htmlFor="first-name"
         >
           <span
@@ -351,7 +347,6 @@ exports[`renders correctly 1`] = `
                 "__html": "First Name",
               }
             }
-            data-testid="Text"
           />
           <div
             className="c11"
@@ -375,7 +370,6 @@ exports[`renders correctly 1`] = `
         </label>
         <label
           className="c8 c9"
-          data-testid="Label"
           htmlFor="last-name"
         >
           <span
@@ -385,7 +379,6 @@ exports[`renders correctly 1`] = `
                 "__html": "Last Name",
               }
             }
-            data-testid="Text"
           />
           <div
             className="c11"
@@ -410,7 +403,6 @@ exports[`renders correctly 1`] = `
       </div>
       <label
         className="c8 c9"
-        data-testid="Label"
         htmlFor="email"
       >
         <span
@@ -420,7 +412,6 @@ exports[`renders correctly 1`] = `
               "__html": "Email Address",
             }
           }
-          data-testid="Text"
         />
         <div
           className="c11"
@@ -448,7 +439,7 @@ exports[`renders correctly 1`] = `
         <button
           className="c15 c16"
           data-test="subscribe-button"
-          data-testid="Button"
+          data-testid="ButtonWithStates"
           disabled={true}
           type="submit"
         >
@@ -465,7 +456,6 @@ exports[`renders correctly 1`] = `
     >
       <span
         className="c4"
-        data-testid="Text"
       >
         <div
           className="c5"
@@ -474,7 +464,6 @@ exports[`renders correctly 1`] = `
               "__html": "check <a href="https://www.comicrelief.com/privacy-notice">Privacy policy</a>",
             }
           }
-          data-testid="RichText"
         />
       </span>
     </div>

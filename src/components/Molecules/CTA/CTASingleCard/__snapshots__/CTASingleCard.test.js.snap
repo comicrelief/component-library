@@ -382,7 +382,6 @@ exports[`renders correctly with data prop 1`] = `
     >
       <a
         className="c3 c4"
-        data-testid="Link"
         href="/test"
         rel={null}
         target="_self"
@@ -421,7 +420,6 @@ exports[`renders correctly with data prop 1`] = `
             </div>
             <p
               className="c12"
-              data-testid="Text"
             >
               <strong>
                 Single Card
@@ -792,7 +790,6 @@ exports[`renders correctly without image 1`] = `
     >
       <a
         className="c3 c4"
-        data-testid="Link"
         href="/test-no-image"
         rel={null}
         target="_self"
@@ -811,7 +808,6 @@ exports[`renders correctly without image 1`] = `
             </div>
             <p
               className="c8"
-              data-testid="Text"
             >
               Card without image
             </p>

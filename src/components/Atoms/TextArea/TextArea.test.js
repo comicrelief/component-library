@@ -103,7 +103,6 @@ it('renders correctly', () => {
 
 <label
   className="c0"
-  data-testid="Label"
   htmlFor="Please leave your comment here"
 >
   <span
@@ -113,7 +112,6 @@ it('renders correctly', () => {
         "__html": "Label",
       }
     }
-    data-testid="Text"
   />
   <textarea
     aria-describedby="Please leave your comment here"

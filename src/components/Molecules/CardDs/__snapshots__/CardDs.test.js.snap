@@ -220,7 +220,6 @@ exports[`renders Column view correctly 1`] = `
     <a
       className="c7"
       data-button-cta-copy="Find out more"
-      data-testid="Link"
       href="/home"
       rel={null}
       target="_self"
@@ -229,7 +228,6 @@ exports[`renders Column view correctly 1`] = `
       Find out more
       <span
         className="c8"
-        data-testid="LinkIconWrapper"
         type="button"
       >
         <svg
@@ -503,7 +501,6 @@ exports[`renders correctly 1`] = `
     <a
       className="c7"
       data-button-cta-copy="Find out more"
-      data-testid="Link"
       href="/home"
       rel={null}
       target="_self"
@@ -512,7 +509,6 @@ exports[`renders correctly 1`] = `
       Find out more
       <span
         className="c8"
-        data-testid="LinkIconWrapper"
         type="button"
       >
         <svg

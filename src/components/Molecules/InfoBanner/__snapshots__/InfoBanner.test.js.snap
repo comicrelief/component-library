@@ -116,13 +116,11 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      data-testid="Text"
     >
       Project Name
     </h3>
     <p
       className="c3"
-      data-testid="Text"
     >
       Hello There
     </p>
@@ -132,13 +130,11 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      data-testid="Text"
     >
       End Date
     </h3>
     <p
       className="c3"
-      data-testid="Text"
     >
       1st June 2020
     </p>
@@ -148,17 +144,14 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      data-testid="Text"
     >
       Funding theme
     </h3>
     <p
       className="c3"
-      data-testid="Text"
     >
       <a
         className="c4"
-        data-testid="Link"
         href="cr.com"
         target="_self"
         type="standard"
@@ -172,13 +165,11 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      data-testid="Text"
     >
       Amount Awarded
     </h3>
     <p
       className="c3"
-      data-testid="Text"
     >
       £2,000,000
     </p>
@@ -188,13 +179,11 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      data-testid="Text"
     >
       Start Date
     </h3>
     <p
       className="c3"
-      data-testid="Text"
     >
       1st June 2010
     </p>
@@ -204,13 +193,11 @@ exports[`renders correctly 1`] = `
   >
     <h3
       className="c2"
-      data-testid="Text"
     >
       Beneficiary Country
     </h3>
     <p
       className="c3"
-      data-testid="Text"
     >
       Uk
     </p>

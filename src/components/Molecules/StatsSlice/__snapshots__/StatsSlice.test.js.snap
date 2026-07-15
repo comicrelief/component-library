@@ -1242,7 +1242,7 @@ exports[`Stats Slices with a single node should render 1`] = `
       </div>
       <span
         className="c23 c24"
-        data-testid="Text"
+        data-testid="StatBody"
       >
         hello
       </span>
@@ -2493,7 +2493,7 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
       </div>
       <span
         className="c23 c24"
-        data-testid="Text"
+        data-testid="StatBody"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
       </span>
@@ -3103,7 +3103,7 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
       </div>
       <span
         className="c23 c24"
-        data-testid="Text"
+        data-testid="StatBody"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
       </span>
@@ -3713,7 +3713,7 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
       </div>
       <span
         className="c23 c24"
-        data-testid="Text"
+        data-testid="StatBody"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
       </span>

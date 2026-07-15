@@ -309,13 +309,11 @@ exports[`renders correctly 1`] = `
   >
     <span
       className="c6 c7"
-      data-testid="Text"
     >
       Subtitle
     </span>
     <p
       className="c8"
-      data-testid="Text"
     >
       Whatever you’ve got planned, the Sport Relief shop has everything you need to get you looking your best while you’re raising some cash. Also available in Sainsbury’s stores and online and in selected Argos stores.
     </p>
@@ -325,7 +323,6 @@ exports[`renders correctly 1`] = `
       <a
         className="c11"
         data-button-cta-copy="Check out the shop"
-        data-testid="Link"
         href="/home"
         rel={null}
         target="_self"
@@ -334,7 +331,6 @@ exports[`renders correctly 1`] = `
         Check out the shop
         <span
           className="c12"
-          data-testid="LinkIconWrapper"
           type="button"
         >
           <svg

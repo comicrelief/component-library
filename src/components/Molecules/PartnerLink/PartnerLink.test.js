@@ -141,7 +141,6 @@ it('renders correctly', () => {
 
 <a
   className="c0 c1"
-  data-testid="Link"
   href="https://www.comicrelief.com"
   target="_self"
   type="standard"
@@ -164,7 +163,6 @@ it('renders correctly', () => {
   </div>
   <span
     className="c4 c5 c6"
-    data-testid="Text"
   >
     Find out more
   </span>

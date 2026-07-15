@@ -165,7 +165,6 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
   >
     <p
       className="c6"
-      data-testid="Text"
     >
       “The creativity that goes into helping people have a better life is extraordinary.”
     </p>
@@ -426,19 +425,16 @@ exports[`renders Single Message with Image correctly 1`] = `
   >
     <h1
       className="c6"
-      data-testid="Text"
     >
       title
     </h1>
     <p
       className="c7"
-      data-testid="Text"
     >
       description
     </p>
     <a
       className="c8"
-      data-testid="Link"
       href="/"
       target="_self"
       type="button"
@@ -629,7 +625,6 @@ exports[`renders Single Message with double image correctly 1`] = `
   >
     <p
       className="c6"
-      data-testid="Text"
     >
       “The creativity that goes into helping people have a better life is extraordinary.”
     </p>
@@ -910,19 +905,16 @@ exports[`renders Single Message with full width correctly 1`] = `
   >
     <h1
       className="c6"
-      data-testid="Text"
     >
       title
     </h1>
     <p
       className="c7"
-      data-testid="Text"
     >
       description
     </p>
     <a
       className="c8"
-      data-testid="Link"
       href="/"
       target="_self"
       type="button"
@@ -1136,7 +1128,6 @@ exports[`renders Single Message with no Image correctly 1`] = `
   >
     <p
       className="c2"
-      data-testid="Text"
     >
       “The creativity that goes into helping people have a better life is extraordinary.”
     </p>

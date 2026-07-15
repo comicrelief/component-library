@@ -854,7 +854,6 @@ exports[`does not render copyright text when not supplied 1`] = `
       >
         <a
           className="c3 c4"
-          data-testid="Link"
           href="/"
           target="_self"
           title="Go to Comic Relief homepage"
@@ -909,7 +908,6 @@ exports[`does not render copyright text when not supplied 1`] = `
                   >
                     <label
                       className="c15 c16"
-                      data-testid="Label"
                       htmlFor="email-signup"
                     >
                       <span
@@ -919,7 +917,6 @@ exports[`does not render copyright text when not supplied 1`] = `
                             "__html": "Email address",
                           }
                         }
-                        data-testid="Text"
                       />
                       <div
                         className="c19"
@@ -949,7 +946,7 @@ exports[`does not render copyright text when not supplied 1`] = `
                   >
                     <button
                       className="c23 c24"
-                      data-testid="Button"
+                      data-testid="EmailSignUpButton"
                       type="submit"
                     >
                       <span
@@ -1093,7 +1090,6 @@ exports[`does not render copyright text when not supplied 1`] = `
         >
           <a
             className="c3 c4"
-            data-testid="Link"
             href="/"
             target="_self"
             title="Go to Comic Relief homepage"
@@ -1115,7 +1111,6 @@ exports[`does not render copyright text when not supplied 1`] = `
         >
           <a
             className="c3 c4"
-            data-testid="Link"
             href="/"
             target="_self"
             title="Go to Comic Relief homepage"
@@ -1143,14 +1138,12 @@ exports[`does not render copyright text when not supplied 1`] = `
         >
           <a
             className="c3 c37"
-            data-testid="Link"
             href="/contact-us"
             target="_self"
             type="standard"
           >
             <span
               className="c17 c38"
-              data-testid="Text"
             >
               Contact us
             </span>
@@ -1161,14 +1154,12 @@ exports[`does not render copyright text when not supplied 1`] = `
         >
           <a
             className="c3 c37"
-            data-testid="Link"
             href="https://www.comicrelief.com/frequently-asked-questions"
             target="_self"
             type="standard"
           >
             <span
               className="c17 c38"
-              data-testid="Text"
             >
               FAQs
             </span>
@@ -1289,14 +1280,12 @@ exports[`does not render copyright text when not supplied 1`] = `
         >
           <a
             className="c3 c42"
-            data-testid="Link"
             href="https://www.comicrelief.com/terms-of-use"
             target="_self"
             type="standard"
           >
             <span
               className="c17 c43"
-              data-testid="Text"
             >
               Terms of use
             </span>
@@ -1307,14 +1296,12 @@ exports[`does not render copyright text when not supplied 1`] = `
         >
           <a
             className="c3 c42"
-            data-testid="Link"
             href="https://www.comicrelief.com/privacy-notice"
             target="_self"
             type="standard"
           >
             <span
               className="c17 c43"
-              data-testid="Text"
             >
               Privacy notice
             </span>
@@ -1326,7 +1313,6 @@ exports[`does not render copyright text when not supplied 1`] = `
       >
         <p
           className="c17 c45"
-          data-testid="Text"
         >
           Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
         </p>
@@ -2193,7 +2179,6 @@ exports[`renders correctly 1`] = `
       >
         <a
           className="c3 c4"
-          data-testid="Link"
           href="/"
           target="_self"
           title="Go to Comic Relief homepage"
@@ -2248,7 +2233,6 @@ exports[`renders correctly 1`] = `
                   >
                     <label
                       className="c15 c16"
-                      data-testid="Label"
                       htmlFor="email-signup"
                     >
                       <span
@@ -2258,7 +2242,6 @@ exports[`renders correctly 1`] = `
                             "__html": "Email address",
                           }
                         }
-                        data-testid="Text"
                       />
                       <div
                         className="c19"
@@ -2288,7 +2271,7 @@ exports[`renders correctly 1`] = `
                   >
                     <button
                       className="c23 c24"
-                      data-testid="Button"
+                      data-testid="EmailSignUpButton"
                       type="submit"
                     >
                       <span
@@ -2432,7 +2415,6 @@ exports[`renders correctly 1`] = `
         >
           <a
             className="c3 c4"
-            data-testid="Link"
             href="/"
             target="_self"
             title="Go to Comic Relief homepage"
@@ -2454,7 +2436,6 @@ exports[`renders correctly 1`] = `
         >
           <a
             className="c3 c4"
-            data-testid="Link"
             href="/"
             target="_self"
             title="Go to Comic Relief homepage"
@@ -2482,14 +2463,12 @@ exports[`renders correctly 1`] = `
         >
           <a
             className="c3 c37"
-            data-testid="Link"
             href="/contact-us"
             target="_self"
             type="standard"
           >
             <span
               className="c17 c38"
-              data-testid="Text"
             >
               Contact us
             </span>
@@ -2500,14 +2479,12 @@ exports[`renders correctly 1`] = `
         >
           <a
             className="c3 c37"
-            data-testid="Link"
             href="https://www.comicrelief.com/frequently-asked-questions"
             target="_self"
             type="standard"
           >
             <span
               className="c17 c38"
-              data-testid="Text"
             >
               FAQs
             </span>
@@ -2628,14 +2605,12 @@ exports[`renders correctly 1`] = `
         >
           <a
             className="c3 c42"
-            data-testid="Link"
             href="https://www.comicrelief.com/terms-of-use"
             target="_self"
             type="standard"
           >
             <span
               className="c17 c43"
-              data-testid="Text"
             >
               Terms of use
             </span>
@@ -2646,14 +2621,12 @@ exports[`renders correctly 1`] = `
         >
           <a
             className="c3 c42"
-            data-testid="Link"
             href="https://www.comicrelief.com/privacy-notice"
             target="_self"
             type="standard"
           >
             <span
               className="c17 c43"
-              data-testid="Text"
             >
               Privacy notice
             </span>
@@ -2665,13 +2638,11 @@ exports[`renders correctly 1`] = `
       >
         <p
           className="c17 c45"
-          data-testid="Text"
         >
           © 2026 Comic Relief
         </p>
         <p
           className="c17 c45"
-          data-testid="Text"
         >
           Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
         </p>

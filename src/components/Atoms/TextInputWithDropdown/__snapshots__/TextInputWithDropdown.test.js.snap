@@ -126,7 +126,6 @@ exports[`renders correctly with no value and no options 1`] = `
 >
   <label
     className="c1 TextInputWithDropdown__input"
-    data-testid="Label"
     htmlFor="text-input-with-dropdown"
   >
     <span
@@ -136,7 +135,6 @@ exports[`renders correctly with no value and no options 1`] = `
           "__html": "Search for bikes",
         }
       }
-      data-testid="Text"
     />
     <div
       className="c4"
@@ -289,7 +287,6 @@ exports[`renders correctly with value and no options 1`] = `
 >
   <label
     className="c1 TextInputWithDropdown__input"
-    data-testid="Label"
     htmlFor="text-input-with-dropdown"
   >
     <span
@@ -299,7 +296,6 @@ exports[`renders correctly with value and no options 1`] = `
           "__html": "Search for bikes",
         }
       }
-      data-testid="Text"
     />
     <div
       className="c4"
@@ -491,7 +487,6 @@ exports[`renders correctly with value and options 1`] = `
 >
   <label
     className="c1 TextInputWithDropdown__input"
-    data-testid="Label"
     htmlFor="text-input-with-dropdown"
   >
     <span
@@ -501,7 +496,6 @@ exports[`renders correctly with value and options 1`] = `
           "__html": "Search for bikes",
         }
       }
-      data-testid="Text"
     />
     <div
       className="c4"
@@ -547,7 +541,6 @@ exports[`renders correctly with value and options 1`] = `
       >
         <span
           className="c2"
-          data-testid="Text"
         >
           Canyon
         </span>
@@ -564,7 +557,6 @@ exports[`renders correctly with value and options 1`] = `
       >
         <span
           className="c2"
-          data-testid="Text"
         >
           Cannondale
         </span>
@@ -581,7 +573,6 @@ exports[`renders correctly with value and options 1`] = `
       >
         <span
           className="c2"
-          data-testid="Text"
         >
           Condor
         </span>
@@ -598,7 +589,6 @@ exports[`renders correctly with value and options 1`] = `
       >
         <span
           className="c2"
-          data-testid="Text"
         >
           Cube
         </span>

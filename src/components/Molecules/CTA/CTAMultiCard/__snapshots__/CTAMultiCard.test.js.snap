@@ -394,7 +394,6 @@ exports[`handles data structure correctly 1`] = `
         >
           <a
             className="c5 c6"
-            data-testid="Link"
             href="/test"
             rel={null}
             target="_self"
@@ -428,7 +427,6 @@ exports[`handles data structure correctly 1`] = `
               >
                 <p
                   className="c13"
-                  data-testid="Text"
                 >
                   <strong>
                     Load
@@ -513,7 +511,6 @@ exports[`handles data structure correctly 1`] = `
               >
                 <p
                   className="c13"
-                  data-testid="Text"
                 >
                   <strong>
                     Load
@@ -529,7 +526,6 @@ exports[`handles data structure correctly 1`] = `
         >
           <a
             className="c5 c6"
-            data-testid="Link"
             href="/test"
             rel={null}
             target="_self"
@@ -563,7 +559,6 @@ exports[`handles data structure correctly 1`] = `
               >
                 <p
                   className="c13"
-                  data-testid="Text"
                 >
                   <strong>
                     Load
@@ -619,7 +614,6 @@ exports[`handles data structure correctly 1`] = `
         >
           <a
             className="c5 c6"
-            data-testid="Link"
             href="/test-no-image"
             rel={null}
             target="_self"
@@ -633,7 +627,6 @@ exports[`handles data structure correctly 1`] = `
               >
                 <p
                   className="c13"
-                  data-testid="Text"
                 >
                   Load of text here
                 </p>
@@ -1107,7 +1100,6 @@ exports[`renders 2 columns layout correctly 1`] = `
         >
           <a
             className="c5 c6"
-            data-testid="Link"
             href="/test"
             rel={null}
             target="_self"
@@ -1141,7 +1133,6 @@ exports[`renders 2 columns layout correctly 1`] = `
               >
                 <p
                   className="c13"
-                  data-testid="Text"
                 >
                   <strong>
                     Load
@@ -1226,7 +1217,6 @@ exports[`renders 2 columns layout correctly 1`] = `
               >
                 <p
                   className="c13"
-                  data-testid="Text"
                 >
                   <strong>
                     Load
@@ -1242,7 +1232,6 @@ exports[`renders 2 columns layout correctly 1`] = `
         >
           <a
             className="c5 c6"
-            data-testid="Link"
             href="/test"
             rel={null}
             target="_self"
@@ -1276,7 +1265,6 @@ exports[`renders 2 columns layout correctly 1`] = `
               >
                 <p
                   className="c13"
-                  data-testid="Text"
                 >
                   <strong>
                     Load
@@ -1332,7 +1320,6 @@ exports[`renders 2 columns layout correctly 1`] = `
         >
           <a
             className="c5 c6"
-            data-testid="Link"
             href="/test-no-image"
             rel={null}
             target="_self"
@@ -1346,7 +1333,6 @@ exports[`renders 2 columns layout correctly 1`] = `
               >
                 <p
                   className="c13"
-                  data-testid="Text"
                 >
                   Load of text here
                 </p>
@@ -1800,7 +1786,6 @@ exports[`renders carousel mode correctly 1`] = `
         >
           <a
             className="c5 c6"
-            data-testid="Link"
             href="/test"
             rel={null}
             target="_self"
@@ -1834,7 +1819,6 @@ exports[`renders carousel mode correctly 1`] = `
               >
                 <p
                   className="c13"
-                  data-testid="Text"
                 >
                   <strong>
                     Load
@@ -1919,7 +1903,6 @@ exports[`renders carousel mode correctly 1`] = `
               >
                 <p
                   className="c13"
-                  data-testid="Text"
                 >
                   <strong>
                     Load
@@ -1935,7 +1918,6 @@ exports[`renders carousel mode correctly 1`] = `
         >
           <a
             className="c5 c6"
-            data-testid="Link"
             href="/test"
             rel={null}
             target="_self"
@@ -1969,7 +1951,6 @@ exports[`renders carousel mode correctly 1`] = `
               >
                 <p
                   className="c13"
-                  data-testid="Text"
                 >
                   <strong>
                     Load
@@ -2025,7 +2006,6 @@ exports[`renders carousel mode correctly 1`] = `
         >
           <a
             className="c5 c6"
-            data-testid="Link"
             href="/test-no-image"
             rel={null}
             target="_self"
@@ -2039,7 +2019,6 @@ exports[`renders carousel mode correctly 1`] = `
               >
                 <p
                   className="c13"
-                  data-testid="Text"
                 >
                   Load of text here
                 </p>
@@ -2493,7 +2472,6 @@ exports[`renders correctly with data prop 1`] = `
         >
           <a
             className="c5 c6"
-            data-testid="Link"
             href="/test"
             rel={null}
             target="_self"
@@ -2527,7 +2505,6 @@ exports[`renders correctly with data prop 1`] = `
               >
                 <p
                   className="c13"
-                  data-testid="Text"
                 >
                   <strong>
                     Load
@@ -2612,7 +2589,6 @@ exports[`renders correctly with data prop 1`] = `
               >
                 <p
                   className="c13"
-                  data-testid="Text"
                 >
                   <strong>
                     Load
@@ -2628,7 +2604,6 @@ exports[`renders correctly with data prop 1`] = `
         >
           <a
             className="c5 c6"
-            data-testid="Link"
             href="/test"
             rel={null}
             target="_self"
@@ -2662,7 +2637,6 @@ exports[`renders correctly with data prop 1`] = `
               >
                 <p
                   className="c13"
-                  data-testid="Text"
                 >
                   <strong>
                     Load
@@ -2718,7 +2692,6 @@ exports[`renders correctly with data prop 1`] = `
         >
           <a
             className="c5 c6"
-            data-testid="Link"
             href="/test-no-image"
             rel={null}
             target="_self"
@@ -2732,7 +2705,6 @@ exports[`renders correctly with data prop 1`] = `
               >
                 <p
                   className="c13"
-                  data-testid="Text"
                 >
                   Load of text here
                 </p>
