@@ -141,12 +141,14 @@ it('renders correctly', () => {
 
 <a
   className="c0 c1"
+  data-testid="Link"
   href="https://www.comicrelief.com"
   target="_self"
   type="standard"
 >
   <div
     className="c2 lazyload"
+    data-testid="PictureWrapper"
   >
     <img
       alt="test Image"
@@ -155,12 +157,14 @@ it('renders correctly', () => {
       data-sizes="auto"
       data-src={null}
       data-srcset="//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=200&h=150&q=50 200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=400&h=300&q=50 400w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=800&h=600&q=50 800w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1200&h=900&q=50 1200w,//images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg?w=1440&h=1080&q=50 1440w"
+      data-testid="Picture"
       src={null}
       srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
     />
   </div>
   <span
     className="c4 c5 c6"
+    data-testid="Text"
   >
     Find out more
   </span>

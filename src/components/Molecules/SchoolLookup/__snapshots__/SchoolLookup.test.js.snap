@@ -121,10 +121,12 @@ exports[`renders correctly 1`] = `
 
 <div
   className="c0 TextInputWithDropdown"
+  data-testid="TextInputWithDropdownContainer"
   onKeyDown={[Function]}
 >
   <label
     className="c1 TextInputWithDropdown__input"
+    data-testid="Label"
     htmlFor="school-lookup"
   >
     <span
@@ -134,6 +136,7 @@ exports[`renders correctly 1`] = `
           "__html": "Enter the name or postcode of your school or nursery",
         }
       }
+      data-testid="Text"
     />
     <div
       className="c4"
@@ -145,6 +148,7 @@ exports[`renders correctly 1`] = `
           aria-required={false}
           autoComplete="off"
           className="c6"
+          data-testid="TextInputWithDropdownInput"
           defaultValue=""
           id="school-lookup"
           name="school-lookup"

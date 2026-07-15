@@ -155,6 +155,7 @@ exports[`renders correctly in minimalist form 1`] = `
 >
   <a
     className="c1 c2"
+    data-testid="Link"
     href="/test"
     target="_self"
     type="standard"
@@ -166,11 +167,13 @@ exports[`renders correctly in minimalist form 1`] = `
     >
       <div
         className="c4"
+        data-testid="PictureWrapper"
       >
         <img
           alt="Image's description"
           className="c5 lazyload"
           data-src={null}
+          data-testid="Picture"
         />
       </div>
     </div>
@@ -179,11 +182,13 @@ exports[`renders correctly in minimalist form 1`] = `
     >
       <span
         className="c7"
+        data-testid="Text"
       >
          
       </span>
       <h3
         className="c8 c9"
+        data-testid="Text"
       >
         News article
       </h3>
@@ -380,6 +385,7 @@ exports[`renders correctly with copy 1`] = `
 >
   <a
     className="c1 c2"
+    data-testid="Link"
     href="/test"
     target="_self"
     type="standard"
@@ -391,11 +397,13 @@ exports[`renders correctly with copy 1`] = `
     >
       <div
         className="c4"
+        data-testid="PictureWrapper"
       >
         <img
           alt="Image's description"
           className="c5 lazyload"
           data-src={null}
+          data-testid="Picture"
         />
       </div>
     </div>
@@ -404,16 +412,19 @@ exports[`renders correctly with copy 1`] = `
     >
       <span
         className="c7"
+        data-testid="Text"
       >
          
       </span>
       <h3
         className="c8 c9"
+        data-testid="Text"
       >
         News article
       </h3>
       <p
         className="c10"
+        data-testid="Text"
       >
         News article copy
       </p>
@@ -577,6 +588,7 @@ exports[`renders correctly with date 1`] = `
 >
   <a
     className="c1 c2"
+    data-testid="Link"
     href="/test"
     target="_self"
     type="standard"
@@ -588,11 +600,13 @@ exports[`renders correctly with date 1`] = `
     >
       <div
         className="c4"
+        data-testid="PictureWrapper"
       >
         <img
           alt="Image's description"
           className="c5 lazyload"
           data-src={null}
+          data-testid="Picture"
         />
       </div>
     </div>
@@ -601,11 +615,13 @@ exports[`renders correctly with date 1`] = `
     >
       <span
         className="c7"
+        data-testid="Text"
       >
          01 July 2019
       </span>
       <h3
         className="c8 c9"
+        data-testid="Text"
       >
         News article
       </h3>
@@ -769,6 +785,7 @@ exports[`renders correctly with date and type 1`] = `
 >
   <a
     className="c1 c2"
+    data-testid="Link"
     href="/test"
     target="_self"
     type="standard"
@@ -780,11 +797,13 @@ exports[`renders correctly with date and type 1`] = `
     >
       <div
         className="c4"
+        data-testid="PictureWrapper"
       >
         <img
           alt="Image's description"
           className="c5 lazyload"
           data-src={null}
+          data-testid="Picture"
         />
       </div>
     </div>
@@ -793,11 +812,13 @@ exports[`renders correctly with date and type 1`] = `
     >
       <span
         className="c7"
+        data-testid="Text"
       >
          article | 01 July 2019
       </span>
       <h3
         className="c8 c9"
+        data-testid="Text"
       >
         News article
       </h3>

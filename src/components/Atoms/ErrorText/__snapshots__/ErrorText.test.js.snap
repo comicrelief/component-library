@@ -45,9 +45,11 @@ exports[`renders correctly 1`] = `
 
 <span
   className="c0"
+  data-testid="Text"
 >
   <span
     className="c1"
+    data-testid="ErrorIcon"
   >
     This is an error
   </span>

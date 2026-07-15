@@ -121,10 +121,12 @@ exports[`renders correctly with no value and no options 1`] = `
 
 <div
   className="c0 TextInputWithDropdown"
+  data-testid="TextInputWithDropdownContainer"
   onKeyDown={[Function]}
 >
   <label
     className="c1 TextInputWithDropdown__input"
+    data-testid="Label"
     htmlFor="text-input-with-dropdown"
   >
     <span
@@ -134,6 +136,7 @@ exports[`renders correctly with no value and no options 1`] = `
           "__html": "Search for bikes",
         }
       }
+      data-testid="Text"
     />
     <div
       className="c4"
@@ -145,6 +148,7 @@ exports[`renders correctly with no value and no options 1`] = `
           aria-required={false}
           autoComplete="off"
           className="c6"
+          data-testid="TextInputWithDropdownInput"
           id="text-input-with-dropdown"
           name="query"
           onChange={[Function]}
@@ -280,10 +284,12 @@ exports[`renders correctly with value and no options 1`] = `
 
 <div
   className="c0 TextInputWithDropdown"
+  data-testid="TextInputWithDropdownContainer"
   onKeyDown={[Function]}
 >
   <label
     className="c1 TextInputWithDropdown__input"
+    data-testid="Label"
     htmlFor="text-input-with-dropdown"
   >
     <span
@@ -293,6 +299,7 @@ exports[`renders correctly with value and no options 1`] = `
           "__html": "Search for bikes",
         }
       }
+      data-testid="Text"
     />
     <div
       className="c4"
@@ -304,6 +311,7 @@ exports[`renders correctly with value and no options 1`] = `
           aria-required={false}
           autoComplete="off"
           className="c6"
+          data-testid="TextInputWithDropdownInput"
           id="text-input-with-dropdown"
           name="query"
           onChange={[Function]}
@@ -478,10 +486,12 @@ exports[`renders correctly with value and options 1`] = `
 
 <div
   className="c0 TextInputWithDropdown"
+  data-testid="TextInputWithDropdownContainer"
   onKeyDown={[Function]}
 >
   <label
     className="c1 TextInputWithDropdown__input"
+    data-testid="Label"
     htmlFor="text-input-with-dropdown"
   >
     <span
@@ -491,6 +501,7 @@ exports[`renders correctly with value and options 1`] = `
           "__html": "Search for bikes",
         }
       }
+      data-testid="Text"
     />
     <div
       className="c4"
@@ -502,6 +513,7 @@ exports[`renders correctly with value and options 1`] = `
           aria-required={false}
           autoComplete="off"
           className="c6"
+          data-testid="TextInputWithDropdownInput"
           id="text-input-with-dropdown"
           name="query"
           onChange={[Function]}
@@ -515,15 +527,18 @@ exports[`renders correctly with value and options 1`] = `
   </label>
   <div
     className="c7 TextInputWithDropdown__options"
+    data-testid="TextInputWithDropdownDropdown"
   >
     <ul
       className="c8"
+      data-testid="TextInputWithDropdownList"
       onBlur={[Function]}
       role="listbox"
     >
       <li
         aria-selected={false}
         className="c9 c10"
+        data-testid="TextInputWithDropdownOption-0"
         id="option-0"
         onClick={[Function]}
         onKeyPress={[Function]}
@@ -532,6 +547,7 @@ exports[`renders correctly with value and options 1`] = `
       >
         <span
           className="c2"
+          data-testid="Text"
         >
           Canyon
         </span>
@@ -539,6 +555,7 @@ exports[`renders correctly with value and options 1`] = `
       <li
         aria-selected={false}
         className="c9 c10"
+        data-testid="TextInputWithDropdownOption-1"
         id="option-1"
         onClick={[Function]}
         onKeyPress={[Function]}
@@ -547,6 +564,7 @@ exports[`renders correctly with value and options 1`] = `
       >
         <span
           className="c2"
+          data-testid="Text"
         >
           Cannondale
         </span>
@@ -554,6 +572,7 @@ exports[`renders correctly with value and options 1`] = `
       <li
         aria-selected={false}
         className="c9 c10"
+        data-testid="TextInputWithDropdownOption-2"
         id="option-2"
         onClick={[Function]}
         onKeyPress={[Function]}
@@ -562,6 +581,7 @@ exports[`renders correctly with value and options 1`] = `
       >
         <span
           className="c2"
+          data-testid="Text"
         >
           Condor
         </span>
@@ -569,6 +589,7 @@ exports[`renders correctly with value and options 1`] = `
       <li
         aria-selected={false}
         className="c9 c10"
+        data-testid="TextInputWithDropdownOption-3"
         id="option-3"
         onClick={[Function]}
         onKeyPress={[Function]}
@@ -577,6 +598,7 @@ exports[`renders correctly with value and options 1`] = `
       >
         <span
           className="c2"
+          data-testid="Text"
         >
           Cube
         </span>

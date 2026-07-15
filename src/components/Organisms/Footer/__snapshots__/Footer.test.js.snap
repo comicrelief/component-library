@@ -593,9 +593,11 @@ exports[`renders correctly 1`] = `
         >
           <ul
             className="c3"
+            data-testid="SocialIconsList"
           >
             <li
               className="c4"
+              data-testid="SocialIcon-facebook"
             >
               <a
                 className="c5 c6"
@@ -614,6 +616,7 @@ exports[`renders correctly 1`] = `
             </li>
             <li
               className="c4"
+              data-testid="SocialIcon-instagram"
             >
               <a
                 className="c5 c6"
@@ -632,6 +635,7 @@ exports[`renders correctly 1`] = `
             </li>
             <li
               className="c4"
+              data-testid="SocialIcon-twitter"
             >
               <a
                 className="c5 c6"
@@ -650,6 +654,7 @@ exports[`renders correctly 1`] = `
             </li>
             <li
               className="c4"
+              data-testid="SocialIcon-youtube"
             >
               <a
                 className="c5 c6"
@@ -670,6 +675,7 @@ exports[`renders correctly 1`] = `
         </div>
         <a
           className="c8 c9"
+          data-testid="Link"
           href="/"
           target="_self"
           title="Go to Comic Relief homepage"
@@ -693,6 +699,7 @@ exports[`renders correctly 1`] = `
       >
         <h2
           className="c13"
+          data-testid="Text"
           id="footer-menu"
         >
           Footer navigation
@@ -708,6 +715,7 @@ exports[`renders correctly 1`] = `
           >
             <span
               className="c16"
+              data-testid="Text"
             >
               Hear from us
             </span>
@@ -721,6 +729,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://www.comicrelief.com/#"
                   inline={true}
                   overrideallowList={false}
@@ -730,6 +739,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Get the newsletter
                   </span>
@@ -740,6 +750,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://www.comicrelief.com/update-your-preferences"
                   inline={true}
                   overrideallowList={false}
@@ -749,6 +760,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     How we contact you
                   </span>
@@ -763,6 +775,7 @@ exports[`renders correctly 1`] = `
           >
             <span
               className="c16"
+              data-testid="Text"
             >
               Get in touch
             </span>
@@ -776,6 +789,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="/contact-us"
                   inline={true}
                   overrideallowList={false}
@@ -785,6 +799,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Contact us
                   </span>
@@ -795,6 +810,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://giftaid.comicrelief.com/update"
                   inline={true}
                   overrideallowList={false}
@@ -804,6 +820,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Your Gift Aid
                   </span>
@@ -814,6 +831,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://www.comicrelief.com/frequently-asked-questions"
                   inline={true}
                   overrideallowList={false}
@@ -823,6 +841,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     FAQs
                   </span>
@@ -833,6 +852,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://www.comicrelief.com/red-nose-days-frequently-asked-questions"
                   inline={true}
                   overrideallowList={false}
@@ -842,6 +862,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Red Nose Day 2019 FAQs
                   </span>
@@ -856,6 +877,7 @@ exports[`renders correctly 1`] = `
           >
             <span
               className="c16"
+              data-testid="Text"
             >
               About us
             </span>
@@ -869,6 +891,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://www.comicrelief.com/about-comic-relief"
                   inline={true}
                   overrideallowList={false}
@@ -878,6 +901,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Mission
                   </span>
@@ -888,6 +912,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://www.comicrelief.com/about-comic-relief/history"
                   inline={true}
                   overrideallowList={false}
@@ -897,6 +922,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Our history
                   </span>
@@ -907,6 +933,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://www.comicrelief.com/about-comic-relief/finances"
                   inline={true}
                   overrideallowList={false}
@@ -916,6 +943,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Finances
                   </span>
@@ -926,6 +954,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://www.comicrelief.com/working-with-us"
                   inline={true}
                   overrideallowList={false}
@@ -935,6 +964,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Partners
                   </span>
@@ -945,6 +975,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://www.comicrelief.com/about-comic-relief/meet-the-team"
                   inline={true}
                   overrideallowList={false}
@@ -954,6 +985,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Meet the team
                   </span>
@@ -964,6 +996,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://www.sportrelief.com/"
                   inline={true}
                   overrideallowList={false}
@@ -973,6 +1006,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Sport Relief
                   </span>
@@ -987,6 +1021,7 @@ exports[`renders correctly 1`] = `
           >
             <span
               className="c16"
+              data-testid="Text"
             >
               Careers
             </span>
@@ -1000,6 +1035,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://www.comicrelief.com/careers"
                   inline={true}
                   overrideallowList={false}
@@ -1009,6 +1045,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Working at Comic Relief
                   </span>
@@ -1019,6 +1056,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://app.beapplied.com/org/comic-relief"
                   inline={true}
                   overrideallowList={false}
@@ -1028,6 +1066,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Open roles
                   </span>
@@ -1042,6 +1081,7 @@ exports[`renders correctly 1`] = `
           >
             <span
               className="c16"
+              data-testid="Text"
             >
               News
             </span>
@@ -1055,6 +1095,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://www.comicrelief.com/news"
                   inline={true}
                   overrideallowList={false}
@@ -1064,6 +1105,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     News
                   </span>
@@ -1074,6 +1116,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://www.comicrelief.com/press-releases"
                   inline={true}
                   overrideallowList={false}
@@ -1083,6 +1126,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Press area
                   </span>
@@ -1097,6 +1141,7 @@ exports[`renders correctly 1`] = `
           >
             <span
               className="c16"
+              data-testid="Text"
             >
               Legal
             </span>
@@ -1110,6 +1155,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="/homepage"
                   inline={true}
                   overrideallowList={false}
@@ -1119,6 +1165,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Link comp with both URL and Ref
                   </span>
@@ -1129,6 +1176,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="/this-is-a-test"
                   inline={true}
                   overrideallowList={false}
@@ -1138,6 +1186,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Link comp with only Ref
                   </span>
@@ -1148,6 +1197,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://www.yahoo.com"
                   inline={true}
                   overrideallowList={false}
@@ -1157,11 +1207,13 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Link comp with only URL
                   </span>
                   <span
                     className="c24"
+                    data-testid="LinkHelperText"
                   >
                     (opens in new window)
                   </span>
@@ -1172,6 +1224,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://www.sportrelief.com"
                   inline={true}
                   overrideallowList={false}
@@ -1181,6 +1234,7 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Test allowListed external link
                   </span>
@@ -1191,6 +1245,7 @@ exports[`renders correctly 1`] = `
               >
                 <a
                   className="c8 c19 c20"
+                  data-testid="Link"
                   href="https://bing.com"
                   inline={true}
                   overrideallowList={false}
@@ -1200,11 +1255,13 @@ exports[`renders correctly 1`] = `
                 >
                   <span
                     className="c21"
+                    data-testid="Text"
                   >
                     Test non-allowListed external link
                   </span>
                   <span
                     className="c24"
+                    data-testid="LinkHelperText"
                   >
                     (opens in new window)
                   </span>
@@ -1219,6 +1276,7 @@ exports[`renders correctly 1`] = `
       >
         <p
           className="c26"
+          data-testid="Text"
         >
           Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
         </p>

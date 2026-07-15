@@ -132,6 +132,7 @@ it('renders correctly', () => {
 
 <label
   className="c0"
+  data-testid="Label"
   htmlFor="Accessibility info go here"
 >
   <span
@@ -141,6 +142,7 @@ it('renders correctly', () => {
         "__html": "Label",
       }
     }
+    data-testid="Text"
   />
   <div
     className="c3"
@@ -305,6 +307,7 @@ it('renders with responsive max widths correctly', () => {
 
 <label
   className="c0"
+  data-testid="Label"
   htmlFor="input-example-7"
 >
   <span
@@ -314,6 +317,7 @@ it('renders with responsive max widths correctly', () => {
         "__html": "Responsive Width Input",
       }
     }
+    data-testid="Text"
   />
   <div
     className="c3"

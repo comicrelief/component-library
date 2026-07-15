@@ -515,11 +515,13 @@ it('renders correctly', () => {
 >
   <div
     className="c1 c2"
+    data-testid="PictureWrapper"
   >
     <img
       alt="Background image"
       className="c3 lazyload"
       data-src={null}
+      data-testid="Picture"
     />
   </div>
   <div
@@ -530,11 +532,13 @@ it('renders correctly', () => {
     >
       <h2
         className="c6"
+        data-testid="Text"
       >
         Help someone like Jordan see a better tomorrow
       </h2>
       <p
         className="c7"
+        data-testid="Text"
       >
         Jordan was close to suicide - which is now the biggest killer of men under 45 in the UK. Join now and help save lives.
       </p>
@@ -554,6 +558,7 @@ it('renders correctly', () => {
           >
             <h3
               className="c12"
+              data-testid="Text"
             >
               Choose your monthly donation
             </h3>
@@ -563,6 +568,7 @@ it('renders correctly', () => {
           >
             <label
               className="c14 c15"
+              data-testid="Label"
               htmlFor="mship-1--moneyBuy-box1"
             >
               <span
@@ -572,6 +578,7 @@ it('renders correctly', () => {
                     "__html": "",
                   }
                 }
+                data-testid="Text"
               />
               <div
                 className="c18"
@@ -599,6 +606,7 @@ it('renders correctly', () => {
             </label>
             <label
               className="c14 c21"
+              data-testid="Label"
               htmlFor="mship-1--moneyBuy-box2"
             >
               <span
@@ -608,6 +616,7 @@ it('renders correctly', () => {
                     "__html": "",
                   }
                 }
+                data-testid="Text"
               />
               <div
                 className="c18"
@@ -635,6 +644,7 @@ it('renders correctly', () => {
             </label>
             <label
               className="c14 c15"
+              data-testid="Label"
               htmlFor="mship-1--moneyBuy-box3"
             >
               <span
@@ -644,6 +654,7 @@ it('renders correctly', () => {
                     "__html": "",
                   }
                 }
+                data-testid="Text"
               />
               <div
                 className="c18"
@@ -675,11 +686,13 @@ it('renders correctly', () => {
           >
             <span
               className="c23 c24"
+              data-testid="Text"
             >
               Other amount
             </span>
             <label
               className="c14 c25"
+              data-testid="Label"
               htmlFor="mship-1--MoneyBuy-userInput"
             >
               <span
@@ -689,6 +702,7 @@ it('renders correctly', () => {
                     "__html": "£",
                   }
                 }
+                data-testid="Text"
               />
               <div
                 className="c18"

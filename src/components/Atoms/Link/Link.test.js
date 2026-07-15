@@ -28,6 +28,7 @@ it('renders a standard styled link correctly', () => {
 
 <a
   className="c0"
+  data-testid="Link"
   href="/test"
   target="_self"
   type="standard"
@@ -99,6 +100,7 @@ it('renders a button with an icon', () => {
 
 <a
   className="c0"
+  data-testid="Link"
   href="/test"
   target="_self"
   type="standard"
@@ -106,6 +108,7 @@ it('renders a button with an icon', () => {
   Internal link
   <span
     className="c1"
+    data-testid="LinkIconWrapper"
     type="standard"
   >
     <svg
@@ -164,6 +167,7 @@ it('renders a standard styled link correctly with target blank and assistive tex
 
 <a
   className="c0"
+  data-testid="Link"
   href="/test"
   target="_blank"
   type="standard"
@@ -171,6 +175,7 @@ it('renders a standard styled link correctly with target blank and assistive tex
   A standard link
   <span
     className="c1"
+    data-testid="LinkHelperText"
   >
     (opens in new window)
   </span>
@@ -250,6 +255,7 @@ it('renders link styled as button correctly', () => {
 
 <a
   className="c0"
+  data-testid="Link"
   href="/test"
   target="_self"
   type="button"

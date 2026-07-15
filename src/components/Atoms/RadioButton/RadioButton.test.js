@@ -111,6 +111,7 @@ it('renders correctly', () => {
     <span />
     <span
       className="c2"
+      data-testid="Text"
     >
       Male
     </span>
@@ -213,6 +214,7 @@ it('renders correctly', () => {
     <span />
     <span
       className="c2"
+      data-testid="Text"
     >
       Female
     </span>

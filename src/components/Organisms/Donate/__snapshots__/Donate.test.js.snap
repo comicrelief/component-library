@@ -550,11 +550,13 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
       >
         <h2
           className="c4"
+          data-testid="Text"
         >
           Donate Now
         </h2>
         <p
           className="c5"
+          data-testid="Text"
         >
           Please help us fund life-changing projects in the UK and around the world.
         </p>
@@ -618,6 +620,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
           >
             <span
               className="c16"
+              data-testid="Text"
             >
               Enter an amount to give
             </span>
@@ -627,6 +630,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
           >
             <label
               className="c18 c19"
+              data-testid="Label"
               htmlFor="mship-4--MoneyBuy-userInput"
             >
               <span
@@ -636,6 +640,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
                     "__html": "£",
                   }
                 }
+                data-testid="Text"
               />
               <div
                 className="c22"
@@ -1246,11 +1251,13 @@ exports[`Monthly donation renders correctly 1`] = `
       >
         <h2
           className="c4"
+          data-testid="Text"
         >
           Donate Now
         </h2>
         <p
           className="c5"
+          data-testid="Text"
         >
           Please help us fund life-changing projects in the UK and around the world.
         </p>
@@ -1314,6 +1321,7 @@ exports[`Monthly donation renders correctly 1`] = `
           >
             <span
               className="c15"
+              data-testid="Text"
             >
               Choose an amount to give
             </span>
@@ -1323,11 +1331,13 @@ exports[`Monthly donation renders correctly 1`] = `
           >
             <span
               className="c17 c18"
+              data-testid="Text"
             >
               Other amount
             </span>
             <label
               className="c19 c20"
+              data-testid="Label"
               htmlFor="mship-1--MoneyBuy-userInput"
             >
               <span
@@ -1337,6 +1347,7 @@ exports[`Monthly donation renders correctly 1`] = `
                     "__html": "£",
                   }
                 }
+                data-testid="Text"
               />
               <div
                 className="c23"
@@ -1964,11 +1975,13 @@ exports[`Single donation renders correctly 1`] = `
       >
         <h2
           className="c4"
+          data-testid="Text"
         >
           Donate Now
         </h2>
         <p
           className="c5"
+          data-testid="Text"
         >
           Please help us fund life-changing projects in the UK and around the world.
         </p>
@@ -1989,6 +2002,7 @@ exports[`Single donation renders correctly 1`] = `
           >
             <span
               className="c10"
+              data-testid="Text"
             >
               Choose an amount to give
             </span>
@@ -1998,6 +2012,7 @@ exports[`Single donation renders correctly 1`] = `
           >
             <label
               className="c12 c13"
+              data-testid="Label"
               htmlFor="mship-1--moneyBuy-box1"
             >
               <span
@@ -2007,6 +2022,7 @@ exports[`Single donation renders correctly 1`] = `
                     "__html": "",
                   }
                 }
+                data-testid="Text"
               />
               <div
                 className="c16"
@@ -2032,6 +2048,7 @@ exports[`Single donation renders correctly 1`] = `
             </label>
             <label
               className="c12 c19"
+              data-testid="Label"
               htmlFor="mship-1--moneyBuy-box2"
             >
               <span
@@ -2041,6 +2058,7 @@ exports[`Single donation renders correctly 1`] = `
                     "__html": "",
                   }
                 }
+                data-testid="Text"
               />
               <div
                 className="c16"
@@ -2066,6 +2084,7 @@ exports[`Single donation renders correctly 1`] = `
             </label>
             <label
               className="c12 c13"
+              data-testid="Label"
               htmlFor="mship-1--moneyBuy-box3"
             >
               <span
@@ -2075,6 +2094,7 @@ exports[`Single donation renders correctly 1`] = `
                     "__html": "",
                   }
                 }
+                data-testid="Text"
               />
               <div
                 className="c16"
@@ -2104,11 +2124,13 @@ exports[`Single donation renders correctly 1`] = `
           >
             <span
               className="c21 c22"
+              data-testid="Text"
             >
               Other amount
             </span>
             <label
               className="c12 c23"
+              data-testid="Label"
               htmlFor="mship-1--MoneyBuy-userInput"
             >
               <span
@@ -2118,6 +2140,7 @@ exports[`Single donation renders correctly 1`] = `
                     "__html": "£",
                   }
                 }
+                data-testid="Text"
               />
               <div
                 className="c16"
@@ -2606,11 +2629,13 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
       >
         <h2
           className="c4"
+          data-testid="Text"
         >
           Donate Now
         </h2>
         <p
           className="c5"
+          data-testid="Text"
         >
           Please help us fund life-changing projects in the UK and around the world.
         </p>
@@ -2631,6 +2656,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
           >
             <span
               className="c10"
+              data-testid="Text"
             >
               Overridden via the 'choose amount text' props
             </span>
@@ -2640,6 +2666,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
           >
             <label
               className="c12 c13"
+              data-testid="Label"
               htmlFor="mship-1--MoneyBuy-userInput"
             >
               <span
@@ -2649,6 +2676,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
                     "__html": "£",
                   }
                 }
+                data-testid="Text"
               />
               <div
                 className="c16"

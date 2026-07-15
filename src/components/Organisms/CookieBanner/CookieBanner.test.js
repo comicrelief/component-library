@@ -180,10 +180,12 @@ it('renders correctly', () => {
 >
   <p
     className="c1 c2"
+    data-testid="Text"
   >
     Hello! Comic Relief uses cookies to help make this website better and improve our services. You can learn more about
     <a
       className="c3 c4"
+      data-testid="Link"
       href="https://www.comicrelief.com/cookies-policy"
       target="_self"
       type="standard_white"
@@ -194,9 +196,11 @@ it('renders correctly', () => {
   </p>
   <p
     className="c1 c2"
+    data-testid="Text"
   >
     <a
       className="c5 c6"
+      data-testid="Link"
       href="/comic"
       onClick={[Function]}
       target="_self"
@@ -207,6 +211,7 @@ it('renders correctly', () => {
     Or click
     <a
       className="c3 c4"
+      data-testid="Link"
       href=""
       onClick={[Function]}
       target="_self"

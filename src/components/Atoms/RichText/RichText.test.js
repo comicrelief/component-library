@@ -22,6 +22,7 @@ it('It sanitises markup and renders properly', () => {
       "__html": "<p>Here's some copy</p><span>More copy</span>",
     }
   }
+  data-testid="RichText"
 />
 `);
 });

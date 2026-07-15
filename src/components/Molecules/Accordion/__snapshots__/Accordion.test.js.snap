@@ -191,9 +191,11 @@ exports[`renders correctly 1`] = `
   >
     <h4
       className="c2 c3"
+      data-testid="Text"
     >
       <h2
         className="c4"
+        data-testid="Text"
         font="Anton"
       >
         I am the title
@@ -215,6 +217,7 @@ exports[`renders correctly 1`] = `
   >
     <p
       className="c9"
+      data-testid="Text"
     >
       Name, surname, email and billing address We need these to process your payment, create a receipt and send it to you. Establishment information We use this information to understand which institutions (e.g. schools, companies) raise money for us. Your details will be kept safe and never shared with other organisations; see our Privacy Policy for more information
     </p>

@@ -233,16 +233,19 @@ exports[`renders a Quote Slice with basic props 1`] = `
     >
       <h2
         className="c4 c5"
+        data-testid="Text"
       >
         Heading
       </h2>
       <span
         className="c6 c7"
+        data-testid="Text"
       >
         Body text
       </span>
       <a
         className="c8 c9"
+        data-testid="Link"
         href="http://www.google.com"
         target="_blank"
         type="button"
@@ -250,6 +253,7 @@ exports[`renders a Quote Slice with basic props 1`] = `
         An external link
         <span
           className="c10"
+          data-testid="LinkHelperText"
         >
           (opens in new window)
         </span>

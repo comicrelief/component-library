@@ -176,6 +176,7 @@ it('renders correctly', () => {
       >
         <label
           className="c4 c5"
+          data-testid="Label"
           htmlFor="search"
         >
           <span
@@ -185,6 +186,7 @@ it('renders correctly', () => {
                 "__html": "Search",
               }
             }
+            data-testid="Text"
           />
           <div
             className="c8"
