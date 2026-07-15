@@ -77,7 +77,6 @@ const Label = ({
     <LabelText
       label={label}
       hideLabel={hideLabel}
-      data-testid="LabelText"
     />
     {children}
   </LabelElement>
