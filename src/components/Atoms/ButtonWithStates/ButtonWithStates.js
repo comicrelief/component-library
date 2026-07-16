@@ -39,9 +39,9 @@ const ButtonWithStates = React.forwardRef(({
   }, []);
 
   return (
-    <ButtonWithDisabledState ref={ref} disabled={disabled} {...rest}>
+    <ButtonWithDisabledState ref={ref} disabled={disabled} {...rest} data-testid="ButtonWithStates">
       {loading ? loadingText : children}
-      <LoaderContainer ref={getLoaderColour} $withMargin={loading}>
+      <LoaderContainer ref={getLoaderColour} $withMargin={loading} data-testid="LoaderContainer">
         <ScaleLoader height={16} width={2} loading={loading} color={loaderColour} />
       </LoaderContainer>
     </ButtonWithDisabledState>

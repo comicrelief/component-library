@@ -60,6 +60,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     <a
       aria-label="First page"
       className="c2"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -73,6 +74,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     <a
       aria-label="Previous page"
       className="c2"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -86,6 +88,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     <a
       aria-label="Page 1"
       className="c3"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -99,6 +102,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     <a
       aria-label="Page 2"
       className="c4"
+      data-testid="Pagination"
       href="example.com/page/2"
       onClick={[Function]}
       target="_self"
@@ -112,6 +116,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     <a
       aria-label="Page 3"
       className="c4"
+      data-testid="Pagination"
       href="example.com/page/3"
       onClick={[Function]}
       target="_self"
@@ -125,6 +130,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     <a
       aria-label="Page 4"
       className="c4"
+      data-testid="Pagination"
       href="example.com/page/4"
       onClick={[Function]}
       target="_self"
@@ -138,6 +144,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     <a
       aria-label="Page 5"
       className="c4"
+      data-testid="Pagination"
       href="example.com/page/5"
       onClick={[Function]}
       target="_self"
@@ -151,6 +158,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     <a
       aria-label="Next page"
       className="c4"
+      data-testid="Pagination"
       href="example.com/page/2"
       onClick={[Function]}
       target="_self"
@@ -164,6 +172,7 @@ exports[`renders correctly in full size with first page selected 1`] = `
     <a
       aria-label="Last page"
       className="c4"
+      data-testid="Pagination"
       href="example.com/page/5"
       onClick={[Function]}
       target="_self"
@@ -234,6 +243,7 @@ exports[`renders correctly in full size with last page selected 1`] = `
     <a
       aria-label="First page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/1"
       onClick={[Function]}
       target="_self"
@@ -247,6 +257,7 @@ exports[`renders correctly in full size with last page selected 1`] = `
     <a
       aria-label="Previous page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/4"
       onClick={[Function]}
       target="_self"
@@ -260,6 +271,7 @@ exports[`renders correctly in full size with last page selected 1`] = `
     <a
       aria-label="Page 1"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/1"
       onClick={[Function]}
       target="_self"
@@ -273,6 +285,7 @@ exports[`renders correctly in full size with last page selected 1`] = `
     <a
       aria-label="Page 2"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/2"
       onClick={[Function]}
       target="_self"
@@ -286,6 +299,7 @@ exports[`renders correctly in full size with last page selected 1`] = `
     <a
       aria-label="Page 3"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/3"
       onClick={[Function]}
       target="_self"
@@ -299,6 +313,7 @@ exports[`renders correctly in full size with last page selected 1`] = `
     <a
       aria-label="Page 4"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/4"
       onClick={[Function]}
       target="_self"
@@ -312,6 +327,7 @@ exports[`renders correctly in full size with last page selected 1`] = `
     <a
       aria-label="Page 5"
       className="c3"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -325,6 +341,7 @@ exports[`renders correctly in full size with last page selected 1`] = `
     <a
       aria-label="Next page"
       className="c4"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -338,6 +355,7 @@ exports[`renders correctly in full size with last page selected 1`] = `
     <a
       aria-label="Last page"
       className="c4"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -408,6 +426,7 @@ exports[`renders correctly in full size with max pages less than current page 1`
     <a
       aria-label="First page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/1"
       onClick={[Function]}
       target="_self"
@@ -421,6 +440,7 @@ exports[`renders correctly in full size with max pages less than current page 1`
     <a
       aria-label="Previous page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/18"
       onClick={[Function]}
       target="_self"
@@ -434,6 +454,7 @@ exports[`renders correctly in full size with max pages less than current page 1`
     <a
       aria-label="More pages"
       className="c3"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -447,6 +468,7 @@ exports[`renders correctly in full size with max pages less than current page 1`
     <a
       aria-label="Page 16"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/16"
       onClick={[Function]}
       target="_self"
@@ -460,6 +482,7 @@ exports[`renders correctly in full size with max pages less than current page 1`
     <a
       aria-label="Page 17"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/17"
       onClick={[Function]}
       target="_self"
@@ -473,6 +496,7 @@ exports[`renders correctly in full size with max pages less than current page 1`
     <a
       aria-label="Page 18"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/18"
       onClick={[Function]}
       target="_self"
@@ -486,6 +510,7 @@ exports[`renders correctly in full size with max pages less than current page 1`
     <a
       aria-label="Page 19"
       className="c4"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -499,6 +524,7 @@ exports[`renders correctly in full size with max pages less than current page 1`
     <a
       aria-label="Page 20"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/20"
       onClick={[Function]}
       target="_self"
@@ -512,6 +538,7 @@ exports[`renders correctly in full size with max pages less than current page 1`
     <a
       aria-label="Next page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/20"
       onClick={[Function]}
       target="_self"
@@ -525,6 +552,7 @@ exports[`renders correctly in full size with max pages less than current page 1`
     <a
       aria-label="Last page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/20"
       onClick={[Function]}
       target="_self"
@@ -595,6 +623,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     <a
       aria-label="First page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/1"
       onClick={[Function]}
       target="_self"
@@ -608,6 +637,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     <a
       aria-label="Previous page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/1"
       onClick={[Function]}
       target="_self"
@@ -621,6 +651,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     <a
       aria-label="Page 1"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/1"
       onClick={[Function]}
       target="_self"
@@ -634,6 +665,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     <a
       aria-label="Page 2"
       className="c3"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -647,6 +679,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     <a
       aria-label="Page 3"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/3"
       onClick={[Function]}
       target="_self"
@@ -660,6 +693,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     <a
       aria-label="Page 4"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/4"
       onClick={[Function]}
       target="_self"
@@ -673,6 +707,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     <a
       aria-label="Page 5"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/5"
       onClick={[Function]}
       target="_self"
@@ -686,6 +721,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     <a
       aria-label="Page 6"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/6"
       onClick={[Function]}
       target="_self"
@@ -699,6 +735,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     <a
       aria-label="More pages"
       className="c4"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -712,6 +749,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     <a
       aria-label="Next page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/3"
       onClick={[Function]}
       target="_self"
@@ -725,6 +763,7 @@ exports[`renders correctly in full size with max pages less than total pages 1`]
     <a
       aria-label="Last page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/10"
       onClick={[Function]}
       target="_self"
@@ -784,6 +823,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     <a
       aria-label="First page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/1"
       onClick={[Function]}
       target="_self"
@@ -797,6 +837,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     <a
       aria-label="Previous page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/3"
       onClick={[Function]}
       target="_self"
@@ -810,6 +851,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     <a
       aria-label="Page 1"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/1"
       onClick={[Function]}
       target="_self"
@@ -823,6 +865,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     <a
       aria-label="Page 2"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/2"
       onClick={[Function]}
       target="_self"
@@ -836,6 +879,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     <a
       aria-label="Page 3"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/3"
       onClick={[Function]}
       target="_self"
@@ -849,6 +893,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     <a
       aria-label="Page 4"
       className="c3"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -862,6 +907,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     <a
       aria-label="Page 5"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/5"
       onClick={[Function]}
       target="_self"
@@ -875,6 +921,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     <a
       aria-label="Page 6"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/6"
       onClick={[Function]}
       target="_self"
@@ -888,6 +935,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     <a
       aria-label="Next page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/5"
       onClick={[Function]}
       target="_self"
@@ -901,6 +949,7 @@ exports[`renders correctly in full size with max pages more than total pages 1`]
     <a
       aria-label="Last page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/6"
       onClick={[Function]}
       target="_self"
@@ -971,6 +1020,7 @@ exports[`renders correctly in full size with more on both sides 1`] = `
     <a
       aria-label="First page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/1"
       onClick={[Function]}
       target="_self"
@@ -984,6 +1034,7 @@ exports[`renders correctly in full size with more on both sides 1`] = `
     <a
       aria-label="Previous page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/3"
       onClick={[Function]}
       target="_self"
@@ -997,6 +1048,7 @@ exports[`renders correctly in full size with more on both sides 1`] = `
     <a
       aria-label="More pages"
       className="c3"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -1010,6 +1062,7 @@ exports[`renders correctly in full size with more on both sides 1`] = `
     <a
       aria-label="Page 2"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/2"
       onClick={[Function]}
       target="_self"
@@ -1023,6 +1076,7 @@ exports[`renders correctly in full size with more on both sides 1`] = `
     <a
       aria-label="Page 3"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/3"
       onClick={[Function]}
       target="_self"
@@ -1036,6 +1090,7 @@ exports[`renders correctly in full size with more on both sides 1`] = `
     <a
       aria-label="Page 4"
       className="c4"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -1049,6 +1104,7 @@ exports[`renders correctly in full size with more on both sides 1`] = `
     <a
       aria-label="Page 5"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/5"
       onClick={[Function]}
       target="_self"
@@ -1062,6 +1118,7 @@ exports[`renders correctly in full size with more on both sides 1`] = `
     <a
       aria-label="Page 6"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/6"
       onClick={[Function]}
       target="_self"
@@ -1075,6 +1132,7 @@ exports[`renders correctly in full size with more on both sides 1`] = `
     <a
       aria-label="More pages"
       className="c3"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -1088,6 +1146,7 @@ exports[`renders correctly in full size with more on both sides 1`] = `
     <a
       aria-label="Next page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/5"
       onClick={[Function]}
       target="_self"
@@ -1101,6 +1160,7 @@ exports[`renders correctly in full size with more on both sides 1`] = `
     <a
       aria-label="Last page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/7"
       onClick={[Function]}
       target="_self"
@@ -1171,6 +1231,7 @@ exports[`renders correctly in full size with more on left 1`] = `
     <a
       aria-label="First page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/1"
       onClick={[Function]}
       target="_self"
@@ -1184,6 +1245,7 @@ exports[`renders correctly in full size with more on left 1`] = `
     <a
       aria-label="Previous page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/3"
       onClick={[Function]}
       target="_self"
@@ -1197,6 +1259,7 @@ exports[`renders correctly in full size with more on left 1`] = `
     <a
       aria-label="More pages"
       className="c3"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -1210,6 +1273,7 @@ exports[`renders correctly in full size with more on left 1`] = `
     <a
       aria-label="Page 2"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/2"
       onClick={[Function]}
       target="_self"
@@ -1223,6 +1287,7 @@ exports[`renders correctly in full size with more on left 1`] = `
     <a
       aria-label="Page 3"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/3"
       onClick={[Function]}
       target="_self"
@@ -1236,6 +1301,7 @@ exports[`renders correctly in full size with more on left 1`] = `
     <a
       aria-label="Page 4"
       className="c4"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -1249,6 +1315,7 @@ exports[`renders correctly in full size with more on left 1`] = `
     <a
       aria-label="Page 5"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/5"
       onClick={[Function]}
       target="_self"
@@ -1262,6 +1329,7 @@ exports[`renders correctly in full size with more on left 1`] = `
     <a
       aria-label="Page 6"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/6"
       onClick={[Function]}
       target="_self"
@@ -1275,6 +1343,7 @@ exports[`renders correctly in full size with more on left 1`] = `
     <a
       aria-label="Next page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/5"
       onClick={[Function]}
       target="_self"
@@ -1288,6 +1357,7 @@ exports[`renders correctly in full size with more on left 1`] = `
     <a
       aria-label="Last page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/6"
       onClick={[Function]}
       target="_self"
@@ -1358,6 +1428,7 @@ exports[`renders correctly in full size with more on right 1`] = `
     <a
       aria-label="First page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/1"
       onClick={[Function]}
       target="_self"
@@ -1371,6 +1442,7 @@ exports[`renders correctly in full size with more on right 1`] = `
     <a
       aria-label="Previous page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/2"
       onClick={[Function]}
       target="_self"
@@ -1384,6 +1456,7 @@ exports[`renders correctly in full size with more on right 1`] = `
     <a
       aria-label="Page 1"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/1"
       onClick={[Function]}
       target="_self"
@@ -1397,6 +1470,7 @@ exports[`renders correctly in full size with more on right 1`] = `
     <a
       aria-label="Page 2"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/2"
       onClick={[Function]}
       target="_self"
@@ -1410,6 +1484,7 @@ exports[`renders correctly in full size with more on right 1`] = `
     <a
       aria-label="Page 3"
       className="c3"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -1423,6 +1498,7 @@ exports[`renders correctly in full size with more on right 1`] = `
     <a
       aria-label="Page 4"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/4"
       onClick={[Function]}
       target="_self"
@@ -1436,6 +1512,7 @@ exports[`renders correctly in full size with more on right 1`] = `
     <a
       aria-label="Page 5"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/5"
       onClick={[Function]}
       target="_self"
@@ -1449,6 +1526,7 @@ exports[`renders correctly in full size with more on right 1`] = `
     <a
       aria-label="More pages"
       className="c4"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -1462,6 +1540,7 @@ exports[`renders correctly in full size with more on right 1`] = `
     <a
       aria-label="Next page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/4"
       onClick={[Function]}
       target="_self"
@@ -1475,6 +1554,7 @@ exports[`renders correctly in full size with more on right 1`] = `
     <a
       aria-label="Last page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/6"
       onClick={[Function]}
       target="_self"
@@ -1534,6 +1614,7 @@ exports[`renders correctly in minimalist form 1`] = `
     <a
       aria-label="Page 1"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/1"
       onClick={[Function]}
       target="_self"
@@ -1547,6 +1628,7 @@ exports[`renders correctly in minimalist form 1`] = `
     <a
       aria-label="Page 2"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/2"
       onClick={[Function]}
       target="_self"
@@ -1560,6 +1642,7 @@ exports[`renders correctly in minimalist form 1`] = `
     <a
       aria-label="Page 3"
       className="c3"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -1573,6 +1656,7 @@ exports[`renders correctly in minimalist form 1`] = `
     <a
       aria-label="Page 4"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/4"
       onClick={[Function]}
       target="_self"
@@ -1586,6 +1670,7 @@ exports[`renders correctly in minimalist form 1`] = `
     <a
       aria-label="Page 5"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/5"
       onClick={[Function]}
       target="_self"
@@ -1645,6 +1730,7 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
     <a
       aria-label="Page 1"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/1"
       onClick={[Function]}
       target="_self"
@@ -1658,6 +1744,7 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
     <a
       aria-label="Page 2"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/2"
       onClick={[Function]}
       target="_self"
@@ -1671,6 +1758,7 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
     <a
       aria-label="Page 3"
       className="c3"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -1684,6 +1772,7 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
     <a
       aria-label="Page 4"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/4"
       onClick={[Function]}
       target="_self"
@@ -1697,6 +1786,7 @@ exports[`renders correctly in minimalist form with non-default color 1`] = `
     <a
       aria-label="Page 5"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/5"
       onClick={[Function]}
       target="_self"
@@ -1756,6 +1846,7 @@ exports[`renders correctly with custom labels 1`] = `
     <a
       aria-label="First page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/1"
       onClick={[Function]}
       target="_self"
@@ -1769,6 +1860,7 @@ exports[`renders correctly with custom labels 1`] = `
     <a
       aria-label="Previous page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/2"
       onClick={[Function]}
       target="_self"
@@ -1782,6 +1874,7 @@ exports[`renders correctly with custom labels 1`] = `
     <a
       aria-label="Page 1"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/1"
       onClick={[Function]}
       target="_self"
@@ -1795,6 +1888,7 @@ exports[`renders correctly with custom labels 1`] = `
     <a
       aria-label="Page 2"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/2"
       onClick={[Function]}
       target="_self"
@@ -1808,6 +1902,7 @@ exports[`renders correctly with custom labels 1`] = `
     <a
       aria-label="Page 3"
       className="c3"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -1821,6 +1916,7 @@ exports[`renders correctly with custom labels 1`] = `
     <a
       aria-label="Page 4"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/4"
       onClick={[Function]}
       target="_self"
@@ -1834,6 +1930,7 @@ exports[`renders correctly with custom labels 1`] = `
     <a
       aria-label="Page 5"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/5"
       onClick={[Function]}
       target="_self"
@@ -1847,6 +1944,7 @@ exports[`renders correctly with custom labels 1`] = `
     <a
       aria-label="Next page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/4"
       onClick={[Function]}
       target="_self"
@@ -1860,6 +1958,7 @@ exports[`renders correctly with custom labels 1`] = `
     <a
       aria-label="Last page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/5"
       onClick={[Function]}
       target="_self"
@@ -1930,6 +2029,7 @@ exports[`renders correctly with custom style 1`] = `
     <a
       aria-label="First page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/1"
       onClick={[Function]}
       target="_self"
@@ -1943,6 +2043,7 @@ exports[`renders correctly with custom style 1`] = `
     <a
       aria-label="Previous page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/4"
       onClick={[Function]}
       target="_self"
@@ -1956,6 +2057,7 @@ exports[`renders correctly with custom style 1`] = `
     <a
       aria-label="More pages"
       className="c3"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -1969,6 +2071,7 @@ exports[`renders correctly with custom style 1`] = `
     <a
       aria-label="Page 3"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/3"
       onClick={[Function]}
       target="_self"
@@ -1982,6 +2085,7 @@ exports[`renders correctly with custom style 1`] = `
     <a
       aria-label="Page 4"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/4"
       onClick={[Function]}
       target="_self"
@@ -1995,6 +2099,7 @@ exports[`renders correctly with custom style 1`] = `
     <a
       aria-label="Page 5"
       className="c4"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -2008,6 +2113,7 @@ exports[`renders correctly with custom style 1`] = `
     <a
       aria-label="Page 6"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/6"
       onClick={[Function]}
       target="_self"
@@ -2021,6 +2127,7 @@ exports[`renders correctly with custom style 1`] = `
     <a
       aria-label="Page 7"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/7"
       onClick={[Function]}
       target="_self"
@@ -2034,6 +2141,7 @@ exports[`renders correctly with custom style 1`] = `
     <a
       aria-label="More pages"
       className="c3"
+      data-testid="Pagination"
       href={null}
       onClick={[Function]}
       target="_self"
@@ -2047,6 +2155,7 @@ exports[`renders correctly with custom style 1`] = `
     <a
       aria-label="Next page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/6"
       onClick={[Function]}
       target="_self"
@@ -2060,6 +2169,7 @@ exports[`renders correctly with custom style 1`] = `
     <a
       aria-label="Last page"
       className="c2"
+      data-testid="Pagination"
       href="example.com/page/10"
       onClick={[Function]}
       target="_self"

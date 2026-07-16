@@ -631,22 +631,28 @@ exports[`Stats Slices with a single node should render 1`] = `
 
 <div
   className="c0"
+  data-testid="StatsSliceOuterWrapper"
 >
   <div
     className="c1"
+    data-testid="StatsSliceInnerWrapper"
   >
     <div
       className="c2"
+      data-testid="StatContainer"
     >
       <div
         className="c3"
+        data-testid="ValueContainer"
       >
         <div
           aria-hidden="true"
           className="c4"
+          data-testid="StatValue"
         >
           <span
             className="c5"
+            data-testid="StatWord-0"
           >
             <div
               className="c6"
@@ -1229,12 +1235,14 @@ exports[`Stats Slices with a single node should render 1`] = `
         </div>
         <h2
           className="c22"
+          data-testid="AccessibleValue"
         >
           123,456,789.02
         </h2>
       </div>
       <span
         className="c23 c24"
+        data-testid="StatBody"
       >
         hello
       </span>
@@ -1874,22 +1882,28 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
 
 <div
   className="c0"
+  data-testid="StatsSliceOuterWrapper"
 >
   <div
     className="c1"
+    data-testid="StatsSliceInnerWrapper"
   >
     <div
       className="c2"
+      data-testid="StatContainer"
     >
       <div
         className="c3"
+        data-testid="ValueContainer"
       >
         <div
           aria-hidden="true"
           className="c4"
+          data-testid="StatValue"
         >
           <span
             className="c5"
+            data-testid="StatWord-0"
           >
             <div
               className="c6"
@@ -2472,28 +2486,34 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
         </div>
         <h2
           className="c22"
+          data-testid="AccessibleValue"
         >
           123,456,789.02
         </h2>
       </div>
       <span
         className="c23 c24"
+        data-testid="StatBody"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
       </span>
     </div>
     <div
       className="c2"
+      data-testid="StatContainer"
     >
       <div
         className="c3"
+        data-testid="ValueContainer"
       >
         <div
           aria-hidden="true"
           className="c4"
+          data-testid="StatValue"
         >
           <span
             className="c5"
+            data-testid="StatWord-0"
           >
             <div
               className="c6"
@@ -3076,28 +3096,34 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
         </div>
         <h2
           className="c22"
+          data-testid="AccessibleValue"
         >
           456,789,123.02
         </h2>
       </div>
       <span
         className="c23 c24"
+        data-testid="StatBody"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
       </span>
     </div>
     <div
       className="c2"
+      data-testid="StatContainer"
     >
       <div
         className="c3"
+        data-testid="ValueContainer"
       >
         <div
           aria-hidden="true"
           className="c4"
+          data-testid="StatValue"
         >
           <span
             className="c5"
+            data-testid="StatWord-0"
           >
             <div
               className="c6"
@@ -3680,12 +3706,14 @@ exports[`Stats Slices with multiple nodes should render 1`] = `
         </div>
         <h2
           className="c22"
+          data-testid="AccessibleValue"
         >
           789,123,456.02
         </h2>
       </div>
       <span
         className="c23 c24"
+        data-testid="StatBody"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
       </span>

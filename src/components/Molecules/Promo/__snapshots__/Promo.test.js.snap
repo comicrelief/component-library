@@ -255,6 +255,7 @@ exports[`renders Promo correctly 1`] = `
   >
     <div
       className="c2 lazyload"
+      data-testid="PictureWrapper"
     >
       <img
         alt=""
@@ -263,6 +264,7 @@ exports[`renders Promo correctly 1`] = `
         data-sizes="auto"
         data-src="mock.asset"
         data-srcset="mock.asset"
+        data-testid="Picture"
         src="mock.asset"
         srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       />
@@ -567,6 +569,7 @@ exports[`renders Promo correctly end position 1`] = `
   >
     <div
       className="c2 lazyload"
+      data-testid="PictureWrapper"
     >
       <img
         alt=""
@@ -575,6 +578,7 @@ exports[`renders Promo correctly end position 1`] = `
         data-sizes="auto"
         data-src="mock.asset"
         data-srcset="mock.asset"
+        data-testid="Picture"
         src="mock.asset"
         srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       />

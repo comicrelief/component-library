@@ -52,9 +52,11 @@ exports[`renders correctly 1`] = `
 
 <div
   className="c0"
+  data-testid="CardContainer"
 >
   <div
     className="c1"
+    data-testid="CardCopy"
   >
     <h2>
       Title
@@ -118,11 +120,13 @@ exports[`renders correctly 2`] = `
 
 <div
   className="c0"
+  data-testid="CardContainer"
   mediumBreakpointLayout="Row"
   smallBreakpointLayout="Row"
 >
   <div
     className="c1"
+    data-testid="CardCopy"
   >
     <h2>
       Title
@@ -188,12 +192,15 @@ exports[`renders correctly with no body 1`] = `
 
 <div
   className="c0"
+  data-testid="CardContainer"
 >
   <div
     className="c1"
+    data-testid="CardWrapper"
   >
     <div
       className="c2 lazyload"
+      data-testid="PictureWrapper"
     >
       <img
         alt=""
@@ -202,6 +209,7 @@ exports[`renders correctly with no body 1`] = `
         data-sizes="auto"
         data-src={null}
         data-srcset="http://images.ctfassets.net/zsfivwzfgl3t/Yq59XdwwQgjNOxky93K1Q/17c2d80dce99067b0b3508f33075cbe3/funding_4-3_2x.jpg"
+        data-testid="Picture"
         src={null}
         srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
       />

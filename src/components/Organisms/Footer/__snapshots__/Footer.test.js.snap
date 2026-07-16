@@ -593,9 +593,11 @@ exports[`renders correctly 1`] = `
         >
           <ul
             className="c3"
+            data-testid="SocialIconsList"
           >
             <li
               className="c4"
+              data-testid="SocialIcon-facebook"
             >
               <a
                 className="c5 c6"
@@ -614,6 +616,7 @@ exports[`renders correctly 1`] = `
             </li>
             <li
               className="c4"
+              data-testid="SocialIcon-instagram"
             >
               <a
                 className="c5 c6"
@@ -632,6 +635,7 @@ exports[`renders correctly 1`] = `
             </li>
             <li
               className="c4"
+              data-testid="SocialIcon-twitter"
             >
               <a
                 className="c5 c6"
@@ -650,6 +654,7 @@ exports[`renders correctly 1`] = `
             </li>
             <li
               className="c4"
+              data-testid="SocialIcon-youtube"
             >
               <a
                 className="c5 c6"

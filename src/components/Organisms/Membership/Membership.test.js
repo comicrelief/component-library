@@ -515,11 +515,13 @@ it('renders correctly', () => {
 >
   <div
     className="c1 c2"
+    data-testid="PictureWrapper"
   >
     <img
       alt="Background image"
       className="c3 lazyload"
       data-src={null}
+      data-testid="Picture"
     />
   </div>
   <div

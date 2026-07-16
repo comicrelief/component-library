@@ -55,9 +55,11 @@ exports[`renders correctly with Comic Relief links 1`] = `
 
 <ul
   className="c0"
+  data-testid="SocialIconsList"
 >
   <li
     className="c1"
+    data-testid="SocialIcon-facebook"
   >
     <a
       className="c2 c3"
@@ -76,6 +78,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
   </li>
   <li
     className="c1"
+    data-testid="SocialIcon-instagram"
   >
     <a
       className="c2 c3"
@@ -94,6 +97,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
   </li>
   <li
     className="c1"
+    data-testid="SocialIcon-twitter"
   >
     <a
       className="c2 c3"
@@ -112,6 +116,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
   </li>
   <li
     className="c1"
+    data-testid="SocialIcon-youtube"
   >
     <a
       className="c2 c3"
@@ -186,9 +191,11 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
 
 <ul
   className="c0"
+  data-testid="SocialIconsList"
 >
   <li
     className="c1"
+    data-testid="SocialIcon-facebook"
   >
     <a
       className="c2 c3"
@@ -207,6 +214,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   </li>
   <li
     className="c1"
+    data-testid="SocialIcon-instagram"
   >
     <a
       className="c2 c3"
@@ -225,6 +233,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   </li>
   <li
     className="c1"
+    data-testid="SocialIcon-twitter"
   >
     <a
       className="c2 c3"
@@ -243,6 +252,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
   </li>
   <li
     className="c1"
+    data-testid="SocialIcon-youtube"
   >
     <a
       className="c2 c3"
@@ -317,9 +327,11 @@ exports[`renders correctly with Sport Relief links 1`] = `
 
 <ul
   className="c0"
+  data-testid="SocialIconsList"
 >
   <li
     className="c1"
+    data-testid="SocialIcon-facebook"
   >
     <a
       className="c2 c3"
@@ -338,6 +350,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
   </li>
   <li
     className="c1"
+    data-testid="SocialIcon-instagram"
   >
     <a
       className="c2 c3"
@@ -356,6 +369,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
   </li>
   <li
     className="c1"
+    data-testid="SocialIcon-twitter"
   >
     <a
       className="c2 c3"
@@ -374,6 +388,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
   </li>
   <li
     className="c1"
+    data-testid="SocialIcon-youtube"
   >
     <a
       className="c2 c3"

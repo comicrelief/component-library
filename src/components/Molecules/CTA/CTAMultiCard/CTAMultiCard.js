@@ -51,17 +51,19 @@ const CTAMultiCard = ({ data }) => {
   const cardsBackground = snakeCase(bgCards || 'white');
 
   return (
-    <CardsQueryWrapper>
+    <CardsQueryWrapper data-testid="CTAMultiCardQueryWrapper">
       <CardsSection
         $backgroundColor={cardsBackground}
         $paddingAbove={paddingAbove}
         $paddingBelow={paddingBelow}
+        data-testid="CTAMultiCardSection"
       >
-        <CardsInner>
+        <CardsInner data-testid="CTAMultiCardInner">
           <CardsContainer
             $columns={columns}
             $isCarousel={carouselOfCards}
             $useSplideCarousel={useSplideCarousel}
+            data-testid="CTAMultiCardContainer"
           >
             {useSplideCarousel ? (
               <Splide

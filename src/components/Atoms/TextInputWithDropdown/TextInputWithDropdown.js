@@ -125,11 +125,13 @@ const TextInputWithDropdown = React.forwardRef(
         className={`TextInputWithDropdown ${className}`.trim()}
         onKeyDown={navigateOptions}
         ref={containerRef}
+        data-testid="TextInputWithDropdownContainer"
       >
         <Input
           {...inputProps}
           className="TextInputWithDropdown__input"
           ref={forwardedRef}
+          data-testid="TextInputWithDropdownInput"
         />
         {options.length > 0 && !forceClosed && (
           <Options
@@ -167,7 +169,7 @@ const Options = React.forwardRef(({
   };
 
   return (
-    <Dropdown {...rest} $hideBorder={hideBorder}>
+    <Dropdown {...rest} $hideBorder={hideBorder} data-testid="TextInputWithDropdownDropdown">
       <DropdownList
         ref={ref}
         role="listbox"
@@ -175,6 +177,7 @@ const Options = React.forwardRef(({
         aria-activedescendant={
           activeOption > -1 ? `option-${activeOption}` : undefined
         }
+        data-testid="TextInputWithDropdownList"
       >
         {dropdownInstruction && (
           <DropdownItemSelectable
@@ -182,6 +185,7 @@ const Options = React.forwardRef(({
             role="option"
             key="dropdown-instruction"
             onClick={closeDropdown}
+            data-testid="TextInputWithDropdownInstruction"
           >
             <TextItalic>
               {dropdownInstruction}
@@ -207,6 +211,7 @@ const Options = React.forwardRef(({
                 ? element => element && element.focus()
                 : null
             }
+            data-testid={`TextInputWithDropdownOption-${index}`}
           >
             <Text>{option}</Text>
           </DropdownItemSelectable>

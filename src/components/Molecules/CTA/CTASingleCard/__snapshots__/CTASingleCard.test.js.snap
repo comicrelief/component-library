@@ -371,9 +371,11 @@ exports[`renders correctly with data prop 1`] = `
 
 <div
   className="c0"
+  data-testid="CTASingleCardWrapper"
 >
   <div
     className="c1"
+    data-testid="CTASingleCardInner"
   >
     <div
       className="c2"
@@ -390,6 +392,7 @@ exports[`renders correctly with data prop 1`] = `
         >
           <div
             className="c7 lazyload"
+            data-testid="PictureWrapper"
           >
             <img
               alt="Example image"
@@ -398,6 +401,7 @@ exports[`renders correctly with data prop 1`] = `
               data-sizes="auto"
               data-src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
               data-srcset="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&q=80&fm=webp 678w"
+              data-testid="Picture"
               src="https://images.ctfassets.net/zsfivwzfgl3t/4VsIykPLHDNkNCT9djGrX/c8f1e4cb5c6bda5a7b77f18501e9304d/challenge-1.jpg?w=678&h=501&fl=progressive&q=80&fm=jpg"
               srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
             />
@@ -775,9 +779,11 @@ exports[`renders correctly without image 1`] = `
 
 <div
   className="c0"
+  data-testid="CTASingleCardWrapper"
 >
   <div
     className="c1"
+    data-testid="CTASingleCardInner"
   >
     <div
       className="c2"

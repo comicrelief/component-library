@@ -105,6 +105,7 @@ const Picture = ({
         $nonObjFitImage={nonObjFitImage}
         $objFitState={objFitState}
         {...rest}
+        data-testid="PictureWrapper"
       >
         <Image
           key={image}
@@ -116,6 +117,7 @@ const Picture = ({
           className="lazyload"
           $objFitState={objFitState}
           onLoad={onLoad}
+          data-testid="Picture"
         />
       </Wrapper>
     );
@@ -130,6 +132,7 @@ const Picture = ({
       $nonObjFitImage={nonObjFitImage}
       $objFitState={objFitState}
       {...rest}
+      data-testid="PictureWrapper"
     >
       <Image
         alt={alt}
@@ -146,6 +149,7 @@ const Picture = ({
         $objFitState={objFitState}
         $smallBreakpointRowLayout={smallBreakpointRowLayout}
         $mediumBreakpointRowLayout={mediumBreakpointRowLayout}
+        data-testid="Picture"
       />
     </Wrapper>
   );

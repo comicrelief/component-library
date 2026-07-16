@@ -201,19 +201,21 @@ const Lightbox = () => {
   const bodyText = extractNodeText(selectedNode?.lightboxBody);
 
   return (
-    <Container $isOpen={hasNode}>
+    <Container $isOpen={hasNode} data-testid="LightboxContainer">
       <Backdrop
         onPointerUp={() => handleBackdropClick()}
+        data-testid="LightboxBackdrop"
       />
       <Dialog
         ref={dialogRef}
         aria-labelledby="lightboxTitle"
         aria-describedby="lightboxDescription"
+        data-testid="LightboxDialog"
       >
         {hasNode && <ScrollFix />}
-        <LightboxContent>
-          <LightboxImage className="lightbox-image">
-            <LightboxSpinner>
+        <LightboxContent data-testid="LightboxContent">
+          <LightboxImage className="lightbox-image" data-testid="LightboxImage">
+            <LightboxSpinner data-testid="LightboxSpinner">
               <PulseLoader height={16} width={2} color="#E1E2E3" />
             </LightboxSpinner>
             {hasNode && (
@@ -225,18 +227,19 @@ const Lightbox = () => {
                 height={imageDimensions.height}
                 objectFit="contain"
                 onLoad={event => onLoad(event)}
+                data-testid="LightboxPicture"
               />
             )}
-            <PreviousButton type="button" onClick={() => previousNode(selectedNode)}>
+            <PreviousButton type="button" onClick={() => previousNode(selectedNode)} data-testid="LightboxPreviousButton">
               <ScreenReaderOnly>Previous</ScreenReaderOnly>
               <Arrow direction="left" colour="black" size={16} />
             </PreviousButton>
-            <NextButton type="button" onClick={() => nextNode(selectedNode)}>
+            <NextButton type="button" onClick={() => nextNode(selectedNode)} data-testid="LightboxNextButton">
               <ScreenReaderOnly>Next</ScreenReaderOnly>
               <Arrow direction="right" colour="black" size={16} />
             </NextButton>
           </LightboxImage>
-          <LightboxDetails id="lightboxDescription" aria-live="polite" aria-atomic="true">
+          <LightboxDetails id="lightboxDescription" aria-live="polite" aria-atomic="true" data-testid="LightboxDetails">
             {selectedNode?.lightboxBody && (
               <div id="lightboxTitle">
                 {selectedNode.lightboxBody}
@@ -248,7 +251,7 @@ const Lightbox = () => {
               </div>
             )}
           </LightboxDetails>
-          <CloseButton className="close-button" type="button" onClick={() => setSelectedNode(null)}>
+          <CloseButton className="close-button" type="button" onClick={() => setSelectedNode(null)} data-testid="LightboxCloseButton">
             <ScreenReaderOnly>Close</ScreenReaderOnly>
             <Cross colour="black" size={16} />
           </CloseButton>

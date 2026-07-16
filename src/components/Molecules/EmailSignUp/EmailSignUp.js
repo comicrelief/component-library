@@ -17,14 +17,14 @@ const EmailSignUp = ({ formContext, ...rest }) => {
   const errorMsg = errors && errors.email && errors.email.message;
 
   return (
-    <EmailSignUpWrapper>
-      <LabelWrapper>
-        <StyledLabel>
+    <EmailSignUpWrapper data-testid="EmailSignUpWrapper">
+      <LabelWrapper data-testid="EmailSignUpLabelWrapper">
+        <StyledLabel data-testid="EmailSignUpLabel">
           Subscribe to our newsletter
         </StyledLabel>
       </LabelWrapper>
-      <FormWrapper $error={!!errorMsg}>
-        <InputWrapper>
+      <FormWrapper $error={!!errorMsg} data-testid="EmailSignUpFormWrapper">
+        <InputWrapper data-testid="EmailSignUpInputWrapper">
           <StyledEmailInput
             name="email"
             type="email"
@@ -36,10 +36,11 @@ const EmailSignUp = ({ formContext, ...rest }) => {
             optional
             {...register('email')}
             {...rest}
+            data-testid="EmailSignUpInput"
           />
         </InputWrapper>
-        <ButtonWrapper>
-          <StyledEmailSignUpButton type="submit" color="white">
+        <ButtonWrapper data-testid="EmailSignUpButtonWrapper">
+          <StyledEmailSignUpButton type="submit" color="white" data-testid="EmailSignUpButton">
             <span className="emailSignUpButtonContent">
               <span className="emailSignUpButtonLabel">Sign up</span>
               <span className="emailSignUpButtonArrow" aria-hidden="true">

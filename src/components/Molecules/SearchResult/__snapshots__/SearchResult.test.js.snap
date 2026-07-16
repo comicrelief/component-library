@@ -166,11 +166,13 @@ exports[`renders correctly in minimalist form 1`] = `
     >
       <div
         className="c4"
+        data-testid="PictureWrapper"
       >
         <img
           alt="Image's description"
           className="c5 lazyload"
           data-src={null}
+          data-testid="Picture"
         />
       </div>
     </div>
@@ -391,11 +393,13 @@ exports[`renders correctly with copy 1`] = `
     >
       <div
         className="c4"
+        data-testid="PictureWrapper"
       >
         <img
           alt="Image's description"
           className="c5 lazyload"
           data-src={null}
+          data-testid="Picture"
         />
       </div>
     </div>
@@ -588,11 +592,13 @@ exports[`renders correctly with date 1`] = `
     >
       <div
         className="c4"
+        data-testid="PictureWrapper"
       >
         <img
           alt="Image's description"
           className="c5 lazyload"
           data-src={null}
+          data-testid="Picture"
         />
       </div>
     </div>
@@ -780,11 +786,13 @@ exports[`renders correctly with date and type 1`] = `
     >
       <div
         className="c4"
+        data-testid="PictureWrapper"
       >
         <img
           alt="Image's description"
           className="c5 lazyload"
           data-src={null}
+          data-testid="Picture"
         />
       </div>
     </div>

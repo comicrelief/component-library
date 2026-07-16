@@ -310,130 +310,157 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 
 <div
   className="c0 gallery-container"
+  data-testid="DynamicGalleryOuterWrapper"
 >
   <div
     className="c1 gallery-grid"
+    data-testid="DynamicGalleryImageGrid"
     onKeyDown={[Function]}
   >
     <div
       className="c2 gallery-column"
+      data-testid="GalleryColumn"
     >
       <button
         aria-label=""
         caption=""
         className="c3 gallery-node"
         data-node-index={0}
+        data-testid="GalleryNode-0"
         onPointerUp={[Function]}
         tabIndex={0}
         title=""
       >
         <div
           className="c4 gallery-node-image"
+          data-testid="GalleryImageContainer-0"
         >
           <div
             className="c5"
+            data-testid="PictureWrapper"
           >
             <img
               alt=""
               className="c6 lazyload"
               data-src="image1.jpg"
+              data-testid="Picture"
               onLoad={[Function]}
             />
           </div>
         </div>
         <div
           className="c7"
+          data-testid="GalleryDetails-0"
         />
       </button>
     </div>
     <div
       className="c2 gallery-column"
+      data-testid="GalleryColumn"
     >
       <button
         aria-label=""
         caption=""
         className="c3 gallery-node"
         data-node-index={1}
+        data-testid="GalleryNode-1"
         onPointerUp={[Function]}
         tabIndex={0}
         title=""
       >
         <div
           className="c4 gallery-node-image"
+          data-testid="GalleryImageContainer-1"
         >
           <div
             className="c5"
+            data-testid="PictureWrapper"
           >
             <img
               alt=""
               className="c6 lazyload"
               data-src="image2.jpg"
+              data-testid="Picture"
               onLoad={[Function]}
             />
           </div>
         </div>
         <div
           className="c7"
+          data-testid="GalleryDetails-1"
         />
       </button>
     </div>
     <div
       className="c2 gallery-column"
+      data-testid="GalleryColumn"
     >
       <button
         aria-label=""
         caption=""
         className="c3 gallery-node"
         data-node-index={2}
+        data-testid="GalleryNode-2"
         onPointerUp={[Function]}
         tabIndex={0}
         title=""
       >
         <div
           className="c4 gallery-node-image"
+          data-testid="GalleryImageContainer-2"
         >
           <div
             className="c5"
+            data-testid="PictureWrapper"
           >
             <img
               alt=""
               className="c6 lazyload"
               data-src="image3.jpg"
+              data-testid="Picture"
               onLoad={[Function]}
             />
           </div>
         </div>
         <div
           className="c7"
+          data-testid="GalleryDetails-2"
         />
       </button>
     </div>
     <div
       className="c8"
+      data-testid="DynamicGalleryEmptyMessage"
     >
       No images to display
     </div>
   </div>
   <div
     className="c9"
+    data-testid="LightboxContainer"
   >
     <div
       className="c10"
+      data-testid="LightboxBackdrop"
       onPointerUp={[Function]}
     />
     <dialog
       aria-describedby="lightboxDescription"
       aria-labelledby="lightboxTitle"
       className="c11"
+      data-testid="LightboxDialog"
     >
       <div
         className="c12"
+        data-testid="LightboxContent"
       >
         <div
           className="c13 lightbox-image"
+          data-testid="LightboxImage"
         >
           <div
             className="c14"
+            data-testid="LightboxSpinner"
           >
             <span
               height={16}
@@ -490,6 +517,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
           </div>
           <button
             className="c15 c16"
+            data-testid="LightboxPreviousButton"
             onClick={[Function]}
             type="button"
           >
@@ -512,6 +540,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
           </button>
           <button
             className="c15 c19"
+            data-testid="LightboxNextButton"
             onClick={[Function]}
             type="button"
           >
@@ -537,10 +566,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
           aria-atomic="true"
           aria-live="polite"
           className="c21"
+          data-testid="LightboxDetails"
           id="lightboxDescription"
         />
         <button
           className="c15 c22 close-button"
+          data-testid="LightboxCloseButton"
           onClick={[Function]}
           type="button"
         >
@@ -568,6 +599,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
   </div>
   <span
     className="c17 c24 gallery-focus-trap"
+    data-testid="DynamicGalleryFocusTrap"
     tabIndex={0}
   >
     <span>
@@ -808,37 +840,46 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 
 <div
   className="c0 gallery-container"
+  data-testid="DynamicGalleryOuterWrapper"
 >
   <div
     className="c1 gallery-grid"
+    data-testid="DynamicGalleryImageGrid"
     onKeyDown={[Function]}
   >
     <div
       className="c2"
+      data-testid="DynamicGalleryEmptyMessage"
     >
       No images to display
     </div>
   </div>
   <div
     className="c3"
+    data-testid="LightboxContainer"
   >
     <div
       className="c4"
+      data-testid="LightboxBackdrop"
       onPointerUp={[Function]}
     />
     <dialog
       aria-describedby="lightboxDescription"
       aria-labelledby="lightboxTitle"
       className="c5"
+      data-testid="LightboxDialog"
     >
       <div
         className="c6"
+        data-testid="LightboxContent"
       >
         <div
           className="c7 lightbox-image"
+          data-testid="LightboxImage"
         >
           <div
             className="c8"
+            data-testid="LightboxSpinner"
           >
             <span
               height={16}
@@ -895,6 +936,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
           </div>
           <button
             className="c9 c10"
+            data-testid="LightboxPreviousButton"
             onClick={[Function]}
             type="button"
           >
@@ -917,6 +959,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
           </button>
           <button
             className="c9 c13"
+            data-testid="LightboxNextButton"
             onClick={[Function]}
             type="button"
           >
@@ -942,10 +985,12 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
           aria-atomic="true"
           aria-live="polite"
           className="c15"
+          data-testid="LightboxDetails"
           id="lightboxDescription"
         />
         <button
           className="c9 c16 close-button"
+          data-testid="LightboxCloseButton"
           onClick={[Function]}
           type="button"
         >
@@ -973,6 +1018,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
   </div>
   <span
     className="c11 c18 gallery-focus-trap"
+    data-testid="DynamicGalleryFocusTrap"
     tabIndex={0}
   >
     <span>

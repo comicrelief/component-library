@@ -885,21 +885,26 @@ exports[`does not render copyright text when not supplied 1`] = `
             >
               <div
                 className="c10"
+                data-testid="EmailSignUpWrapper"
               >
                 <div
                   className="c11"
+                  data-testid="EmailSignUpLabelWrapper"
                 >
                   <span
                     className="c12"
+                    data-testid="EmailSignUpLabel"
                   >
                     Subscribe to our newsletter
                   </span>
                 </div>
                 <div
                   className="c13"
+                  data-testid="EmailSignUpFormWrapper"
                 >
                   <div
                     className="c14"
+                    data-testid="EmailSignUpInputWrapper"
                   >
                     <label
                       className="c15 c16"
@@ -922,6 +927,7 @@ exports[`does not render copyright text when not supplied 1`] = `
                           <input
                             aria-required={false}
                             className="c21"
+                            data-testid="EmailSignUpInput"
                             id="email-signup"
                             name="email"
                             onBlur={[Function]}
@@ -936,9 +942,11 @@ exports[`does not render copyright text when not supplied 1`] = `
                   </div>
                   <div
                     className="c22"
+                    data-testid="EmailSignUpButtonWrapper"
                   >
                     <button
                       className="c23 c24"
+                      data-testid="Button"
                       type="submit"
                     >
                       <span
@@ -977,9 +985,11 @@ exports[`does not render copyright text when not supplied 1`] = `
           >
             <ul
               className="c27"
+              data-testid="SocialIconsList"
             >
               <li
                 className="c28"
+                data-testid="SocialIcon-facebook"
               >
                 <a
                   className="c29 c30"
@@ -998,6 +1008,7 @@ exports[`does not render copyright text when not supplied 1`] = `
               </li>
               <li
                 className="c28"
+                data-testid="SocialIcon-instagram"
               >
                 <a
                   className="c29 c30"
@@ -1016,6 +1027,7 @@ exports[`does not render copyright text when not supplied 1`] = `
               </li>
               <li
                 className="c28"
+                data-testid="SocialIcon-x"
               >
                 <a
                   className="c29 c30"
@@ -1034,6 +1046,7 @@ exports[`does not render copyright text when not supplied 1`] = `
               </li>
               <li
                 className="c28"
+                data-testid="SocialIcon-tiktok"
               >
                 <a
                   className="c29 c30"
@@ -1052,6 +1065,7 @@ exports[`does not render copyright text when not supplied 1`] = `
               </li>
               <li
                 className="c28"
+                data-testid="SocialIcon-youtube"
               >
                 <a
                   className="c29 c30"
@@ -1157,9 +1171,11 @@ exports[`does not render copyright text when not supplied 1`] = `
       >
         <ul
           className="c27"
+          data-testid="SocialIconsList"
         >
           <li
             className="c28"
+            data-testid="SocialIcon-facebook"
           >
             <a
               className="c29 c30"
@@ -1178,6 +1194,7 @@ exports[`does not render copyright text when not supplied 1`] = `
           </li>
           <li
             className="c28"
+            data-testid="SocialIcon-instagram"
           >
             <a
               className="c29 c30"
@@ -1196,6 +1213,7 @@ exports[`does not render copyright text when not supplied 1`] = `
           </li>
           <li
             className="c28"
+            data-testid="SocialIcon-x"
           >
             <a
               className="c29 c30"
@@ -1214,6 +1232,7 @@ exports[`does not render copyright text when not supplied 1`] = `
           </li>
           <li
             className="c28"
+            data-testid="SocialIcon-tiktok"
           >
             <a
               className="c29 c30"
@@ -1232,6 +1251,7 @@ exports[`does not render copyright text when not supplied 1`] = `
           </li>
           <li
             className="c28"
+            data-testid="SocialIcon-youtube"
           >
             <a
               className="c29 c30"
@@ -2190,21 +2210,26 @@ exports[`renders correctly 1`] = `
             >
               <div
                 className="c10"
+                data-testid="EmailSignUpWrapper"
               >
                 <div
                   className="c11"
+                  data-testid="EmailSignUpLabelWrapper"
                 >
                   <span
                     className="c12"
+                    data-testid="EmailSignUpLabel"
                   >
                     Subscribe to our newsletter
                   </span>
                 </div>
                 <div
                   className="c13"
+                  data-testid="EmailSignUpFormWrapper"
                 >
                   <div
                     className="c14"
+                    data-testid="EmailSignUpInputWrapper"
                   >
                     <label
                       className="c15 c16"
@@ -2227,6 +2252,7 @@ exports[`renders correctly 1`] = `
                           <input
                             aria-required={false}
                             className="c21"
+                            data-testid="EmailSignUpInput"
                             id="email-signup"
                             name="email"
                             onBlur={[Function]}
@@ -2241,9 +2267,11 @@ exports[`renders correctly 1`] = `
                   </div>
                   <div
                     className="c22"
+                    data-testid="EmailSignUpButtonWrapper"
                   >
                     <button
                       className="c23 c24"
+                      data-testid="Button"
                       type="submit"
                     >
                       <span
@@ -2282,9 +2310,11 @@ exports[`renders correctly 1`] = `
           >
             <ul
               className="c27"
+              data-testid="SocialIconsList"
             >
               <li
                 className="c28"
+                data-testid="SocialIcon-facebook"
               >
                 <a
                   className="c29 c30"
@@ -2303,6 +2333,7 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c28"
+                data-testid="SocialIcon-instagram"
               >
                 <a
                   className="c29 c30"
@@ -2321,6 +2352,7 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c28"
+                data-testid="SocialIcon-x"
               >
                 <a
                   className="c29 c30"
@@ -2339,6 +2371,7 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c28"
+                data-testid="SocialIcon-tiktok"
               >
                 <a
                   className="c29 c30"
@@ -2357,6 +2390,7 @@ exports[`renders correctly 1`] = `
               </li>
               <li
                 className="c28"
+                data-testid="SocialIcon-youtube"
               >
                 <a
                   className="c29 c30"
@@ -2462,9 +2496,11 @@ exports[`renders correctly 1`] = `
       >
         <ul
           className="c27"
+          data-testid="SocialIconsList"
         >
           <li
             className="c28"
+            data-testid="SocialIcon-facebook"
           >
             <a
               className="c29 c30"
@@ -2483,6 +2519,7 @@ exports[`renders correctly 1`] = `
           </li>
           <li
             className="c28"
+            data-testid="SocialIcon-instagram"
           >
             <a
               className="c29 c30"
@@ -2501,6 +2538,7 @@ exports[`renders correctly 1`] = `
           </li>
           <li
             className="c28"
+            data-testid="SocialIcon-x"
           >
             <a
               className="c29 c30"
@@ -2519,6 +2557,7 @@ exports[`renders correctly 1`] = `
           </li>
           <li
             className="c28"
+            data-testid="SocialIcon-tiktok"
           >
             <a
               className="c29 c30"
@@ -2537,6 +2576,7 @@ exports[`renders correctly 1`] = `
           </li>
           <li
             className="c28"
+            data-testid="SocialIcon-youtube"
           >
             <a
               className="c29 c30"

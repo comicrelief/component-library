@@ -121,6 +121,7 @@ exports[`renders correctly 1`] = `
 
 <div
   className="c0 TextInputWithDropdown"
+  data-testid="TextInputWithDropdownContainer"
   onKeyDown={[Function]}
 >
   <label
@@ -145,6 +146,7 @@ exports[`renders correctly 1`] = `
           aria-required={false}
           autoComplete="off"
           className="c6"
+          data-testid="TextInputWithDropdownInput"
           defaultValue=""
           id="school-lookup"
           name="school-lookup"

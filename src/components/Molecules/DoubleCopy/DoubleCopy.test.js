@@ -37,9 +37,11 @@ it('renders correctly', () => {
 
 <section
   className="c0"
+  data-testid="DoubleCopySection"
 >
   <div
     className="c1"
+    data-testid="DoubleCopyLeftWrapper"
   >
     <div
       className="c2"
@@ -52,6 +54,7 @@ it('renders correctly', () => {
   </div>
   <div
     className="c1"
+    data-testid="DoubleCopyRightWrapper"
   >
     <div
       className="c2"

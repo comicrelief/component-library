@@ -53,8 +53,8 @@ const Countdown = ({
   return (
     <>
       {introMessage}
-      <Wrapper>
-        <Digits>
+      <Wrapper data-testid="CountdownWrapper">
+        <Digits data-testid="CountdownDigitsDays">
           <Text color={color} family="Anton" size="xl">
             {countdownTime.days}
           </Text>
@@ -65,7 +65,7 @@ const Countdown = ({
         <Text color={color} family="Anton" size="xl">
           :
         </Text>
-        <Digits>
+        <Digits data-testid="CountdownDigitsHours">
           <Text color={color} family="Anton" size="xl">
             {countdownTime.hours}
           </Text>
@@ -76,7 +76,7 @@ const Countdown = ({
         <Text color={color} family="Anton" size="xl">
           :
         </Text>
-        <Digits>
+        <Digits data-testid="CountdownDigitsMinutes">
           <Text color={color} family="Anton" size="xl">
             {countdownTime.minutes}
           </Text>
@@ -84,7 +84,7 @@ const Countdown = ({
             minutes
           </Text>
         </Digits>
-        <Digits>
+        <Digits data-testid="CountdownDigitsSeconds">
           <Text color={color} family="Anton" size="xl">
             {countdownTime.seconds}
           </Text>

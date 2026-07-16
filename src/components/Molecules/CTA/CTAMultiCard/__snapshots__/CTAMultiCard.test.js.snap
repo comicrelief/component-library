@@ -375,15 +375,19 @@ exports[`handles data structure correctly 1`] = `
 
 <div
   className="c0"
+  data-testid="CTAMultiCardQueryWrapper"
 >
   <div
     className="c1"
+    data-testid="CTAMultiCardSection"
   >
     <div
       className="c2"
+      data-testid="CTAMultiCardInner"
     >
       <div
         className="c3"
+        data-testid="CTAMultiCardContainer"
       >
         <div
           className="c4"
@@ -400,6 +404,7 @@ exports[`handles data structure correctly 1`] = `
             >
               <div
                 className="c9 lazyload"
+                data-testid="PictureWrapper"
               >
                 <img
                   alt=""
@@ -408,6 +413,7 @@ exports[`handles data structure correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  data-testid="Picture"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                 />
@@ -482,6 +488,7 @@ exports[`handles data structure correctly 1`] = `
             >
               <div
                 className="c9 lazyload"
+                data-testid="PictureWrapper"
               >
                 <img
                   alt=""
@@ -490,6 +497,7 @@ exports[`handles data structure correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  data-testid="Picture"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                 />
@@ -528,6 +536,7 @@ exports[`handles data structure correctly 1`] = `
             >
               <div
                 className="c9 lazyload"
+                data-testid="PictureWrapper"
               >
                 <img
                   alt=""
@@ -536,6 +545,7 @@ exports[`handles data structure correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  data-testid="Picture"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                 />
@@ -1071,15 +1081,19 @@ exports[`renders 2 columns layout correctly 1`] = `
 
 <div
   className="c0"
+  data-testid="CTAMultiCardQueryWrapper"
 >
   <div
     className="c1"
+    data-testid="CTAMultiCardSection"
   >
     <div
       className="c2"
+      data-testid="CTAMultiCardInner"
     >
       <div
         className="c3"
+        data-testid="CTAMultiCardContainer"
       >
         <div
           className="c4"
@@ -1096,6 +1110,7 @@ exports[`renders 2 columns layout correctly 1`] = `
             >
               <div
                 className="c9 lazyload"
+                data-testid="PictureWrapper"
               >
                 <img
                   alt=""
@@ -1104,6 +1119,7 @@ exports[`renders 2 columns layout correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  data-testid="Picture"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                 />
@@ -1178,6 +1194,7 @@ exports[`renders 2 columns layout correctly 1`] = `
             >
               <div
                 className="c9 lazyload"
+                data-testid="PictureWrapper"
               >
                 <img
                   alt=""
@@ -1186,6 +1203,7 @@ exports[`renders 2 columns layout correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  data-testid="Picture"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                 />
@@ -1224,6 +1242,7 @@ exports[`renders 2 columns layout correctly 1`] = `
             >
               <div
                 className="c9 lazyload"
+                data-testid="PictureWrapper"
               >
                 <img
                   alt=""
@@ -1232,6 +1251,7 @@ exports[`renders 2 columns layout correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  data-testid="Picture"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                 />
@@ -1747,15 +1767,19 @@ exports[`renders carousel mode correctly 1`] = `
 
 <div
   className="c0"
+  data-testid="CTAMultiCardQueryWrapper"
 >
   <div
     className="c1"
+    data-testid="CTAMultiCardSection"
   >
     <div
       className="c2"
+      data-testid="CTAMultiCardInner"
     >
       <div
         className="c3"
+        data-testid="CTAMultiCardContainer"
       >
         <div
           className="c4"
@@ -1772,6 +1796,7 @@ exports[`renders carousel mode correctly 1`] = `
             >
               <div
                 className="c9 lazyload"
+                data-testid="PictureWrapper"
               >
                 <img
                   alt=""
@@ -1780,6 +1805,7 @@ exports[`renders carousel mode correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  data-testid="Picture"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                 />
@@ -1854,6 +1880,7 @@ exports[`renders carousel mode correctly 1`] = `
             >
               <div
                 className="c9 lazyload"
+                data-testid="PictureWrapper"
               >
                 <img
                   alt=""
@@ -1862,6 +1889,7 @@ exports[`renders carousel mode correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  data-testid="Picture"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                 />
@@ -1900,6 +1928,7 @@ exports[`renders carousel mode correctly 1`] = `
             >
               <div
                 className="c9 lazyload"
+                data-testid="PictureWrapper"
               >
                 <img
                   alt=""
@@ -1908,6 +1937,7 @@ exports[`renders carousel mode correctly 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  data-testid="Picture"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                 />
@@ -2423,15 +2453,19 @@ exports[`renders correctly with data prop 1`] = `
 
 <div
   className="c0"
+  data-testid="CTAMultiCardQueryWrapper"
 >
   <div
     className="c1"
+    data-testid="CTAMultiCardSection"
   >
     <div
       className="c2"
+      data-testid="CTAMultiCardInner"
     >
       <div
         className="c3"
+        data-testid="CTAMultiCardContainer"
       >
         <div
           className="c4"
@@ -2448,6 +2482,7 @@ exports[`renders correctly with data prop 1`] = `
             >
               <div
                 className="c9 lazyload"
+                data-testid="PictureWrapper"
               >
                 <img
                   alt=""
@@ -2456,6 +2491,7 @@ exports[`renders correctly with data prop 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  data-testid="Picture"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                 />
@@ -2530,6 +2566,7 @@ exports[`renders correctly with data prop 1`] = `
             >
               <div
                 className="c9 lazyload"
+                data-testid="PictureWrapper"
               >
                 <img
                   alt=""
@@ -2538,6 +2575,7 @@ exports[`renders correctly with data prop 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  data-testid="Picture"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                 />
@@ -2576,6 +2614,7 @@ exports[`renders correctly with data prop 1`] = `
             >
               <div
                 className="c9 lazyload"
+                data-testid="PictureWrapper"
               >
                 <img
                   alt=""
@@ -2584,6 +2623,7 @@ exports[`renders correctly with data prop 1`] = `
                   data-sizes="auto"
                   data-src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   data-srcset="@component-library/src/styleguide/assets/challenge-1.jpg 678w"
+                  data-testid="Picture"
                   src="@component-library/src/styleguide/assets/challenge-1.jpg"
                   srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                 />
