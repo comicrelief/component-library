@@ -15,6 +15,9 @@ export default function InstallationDoc() {
       <h4>Wrap your app with the ThemeProvider and crTheme</h4>
       <p><code style={code}>{'import { ThemeProvider, crTheme } from \'@comicrelief/component-library\';'}</code></p>
 
+      <h4>Load fonts in your app&apos;s HTML</h4>
+      <p>CR-CL uses Anton and Montserrat. Add preconnect and stylesheet links to your <code style={code}>index.html</code> — see README for the URL.</p>
+
       <h4>Import components</h4>
       <p><code style={code}>{'import { HeroBanner } from \'@comicrelief/component-library\';'}</code></p>
     </div>
