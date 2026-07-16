@@ -77,6 +77,7 @@ it('renders a standard styled link correctly', () => {
 
 <button
   className="c0"
+  data-testid="Button"
   type="submit"
 >
   A standard link

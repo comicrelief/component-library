@@ -625,7 +625,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
               <button
                 className="c21 c22"
                 data-test="subscribe-button"
-                data-testid="ButtonWithStates"
+                data-testid="Button"
                 disabled={false}
                 type="submit"
               >
@@ -1269,7 +1269,7 @@ exports[`Image banner renders correctly 1`] = `
               <button
                 className="c21 c22"
                 data-test="subscribe-button"
-                data-testid="ButtonWithStates"
+                data-testid="Button"
                 disabled={false}
                 type="submit"
               >
@@ -1913,7 +1913,7 @@ exports[`Text-only email widget renders correctly 1`] = `
               <button
                 className="c21 c22"
                 data-test="subscribe-button"
-                data-testid="ButtonWithStates"
+                data-testid="Button"
                 disabled={false}
                 type="submit"
               >
@@ -2557,7 +2557,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
               <button
                 className="c21 c22"
                 data-test="subscribe-button"
-                data-testid="ButtonWithStates"
+                data-testid="Button"
                 disabled={false}
                 type="submit"
               >

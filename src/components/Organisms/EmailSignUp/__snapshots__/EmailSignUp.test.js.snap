@@ -439,7 +439,7 @@ exports[`renders correctly 1`] = `
         <button
           className="c15 c16"
           data-test="subscribe-button"
-          data-testid="ButtonWithStates"
+          data-testid="Button"
           disabled={true}
           type="submit"
         >

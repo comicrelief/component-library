@@ -946,7 +946,7 @@ exports[`does not render copyright text when not supplied 1`] = `
                   >
                     <button
                       className="c23 c24"
-                      data-testid="EmailSignUpButton"
+                      data-testid="Button"
                       type="submit"
                     >
                       <span
@@ -2271,7 +2271,7 @@ exports[`renders correctly 1`] = `
                   >
                     <button
                       className="c23 c24"
-                      data-testid="EmailSignUpButton"
+                      data-testid="Button"
                       type="submit"
                     >
                       <span
