@@ -28,6 +28,18 @@ $ yarn add @comicrelief/component-library
 import { ThemeProvider, crTheme } from '@comicrelief/component-library';
 ```
 
+#### Load fonts in your app's HTML
+We use Anton and Montserrat fonts. Add these to your frontend's `index.html` `<head>`:
+
+```
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700&display=swap"
+/>
+```
+
 #### Import components
 ```
 import { HeroBanner } from '@comicrelief/component-library';
