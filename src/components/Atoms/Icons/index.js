@@ -6,3 +6,4 @@ export { default as Chevron } from './Chevron';
 export { default as Arrow } from './Arrow';
 export { default as AtSign } from './AtSign';
 export { default as CtaArrow } from './CtaArrow';
+export { default as Post } from './Post';
