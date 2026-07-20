@@ -1,6 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`does not render copyright text when not supplied 1`] = `
+.c25 {
+  transform: rotate(0);
+  fill: #FFFFFF;
+}
+
 .c23 {
   display: inline-flex;
   position: relative;
@@ -223,11 +228,6 @@ exports[`does not render copyright text when not supplied 1`] = `
 
 .c30 {
   width: auto;
-}
-
-.c25 {
-  transform: rotate(0);
-  fill: #FFFFFF;
 }
 
 .c10 {
@@ -562,6 +562,12 @@ exports[`does not render copyright text when not supplied 1`] = `
   margin-bottom: 0.5rem;
 }
 
+@media (min-width: 1024px) {
+  .c25 {
+    fill: #FFFFFF;
+  }
+}
+
 @media (min-width: 740px) {
   .c23 {
     font-size: 1rem;
@@ -638,12 +644,6 @@ exports[`does not render copyright text when not supplied 1`] = `
 @media (min-width: 740px) {
   .c28 {
     margin-right: 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c25 {
-    fill: #FFFFFF;
   }
 }
 
@@ -1326,6 +1326,11 @@ exports[`does not render copyright text when not supplied 1`] = `
 `;
 
 exports[`renders correctly 1`] = `
+.c25 {
+  transform: rotate(0);
+  fill: #FFFFFF;
+}
+
 .c23 {
   display: inline-flex;
   position: relative;
@@ -1548,11 +1553,6 @@ exports[`renders correctly 1`] = `
 
 .c30 {
   width: auto;
-}
-
-.c25 {
-  transform: rotate(0);
-  fill: #FFFFFF;
 }
 
 .c10 {
@@ -1887,6 +1887,12 @@ exports[`renders correctly 1`] = `
   margin-bottom: 0.5rem;
 }
 
+@media (min-width: 1024px) {
+  .c25 {
+    fill: #FFFFFF;
+  }
+}
+
 @media (min-width: 740px) {
   .c23 {
     font-size: 1rem;
@@ -1963,12 +1969,6 @@ exports[`renders correctly 1`] = `
 @media (min-width: 740px) {
   .c28 {
     margin-right: 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c25 {
-    fill: #FFFFFF;
   }
 }
 

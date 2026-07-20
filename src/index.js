@@ -13,6 +13,7 @@ export { default as spacing } from './theme/shared/spacing';
 export { default as zIndex } from './theme/shared/zIndex';
 
 /* Atoms */
+export { default as Arrow } from './components/Atoms/Icons/Arrow';
 export { default as AmbientVideo } from './components/Atoms/AmbientVideo/AmbientVideo';
 export { default as Button } from './components/Atoms/Button/Button';
 export { default as ButtonWithStates } from './components/Atoms/ButtonWithStates/ButtonWithStates';
@@ -29,6 +30,7 @@ export { default as Link } from './components/Atoms/Link/Link';
 export { default as Logo } from './components/Atoms/Logos/Logo';
 export { default as Pagination } from './components/Atoms/Pagination/Pagination';
 export { default as Picture } from './components/Atoms/Picture/Picture';
+export { default as Post } from './components/Atoms/Icons/Post';
 export { default as RadioButton } from './components/Atoms/RadioButton/RadioButton';
 export { default as RichText } from './components/Atoms/RichText/RichText';
 export { default as Select } from './components/Atoms/Select/Select';
