@@ -44,7 +44,6 @@ exports[`renders correctly in minimalist form 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
-  color: #E52630;
 }
 
 .c1:hover,
@@ -257,7 +256,6 @@ exports[`renders correctly with copy 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
-  color: #E52630;
 }
 
 .c1:hover,
@@ -470,7 +468,6 @@ exports[`renders correctly with date 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
-  color: #E52630;
 }
 
 .c1:hover,
@@ -664,7 +661,6 @@ exports[`renders correctly with date and type 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
-  color: #E52630;
 }
 
 .c1:hover,

@@ -72,7 +72,6 @@ it('renders article teaser correctly', () => {
   display: inline;
   color: #000000;
   font-weight: normal;
-  color: #E52630;
 }
 
 .c1:hover,
@@ -522,7 +521,6 @@ it('renders press realese correctly', () => {
   display: inline;
   color: #000000;
   font-weight: normal;
-  color: #E52630;
 }
 
 .c1:hover,

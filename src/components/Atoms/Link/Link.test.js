@@ -17,7 +17,6 @@ it('renders a standard styled link correctly', () => {
   display: inline;
   color: #000000;
   font-weight: normal;
-  color: #E52630;
 }
 
 .c0:hover,
@@ -70,7 +69,6 @@ it('renders a button with an icon', () => {
   display: inline;
   color: #000000;
   font-weight: normal;
-  color: #E52630;
 }
 
 .c0:hover,
@@ -140,7 +138,6 @@ it('renders a standard styled link correctly with target blank and assistive tex
   display: inline;
   color: #000000;
   font-weight: normal;
-  color: #E52630;
 }
 
 .c0:hover,

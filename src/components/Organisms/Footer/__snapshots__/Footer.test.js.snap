@@ -103,7 +103,6 @@ exports[`renders correctly 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
-  color: #E52630;
 }
 
 .c8:hover,
