@@ -9,7 +9,6 @@ const FooterWrapper = styled.footer.attrs(() => ({
   text-align: center;
   line-height: initial;
   background: #222;
-  background: green;
   position: relative;
   padding: ${spacing('md')} 0;
   @media ${({ theme }) => theme.allBreakpoints('M')} {
