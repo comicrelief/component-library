@@ -42,7 +42,6 @@ it('renders correctly', () => {
   display: inline;
   color: #000000;
   font-weight: normal;
-  color: #E52630;
 }
 
 .c0:hover,

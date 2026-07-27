@@ -48,7 +48,6 @@ const linkStyle = () => css`
   ${({ type, theme }) => (type
     ? theme.linkStyles(type)
     : theme.linkStyles('standard'))};
-  ${({ $color, theme }) => $color && css`color: ${theme.color($color)};`}
 `;
 
 export const IconWrapper = styled.span`
