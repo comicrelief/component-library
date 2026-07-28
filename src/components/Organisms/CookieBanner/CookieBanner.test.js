@@ -42,7 +42,6 @@ it('renders correctly', () => {
   display: inline;
   color: #FFFFFF;
   font-weight: normal;
-  color: #E52630;
 }
 
 .c3:hover,

@@ -20,7 +20,6 @@ exports[`renders correctly with data prop 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
-  color: #E52630;
 }
 
 .c3:hover,
@@ -494,7 +493,6 @@ exports[`renders correctly without image 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
-  color: #E52630;
 }
 
 .c3:hover,

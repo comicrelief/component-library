@@ -175,7 +175,6 @@ exports[`does not render copyright text when not supplied 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
-  color: #E52630;
 }
 
 .c3:hover,
@@ -1500,7 +1499,6 @@ exports[`renders correctly 1`] = `
   display: inline;
   color: #000000;
   font-weight: normal;
-  color: #E52630;
 }
 
 .c3:hover,
