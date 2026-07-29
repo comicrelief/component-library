@@ -984,7 +984,7 @@ exports[`does not render copyright text when not supplied 1`] = `
           >
             <ul
               className="c27"
-              data-testid="SocialIconsList"
+              data-test="SocialIconsList"
             >
               <li
                 className="c28"
@@ -1170,7 +1170,7 @@ exports[`does not render copyright text when not supplied 1`] = `
       >
         <ul
           className="c27"
-          data-testid="SocialIconsList"
+          data-test="SocialIconsList"
         >
           <li
             className="c28"
@@ -2308,7 +2308,7 @@ exports[`renders correctly 1`] = `
           >
             <ul
               className="c27"
-              data-testid="SocialIconsList"
+              data-test="SocialIconsList"
             >
               <li
                 className="c28"
@@ -2494,7 +2494,7 @@ exports[`renders correctly 1`] = `
       >
         <ul
           className="c27"
-          data-testid="SocialIconsList"
+          data-test="SocialIconsList"
         >
           <li
             className="c28"

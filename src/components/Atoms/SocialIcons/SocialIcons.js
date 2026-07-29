@@ -79,7 +79,7 @@ const SocialIcons = ({
     : ['facebook', 'instagram', 'twitter', 'youtube'];
 
   return (
-    <StyledList $newStyle={newStyle} data-testid="SocialIconsList">
+    <StyledList $newStyle={newStyle} data-test="SocialIconsList">
       {brandsToShow
         .filter(brand => shouldShowIcon(brand))
         .map(brand => {
