@@ -34,7 +34,7 @@ const Footer = ({
               <SocialIcons campaign={campaignName} />
             </SocialIconWrapper>
 
-            <Brand href="/" title={`Go to ${campaign} homepage`}>
+            <Brand href="/" title={`Go to ${campaign} homepage`} data-test="footer-logo">
               <Logo sizeSm="48px" sizeMd="72px" rotate={false} campaign={campaign} />
             </Brand>
           </FooterBranding>
@@ -42,7 +42,7 @@ const Footer = ({
 
           { showFundraisingRegulatorLogo && <FundraisingRegulatorLogo /> }
 
-          <FooterCopyright>
+          <FooterCopyright data-test="footer-copyright">
             <Text tag="p" color="grey" size="s">
               {footerCopy}
             </Text>

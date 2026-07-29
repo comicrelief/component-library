@@ -674,6 +674,7 @@ exports[`renders correctly 1`] = `
         </div>
         <a
           className="c8 c9"
+          data-test="footer-logo"
           href="/"
           target="_self"
           title="Go to Comic Relief homepage"
@@ -1220,6 +1221,7 @@ exports[`renders correctly 1`] = `
       </nav>
       <div
         className="c25"
+        data-test="footer-copyright"
       >
         <p
           className="c26"
