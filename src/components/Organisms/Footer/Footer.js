@@ -31,7 +31,7 @@ const Footer = ({
           }
           <FooterBranding>
             <SocialIconWrapper>
-              <SocialIcons campaign={campaignName} />
+              <SocialIcons campaign={campaignName} data-test="SocialIconsList" />
             </SocialIconWrapper>
 
             <Brand href="/" title={`Go to ${campaign} homepage`} data-test="footer-logo">
