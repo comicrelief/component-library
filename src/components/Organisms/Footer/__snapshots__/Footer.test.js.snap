@@ -592,7 +592,7 @@ exports[`renders correctly 1`] = `
         >
           <ul
             className="c3"
-            data-testid="SocialIconsList"
+            data-test="SocialIconsList"
           >
             <li
               className="c4"

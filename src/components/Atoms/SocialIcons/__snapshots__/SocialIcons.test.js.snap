@@ -55,7 +55,7 @@ exports[`renders correctly with Comic Relief links 1`] = `
 
 <ul
   className="c0"
-  data-testid="SocialIconsList"
+  data-test="SocialIconsList"
 >
   <li
     className="c1"
@@ -191,7 +191,7 @@ exports[`renders correctly with Red Nose Day links and self target 1`] = `
 
 <ul
   className="c0"
-  data-testid="SocialIconsList"
+  data-test="SocialIconsList"
 >
   <li
     className="c1"
@@ -327,7 +327,7 @@ exports[`renders correctly with Sport Relief links 1`] = `
 
 <ul
   className="c0"
-  data-testid="SocialIconsList"
+  data-test="SocialIconsList"
 >
   <li
     className="c1"
