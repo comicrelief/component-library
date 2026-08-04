@@ -45,6 +45,7 @@
     "test:e2e:mac:organisms:emailSignUpForm": "playwright test playwright/components/organisms/emailSignUpForm.spec.js --project=chromium; yarn playwright show-report --port 9324",
     "lint": "eslint src",
     "lint-fix": "yarn lint --fix",
+    "yalc:publish": "yarn build && yalc publish",
     "yalc:push": "yarn build && yalc push"
   },
   "peerDependencies": {
