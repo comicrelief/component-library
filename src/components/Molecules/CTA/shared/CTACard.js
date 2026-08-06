@@ -4,6 +4,8 @@ import Picture from '../../../Atoms/Picture/Picture';
 import Link from '../../../Atoms/Link/Link';
 import ArrowIcon from '../../shared/ctaArrow/ArrowIcon';
 import altCtaUnderline from '../../../../theme/shared/assets/alt_cta_underline.svg';
+import { CtaTextUnderline } from '../../shared/ctaText/ctaText.style';
+
 import {
   CardLink,
   ImageWrapper,
@@ -12,7 +14,6 @@ import {
   CardLabel,
   CTA,
   CTAText,
-  CTATextUnderline,
   ArrowIconOuter,
   ArrowIconInner,
   ArrowIconWrapper,
@@ -86,7 +87,7 @@ const CTACard = ({
             <CTA>
               <CTAText>
                 {linkLabel}
-                <CTATextUnderline
+                <CtaTextUnderline
                   src={altCtaUnderline}
                   alt=""
                   aria-hidden="true"

@@ -4,6 +4,7 @@ import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import fontHelper from '../../../../theme/crTheme/fontHelper';
 import defaultBoxShadow from '../../../../theme/shared/boxShadows';
 import { ArrowIconInner, ArrowIconOuter, ArrowIconWrapper } from '../../shared/ctaArrow/CtaArrowCircle.style';
+import { CtaTextUnderline } from '../../shared/ctaText/ctaText.style';
 
 const ImageWrapper = styled.div`
   width: 100%;
@@ -64,17 +65,6 @@ const CTAText = styled.span`
   display: inline-block;
 `;
 
-const CTATextUnderline = styled.img`
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-  pointer-events: none;
-`;
-
 // Card wrapper link - makes entire card clickable
 const CardLink = styled.a`
   display: flex;
@@ -109,27 +99,52 @@ const CardLink = styled.a`
       ${imageZoom({ initialScale: 1 })}
     }
 
-    // Desktop-only hover effects
     @media ${({ theme }) => theme.allBreakpoints('M')} {
+      &:hover {
+        ${defaultBoxShadow(true)}
+
+        ${CTAText} {
+          text-decoration: none;
+          color: ${({ theme }) => theme.color('red')};
+        }
+
+        ${CtaTextUnderline} {
+          opacity: 1;
+        }
+
+        ${ArrowIconWrapper} {
+          @media (min-width: ${breakpointValues.L}px) {
+            background: ${({ theme }) => theme.color('red')};
+          }
+
+          ${ArrowIconInner} {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+    // Desktop-only hover effects
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
       ${bounceUpAnimation(true, 10, 1)};
       /* override the bounceUpAnimation transition */
       transition: transform 0.4s cubic-bezier(0.68, -1.15, 0.265, 2.35);
 
       &:hover {
-        ${defaultBoxShadow(true)}
-
         ${ImageWrapper} img {
           ${imageZoom({ zoomed: true, finalScale: 1.06 })}
         }
 
         ${CTAText} {
           text-decoration: none;
+          
+          // TODO: mediaquery INSIDE a mediaquery? 🤔
           @media (min-width: ${breakpointValues.L}px) {
             color: ${({ theme }) => theme.color('red')};
           }
         }
 
-        ${CTATextUnderline} {
+        ${CtaTextUnderline} {
           opacity: 1;
         }
 
@@ -312,7 +327,8 @@ export {
   CardLabel,
   CTA,
   CTAText,
-  CTATextUnderline,
+  // CTATextUnderline,
+  CtaTextUnderline,
   ArrowIconOuter,
   ArrowIconInner,
   ArrowIconWrapper,

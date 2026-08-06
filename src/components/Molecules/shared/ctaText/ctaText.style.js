@@ -9,6 +9,7 @@ const CtaTextUnderline = styled.img`
   bottom: -5px;
   transition: opacity 0.15s 0.1s;
   opacity: 0;
+  pointer-events: none;
 `;
 
 const CtaIconWrapper = styled.div`
