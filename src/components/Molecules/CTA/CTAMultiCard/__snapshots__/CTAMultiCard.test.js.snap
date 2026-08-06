@@ -42,6 +42,17 @@ exports[`handles data structure correctly 1`] = `
   object-fit: cover;
 }
 
+.c18 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .c23 {
   display: inline-flex;
   align-items: center;
@@ -103,17 +114,6 @@ exports[`handles data structure correctly 1`] = `
   text-decoration: none;
   position: relative;
   display: inline-block;
-}
-
-.c18 {
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-  pointer-events: none;
 }
 
 .c6 {
@@ -264,6 +264,25 @@ exports[`handles data structure correctly 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c6:hover {
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+  }
+
+  .c6:hover .c15 {
+    text-decoration: none;
+    color: #E52630;
+  }
+
+  .c6:hover .c17 {
+    opacity: 1;
+  }
+
+  .c6:hover .c20 .c22 {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 1024px) {
   .c6 {
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transform-origin: center;
@@ -273,10 +292,6 @@ exports[`handles data structure correctly 1`] = `
   .c6:hover,
   .c6:focus {
     transform: translateY(-10px);
-  }
-
-  .c6:hover {
-    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
   }
 
   .c6:hover .c7 img {
@@ -721,6 +736,17 @@ exports[`renders 2 columns layout correctly 1`] = `
   object-fit: cover;
 }
 
+.c18 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .c23 {
   display: inline-flex;
   align-items: center;
@@ -782,17 +808,6 @@ exports[`renders 2 columns layout correctly 1`] = `
   text-decoration: none;
   position: relative;
   display: inline-block;
-}
-
-.c18 {
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-  pointer-events: none;
 }
 
 .c6 {
@@ -943,6 +958,25 @@ exports[`renders 2 columns layout correctly 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c6:hover {
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+  }
+
+  .c6:hover .c15 {
+    text-decoration: none;
+    color: #E52630;
+  }
+
+  .c6:hover .c17 {
+    opacity: 1;
+  }
+
+  .c6:hover .c20 .c22 {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 1024px) {
   .c6 {
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transform-origin: center;
@@ -952,10 +986,6 @@ exports[`renders 2 columns layout correctly 1`] = `
   .c6:hover,
   .c6:focus {
     transform: translateY(-10px);
-  }
-
-  .c6:hover {
-    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
   }
 
   .c6:hover .c7 img {
@@ -1426,6 +1456,17 @@ exports[`renders carousel mode correctly 1`] = `
   object-fit: cover;
 }
 
+.c18 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .c23 {
   display: inline-flex;
   align-items: center;
@@ -1487,17 +1528,6 @@ exports[`renders carousel mode correctly 1`] = `
   text-decoration: none;
   position: relative;
   display: inline-block;
-}
-
-.c18 {
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-  pointer-events: none;
 }
 
 .c6 {
@@ -1648,6 +1678,25 @@ exports[`renders carousel mode correctly 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c6:hover {
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+  }
+
+  .c6:hover .c15 {
+    text-decoration: none;
+    color: #E52630;
+  }
+
+  .c6:hover .c17 {
+    opacity: 1;
+  }
+
+  .c6:hover .c20 .c22 {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 1024px) {
   .c6 {
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transform-origin: center;
@@ -1657,10 +1706,6 @@ exports[`renders carousel mode correctly 1`] = `
   .c6:hover,
   .c6:focus {
     transform: translateY(-10px);
-  }
-
-  .c6:hover {
-    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
   }
 
   .c6:hover .c7 img {
@@ -2111,6 +2156,17 @@ exports[`renders correctly with data prop 1`] = `
   object-fit: cover;
 }
 
+.c18 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .c23 {
   display: inline-flex;
   align-items: center;
@@ -2172,17 +2228,6 @@ exports[`renders correctly with data prop 1`] = `
   text-decoration: none;
   position: relative;
   display: inline-block;
-}
-
-.c18 {
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-  pointer-events: none;
 }
 
 .c6 {
@@ -2333,6 +2378,25 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c6:hover {
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+  }
+
+  .c6:hover .c15 {
+    text-decoration: none;
+    color: #E52630;
+  }
+
+  .c6:hover .c17 {
+    opacity: 1;
+  }
+
+  .c6:hover .c20 .c22 {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 1024px) {
   .c6 {
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transform-origin: center;
@@ -2342,10 +2406,6 @@ exports[`renders correctly with data prop 1`] = `
   .c6:hover,
   .c6:focus {
     transform: translateY(-10px);
-  }
-
-  .c6:hover {
-    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
   }
 
   .c6:hover .c7 img {

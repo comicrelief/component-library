@@ -55,14 +55,14 @@ const ImageWrapper = styled.div`
 const CTAText = styled.span`
   ${({ theme }) => fontHelper(theme, 'span')}
   color: ${({ theme }) => theme.color('red')};
-
-  @media (min-width: ${breakpointValues.L}px) {
-    color: ${({ theme }) => theme.color('grey_4')};
-  }
   font-weight: bold;
   text-decoration: none;
   position: relative;
   display: inline-block;
+
+  @media (min-width: ${breakpointValues.L}px) {
+    color: ${({ theme }) => theme.color('grey_4')};
+  }
 `;
 
 // Card wrapper link - makes entire card clickable

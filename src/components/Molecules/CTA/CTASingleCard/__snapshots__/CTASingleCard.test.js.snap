@@ -42,6 +42,17 @@ exports[`renders correctly with data prop 1`] = `
   object-fit: cover;
 }
 
+.c17 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .c22 {
   display: inline-flex;
   align-items: center;
@@ -103,17 +114,6 @@ exports[`renders correctly with data prop 1`] = `
   text-decoration: none;
   position: relative;
   display: inline-block;
-}
-
-.c17 {
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-  pointer-events: none;
 }
 
 .c4 {
@@ -285,6 +285,25 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c4:hover {
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+  }
+
+  .c4:hover .c14 {
+    text-decoration: none;
+    color: #E52630;
+  }
+
+  .c4:hover .c16 {
+    opacity: 1;
+  }
+
+  .c4:hover .c19 .c21 {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 1024px) {
   .c4 {
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transform-origin: center;
@@ -294,10 +313,6 @@ exports[`renders correctly with data prop 1`] = `
   .c4:hover,
   .c4:focus {
     transform: translateY(-10px);
-  }
-
-  .c4:hover {
-    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
   }
 
   .c4:hover .c5 img {
@@ -501,6 +516,17 @@ exports[`renders correctly without image 1`] = `
   text-decoration: none;
 }
 
+.c13 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .c18 {
   display: inline-flex;
   align-items: center;
@@ -547,17 +573,6 @@ exports[`renders correctly without image 1`] = `
   text-decoration: none;
   position: relative;
   display: inline-block;
-}
-
-.c13 {
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-  pointer-events: none;
 }
 
 .c4 {
@@ -696,6 +711,25 @@ exports[`renders correctly without image 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c4:hover {
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+  }
+
+  .c4:hover .c10 {
+    text-decoration: none;
+    color: #E52630;
+  }
+
+  .c4:hover .c12 {
+    opacity: 1;
+  }
+
+  .c4:hover .c15 .c17 {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 1024px) {
   .c4 {
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transform-origin: center;
@@ -705,10 +739,6 @@ exports[`renders correctly without image 1`] = `
   .c4:hover,
   .c4:focus {
     transform: translateY(-10px);
-  }
-
-  .c4:hover {
-    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
   }
 
   .c4:hover .c10 {
