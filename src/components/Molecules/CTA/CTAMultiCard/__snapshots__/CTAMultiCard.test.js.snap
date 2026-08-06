@@ -131,7 +131,7 @@ exports[`handles data structure correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c6 img {
+.c6 .c7 img {
   transform: scale(1);
   transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
 }
@@ -825,7 +825,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c6 img {
+.c6 .c7 img {
   transform: scale(1);
   transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
 }
@@ -1545,7 +1545,7 @@ exports[`renders carousel mode correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c6 img {
+.c6 .c7 img {
   transform: scale(1);
   transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
 }
@@ -2245,7 +2245,7 @@ exports[`renders correctly with data prop 1`] = `
   box-sizing: border-box;
 }
 
-.c6 img {
+.c6 .c7 img {
   transform: scale(1);
   transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
 }

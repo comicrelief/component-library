@@ -95,7 +95,7 @@ const CardLink = styled.a`
   `}
 
   ${({ $isInteractive }) => $isInteractive && css`
-    img {
+    ${ImageWrapper} img {
       ${imageZoom({ initialScale: 1 })}
     }
 
