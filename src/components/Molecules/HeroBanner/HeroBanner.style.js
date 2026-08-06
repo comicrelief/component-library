@@ -218,6 +218,15 @@ const HeroBannerLink = styled.a`
     }
   }
 
+  @media ${({ theme }) => theme.breakpoints2026('M')} {
+    // Fade in the 'Alt CTA'-style squiggley underline:
+    &:hover {
+      img.cta-text-underline {
+        opacity: 1;
+      }
+    }
+  }
+
   @media ${({ theme }) => theme.breakpoints2026('L')} {
 
     ${bounceUpAnimation(true, 10, 2, true)}
@@ -227,13 +236,6 @@ const HeroBannerLink = styled.a`
 
     > div {
       width: 100%;
-    }
-
-    // Fade in the 'Alt CTA'-style squiggley underline:
-    &:hover {
-      img.cta-text-underline {
-        opacity: 1;
-      }
     }
   }
 
