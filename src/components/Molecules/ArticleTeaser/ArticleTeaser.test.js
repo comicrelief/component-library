@@ -275,6 +275,12 @@ it('renders article teaser correctly', () => {
   }
 }
 
+@media (min-width: 1024px) {
+  .c24 {
+    background: #222222;
+  }
+}
+
 @media (min-width: 740px) {
   .c4 {
     flex-direction: row;
@@ -723,6 +729,12 @@ it('renders press realese correctly', () => {
   .c17 {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c24 {
+    background: #222222;
   }
 }
 

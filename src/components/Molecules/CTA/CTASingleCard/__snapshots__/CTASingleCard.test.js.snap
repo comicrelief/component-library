@@ -211,7 +211,7 @@ exports[`renders correctly with data prop 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c20 {
     background: #222222;
   }
@@ -655,7 +655,7 @@ exports[`renders correctly without image 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c16 {
     background: #222222;
   }

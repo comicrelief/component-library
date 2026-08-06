@@ -1,5 +1,4 @@
-import styled, { css } from 'styled-components';
-import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
+import styled from 'styled-components';
 
 const ArrowIconInner = styled.span`
   display: inline-flex;
@@ -16,11 +15,9 @@ const ArrowIconWrapper = styled.div`
   border-radius: 50%;
   background: ${({ theme }) => theme.color('red')};
 
-  ${({ $preventHoverColourChange }) => !$preventHoverColourChange && css`
-    @media (min-width: ${breakpointValues.L}px) {
-      background: ${({ theme }) => theme.color('grey_4')};
-    }
-  `}
+  @media ${({ theme }) => theme.breakpoints2026('L')} {
+    background: ${({ theme }) => theme.color('grey_4')};
+  }
 
   display: flex;
   align-items: center;

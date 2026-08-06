@@ -237,7 +237,7 @@ exports[`handles data structure correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c21 {
     background: #222222;
   }
@@ -916,7 +916,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c21 {
     background: #222222;
   }
@@ -1621,7 +1621,7 @@ exports[`renders carousel mode correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c21 {
     background: #222222;
   }
@@ -2306,7 +2306,7 @@ exports[`renders correctly with data prop 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c21 {
     background: #222222;
   }

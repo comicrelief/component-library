@@ -84,7 +84,7 @@ const ArticleTeaser = ({
                 />
               </CtaText>
               <CtaIconWrapper>
-                <ArrowIconWrapper $preventHoverColourChange>
+                <ArrowIconWrapper>
                   <ArrowIconInner>
                     <ArrowIcon />
                   </ArrowIconInner>

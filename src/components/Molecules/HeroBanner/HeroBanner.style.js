@@ -4,6 +4,8 @@ import { bounceUpAnimation, playPauseReveal } from '../../../theme/shared/animat
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
 import { ArrowIconWrapper, ArrowIconInner } from '../shared/ctaArrow/CtaArrowCircle.style';
 import Picture from '../../Atoms/Picture/Picture';
+import { CtaText, CtaTextUnderline } from '../shared/ctaText/ctaText.style';
+// import { , CtaIconWrapper, CtaText } from '../shared/ctaText/ctaText.style';
 
 // Lil helper function to streamline things somewhat:
 const handleVariant = variant => {
@@ -196,9 +198,13 @@ const CTAWrapper = styled.div`
   ${({ $variant }) => ($variant !== variants.TEXT_BANNER && css`
     padding-right: 2.5rem;
 
-    span {
+    ${CtaText} {
       font-weight: bold;
       color: ${({ theme }) => theme.color('red')};
+
+      @media ${({ theme }) => theme.breakpoints2026('L')} {
+        color: ${({ theme }) => theme.color('black')};
+      }
     }
   `)}
 `;
@@ -216,13 +222,22 @@ const HeroBannerLink = styled.a`
     > div {
       ${defaultBoxShadow(true)}
     }
+
+    @media ${({ theme }) => theme.breakpoints2026('L')} {
+      ${CtaText} {
+        color: ${({ theme }) => theme.color('red')};
+      }
+    }
   }
 
-  @media ${({ theme }) => theme.breakpoints2026('M')} {
-    // Fade in the 'Alt CTA'-style squiggley underline:
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     &:hover {
-      img.cta-text-underline {
+      ${CtaTextUnderline}  {
         opacity: 1;
+      }
+
+      ${ArrowIconWrapper} ${ArrowIconInner} {
+        transform: scale(1.2);
       }
     }
   }
@@ -237,12 +252,10 @@ const HeroBannerLink = styled.a`
     > div {
       width: 100%;
     }
-  }
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
     &:hover {
-      ${ArrowIconWrapper} ${ArrowIconInner} {
-        transform: scale(1.2);
+      ${ArrowIconWrapper} {
+        background: ${({ theme }) => theme.color('red')};
       }
     }
   }
