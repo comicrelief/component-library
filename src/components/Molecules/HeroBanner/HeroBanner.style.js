@@ -5,7 +5,6 @@ import defaultBoxShadow from '../../../theme/shared/boxShadows';
 import { ArrowIconWrapper, ArrowIconInner } from '../shared/ctaArrow/CtaArrowCircle.style';
 import Picture from '../../Atoms/Picture/Picture';
 import { CtaText, CtaTextUnderline } from '../shared/ctaText/ctaText.style';
-// import { , CtaIconWrapper, CtaText } from '../shared/ctaText/ctaText.style';
 
 // Lil helper function to streamline things somewhat:
 const handleVariant = variant => {

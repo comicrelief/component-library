@@ -320,14 +320,12 @@ const CTA = styled.div`
 
 export {
   CardLink,
-  // CardsContainer,
   ImageWrapper,
   CopyAndLinkSection,
   Copy,
   CardLabel,
   CTA,
   CTAText,
-  // CTATextUnderline,
   CtaTextUnderline,
   ArrowIconOuter,
   ArrowIconInner,
