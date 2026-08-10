@@ -202,13 +202,6 @@ const CarouselWrapper = styled.div`
 
       .splide__slide {
 
-        // Global styles:
-        text-align: center;
-        display: inline-flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-direction: column;
-
         // 'Mobile'
         padding-bottom: ${props => props.$mobileHeight}px !important;
 
@@ -219,9 +212,15 @@ const CarouselWrapper = styled.div`
 
           // All slides:
           ${SlideInner} {
+            // Global styles:
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+
             // All 'ImageWrappers':
             > div:first-child {
-              background-color: turquoise;
               transition: transform ${animationSpeed}s ease;
               // transform: scale(0.5);
 
