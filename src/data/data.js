@@ -70,7 +70,7 @@ const carouselItemsComplete = {
   desktopHeight: 475,
   headerCopy: "Over the past two years, we've supported",
   peopleHelpedText: '11.7 million people',
-  autoPlay: false,
+  autoPlay: true,
   node1Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
   node1Amount: '1,000',
   node1Image: {
@@ -144,7 +144,7 @@ const carouselItemsCompleteWithPadding = {
   desktopHeight: 475,
   headerCopy: "Over the past two years, we've supported",
   peopleHelpedText: '11.7 million people',
-  autoPlay: false,
+  autoPlay: true,
   paddingBottom: '4rem',
   paddingTop: '4rem',
   backgroundColour: 'teal_light',

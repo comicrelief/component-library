@@ -503,6 +503,10 @@ exports[`renders the customised padding version correctly:
   height: 425px!important;
 }
 
+.c1 .splide.wymd-carousel .splide__slide.last-slide .c8:after {
+  content: none;
+}
+
 .c0 {
   background-color: #86E4E9;
   padding: 4rem 0 4rem;
@@ -674,9 +678,7 @@ exports[`renders the customised padding version correctly:
           >
             <div
               className=""
-            >
-              fake first slide
-            </div>
+            />
           </li>
           <li
             className="splide__slide"
@@ -1032,9 +1034,7 @@ exports[`renders the customised padding version correctly:
           <li
             className="splide__slide"
             index={10}
-          >
-            fake last slide
-          </li>
+          />
         </ul>
       </div>
     </div>

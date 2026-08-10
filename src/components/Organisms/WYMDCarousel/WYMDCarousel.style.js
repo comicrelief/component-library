@@ -146,8 +146,9 @@ const CarouselWrapper = styled.div`
       padding-top: ${spacing('l')};
     }
 
+    // **************  
     // TODO: BUTTONS
-
+    // *************
 
     // CAROUSEL
     &.wymd-carousel {
@@ -160,6 +161,14 @@ const CarouselWrapper = styled.div`
           align-items: center;
           justify-content: flex-start;
           flex-direction: column;
+        }
+
+        &.last-slide {
+          ${ImageWrapper} {
+            &:after {
+              content: none;
+            }
+          }
         }
 
         // 'Tablet' (and up) tweaks for the 3-visible layout
@@ -176,9 +185,6 @@ const CarouselWrapper = styled.div`
               &:after {
                 transition: transform ${animationSpeed}s ease, width ${animationSpeed}s ease, right ${animationSpeed}s ease;
                 right: calc(-300% - 6px);
-                // Scale in relation to the parent above
-                // TODO: ?
-                // transform: scale(1);
                 width: 300%;
               }
             }
@@ -221,7 +227,6 @@ const CarouselWrapper = styled.div`
         } 
 
         @media ${({ theme }) => theme.allBreakpoints('L')} {
-          // background-color: orange;
           height: ${props => props.$desktopHeight}px !important;
 
           // ALL SLIDES:

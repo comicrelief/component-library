@@ -15,7 +15,7 @@ export default function WYMDCarouselExample() {
         <WYMDCarousel data={carouselItemsComplete} />
       </ExampleContainer>
 
-      <ExampleContainer>
+      {/* <ExampleContainer>
         <h2 style={{ textAlign: 'center' }}>
           All fields supplied, autoplay on, custom padding:
         </h2>
@@ -35,7 +35,7 @@ export default function WYMDCarouselExample() {
           All REQUIRED fields supplied (nodes 1-4), autoplay off:
         </h2>
         <WYMDCarousel data={carouselItemsMinimal} />
-      </ExampleContainer>
+      </ExampleContainer> */}
     </>
   );
 }
