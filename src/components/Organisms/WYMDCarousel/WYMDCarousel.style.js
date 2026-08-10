@@ -10,6 +10,10 @@ const animationSpeed = 0.75;
 const textScaleOffsetA = 45;
 const textScaleOffsetB = 5;
 
+const AllTextWrapper = styled.div`
+//
+`;
+
 const ImageWrapper = styled.div`
   width: 45%;
   display: block;
@@ -25,6 +29,7 @@ const ImageWrapper = styled.div`
     display: block;
   }
 
+  // Dashed 'connecting' line:
   &:after {
     position: absolute;
     content: '';
@@ -118,7 +123,7 @@ const Including = styled(Text)`
 `;
 
 const SlideInner = styled.div`
-  //
+  // Don't need any custom styles, just wanted a nice clear selector :)
 `;
 
 // Unfortunately having to target plugin-created markup ye olde fashioned way:
@@ -142,155 +147,74 @@ const CarouselWrapper = styled.div`
     }
 
     // TODO: BUTTONS
-    button.carousel__back-button,
-    button.carousel__next-button {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 33% !important;
-      height: 100%;
-      padding: 0 !important;
-      box-shadow: none;
-      text-indent: -9999px;
-      background-color: transparent;
-      border: none;
 
-      &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 50%;
-        height: 100%;
-        transition: opacity 0.2s linear;
-        background: linear-gradient(90deg, rgba(255, 255, 255, 1),
-        rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
-      }
 
-      &:hover {
-        &:after {
-          opacity: 0.5;
-        }
-      }
-
-      @media ${({ theme }) => theme.allBreakpoints('M')} {
-        width: 33.3% !important;
-        &:after {
-          width: 100%;
-        }
-      }
-    }
-
-    button.carousel__next-button {
-      left: auto;
-      right: 0;
-
-      &:before {
-        transform: translate(0, -50%) rotate(-90deg);
-      }
-
-      &:after {
-        left: auto;
-        right: 0;
-        background: linear-gradient(270deg, rgba(255, 255, 255, 1),
-        rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
-      }
-    }
-    // ... TODO: BUTTONS
-
+    // CAROUSEL
     &.wymd-carousel {
-
       .splide__slide {
+        height: ${props => props.$mobileHeight}px !important;
 
-        // 'Mobile'
-        padding-bottom: ${props => props.$mobileHeight}px !important;
+        ${SlideInner} {
+          text-align: center;
+          display: inline-flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-direction: column;
+        }
 
         // 'Tablet' (and up) tweaks for the 3-visible layout
         @media ${({ theme }) => theme.allBreakpoints('M')} {
+          height: ${props => props.$tabletHeight}px !important;
 
-          padding-bottom: ${props => props.$tabletHeight}px !important;
-
-          // All slides:
+          // ALL SLIDES:
           ${SlideInner} {
-            // Global styles:
-            text-align: center;
-            display: inline-flex;
-            align-items: center;
-            justify-content: flex-start;
-            flex-direction: column;
+            ${ImageWrapper} {
+              transition: transform ${animationSpeed}s ease;
+              transform: scale(0.5);
 
-            // All 'ImageWrappers':
-            > div:first-child {
-              // transition: transform ${animationSpeed}s ease transform: scale(0.5);
-
-              // DOTTED LINES
+              // Dashed 'connecting' line:
               &:after {
-                transition: transform ${animationSpeed}s ease,
-                width ${animationSpeed}s ease,
-                right ${animationSpeed}s ease;
+                transition: transform ${animationSpeed}s ease, width ${animationSpeed}s ease, right ${animationSpeed}s ease;
                 right: calc(-300% - 6px);
                 // Scale in relation to the parent above
+                // TODO: ?
                 // transform: scale(1);
                 width: 300%;
               }
             }
 
-            // Scale down ALL copy
-            .all-text-wrapper {
+            ${AllTextWrapper} {
               transition: transform ${animationSpeed}s ease;
               transform-origin: top;
-              // transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5);
+              transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5);
             }
           }
 
-          // Our 'first' slide of the three:
-          &.is-active {
-            background-color: red;
+          // ACTIVE/MIDDLE SLIDE:
+          + .is-next {
             ${SlideInner} {
-            background-color: red;
-              // transform: scale(0.5);
-              > div:first-child {
-              // TODO: DOTTED LINE
+              ${ImageWrapper} {
+                transform: scale(1);
+                
+                 // Dashed 'connecting' line:
                 &:after {
-                  right: calc(-300% - 6px);
-                  // transform: scale(1);
+                  right: calc(-222% - 6px);
+                  transform: scale(0.5);
                   width: 300%;
                 }
               }
+
+              ${AllTextWrapper} {
+                transform: scale(1);
+              }
             }
+          }
 
-            // 2nd and 3rd:
-            + .carousel__slide--visible {
-              ${SlideInner} {
-                > div:first-child {
-                  // transform: scale(1);
-                  // TODO: DOTTED LINE
-                  &:after {
-                    right: calc(-222% - 6px);
-                    transform: scale(0.5);
-                    width: 300%;
-                  }
-                }
-              }
-
-              .all-text-wrapper {
-                // transform: translateY(0) scale(1);
-              }
-
-              // Resets the 3rd slide:
-              + .carousel__slide--visible {
-                > div > div:first-child {
-                  // transform: scale(0.5);
-
-                // TODO: DOTTED LINE
-                  &:after {
-                    right: calc(-300% - 6px);
-                    // transform: scale(1);
-                    width: 300%;
-                  }
-                }
-                .all-text-wrapper {
-                  // transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5)
+          // Silly tweak needed to get things to line-up nicely:
+          + .is-prev {
+            ${ImageWrapper} {
+                &:after {
+                  right: calc(-360%);
                 }
               }
             }
@@ -299,49 +223,51 @@ const CarouselWrapper = styled.div`
 
         // 'Desktop'
         @media ${({ theme }) => theme.allBreakpoints('L')} {
-          padding-bottom: ${props => props.$desktopHeight}px !important;
+          height: ${props => props.$desktopHeight}px !important;
 
-          // First
-          &.carousel__slide--visible {
-            ${SlideInner} {
-              > div:first-child {
-                &:after {
-                  right: calc(-250% - 6px);
-                  width: 250%;
-                }
+          // ALL SLIDES:
+          ${SlideInner} {
+            ${ImageWrapper} {
+              // Dashed 'connecting' line:
+              &:after {
+                right: calc(-666%);
+                width: 300%;
               }
             }
-
-            // 2nd and 3rd
-            + .carousel__slide--visible {
-              ${SlideInner} {
-                > div:first-child {
-                  &:after {
-                    right: calc(-187% - 6px);
-                    width: 250%;
-                  }
-                }
-              }
-
-
-              // 3rd only
-              + .carousel__slide--visible {
-                ${SlideInner} {
-                  > div:first-child {
-                    &:after {
-                      right: calc(-250% - 6px);
-                      width: 250%;
-                    }
-                  }
-                }
-              }
-            }
-
-
           }
 
-        }
+          // ACTIVE/MIDDLE SLIDE:
+          + .is-next {
+            ${SlideInner} {
+              ${ImageWrapper} {       
+                // Dashed 'connecting' line:
+                &:after {
+                  right: calc(-222% - 6px);
+                  width: 300%;
+                }
+              }
+
+              ${AllTextWrapper} {
+                transform: scale(1);
+              }
+            }
+          }
+
+          // Silly tweak needed to get things to line-up nicely:
+          + .is-prev {
+            ${ImageWrapper} {
+                &:after {
+                  right: calc(-400%);
+                }
+              }
+            }
+          }
+        } 
         // END OF DESKTOP
+
+
+
+
       }
     }
   }
@@ -354,5 +280,5 @@ const Container = styled.div`
 
 export {
   CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper,
-  Heading, PeopleHelpedText, Including, Container, SlideInner
+  Heading, PeopleHelpedText, Including, Container, SlideInner, AllTextWrapper
 };

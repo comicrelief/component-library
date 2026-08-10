@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { atoms, molecules, organisms, docs } from './demos/index.jsx';
-import { Layout, Sidebar, SidebarTitle, SidebarItem, Preview, PreviewHeader, PreviewBox, Logo, IsolateButton } from './App.styles.js';
+import {
+  atoms, molecules, organisms, docs
+} from './demos/index.jsx';
+import {
+  Layout, Sidebar, SidebarTitle, SidebarItem, Preview, PreviewHeader, PreviewBox, Logo, IsolateButton
+} from './App.styles.js';
 import crLogo from './components/Atoms/Logos/assets/cr-logo.svg';
 
 const Chevron = styled.span`
@@ -14,7 +18,7 @@ const groups = [
   { label: 'Docs', items: docs },
   { label: 'Atoms', items: atoms },
   { label: 'Molecules', items: molecules },
-  { label: 'Organisms', items: organisms },
+  { label: 'Organisms', items: organisms }
 ];
 
 // unpack all items in all groups into one flay array
@@ -28,10 +32,8 @@ function itemFromHash() {
 
 export default function App() {
   const [selected, setSelected] = useState(itemFromHash);
-  const [isIsolated, setIsIsolated] = useState(false);
-  const [openGroups, setOpenGroups] = useState(() =>
-    groups.reduce((acc, g) => ({ ...acc, [g.label]: false }), {})
-  );
+  const [isIsolated, setIsIsolated] = useState(true);
+  const [openGroups, setOpenGroups] = useState(() => groups.reduce((acc, g) => ({ ...acc, [g.label]: false }), {}));
 
   const toggleGroup = label => setOpenGroups(prev => ({ ...prev, [label]: !prev[label] }));
 

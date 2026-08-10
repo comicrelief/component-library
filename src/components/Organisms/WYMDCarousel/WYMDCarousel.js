@@ -11,7 +11,7 @@ import formatItems from './_utils';
 
 import {
   CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper,
-  Heading, PeopleHelpedText, Including, Container, SlideInner
+  Heading, PeopleHelpedText, Including, Container, SlideInner, AllTextWrapper
 } from './WYMDCarousel.style';
 import Text from '../../Atoms/Text/Text';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
@@ -37,6 +37,7 @@ const WYMDCarousel = ({ data }) => {
   const [theseItems, setTheseItems] = useState();
 
   // Custom function to let us update the carousel config dynamically
+  // TODO: I don't think this works
   const screenResize = useCallback(() => {
     const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
     const isCurrentlyMobile = window.innerWidth < breakpointValues.M;
@@ -103,7 +104,7 @@ const WYMDCarousel = ({ data }) => {
         <Splide
           className="wymd-carousel"
           options={{
-            speed: 750,
+            speed: 1000,
             arrows: true,
             pagination: false,
             // Reduce swipe "throw" as Matt felt the defaults are too much
@@ -111,8 +112,9 @@ const WYMDCarousel = ({ data }) => {
             drag: 'free',
             flickPower: 50,
             perMove: 1,
-            perPage: 3,
-            dragMinThreshold: { mouse: 50, touch: 50 }
+            perPage: isMobile ? 1 : 3,
+            dragMinThreshold: { mouse: 50, touch: 50 },
+            updateOnMove: true
           }}
         >
 
@@ -147,7 +149,7 @@ const WYMDCarousel = ({ data }) => {
                       <img src={theseItems[key].image.file.url} alt={theseItems[key].copy} />
                     </ImageWrapper>
 
-                    <div className="all-text-wrapper">
+                    <AllTextWrapper>
                       <AmountWrapper>
                         <Text tag="h1" family="Anton">
                           {theseItems[key].amount}
@@ -159,7 +161,7 @@ const WYMDCarousel = ({ data }) => {
                           {theseItems[key].copy}
                         </Text>
                       </CopyWrapper>
-                    </div>
+                    </AllTextWrapper>
                               
                   </SlideInner>
 
@@ -173,7 +175,6 @@ const WYMDCarousel = ({ data }) => {
           <SplideSlide
             index={theseItems.length + 1} 
             key={theseItems.length + 1}
-            className="bookend-last"
           >
             fake last slide
           </SplideSlide>
