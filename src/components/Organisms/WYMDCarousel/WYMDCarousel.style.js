@@ -117,6 +117,10 @@ const Including = styled(Text)`
   }
 `;
 
+const SlideInner = styled.div`
+  //
+`;
+
 // Unfortunately having to target plugin-created markup ye olde fashioned way:
 const CarouselWrapper = styled.div`
   height: 100%;
@@ -128,7 +132,7 @@ const CarouselWrapper = styled.div`
   border-radius: 20px;
   ${defaultBoxShadow()}
 
-  .carousel {
+  .splide {
     position: relative;
     margin: 0 auto;
     padding-top: ${spacing('l')};
@@ -137,6 +141,7 @@ const CarouselWrapper = styled.div`
       padding-top: ${spacing('l')};
     }
 
+    // TODO: BUTTONS
     button.carousel__back-button,
     button.carousel__next-button {
       position: absolute;
@@ -191,22 +196,19 @@ const CarouselWrapper = styled.div`
         rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
       }
     }
+    // ... TODO: BUTTONS
 
-    .wymd-carousel {
-      // Override default animations
-      transition: -webkit-transform ${animationSpeed}s;
-      -o-transition: transform ${animationSpeed}s;
-      transition: transform ${animationSpeed}s;
-      -webkit-transform: ${animationSpeed}s;
-      will-change: transform;
+    &.wymd-carousel {
 
-      .last-slide {
-        .image-wrapper:after {
-          content: none;
-        }
-      }
+      .splide__slide {
 
-      .carousel__slide {
+        // Global styles:
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+
         // 'Mobile'
         padding-bottom: ${props => props.$mobileHeight}px !important;
 
@@ -216,19 +218,21 @@ const CarouselWrapper = styled.div`
           padding-bottom: ${props => props.$tabletHeight}px !important;
 
           // All slides:
-          .carousel__inner-slide {
-
+          ${SlideInner} {
             // All 'ImageWrappers':
             > div:first-child {
+              background-color: turquoise;
               transition: transform ${animationSpeed}s ease;
-              transform: scale(0.5);
+              // transform: scale(0.5);
 
+              // DOTTED LINES
               &:after {
                 transition: transform ${animationSpeed}s ease,
                 width ${animationSpeed}s ease,
                 right ${animationSpeed}s ease;
                 right: calc(-300% - 6px);
-                transform: scale(1);
+                // Scale in relation to the parent above
+                // transform: scale(1);
                 width: 300%;
               }
             }
@@ -237,17 +241,22 @@ const CarouselWrapper = styled.div`
             .all-text-wrapper {
               transition: transform ${animationSpeed}s ease;
               transform-origin: top;
-              transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5)
+              transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%));
+              // scale(0.5);
             }
           }
 
           // Our 'first' slide of the three:
-          &.carousel__slide--visible {
-            .carousel__inner-slide {
+          &.is-active {
+            background-color: red;
+            ${SlideInner} {
+            background-color: red;
+              // transform: scale(0.5);
               > div:first-child {
+              // TODO: DOTTED LINE
                 &:after {
                   right: calc(-300% - 6px);
-                  transform: scale(1);
+                  // transform: scale(1);
                   width: 300%;
                 }
               }
@@ -255,9 +264,10 @@ const CarouselWrapper = styled.div`
 
             // 2nd and 3rd:
             + .carousel__slide--visible {
-              .carousel__inner-slide {
+              ${SlideInner} {
                 > div:first-child {
-                  transform: scale(1);
+                  // transform: scale(1);
+                  // TODO: DOTTED LINE
                   &:after {
                     right: calc(-222% - 6px);
                     transform: scale(0.5);
@@ -267,21 +277,24 @@ const CarouselWrapper = styled.div`
               }
 
               .all-text-wrapper {
-                transform: translateY(0) scale(1);
+                // transform: translateY(0) scale(1);
               }
 
               // Resets the 3rd slide:
               + .carousel__slide--visible {
                 > div > div:first-child {
-                  transform: scale(0.5);
+                  // transform: scale(0.5);
+
+                // TODO: DOTTED LINE
                   &:after {
                     right: calc(-300% - 6px);
-                    transform: scale(1);
+                    // transform: scale(1);
                     width: 300%;
                   }
                 }
                 .all-text-wrapper {
-                  transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5)
+                  transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)); 
+                  // scale(0.5)
                 }
               }
             }
@@ -294,7 +307,7 @@ const CarouselWrapper = styled.div`
 
           // First
           &.carousel__slide--visible {
-            .carousel__inner-slide {
+            ${SlideInner} {
               > div:first-child {
                 &:after {
                   right: calc(-250% - 6px);
@@ -305,7 +318,7 @@ const CarouselWrapper = styled.div`
 
             // 2nd and 3rd
             + .carousel__slide--visible {
-              .carousel__inner-slide {
+              ${SlideInner} {
                 > div:first-child {
                   &:after {
                     right: calc(-187% - 6px);
@@ -317,7 +330,7 @@ const CarouselWrapper = styled.div`
 
               // 3rd only
               + .carousel__slide--visible {
-                .carousel__inner-slide {
+                ${SlideInner} {
                   > div:first-child {
                     &:after {
                       right: calc(-250% - 6px);
@@ -333,14 +346,6 @@ const CarouselWrapper = styled.div`
 
         }
         // END OF DESKTOP
-
-        .carousel__inner-slide {
-          text-align: center;
-          display: inline-flex;
-          align-items: center;
-          justify-content: flex-start;
-          flex-direction: column;
-        }
       }
     }
   }
@@ -353,5 +358,5 @@ const Container = styled.div`
 
 export {
   CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper,
-  Heading, PeopleHelpedText, Including, Container
+  Heading, PeopleHelpedText, Including, Container, SlideInner
 };

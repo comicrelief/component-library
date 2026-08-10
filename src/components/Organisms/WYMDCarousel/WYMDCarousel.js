@@ -1,15 +1,17 @@
+/* eslint-disable no-multiple-empty-lines */
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable no-unused-vars */
 import React, {
   useEffect, useState, useCallback
 } from 'react';
 import PropTypes from 'prop-types';
-import {
-  CarouselProvider, Slider, Slide, ButtonBack, ButtonNext
-} from 'pure-react-carousel';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
 import formatItems from './_utils';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+
 import {
   CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper,
-  Heading, PeopleHelpedText, Including, Container
+  Heading, PeopleHelpedText, Including, Container, SlideInner
 } from './WYMDCarousel.style';
 import Text from '../../Atoms/Text/Text';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
@@ -68,12 +70,16 @@ const WYMDCarousel = ({ data }) => {
     setTotalSlides(isMobile ? theseItems.length : theseItems.length + 2);
   }
 
+  // Reflect that initial dummy/bookend slide shown on non-mobile/tablet views:
+  const thisIndexOffset = isMobile ? 0 : 1;
+
   return (
     <Container
       $paddingTop={paddingTop}
       $paddingBottom={paddingBottom}
       $backgroundColour={backgroundColour}
     >
+
       <CarouselWrapper
         className="CarouselWrapper"
         id={thisID}
@@ -81,7 +87,6 @@ const WYMDCarousel = ({ data }) => {
         $tabletHeight={tabletHeight}
         $desktopHeight={desktopHeight}
       >
-
         <Heading tag="p" weight="bold">
           { headerCopy}
         </Heading>
@@ -95,70 +100,181 @@ const WYMDCarousel = ({ data }) => {
         </Including>
 
         {theseItems && (
-        <CarouselProvider
-          naturalSlideWidth={50}
-          naturalSlideHeight={200}
-          totalSlides={totalSlides}
-          isPlaying={autoPlay}
-          interval={5000}
-          visibleSlides={visibleSlides}
-          infinite
+        <Splide
+          className="wymd-carousel"
+          options={{
+            speed: 750,
+            arrows: true,
+            pagination: false,
+            // Reduce swipe "throw" as Matt felt the defaults are too much
+            // See https://splidejs.com/guides/options/
+            drag: 'free',
+            flickPower: 50,
+            perMove: 1,
+            perPage: 3,
+            dragMinThreshold: { mouse: 50, touch: 50 }
+          }}
         >
-          <Slider classNameAnimation="wymd-carousel">
 
-            {/* Dummy slide for our desired non-mobile layout and functionality */}
-            {isMobile === false && (
-            <Slide index={0} key={0} />
-            )}
+          {/* Dummy slide for our desired non-mobile layout and functionality */}
+          {isMobile === false && (
+          <SplideSlide
+            index={0} 
+            key={0}
+            className="bookend-first"
+          >
+            <SlideInner>
+              fake first slide
+            </SlideInner>
+          </SplideSlide>
+          )}
 
-            {Object.keys(theseItems).map((key, index) => {
-            // Reflect that initial dummy/bookend slide shown on non-mobile/tablet views:
-              const thisOffsetIndex = index + (isMobile ? 0 : 1);
+          {Object.keys(theseItems).map((key, index) => {
+            const tweakedIndex = index + thisIndexOffset;
+            return (
 
-              return (
-              // Calculate the index offset accordingly to reflect the number of slides,
-              // but use the REAL index when determining if its the last REAL slide
-                <Slide
-                  index={thisOffsetIndex}
+              <>
+                {/* // Calculate the index offset accordingly to reflect the number of slides,
+                // but use the REAL index when determining if its the last REAL slide
+                // TODO: figure out this */}
+                <SplideSlide
                   className={index === (theseItems.length - 1) && 'last-slide'}
-                  key={thisOffsetIndex}
+                  key={tweakedIndex}
+                  index={tweakedIndex}
                 >
+                  <SlideInner>
+                    <ImageWrapper className="image-wrapper">
+                      <img src={theseItems[key].image.file.url} alt={theseItems[key].copy} />
+                    </ImageWrapper>
 
-                  <ImageWrapper className="image-wrapper">
-                    <img src={theseItems[key].image.file.url} alt={theseItems[key].copy} />
-                  </ImageWrapper>
+                    <div className="all-text-wrapper">
+                      <AmountWrapper>
+                        <Text tag="h1" family="Anton">
+                          {theseItems[key].amount}
+                        </Text>
+                      </AmountWrapper>
 
-                  <div className="all-text-wrapper">
-                    <AmountWrapper>
-                      <Text tag="h1" family="Anton">
-                        {theseItems[key].amount}
-                      </Text>
-                    </AmountWrapper>
+                      <CopyWrapper>
+                        <Text tag="p">
+                          {theseItems[key].copy}
+                        </Text>
+                      </CopyWrapper>
+                    </div>
+                              
+                  </SlideInner>
 
-                    <CopyWrapper>
-                      <Text tag="p">
-                        {theseItems[key].copy}
-                      </Text>
-                    </CopyWrapper>
-                  </div>
+                </SplideSlide>
+              </>
+            ); 
+          })}
 
-                </Slide>
-              );
-            })}
+          {/* Dummy slide for our desired non-mobile layout and functionality */}
+          {isMobile === false && (
+          <SplideSlide
+            index={theseItems.length + 1} 
+            key={theseItems.length + 1}
+            className="bookend-last"
+          >
+            fake last slide
+          </SplideSlide>
+          )}
 
-            {/* Dummy slide for our desired non-mobile layout and functionality */}
-            {isMobile === false && (
-            <Slide index={theseItems.length + 1} key="bookend-last" />
-            )}
-
-          </Slider>
-          <ButtonBack>Back</ButtonBack>
-          <ButtonNext>Next</ButtonNext>
-        </CarouselProvider>
+        </Splide>
         )}
 
       </CarouselWrapper>
     </Container>
+
+  // <Container
+  //   $paddingTop={paddingTop}
+  //   $paddingBottom={paddingBottom}
+  //   $backgroundColour={backgroundColour}
+  // >
+  //   <CarouselWrapper
+  //     className="CarouselWrapper"
+  //     id={thisID}
+  //     $mobileHeight={mobileHeight}
+  //     $tabletHeight={tabletHeight}
+  //     $desktopHeight={desktopHeight}
+  //   >
+
+  //     <Heading tag="p" weight="bold">
+  //       { headerCopy}
+  //     </Heading>
+
+  //     <PeopleHelpedText tag="h1" family="Anton" weight="normal" color="red">
+  //       { peopleHelpedText}
+  //     </PeopleHelpedText>
+
+  //     <Including tag="p">
+  //       including...
+  //     </Including>
+
+  //     {theseItems && (
+  //     <CarouselProvider
+  //       naturalSlideWidth={50}
+  //       naturalSlideHeight={200}
+  //       totalSlides={totalSlides}
+  //       isPlaying={autoPlay}
+  //       interval={5000}
+  //       visibleSlides={visibleSlides}
+  //       infinite
+  //     >
+  //       <Slider classNameAnimation="wymd-carousel">
+
+  //         {/* Dummy slide for our desired non-mobile layout and functionality */}
+  //         {isMobile === false && (
+  //         <Slide index={0} key={0} />
+  //         )}
+
+  //         {Object.keys(theseItems).map((key, index) => {
+  //         // Reflect that initial dummy/bookend slide shown on non-mobile/tablet views:
+  //           const thisOffsetIndex = index + (isMobile ? 0 : 1);
+
+  //           return (
+  //           // Calculate the index offset accordingly to reflect the number of slides,
+  //           // but use the REAL index when determining if its the last REAL slide
+  //             <Slide
+  //               index={thisOffsetIndex}
+  //               className={index === (theseItems.length - 1) && 'last-slide'}
+  //               key={thisOffsetIndex}
+  //             >
+
+  //               <ImageWrapper className="image-wrapper">
+  //                 <img src={theseItems[key].image.file.url} alt={theseItems[key].copy} />
+  //               </ImageWrapper>
+
+  //               <div className="all-text-wrapper">
+  //                 <AmountWrapper>
+  //                   <Text tag="h1" family="Anton">
+  //                     {theseItems[key].amount}
+  //                   </Text>
+  //                 </AmountWrapper>
+
+  //                 <CopyWrapper>
+  //                   <Text tag="p">
+  //                     {theseItems[key].copy}
+  //                   </Text>
+  //                 </CopyWrapper>
+  //               </div>
+
+  //             </Slide>
+  //           );
+  //         })}
+
+  //         {/* Dummy slide for our desired non-mobile layout and functionality */}
+  //         {isMobile === false && (
+  //         <Slide index={theseItems.length + 1} key="bookend-last" />
+  //         )}
+
+  //       </Slider>
+  //       <ButtonBack>Back</ButtonBack>
+  //       <ButtonNext>Next</ButtonNext>
+  //     </CarouselProvider>
+  //     )}
+
+  //   </CarouselWrapper>
+  // </Container>
 
   );
 };
