@@ -688,10 +688,6 @@ exports[`renders the customised padding version correctly:
     right: calc(-300% - 6px);
     width: 300%;
   }
-
-  .c1 .splide.wymd-carousel .splide__slide.is-active +.carousel__slide--visible +.carousel__slide--visible .all-text-wrapper {
-    transform: translateY(calc(-45px + 5%));
-  }
 }
 
 @media (min-width: 1024px) {
@@ -1695,10 +1691,6 @@ exports[`renders the default padding version correctly:
   .c1 .splide.wymd-carousel .splide__slide.is-active +.carousel__slide--visible +.carousel__slide--visible >div>div:first-child:after {
     right: calc(-300% - 6px);
     width: 300%;
-  }
-
-  .c1 .splide.wymd-carousel .splide__slide.is-active +.carousel__slide--visible +.carousel__slide--visible .all-text-wrapper {
-    transform: translateY(calc(-45px + 5%));
   }
 }
 

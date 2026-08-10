@@ -221,8 +221,7 @@ const CarouselWrapper = styled.div`
 
             // All 'ImageWrappers':
             > div:first-child {
-              transition: transform ${animationSpeed}s ease;
-              // transform: scale(0.5);
+              // transition: transform ${animationSpeed}s ease transform: scale(0.5);
 
               // DOTTED LINES
               &:after {
@@ -240,8 +239,7 @@ const CarouselWrapper = styled.div`
             .all-text-wrapper {
               transition: transform ${animationSpeed}s ease;
               transform-origin: top;
-              transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%));
-              // scale(0.5);
+              // transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5);
             }
           }
 
@@ -292,8 +290,7 @@ const CarouselWrapper = styled.div`
                   }
                 }
                 .all-text-wrapper {
-                  transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)); 
-                  // scale(0.5)
+                  // transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5)
                 }
               }
             }
