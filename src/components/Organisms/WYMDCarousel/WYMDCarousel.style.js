@@ -150,6 +150,97 @@ const CarouselWrapper = styled.div`
     // TODO: BUTTONS
     // *************
 
+    .splide__arrows {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    button.splide__arrow--prev,
+    button.splide__arrow--next {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 33% !important;
+      height: 100%;
+      padding: 0 !important;
+      box-shadow: none;
+      text-indent: -9999px;
+      background-color: transparent;
+      border: none;
+      transform: none;
+      border-radius: 0;
+
+      svg {
+        display: none;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        transition: opacity 0.2s linear;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+      }
+
+      &.splide__arrow--next {
+        left: auto;
+        right: 0;
+
+        &:before {
+          transform: translate(0, -50%) rotate(-90deg);
+        }
+      }
+
+      &:hover {
+        &:after {
+          opacity: 0.5;
+        }
+      }
+
+      @media ${({ theme }) => theme.allBreakpoints('M')} {
+        width: 33.3% !important;
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+
+    button.carousel__next-button {
+      left: auto;
+      right: 0;
+
+
+
+      &:after {
+        left: auto;
+        right: 0;
+        background: linear-gradient(270deg, rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+      }
+    }
+    // ... END OF - TODO: BUTTONS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // CAROUSEL
     &.wymd-carousel {
       .splide__slide {
