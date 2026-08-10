@@ -104,8 +104,6 @@ const WYMDCarousel = ({ data }) => {
             speed: 1000,
             arrows: true,
             pagination: false,
-            // Reduce swipe "throw" as Matt felt the defaults are too much
-            // See https://splidejs.com/guides/options/
             drag: 'free',
             flickPower: 50,
             perMove: 1,
