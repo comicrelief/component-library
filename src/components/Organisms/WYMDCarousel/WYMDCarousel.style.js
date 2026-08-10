@@ -213,16 +213,15 @@ const CarouselWrapper = styled.div`
           // Silly tweak needed to get things to line-up nicely:
           + .is-prev {
             ${ImageWrapper} {
-                &:after {
-                  right: calc(-360%);
-                }
+              &:after {
+                right: calc(-360%);
               }
             }
           }
-        }
+        } 
 
-        // 'Desktop'
         @media ${({ theme }) => theme.allBreakpoints('L')} {
+          // background-color: orange;
           height: ${props => props.$desktopHeight}px !important;
 
           // ALL SLIDES:
@@ -230,47 +229,36 @@ const CarouselWrapper = styled.div`
             ${ImageWrapper} {
               // Dashed 'connecting' line:
               &:after {
-                right: calc(-666%);
-                width: 300%;
+                width: 250%;
+                right: calc(-250% - 6px);
               }
             }
           }
-
+      
           // ACTIVE/MIDDLE SLIDE:
           + .is-next {
             ${SlideInner} {
               ${ImageWrapper} {       
                 // Dashed 'connecting' line:
                 &:after {
-                  right: calc(-222% - 6px);
-                  width: 300%;
+                  width: 250%;
+                  right: calc(-192%);
                 }
-              }
-
-              ${AllTextWrapper} {
-                transform: scale(1);
               }
             }
           }
 
-          // Silly tweak needed to get things to line-up nicely:
           + .is-prev {
             ${ImageWrapper} {
-                &:after {
-                  right: calc(-400%);
-                }
+              &:after {
+                right: calc(-315%);
               }
             }
           }
-        } 
-        // END OF DESKTOP
-
-
-
-
-      }
-    }
-  }
+        }
+      } // end of .splide__slide
+    } // end of .splide.wymd-carousel
+  } // end of CarouselWrapper
 `;
 
 const Container = styled.div`

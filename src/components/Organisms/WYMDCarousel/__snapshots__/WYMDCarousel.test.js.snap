@@ -393,7 +393,7 @@ exports[`renders the customised padding version correctly:
   line-height: inherit;
 }
 
-.c10 {
+.c11 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
@@ -402,16 +402,16 @@ exports[`renders the customised padding version correctly:
   line-height: 2rem;
 }
 
-.c10 {
+.c11 {
   font-family: 'Anton',Impact,sans-serif;
 }
 
-.c10 span {
+.c11 span {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c8 {
+.c9 {
   width: 45%;
   display: block;
   padding: 9%;
@@ -421,13 +421,13 @@ exports[`renders the customised padding version correctly:
   overflow: visible;
 }
 
-.c8 img {
+.c9 img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.c8:after {
+.c9:after {
   position: absolute;
   content: '';
   top: 50%;
@@ -437,22 +437,22 @@ exports[`renders the customised padding version correctly:
   border-bottom: 2px dashed #89888b;
 }
 
-.c9 {
+.c10 {
   padding: 1.5rem 0 0.75rem;
 }
 
-.c9 h1 {
+.c10 h1 {
   font-size: 34px;
   line-height: 37px;
 }
 
-.c11 {
+.c12 {
   padding: 0;
   width: 75%;
   margin: 0 auto;
 }
 
-.c11 p {
+.c12 p {
   font-size: 1rem;
   line-height: 1.5rem;
 }
@@ -499,54 +499,8 @@ exports[`renders the customised padding version correctly:
   padding-top: 2rem;
 }
 
-.c1 .splide button.carousel__back-button,
-.c1 .splide button.carousel__next-button {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 33%!important;
-  height: 100%;
-  padding: 0!important;
-  box-shadow: none;
-  text-indent: -9999px;
-  background-color: transparent;
-  border: none;
-}
-
-.c1 .splide button.carousel__back-button:after,
-.c1 .splide button.carousel__next-button:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  transition: opacity 0.2s linear;
-  background: linear-gradient(90deg,rgba(255,255,255,1),rgba(255,255,255,0.5),rgba(255,255,255,0));
-}
-
-.c1 .splide button.carousel__back-button:hover:after,
-.c1 .splide button.carousel__next-button:hover:after {
-  opacity: 0.5;
-}
-
-.c1 .splide button.carousel__next-button {
-  left: auto;
-  right: 0;
-}
-
-.c1 .splide button.carousel__next-button:before {
-  transform: translate(0,-50%) rotate(-90deg);
-}
-
-.c1 .splide button.carousel__next-button:after {
-  left: auto;
-  right: 0;
-  background: linear-gradient(270deg,rgba(255,255,255,1),rgba(255,255,255,0.5),rgba(255,255,255,0));
-}
-
 .c1 .splide.wymd-carousel .splide__slide {
-  padding-bottom: 425px!important;
+  height: 425px!important;
 }
 
 .c0 {
@@ -597,33 +551,33 @@ exports[`renders the customised padding version correctly:
 }
 
 @media (min-width: 740px) {
-  .c10 {
+  .c11 {
     font-size: 2.5rem;
     line-height: 2.5rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .c10 {
+  .c11 {
     font-size: 3rem;
     line-height: 3rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .c8 {
+  .c9 {
     width: 50%;
     padding: 9%;
   }
 
-  .c8:after {
+  .c9:after {
     width: 100%;
     right: calc(-100% - 8px);
   }
 }
 
 @media (min-width: 740px) {
-  .c9 h1 {
+  .c10 h1 {
     font-size: 40px;
     line-height: 40px;
   }
@@ -664,35 +618,22 @@ exports[`renders the customised padding version correctly:
 }
 
 @media (min-width: 740px) {
-  .c1 .splide button.carousel__back-button,
-  .c1 .splide button.carousel__next-button {
-    width: 33.3%!important;
-  }
-
-  .c1 .splide button.carousel__back-button:after,
-  .c1 .splide button.carousel__next-button:after {
-    width: 100%;
-  }
-}
-
-@media (min-width: 740px) {
   .c1 .splide.wymd-carousel .splide__slide {
-    padding-bottom: 450px!important;
+    height: 450px!important;
   }
 
-  .c1 .splide.wymd-carousel .splide__slide.is-active {
-    background-color: red;
-  }
-
-  .c1 .splide.wymd-carousel .splide__slide.is-active +.carousel__slide--visible +.carousel__slide--visible >div>div:first-child:after {
-    right: calc(-300% - 6px);
-    width: 300%;
+  .c1 .splide.wymd-carousel .splide__slide +.is-prev .c8:after {
+    right: calc(-360%);
   }
 }
 
 @media (min-width: 1024px) {
   .c1 .splide.wymd-carousel .splide__slide {
-    padding-bottom: 475px!important;
+    height: 475px!important;
+  }
+
+  .c1 .splide.wymd-carousel .splide__slide +.is-prev .c8:after {
+    right: calc(-315%);
   }
 }
 
@@ -745,7 +686,7 @@ exports[`renders the customised padding version correctly:
               className=""
             >
               <div
-                className="c8 image-wrapper"
+                className="c8 c9 image-wrapper"
               >
                 <img
                   alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
@@ -753,19 +694,19 @@ exports[`renders the customised padding version correctly:
                 />
               </div>
               <div
-                className="all-text-wrapper"
+                className=""
               >
                 <div
-                  className="c9"
+                  className="c10"
                 >
                   <h1
-                    className="c10"
+                    className="c11"
                   >
                     1,000
                   </h1>
                 </div>
                 <div
-                  className="c11"
+                  className="c12"
                 >
                   <p
                     className="c6"
@@ -784,7 +725,7 @@ exports[`renders the customised padding version correctly:
               className=""
             >
               <div
-                className="c8 image-wrapper"
+                className="c8 c9 image-wrapper"
               >
                 <img
                   alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
@@ -792,19 +733,19 @@ exports[`renders the customised padding version correctly:
                 />
               </div>
               <div
-                className="all-text-wrapper"
+                className=""
               >
                 <div
-                  className="c9"
+                  className="c10"
                 >
                   <h1
-                    className="c10"
+                    className="c11"
                   >
                     750,000
                   </h1>
                 </div>
                 <div
-                  className="c11"
+                  className="c12"
                 >
                   <p
                     className="c6"
@@ -823,7 +764,7 @@ exports[`renders the customised padding version correctly:
               className=""
             >
               <div
-                className="c8 image-wrapper"
+                className="c8 c9 image-wrapper"
               >
                 <img
                   alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
@@ -831,19 +772,19 @@ exports[`renders the customised padding version correctly:
                 />
               </div>
               <div
-                className="all-text-wrapper"
+                className=""
               >
                 <div
-                  className="c9"
+                  className="c10"
                 >
                   <h1
-                    className="c10"
+                    className="c11"
                   >
                     3,000
                   </h1>
                 </div>
                 <div
-                  className="c11"
+                  className="c12"
                 >
                   <p
                     className="c6"
@@ -862,7 +803,7 @@ exports[`renders the customised padding version correctly:
               className=""
             >
               <div
-                className="c8 image-wrapper"
+                className="c8 c9 image-wrapper"
               >
                 <img
                   alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
@@ -870,19 +811,19 @@ exports[`renders the customised padding version correctly:
                 />
               </div>
               <div
-                className="all-text-wrapper"
+                className=""
               >
                 <div
-                  className="c9"
+                  className="c10"
                 >
                   <h1
-                    className="c10"
+                    className="c11"
                   >
                     4,000
                   </h1>
                 </div>
                 <div
-                  className="c11"
+                  className="c12"
                 >
                   <p
                     className="c6"
@@ -901,7 +842,7 @@ exports[`renders the customised padding version correctly:
               className=""
             >
               <div
-                className="c8 image-wrapper"
+                className="c8 c9 image-wrapper"
               >
                 <img
                   alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
@@ -909,19 +850,19 @@ exports[`renders the customised padding version correctly:
                 />
               </div>
               <div
-                className="all-text-wrapper"
+                className=""
               >
                 <div
-                  className="c9"
+                  className="c10"
                 >
                   <h1
-                    className="c10"
+                    className="c11"
                   >
                     5,000
                   </h1>
                 </div>
                 <div
-                  className="c11"
+                  className="c12"
                 >
                   <p
                     className="c6"
@@ -940,7 +881,7 @@ exports[`renders the customised padding version correctly:
               className=""
             >
               <div
-                className="c8 image-wrapper"
+                className="c8 c9 image-wrapper"
               >
                 <img
                   alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
@@ -948,19 +889,19 @@ exports[`renders the customised padding version correctly:
                 />
               </div>
               <div
-                className="all-text-wrapper"
+                className=""
               >
                 <div
-                  className="c9"
+                  className="c10"
                 >
                   <h1
-                    className="c10"
+                    className="c11"
                   >
                     6,000
                   </h1>
                 </div>
                 <div
-                  className="c11"
+                  className="c12"
                 >
                   <p
                     className="c6"
@@ -979,7 +920,7 @@ exports[`renders the customised padding version correctly:
               className=""
             >
               <div
-                className="c8 image-wrapper"
+                className="c8 c9 image-wrapper"
               >
                 <img
                   alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
@@ -987,19 +928,19 @@ exports[`renders the customised padding version correctly:
                 />
               </div>
               <div
-                className="all-text-wrapper"
+                className=""
               >
                 <div
-                  className="c9"
+                  className="c10"
                 >
                   <h1
-                    className="c10"
+                    className="c11"
                   >
                     7,000
                   </h1>
                 </div>
                 <div
-                  className="c11"
+                  className="c12"
                 >
                   <p
                     className="c6"
@@ -1018,7 +959,7 @@ exports[`renders the customised padding version correctly:
               className=""
             >
               <div
-                className="c8 image-wrapper"
+                className="c8 c9 image-wrapper"
               >
                 <img
                   alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
@@ -1026,19 +967,19 @@ exports[`renders the customised padding version correctly:
                 />
               </div>
               <div
-                className="all-text-wrapper"
+                className=""
               >
                 <div
-                  className="c9"
+                  className="c10"
                 >
                   <h1
-                    className="c10"
+                    className="c11"
                   >
                     8,000
                   </h1>
                 </div>
                 <div
-                  className="c11"
+                  className="c12"
                 >
                   <p
                     className="c6"
@@ -1057,7 +998,7 @@ exports[`renders the customised padding version correctly:
               className=""
             >
               <div
-                className="c8 image-wrapper"
+                className="c8 c9 image-wrapper"
               >
                 <img
                   alt="children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education."
@@ -1065,19 +1006,19 @@ exports[`renders the customised padding version correctly:
                 />
               </div>
               <div
-                className="all-text-wrapper"
+                className=""
               >
                 <div
-                  className="c9"
+                  className="c10"
                 >
                   <h1
-                    className="c10"
+                    className="c11"
                   >
                     9,000
                   </h1>
                 </div>
                 <div
-                  className="c11"
+                  className="c12"
                 >
                   <p
                     className="c6"
@@ -1089,7 +1030,7 @@ exports[`renders the customised padding version correctly:
             </div>
           </li>
           <li
-            className="splide__slide bookend-last"
+            className="splide__slide"
             index={10}
           >
             fake last slide
@@ -1536,54 +1477,8 @@ exports[`renders the default padding version correctly:
   padding-top: 2rem;
 }
 
-.c1 .splide button.carousel__back-button,
-.c1 .splide button.carousel__next-button {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 33%!important;
-  height: 100%;
-  padding: 0!important;
-  box-shadow: none;
-  text-indent: -9999px;
-  background-color: transparent;
-  border: none;
-}
-
-.c1 .splide button.carousel__back-button:after,
-.c1 .splide button.carousel__next-button:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  transition: opacity 0.2s linear;
-  background: linear-gradient(90deg,rgba(255,255,255,1),rgba(255,255,255,0.5),rgba(255,255,255,0));
-}
-
-.c1 .splide button.carousel__back-button:hover:after,
-.c1 .splide button.carousel__next-button:hover:after {
-  opacity: 0.5;
-}
-
-.c1 .splide button.carousel__next-button {
-  left: auto;
-  right: 0;
-}
-
-.c1 .splide button.carousel__next-button:before {
-  transform: translate(0,-50%) rotate(-90deg);
-}
-
-.c1 .splide button.carousel__next-button:after {
-  left: auto;
-  right: 0;
-  background: linear-gradient(270deg,rgba(255,255,255,1),rgba(255,255,255,0.5),rgba(255,255,255,0));
-}
-
 .c1 .splide.wymd-carousel .splide__slide {
-  padding-bottom: 425px!important;
+  height: 425px!important;
 }
 
 .c0 {
@@ -1668,35 +1563,14 @@ exports[`renders the default padding version correctly:
 }
 
 @media (min-width: 740px) {
-  .c1 .splide button.carousel__back-button,
-  .c1 .splide button.carousel__next-button {
-    width: 33.3%!important;
-  }
-
-  .c1 .splide button.carousel__back-button:after,
-  .c1 .splide button.carousel__next-button:after {
-    width: 100%;
-  }
-}
-
-@media (min-width: 740px) {
   .c1 .splide.wymd-carousel .splide__slide {
-    padding-bottom: 450px!important;
-  }
-
-  .c1 .splide.wymd-carousel .splide__slide.is-active {
-    background-color: red;
-  }
-
-  .c1 .splide.wymd-carousel .splide__slide.is-active +.carousel__slide--visible +.carousel__slide--visible >div>div:first-child:after {
-    right: calc(-300% - 6px);
-    width: 300%;
+    height: 450px!important;
   }
 }
 
 @media (min-width: 1024px) {
   .c1 .splide.wymd-carousel .splide__slide {
-    padding-bottom: 475px!important;
+    height: 475px!important;
   }
 }
 
