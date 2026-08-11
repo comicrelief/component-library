@@ -121,11 +121,7 @@ const WYMDCarousel = ({ data }) => {
             index={0}
             key={0}
             className="bookend-first"
-          >
-            <SlideInner>
-              {/* fake first slide */}
-            </SlideInner>
-          </SplideSlide>
+          />
           )}
 
           {Object.keys(theseItems).map((key, index) => {
@@ -169,9 +165,7 @@ const WYMDCarousel = ({ data }) => {
           <SplideSlide
             index={theseItems.length + 1}
             key={theseItems.length + 1}
-          >
-            {/* fake last slide */}
-          </SplideSlide>
+          />
           )}
 
         </Splide>
