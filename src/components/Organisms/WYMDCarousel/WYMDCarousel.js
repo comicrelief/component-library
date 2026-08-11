@@ -64,7 +64,9 @@ const WYMDCarousel = ({ data }) => {
         <Splide
           className="wymd-carousel"
           options={{
-            speed: 1000,
+            speed: 750,
+            rewindSpeed: 750,
+            interval: 5000,
             arrows: true,
             pagination: false,
             drag: 'free',
@@ -77,6 +79,7 @@ const WYMDCarousel = ({ data }) => {
             focus: 'center',
             trimSpace: false,
             perPage: 3,
+            rewind: true,
             breakpoints: {
               [breakpointValues.M]: {
                 perPage: 1
