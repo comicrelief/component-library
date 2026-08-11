@@ -34,10 +34,11 @@ const WYMDCarousel = ({ data }) => {
   const [theseItems, setTheseItems] = useState();
 
   // Custom function to let us update the carousel config dynamically
-  // TODO: I don't think this works
   const screenResize = useCallback(() => {
     const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
     const isCurrentlyMobile = window.innerWidth < breakpointValues.M;
+    console.log('screenSize', screenSize);
+    console.log('isCurrentlyMobile', isCurrentlyMobile);
 
     if (screenSize !== null && (isMobile !== isCurrentlyMobile)) {
       setIsMobile(isCurrentlyMobile);
@@ -67,9 +68,6 @@ const WYMDCarousel = ({ data }) => {
     // Reflects our two dummy/bookend slides for non-mobile/tablet views:
     setTotalSlides(isMobile ? theseItems.length : theseItems.length + 2);
   }
-
-  // Reflect that initial dummy/bookend slide shown on non-mobile/tablet views:
-  const thisIndexOffset = isMobile ? 0 : 1;
 
   return (
     <Container
@@ -111,29 +109,21 @@ const WYMDCarousel = ({ data }) => {
             dragMinThreshold: { mouse: 50, touch: 50 },
             updateOnMove: true,
             snap: true,
-            autoplay: autoPlay
+            autoplay: autoPlay,
+            focus: 'center',
+            trimSpace: false
           }}
         >
 
-          {/* Dummy slide for our desired non-mobile layout and functionality */}
-          {isMobile === false && (
-          <SplideSlide
-            index={0}
-            key={0}
-            className="bookend-first"
-          />
-          )}
-
           {Object.keys(theseItems).map((key, index) => {
-            // Calculate the index offset accordingly to reflect the number of slides,
-            // but use the REAL index when determining if its the last REAL slide
-            const tweakedIndex = index + thisIndexOffset;
+            const safeIndex = index;
 
             return (
               <SplideSlide
                 className={index === (theseItems.length - 1) && 'last-slide'}
-                key={tweakedIndex}
-                index={tweakedIndex}
+                key={safeIndex}
+                index={safeIndex}
+                data-index={safeIndex}
               >
                 <SlideInner>
                   <ImageWrapper className="image-wrapper">
@@ -152,21 +142,12 @@ const WYMDCarousel = ({ data }) => {
                         {theseItems[key].copy}
                       </Text>
                     </CopyWrapper>
+
                   </AllTextWrapper>
-
                 </SlideInner>
-
               </SplideSlide>
             );
           })}
-
-          {/* Dummy slide for our desired non-mobile layout and functionality */}
-          {isMobile === false && (
-          <SplideSlide
-            index={theseItems.length + 1}
-            key={theseItems.length + 1}
-          />
-          )}
 
         </Splide>
         )}

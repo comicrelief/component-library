@@ -168,6 +168,7 @@ const CarouselWrapper = styled.div`
       background-color: transparent;
       transform: none;
       border-radius: 0;
+      opacity: 1;
 
       &:after {
         content: "";
@@ -210,6 +211,7 @@ const CarouselWrapper = styled.div`
       }
     }
 
+    // Reorientate for the right-side 'next' button
     button.carousel__next-button {
       left: auto;
       right: 0;
@@ -222,12 +224,13 @@ const CarouselWrapper = styled.div`
       }
     }
 
-
     // Carousel:
     &.wymd-carousel {
       .splide__slide {
+      
         height: ${props => props.$mobileHeight}px;
-
+        
+        // All slides
         ${SlideInner} {
           text-align: center;
           display: inline-flex;
@@ -270,30 +273,24 @@ const CarouselWrapper = styled.div`
             }
           }
 
-          // First slide:
-          //
-          // (Splide considers the first VISIBLE slide 'active', which is generally the first of three 
-          // in our non-mobile layouts. Since we've got a "make the middle slide funky" design brief,
-          // these classes are slightly confusing, but now you know.)
-          + .is-active {
+          // Previous slide, with a shorter 'connecting' line to account for larger, active slide to the right:
+          &.is-prev {
             ${SlideInner} {
-              ${ImageWrapper} {     
-                 // Dashed 'connecting' line:
+              ${ImageWrapper} {                
                 &:after {
-                  right: calc(-300%);
+                  right: calc(-300% - 6px);
                   width: 300%;
                 }
               }
-            }
+            } 
           }
 
-          // Middle slide:
-          + .is-next {
+          // Active, middle slide:
+          &.is-active {
             ${SlideInner} {
               ${ImageWrapper} {
                 transform: scale(1);
-                
-                 // Dashed 'connecting' line:
+              
                 &:after {
                   right: calc(-222% - 6px);
                   transform: scale(0.5);
@@ -304,48 +301,37 @@ const CarouselWrapper = styled.div`
               ${AllTextWrapper} {
                 transform: scale(1);
               }
-            }
+            } 
           }
         } 
 
         @media ${({ theme }) => theme.allBreakpoints('L')} {
           height: ${props => props.$desktopHeight}px;
 
-          // All slides:
-          ${SlideInner} {
-            ${ImageWrapper} {
-              // Dashed 'connecting' line:
+          ${SlideInner} ${ImageWrapper}  {
+            &:after {
+              width: 315%;
+              right: calc(-315%);
+            }
+          }
+          
+
+          &.is-prev {
+            ${SlideInner} ${ImageWrapper} {
               &:after {
-                width: 315%;
-                right: calc(-315%);
+                right: calc(-260%);
+                width: 260%;
               }
-            }
+            } 
           }
 
-          // First slide:
-          + .is-active {
-            ${SlideInner} {
-              ${ImageWrapper} {     
-                 // Dashed 'connecting' line:
-                &:after {
-                  right: calc(-260%);
-                  width: 260%;
-                }
+          &.is-active {
+            ${SlideInner} ${ImageWrapper} {
+              &:after {
+                width: 250%;
+                right: calc(-192%);
               }
-            }
-          }
-
-          // Middle slide:
-          + .is-next {
-            ${SlideInner} {
-              ${ImageWrapper} {       
-                // Dashed 'connecting' line:
-                &:after {
-                  width: 250%;
-                  right: calc(-192%);
-                }
-              }
-            }
+            } 
           }
         }
       }

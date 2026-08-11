@@ -520,6 +520,7 @@ exports[`renders the customised padding version correctly:
   background-color: transparent;
   transform: none;
   border-radius: 0;
+  opacity: 1;
 }
 
 .c1 .splide button.splide__arrow:after {
@@ -735,12 +736,9 @@ exports[`renders the customised padding version correctly:
           className="splide__list"
         >
           <li
-            className="splide__slide bookend-first"
-            index={0}
-          />
-          <li
             className="splide__slide"
-            index={1}
+            data-index={0}
+            index={0}
           >
             <div
               className=""
@@ -779,7 +777,8 @@ exports[`renders the customised padding version correctly:
           </li>
           <li
             className="splide__slide"
-            index={2}
+            data-index={1}
+            index={1}
           >
             <div
               className=""
@@ -818,7 +817,8 @@ exports[`renders the customised padding version correctly:
           </li>
           <li
             className="splide__slide"
-            index={3}
+            data-index={2}
+            index={2}
           >
             <div
               className=""
@@ -857,7 +857,8 @@ exports[`renders the customised padding version correctly:
           </li>
           <li
             className="splide__slide"
-            index={4}
+            data-index={3}
+            index={3}
           >
             <div
               className=""
@@ -896,7 +897,8 @@ exports[`renders the customised padding version correctly:
           </li>
           <li
             className="splide__slide"
-            index={5}
+            data-index={4}
+            index={4}
           >
             <div
               className=""
@@ -935,7 +937,8 @@ exports[`renders the customised padding version correctly:
           </li>
           <li
             className="splide__slide"
-            index={6}
+            data-index={5}
+            index={5}
           >
             <div
               className=""
@@ -974,7 +977,8 @@ exports[`renders the customised padding version correctly:
           </li>
           <li
             className="splide__slide"
-            index={7}
+            data-index={6}
+            index={6}
           >
             <div
               className=""
@@ -1013,7 +1017,8 @@ exports[`renders the customised padding version correctly:
           </li>
           <li
             className="splide__slide"
-            index={8}
+            data-index={7}
+            index={7}
           >
             <div
               className=""
@@ -1052,7 +1057,8 @@ exports[`renders the customised padding version correctly:
           </li>
           <li
             className="splide__slide last-slide"
-            index={9}
+            data-index={8}
+            index={8}
           >
             <div
               className=""
@@ -1089,10 +1095,6 @@ exports[`renders the customised padding version correctly:
               </div>
             </div>
           </li>
-          <li
-            className="splide__slide"
-            index={10}
-          />
         </ul>
       </div>
     </div>
@@ -1556,6 +1558,7 @@ exports[`renders the default padding version correctly:
   background-color: transparent;
   transform: none;
   border-radius: 0;
+  opacity: 1;
 }
 
 .c1 .splide button.splide__arrow:after {
