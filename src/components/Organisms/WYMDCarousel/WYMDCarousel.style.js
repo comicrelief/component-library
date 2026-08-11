@@ -214,8 +214,6 @@ const CarouselWrapper = styled.div`
       left: auto;
       right: 0;
 
-
-
       &:after {
         left: auto;
         right: 0;
