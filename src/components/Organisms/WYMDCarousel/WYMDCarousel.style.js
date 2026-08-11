@@ -10,8 +10,12 @@ const animationSpeed = 0.75;
 const textScaleOffsetA = 45;
 const textScaleOffsetB = 5;
 
+const SlideInner = styled.div`
+  // Don't need any custom styles, just wanted a nice clear selector amidst the chaos
+`;
+
 const AllTextWrapper = styled.div`
-//
+  // And ditto.
 `;
 
 const ImageWrapper = styled.div`
@@ -122,10 +126,6 @@ const Including = styled(Text)`
   }
 `;
 
-const SlideInner = styled.div`
-  // Don't need any custom styles, just wanted a nice clear selector :)
-`;
-
 // Unfortunately having to target plugin-created markup ye olde fashioned way:
 const CarouselWrapper = styled.div`
   height: 100%;
@@ -146,10 +146,7 @@ const CarouselWrapper = styled.div`
       padding-top: ${spacing('l')};
     }
 
-    // **************  
-    // TODO: BUTTONS
-    // *************
-
+    // Navigation buttons:
     .splide__arrows {
       width: 100%;
       position: absolute;
@@ -159,24 +156,18 @@ const CarouselWrapper = styled.div`
       width: 100%;
     }
 
-    button.splide__arrow--prev,
-    button.splide__arrow--next {
+    button.splide__arrow {
       position: absolute;
       left: 0;
       top: 0;
-      width: 33% !important;
+      width: 33.3%;
       height: 100%;
-      padding: 0 !important;
+      padding: 0;
       box-shadow: none;
       text-indent: -9999px;
       background-color: transparent;
-      border: none;
       transform: none;
       border-radius: 0;
-
-      svg {
-        display: none;
-      }
 
       &:after {
         content: "";
@@ -194,8 +185,11 @@ const CarouselWrapper = styled.div`
         left: auto;
         right: 0;
 
-        &:before {
-          transform: translate(0, -50%) rotate(-90deg);
+        &:after {
+          left: auto;
+          right: 0;
+          background: linear-gradient(90deg, rgba(255, 255, 255, 0),
+         rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1));
         }
       }
 
@@ -205,8 +199,11 @@ const CarouselWrapper = styled.div`
         }
       }
 
+      svg {
+        display: none;
+      }
+
       @media ${({ theme }) => theme.allBreakpoints('M')} {
-        width: 33.3% !important;
         &:after {
           width: 100%;
         }
@@ -226,25 +223,12 @@ const CarouselWrapper = styled.div`
         rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
       }
     }
-    // ... END OF - TODO: BUTTONS
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    // CAROUSEL
+    // Carousel:
     &.wymd-carousel {
       .splide__slide {
-        height: ${props => props.$mobileHeight}px !important;
+        height: ${props => props.$mobileHeight}px;
 
         ${SlideInner} {
           text-align: center;
@@ -254,6 +238,7 @@ const CarouselWrapper = styled.div`
           flex-direction: column;
         }
 
+        // No dashed 'connecting' line on the final slide
         &.last-slide {
           ${ImageWrapper} {
             &:after {
@@ -264,19 +249,19 @@ const CarouselWrapper = styled.div`
 
         // 'Tablet' (and up) tweaks for the 3-visible layout
         @media ${({ theme }) => theme.allBreakpoints('M')} {
-          height: ${props => props.$tabletHeight}px !important;
+          height: ${props => props.$tabletHeight}px;
 
-          // ALL SLIDES:
+          // All slides:
           ${SlideInner} {
             ${ImageWrapper} {
               transition: transform ${animationSpeed}s ease;
               transform: scale(0.5);
-
+              
               // Dashed 'connecting' line:
               &:after {
                 transition: transform ${animationSpeed}s ease, width ${animationSpeed}s ease, right ${animationSpeed}s ease;
-                right: calc(-300% - 6px);
-                width: 300%;
+                right: calc(-360%);
+                width: 360%;
               }
             }
 
@@ -287,7 +272,24 @@ const CarouselWrapper = styled.div`
             }
           }
 
-          // ACTIVE/MIDDLE SLIDE:
+          // First slide:
+          //
+          // (Splide considers the first VISIBLE slide 'active', which is generally the first of three 
+          // in our non-mobile layouts. Since we've got a "make the middle slide funky" design brief,
+          // these classes are slightly confusing, but now you know.)
+          + .is-active {
+            ${SlideInner} {
+              ${ImageWrapper} {     
+                 // Dashed 'connecting' line:
+                &:after {
+                  right: calc(-300%);
+                  width: 300%;
+                }
+              }
+            }
+          }
+
+          // Middle slide:
           + .is-next {
             ${SlideInner} {
               ${ImageWrapper} {
@@ -306,32 +308,36 @@ const CarouselWrapper = styled.div`
               }
             }
           }
-
-          // Silly tweak needed to get things to line-up nicely:
-          + .is-prev {
-            ${ImageWrapper} {
-              &:after {
-                right: calc(-360%);
-              }
-            }
-          }
         } 
 
         @media ${({ theme }) => theme.allBreakpoints('L')} {
-          height: ${props => props.$desktopHeight}px !important;
+          height: ${props => props.$desktopHeight}px;
 
-          // ALL SLIDES:
+          // All slides:
           ${SlideInner} {
             ${ImageWrapper} {
               // Dashed 'connecting' line:
               &:after {
-                width: 250%;
-                right: calc(-250% - 6px);
+                width: 315%;
+                right: calc(-315%);
               }
             }
           }
-      
-          // ACTIVE/MIDDLE SLIDE:
+
+          // First slide:
+          + .is-active {
+            ${SlideInner} {
+              ${ImageWrapper} {     
+                 // Dashed 'connecting' line:
+                &:after {
+                  right: calc(-260%);
+                  width: 260%;
+                }
+              }
+            }
+          }
+
+          // Middle slide:
           + .is-next {
             ${SlideInner} {
               ${ImageWrapper} {       
@@ -343,18 +349,10 @@ const CarouselWrapper = styled.div`
               }
             }
           }
-
-          + .is-prev {
-            ${ImageWrapper} {
-              &:after {
-                right: calc(-315%);
-              }
-            }
-          }
         }
-      } // end of .splide__slide
-    } // end of .splide.wymd-carousel
-  } // end of CarouselWrapper
+      }
+    }
+  }
 `;
 
 const Container = styled.div`

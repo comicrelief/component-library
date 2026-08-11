@@ -508,29 +508,21 @@ exports[`renders the customised padding version correctly:
   width: 100%;
 }
 
-.c1 .splide button.splide__arrow--prev,
-.c1 .splide button.splide__arrow--next {
+.c1 .splide button.splide__arrow {
   position: absolute;
   left: 0;
   top: 0;
-  width: 33%!important;
+  width: 33.3%;
   height: 100%;
-  padding: 0!important;
+  padding: 0;
   box-shadow: none;
   text-indent: -9999px;
   background-color: transparent;
-  border: none;
   transform: none;
   border-radius: 0;
 }
 
-.c1 .splide button.splide__arrow--prev svg,
-.c1 .splide button.splide__arrow--next svg {
-  display: none;
-}
-
-.c1 .splide button.splide__arrow--prev:after,
-.c1 .splide button.splide__arrow--next:after {
+.c1 .splide button.splide__arrow:after {
   content: "";
   position: absolute;
   top: 0;
@@ -541,20 +533,23 @@ exports[`renders the customised padding version correctly:
   background: linear-gradient(90deg,rgba(255,255,255,1),rgba(255,255,255,0.5),rgba(255,255,255,0));
 }
 
-.c1 .splide button.splide__arrow--prev.splide__arrow--next,
-.c1 .splide button.splide__arrow--next.splide__arrow--next {
+.c1 .splide button.splide__arrow.splide__arrow--next {
   left: auto;
   right: 0;
 }
 
-.c1 .splide button.splide__arrow--prev.splide__arrow--next:before,
-.c1 .splide button.splide__arrow--next.splide__arrow--next:before {
-  transform: translate(0,-50%) rotate(-90deg);
+.c1 .splide button.splide__arrow.splide__arrow--next:after {
+  left: auto;
+  right: 0;
+  background: linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,1));
 }
 
-.c1 .splide button.splide__arrow--prev:hover:after,
-.c1 .splide button.splide__arrow--next:hover:after {
+.c1 .splide button.splide__arrow:hover:after {
   opacity: 0.5;
+}
+
+.c1 .splide button.splide__arrow svg {
+  display: none;
 }
 
 .c1 .splide button.carousel__next-button {
@@ -569,7 +564,7 @@ exports[`renders the customised padding version correctly:
 }
 
 .c1 .splide.wymd-carousel .splide__slide {
-  height: 425px!important;
+  height: 425px;
 }
 
 .c1 .splide.wymd-carousel .splide__slide.last-slide .c8:after {
@@ -691,34 +686,20 @@ exports[`renders the customised padding version correctly:
 }
 
 @media (min-width: 740px) {
-  .c1 .splide button.splide__arrow--prev,
-  .c1 .splide button.splide__arrow--next {
-    width: 33.3%!important;
-  }
-
-  .c1 .splide button.splide__arrow--prev:after,
-  .c1 .splide button.splide__arrow--next:after {
+  .c1 .splide button.splide__arrow:after {
     width: 100%;
   }
 }
 
 @media (min-width: 740px) {
   .c1 .splide.wymd-carousel .splide__slide {
-    height: 450px!important;
-  }
-
-  .c1 .splide.wymd-carousel .splide__slide +.is-prev .c8:after {
-    right: calc(-360%);
+    height: 450px;
   }
 }
 
 @media (min-width: 1024px) {
   .c1 .splide.wymd-carousel .splide__slide {
-    height: 475px!important;
-  }
-
-  .c1 .splide.wymd-carousel .splide__slide +.is-prev .c8:after {
-    right: calc(-315%);
+    height: 475px;
   }
 }
 
@@ -1567,29 +1548,21 @@ exports[`renders the default padding version correctly:
   width: 100%;
 }
 
-.c1 .splide button.splide__arrow--prev,
-.c1 .splide button.splide__arrow--next {
+.c1 .splide button.splide__arrow {
   position: absolute;
   left: 0;
   top: 0;
-  width: 33%!important;
+  width: 33.3%;
   height: 100%;
-  padding: 0!important;
+  padding: 0;
   box-shadow: none;
   text-indent: -9999px;
   background-color: transparent;
-  border: none;
   transform: none;
   border-radius: 0;
 }
 
-.c1 .splide button.splide__arrow--prev svg,
-.c1 .splide button.splide__arrow--next svg {
-  display: none;
-}
-
-.c1 .splide button.splide__arrow--prev:after,
-.c1 .splide button.splide__arrow--next:after {
+.c1 .splide button.splide__arrow:after {
   content: "";
   position: absolute;
   top: 0;
@@ -1600,20 +1573,23 @@ exports[`renders the default padding version correctly:
   background: linear-gradient(90deg,rgba(255,255,255,1),rgba(255,255,255,0.5),rgba(255,255,255,0));
 }
 
-.c1 .splide button.splide__arrow--prev.splide__arrow--next,
-.c1 .splide button.splide__arrow--next.splide__arrow--next {
+.c1 .splide button.splide__arrow.splide__arrow--next {
   left: auto;
   right: 0;
 }
 
-.c1 .splide button.splide__arrow--prev.splide__arrow--next:before,
-.c1 .splide button.splide__arrow--next.splide__arrow--next:before {
-  transform: translate(0,-50%) rotate(-90deg);
+.c1 .splide button.splide__arrow.splide__arrow--next:after {
+  left: auto;
+  right: 0;
+  background: linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,1));
 }
 
-.c1 .splide button.splide__arrow--prev:hover:after,
-.c1 .splide button.splide__arrow--next:hover:after {
+.c1 .splide button.splide__arrow:hover:after {
   opacity: 0.5;
+}
+
+.c1 .splide button.splide__arrow svg {
+  display: none;
 }
 
 .c1 .splide button.carousel__next-button {
@@ -1628,7 +1604,7 @@ exports[`renders the default padding version correctly:
 }
 
 .c1 .splide.wymd-carousel .splide__slide {
-  height: 425px!important;
+  height: 425px;
 }
 
 .c0 {
@@ -1713,26 +1689,20 @@ exports[`renders the default padding version correctly:
 }
 
 @media (min-width: 740px) {
-  .c1 .splide button.splide__arrow--prev,
-  .c1 .splide button.splide__arrow--next {
-    width: 33.3%!important;
-  }
-
-  .c1 .splide button.splide__arrow--prev:after,
-  .c1 .splide button.splide__arrow--next:after {
+  .c1 .splide button.splide__arrow:after {
     width: 100%;
   }
 }
 
 @media (min-width: 740px) {
   .c1 .splide.wymd-carousel .splide__slide {
-    height: 450px!important;
+    height: 450px;
   }
 }
 
 @media (min-width: 1024px) {
   .c1 .splide.wymd-carousel .splide__slide {
-    height: 475px!important;
+    height: 475px;
   }
 }
 
