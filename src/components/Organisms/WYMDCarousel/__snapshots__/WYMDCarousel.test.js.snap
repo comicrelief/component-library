@@ -737,11 +737,7 @@ exports[`renders the customised padding version correctly:
           <li
             className="splide__slide bookend-first"
             index={0}
-          >
-            <div
-              className=""
-            />
-          </li>
+          />
           <li
             className="splide__slide"
             index={1}
