@@ -64,6 +64,7 @@ const WYMDCarousel = ({ data }) => {
         <Splide
           className="wymd-carousel"
           options={{
+            type: 'loop',
             speed: 750,
             rewindSpeed: 750,
             interval: 5000,
