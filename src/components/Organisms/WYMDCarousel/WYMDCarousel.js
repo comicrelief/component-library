@@ -1,5 +1,5 @@
 import React, {
-  useEffect, useState, useCallback
+  useEffect, useState
 } from 'react';
 import PropTypes from 'prop-types';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
@@ -27,47 +27,12 @@ const WYMDCarousel = ({ data }) => {
     paddingBottom = '2rem'
   } = data;
 
-  // Defaults to mobile config:
-  const [isMobile, setIsMobile] = useState(true);
-  const [visibleSlides, setVisibleSlides] = useState(1);
-  const [totalSlides, setTotalSlides] = useState(null);
   const [theseItems, setTheseItems] = useState();
-
-  // Custom function to let us update the carousel config dynamically
-  const screenResize = useCallback(() => {
-    const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
-    const isCurrentlyMobile = window.innerWidth < breakpointValues.M;
-    console.log('screenSize', screenSize);
-    console.log('isCurrentlyMobile', isCurrentlyMobile);
-
-    if (screenSize !== null && (isMobile !== isCurrentlyMobile)) {
-      setIsMobile(isCurrentlyMobile);
-      setVisibleSlides(isCurrentlyMobile ? 1 : 3);
-      setTotalSlides(isCurrentlyMobile ? theseItems.length : theseItems.length + 2);
-    }
-  }, [isMobile, theseItems]);
 
   // Format our data BEFORE we use it in render:
   useEffect(() => {
     setTheseItems(formatItems(data));
   }, [setTheseItems, data]);
-
-  useEffect(() => {
-    if (window !== 'undefined' && window.innerWidth >= breakpointValues.M) {
-      // On inital render, update carousel plugin config
-      // to suit the non-mobile layout and functionality:
-      setIsMobile(false);
-      setVisibleSlides(3);
-    }
-
-    // Hook into browser's own onresize event to call our custom wrapper function:
-    if (typeof window !== 'undefined') window.onresize = screenResize;
-  }, [screenResize]);
-
-  if (theseItems && totalSlides === null) {
-    // Reflects our two dummy/bookend slides for non-mobile/tablet views:
-    setTotalSlides(isMobile ? theseItems.length : theseItems.length + 2);
-  }
 
   return (
     <Container
@@ -105,13 +70,18 @@ const WYMDCarousel = ({ data }) => {
             drag: 'free',
             flickPower: 50,
             perMove: 1,
-            perPage: visibleSlides,
             dragMinThreshold: { mouse: 50, touch: 50 },
             updateOnMove: true,
             snap: true,
             autoplay: autoPlay,
             focus: 'center',
-            trimSpace: false
+            trimSpace: false,
+            perPage: 3,
+            breakpoints: {
+              [breakpointValues.M]: {
+                perPage: 1
+              }
+            }
           }}
         >
 
