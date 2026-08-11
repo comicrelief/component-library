@@ -2,10 +2,9 @@ import React, {
   useEffect, useState, useCallback
 } from 'react';
 import PropTypes from 'prop-types';
-import {
-  CarouselProvider, Slider, Slide, ButtonBack, ButtonNext
-} from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
 import {
   CarouselWrapper, SlideCopyWrapper, HeadingCopyWrapper, Container
 } from './RichtextCarousel.style';
@@ -90,21 +89,31 @@ const RichtextCarousel = ({
         </HeadingCopyWrapper>
 
         {theseItems && (
-        <CarouselProvider
-          naturalSlideWidth={50}
-          naturalSlideHeight={200}
-          totalSlides={totalSlides}
-          isPlaying={autoPlay}
-          interval={5000}
-          visibleSlides={visibleSlides}
-          infinite
+        <Splide
+          className="richtext-carousel"
+          options={{
+            speed: 1000,
+            arrows: true,
+            pagination: false,
+            drag: 'free',
+            flickPower: 50,
+            perMove: 1,
+            perPage: visibleSlides,
+            dragMinThreshold: { mouse: 50, touch: 50 },
+            updateOnMove: true,
+            snap: true,
+            autoplay: autoPlay
+          }}
         >
-          <Slider classNameAnimation="richtext-carousel">
 
-            {/* Dummy slide for our desired non-mobile layout and functionality */}
-            {isMobile === false && (
-            <Slide index={0} key={0} />
-            )}
+          {/* Dummy slide for our desired non-mobile layout and functionality */}
+          {isMobile === false && (
+          <SplideSlide
+            index={0}
+            key={0}
+            className="bookend-first"
+          />
+          )}
 
             {Object.keys(theseItems).map((key, index) => {
             // Reflect that initial dummy/bookend slide shown on non-mobile/tablet views:
@@ -113,7 +122,7 @@ const RichtextCarousel = ({
               return (
               // Calculate the index offset accordingly to reflect the number of slides,
               // but use the REAL index when determining if its the last REAL slide
-                <Slide
+                <SplideSlide
                   index={thisOffsetIndex}
                   className={index === (theseItems.length - 1) && 'last-slide'}
                   key={thisOffsetIndex}
@@ -130,19 +139,16 @@ const RichtextCarousel = ({
                     {theseItems[index].copy}
                   </SlideCopyWrapper>
 
-                </Slide>
+                </SplideSlide>
               );
             })}
 
             {/* Dummy slide for our desired non-mobile layout and functionality */}
             {isMobile === false && (
-            <Slide index={theseItems.length + 1} key="bookend-last" />
+            <SplideSlide index={theseItems.length + 1} key="bookend-last" />
             )}
 
-          </Slider>
-          <ButtonBack>Back</ButtonBack>
-          <ButtonNext>Next</ButtonNext>
-        </CarouselProvider>
+        </Splide>
         )}
 
       </CarouselWrapper>

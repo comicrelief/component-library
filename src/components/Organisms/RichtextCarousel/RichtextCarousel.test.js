@@ -38,28 +38,36 @@ it('renders default padding version correctly', () => {
   margin-bottom: 1.5rem;
 }
 
-.c1 .carousel {
+.c1 .splide {
   position: relative;
   margin: 0 auto;
   padding-top: 2rem;
 }
 
-.c1 .carousel button.carousel__back-button,
-.c1 .carousel button.carousel__next-button {
+.c1 .splide .splide__arrows {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.c1 .splide button.splide__arrow {
   position: absolute;
   left: 0;
   top: 0;
-  width: 33%!important;
+  width: 33.3%;
   height: 100%;
-  padding: 0!important;
+  padding: 0;
   box-shadow: none;
   text-indent: -9999px;
   background-color: transparent;
-  border: none;
+  transform: none;
+  border-radius: 0;
 }
 
-.c1 .carousel button.carousel__back-button:after,
-.c1 .carousel button.carousel__next-button:after {
+.c1 .splide button.splide__arrow:after {
   content: "";
   position: absolute;
   top: 0;
@@ -70,58 +78,40 @@ it('renders default padding version correctly', () => {
   background: linear-gradient(90deg,#FFFFFF,#FFFFFF7a,#FFFFFF00);
 }
 
-.c1 .carousel button.carousel__back-button:hover:after,
-.c1 .carousel button.carousel__next-button:hover:after {
-  opacity: 0.5;
-}
-
-.c1 .carousel button.carousel__next-button {
+.c1 .splide button.splide__arrow.splide__arrow--next {
   left: auto;
   right: 0;
 }
 
-.c1 .carousel button.carousel__next-button:before {
-  transform: translate(0,-50%) rotate(-90deg);
-}
-
-.c1 .carousel button.carousel__next-button:after {
+.c1 .splide button.splide__arrow.splide__arrow--next:after {
   left: auto;
   right: 0;
   background: linear-gradient(90deg,#FFFFFF00,#FFFFFF7a,#FFFFFF);
 }
 
-.c1 .carousel .richtext-carousel {
-  transition: -webkit-transform 0.75s;
-  -o-transition: transform 0.75s;
-  transition: transform 0.75s;
-  -webkit-transform: 0.75s;
-  will-change: transform;
+.c1 .splide button.splide__arrow:hover:after {
+  opacity: 0.5;
 }
 
-.c1 .carousel .richtext-carousel .last-slide .slide-copy-wrapper:after {
-  content: none;
+.c1 .splide button.splide__arrow svg {
+  display: none;
 }
 
-.c1 .carousel .richtext-carousel .carousel__slide {
-  padding-bottom: 300px!important;
-}
-
-.c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide {
+.c1 .splide.richtext-carousel .splide__slide {
   text-align: center;
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+  padding-bottom: 300px;
 }
 
-.c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide .slide-copy-wrapper {
-  font-size: 0.9rem;
-  line-height: 0.9rem;
-}
-
-.c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide .slide-copy-wrapper * {
-  font-size: inherit;
-  line-height: inherit;
+.c1 .splide.richtext-carousel .splide__slide .carousel__inner-slide {
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
 .c0 {
@@ -130,68 +120,17 @@ it('renders default padding version correctly', () => {
 }
 
 @media (min-width: 740px) {
-  .c1 .carousel button.carousel__back-button,
-  .c1 .carousel button.carousel__next-button {
-    width: 33.3%!important;
-  }
-
-  .c1 .carousel button.carousel__back-button:after,
-  .c1 .carousel button.carousel__next-button:after {
-    width: 100%;
-  }
-}
-
-@media (min-width: 740px) {
-  .c1 .carousel .richtext-carousel .carousel__slide {
-    padding-bottom: 350px!important;
-  }
-
-  .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide >div:first-child {
-    transition: transform 0.75s ease;
-    transform-origin: center;
-    transform: scale(0.8);
-  }
-
-  .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide >div:first-child:after {
-    transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
-    width: 100%;
-    right: calc(-100% - 6px);
-    transform: scale(1);
-  }
-
-  .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide >div:first-child:after {
-    width: 33%;
-    right: calc(-33% - 3px);
-    transform: scale(1);
-  }
-
-  .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible .carousel__inner-slide >div:first-child {
-    transform: scale(1);
-  }
-
-  .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible .carousel__inner-slide >div:first-child:after {
-    width: 33%;
-    right: calc(-33% + 3px);
-    transform: scale(0.8);
-  }
-
-  .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible +.carousel__slide--visible >div>div:first-child {
-    transform: scale(0.8);
-  }
-
-  .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible +.carousel__slide--visible >div>div:first-child:after {
-    width: 50%;
-    right: calc(-50% - 6px);
-    transform: scale(1);
+  .c1 .splide.richtext-carousel .splide__slide {
+    padding-bottom: 350px;
   }
 }
 
 @media (min-width: 1024px) {
-  .c1 .carousel .richtext-carousel .carousel__slide {
-    padding-bottom: 350px!important;
+  .c1 .splide.richtext-carousel .splide__slide {
+    padding-bottom: 350px;
   }
 
-  .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible +.carousel__slide--visible .carousel__inner-slide >div:first-child:after {
+  .c1 .splide.richtext-carousel .splide__slide.carousel__slide--visible +.carousel__slide--visible +.carousel__slide--visible .carousel__inner-slide >div:first-child:after {
     right: calc(-125% - 5px);
     width: 125%;
   }
@@ -220,7 +159,7 @@ it('renders custom padding + background colour version correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-.c3 {
+.c4 {
   background: #FFFFFF;
   height: 300px;
   width: 75%;
@@ -235,7 +174,7 @@ it('renders custom padding + background colour version correctly', () => {
   word-wrap: break-word;
 }
 
-.c3:after {
+.c4:after {
   position: absolute;
   content: '';
   top: 50%;
@@ -269,28 +208,36 @@ it('renders custom padding + background colour version correctly', () => {
   margin-bottom: 1.5rem;
 }
 
-.c1 .carousel {
+.c1 .splide {
   position: relative;
   margin: 0 auto;
   padding-top: 2rem;
 }
 
-.c1 .carousel button.carousel__back-button,
-.c1 .carousel button.carousel__next-button {
+.c1 .splide .splide__arrows {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.c1 .splide button.splide__arrow {
   position: absolute;
   left: 0;
   top: 0;
-  width: 33%!important;
+  width: 33.3%;
   height: 100%;
-  padding: 0!important;
+  padding: 0;
   box-shadow: none;
   text-indent: -9999px;
   background-color: transparent;
-  border: none;
+  transform: none;
+  border-radius: 0;
 }
 
-.c1 .carousel button.carousel__back-button:after,
-.c1 .carousel button.carousel__next-button:after {
+.c1 .splide button.splide__arrow:after {
   content: "";
   position: absolute;
   top: 0;
@@ -301,43 +248,39 @@ it('renders custom padding + background colour version correctly', () => {
   background: linear-gradient(90deg,#FFFFFF,#FFFFFF7a,#FFFFFF00);
 }
 
-.c1 .carousel button.carousel__back-button:hover:after,
-.c1 .carousel button.carousel__next-button:hover:after {
-  opacity: 0.5;
-}
-
-.c1 .carousel button.carousel__next-button {
+.c1 .splide button.splide__arrow.splide__arrow--next {
   left: auto;
   right: 0;
 }
 
-.c1 .carousel button.carousel__next-button:before {
-  transform: translate(0,-50%) rotate(-90deg);
-}
-
-.c1 .carousel button.carousel__next-button:after {
+.c1 .splide button.splide__arrow.splide__arrow--next:after {
   left: auto;
   right: 0;
   background: linear-gradient(90deg,#FFFFFF00,#FFFFFF7a,#FFFFFF);
 }
 
-.c1 .carousel .richtext-carousel {
-  transition: -webkit-transform 0.75s;
-  -o-transition: transform 0.75s;
-  transition: transform 0.75s;
-  -webkit-transform: 0.75s;
-  will-change: transform;
+.c1 .splide button.splide__arrow:hover:after {
+  opacity: 0.5;
 }
 
-.c1 .carousel .richtext-carousel .last-slide .slide-copy-wrapper:after {
+.c1 .splide button.splide__arrow svg {
+  display: none;
+}
+
+.c1 .splide.richtext-carousel .last-slide .c3:after {
   content: none;
 }
 
-.c1 .carousel .richtext-carousel .carousel__slide {
-  padding-bottom: 300px!important;
+.c1 .splide.richtext-carousel .splide__slide {
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-bottom: 300px;
 }
 
-.c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide {
+.c1 .splide.richtext-carousel .splide__slide .carousel__inner-slide {
   text-align: center;
   display: inline-flex;
   align-items: center;
@@ -345,12 +288,12 @@ it('renders custom padding + background colour version correctly', () => {
   flex-direction: column;
 }
 
-.c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide .slide-copy-wrapper {
+.c1 .splide.richtext-carousel .splide__slide .carousel__inner-slide .c3 {
   font-size: 0.9rem;
   line-height: 0.9rem;
 }
 
-.c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide .slide-copy-wrapper * {
+.c1 .splide.richtext-carousel .splide__slide .carousel__inner-slide .c3 * {
   font-size: inherit;
   line-height: inherit;
 }
@@ -361,81 +304,47 @@ it('renders custom padding + background colour version correctly', () => {
 }
 
 @media (min-width: 740px) {
-  .c3 {
+  .c4 {
     height: 350px;
     width: 85%;
   }
 }
 
 @media (min-width: 1024px) {
-  .c3 {
+  .c4 {
     height: 350px;
   }
 }
 
 @media (min-width: 740px) {
-  .c1 .carousel button.carousel__back-button,
-  .c1 .carousel button.carousel__next-button {
-    width: 33.3%!important;
+  .c1 .splide.richtext-carousel .splide__slide {
+    padding-bottom: 350px;
   }
 
-  .c1 .carousel button.carousel__back-button:after,
-  .c1 .carousel button.carousel__next-button:after {
-    width: 100%;
-  }
-}
-
-@media (min-width: 740px) {
-  .c1 .carousel .richtext-carousel .carousel__slide {
-    padding-bottom: 350px!important;
-  }
-
-  .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide >div:first-child {
+  .c1 .splide.richtext-carousel .splide__slide .c3 {
     transition: transform 0.75s ease;
     transform-origin: center;
     transform: scale(0.8);
   }
 
-  .c1 .carousel .richtext-carousel .carousel__slide .carousel__inner-slide >div:first-child:after {
+  .c1 .splide.richtext-carousel .splide__slide .c3:after {
     transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
     width: 100%;
     right: calc(-100% - 6px);
     transform: scale(1);
   }
 
-  .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible .carousel__inner-slide >div:first-child:after {
-    width: 33%;
-    right: calc(-33% - 3px);
-    transform: scale(1);
-  }
-
-  .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible .carousel__inner-slide >div:first-child {
-    transform: scale(1);
-  }
-
-  .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible .carousel__inner-slide >div:first-child:after {
-    width: 33%;
-    right: calc(-33% + 3px);
-    transform: scale(0.8);
-  }
-
-  .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible +.carousel__slide--visible >div>div:first-child {
-    transform: scale(0.8);
-  }
-
-  .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible +.carousel__slide--visible >div>div:first-child:after {
-    width: 50%;
-    right: calc(-50% - 6px);
-    transform: scale(1);
+  .c1 .splide.richtext-carousel .splide__slide.is-next .c3 {
+    transform: scale(1.0);
   }
 }
 
 @media (min-width: 1024px) {
-  .c1 .carousel .richtext-carousel .carousel__slide {
-    padding-bottom: 350px!important;
+  .c1 .splide.richtext-carousel .splide__slide {
+    padding-bottom: 350px;
   }
 
-  .c1 .carousel .richtext-carousel .carousel__slide.carousel__slide--visible +.carousel__slide--visible +.carousel__slide--visible .carousel__inner-slide >div:first-child:after {
+  .c1 .splide.richtext-carousel .splide__slide.carousel__slide--visible +.carousel__slide--visible +.carousel__slide--visible .carousel__inner-slide >div:first-child:after {
     right: calc(-125% - 5px);
     width: 125%;
   }
@@ -454,195 +363,64 @@ it('renders custom padding + background colour version correctly', () => {
       Some heading copy that will be nicely constructed in-situ
     </div>
     <div
-      className="carousel"
+      className="splide richtext-carousel"
     >
       <div
-        aria-label="slider"
-        aria-live="polite"
-        className="horizontalSlider___281Ls carousel__slider carousel__slider--horizontal"
-        onKeyDown={[Function]}
-        role="listbox"
-        style={{}}
+        className="splide__track"
       >
-        <div
-          className="carousel__slider-tray-wrapper carousel__slider-tray-wrap--horizontal"
-          style={{}}
+        <ul
+          className="splide__list"
         >
-          <div
-            className="sliderTray___-vHFQ richtext-carousel carousel__slider-tray carousel__slider-tray--horizontal"
-            onClickCapture={[Function]}
-            onMouseDown={[Function]}
-            onTouchCancel={[Function]}
-            onTouchEnd={[Function]}
-            onTouchMove={[Function]}
-            onTouchStart={[Function]}
-            style={
-              {
-                "flexDirection": "row",
-                "transform": "translateX(0%) translateX(0px)",
-                "width": "200%",
-              }
-            }
+          <li
+            className="splide__slide bookend-first"
+            index={0}
+          />
+          <li
+            className="splide__slide"
+            index={1}
           >
             <div
-              aria-label="slide"
-              aria-selected={true}
-              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              role="option"
-              style={
-                {
-                  "paddingBottom": "66.66666666666667%",
-                  "width": "16.666666666666668%",
-                }
-              }
+              className="c3 c4 slide-copy-wrapper"
             >
-              <div
-                className="slideInner___2mfX9 carousel__inner-slide"
-                style={{}}
-              />
+              Some other longside but not really all that long copy, who knows, it could be this long or LESS.
             </div>
+          </li>
+          <li
+            className="splide__slide"
+            index={2}
+          >
             <div
-              aria-label="slide"
-              aria-selected={true}
-              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              role="option"
-              style={
-                {
-                  "paddingBottom": "66.66666666666667%",
-                  "width": "16.666666666666668%",
-                }
-              }
+              className="c3 c4 slide-copy-wrapper"
             >
-              <div
-                className="slideInner___2mfX9 carousel__inner-slide"
-                style={{}}
-              >
-                <div
-                  className="c3 slide-copy-wrapper"
-                >
-                  Some other longside but not really all that long copy, who knows, it could be this long or LESS.
-                </div>
-              </div>
+              140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets.
             </div>
+          </li>
+          <li
+            className="splide__slide"
+            index={3}
+          >
             <div
-              aria-label="slide"
-              aria-selected={true}
-              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--visible"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              role="option"
-              style={
-                {
-                  "paddingBottom": "66.66666666666667%",
-                  "width": "16.666666666666668%",
-                }
-              }
+              className="c3 c4 slide-copy-wrapper"
             >
-              <div
-                className="slideInner___2mfX9 carousel__inner-slide"
-                style={{}}
-              >
-                <div
-                  className="c3 slide-copy-wrapper"
-                >
-                  140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets.
-                </div>
-              </div>
+              Some other longside but not really all that long copy, who knows, it could be this long or LESS
             </div>
+          </li>
+          <li
+            className="splide__slide last-slide"
+            index={4}
+          >
             <div
-              aria-label="slide"
-              aria-selected={false}
-              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--hidden"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              role="option"
-              style={
-                {
-                  "paddingBottom": "66.66666666666667%",
-                  "width": "16.666666666666668%",
-                }
-              }
+              className="c3 c4 slide-copy-wrapper"
             >
-              <div
-                className="slideInner___2mfX9 carousel__inner-slide"
-                style={{}}
-              >
-                <div
-                  className="c3 slide-copy-wrapper"
-                >
-                  Some other longside but not really all that long copy, who knows, it could be this long or LESS
-                </div>
-              </div>
+              140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets. ABIGLONGLINETOFORCEONTOANEWONE
             </div>
-            <div
-              aria-label="slide"
-              aria-selected={false}
-              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--hidden last-slide"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              role="option"
-              style={
-                {
-                  "paddingBottom": "66.66666666666667%",
-                  "width": "16.666666666666668%",
-                }
-              }
-            >
-              <div
-                className="slideInner___2mfX9 carousel__inner-slide"
-                style={{}}
-              >
-                <div
-                  className="c3 slide-copy-wrapper"
-                >
-                  140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets. ABIGLONGLINETOFORCEONTOANEWONE
-                </div>
-              </div>
-            </div>
-            <div
-              aria-label="slide"
-              aria-selected={false}
-              className="slide___3-Nqo slideHorizontal___1NzNV carousel__slide carousel__slide--hidden"
-              onBlur={[Function]}
-              onFocus={[Function]}
-              role="option"
-              style={
-                {
-                  "paddingBottom": "66.66666666666667%",
-                  "width": "16.666666666666668%",
-                }
-              }
-            >
-              <div
-                className="slideInner___2mfX9 carousel__inner-slide"
-                style={{}}
-              />
-            </div>
-          </div>
-        </div>
+          </li>
+          <li
+            className="splide__slide"
+            index={5}
+          />
+        </ul>
       </div>
-      <button
-        aria-label="previous"
-        className="buttonBack___1mlaL carousel__back-button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        Back
-      </button>
-      <button
-        aria-label="next"
-        className="buttonNext___2mOCa carousel__next-button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        Next
-      </button>
     </div>
   </div>
 </div>

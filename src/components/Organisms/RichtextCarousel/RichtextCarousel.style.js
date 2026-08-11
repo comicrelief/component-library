@@ -65,23 +65,33 @@ const CarouselWrapper = styled.div`
     }
   }
 
-  .carousel {
+  .splide {
     position: relative;
     margin: 0 auto;
     padding-top: ${spacing('l')};
 
-    button.carousel__back-button,
-    button.carousel__next-button {
+    // Navigation buttons:
+    .splide__arrows {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    button.splide__arrow {
       position: absolute;
       left: 0;
       top: 0;
-      width: 33% !important;
+      width: 33.3%;
       height: 100%;
-      padding: 0 !important;
+      padding: 0;
       box-shadow: none;
       text-indent: -9999px;
       background-color: transparent;
-      border: none;
+      transform: none;
+      border-radius: 0;
 
       &:after {
         content: "";
@@ -97,126 +107,117 @@ const CarouselWrapper = styled.div`
         `};
       }
 
+      &.splide__arrow--next {
+        left: auto;
+        right: 0;
+
+        &:after {
+          left: auto;
+          right: 0;
+          background: ${({ theme, $carouselBackgroundColour }) => css`
+          linear-gradient(90deg, ${theme.color($carouselBackgroundColour)}00,
+          ${theme.color($carouselBackgroundColour)}7a, ${theme.color($carouselBackgroundColour)});
+        `};
+        }
+      }
+
       &:hover {
         &:after {
           opacity: 0.5;
         }
       }
 
-      @media ${({ theme }) => theme.allBreakpoints('M')} {
-        width: 33.3% !important;
-        &:after {
-          width: 100%;
-        }
+      svg {
+        display: none;
       }
     }
 
-    button.carousel__next-button {
-      left: auto;
-      right: 0;
-
-      &:before {
-        transform: translate(0, -50%) rotate(-90deg);
-      }
-
-      &:after {
-        left: auto;
-        right: 0;
-
-        background: ${({ theme, $carouselBackgroundColour }) => css`
-          linear-gradient(90deg, ${theme.color($carouselBackgroundColour)}00,
-          ${theme.color($carouselBackgroundColour)}7a, ${theme.color($carouselBackgroundColour)});
-        `};
-      }
-    }
-
-    .richtext-carousel {
-      // Override default animations
-      transition: -webkit-transform ${animationSpeed}s;
-      -o-transition: transform ${animationSpeed}s;
-      transition: transform ${animationSpeed}s;
-      -webkit-transform: ${animationSpeed}s;
-      will-change: transform;
-
+    
+    &.richtext-carousel {
       .last-slide {
-        .slide-copy-wrapper:after {
+        ${SlideCopyWrapper}:after {
           content: none;
         }
       }
 
-      .carousel__slide {
-        // 'Mobile'
-        padding-bottom: ${props => props.$mobileHeight}px !important;
+      // All sides:
+      .splide__slide  {
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
 
+        padding-bottom: ${props => props.$mobileHeight}px;
+
+
+        
         // 'Tablet' (and up) tweaks for the 3-visible layout
         @media ${({ theme }) => theme.allBreakpoints('M')} {
+          padding-bottom: ${props => props.$tabletHeight}px;
 
-          padding-bottom: ${props => props.$tabletHeight}px !important;
+           // All 'SlideCopyWrapper's:
+          ${SlideCopyWrapper} {
+            transition: transform ${animationSpeed}s ease;
+            transform-origin: center;
+            transform: scale(0.8);
 
-          // All slides:
-          .carousel__inner-slide {
-
-            // All 'SlideCopyWrapper's:
-            > div:first-child {
-              transition: transform ${animationSpeed}s ease;
-              transform-origin: center;
-              transform: scale(0.8);
-
-              &:after {
-                transition: transform ${animationSpeed}s ease,
-                width ${animationSpeed}s ease,
-                right ${animationSpeed}s ease;
-                width: 100%;
-                right: calc(-100% - 6px);
-                transform: scale(1);
-
-              }
+            &:after {
+              transition: transform ${animationSpeed}s ease,
+              width ${animationSpeed}s ease,
+              right ${animationSpeed}s ease;
+              width: 100%;
+              right: calc(-100% - 6px);
+              transform: scale(1);
             }
           }
 
           // Our 'first' slide of the three:
-          &.carousel__slide--visible {
-            .carousel__inner-slide {
-              > div:first-child {
-                &:after {
-                  width: 33%;
-                  right: calc(-33% - 3px);
-                  transform: scale(1);
-                }
-              }
-            }
+          &.is-active {
+            //
+          }
 
-            // 2nd and 3rd:
-            + .carousel__slide--visible {
-              .carousel__inner-slide {
-                > div:first-child {
-                  transform: scale(1);
-                  &:after {
-                    width: 33%;
-                    right: calc(-33% + 3px);
-                    transform: scale(0.8);
-                  }
-                }
-              }
-
-              // Resets the 3rd slide:
-              + .carousel__slide--visible {
-                > div > div:first-child {
-                  transform: scale(0.8);
-                  &:after {
-                    width: 50%;
-                    right: calc(-50% - 6px);
-                    transform: scale(1);
-                  }
-                }
-              }
+          // Middle slide:
+          &.is-next {
+            ${SlideCopyWrapper} {
+              transform: scale(1.0);
             }
           }
-        }
 
+          // 2nd and 3rd:
+          // + .carousel__slide--visible {
+          //   .carousel__inner-slide {
+          //     > ${SlideCopyWrapper} {
+          //       transform: scale(1);
+          //       &:after {
+          //         width: 33%;
+          //         right: calc(-33% + 3px);
+          //         transform: scale(0.8);
+          //       }
+          //     }
+          //   }
+          // }
+
+          // Resets the 3rd slide:
+          //  + .carousel__slide--visible {
+          //      > ${SlideCopyWrapper} {
+          //        transform: scale(0.8);
+          //        &:after {
+          //          width: 50%;
+          //          right: calc(-50% - 6px);
+          //          transform: scale(1);
+          //        }
+          //      }
+          //    }
+          //  }
+
+        } // End of M breakpoint
+
+
+        
         // 'Desktop'
         @media ${({ theme }) => theme.allBreakpoints('L')} {
-          padding-bottom: ${props => props.$desktopHeight}px !important;
+          padding-bottom: ${props => props.$desktopHeight}px;
 
           // First
           &.carousel__slide--visible {
@@ -247,7 +248,7 @@ const CarouselWrapper = styled.div`
           justify-content: flex-start;
           flex-direction: column;
 
-          .slide-copy-wrapper {
+          ${SlideCopyWrapper} {
             font-size: 0.9rem;
             line-height: 0.9rem;
 
