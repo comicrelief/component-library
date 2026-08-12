@@ -237,6 +237,7 @@ const CarouselWrapper = styled.div`
           align-items: center;
           justify-content: flex-start;
           flex-direction: column;
+          width: 100%;
         }
 
         // No dashed 'connecting' line on the final slide
