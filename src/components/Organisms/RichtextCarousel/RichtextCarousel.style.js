@@ -47,15 +47,13 @@ const HeadingCopyWrapper = styled.div`
 const CarouselWrapper = styled.div`
   height: 100%;
   background: ${({ theme, $carouselBackgroundColour }) => theme.color($carouselBackgroundColour)};
-  
   max-width: 760px;
   padding: 2.5rem ${spacing('l')} 3.5rem;
   margin: 0 auto;
-
   border-radius: 20px;
   ${defaultBoxShadow()}
 
-  > div:first-child {
+  ${HeadingCopyWrapper} {
     * {
       margin-top: 0;
     }
@@ -92,6 +90,7 @@ const CarouselWrapper = styled.div`
       background-color: transparent;
       transform: none;
       border-radius: 0;
+      opacity: 1;
 
       &:after {
         content: "";
@@ -132,14 +131,8 @@ const CarouselWrapper = styled.div`
       }
     }
 
-    
+    // Carousel:
     &.richtext-carousel {
-      .last-slide {
-        ${SlideCopyWrapper}:after {
-          content: none;
-        }
-      }
-
       // All sides:
       .splide__slide  {
         text-align: center;
@@ -147,10 +140,15 @@ const CarouselWrapper = styled.div`
         align-items: center;
         justify-content: flex-start;
         flex-direction: column;
-
         padding-bottom: ${props => props.$mobileHeight}px;
 
-
+        &.last-slide {
+          ${SlideCopyWrapper} {
+            &:after {
+              content: none !important;
+            }
+          }
+        }
         
         // 'Tablet' (and up) tweaks for the 3-visible layout
         @media ${({ theme }) => theme.allBreakpoints('M')} {
@@ -166,97 +164,22 @@ const CarouselWrapper = styled.div`
               transition: transform ${animationSpeed}s ease,
               width ${animationSpeed}s ease,
               right ${animationSpeed}s ease;
-              width: 100%;
-              right: calc(-100% - 6px);
+              width: 33%;
+              right: calc(-33% - 1px);
               transform: scale(1);
             }
           }
 
-          // Our 'first' slide of the three:
           &.is-active {
-            //
-          }
-
-          // Middle slide:
-          &.is-next {
             ${SlideCopyWrapper} {
               transform: scale(1.0);
-            }
+            } 
           }
+        }
 
-          // 2nd and 3rd:
-          // + .carousel__slide--visible {
-          //   .carousel__inner-slide {
-          //     > ${SlideCopyWrapper} {
-          //       transform: scale(1);
-          //       &:after {
-          //         width: 33%;
-          //         right: calc(-33% + 3px);
-          //         transform: scale(0.8);
-          //       }
-          //     }
-          //   }
-          // }
-
-          // Resets the 3rd slide:
-          //  + .carousel__slide--visible {
-          //      > ${SlideCopyWrapper} {
-          //        transform: scale(0.8);
-          //        &:after {
-          //          width: 50%;
-          //          right: calc(-50% - 6px);
-          //          transform: scale(1);
-          //        }
-          //      }
-          //    }
-          //  }
-
-        } // End of M breakpoint
-
-
-        
         // 'Desktop'
         @media ${({ theme }) => theme.allBreakpoints('L')} {
           padding-bottom: ${props => props.$desktopHeight}px;
-
-          // First
-          &.carousel__slide--visible {
-
-            // 2nd and 3rd
-            + .carousel__slide--visible {
-
-              // 3rd only
-              + .carousel__slide--visible {
-                .carousel__inner-slide {
-                  > div:first-child {
-                    &:after {
-                      right: calc(-125% - 5px);
-                      width: 125%;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-        // END OF DESKTOP
-
-        .carousel__inner-slide {
-          text-align: center;
-          display: inline-flex;
-          align-items: center;
-          justify-content: flex-start;
-          flex-direction: column;
-
-          ${SlideCopyWrapper} {
-            font-size: 0.9rem;
-            line-height: 0.9rem;
-
-            * {
-              font-size: inherit;
-              line-height: inherit;
-            }
-          }
         }
       }
     }

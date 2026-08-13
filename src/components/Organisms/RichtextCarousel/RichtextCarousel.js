@@ -1,5 +1,5 @@
 import React, {
-  useEffect, useState, useCallback
+  useEffect, useState
 } from 'react';
 import PropTypes from 'prop-types';
 
@@ -28,45 +28,12 @@ const RichtextCarousel = ({
     rowBackgroundColour = 'grey_light'
   }
 }) => {
-  // Defaults to mobile config:
-  const [isMobile, setIsMobile] = useState(true);
-  const [visibleSlides, setVisibleSlides] = useState(1);
-  const [totalSlides, setTotalSlides] = useState(null);
   const [theseItems, setTheseItems] = useState();
-
-  // Custom function to let us update the carousel config dynamically
-  const screenResize = useCallback(() => {
-    const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
-    const isCurrentlyMobile = window.innerWidth < breakpointValues.M;
-
-    if (screenSize !== null && (isMobile !== isCurrentlyMobile)) {
-      setIsMobile(isCurrentlyMobile);
-      setVisibleSlides(isCurrentlyMobile ? 1 : 3);
-      setTotalSlides(isCurrentlyMobile ? theseItems.length : theseItems.length + 2);
-    }
-  }, [isMobile, theseItems]);
 
   // Cache our data source, using as a flag for render logic:
   useEffect(() => {
     setTheseItems(nodes);
   }, [setTheseItems, nodes]);
-
-  useEffect(() => {
-    if (window !== 'undefined' && window.innerWidth >= breakpointValues.M) {
-      // On inital render, update carousel plugin config
-      // to suit the non-mobile layout and functionality:
-      setIsMobile(false);
-      setVisibleSlides(3);
-    }
-
-    // Hook into browser's own onresize event to call our custom wrapper function:
-    if (typeof window !== 'undefined') window.onresize = screenResize;
-  }, [screenResize]);
-
-  if (theseItems && totalSlides === null) {
-    // Reflects our two dummy/bookend slides for non-mobile/tablet views:
-    setTotalSlides(isMobile ? theseItems.length : theseItems.length + 2);
-  }
 
   return (
     <Container
@@ -89,45 +56,42 @@ const RichtextCarousel = ({
         </HeadingCopyWrapper>
 
         {theseItems && (
-        <Splide
-          className="richtext-carousel"
-          options={{
-            speed: 1000,
-            arrows: true,
-            pagination: false,
-            drag: 'free',
-            flickPower: 50,
-            perMove: 1,
-            perPage: visibleSlides,
-            dragMinThreshold: { mouse: 50, touch: 50 },
-            updateOnMove: true,
-            snap: true,
-            autoplay: autoPlay
-          }}
-        >
-
-          {/* Dummy slide for our desired non-mobile layout and functionality */}
-          {isMobile === false && (
-          <SplideSlide
-            index={0}
-            key={0}
-            className="bookend-first"
-          />
-          )}
-
+          <Splide
+            className="richtext-carousel"
+            options={{
+              speed: 1000,
+              arrows: true,
+              pagination: false,
+              drag: 'free',
+              flickPower: 50,
+              perMove: 1,
+              dragMinThreshold: { mouse: 50, touch: 50 },
+              updateOnMove: true,
+              snap: true,
+              autoplay: autoPlay,
+              focus: 'center',
+              trimSpace: false,
+              perPage: 3,
+              rewind: true,
+              breakpoints: {
+                [breakpointValues.M]: {
+                  perPage: 1
+                }
+              }
+            }}
+          >
             {Object.keys(theseItems).map((key, index) => {
-            // Reflect that initial dummy/bookend slide shown on non-mobile/tablet views:
-              const thisOffsetIndex = index + (isMobile ? 0 : 1);
+              const safeIndex = index;
 
               return (
-              // Calculate the index offset accordingly to reflect the number of slides,
-              // but use the REAL index when determining if its the last REAL slide
+                // Calculate the index offset accordingly to reflect the number of slides,
+                // but use the REAL index when determining if its the last REAL slide
                 <SplideSlide
-                  index={thisOffsetIndex}
                   className={index === (theseItems.length - 1) && 'last-slide'}
-                  key={thisOffsetIndex}
+                  key={safeIndex}
+                  index={safeIndex}
+                  data-index={safeIndex}
                 >
-
                   <SlideCopyWrapper
                     className="slide-copy-wrapper"
                     $mobileHeight={mobileHeight}
@@ -142,18 +106,10 @@ const RichtextCarousel = ({
                 </SplideSlide>
               );
             })}
-
-            {/* Dummy slide for our desired non-mobile layout and functionality */}
-            {isMobile === false && (
-            <SplideSlide index={theseItems.length + 1} key="bookend-last" />
-            )}
-
-        </Splide>
+          </Splide>
         )}
-
       </CarouselWrapper>
     </Container>
-
   );
 };
 

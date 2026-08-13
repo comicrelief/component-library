@@ -14,7 +14,7 @@ it('renders default padding version correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-.c2 {
+.c3 {
   text-align: center;
 }
 
@@ -28,13 +28,13 @@ it('renders default padding version correctly', () => {
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
-.c1 >div:first-child * {
+.c1 .c2 * {
   margin-top: 0;
 }
 
-.c1 >div:first-child h1,
-.c1 >div:first-child h2,
-.c1 >div:first-child h3 {
+.c1 .c2 h1,
+.c1 .c2 h2,
+.c1 .c2 h3 {
   margin-bottom: 1.5rem;
 }
 
@@ -65,6 +65,7 @@ it('renders default padding version correctly', () => {
   background-color: transparent;
   transform: none;
   border-radius: 0;
+  opacity: 1;
 }
 
 .c1 .splide button.splide__arrow:after {
@@ -104,14 +105,6 @@ it('renders default padding version correctly', () => {
   justify-content: flex-start;
   flex-direction: column;
   padding-bottom: 300px;
-}
-
-.c1 .splide.richtext-carousel .splide__slide .carousel__inner-slide {
-  text-align: center;
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
 }
 
 .c0 {
@@ -129,11 +122,6 @@ it('renders default padding version correctly', () => {
   .c1 .splide.richtext-carousel .splide__slide {
     padding-bottom: 350px;
   }
-
-  .c1 .splide.richtext-carousel .splide__slide.carousel__slide--visible +.carousel__slide--visible +.carousel__slide--visible .carousel__inner-slide >div:first-child:after {
-    right: calc(-125% - 5px);
-    width: 125%;
-  }
 }
 
 <div
@@ -144,7 +132,7 @@ it('renders default padding version correctly', () => {
     id="nqIEHjiYE8Yd2A2a5cI3O"
   >
     <div
-      className="c2"
+      className="c2 c3"
     >
       Some heading copy that will be nicely constructed in-situ
     </div>
@@ -159,7 +147,7 @@ it('renders custom padding + background colour version correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-.c4 {
+.c5 {
   background: #FFFFFF;
   height: 300px;
   width: 75%;
@@ -174,7 +162,7 @@ it('renders custom padding + background colour version correctly', () => {
   word-wrap: break-word;
 }
 
-.c4:after {
+.c5:after {
   position: absolute;
   content: '';
   top: 50%;
@@ -184,7 +172,7 @@ it('renders custom padding + background colour version correctly', () => {
   border-bottom: 1px dashed #969598;
 }
 
-.c2 {
+.c3 {
   text-align: center;
 }
 
@@ -198,13 +186,13 @@ it('renders custom padding + background colour version correctly', () => {
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
-.c1 >div:first-child * {
+.c1 .c2 * {
   margin-top: 0;
 }
 
-.c1 >div:first-child h1,
-.c1 >div:first-child h2,
-.c1 >div:first-child h3 {
+.c1 .c2 h1,
+.c1 .c2 h2,
+.c1 .c2 h3 {
   margin-bottom: 1.5rem;
 }
 
@@ -235,6 +223,7 @@ it('renders custom padding + background colour version correctly', () => {
   background-color: transparent;
   transform: none;
   border-radius: 0;
+  opacity: 1;
 }
 
 .c1 .splide button.splide__arrow:after {
@@ -267,10 +256,6 @@ it('renders custom padding + background colour version correctly', () => {
   display: none;
 }
 
-.c1 .splide.richtext-carousel .last-slide .c3:after {
-  content: none;
-}
-
 .c1 .splide.richtext-carousel .splide__slide {
   text-align: center;
   display: inline-flex;
@@ -280,22 +265,8 @@ it('renders custom padding + background colour version correctly', () => {
   padding-bottom: 300px;
 }
 
-.c1 .splide.richtext-carousel .splide__slide .carousel__inner-slide {
-  text-align: center;
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-}
-
-.c1 .splide.richtext-carousel .splide__slide .carousel__inner-slide .c3 {
-  font-size: 0.9rem;
-  line-height: 0.9rem;
-}
-
-.c1 .splide.richtext-carousel .splide__slide .carousel__inner-slide .c3 * {
-  font-size: inherit;
-  line-height: inherit;
+.c1 .splide.richtext-carousel .splide__slide.last-slide .c4:after {
+  content: none!important;
 }
 
 .c0 {
@@ -304,14 +275,14 @@ it('renders custom padding + background colour version correctly', () => {
 }
 
 @media (min-width: 740px) {
-  .c4 {
+  .c5 {
     height: 350px;
     width: 85%;
   }
 }
 
 @media (min-width: 1024px) {
-  .c4 {
+  .c5 {
     height: 350px;
   }
 }
@@ -321,20 +292,20 @@ it('renders custom padding + background colour version correctly', () => {
     padding-bottom: 350px;
   }
 
-  .c1 .splide.richtext-carousel .splide__slide .c3 {
+  .c1 .splide.richtext-carousel .splide__slide .c4 {
     transition: transform 0.75s ease;
     transform-origin: center;
     transform: scale(0.8);
   }
 
-  .c1 .splide.richtext-carousel .splide__slide .c3:after {
+  .c1 .splide.richtext-carousel .splide__slide .c4:after {
     transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
-    width: 100%;
-    right: calc(-100% - 6px);
+    width: 33%;
+    right: calc(-33% - 1px);
     transform: scale(1);
   }
 
-  .c1 .splide.richtext-carousel .splide__slide.is-next .c3 {
+  .c1 .splide.richtext-carousel .splide__slide.is-active .c4 {
     transform: scale(1.0);
   }
 }
@@ -342,11 +313,6 @@ it('renders custom padding + background colour version correctly', () => {
 @media (min-width: 1024px) {
   .c1 .splide.richtext-carousel .splide__slide {
     padding-bottom: 350px;
-  }
-
-  .c1 .splide.richtext-carousel .splide__slide.carousel__slide--visible +.carousel__slide--visible +.carousel__slide--visible .carousel__inner-slide >div:first-child:after {
-    right: calc(-125% - 5px);
-    width: 125%;
   }
 }
 
@@ -358,7 +324,7 @@ it('renders custom padding + background colour version correctly', () => {
     id="nqIEHjiYE8Yd2A2a5cI31"
   >
     <div
-      className="c2"
+      className="c2 c3"
     >
       Some heading copy that will be nicely constructed in-situ
     </div>
@@ -372,53 +338,49 @@ it('renders custom padding + background colour version correctly', () => {
           className="splide__list"
         >
           <li
-            className="splide__slide bookend-first"
-            index={0}
-          />
-          <li
             className="splide__slide"
-            index={1}
+            data-index={0}
+            index={0}
           >
             <div
-              className="c3 c4 slide-copy-wrapper"
+              className="c4 c5 slide-copy-wrapper"
             >
               Some other longside but not really all that long copy, who knows, it could be this long or LESS.
             </div>
           </li>
           <li
             className="splide__slide"
-            index={2}
+            data-index={1}
+            index={1}
           >
             <div
-              className="c3 c4 slide-copy-wrapper"
+              className="c4 c5 slide-copy-wrapper"
             >
               140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets.
             </div>
           </li>
           <li
             className="splide__slide"
-            index={3}
+            data-index={2}
+            index={2}
           >
             <div
-              className="c3 c4 slide-copy-wrapper"
+              className="c4 c5 slide-copy-wrapper"
             >
               Some other longside but not really all that long copy, who knows, it could be this long or LESS
             </div>
           </li>
           <li
             className="splide__slide last-slide"
-            index={4}
+            data-index={3}
+            index={3}
           >
             <div
-              className="c3 c4 slide-copy-wrapper"
+              className="c4 c5 slide-copy-wrapper"
             >
               140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets. ABIGLONGLINETOFORCEONTOANEWONE
             </div>
           </li>
-          <li
-            className="splide__slide"
-            index={5}
-          />
         </ul>
       </div>
     </div>

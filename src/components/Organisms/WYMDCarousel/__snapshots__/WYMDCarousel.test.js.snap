@@ -553,17 +553,6 @@ exports[`renders the customised padding version correctly:
   display: none;
 }
 
-.c1 .splide button.carousel__next-button {
-  left: auto;
-  right: 0;
-}
-
-.c1 .splide button.carousel__next-button:after {
-  left: auto;
-  right: 0;
-  background: linear-gradient(270deg,rgba(255,255,255,1),rgba(255,255,255,0.5),rgba(255,255,255,0));
-}
-
 .c1 .splide.wymd-carousel .splide__slide {
   height: 425px;
 }
@@ -1589,17 +1578,6 @@ exports[`renders the default padding version correctly:
 
 .c1 .splide button.splide__arrow svg {
   display: none;
-}
-
-.c1 .splide button.carousel__next-button {
-  left: auto;
-  right: 0;
-}
-
-.c1 .splide button.carousel__next-button:after {
-  left: auto;
-  right: 0;
-  background: linear-gradient(270deg,rgba(255,255,255,1),rgba(255,255,255,0.5),rgba(255,255,255,0));
 }
 
 .c1 .splide.wymd-carousel .splide__slide {

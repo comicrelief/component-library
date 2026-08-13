@@ -1,7 +1,8 @@
 import React from 'react';
 import WYMDCarousel from './WYMDCarousel';
 import {
-  carouselItemsComplete, carouselItemsCompleteWithPadding, carouselItemsIncomplete, carouselItemsMinimal
+  carouselItemsComplete, carouselItemsCompleteWithPadding,
+  carouselItemsIncomplete, carouselItemsMinimal
 } from '../../../data/data';
 import { ExampleContainer } from '../../../demos/SharedStyles';
 

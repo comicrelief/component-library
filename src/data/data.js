@@ -323,7 +323,7 @@ const RichtextCarouselItems = {
     { copy: 'Some other longside but not really all that long copy, who knows, it could be this long or LESS' },
     { copy: '140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets. ABIGLONGLINETOFORCEONTOANEWONE' }
   ],
-  autoPlay: true
+  autoPlay: false
 };
 
 const RichtextCarouselItemsWithPadding = {
