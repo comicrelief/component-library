@@ -18,6 +18,13 @@ const SlideCopyWrapper = styled.div`
   position: relative;
   overflow: visible;
   word-wrap: break-word;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+
+  * {
+    font-size: inherit;
+    line-height: inherit;
+  }
 
   &:after {
     position: absolute;
@@ -41,6 +48,14 @@ const SlideCopyWrapper = styled.div`
 
 const HeadingCopyWrapper = styled.div`
   text-align: center;
+
+  * {
+    margin-top: 0;
+  }
+
+  h1, h2, h3 {
+    margin-bottom: 1.5rem;
+  }
 `;
 
 // Unfortunately having to target plugin-created markup ye olde fashioned way:
@@ -52,16 +67,6 @@ const CarouselWrapper = styled.div`
   margin: 0 auto;
   border-radius: 20px;
   ${defaultBoxShadow()}
-
-  ${HeadingCopyWrapper} {
-    * {
-      margin-top: 0;
-    }
-
-    h1, h2, h3 {
-      margin-bottom: 1.5rem;
-    }
-  }
 
   .splide {
     position: relative;
@@ -97,7 +102,7 @@ const CarouselWrapper = styled.div`
         position: absolute;
         top: 0;
         left: 0;
-        width: 50%;
+        width: 100%;
         height: 100%;
         transition: opacity 0.2s linear;
         background: ${({ theme, $carouselBackgroundColour }) => css`
@@ -133,15 +138,17 @@ const CarouselWrapper = styled.div`
 
     // Carousel:
     &.richtext-carousel {
+
       // All sides:
-      .splide__slide  {
+      .splide__slide {
         text-align: center;
         display: inline-flex;
         align-items: center;
         justify-content: flex-start;
         flex-direction: column;
-        padding-bottom: ${props => props.$mobileHeight}px;
+        height: ${props => props.$mobileHeight}px;
 
+        // No dashed 'connecting' line on the final slide
         &.last-slide {
           ${SlideCopyWrapper} {
             &:after {
@@ -152,7 +159,7 @@ const CarouselWrapper = styled.div`
         
         // 'Tablet' (and up) tweaks for the 3-visible layout
         @media ${({ theme }) => theme.allBreakpoints('M')} {
-          padding-bottom: ${props => props.$tabletHeight}px;
+          height: ${props => props.$tabletHeight}px;
 
            // All 'SlideCopyWrapper's:
           ${SlideCopyWrapper} {
@@ -170,6 +177,7 @@ const CarouselWrapper = styled.div`
             }
           }
 
+          // Our middle, active slide:
           &.is-active {
             ${SlideCopyWrapper} {
               transform: scale(1.0);
@@ -177,9 +185,8 @@ const CarouselWrapper = styled.div`
           }
         }
 
-        // 'Desktop'
         @media ${({ theme }) => theme.allBreakpoints('L')} {
-          padding-bottom: ${props => props.$desktopHeight}px;
+          height: ${props => props.$desktopHeight}px;
         }
       }
     }

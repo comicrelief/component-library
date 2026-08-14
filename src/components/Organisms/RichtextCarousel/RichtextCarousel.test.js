@@ -14,8 +14,18 @@ it('renders default padding version correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-.c3 {
+.c2 {
   text-align: center;
+}
+
+.c2 * {
+  margin-top: 0;
+}
+
+.c2 h1,
+.c2 h2,
+.c2 h3 {
+  margin-bottom: 1.5rem;
 }
 
 .c1 {
@@ -26,16 +36,6 @@ it('renders default padding version correctly', () => {
   margin: 0 auto;
   border-radius: 20px;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
-}
-
-.c1 .c2 * {
-  margin-top: 0;
-}
-
-.c1 .c2 h1,
-.c1 .c2 h2,
-.c1 .c2 h3 {
-  margin-bottom: 1.5rem;
 }
 
 .c1 .splide {
@@ -73,7 +73,7 @@ it('renders default padding version correctly', () => {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 100%;
   height: 100%;
   transition: opacity 0.2s linear;
   background: linear-gradient(90deg,#FFFFFF,#FFFFFF7a,#FFFFFF00);
@@ -104,7 +104,7 @@ it('renders default padding version correctly', () => {
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  padding-bottom: 300px;
+  height: 300px;
 }
 
 .c0 {
@@ -114,13 +114,13 @@ it('renders default padding version correctly', () => {
 
 @media (min-width: 740px) {
   .c1 .splide.richtext-carousel .splide__slide {
-    padding-bottom: 350px;
+    height: 350px;
   }
 }
 
 @media (min-width: 1024px) {
   .c1 .splide.richtext-carousel .splide__slide {
-    padding-bottom: 350px;
+    height: 350px;
   }
 }
 
@@ -132,7 +132,7 @@ it('renders default padding version correctly', () => {
     id="nqIEHjiYE8Yd2A2a5cI3O"
   >
     <div
-      className="c2 c3"
+      className="c2"
     >
       Some heading copy that will be nicely constructed in-situ
     </div>
@@ -147,7 +147,7 @@ it('renders custom padding + background colour version correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-.c5 {
+.c4 {
   background: #FFFFFF;
   height: 300px;
   width: 75%;
@@ -160,9 +160,16 @@ it('renders custom padding + background colour version correctly', () => {
   position: relative;
   overflow: visible;
   word-wrap: break-word;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
 }
 
-.c5:after {
+.c4 * {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c4:after {
   position: absolute;
   content: '';
   top: 50%;
@@ -172,8 +179,18 @@ it('renders custom padding + background colour version correctly', () => {
   border-bottom: 1px dashed #969598;
 }
 
-.c3 {
+.c2 {
   text-align: center;
+}
+
+.c2 * {
+  margin-top: 0;
+}
+
+.c2 h1,
+.c2 h2,
+.c2 h3 {
+  margin-bottom: 1.5rem;
 }
 
 .c1 {
@@ -184,16 +201,6 @@ it('renders custom padding + background colour version correctly', () => {
   margin: 0 auto;
   border-radius: 20px;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
-}
-
-.c1 .c2 * {
-  margin-top: 0;
-}
-
-.c1 .c2 h1,
-.c1 .c2 h2,
-.c1 .c2 h3 {
-  margin-bottom: 1.5rem;
 }
 
 .c1 .splide {
@@ -231,7 +238,7 @@ it('renders custom padding + background colour version correctly', () => {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 100%;
   height: 100%;
   transition: opacity 0.2s linear;
   background: linear-gradient(90deg,#FFFFFF,#FFFFFF7a,#FFFFFF00);
@@ -262,10 +269,10 @@ it('renders custom padding + background colour version correctly', () => {
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  padding-bottom: 300px;
+  height: 300px;
 }
 
-.c1 .splide.richtext-carousel .splide__slide.last-slide .c4:after {
+.c1 .splide.richtext-carousel .splide__slide.last-slide .c3:after {
   content: none!important;
 }
 
@@ -275,44 +282,44 @@ it('renders custom padding + background colour version correctly', () => {
 }
 
 @media (min-width: 740px) {
-  .c5 {
+  .c4 {
     height: 350px;
     width: 85%;
   }
 }
 
 @media (min-width: 1024px) {
-  .c5 {
+  .c4 {
     height: 350px;
   }
 }
 
 @media (min-width: 740px) {
   .c1 .splide.richtext-carousel .splide__slide {
-    padding-bottom: 350px;
+    height: 350px;
   }
 
-  .c1 .splide.richtext-carousel .splide__slide .c4 {
+  .c1 .splide.richtext-carousel .splide__slide .c3 {
     transition: transform 0.75s ease;
     transform-origin: center;
     transform: scale(0.8);
   }
 
-  .c1 .splide.richtext-carousel .splide__slide .c4:after {
+  .c1 .splide.richtext-carousel .splide__slide .c3:after {
     transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
     width: 33%;
     right: calc(-33% - 1px);
     transform: scale(1);
   }
 
-  .c1 .splide.richtext-carousel .splide__slide.is-active .c4 {
+  .c1 .splide.richtext-carousel .splide__slide.is-active .c3 {
     transform: scale(1.0);
   }
 }
 
 @media (min-width: 1024px) {
   .c1 .splide.richtext-carousel .splide__slide {
-    padding-bottom: 350px;
+    height: 350px;
   }
 }
 
@@ -324,7 +331,7 @@ it('renders custom padding + background colour version correctly', () => {
     id="nqIEHjiYE8Yd2A2a5cI31"
   >
     <div
-      className="c2 c3"
+      className="c2"
     >
       Some heading copy that will be nicely constructed in-situ
     </div>
@@ -343,7 +350,7 @@ it('renders custom padding + background colour version correctly', () => {
             index={0}
           >
             <div
-              className="c4 c5 slide-copy-wrapper"
+              className="c3 c4 slide-copy-wrapper"
             >
               Some other longside but not really all that long copy, who knows, it could be this long or LESS.
             </div>
@@ -354,7 +361,7 @@ it('renders custom padding + background colour version correctly', () => {
             index={1}
           >
             <div
-              className="c4 c5 slide-copy-wrapper"
+              className="c3 c4 slide-copy-wrapper"
             >
               140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets.
             </div>
@@ -365,7 +372,7 @@ it('renders custom padding + background colour version correctly', () => {
             index={2}
           >
             <div
-              className="c4 c5 slide-copy-wrapper"
+              className="c3 c4 slide-copy-wrapper"
             >
               Some other longside but not really all that long copy, who knows, it could be this long or LESS
             </div>
@@ -376,7 +383,7 @@ it('renders custom padding + background colour version correctly', () => {
             index={3}
           >
             <div
-              className="c4 c5 slide-copy-wrapper"
+              className="c3 c4 slide-copy-wrapper"
             >
               140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets. ABIGLONGLINETOFORCEONTOANEWONE
             </div>
