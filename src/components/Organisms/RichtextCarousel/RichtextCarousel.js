@@ -40,6 +40,7 @@ const RichtextCarousel = ({
       $paddingTop={paddingTop}
       $paddingBottom={paddingBottom}
       $rowBackgroundColour={rowBackgroundColour}
+      data-testid="richtext-carousel--container"
     >
 
       <CarouselWrapper
@@ -49,15 +50,17 @@ const RichtextCarousel = ({
         $tabletHeight={tabletHeight}
         $desktopHeight={desktopHeight}
         $carouselBackgroundColour={carouselBackgroundColour}
+        data-testid="richtext-carousel--wrapper"
       >
 
-        <HeadingCopyWrapper>
+        <HeadingCopyWrapper data-testid="richtext-carousel--heading">
           {headingCopy}
         </HeadingCopyWrapper>
 
         {theseItems && (
           <Splide
             className="richtext-carousel"
+            data-testid="richtext-carousel--splide"
             options={{
               speed: 1000,
               arrows: true,
@@ -91,6 +94,7 @@ const RichtextCarousel = ({
                   key={safeIndex}
                   index={safeIndex}
                   data-index={safeIndex}
+                  data-testid="richtext-carousel--slide"
                 >
                   <SlideCopyWrapper
                     className="slide-copy-wrapper"
@@ -99,6 +103,7 @@ const RichtextCarousel = ({
                     $desktopHeight={desktopHeight}
                     $nodeBackgroundColour={nodeBackgroundColour}
                     $nodeOutlineColour={nodeOutlineColour}
+                    data-testid="richtext-carousel--copy"
                   >
                     {theseItems[index].copy}
                   </SlideCopyWrapper>

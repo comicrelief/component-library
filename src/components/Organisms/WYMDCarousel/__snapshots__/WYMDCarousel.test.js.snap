@@ -695,28 +695,34 @@ exports[`renders the customised padding version correctly:
 
 <div
   className="c0"
+  data-testid="wymd-carousel--container"
 >
   <div
     className="c1 CarouselWrapper"
+    data-testid="wymd-carousel--wrapper"
     id="7zdR84QkZwrTh9NWx2H926"
   >
     <p
       className="c2 c3"
+      data-testid="wymd-carousel--heading"
     >
       Over the past two years, we've supported
     </p>
     <h1
       className="c4 c5"
+      data-testid="wymd-carousel--people-helped"
     >
       11.7 million people
     </h1>
     <p
       className="c6 c7"
+      data-testid="wymd-carousel--including"
     >
       including...
     </p>
     <div
       className="splide wymd-carousel"
+      data-testid="wymd-carousel--splide"
     >
       <div
         className="splide__track"
@@ -727,6 +733,7 @@ exports[`renders the customised padding version correctly:
           <li
             className="splide__slide"
             data-index={0}
+            data-testid="wymd-carousel--slide"
             index={0}
           >
             <div
@@ -748,6 +755,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <h1
                     className="c11"
+                    data-testid="wymd-carousel--amount"
                   >
                     1,000
                   </h1>
@@ -757,6 +765,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <p
                     className="c6"
+                    data-testid="wymd-carousel--copy"
                   >
                     children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                   </p>
@@ -767,6 +776,7 @@ exports[`renders the customised padding version correctly:
           <li
             className="splide__slide"
             data-index={1}
+            data-testid="wymd-carousel--slide"
             index={1}
           >
             <div
@@ -788,6 +798,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <h1
                     className="c11"
+                    data-testid="wymd-carousel--amount"
                   >
                     750,000
                   </h1>
@@ -797,6 +808,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <p
                     className="c6"
+                    data-testid="wymd-carousel--copy"
                   >
                     children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                   </p>
@@ -807,6 +819,7 @@ exports[`renders the customised padding version correctly:
           <li
             className="splide__slide"
             data-index={2}
+            data-testid="wymd-carousel--slide"
             index={2}
           >
             <div
@@ -828,6 +841,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <h1
                     className="c11"
+                    data-testid="wymd-carousel--amount"
                   >
                     3,000
                   </h1>
@@ -837,6 +851,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <p
                     className="c6"
+                    data-testid="wymd-carousel--copy"
                   >
                     children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                   </p>
@@ -847,6 +862,7 @@ exports[`renders the customised padding version correctly:
           <li
             className="splide__slide"
             data-index={3}
+            data-testid="wymd-carousel--slide"
             index={3}
           >
             <div
@@ -868,6 +884,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <h1
                     className="c11"
+                    data-testid="wymd-carousel--amount"
                   >
                     4,000
                   </h1>
@@ -877,6 +894,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <p
                     className="c6"
+                    data-testid="wymd-carousel--copy"
                   >
                     children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                   </p>
@@ -887,6 +905,7 @@ exports[`renders the customised padding version correctly:
           <li
             className="splide__slide"
             data-index={4}
+            data-testid="wymd-carousel--slide"
             index={4}
           >
             <div
@@ -908,6 +927,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <h1
                     className="c11"
+                    data-testid="wymd-carousel--amount"
                   >
                     5,000
                   </h1>
@@ -917,6 +937,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <p
                     className="c6"
+                    data-testid="wymd-carousel--copy"
                   >
                     children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                   </p>
@@ -927,6 +948,7 @@ exports[`renders the customised padding version correctly:
           <li
             className="splide__slide"
             data-index={5}
+            data-testid="wymd-carousel--slide"
             index={5}
           >
             <div
@@ -948,6 +970,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <h1
                     className="c11"
+                    data-testid="wymd-carousel--amount"
                   >
                     6,000
                   </h1>
@@ -957,6 +980,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <p
                     className="c6"
+                    data-testid="wymd-carousel--copy"
                   >
                     children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                   </p>
@@ -967,6 +991,7 @@ exports[`renders the customised padding version correctly:
           <li
             className="splide__slide"
             data-index={6}
+            data-testid="wymd-carousel--slide"
             index={6}
           >
             <div
@@ -988,6 +1013,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <h1
                     className="c11"
+                    data-testid="wymd-carousel--amount"
                   >
                     7,000
                   </h1>
@@ -997,6 +1023,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <p
                     className="c6"
+                    data-testid="wymd-carousel--copy"
                   >
                     children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                   </p>
@@ -1007,6 +1034,7 @@ exports[`renders the customised padding version correctly:
           <li
             className="splide__slide"
             data-index={7}
+            data-testid="wymd-carousel--slide"
             index={7}
           >
             <div
@@ -1028,6 +1056,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <h1
                     className="c11"
+                    data-testid="wymd-carousel--amount"
                   >
                     8,000
                   </h1>
@@ -1037,6 +1066,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <p
                     className="c6"
+                    data-testid="wymd-carousel--copy"
                   >
                     children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                   </p>
@@ -1047,6 +1077,7 @@ exports[`renders the customised padding version correctly:
           <li
             className="splide__slide last-slide"
             data-index={8}
+            data-testid="wymd-carousel--slide"
             index={8}
           >
             <div
@@ -1068,6 +1099,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <h1
                     className="c11"
+                    data-testid="wymd-carousel--amount"
                   >
                     9,000
                   </h1>
@@ -1077,6 +1109,7 @@ exports[`renders the customised padding version correctly:
                 >
                   <p
                     className="c6"
+                    data-testid="wymd-carousel--copy"
                   >
                     children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.
                   </p>
@@ -1685,23 +1718,28 @@ exports[`renders the default padding version correctly:
 
 <div
   className="c0"
+  data-testid="wymd-carousel--container"
 >
   <div
     className="c1 CarouselWrapper"
+    data-testid="wymd-carousel--wrapper"
     id="7zdR84QkZwrTh9NWx2H926"
   >
     <p
       className="c2 c3"
+      data-testid="wymd-carousel--heading"
     >
       Over the past two years, we've supported
     </p>
     <h1
       className="c4 c5"
+      data-testid="wymd-carousel--people-helped"
     >
       11.7 million people
     </h1>
     <p
       className="c6 c7"
+      data-testid="wymd-carousel--including"
     >
       including...
     </p>

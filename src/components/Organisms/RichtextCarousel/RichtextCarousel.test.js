@@ -126,13 +126,16 @@ it('renders default padding version correctly', () => {
 
 <div
   className="c0"
+  data-testid="richtext-carousel--container"
 >
   <div
     className="c1 CarouselWrapper"
+    data-testid="richtext-carousel--wrapper"
     id="nqIEHjiYE8Yd2A2a5cI3O"
   >
     <div
       className="c2"
+      data-testid="richtext-carousel--heading"
     >
       Some heading copy that will be nicely constructed in-situ
     </div>
@@ -325,18 +328,22 @@ it('renders custom padding + background colour version correctly', () => {
 
 <div
   className="c0"
+  data-testid="richtext-carousel--container"
 >
   <div
     className="c1 CarouselWrapper"
+    data-testid="richtext-carousel--wrapper"
     id="nqIEHjiYE8Yd2A2a5cI31"
   >
     <div
       className="c2"
+      data-testid="richtext-carousel--heading"
     >
       Some heading copy that will be nicely constructed in-situ
     </div>
     <div
       className="splide richtext-carousel"
+      data-testid="richtext-carousel--splide"
     >
       <div
         className="splide__track"
@@ -347,10 +354,12 @@ it('renders custom padding + background colour version correctly', () => {
           <li
             className="splide__slide"
             data-index={0}
+            data-testid="richtext-carousel--slide"
             index={0}
           >
             <div
               className="c3 c4 slide-copy-wrapper"
+              data-testid="richtext-carousel--copy"
             >
               Some other longside but not really all that long copy, who knows, it could be this long or LESS.
             </div>
@@ -358,10 +367,12 @@ it('renders custom padding + background colour version correctly', () => {
           <li
             className="splide__slide"
             data-index={1}
+            data-testid="richtext-carousel--slide"
             index={1}
           >
             <div
               className="c3 c4 slide-copy-wrapper"
+              data-testid="richtext-carousel--copy"
             >
               140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets.
             </div>
@@ -369,10 +380,12 @@ it('renders custom padding + background colour version correctly', () => {
           <li
             className="splide__slide"
             data-index={2}
+            data-testid="richtext-carousel--slide"
             index={2}
           >
             <div
               className="c3 c4 slide-copy-wrapper"
+              data-testid="richtext-carousel--copy"
             >
               Some other longside but not really all that long copy, who knows, it could be this long or LESS
             </div>
@@ -380,10 +393,12 @@ it('renders custom padding + background colour version correctly', () => {
           <li
             className="splide__slide last-slide"
             data-index={3}
+            data-testid="richtext-carousel--slide"
             index={3}
           >
             <div
               className="c3 c4 slide-copy-wrapper"
+              data-testid="richtext-carousel--copy"
             >
               140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets. ABIGLONGLINETOFORCEONTOANEWONE
             </div>
