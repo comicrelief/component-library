@@ -171,8 +171,8 @@ const CarouselWrapper = styled.div`
               transition: transform ${animationSpeed}s ease,
               width ${animationSpeed}s ease,
               right ${animationSpeed}s ease;
-              width: 33%;
-              right: calc(-33% - 1px);
+              width: 50%;
+              right: calc(-50% - 1px);
               transform: scale(1);
             }
           }

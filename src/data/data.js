@@ -338,7 +338,8 @@ const RichtextCarouselItemsWithPadding = {
   autoPlay: true,
   paddingBottom: '4rem',
   paddingTop: '4rem',
-  rowBackgroundColour: 'teal_light'
+  rowBackgroundColour: 'teal_light',
+  carouselBackgroundColour: 'grey_light'
 };
 
 export {

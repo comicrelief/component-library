@@ -198,7 +198,7 @@ it('renders custom padding + background colour version correctly', () => {
 
 .c1 {
   height: 100%;
-  background: #FFFFFF;
+  background: #F4F3F5;
   max-width: 760px;
   padding: 2.5rem 2rem 3.5rem;
   margin: 0 auto;
@@ -244,7 +244,7 @@ it('renders custom padding + background colour version correctly', () => {
   width: 100%;
   height: 100%;
   transition: opacity 0.2s linear;
-  background: linear-gradient(90deg,#FFFFFF,#FFFFFF7a,#FFFFFF00);
+  background: linear-gradient(90deg,#F4F3F5,#F4F3F57a,#F4F3F500);
 }
 
 .c1 .splide button.splide__arrow.splide__arrow--next {
@@ -255,7 +255,7 @@ it('renders custom padding + background colour version correctly', () => {
 .c1 .splide button.splide__arrow.splide__arrow--next:after {
   left: auto;
   right: 0;
-  background: linear-gradient(90deg,#FFFFFF00,#FFFFFF7a,#FFFFFF);
+  background: linear-gradient(90deg,#F4F3F500,#F4F3F57a,#F4F3F5);
 }
 
 .c1 .splide button.splide__arrow:hover:after {
@@ -276,6 +276,10 @@ it('renders custom padding + background colour version correctly', () => {
 }
 
 .c1 .splide.richtext-carousel .splide__slide.last-slide .c3:after {
+  content: none!important;
+}
+
+.c5 .splide.richtext-carousel .splide__slide.last-slide .c3:after {
   content: none!important;
 }
 
@@ -310,8 +314,8 @@ it('renders custom padding + background colour version correctly', () => {
 
   .c1 .splide.richtext-carousel .splide__slide .c3:after {
     transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
-    width: 33%;
-    right: calc(-33% - 1px);
+    width: 50%;
+    right: calc(-50% - 1px);
     transform: scale(1);
   }
 
@@ -323,6 +327,25 @@ it('renders custom padding + background colour version correctly', () => {
 @media (min-width: 1024px) {
   .c1 .splide.richtext-carousel .splide__slide {
     height: 350px;
+  }
+}
+
+@media (min-width: 740px) {
+  .c5 .splide.richtext-carousel .splide__slide .c3 {
+    transition: transform 0.75s ease;
+    transform-origin: center;
+    transform: scale(0.8);
+  }
+
+  .c5 .splide.richtext-carousel .splide__slide .c3:after {
+    transition: transform 0.75s ease,width 0.75s ease,right 0.75s ease;
+    width: 50%;
+    right: calc(-50% - 1px);
+    transform: scale(1);
+  }
+
+  .c5 .splide.richtext-carousel .splide__slide.is-active .c3 {
+    transform: scale(1.0);
   }
 }
 
