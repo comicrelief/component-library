@@ -39,6 +39,7 @@ const WYMDCarousel = ({ data }) => {
       $paddingTop={paddingTop}
       $paddingBottom={paddingBottom}
       $backgroundColour={backgroundColour}
+      data-testid="wymd-carousel--container"
     >
 
       <CarouselWrapper
@@ -47,22 +48,37 @@ const WYMDCarousel = ({ data }) => {
         $mobileHeight={mobileHeight}
         $tabletHeight={tabletHeight}
         $desktopHeight={desktopHeight}
+        data-testid="wymd-carousel--wrapper"
       >
-        <Heading tag="p" weight="bold">
+        <Heading
+          tag="p"
+          weight="bold"
+          data-testid="wymd-carousel--heading"
+        >
           { headerCopy}
         </Heading>
 
-        <PeopleHelpedText tag="h1" family="Anton" weight="normal" color="red">
+        <PeopleHelpedText
+          tag="h1"
+          family="Anton"
+          weight="normal"
+          color="red"
+          data-testid="wymd-carousel--people-helped"
+        >
           { peopleHelpedText}
         </PeopleHelpedText>
 
-        <Including tag="p">
+        <Including
+          tag="p"
+          data-testid="wymd-carousel--including"
+        >
           including...
         </Including>
 
         {theseItems && (
         <Splide
           className="wymd-carousel"
+          data-testid="wymd-carousel--splide"
           options={{
             speed: 750,
             rewindSpeed: 750,
@@ -97,6 +113,7 @@ const WYMDCarousel = ({ data }) => {
                 key={safeIndex}
                 index={safeIndex}
                 data-index={safeIndex}
+                data-testid="wymd-carousel--slide"
               >
                 <SlideInner>
                   <ImageWrapper className="image-wrapper">
@@ -105,13 +122,20 @@ const WYMDCarousel = ({ data }) => {
 
                   <AllTextWrapper>
                     <AmountWrapper>
-                      <Text tag="h1" family="Anton">
+                      <Text
+                        tag="h1"
+                        family="Anton"
+                        data-testid="wymd-carousel--amount"
+                      >
                         {theseItems[key].amount}
                       </Text>
                     </AmountWrapper>
 
                     <CopyWrapper>
-                      <Text tag="p">
+                      <Text
+                        tag="p"
+                        data-testid="wymd-carousel--copy"
+                      >
                         {theseItems[key].copy}
                       </Text>
                     </CopyWrapper>

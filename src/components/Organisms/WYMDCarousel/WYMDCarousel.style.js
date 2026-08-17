@@ -211,19 +211,6 @@ const CarouselWrapper = styled.div`
       }
     }
 
-    // Reorientate for the right-side 'next' button
-    button.carousel__next-button {
-      left: auto;
-      right: 0;
-
-      &:after {
-        left: auto;
-        right: 0;
-        background: linear-gradient(270deg, rgba(255, 255, 255, 1),
-        rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
-      }
-    }
-
     // Carousel:
     &.wymd-carousel {
       .splide__slide {
