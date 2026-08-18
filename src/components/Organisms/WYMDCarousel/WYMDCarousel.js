@@ -1,15 +1,14 @@
 import React, {
-  useEffect, useState, useCallback
+  useEffect, useState
 } from 'react';
 import PropTypes from 'prop-types';
-import {
-  CarouselProvider, Slider, Slide, ButtonBack, ButtonNext
-} from 'pure-react-carousel';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
 import formatItems from './_utils';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+
 import {
   CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper,
-  Heading, PeopleHelpedText, Including, Container
+  Heading, PeopleHelpedText, Including, Container, SlideInner, AllTextWrapper
 } from './WYMDCarousel.style';
 import Text from '../../Atoms/Text/Text';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
@@ -28,138 +27,130 @@ const WYMDCarousel = ({ data }) => {
     paddingBottom = '2rem'
   } = data;
 
-  // Defaults to mobile config:
-  const [isMobile, setIsMobile] = useState(true);
-  const [visibleSlides, setVisibleSlides] = useState(1);
-  const [totalSlides, setTotalSlides] = useState(null);
   const [theseItems, setTheseItems] = useState();
-
-  // Custom function to let us update the carousel config dynamically
-  const screenResize = useCallback(() => {
-    const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
-    const isCurrentlyMobile = window.innerWidth < breakpointValues.M;
-
-    if (screenSize !== null && (isMobile !== isCurrentlyMobile)) {
-      setIsMobile(isCurrentlyMobile);
-      setVisibleSlides(isCurrentlyMobile ? 1 : 3);
-      setTotalSlides(isCurrentlyMobile ? theseItems.length : theseItems.length + 2);
-    }
-  }, [isMobile, theseItems]);
 
   // Format our data BEFORE we use it in render:
   useEffect(() => {
     setTheseItems(formatItems(data));
   }, [setTheseItems, data]);
 
-  useEffect(() => {
-    if (window !== 'undefined' && window.innerWidth >= breakpointValues.M) {
-      // On inital render, update carousel plugin config
-      // to suit the non-mobile layout and functionality:
-      setIsMobile(false);
-      setVisibleSlides(3);
-    }
-
-    // Hook into browser's own onresize event to call our custom wrapper function:
-    if (typeof window !== 'undefined') window.onresize = screenResize;
-  }, [screenResize]);
-
-  if (theseItems && totalSlides === null) {
-    // Reflects our two dummy/bookend slides for non-mobile/tablet views:
-    setTotalSlides(isMobile ? theseItems.length : theseItems.length + 2);
-  }
-
   return (
     <Container
       $paddingTop={paddingTop}
       $paddingBottom={paddingBottom}
       $backgroundColour={backgroundColour}
+      data-testid="wymd-carousel--container"
     >
+
       <CarouselWrapper
         className="CarouselWrapper"
         id={thisID}
         $mobileHeight={mobileHeight}
         $tabletHeight={tabletHeight}
         $desktopHeight={desktopHeight}
+        data-testid="wymd-carousel--wrapper"
       >
-
-        <Heading tag="p" weight="bold">
+        <Heading
+          tag="p"
+          weight="bold"
+          data-testid="wymd-carousel--heading"
+        >
           { headerCopy}
         </Heading>
 
-        <PeopleHelpedText tag="h1" family="Anton" weight="normal" color="red">
+        <PeopleHelpedText
+          tag="h1"
+          family="Anton"
+          weight="normal"
+          color="red"
+          data-testid="wymd-carousel--people-helped"
+        >
           { peopleHelpedText}
         </PeopleHelpedText>
 
-        <Including tag="p">
+        <Including
+          tag="p"
+          data-testid="wymd-carousel--including"
+        >
           including...
         </Including>
 
         {theseItems && (
-        <CarouselProvider
-          naturalSlideWidth={50}
-          naturalSlideHeight={200}
-          totalSlides={totalSlides}
-          isPlaying={autoPlay}
-          interval={5000}
-          visibleSlides={visibleSlides}
-          infinite
+        <Splide
+          className="wymd-carousel"
+          data-testid="wymd-carousel--splide"
+          options={{
+            speed: 750,
+            rewindSpeed: 750,
+            interval: 5000,
+            arrows: true,
+            pagination: false,
+            drag: 'free',
+            flickPower: 50,
+            perMove: 1,
+            dragMinThreshold: { mouse: 50, touch: 50 },
+            updateOnMove: true,
+            snap: true,
+            autoplay: autoPlay,
+            focus: 'center',
+            trimSpace: false,
+            perPage: 3,
+            rewind: true,
+            breakpoints: {
+              [breakpointValues.M]: {
+                perPage: 1
+              }
+            }
+          }}
         >
-          <Slider classNameAnimation="wymd-carousel">
 
-            {/* Dummy slide for our desired non-mobile layout and functionality */}
-            {isMobile === false && (
-            <Slide index={0} key={0} />
-            )}
+          {Object.keys(theseItems).map((key, index) => {
+            const safeIndex = index;
 
-            {Object.keys(theseItems).map((key, index) => {
-            // Reflect that initial dummy/bookend slide shown on non-mobile/tablet views:
-              const thisOffsetIndex = index + (isMobile ? 0 : 1);
-
-              return (
-              // Calculate the index offset accordingly to reflect the number of slides,
-              // but use the REAL index when determining if its the last REAL slide
-                <Slide
-                  index={thisOffsetIndex}
-                  className={index === (theseItems.length - 1) && 'last-slide'}
-                  key={thisOffsetIndex}
-                >
-
+            return (
+              <SplideSlide
+                className={index === (theseItems.length - 1) && 'last-slide'}
+                key={safeIndex}
+                index={safeIndex}
+                data-index={safeIndex}
+                data-testid="wymd-carousel--slide"
+              >
+                <SlideInner>
                   <ImageWrapper className="image-wrapper">
                     <img src={theseItems[key].image.file.url} alt={theseItems[key].copy} />
                   </ImageWrapper>
 
-                  <div className="all-text-wrapper">
+                  <AllTextWrapper>
                     <AmountWrapper>
-                      <Text tag="h1" family="Anton">
+                      <Text
+                        tag="h1"
+                        family="Anton"
+                        data-testid="wymd-carousel--amount"
+                      >
                         {theseItems[key].amount}
                       </Text>
                     </AmountWrapper>
 
                     <CopyWrapper>
-                      <Text tag="p">
+                      <Text
+                        tag="p"
+                        data-testid="wymd-carousel--copy"
+                      >
                         {theseItems[key].copy}
                       </Text>
                     </CopyWrapper>
-                  </div>
 
-                </Slide>
-              );
-            })}
+                  </AllTextWrapper>
+                </SlideInner>
+              </SplideSlide>
+            );
+          })}
 
-            {/* Dummy slide for our desired non-mobile layout and functionality */}
-            {isMobile === false && (
-            <Slide index={theseItems.length + 1} key="bookend-last" />
-            )}
-
-          </Slider>
-          <ButtonBack>Back</ButtonBack>
-          <ButtonNext>Next</ButtonNext>
-        </CarouselProvider>
+        </Splide>
         )}
 
       </CarouselWrapper>
     </Container>
-
   );
 };
 

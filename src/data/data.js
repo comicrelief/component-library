@@ -70,7 +70,7 @@ const carouselItemsComplete = {
   desktopHeight: 475,
   headerCopy: "Over the past two years, we've supported",
   peopleHelpedText: '11.7 million people',
-  autoPlay: false,
+  autoPlay: true,
   node1Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
   node1Amount: '1,000',
   node1Image: {
@@ -144,7 +144,7 @@ const carouselItemsCompleteWithPadding = {
   desktopHeight: 475,
   headerCopy: "Over the past two years, we've supported",
   peopleHelpedText: '11.7 million people',
-  autoPlay: false,
+  autoPlay: true,
   paddingBottom: '4rem',
   paddingTop: '4rem',
   backgroundColour: 'teal_light',
@@ -280,32 +280,32 @@ const carouselItemsMinimal = {
   mobileHeight: 450,
   tabletHeight: 500,
   desktopHeight: 475,
-  headerCopy: "Over the past two years, we've supported",
-  peopleHelpedText: '11.7 million people',
+  headerCopy: 'Header copy',
+  peopleHelpedText: 'PeopleHelped text',
   autoPlay: false,
-  node1Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
-  node1Amount: '1,000',
+  node1Copy: 'node 1 copy',
+  node1Amount: '1',
   node1Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png'
     }
   },
-  node2Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
-  node2Amount: '750,000',
+  node2Copy: 'node 2 copy',
+  node2Amount: '1',
   node2Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png'
     }
   },
-  node3Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
-  node3Amount: '3,000',
+  node3Copy: 'node 3 copy',
+  node3Amount: '3',
   node3Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png'
     }
   },
-  node4Copy: 'children and young people in the UK and around the world, including with safe homes, good nutrition and access to quality healthcare and education.',
-  node4Amount: '4,000',
+  node4Copy: 'node 4 copy',
+  node4Amount: '4',
   node4Image: {
     file: {
       url: '//images.ctfassets.net/zsfivwzfgl3t/6ZsS5CpukQwXRcMSUlbOM1/be31c7ff09891d14232e7c3dbe9fa8a2/028-love_1.png'
@@ -323,7 +323,7 @@ const RichtextCarouselItems = {
     { copy: 'Some other longside but not really all that long copy, who knows, it could be this long or LESS' },
     { copy: '140 character count limit imposed in messages to fix the design height of each container and restrict anomalies. This is based on Twitters character limit for tweets. ABIGLONGLINETOFORCEONTOANEWONE' }
   ],
-  autoPlay: true
+  autoPlay: false
 };
 
 const RichtextCarouselItemsWithPadding = {
@@ -338,7 +338,8 @@ const RichtextCarouselItemsWithPadding = {
   autoPlay: true,
   paddingBottom: '4rem',
   paddingTop: '4rem',
-  rowBackgroundColour: 'teal_light'
+  rowBackgroundColour: 'teal_light',
+  carouselBackgroundColour: 'grey_light'
 };
 
 export {

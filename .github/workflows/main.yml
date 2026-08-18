@@ -100,6 +100,11 @@ jobs:
     name: Publish package to npm
     needs: playwright
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC for trusted publishing and npm provenance
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -108,6 +113,9 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version-file: '.nvmrc'
+
+      - name: Update npm # Trusted Publishing requires npm >=11.5.1
+        run: npm i -g npm@latest
 
       - name: Restore packages cache
         uses: actions/cache@v6
@@ -125,4 +133,3 @@ jobs:
         run: yarn semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_PUBLISHING_TOKEN }}

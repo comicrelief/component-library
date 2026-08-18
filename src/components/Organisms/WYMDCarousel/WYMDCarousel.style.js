@@ -10,6 +10,14 @@ const animationSpeed = 0.75;
 const textScaleOffsetA = 45;
 const textScaleOffsetB = 5;
 
+const SlideInner = styled.div`
+  // Don't need any custom styles, just wanted a nice clear selector amidst the chaos
+`;
+
+const AllTextWrapper = styled.div`
+  // And ditto.
+`;
+
 const ImageWrapper = styled.div`
   width: 45%;
   display: block;
@@ -25,6 +33,7 @@ const ImageWrapper = styled.div`
     display: block;
   }
 
+  // Dashed 'connecting' line:
   &:after {
     position: absolute;
     content: '';
@@ -128,7 +137,7 @@ const CarouselWrapper = styled.div`
   border-radius: 20px;
   ${defaultBoxShadow()}
 
-  .carousel {
+  .splide {
     position: relative;
     margin: 0 auto;
     padding-top: ${spacing('l')};
@@ -137,18 +146,29 @@ const CarouselWrapper = styled.div`
       padding-top: ${spacing('l')};
     }
 
-    button.carousel__back-button,
-    button.carousel__next-button {
+    // Navigation buttons:
+    .splide__arrows {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    button.splide__arrow {
       position: absolute;
       left: 0;
       top: 0;
-      width: 33% !important;
+      width: 33.3%;
       height: 100%;
-      padding: 0 !important;
+      padding: 0;
       box-shadow: none;
       text-indent: -9999px;
       background-color: transparent;
-      border: none;
+      transform: none;
+      border-radius: 0;
+      opacity: 1;
 
       &:after {
         content: "";
@@ -162,184 +182,145 @@ const CarouselWrapper = styled.div`
         rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
       }
 
+      &.splide__arrow--next {
+        left: auto;
+        right: 0;
+
+        &:after {
+          left: auto;
+          right: 0;
+          background: linear-gradient(90deg, rgba(255, 255, 255, 0),
+         rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1));
+        }
+      }
+
       &:hover {
         &:after {
           opacity: 0.5;
         }
       }
 
+      svg {
+        display: none;
+      }
+
       @media ${({ theme }) => theme.allBreakpoints('M')} {
-        width: 33.3% !important;
         &:after {
           width: 100%;
         }
       }
     }
 
-    button.carousel__next-button {
-      left: auto;
-      right: 0;
-
-      &:before {
-        transform: translate(0, -50%) rotate(-90deg);
-      }
-
-      &:after {
-        left: auto;
-        right: 0;
-        background: linear-gradient(270deg, rgba(255, 255, 255, 1),
-        rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
-      }
-    }
-
-    .wymd-carousel {
-      // Override default animations
-      transition: -webkit-transform ${animationSpeed}s;
-      -o-transition: transform ${animationSpeed}s;
-      transition: transform ${animationSpeed}s;
-      -webkit-transform: ${animationSpeed}s;
-      will-change: transform;
-
-      .last-slide {
-        .image-wrapper:after {
-          content: none;
-        }
-      }
-
-      .carousel__slide {
-        // 'Mobile'
-        padding-bottom: ${props => props.$mobileHeight}px !important;
-
-        // 'Tablet' (and up) tweaks for the 3-visible layout
-        @media ${({ theme }) => theme.allBreakpoints('M')} {
-
-          padding-bottom: ${props => props.$tabletHeight}px !important;
-
-          // All slides:
-          .carousel__inner-slide {
-
-            // All 'ImageWrappers':
-            > div:first-child {
-              transition: transform ${animationSpeed}s ease;
-              transform: scale(0.5);
-
-              &:after {
-                transition: transform ${animationSpeed}s ease,
-                width ${animationSpeed}s ease,
-                right ${animationSpeed}s ease;
-                right: calc(-300% - 6px);
-                transform: scale(1);
-                width: 300%;
-              }
-            }
-
-            // Scale down ALL copy
-            .all-text-wrapper {
-              transition: transform ${animationSpeed}s ease;
-              transform-origin: top;
-              transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5)
-            }
-          }
-
-          // Our 'first' slide of the three:
-          &.carousel__slide--visible {
-            .carousel__inner-slide {
-              > div:first-child {
-                &:after {
-                  right: calc(-300% - 6px);
-                  transform: scale(1);
-                  width: 300%;
-                }
-              }
-            }
-
-            // 2nd and 3rd:
-            + .carousel__slide--visible {
-              .carousel__inner-slide {
-                > div:first-child {
-                  transform: scale(1);
-                  &:after {
-                    right: calc(-222% - 6px);
-                    transform: scale(0.5);
-                    width: 300%;
-                  }
-                }
-              }
-
-              .all-text-wrapper {
-                transform: translateY(0) scale(1);
-              }
-
-              // Resets the 3rd slide:
-              + .carousel__slide--visible {
-                > div > div:first-child {
-                  transform: scale(0.5);
-                  &:after {
-                    right: calc(-300% - 6px);
-                    transform: scale(1);
-                    width: 300%;
-                  }
-                }
-                .all-text-wrapper {
-                  transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5)
-                }
-              }
-            }
-          }
-        }
-
-        // 'Desktop'
-        @media ${({ theme }) => theme.allBreakpoints('L')} {
-          padding-bottom: ${props => props.$desktopHeight}px !important;
-
-          // First
-          &.carousel__slide--visible {
-            .carousel__inner-slide {
-              > div:first-child {
-                &:after {
-                  right: calc(-250% - 6px);
-                  width: 250%;
-                }
-              }
-            }
-
-            // 2nd and 3rd
-            + .carousel__slide--visible {
-              .carousel__inner-slide {
-                > div:first-child {
-                  &:after {
-                    right: calc(-187% - 6px);
-                    width: 250%;
-                  }
-                }
-              }
-
-
-              // 3rd only
-              + .carousel__slide--visible {
-                .carousel__inner-slide {
-                  > div:first-child {
-                    &:after {
-                      right: calc(-250% - 6px);
-                      width: 250%;
-                    }
-                  }
-                }
-              }
-            }
-
-
-          }
-
-        }
-        // END OF DESKTOP
-
-        .carousel__inner-slide {
+    // Carousel:
+    &.wymd-carousel {
+      .splide__slide {
+      
+        height: ${props => props.$mobileHeight}px;
+        
+        // All slides
+        ${SlideInner} {
           text-align: center;
           display: inline-flex;
           align-items: center;
           justify-content: flex-start;
           flex-direction: column;
+          width: 100%;
+        }
+
+        // No dashed 'connecting' line on the final slide
+        &.last-slide {
+          ${ImageWrapper} {
+            &:after {
+              content: none;
+            }
+          }
+        }
+
+        // 'Tablet' (and up) tweaks for the 3-visible layout
+        @media ${({ theme }) => theme.allBreakpoints('M')} {
+          height: ${props => props.$tabletHeight}px;
+
+          // All slides:
+          ${SlideInner} {
+            ${ImageWrapper} {
+              transition: transform ${animationSpeed}s ease;
+              transform: scale(0.5);
+              
+              // Dashed 'connecting' line:
+              &:after {
+                transition: transform ${animationSpeed}s ease, width ${animationSpeed}s ease, right ${animationSpeed}s ease;
+                right: calc(-360%);
+                width: 360%;
+              }
+            }
+
+            ${AllTextWrapper} {
+              transition: transform ${animationSpeed}s ease;
+              transform-origin: top;
+              transform: translateY(calc(-${textScaleOffsetA}px + ${textScaleOffsetB}%)) scale(0.5);
+            }
+          }
+
+          // Previous slide, with a shorter 'connecting' line to account for larger, active slide to the right:
+          &.is-prev {
+            ${SlideInner} {
+              ${ImageWrapper} {                
+                &:after {
+                  right: calc(-300% - 6px);
+                  width: 300%;
+                }
+              }
+            } 
+          }
+
+          // Active, middle slide:
+          &.is-active {
+            ${SlideInner} {
+              ${ImageWrapper} {
+                transform: scale(1);
+              
+                &:after {
+                  right: calc(-222% - 6px);
+                  transform: scale(0.5);
+                  width: 300%;
+                }
+              }
+
+              ${AllTextWrapper} {
+                transform: scale(1);
+              }
+            } 
+          }
+        } 
+
+        @media ${({ theme }) => theme.allBreakpoints('L')} {
+          height: ${props => props.$desktopHeight}px;
+
+          ${SlideInner} ${ImageWrapper}  {
+            &:after {
+              width: 315%;
+              right: calc(-315%);
+            }
+          }
+          
+
+          &.is-prev {
+            ${SlideInner} ${ImageWrapper} {
+              &:after {
+                right: calc(-260%);
+                width: 260%;
+              }
+            } 
+          }
+
+          &.is-active {
+            ${SlideInner} ${ImageWrapper} {
+              &:after {
+                width: 250%;
+                right: calc(-192%);
+              }
+            } 
+          }
         }
       }
     }
@@ -353,5 +334,5 @@ const Container = styled.div`
 
 export {
   CarouselWrapper, ImageWrapper, AmountWrapper, CopyWrapper,
-  Heading, PeopleHelpedText, Including, Container
+  Heading, PeopleHelpedText, Including, Container, SlideInner, AllTextWrapper
 };

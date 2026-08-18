@@ -1,11 +1,10 @@
 import React, {
-  useEffect, useState, useCallback
+  useEffect, useState
 } from 'react';
 import PropTypes from 'prop-types';
-import {
-  CarouselProvider, Slider, Slide, ButtonBack, ButtonNext
-} from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
 import {
   CarouselWrapper, SlideCopyWrapper, HeadingCopyWrapper, Container
 } from './RichtextCarousel.style';
@@ -29,51 +28,19 @@ const RichtextCarousel = ({
     rowBackgroundColour = 'grey_light'
   }
 }) => {
-  // Defaults to mobile config:
-  const [isMobile, setIsMobile] = useState(true);
-  const [visibleSlides, setVisibleSlides] = useState(1);
-  const [totalSlides, setTotalSlides] = useState(null);
   const [theseItems, setTheseItems] = useState();
-
-  // Custom function to let us update the carousel config dynamically
-  const screenResize = useCallback(() => {
-    const screenSize = typeof window !== 'undefined' ? window.innerWidth : null;
-    const isCurrentlyMobile = window.innerWidth < breakpointValues.M;
-
-    if (screenSize !== null && (isMobile !== isCurrentlyMobile)) {
-      setIsMobile(isCurrentlyMobile);
-      setVisibleSlides(isCurrentlyMobile ? 1 : 3);
-      setTotalSlides(isCurrentlyMobile ? theseItems.length : theseItems.length + 2);
-    }
-  }, [isMobile, theseItems]);
 
   // Cache our data source, using as a flag for render logic:
   useEffect(() => {
     setTheseItems(nodes);
   }, [setTheseItems, nodes]);
 
-  useEffect(() => {
-    if (window !== 'undefined' && window.innerWidth >= breakpointValues.M) {
-      // On inital render, update carousel plugin config
-      // to suit the non-mobile layout and functionality:
-      setIsMobile(false);
-      setVisibleSlides(3);
-    }
-
-    // Hook into browser's own onresize event to call our custom wrapper function:
-    if (typeof window !== 'undefined') window.onresize = screenResize;
-  }, [screenResize]);
-
-  if (theseItems && totalSlides === null) {
-    // Reflects our two dummy/bookend slides for non-mobile/tablet views:
-    setTotalSlides(isMobile ? theseItems.length : theseItems.length + 2);
-  }
-
   return (
     <Container
       $paddingTop={paddingTop}
       $paddingBottom={paddingBottom}
       $rowBackgroundColour={rowBackgroundColour}
+      data-testid="richtext-carousel--container"
     >
 
       <CarouselWrapper
@@ -83,42 +50,52 @@ const RichtextCarousel = ({
         $tabletHeight={tabletHeight}
         $desktopHeight={desktopHeight}
         $carouselBackgroundColour={carouselBackgroundColour}
+        data-testid="richtext-carousel--wrapper"
       >
 
-        <HeadingCopyWrapper>
+        <HeadingCopyWrapper data-testid="richtext-carousel--heading">
           {headingCopy}
         </HeadingCopyWrapper>
 
         {theseItems && (
-        <CarouselProvider
-          naturalSlideWidth={50}
-          naturalSlideHeight={200}
-          totalSlides={totalSlides}
-          isPlaying={autoPlay}
-          interval={5000}
-          visibleSlides={visibleSlides}
-          infinite
-        >
-          <Slider classNameAnimation="richtext-carousel">
-
-            {/* Dummy slide for our desired non-mobile layout and functionality */}
-            {isMobile === false && (
-            <Slide index={0} key={0} />
-            )}
-
+          <Splide
+            className="richtext-carousel"
+            data-testid="richtext-carousel--splide"
+            options={{
+              speed: 1000,
+              arrows: true,
+              pagination: false,
+              drag: 'free',
+              flickPower: 50,
+              perMove: 1,
+              dragMinThreshold: { mouse: 50, touch: 50 },
+              updateOnMove: true,
+              snap: true,
+              autoplay: autoPlay,
+              focus: 'center',
+              trimSpace: false,
+              perPage: 3,
+              rewind: true,
+              breakpoints: {
+                [breakpointValues.M]: {
+                  perPage: 1
+                }
+              }
+            }}
+          >
             {Object.keys(theseItems).map((key, index) => {
-            // Reflect that initial dummy/bookend slide shown on non-mobile/tablet views:
-              const thisOffsetIndex = index + (isMobile ? 0 : 1);
+              const safeIndex = index;
 
               return (
-              // Calculate the index offset accordingly to reflect the number of slides,
-              // but use the REAL index when determining if its the last REAL slide
-                <Slide
-                  index={thisOffsetIndex}
+                // Calculate the index offset accordingly to reflect the number of slides,
+                // but use the REAL index when determining if its the last REAL slide
+                <SplideSlide
                   className={index === (theseItems.length - 1) && 'last-slide'}
-                  key={thisOffsetIndex}
+                  key={safeIndex}
+                  index={safeIndex}
+                  data-index={safeIndex}
+                  data-testid="richtext-carousel--slide"
                 >
-
                   <SlideCopyWrapper
                     className="slide-copy-wrapper"
                     $mobileHeight={mobileHeight}
@@ -126,28 +103,18 @@ const RichtextCarousel = ({
                     $desktopHeight={desktopHeight}
                     $nodeBackgroundColour={nodeBackgroundColour}
                     $nodeOutlineColour={nodeOutlineColour}
+                    data-testid="richtext-carousel--copy"
                   >
                     {theseItems[index].copy}
                   </SlideCopyWrapper>
 
-                </Slide>
+                </SplideSlide>
               );
             })}
-
-            {/* Dummy slide for our desired non-mobile layout and functionality */}
-            {isMobile === false && (
-            <Slide index={theseItems.length + 1} key="bookend-last" />
-            )}
-
-          </Slider>
-          <ButtonBack>Back</ButtonBack>
-          <ButtonNext>Next</ButtonNext>
-        </CarouselProvider>
+          </Splide>
         )}
-
       </CarouselWrapper>
     </Container>
-
   );
 };
 
