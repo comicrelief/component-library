@@ -326,7 +326,7 @@ it('renders article teaser correctly', () => {
 
   .c2 .c7 img {
     transform: scale(1.02);
-    transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+    transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16),box-shadow 0.35s;
   }
 
   .c2:hover .c7 img {
@@ -778,7 +778,7 @@ it('renders press realese correctly', () => {
 
   .c2 .c7 img {
     transform: scale(0.9);
-    transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+    transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16),box-shadow 0.35s;
   }
 
   .c2:hover .c7 img {

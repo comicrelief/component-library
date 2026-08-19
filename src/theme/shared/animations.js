@@ -120,7 +120,9 @@ const imageZoom = (params = {}) => {
 
   return !zoomed ? css`
     transform: scale(${initialScale});
-    transition: transform 0.3s cubic-bezier(0.65, -0.19, 0.37, 1.16);
+    // Also including the box-shadow transform so we don't lose on breakpoints this 
+    // is applied to, especially since we're generally using them together:
+    transition: transform 0.3s cubic-bezier(0.65, -0.19, 0.37, 1.16), box-shadow 0.35s;
   ` : css`
     transform: scale(${finalScale});
   `;

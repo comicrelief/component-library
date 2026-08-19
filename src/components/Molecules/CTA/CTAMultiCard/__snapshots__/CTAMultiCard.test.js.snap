@@ -124,6 +124,7 @@ exports[`handles data structure correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
@@ -131,9 +132,14 @@ exports[`handles data structure correctly 1`] = `
   box-sizing: border-box;
 }
 
+.c6:hover,
+.c6:focus {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+}
+
 .c6 .c7 img {
   transform: scale(1);
-  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16),box-shadow 0.35s;
 }
 
 .c26 {
@@ -144,11 +150,17 @@ exports[`handles data structure correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
   cursor: default;
   box-sizing: border-box;
+}
+
+.c26:hover,
+.c26:focus {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c4 {
@@ -264,12 +276,7 @@ exports[`handles data structure correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c6:hover {
-    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
-  }
-
   .c6:hover .c15 {
-    text-decoration: none;
     color: #E52630;
   }
 
@@ -286,7 +293,7 @@ exports[`handles data structure correctly 1`] = `
   .c6 {
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transform-origin: center;
-    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35),box-shadow 0.35s;
   }
 
   .c6:hover,
@@ -299,7 +306,7 @@ exports[`handles data structure correctly 1`] = `
   }
 
   .c6:hover .c15 {
-    text-decoration: none;
+    color: #E52630;
   }
 
   .c6:hover .c17 {
@@ -818,6 +825,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
@@ -825,9 +833,14 @@ exports[`renders 2 columns layout correctly 1`] = `
   box-sizing: border-box;
 }
 
+.c6:hover,
+.c6:focus {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+}
+
 .c6 .c7 img {
   transform: scale(1);
-  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16),box-shadow 0.35s;
 }
 
 .c26 {
@@ -838,11 +851,17 @@ exports[`renders 2 columns layout correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
   cursor: default;
   box-sizing: border-box;
+}
+
+.c26:hover,
+.c26:focus {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c4 {
@@ -958,12 +977,7 @@ exports[`renders 2 columns layout correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c6:hover {
-    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
-  }
-
   .c6:hover .c15 {
-    text-decoration: none;
     color: #E52630;
   }
 
@@ -980,7 +994,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   .c6 {
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transform-origin: center;
-    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35),box-shadow 0.35s;
   }
 
   .c6:hover,
@@ -993,7 +1007,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   }
 
   .c6:hover .c15 {
-    text-decoration: none;
+    color: #E52630;
   }
 
   .c6:hover .c17 {
@@ -1538,6 +1552,7 @@ exports[`renders carousel mode correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
@@ -1545,9 +1560,14 @@ exports[`renders carousel mode correctly 1`] = `
   box-sizing: border-box;
 }
 
+.c6:hover,
+.c6:focus {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+}
+
 .c6 .c7 img {
   transform: scale(1);
-  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16),box-shadow 0.35s;
 }
 
 .c26 {
@@ -1558,11 +1578,17 @@ exports[`renders carousel mode correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
   cursor: default;
   box-sizing: border-box;
+}
+
+.c26:hover,
+.c26:focus {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c4 {
@@ -1678,12 +1704,7 @@ exports[`renders carousel mode correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c6:hover {
-    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
-  }
-
   .c6:hover .c15 {
-    text-decoration: none;
     color: #E52630;
   }
 
@@ -1700,7 +1721,7 @@ exports[`renders carousel mode correctly 1`] = `
   .c6 {
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transform-origin: center;
-    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35),box-shadow 0.35s;
   }
 
   .c6:hover,
@@ -1713,7 +1734,7 @@ exports[`renders carousel mode correctly 1`] = `
   }
 
   .c6:hover .c15 {
-    text-decoration: none;
+    color: #E52630;
   }
 
   .c6:hover .c17 {
@@ -2238,6 +2259,7 @@ exports[`renders correctly with data prop 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
@@ -2245,9 +2267,14 @@ exports[`renders correctly with data prop 1`] = `
   box-sizing: border-box;
 }
 
+.c6:hover,
+.c6:focus {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+}
+
 .c6 .c7 img {
   transform: scale(1);
-  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16),box-shadow 0.35s;
 }
 
 .c26 {
@@ -2258,11 +2285,17 @@ exports[`renders correctly with data prop 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
   cursor: default;
   box-sizing: border-box;
+}
+
+.c26:hover,
+.c26:focus {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c4 {
@@ -2378,12 +2411,7 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c6:hover {
-    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
-  }
-
   .c6:hover .c15 {
-    text-decoration: none;
     color: #E52630;
   }
 
@@ -2400,7 +2428,7 @@ exports[`renders correctly with data prop 1`] = `
   .c6 {
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transform-origin: center;
-    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35),box-shadow 0.35s;
   }
 
   .c6:hover,
@@ -2413,7 +2441,7 @@ exports[`renders correctly with data prop 1`] = `
   }
 
   .c6:hover .c15 {
-    text-decoration: none;
+    color: #E52630;
   }
 
   .c6:hover .c17 {

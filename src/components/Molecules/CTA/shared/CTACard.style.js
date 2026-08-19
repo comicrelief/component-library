@@ -74,11 +74,17 @@ const CardLink = styled.a`
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   ${defaultBoxShadow()}
   text-decoration: none;
   overflow: hidden;
-  cursor: ${({ $isInteractive }) => ($isInteractive ? 'pointer' : 'default')};
+  cursor: ${({ $hasLink }) => ($hasLink ? 'pointer' : 'default')};
   box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    ${defaultBoxShadow(true)}
+  }
 
   // Side-by-side layout for single card desktop view
   ${({ $isSingleCard }) => $isSingleCard && css`
@@ -94,17 +100,15 @@ const CardLink = styled.a`
     }
   `}
 
-  ${({ $isInteractive }) => $isInteractive && css`
+  ${({ $hasLink }) => $hasLink && css`
     ${ImageWrapper} img {
       ${imageZoom({ initialScale: 1 })}
     }
 
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       &:hover {
-        ${defaultBoxShadow(true)}
 
         ${CTAText} {
-          text-decoration: none;
           color: ${({ theme }) => theme.color('red')};
         }
 
@@ -126,9 +130,10 @@ const CardLink = styled.a`
 
     // Desktop-only hover effects
     @media ${({ theme }) => theme.allBreakpoints('L')} {
+    
       ${bounceUpAnimation(true, 10, 1)};
-      /* override the bounceUpAnimation transition */
-      transition: transform 0.4s cubic-bezier(0.68, -1.15, 0.265, 2.35);
+      /* override the bounceUpAnimation transition, ensuring we don't lose the box-shadow animation */
+      transition: transform 0.4s cubic-bezier(0.68, -1.15, 0.265, 2.35), box-shadow 0.35s;
 
       &:hover {
         ${ImageWrapper} img {
@@ -136,12 +141,7 @@ const CardLink = styled.a`
         }
 
         ${CTAText} {
-          text-decoration: none;
-          
-          // TODO: mediaquery INSIDE a mediaquery? 🤔
-          @media (min-width: ${breakpointValues.L}px) {
-            color: ${({ theme }) => theme.color('red')};
-          }
+          color: ${({ theme }) => theme.color('red')};
         }
 
         ${CtaTextUnderline} {

@@ -59,7 +59,7 @@ const CTACard = ({
         {...(hasLink ? { href: link, target, rel: external } : {})}
         $isCarousel={isCarousel}
         $isSingleCard={isSingleCard}
-        $isInteractive={hasLink}
+        $hasLink={hasLink}
       >
         {imageLow && (
           <ImageWrapper $isSingleCard={isSingleCard}>
