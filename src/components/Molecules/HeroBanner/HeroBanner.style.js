@@ -200,6 +200,7 @@ const CTAWrapper = styled.div`
 
     ${CtaText} {
       font-weight: bold;
+      transition: color 0.35s;
       color: ${({ theme }) => theme.color('red')};
 
       @media ${({ theme }) => theme.breakpoints2026('L')} {
