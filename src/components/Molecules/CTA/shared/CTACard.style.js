@@ -106,7 +106,8 @@ const CardLink = styled.a`
     }
 
     @media ${({ theme }) => theme.allBreakpoints('M')} {
-      &:hover {
+      &:hover,
+      &:focus {
 
         ${CTAText} {
           color: ${({ theme }) => theme.color('red')};
@@ -128,14 +129,15 @@ const CardLink = styled.a`
       }
     }
 
-    // Desktop-only hover effects
+    // Desktop-only hover/focus effects
     @media ${({ theme }) => theme.allBreakpoints('L')} {
     
       ${bounceUpAnimation(true, 10, 1)};
       /* override the bounceUpAnimation transition, ensuring we don't lose the box-shadow animation */
       transition: transform 0.4s cubic-bezier(0.68, -1.15, 0.265, 2.35), box-shadow 0.35s;
 
-      &:hover {
+      &:hover,
+      &:focus {
         ${ImageWrapper} img {
           ${imageZoom({ zoomed: true, finalScale: 1.06 })}
         }

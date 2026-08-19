@@ -276,15 +276,18 @@ exports[`handles data structure correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c6:hover .c15 {
+  .c6:hover .c15,
+  .c6:focus .c15 {
     color: #E52630;
   }
 
-  .c6:hover .c17 {
+  .c6:hover .c17,
+  .c6:focus .c17 {
     opacity: 1;
   }
 
-  .c6:hover .c20 .c22 {
+  .c6:hover .c20 .c22,
+  .c6:focus .c20 .c22 {
     transform: scale(1.2);
   }
 }
@@ -301,19 +304,23 @@ exports[`handles data structure correctly 1`] = `
     transform: translateY(-10px);
   }
 
-  .c6:hover .c7 img {
+  .c6:hover .c7 img,
+  .c6:focus .c7 img {
     transform: scale(1.06);
   }
 
-  .c6:hover .c15 {
+  .c6:hover .c15,
+  .c6:focus .c15 {
     color: #E52630;
   }
 
-  .c6:hover .c17 {
+  .c6:hover .c17,
+  .c6:focus .c17 {
     opacity: 1;
   }
 
-  .c6:hover .c20 .c22 {
+  .c6:hover .c20 .c22,
+  .c6:focus .c20 .c22 {
     transform: scale(1.2);
   }
 }
@@ -977,15 +984,18 @@ exports[`renders 2 columns layout correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c6:hover .c15 {
+  .c6:hover .c15,
+  .c6:focus .c15 {
     color: #E52630;
   }
 
-  .c6:hover .c17 {
+  .c6:hover .c17,
+  .c6:focus .c17 {
     opacity: 1;
   }
 
-  .c6:hover .c20 .c22 {
+  .c6:hover .c20 .c22,
+  .c6:focus .c20 .c22 {
     transform: scale(1.2);
   }
 }
@@ -1002,19 +1012,23 @@ exports[`renders 2 columns layout correctly 1`] = `
     transform: translateY(-10px);
   }
 
-  .c6:hover .c7 img {
+  .c6:hover .c7 img,
+  .c6:focus .c7 img {
     transform: scale(1.06);
   }
 
-  .c6:hover .c15 {
+  .c6:hover .c15,
+  .c6:focus .c15 {
     color: #E52630;
   }
 
-  .c6:hover .c17 {
+  .c6:hover .c17,
+  .c6:focus .c17 {
     opacity: 1;
   }
 
-  .c6:hover .c20 .c22 {
+  .c6:hover .c20 .c22,
+  .c6:focus .c20 .c22 {
     transform: scale(1.2);
   }
 }
@@ -1704,15 +1718,18 @@ exports[`renders carousel mode correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c6:hover .c15 {
+  .c6:hover .c15,
+  .c6:focus .c15 {
     color: #E52630;
   }
 
-  .c6:hover .c17 {
+  .c6:hover .c17,
+  .c6:focus .c17 {
     opacity: 1;
   }
 
-  .c6:hover .c20 .c22 {
+  .c6:hover .c20 .c22,
+  .c6:focus .c20 .c22 {
     transform: scale(1.2);
   }
 }
@@ -1729,19 +1746,23 @@ exports[`renders carousel mode correctly 1`] = `
     transform: translateY(-10px);
   }
 
-  .c6:hover .c7 img {
+  .c6:hover .c7 img,
+  .c6:focus .c7 img {
     transform: scale(1.06);
   }
 
-  .c6:hover .c15 {
+  .c6:hover .c15,
+  .c6:focus .c15 {
     color: #E52630;
   }
 
-  .c6:hover .c17 {
+  .c6:hover .c17,
+  .c6:focus .c17 {
     opacity: 1;
   }
 
-  .c6:hover .c20 .c22 {
+  .c6:hover .c20 .c22,
+  .c6:focus .c20 .c22 {
     transform: scale(1.2);
   }
 }
@@ -2411,15 +2432,18 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c6:hover .c15 {
+  .c6:hover .c15,
+  .c6:focus .c15 {
     color: #E52630;
   }
 
-  .c6:hover .c17 {
+  .c6:hover .c17,
+  .c6:focus .c17 {
     opacity: 1;
   }
 
-  .c6:hover .c20 .c22 {
+  .c6:hover .c20 .c22,
+  .c6:focus .c20 .c22 {
     transform: scale(1.2);
   }
 }
@@ -2436,19 +2460,23 @@ exports[`renders correctly with data prop 1`] = `
     transform: translateY(-10px);
   }
 
-  .c6:hover .c7 img {
+  .c6:hover .c7 img,
+  .c6:focus .c7 img {
     transform: scale(1.06);
   }
 
-  .c6:hover .c15 {
+  .c6:hover .c15,
+  .c6:focus .c15 {
     color: #E52630;
   }
 
-  .c6:hover .c17 {
+  .c6:hover .c17,
+  .c6:focus .c17 {
     opacity: 1;
   }
 
-  .c6:hover .c20 .c22 {
+  .c6:hover .c20 .c22,
+  .c6:focus .c20 .c22 {
     transform: scale(1.2);
   }
 }

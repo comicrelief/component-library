@@ -91,7 +91,8 @@ const MediaWrapper = styled.div`
       ${({ $variant }) => ($variant === variants.HALF_HEIGHT && 'min-height: 450px;')};
    }
 
-    &:has(+ div a:hover) {
+    &:has(+ div a:hover),
+    &:has(+ div a:focus) {
       > div > img {
         transform: scale(1.04);
       }
@@ -217,7 +218,8 @@ const HeroBannerLink = styled.a`
     ${defaultBoxShadow()}
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     > div {
       ${defaultBoxShadow(true)}
     }
@@ -230,7 +232,8 @@ const HeroBannerLink = styled.a`
   }
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    &:hover {
+    &:hover,
+    &:focus {
       ${CtaTextUnderline}  {
         opacity: 1;
       }
@@ -252,7 +255,8 @@ const HeroBannerLink = styled.a`
       width: 100%;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       ${ArrowIconWrapper} {
         background: ${({ theme }) => theme.color('red')};
       }

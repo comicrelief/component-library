@@ -291,15 +291,18 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c4:hover .c14 {
+  .c4:hover .c14,
+  .c4:focus .c14 {
     color: #E52630;
   }
 
-  .c4:hover .c16 {
+  .c4:hover .c16,
+  .c4:focus .c16 {
     opacity: 1;
   }
 
-  .c4:hover .c19 .c21 {
+  .c4:hover .c19 .c21,
+  .c4:focus .c19 .c21 {
     transform: scale(1.2);
   }
 }
@@ -316,19 +319,23 @@ exports[`renders correctly with data prop 1`] = `
     transform: translateY(-10px);
   }
 
-  .c4:hover .c5 img {
+  .c4:hover .c5 img,
+  .c4:focus .c5 img {
     transform: scale(1.06);
   }
 
-  .c4:hover .c14 {
+  .c4:hover .c14,
+  .c4:focus .c14 {
     color: #E52630;
   }
 
-  .c4:hover .c16 {
+  .c4:hover .c16,
+  .c4:focus .c16 {
     opacity: 1;
   }
 
-  .c4:hover .c19 .c21 {
+  .c4:hover .c19 .c21,
+  .c4:focus .c19 .c21 {
     transform: scale(1.2);
   }
 }
@@ -713,15 +720,18 @@ exports[`renders correctly without image 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c4:hover .c10 {
+  .c4:hover .c10,
+  .c4:focus .c10 {
     color: #E52630;
   }
 
-  .c4:hover .c12 {
+  .c4:hover .c12,
+  .c4:focus .c12 {
     opacity: 1;
   }
 
-  .c4:hover .c15 .c17 {
+  .c4:hover .c15 .c17,
+  .c4:focus .c15 .c17 {
     transform: scale(1.2);
   }
 }
@@ -738,15 +748,18 @@ exports[`renders correctly without image 1`] = `
     transform: translateY(-10px);
   }
 
-  .c4:hover .c10 {
+  .c4:hover .c10,
+  .c4:focus .c10 {
     color: #E52630;
   }
 
-  .c4:hover .c12 {
+  .c4:hover .c12,
+  .c4:focus .c12 {
     opacity: 1;
   }
 
-  .c4:hover .c15 .c17 {
+  .c4:hover .c15 .c17,
+  .c4:focus .c15 .c17 {
     transform: scale(1.2);
   }
 }
