@@ -38,7 +38,7 @@ const StyledPopUp = styled.div`
   overflow: hidden;
   max-height: 350px;
   opacity: 1;
-  animation: 0.4s ${props => props.fadeOpen} ease;
+  animation: 0.35s ${props => props.fadeOpen} ease;
   ${props => props.isClosed && css`
     animation: ${closeDuration}s ${props.fadeClose} ease forwards;
   `}

@@ -61,17 +61,16 @@ const HeroBanner = ({
         <CTAWrapper $variant={variant}>
           {(variant !== variants.TEXT_BANNER) ? (
             <>
-              <CtaText className="cta">
+              <CtaText>
                 {ctaText}
                 <CtaTextUnderline
                   src={altCtaUnderline}
                   alt={ctaText}
-                  className="cta-text-underline"
                 />
               </CtaText>
 
               <CtaIconWrapper>
-                <ArrowIconWrapper $preventHoverColourChange>
+                <ArrowIconWrapper>
                   <ArrowIconInner>
                     <ArrowIcon />
                   </ArrowIconInner>

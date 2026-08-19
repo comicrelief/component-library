@@ -168,10 +168,11 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
     object-position: top center;
     height: 100%;
     transform: scale(1.02);
-    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    transition: transform 0.35s cubic-bezier(0.68,-1.15,0.265,2.35);
   }
 
-  .c2:has(+ div a:hover) >div>img {
+  .c2:has(+ div a:hover) >div>img,
+  .c2:has(+ div a:focus) >div>img {
     transform: scale(1.04);
   }
 }
@@ -441,11 +442,12 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
     object-position: top center;
     height: 100%;
     transform: scale(1.02);
-    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    transition: transform 0.35s cubic-bezier(0.68,-1.15,0.265,2.35);
     min-height: 450px;
   }
 
-  .c2:has(+ div a:hover) >div>img {
+  .c2:has(+ div a:hover) >div>img,
+  .c2:has(+ div a:focus) >div>img {
     transform: scale(1.04);
   }
 }
@@ -960,10 +962,11 @@ exports[`renders "Text Banner" Hero Banner correctly 2`] = `
     object-position: top center;
     height: 100%;
     transform: scale(1.02);
-    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    transition: transform 0.35s cubic-bezier(0.68,-1.15,0.265,2.35);
   }
 
-  .c2:has(+ div a:hover) >div>img {
+  .c2:has(+ div a:hover) >div>img,
+  .c2:has(+ div a:focus) >div>img {
     transform: scale(1.04);
   }
 }

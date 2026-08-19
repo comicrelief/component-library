@@ -5,7 +5,7 @@ import Text from '../../Atoms/Text/Text';
 import Picture from '../../Atoms/Picture/Picture';
 import link from '../../Atoms/Link/Link';
 import { bounceUpAnimation, imageZoom } from '../../../theme/shared/animations';
-import { CtaTextUnderline, CtaIconWrapper } from '../shared/ctaText/ctaText.style';
+import { CtaTextUnderline, CtaIconWrapper, CtaText } from '../shared/ctaText/ctaText.style';
 import { ArrowIconWrapper } from '../shared/ctaArrow/CtaArrowCircle.style';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
@@ -47,7 +47,7 @@ const CtaWrapper = styled.div`
     top: auto;
   }
 
-  span {
+  ${CtaText} {
     font-weight: bold;
     font-size: 1rem;
     transition: color 0.15s 0.1s;
@@ -120,7 +120,7 @@ const Link = styled(link)`
       }
 
       ${CtaWrapper} {
-        span {
+        ${CtaText} {
           color: ${({ theme }) => theme.color('red')};
         }
       }

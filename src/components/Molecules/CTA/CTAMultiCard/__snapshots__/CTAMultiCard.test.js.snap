@@ -42,11 +42,22 @@ exports[`handles data structure correctly 1`] = `
   object-fit: cover;
 }
 
+.c18 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .c23 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transition: transform 0.35s cubic-bezier(0.65,-0.19,0.37,1.16);
   transform: scale(1);
   transform-origin: center;
 }
@@ -103,17 +114,7 @@ exports[`handles data structure correctly 1`] = `
   text-decoration: none;
   position: relative;
   display: inline-block;
-}
-
-.c18 {
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-  pointer-events: none;
+  transition: color 0.35s;
 }
 
 .c6 {
@@ -124,6 +125,7 @@ exports[`handles data structure correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
@@ -131,9 +133,14 @@ exports[`handles data structure correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c6 img {
+.c6:hover,
+.c6:focus {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+}
+
+.c6 .c7 img {
   transform: scale(1);
-  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transition: transform 0.35s cubic-bezier(0.65,-0.19,0.37,1.16),box-shadow 0.35s;
 }
 
 .c26 {
@@ -144,11 +151,17 @@ exports[`handles data structure correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
   cursor: default;
   box-sizing: border-box;
+}
+
+.c26:hover,
+.c26:focus {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c4 {
@@ -237,7 +250,7 @@ exports[`handles data structure correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c21 {
     background: #222222;
   }
@@ -264,10 +277,27 @@ exports[`handles data structure correctly 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c6:hover .c15,
+  .c6:focus .c15 {
+    color: #E52630;
+  }
+
+  .c6:hover .c17,
+  .c6:focus .c17 {
+    opacity: 1;
+  }
+
+  .c6:hover .c20 .c22,
+  .c6:focus .c20 .c22 {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 1024px) {
   .c6 {
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transform-origin: center;
-    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    transition: transform 0.35s cubic-bezier(0.68,-1.15,0.265,2.35),box-shadow 0.35s;
   }
 
   .c6:hover,
@@ -275,23 +305,28 @@ exports[`handles data structure correctly 1`] = `
     transform: translateY(-10px);
   }
 
-  .c6:hover {
-    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
-  }
-
-  .c6:hover .c7 img {
+  .c6:hover .c7 img,
+  .c6:focus .c7 img {
     transform: scale(1.06);
   }
 
-  .c6:hover .c15 {
-    text-decoration: none;
+  .c6:hover .c15,
+  .c6:focus .c15 {
+    color: #E52630;
   }
 
-  .c6:hover .c17 {
+  .c6:hover .c17,
+  .c6:focus .c17 {
     opacity: 1;
   }
 
-  .c6:hover .c20 .c22 {
+  .c6:hover .c20,
+  .c6:focus .c20 {
+    background: #E52630;
+  }
+
+  .c6:hover .c20 .c22,
+  .c6:focus .c20 .c22 {
     transform: scale(1.2);
   }
 }
@@ -721,11 +756,22 @@ exports[`renders 2 columns layout correctly 1`] = `
   object-fit: cover;
 }
 
+.c18 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .c23 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transition: transform 0.35s cubic-bezier(0.65,-0.19,0.37,1.16);
   transform: scale(1);
   transform-origin: center;
 }
@@ -782,17 +828,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   text-decoration: none;
   position: relative;
   display: inline-block;
-}
-
-.c18 {
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-  pointer-events: none;
+  transition: color 0.35s;
 }
 
 .c6 {
@@ -803,6 +839,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
@@ -810,9 +847,14 @@ exports[`renders 2 columns layout correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c6 img {
+.c6:hover,
+.c6:focus {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+}
+
+.c6 .c7 img {
   transform: scale(1);
-  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transition: transform 0.35s cubic-bezier(0.65,-0.19,0.37,1.16),box-shadow 0.35s;
 }
 
 .c26 {
@@ -823,11 +865,17 @@ exports[`renders 2 columns layout correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
   cursor: default;
   box-sizing: border-box;
+}
+
+.c26:hover,
+.c26:focus {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c4 {
@@ -916,7 +964,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c21 {
     background: #222222;
   }
@@ -943,10 +991,27 @@ exports[`renders 2 columns layout correctly 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c6:hover .c15,
+  .c6:focus .c15 {
+    color: #E52630;
+  }
+
+  .c6:hover .c17,
+  .c6:focus .c17 {
+    opacity: 1;
+  }
+
+  .c6:hover .c20 .c22,
+  .c6:focus .c20 .c22 {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 1024px) {
   .c6 {
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transform-origin: center;
-    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    transition: transform 0.35s cubic-bezier(0.68,-1.15,0.265,2.35),box-shadow 0.35s;
   }
 
   .c6:hover,
@@ -954,23 +1019,28 @@ exports[`renders 2 columns layout correctly 1`] = `
     transform: translateY(-10px);
   }
 
-  .c6:hover {
-    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
-  }
-
-  .c6:hover .c7 img {
+  .c6:hover .c7 img,
+  .c6:focus .c7 img {
     transform: scale(1.06);
   }
 
-  .c6:hover .c15 {
-    text-decoration: none;
+  .c6:hover .c15,
+  .c6:focus .c15 {
+    color: #E52630;
   }
 
-  .c6:hover .c17 {
+  .c6:hover .c17,
+  .c6:focus .c17 {
     opacity: 1;
   }
 
-  .c6:hover .c20 .c22 {
+  .c6:hover .c20,
+  .c6:focus .c20 {
+    background: #E52630;
+  }
+
+  .c6:hover .c20 .c22,
+  .c6:focus .c20 .c22 {
     transform: scale(1.2);
   }
 }
@@ -1426,11 +1496,22 @@ exports[`renders carousel mode correctly 1`] = `
   object-fit: cover;
 }
 
+.c18 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .c23 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transition: transform 0.35s cubic-bezier(0.65,-0.19,0.37,1.16);
   transform: scale(1);
   transform-origin: center;
 }
@@ -1487,17 +1568,7 @@ exports[`renders carousel mode correctly 1`] = `
   text-decoration: none;
   position: relative;
   display: inline-block;
-}
-
-.c18 {
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-  pointer-events: none;
+  transition: color 0.35s;
 }
 
 .c6 {
@@ -1508,6 +1579,7 @@ exports[`renders carousel mode correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
@@ -1515,9 +1587,14 @@ exports[`renders carousel mode correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c6 img {
+.c6:hover,
+.c6:focus {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+}
+
+.c6 .c7 img {
   transform: scale(1);
-  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transition: transform 0.35s cubic-bezier(0.65,-0.19,0.37,1.16),box-shadow 0.35s;
 }
 
 .c26 {
@@ -1528,11 +1605,17 @@ exports[`renders carousel mode correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
   cursor: default;
   box-sizing: border-box;
+}
+
+.c26:hover,
+.c26:focus {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c4 {
@@ -1621,7 +1704,7 @@ exports[`renders carousel mode correctly 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c21 {
     background: #222222;
   }
@@ -1648,10 +1731,27 @@ exports[`renders carousel mode correctly 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c6:hover .c15,
+  .c6:focus .c15 {
+    color: #E52630;
+  }
+
+  .c6:hover .c17,
+  .c6:focus .c17 {
+    opacity: 1;
+  }
+
+  .c6:hover .c20 .c22,
+  .c6:focus .c20 .c22 {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 1024px) {
   .c6 {
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transform-origin: center;
-    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    transition: transform 0.35s cubic-bezier(0.68,-1.15,0.265,2.35),box-shadow 0.35s;
   }
 
   .c6:hover,
@@ -1659,23 +1759,28 @@ exports[`renders carousel mode correctly 1`] = `
     transform: translateY(-10px);
   }
 
-  .c6:hover {
-    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
-  }
-
-  .c6:hover .c7 img {
+  .c6:hover .c7 img,
+  .c6:focus .c7 img {
     transform: scale(1.06);
   }
 
-  .c6:hover .c15 {
-    text-decoration: none;
+  .c6:hover .c15,
+  .c6:focus .c15 {
+    color: #E52630;
   }
 
-  .c6:hover .c17 {
+  .c6:hover .c17,
+  .c6:focus .c17 {
     opacity: 1;
   }
 
-  .c6:hover .c20 .c22 {
+  .c6:hover .c20,
+  .c6:focus .c20 {
+    background: #E52630;
+  }
+
+  .c6:hover .c20 .c22,
+  .c6:focus .c20 .c22 {
     transform: scale(1.2);
   }
 }
@@ -2111,11 +2216,22 @@ exports[`renders correctly with data prop 1`] = `
   object-fit: cover;
 }
 
+.c18 {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 0.15s 0.1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .c23 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transition: transform 0.35s cubic-bezier(0.65,-0.19,0.37,1.16);
   transform: scale(1);
   transform-origin: center;
 }
@@ -2172,17 +2288,7 @@ exports[`renders correctly with data prop 1`] = `
   text-decoration: none;
   position: relative;
   display: inline-block;
-}
-
-.c18 {
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-  pointer-events: none;
+  transition: color 0.35s;
 }
 
 .c6 {
@@ -2193,6 +2299,7 @@ exports[`renders correctly with data prop 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
@@ -2200,9 +2307,14 @@ exports[`renders correctly with data prop 1`] = `
   box-sizing: border-box;
 }
 
-.c6 img {
+.c6:hover,
+.c6:focus {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+}
+
+.c6 .c7 img {
   transform: scale(1);
-  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transition: transform 0.35s cubic-bezier(0.65,-0.19,0.37,1.16),box-shadow 0.35s;
 }
 
 .c26 {
@@ -2213,11 +2325,17 @@ exports[`renders correctly with data prop 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
   cursor: default;
   box-sizing: border-box;
+}
+
+.c26:hover,
+.c26:focus {
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c4 {
@@ -2306,7 +2424,7 @@ exports[`renders correctly with data prop 1`] = `
   }
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .c21 {
     background: #222222;
   }
@@ -2333,10 +2451,27 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c6:hover .c15,
+  .c6:focus .c15 {
+    color: #E52630;
+  }
+
+  .c6:hover .c17,
+  .c6:focus .c17 {
+    opacity: 1;
+  }
+
+  .c6:hover .c20 .c22,
+  .c6:focus .c20 .c22 {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 1024px) {
   .c6 {
     transition: transform 0.30000000000000004s cubic-bezier(0.68,-0.8500000000000001,0.265,1.9500000000000002);
     transform-origin: center;
-    transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
+    transition: transform 0.35s cubic-bezier(0.68,-1.15,0.265,2.35),box-shadow 0.35s;
   }
 
   .c6:hover,
@@ -2344,23 +2479,28 @@ exports[`renders correctly with data prop 1`] = `
     transform: translateY(-10px);
   }
 
-  .c6:hover {
-    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
-  }
-
-  .c6:hover .c7 img {
+  .c6:hover .c7 img,
+  .c6:focus .c7 img {
     transform: scale(1.06);
   }
 
-  .c6:hover .c15 {
-    text-decoration: none;
+  .c6:hover .c15,
+  .c6:focus .c15 {
+    color: #E52630;
   }
 
-  .c6:hover .c17 {
+  .c6:hover .c17,
+  .c6:focus .c17 {
     opacity: 1;
   }
 
-  .c6:hover .c20 .c22 {
+  .c6:hover .c20,
+  .c6:focus .c20 {
+    background: #E52630;
+  }
+
+  .c6:hover .c20 .c22,
+  .c6:focus .c20 .c22 {
     transform: scale(1.2);
   }
 }

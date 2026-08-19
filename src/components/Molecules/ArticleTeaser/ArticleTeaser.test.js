@@ -94,7 +94,7 @@ it('renders article teaser correctly', () => {
   object-fit: cover;
 }
 
-.c20 {
+.c21 {
   height: 4px;
   width: 100%;
   position: absolute;
@@ -102,9 +102,10 @@ it('renders article teaser correctly', () => {
   bottom: -5px;
   transition: opacity 0.15s 0.1s;
   opacity: 0;
+  pointer-events: none;
 }
 
-.c22 {
+.c23 {
   height: 2rem;
   position: absolute;
   top: 50%;
@@ -113,20 +114,20 @@ it('renders article teaser correctly', () => {
   content: "";
 }
 
-.c18 {
+.c19 {
   position: relative;
 }
 
-.c25 {
+.c26 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transition: transform 0.35s cubic-bezier(0.65,-0.19,0.37,1.16);
   transform: scale(1);
   transform-origin: center;
 }
 
-.c24 {
+.c25 {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -164,12 +165,12 @@ it('renders article teaser correctly', () => {
   flex-direction: row;
 }
 
-.c16 .c21 {
+.c16 .c22 {
   transform: none;
   top: auto;
 }
 
-.c16 span {
+.c16 .c18 {
   font-weight: bold;
   font-size: 1rem;
   transition: color 0.15s 0.1s;
@@ -185,7 +186,7 @@ it('renders article teaser correctly', () => {
   width: 100%;
 }
 
-.c2 .c23 {
+.c2 .c24 {
   background-color: #E52630;
 }
 
@@ -227,7 +228,7 @@ it('renders article teaser correctly', () => {
   margin-bottom: 1rem;
 }
 
-.c26 {
+.c27 {
   display: inline-block;
   color: #FFFFFF;
   fill: currentColor;
@@ -275,6 +276,12 @@ it('renders article teaser correctly', () => {
   }
 }
 
+@media (min-width: 1024px) {
+  .c25 {
+    background: #222222;
+  }
+}
+
 @media (min-width: 740px) {
   .c4 {
     flex-direction: row;
@@ -288,13 +295,13 @@ it('renders article teaser correctly', () => {
 }
 
 @media (min-width: 1024px) {
-  .c16 span {
+  .c16 .c18 {
     color: #000000;
   }
 }
 
 @media (min-width: 1024px) {
-  .c2 .c23 {
+  .c2 .c24 {
     transition: background-color 0.15s 0.1s;
     background-color: #000000;
   }
@@ -319,22 +326,22 @@ it('renders article teaser correctly', () => {
 
   .c2 .c7 img {
     transform: scale(1.02);
-    transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+    transition: transform 0.35s cubic-bezier(0.65,-0.19,0.37,1.16),box-shadow 0.35s;
   }
 
   .c2:hover .c7 img {
     transform: scale(1.04);
   }
 
-  .c2:hover .c23 {
+  .c2:hover .c24 {
     background-color: #E52630;
   }
 
-  .c2:hover .c19 {
+  .c2:hover .c20 {
     opacity: 1;
   }
 
-  .c2:hover .c15 span {
+  .c2:hover .c15 .c18 {
     color: #E52630;
   }
 }
@@ -413,26 +420,26 @@ it('renders article teaser correctly', () => {
           className="c15 c16"
         >
           <span
-            className="c17 c18"
+            className="c17 c18 c19"
           >
             Read more
             <img
               alt="Read more"
-              className="c19 c20"
+              className="c20 c21"
               src="mock.asset"
             />
           </span>
           <div
-            className="c21 c22"
+            className="c22 c23"
           >
             <div
-              className="c23 c24"
+              className="c24 c25"
             >
               <span
-                className="c25"
+                className="c26"
               >
                 <svg
-                  className="c26"
+                  className="c27"
                   fill="none"
                   height="15"
                   viewBox="0 0 15 15"
@@ -543,7 +550,7 @@ it('renders press realese correctly', () => {
   object-fit: cover;
 }
 
-.c20 {
+.c21 {
   height: 4px;
   width: 100%;
   position: absolute;
@@ -551,9 +558,10 @@ it('renders press realese correctly', () => {
   bottom: -5px;
   transition: opacity 0.15s 0.1s;
   opacity: 0;
+  pointer-events: none;
 }
 
-.c22 {
+.c23 {
   height: 2rem;
   position: absolute;
   top: 50%;
@@ -562,20 +570,20 @@ it('renders press realese correctly', () => {
   content: "";
 }
 
-.c18 {
+.c19 {
   position: relative;
 }
 
-.c25 {
+.c26 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+  transition: transform 0.35s cubic-bezier(0.65,-0.19,0.37,1.16);
   transform: scale(1);
   transform-origin: center;
 }
 
-.c24 {
+.c25 {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -613,12 +621,12 @@ it('renders press realese correctly', () => {
   flex-direction: row;
 }
 
-.c16 .c21 {
+.c16 .c22 {
   transform: none;
   top: auto;
 }
 
-.c16 span {
+.c16 .c18 {
   font-weight: bold;
   font-size: 1rem;
   transition: color 0.15s 0.1s;
@@ -635,7 +643,7 @@ it('renders press realese correctly', () => {
   width: 100%;
 }
 
-.c2 .c23 {
+.c2 .c24 {
   background-color: #E52630;
 }
 
@@ -678,7 +686,7 @@ it('renders press realese correctly', () => {
   margin-bottom: 1rem;
 }
 
-.c26 {
+.c27 {
   display: inline-block;
   color: #FFFFFF;
   fill: currentColor;
@@ -726,6 +734,12 @@ it('renders press realese correctly', () => {
   }
 }
 
+@media (min-width: 1024px) {
+  .c25 {
+    background: #222222;
+  }
+}
+
 @media (min-width: 740px) {
   .c4 {
     flex-direction: row;
@@ -733,13 +747,13 @@ it('renders press realese correctly', () => {
 }
 
 @media (min-width: 1024px) {
-  .c16 span {
+  .c16 .c18 {
     color: #000000;
   }
 }
 
 @media (min-width: 1024px) {
-  .c2 .c23 {
+  .c2 .c24 {
     transition: background-color 0.15s 0.1s;
     background-color: #000000;
   }
@@ -764,22 +778,22 @@ it('renders press realese correctly', () => {
 
   .c2 .c7 img {
     transform: scale(0.9);
-    transition: transform 0.3s cubic-bezier(0.65,-0.19,0.37,1.16);
+    transition: transform 0.35s cubic-bezier(0.65,-0.19,0.37,1.16),box-shadow 0.35s;
   }
 
   .c2:hover .c7 img {
     transform: scale(1);
   }
 
-  .c2:hover .c23 {
+  .c2:hover .c24 {
     background-color: #E52630;
   }
 
-  .c2:hover .c19 {
+  .c2:hover .c20 {
     opacity: 1;
   }
 
-  .c2:hover .c15 span {
+  .c2:hover .c15 .c18 {
     color: #E52630;
   }
 }
@@ -834,26 +848,26 @@ it('renders press realese correctly', () => {
           className="c15 c16"
         >
           <span
-            className="c17 c18"
+            className="c17 c18 c19"
           >
             Read more
             <img
               alt="Read more"
-              className="c19 c20"
+              className="c20 c21"
               src="mock.asset"
             />
           </span>
           <div
-            className="c21 c22"
+            className="c22 c23"
           >
             <div
-              className="c23 c24"
+              className="c24 c25"
             >
               <span
-                className="c25"
+                className="c26"
               >
                 <svg
-                  className="c26"
+                  className="c27"
                   fill="none"
                   height="15"
                   viewBox="0 0 15 15"

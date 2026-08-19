@@ -4,6 +4,7 @@ import { breakpointValues } from '../../../../theme/shared/allBreakpoints';
 import fontHelper from '../../../../theme/crTheme/fontHelper';
 import defaultBoxShadow from '../../../../theme/shared/boxShadows';
 import { ArrowIconInner, ArrowIconOuter, ArrowIconWrapper } from '../../shared/ctaArrow/CtaArrowCircle.style';
+import { CtaTextUnderline } from '../../shared/ctaText/ctaText.style';
 
 const ImageWrapper = styled.div`
   width: 100%;
@@ -54,25 +55,15 @@ const ImageWrapper = styled.div`
 const CTAText = styled.span`
   ${({ theme }) => fontHelper(theme, 'span')}
   color: ${({ theme }) => theme.color('red')};
-
-  @media (min-width: ${breakpointValues.L}px) {
-    color: ${({ theme }) => theme.color('grey_4')};
-  }
   font-weight: bold;
   text-decoration: none;
   position: relative;
   display: inline-block;
-`;
+  transition: color 0.35s;
 
-const CTATextUnderline = styled.img`
-  height: 4px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: opacity 0.15s 0.1s;
-  opacity: 0;
-  pointer-events: none;
+  @media (min-width: ${breakpointValues.L}px) {
+    color: ${({ theme }) => theme.color('grey_4')};
+  }
 `;
 
 // Card wrapper link - makes entire card clickable
@@ -84,11 +75,17 @@ const CardLink = styled.a`
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
+  transition: box-shadow 0.35s;
   ${defaultBoxShadow()}
   text-decoration: none;
   overflow: hidden;
-  cursor: ${({ $isInteractive }) => ($isInteractive ? 'pointer' : 'default')};
+  cursor: ${({ $hasLink }) => ($hasLink ? 'pointer' : 'default')};
   box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    ${defaultBoxShadow(true)}
+  }
 
   // Side-by-side layout for single card desktop view
   ${({ $isSingleCard }) => $isSingleCard && css`
@@ -104,32 +101,20 @@ const CardLink = styled.a`
     }
   `}
 
-  ${({ $isInteractive }) => $isInteractive && css`
-    img {
+  ${({ $hasLink }) => $hasLink && css`
+    ${ImageWrapper} img {
       ${imageZoom({ initialScale: 1 })}
     }
 
-    // Desktop-only hover effects
     @media ${({ theme }) => theme.allBreakpoints('M')} {
-      ${bounceUpAnimation(true, 10, 1)};
-      /* override the bounceUpAnimation transition */
-      transition: transform 0.4s cubic-bezier(0.68, -1.15, 0.265, 2.35);
-
-      &:hover {
-        ${defaultBoxShadow(true)}
-
-        ${ImageWrapper} img {
-          ${imageZoom({ zoomed: true, finalScale: 1.06 })}
-        }
+      &:hover,
+      &:focus {
 
         ${CTAText} {
-          text-decoration: none;
-          @media (min-width: ${breakpointValues.L}px) {
-            color: ${({ theme }) => theme.color('red')};
-          }
+          color: ${({ theme }) => theme.color('red')};
         }
 
-        ${CTATextUnderline} {
+        ${CtaTextUnderline} {
           opacity: 1;
         }
 
@@ -137,6 +122,37 @@ const CardLink = styled.a`
           @media (min-width: ${breakpointValues.L}px) {
             background: ${({ theme }) => theme.color('red')};
           }
+
+          ${ArrowIconInner} {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+    // Desktop-only hover/focus effects
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
+    
+      ${bounceUpAnimation(true, 10, 1)};
+      /* override the bounceUpAnimation transition, ensuring we don't lose the box-shadow animation */
+      transition: transform 0.35s cubic-bezier(0.68, -1.15, 0.265, 2.35), box-shadow 0.35s;
+
+      &:hover,
+      &:focus {
+        ${ImageWrapper} img {
+          ${imageZoom({ zoomed: true, finalScale: 1.06 })}
+        }
+
+        ${CTAText} {
+          color: ${({ theme }) => theme.color('red')};
+        }
+
+        ${CtaTextUnderline} {
+          opacity: 1;
+        }
+
+        ${ArrowIconWrapper} {
+          background: ${({ theme }) => theme.color('red')};
 
           ${ArrowIconInner} {
             transform: scale(1.2);
@@ -305,14 +321,13 @@ const CTA = styled.div`
 
 export {
   CardLink,
-  // CardsContainer,
   ImageWrapper,
   CopyAndLinkSection,
   Copy,
   CardLabel,
   CTA,
   CTAText,
-  CTATextUnderline,
+  CtaTextUnderline,
   ArrowIconOuter,
   ArrowIconInner,
   ArrowIconWrapper,
