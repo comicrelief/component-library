@@ -59,6 +59,7 @@ const CTAText = styled.span`
   text-decoration: none;
   position: relative;
   display: inline-block;
+  transition: color 0.4s;
 
   @media (min-width: ${breakpointValues.L}px) {
     color: ${({ theme }) => theme.color('grey_4')};
@@ -74,7 +75,7 @@ const CardLink = styled.a`
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
-  transition: box-shadow 0.35s;
+  transition: box-shadow 0.4s;
   ${defaultBoxShadow()}
   text-decoration: none;
   overflow: hidden;
@@ -134,7 +135,7 @@ const CardLink = styled.a`
     
       ${bounceUpAnimation(true, 10, 1)};
       /* override the bounceUpAnimation transition, ensuring we don't lose the box-shadow animation */
-      transition: transform 0.4s cubic-bezier(0.68, -1.15, 0.265, 2.35), box-shadow 0.35s;
+      transition: transform 0.4s cubic-bezier(0.68, -1.15, 0.265, 2.35), box-shadow 0.4s;
 
       &:hover,
       &:focus {
@@ -151,9 +152,7 @@ const CardLink = styled.a`
         }
 
         ${ArrowIconWrapper} {
-          @media (min-width: ${breakpointValues.L}px) {
-            background: ${({ theme }) => theme.color('red')};
-          }
+          background: ${({ theme }) => theme.color('red')};
 
           ${ArrowIconInner} {
             transform: scale(1.2);

@@ -214,7 +214,7 @@ const HeroBannerLink = styled.a`
   width: 100%;
 
   > div {
-    transition: box-shadow 0.35s;
+    transition: box-shadow 0.4s;
     ${defaultBoxShadow()}
   }
 
