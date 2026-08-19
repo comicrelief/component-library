@@ -31,7 +31,7 @@ const pulseOut = keyframes`
 `;
 
 const pulseInAnimation = css`
-  animation: ${pulseIn} 0.4s ease-in-out forwards;
+  animation: ${pulseIn} 0.35s ease-in-out forwards;
 `;
 
 const pulseOutAnimation = css`
@@ -122,7 +122,7 @@ const imageZoom = (params = {}) => {
     transform: scale(${initialScale});
     // Also including the box-shadow transform so we don't override it on breakpoints this 
     // transform is applied to (especially since we're generally using them together):
-    transition: transform 0.3s cubic-bezier(0.65, -0.19, 0.37, 1.16), box-shadow 0.4s;
+    transition: transform 0.35s cubic-bezier(0.65, -0.19, 0.37, 1.16), box-shadow 0.35s;
   ` : css`
     transform: scale(${finalScale});
   `;

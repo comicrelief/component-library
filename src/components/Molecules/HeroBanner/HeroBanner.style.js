@@ -86,7 +86,7 @@ const MediaWrapper = styled.div`
 
       // Zoom the image in slightly by default so the 'bounce' animation doesn't cause issues
       transform: scale(1.02);
-      transition: transform 0.4s cubic-bezier(0.68, -1.15, 0.265, 2.35);
+      transition: transform 0.35s cubic-bezier(0.68, -1.15, 0.265, 2.35);
 
       ${({ $variant }) => ($variant === variants.HALF_HEIGHT && 'min-height: 450px;')};
    }
@@ -214,7 +214,7 @@ const HeroBannerLink = styled.a`
   width: 100%;
 
   > div {
-    transition: box-shadow 0.4s;
+    transition: box-shadow 0.35s;
     ${defaultBoxShadow()}
   }
 
