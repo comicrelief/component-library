@@ -6,7 +6,7 @@ import PostcodeLookup from './PostcodeLookup';
 
 it('renders correctly', () => {
   const tree = renderWithTheme(
-    <PostcodeLookup onSelect={address => alert(JSON.stringify(address, null, 2))} />
+    <PostcodeLookup />
   ).toJSON();
   expect(tree).toMatchSnapshot()
 });
