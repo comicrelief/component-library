@@ -48,44 +48,31 @@ it('renders correctly', () => {
   line-height: 1.25rem;
 }
 
-.c3 {
-  position: relative;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
 .c4 {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.c5 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
-  border-color: #969598;
+  border-color: #E1E2E3;
   box-shadow: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c5:focus {
+.c4 :focus {
   border: 1px solid #666;
+}
+
+.c3 {
+  position: relative;
+  font-size: 1.25rem;
 }
 
 @media (min-width: 740px) {
@@ -117,16 +104,8 @@ it('renders correctly', () => {
 }
 
 @media (min-width: 740px) {
-  .c3 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c3 {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+  .c4 {
+    max-width: 290px;
   }
 }
 
@@ -145,19 +124,17 @@ it('renders correctly', () => {
   <div
     className="c3"
   >
-    <div
+    <input
+      aria-describedby="Accessibility info go here"
       className="c4"
-    >
-      <input
-        aria-required={false}
-        className="c5"
-        id="Accessibility info go here"
-        name="fullname"
-        placeholder="This is the hint text"
-        required={false}
-        type="text"
-      />
-    </div>
+      error={false}
+      id="Accessibility info go here"
+      name="fullname"
+      placeholder="This is the hint text"
+      prefixLength={0}
+      required={false}
+      type="text"
+    />
   </div>
 </label>
 `);
@@ -209,44 +186,31 @@ it('renders with responsive max widths correctly', () => {
   line-height: 1.25rem;
 }
 
-.c3 {
-  position: relative;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
 .c4 {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.c5 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
-  border-color: #969598;
+  border-color: #E1E2E3;
   box-shadow: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c5:focus {
+.c4 :focus {
   border: 1px solid #666;
+}
+
+.c3 {
+  position: relative;
+  font-size: 1.25rem;
 }
 
 @media (min-width: 740px) {
@@ -278,28 +242,8 @@ it('renders with responsive max widths correctly', () => {
 }
 
 @media (min-width: 740px) {
-  .c3 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c3 {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 740px) {
   .c4 {
-    max-width: 150px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c4 {
-    max-width: 250px;
+    max-width: 290px;
   }
 }
 
@@ -318,19 +262,19 @@ it('renders with responsive max widths correctly', () => {
   <div
     className="c3"
   >
-    <div
+    <input
+      aria-describedby="input-example-7"
       className="c4"
-    >
-      <input
-        aria-required={false}
-        className="c5"
-        id="input-example-7"
-        name="responsive-width"
-        placeholder="This input has responsive max widths"
-        required={false}
-        type="text"
-      />
-    </div>
+      error={false}
+      id="input-example-7"
+      maxPxWidthLargeBreakpoint={250}
+      maxPxWidthMediumBreakpoint={150}
+      name="responsive-width"
+      placeholder="This input has responsive max widths"
+      prefixLength={0}
+      required={false}
+      type="text"
+    />
   </div>
 </label>
 `);

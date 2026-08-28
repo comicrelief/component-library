@@ -95,44 +95,31 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   line-height: 1.25rem;
 }
 
-.c22 {
-  position: relative;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
 .c23 {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.c24 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
-  border-color: #969598;
+  border-color: #E1E2E3;
   box-shadow: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c24:focus {
+.c23 :focus {
   border: 1px solid #666;
+}
+
+.c22 {
+  position: relative;
+  font-size: 1.25rem;
 }
 
 .c0 {
@@ -249,12 +236,12 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   border: 2px solid #969598;
 }
 
-.c25 {
+.c24 {
   line-height: 1.5;
   margin-top: 2rem;
 }
 
-.c26 {
+.c25 {
   width: 100%;
   margin: 2rem 0 2rem;
   color: #FFFFFF;
@@ -270,9 +257,9 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
   appearance: none;
 }
 
-.c26:active,
-.c26:focus,
-.c26:hover {
+.c25:active,
+.c25:focus,
+.c25:hover {
   outline: none;
   background-color: #961D35;
 }
@@ -452,16 +439,8 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 }
 
 @media (min-width: 740px) {
-  .c22 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c22 {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+  .c23 {
+    max-width: 290px;
   }
 }
 
@@ -522,7 +501,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
 }
 
 @media (min-width: 740px) {
-  .c26 {
+  .c25 {
     padding: 1rem 2rem;
   }
 }
@@ -640,32 +619,30 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
               <div
                 className="c22"
               >
-                <div
+                <input
+                  aria-describedby="mship-4--MoneyBuy-userInput"
+                  aria-label="Input a different amount"
                   className="c23"
-                >
-                  <input
-                    aria-label="Input a different amount"
-                    aria-required={false}
-                    className="c24"
-                    id="mship-4--MoneyBuy-userInput"
-                    inputBorderColor={false}
-                    max="25000"
-                    min="1"
-                    name="membership_amount"
-                    onChange={[Function]}
-                    pattern="[^[0-9]+([,.][0-9]+)?$]"
-                    placeholder="0.00"
-                    required={false}
-                    step="0.01"
-                    type="string"
-                    value={345.67}
-                  />
-                </div>
+                  error={false}
+                  id="mship-4--MoneyBuy-userInput"
+                  inputBorderColor={false}
+                  max="25000"
+                  min="1"
+                  name="membership_amount"
+                  onChange={[Function]}
+                  pattern="[^[0-9]+([,.][0-9]+)?$]"
+                  placeholder="0.00"
+                  prefixLength={0}
+                  required={false}
+                  step="0.01"
+                  type="string"
+                  value={345.67}
+                />
               </div>
             </label>
           </div>
           <p
-            className="c25"
+            className="c24"
           >
             <strong>
               £345.67 
@@ -673,7 +650,7 @@ exports[`"Single Giving, No Money Buys, with overridden manual input value" rend
             will help us fund amazing projects in the UK and around the world.
           </p>
           <button
-            className="c26 Button_DonateWidget"
+            className="c25 Button_DonateWidget"
             type="submit"
           >
             Donate £345.67 now
@@ -800,44 +777,31 @@ exports[`Monthly donation renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c23 {
-  position: relative;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
 .c24 {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.c25 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
-  border-color: #969598;
+  border-color: #E1E2E3;
   box-shadow: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c25:focus {
+.c24 :focus {
   border: 1px solid #666;
+}
+
+.c23 {
+  position: relative;
+  font-size: 1.25rem;
 }
 
 .c0 {
@@ -958,12 +922,12 @@ exports[`Monthly donation renders correctly 1`] = `
   border: 2px solid #969598;
 }
 
-.c26 {
+.c25 {
   line-height: 1.5;
   margin-top: 2rem;
 }
 
-.c27 {
+.c26 {
   width: 100%;
   margin: 2rem 0 2rem;
   color: #FFFFFF;
@@ -979,9 +943,9 @@ exports[`Monthly donation renders correctly 1`] = `
   appearance: none;
 }
 
-.c27:active,
-.c27:focus,
-.c27:hover {
+.c26:active,
+.c26:focus,
+.c26:hover {
   outline: none;
   background-color: #961D35;
 }
@@ -1148,16 +1112,8 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c23 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c23 {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+  .c24 {
+    max-width: 290px;
   }
 }
 
@@ -1218,7 +1174,7 @@ exports[`Monthly donation renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c27 {
+  .c26 {
     padding: 1rem 2rem;
   }
 }
@@ -1341,39 +1297,37 @@ exports[`Monthly donation renders correctly 1`] = `
               <div
                 className="c23"
               >
-                <div
+                <input
+                  aria-describedby="mship-1--MoneyBuy-userInput"
+                  aria-label="Input a different amount"
                   className="c24"
-                >
-                  <input
-                    aria-label="Input a different amount"
-                    aria-required={false}
-                    className="c25"
-                    id="mship-1--MoneyBuy-userInput"
-                    inputBorderColor={false}
-                    max="25000"
-                    min="1"
-                    name="membership_amount"
-                    onChange={[Function]}
-                    pattern="[^[0-9]+([,.][0-9]+)?$]"
-                    placeholder="0.00"
-                    required={false}
-                    step="0.01"
-                    type="string"
-                    value={10}
-                  />
-                </div>
+                  error={false}
+                  id="mship-1--MoneyBuy-userInput"
+                  inputBorderColor={false}
+                  max="25000"
+                  min="1"
+                  name="membership_amount"
+                  onChange={[Function]}
+                  pattern="[^[0-9]+([,.][0-9]+)?$]"
+                  placeholder="0.00"
+                  prefixLength={0}
+                  required={false}
+                  step="0.01"
+                  type="string"
+                  value={10}
+                />
               </div>
             </label>
           </div>
           <p
-            className="c26"
+            className="c25"
           >
             <strong>
               £10 
             </strong>
           </p>
           <button
-            className="c27 Button_DonateWidget"
+            className="c26 Button_DonateWidget"
             type="submit"
           >
             Donate £10 monthly
@@ -1448,7 +1402,7 @@ exports[`Single donation renders correctly 1`] = `
   line-height: inherit;
 }
 
-.c21 {
+.c20 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -1457,13 +1411,13 @@ exports[`Single donation renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c21 {
+.c20 {
   font-size: 1rem;
   line-height: normal;
   font-weight: 500;
 }
 
-.c21 span {
+.c20 span {
   font-size: inherit;
   line-height: inherit;
 }
@@ -1500,44 +1454,31 @@ exports[`Single donation renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c16 {
-  position: relative;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
 .c17 {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.c18 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
-  border-color: #969598;
+  border-color: #E1E2E3;
   box-shadow: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c18:focus {
+.c17 :focus {
   border: 1px solid #666;
+}
+
+.c16 {
+  position: relative;
+  font-size: 1.25rem;
 }
 
 .c13 {
@@ -1566,11 +1507,11 @@ exports[`Single donation renders correctly 1`] = `
   box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
-.c19 {
+.c18 {
   display: block;
 }
 
-.c19 input {
+.c18 input {
   border: none;
   background-color: #BECCF9;
   color: #000000;
@@ -1585,17 +1526,17 @@ exports[`Single donation renders correctly 1`] = `
   color: #FFFFFF;
 }
 
-.c19 input:focus {
+.c18 input:focus {
   border: none;
   outline: none;
   box-shadow: inset 0 0 0 4px #2042AD;
 }
 
-.c19 input:active:focus {
+.c18 input:active:focus {
   box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
-.c19 input:focus {
+.c18 input:focus {
   box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
@@ -1691,17 +1632,17 @@ exports[`Single donation renders correctly 1`] = `
   padding: 1.5rem 0.5rem;
 }
 
-.c20 {
+.c19 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.c22 {
+.c21 {
   margin-right: 0.5rem;
 }
 
-.c23 {
+.c22 {
   position: relative;
   flex-basis: 50%;
   flex-shrink: 0;
@@ -1710,7 +1651,7 @@ exports[`Single donation renders correctly 1`] = `
   display: block;
 }
 
-.c23 span {
+.c22 span {
   position: absolute;
   font-size: 20px;
   top: 50%;
@@ -1721,7 +1662,7 @@ exports[`Single donation renders correctly 1`] = `
   z-index: 3;
 }
 
-.c23 input {
+.c22 input {
   height: 48px;
   border: 2px solid #969598;
   background: #F4F3F5;
@@ -1729,17 +1670,17 @@ exports[`Single donation renders correctly 1`] = `
   padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
-.c23 input:focus {
+.c22 input:focus {
   outline: none;
   border: 2px solid #969598;
 }
 
-.c24 {
+.c23 {
   line-height: 1.5;
   margin-top: 2rem;
 }
 
-.c25 {
+.c24 {
   width: 100%;
   margin: 2rem 0 2rem;
   color: #FFFFFF;
@@ -1755,9 +1696,9 @@ exports[`Single donation renders correctly 1`] = `
   appearance: none;
 }
 
-.c25:active,
-.c25:focus,
-.c25:hover {
+.c24:active,
+.c24:focus,
+.c24:hover {
   outline: none;
   background-color: #961D35;
 }
@@ -1805,14 +1746,14 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c21 {
+  .c20 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .c21 {
+  .c20 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
@@ -1847,16 +1788,8 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c16 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c16 {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+  .c17 {
+    max-width: 290px;
   }
 }
 
@@ -1868,7 +1801,7 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c19 input {
+  .c18 input {
     font-size: 2rem;
     padding: 1.5rem;
   }
@@ -1937,13 +1870,13 @@ exports[`Single donation renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c23 {
+  .c22 {
     flex-basis: 60%;
   }
 }
 
 @media (min-width: 740px) {
-  .c25 {
+  .c24 {
     padding: 1rem 2rem;
   }
 }
@@ -2011,27 +1944,25 @@ exports[`Single donation renders correctly 1`] = `
               <div
                 className="c16"
               >
-                <div
+                <input
+                  aria-describedby="mship-1--moneyBuy-box1"
+                  aria-label="£10"
                   className="c17"
-                >
-                  <input
-                    aria-label="£10"
-                    aria-required={false}
-                    className="c18"
-                    id="mship-1--moneyBuy-box1"
-                    isSelected={false}
-                    name="mship-1--moneyBuy1"
-                    onClick={[Function]}
-                    placeholder=""
-                    required={false}
-                    type="button"
-                    value="£ 10"
-                  />
-                </div>
+                  error={false}
+                  id="mship-1--moneyBuy-box1"
+                  isSelected={false}
+                  name="mship-1--moneyBuy1"
+                  onClick={[Function]}
+                  placeholder=""
+                  prefixLength={0}
+                  required={false}
+                  type="button"
+                  value="£ 10"
+                />
               </div>
             </label>
             <label
-              className="c12 c19"
+              className="c12 c18"
               htmlFor="mship-1--moneyBuy-box2"
             >
               <span
@@ -2045,23 +1976,21 @@ exports[`Single donation renders correctly 1`] = `
               <div
                 className="c16"
               >
-                <div
+                <input
+                  aria-describedby="mship-1--moneyBuy-box2"
+                  aria-label="£20"
                   className="c17"
-                >
-                  <input
-                    aria-label="£20"
-                    aria-required={false}
-                    className="c18"
-                    id="mship-1--moneyBuy-box2"
-                    isSelected={true}
-                    name="mship-1--moneyBuy2"
-                    onClick={[Function]}
-                    placeholder=""
-                    required={false}
-                    type="button"
-                    value="£ 20"
-                  />
-                </div>
+                  error={false}
+                  id="mship-1--moneyBuy-box2"
+                  isSelected={true}
+                  name="mship-1--moneyBuy2"
+                  onClick={[Function]}
+                  placeholder=""
+                  prefixLength={0}
+                  required={false}
+                  type="button"
+                  value="£ 20"
+                />
               </div>
             </label>
             <label
@@ -2079,36 +2008,34 @@ exports[`Single donation renders correctly 1`] = `
               <div
                 className="c16"
               >
-                <div
+                <input
+                  aria-describedby="mship-1--moneyBuy-box3"
+                  aria-label="£30"
                   className="c17"
-                >
-                  <input
-                    aria-label="£30"
-                    aria-required={false}
-                    className="c18"
-                    id="mship-1--moneyBuy-box3"
-                    isSelected={false}
-                    name="mship-1--moneyBuy3"
-                    onClick={[Function]}
-                    placeholder=""
-                    required={false}
-                    type="button"
-                    value="£ 30"
-                  />
-                </div>
+                  error={false}
+                  id="mship-1--moneyBuy-box3"
+                  isSelected={false}
+                  name="mship-1--moneyBuy3"
+                  onClick={[Function]}
+                  placeholder=""
+                  prefixLength={0}
+                  required={false}
+                  type="button"
+                  value="£ 30"
+                />
               </div>
             </label>
           </div>
           <div
-            className="c20"
+            className="c19"
           >
             <span
-              className="c21 c22"
+              className="c20 c21"
             >
               Other amount
             </span>
             <label
-              className="c12 c23"
+              className="c12 c22"
               htmlFor="mship-1--MoneyBuy-userInput"
             >
               <span
@@ -2122,32 +2049,30 @@ exports[`Single donation renders correctly 1`] = `
               <div
                 className="c16"
               >
-                <div
+                <input
+                  aria-describedby="mship-1--MoneyBuy-userInput"
+                  aria-label="Input a different amount"
                   className="c17"
-                >
-                  <input
-                    aria-label="Input a different amount"
-                    aria-required={false}
-                    className="c18"
-                    id="mship-1--MoneyBuy-userInput"
-                    inputBorderColor={false}
-                    max="25000"
-                    min="1"
-                    name="membership_amount"
-                    onChange={[Function]}
-                    pattern="[^[0-9]+([,.][0-9]+)?$]"
-                    placeholder="0.00"
-                    required={false}
-                    step="0.01"
-                    type="string"
-                    value={20}
-                  />
-                </div>
+                  error={false}
+                  id="mship-1--MoneyBuy-userInput"
+                  inputBorderColor={false}
+                  max="25000"
+                  min="1"
+                  name="membership_amount"
+                  onChange={[Function]}
+                  pattern="[^[0-9]+([,.][0-9]+)?$]"
+                  placeholder="0.00"
+                  prefixLength={0}
+                  required={false}
+                  step="0.01"
+                  type="string"
+                  value={20}
+                />
               </div>
             </label>
           </div>
           <p
-            className="c24"
+            className="c23"
           >
             <strong>
               £20 
@@ -2155,7 +2080,7 @@ exports[`Single donation renders correctly 1`] = `
             a support worker to visit 10 isolated young mums with postnatal depression in the UK.
           </p>
           <button
-            className="c25 Button_DonateWidget"
+            className="c24 Button_DonateWidget"
             type="submit"
           >
             Donate £20 now
@@ -2262,44 +2187,31 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c16 {
-  position: relative;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
 .c17 {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.c18 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
-  border-color: #969598;
+  border-color: #E1E2E3;
   box-shadow: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c18:focus {
+.c17 :focus {
   border: 1px solid #666;
+}
+
+.c16 {
+  position: relative;
+  font-size: 1.25rem;
 }
 
 .c0 {
@@ -2416,12 +2328,12 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   border: 2px solid #969598;
 }
 
-.c19 {
+.c18 {
   line-height: 1.5;
   margin-top: 2rem;
 }
 
-.c20 {
+.c19 {
   width: 100%;
   margin: 2rem 0 2rem;
   color: #FFFFFF;
@@ -2437,9 +2349,9 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   appearance: none;
 }
 
-.c20:active,
-.c20:focus,
-.c20:hover {
+.c19:active,
+.c19:focus,
+.c19:hover {
   outline: none;
   background-color: #961D35;
 }
@@ -2515,16 +2427,8 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c16 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c16 {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+  .c17 {
+    max-width: 290px;
   }
 }
 
@@ -2585,7 +2489,7 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c20 {
+  .c19 {
     padding: 1rem 2rem;
   }
 }
@@ -2653,39 +2557,37 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
               <div
                 className="c16"
               >
-                <div
+                <input
+                  aria-describedby="mship-1--MoneyBuy-userInput"
+                  aria-label="Input a different amount"
                   className="c17"
-                >
-                  <input
-                    aria-label="Input a different amount"
-                    aria-required={false}
-                    className="c18"
-                    id="mship-1--MoneyBuy-userInput"
-                    inputBorderColor={false}
-                    max="25000"
-                    min="1"
-                    name="membership_amount"
-                    onChange={[Function]}
-                    pattern="[^[0-9]+([,.][0-9]+)?$]"
-                    placeholder="0.00"
-                    required={false}
-                    step="0.01"
-                    type="string"
-                    value={10}
-                  />
-                </div>
+                  error={false}
+                  id="mship-1--MoneyBuy-userInput"
+                  inputBorderColor={false}
+                  max="25000"
+                  min="1"
+                  name="membership_amount"
+                  onChange={[Function]}
+                  pattern="[^[0-9]+([,.][0-9]+)?$]"
+                  placeholder="0.00"
+                  prefixLength={0}
+                  required={false}
+                  step="0.01"
+                  type="string"
+                  value={10}
+                />
               </div>
             </label>
           </div>
           <p
-            className="c19"
+            className="c18"
           >
             <strong>
               £10 
             </strong>
           </p>
           <button
-            className="c20 Button_DonateWidget"
+            className="c19 Button_DonateWidget"
             type="submit"
           >
             Donate £10 monthly
