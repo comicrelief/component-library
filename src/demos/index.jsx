@@ -114,6 +114,8 @@ import LookupExample from '../components/Molecules/Lookup/LookupExample.jsx';
 import lookupExampleSrc from '../components/Molecules/Lookup/LookupExample.jsx?raw';
 import LogoLinkedExample from '../components/Molecules/LogoLinked/LogoLinkedExample.jsx';
 import logoLinkedExampleSrc from '../components/Molecules/LogoLinked/LogoLinkedExample.jsx?raw';
+import PostcodeLookupExample from '../components/Molecules/PostcodeLookup/PostcodeLookupExample.jsx';
+import postcodeLookupExampleSrc from '../components/Molecules/PostcodeLookup/PostcodeLookupExample.jsx?raw';
 
 // Organism examples
 import { FooterExample1, FooterExample2, FooterExample3 } from '../components/Organisms/Footer/FooterExample.jsx';
@@ -196,6 +198,7 @@ export const molecules = [
   { name: 'Lookup', demo: demo(LookupExample, lookupExampleSrc) },
   { name: 'PartnerLink', demo: demo(PartnerLinkExample, partnerLinkExampleSrc) },
   { name: 'PictureOrVideo', demo: demo(PictureOrVideoExample, pictureOrVideoExampleSrc) },
+  { name: 'PostcodeLookup', demo: demo(PostcodeLookupExample, postcodeLookupExampleSrc) },
   { name: 'Promo', demo: demo(PromoExample, promoExampleSrc) },
   { name: 'QuoteSlice', demo: demo(QuoteSliceExample, quoteSliceExampleSrc) },
   { name: 'SchoolLookup', demo: demo(SchoolLookupExample, schoolLookupExampleSrc) },
