@@ -9,6 +9,7 @@ const FooterWrapper = styled.footer.attrs(() => ({
 }))`
   text-align: left;
   background: ${({ theme }) => theme.color('grey_5')};
+  background: orange;
   padding-top: 4.5rem; // Rather than using lg spacing like below, this needs a bit more space so that it sits 'under' the main content of the page, which has rounded corners behind which you see the black of this footer.
   @media ${({ theme }) => theme.breakpoints2026('M')} {
     padding-bottom: ${spacing('lg')};
