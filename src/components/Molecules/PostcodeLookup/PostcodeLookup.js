@@ -36,7 +36,7 @@ export default function PostcodeLookup({
     posttown: ''
   });
 
-  const handleAddressSelect = (selectedAddress) => {
+  const handleAddressSelect = selectedAddress => {
     setShowFields(true);
     setAddressFields({
       postcode: selectedAddress.postcode || '',
@@ -47,7 +47,7 @@ export default function PostcodeLookup({
     });
   };
 
-  const handleManualClick = (event) => {
+  const handleManualClick = event => {
     event.preventDefault();
     setShowFields(true);
   };
