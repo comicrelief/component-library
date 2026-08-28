@@ -1,30 +1,38 @@
 import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
+import styled, { css } from 'styled-components';
 import TextInputWithDropdown from '../../Atoms/TextInputWithDropdown/TextInputWithDropdown';
 import spacing from '../../../theme/shared/spacing';
 import ButtonWithStates from '../../Atoms/ButtonWithStates/ButtonWithStates';
 
+const Button = styled(ButtonWithStates)`${({
+  theme,
+  buttonTextColour,
+  buttonBgColour,
+  buttonTextHoverColour,
+  buttonHoverBgColour
+}) => css`
+  margin-top: ${spacing('m')};
+  color: ${buttonTextColour || theme.color('white')};
+  background-color: ${buttonBgColour || theme.color('red')};
+  &:hover {
+    color: ${buttonTextHoverColour || theme.color('white')};
+    background-color: ${buttonHoverBgColour || theme.color('red_dark')};
+  }
+  padding: 0 ${spacing('lg')};
+`}`;
+
 const KEY_CODE_ENTER = 13;
 
 /**
- * A simple lookup component
- *
- * The `lookupHandler` should be an async function which is called when a lookup is triggered
- *  (either by hitting enter or clicking the button)
- *
- * It will receive the current search term and should:
- * - take care of any validation on the search term
- * - perform the actual lookup request
- * - return an array of options (or an empty array if none were found)
- * - only throw errors with user-friendly messages
- *
- * Any errors thrown will be caught and the message will be displayed to the user.
- * The `onSelect` function will receive the chosen option.
- *
  * @param name
  * @param label
  * @param placeholder
  * @param buttonText
+ * @param buttonTextColour
+ * @param buttonBgColour
+ * @param buttonHoverBgColour
+ * @param buttonHoverTextColour
  * @param lookupHandler
  * @param mapOptionToString
  * @param onSelect
@@ -39,11 +47,15 @@ const Lookup = ({
   label,
   placeholder,
   buttonText,
+  buttonTextColour,
+  buttonBgColour,
+  buttonHoverBgColour,
+  buttonHoverTextColour,
   lookupHandler,
   mapOptionToString,
   onSelect,
-  noResultsMessage = 'Sorry, could not find any results for your search',
-  dropdownInstruction = '',
+  noResultsMessage,
+  dropdownInstruction,
   ...rest
 }) => {
   const [query, setQuery] = useState('');
@@ -77,7 +89,6 @@ const Lookup = ({
         options={options.map(mapOptionToString)}
         label={label}
         placeholder={placeholder}
-        data-test="lookupDropdown"
         onChange={e => {
           setQuery(e.target.value);
           setErrorMessage('');
@@ -101,18 +112,19 @@ const Lookup = ({
         errorMsg={errorMessage}
         dropdownInstruction={dropdownInstruction}
       />
-      <ButtonWithStates
+      <Button
         type="button"
         onClick={() => handler()}
         loading={isSearching}
         disabled={isSearching}
         loadingText="Searching"
-        data-test="lookupButton"
-        buttonType="secondary"
-        color="black"
+        buttonTextColour={buttonTextColour}
+        buttonBgColour={buttonBgColour}
+        buttonHoverBgColour={buttonHoverBgColour}
+        buttonHoverTextColour={buttonHoverTextColour}
       >
         {buttonText}
-      </ButtonWithStates>
+      </Button>
     </div>
   );
 };
@@ -122,11 +134,24 @@ Lookup.propTypes = {
   label: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   buttonText: PropTypes.string.isRequired,
+  buttonTextColour: PropTypes.string,
+  buttonBgColour: PropTypes.string,
+  buttonHoverBgColour: PropTypes.string,
+  buttonHoverTextColour: PropTypes.string,
   lookupHandler: PropTypes.func.isRequired,
   mapOptionToString: PropTypes.func.isRequired,
   onSelect: PropTypes.func.isRequired,
   noResultsMessage: PropTypes.string,
   dropdownInstruction: PropTypes.string
+};
+
+Lookup.defaultProps = {
+  noResultsMessage: 'Sorry, could not find any results for your search',
+  dropdownInstruction: '',
+  buttonTextColour: 'white',
+  buttonBgColour: '#E52630',
+  buttonHoverTextColour: 'white',
+  buttonHoverBgColour: '#890B11'
 };
 
 export default Lookup;

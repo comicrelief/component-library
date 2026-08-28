@@ -58,6 +58,7 @@ export { default as LogoLinked } from './components/Molecules/LogoLinked/LogoLin
 export { default as Lookup } from './components/Molecules/Lookup/Lookup';
 export { default as PartnerLink } from './components/Molecules/PartnerLink/PartnerLink';
 export { default as PictureOrVideo } from './components/Molecules/PictureOrVideo/PictureOrVideo';
+export { default as PostcodeLookup } from './components/Molecules/PostcodeLookup/PostcodeLookup';
 export { default as Promo } from './components/Molecules/Promo/Promo';
 export { default as QuoteSlice } from './components/Molecules/QuoteSlice/QuoteSlice';
 export { default as SchoolLookup } from './components/Molecules/SchoolLookup/SchoolLookup';

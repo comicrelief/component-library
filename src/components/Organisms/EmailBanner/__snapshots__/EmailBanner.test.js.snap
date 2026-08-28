@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Image banner left orientation renders correctly 1`] = `
-.c21 {
+.c20 {
   display: inline-flex;
   position: relative;
   text-decoration: none;
@@ -24,24 +24,24 @@ exports[`Image banner left orientation renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c21 >a {
+.c20 >a {
   text-decoration: none;
 }
 
-.c21:hover,
-.c21:focus,
-.c21:focus-within,
-.c21:focus-visible {
+.c20:hover,
+.c20:focus,
+.c20:focus-within,
+.c20:focus-visible {
   background-color: #890B11;
   outline-offset: 3px;
 }
 
-.c21:disabled {
+.c20:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.c22:disabled {
+.c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -96,44 +96,31 @@ exports[`Image banner left orientation renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c16 {
-  position: relative;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
 .c17 {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.c18 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
-  border-color: #969598;
+  border-color: #E1E2E3;
   box-shadow: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c18:focus {
+.c17 :focus {
   border: 1px solid #666;
+}
+
+.c16 {
+  position: relative;
+  font-size: 1.25rem;
 }
 
 .c9 {
@@ -251,51 +238,51 @@ exports[`Image banner left orientation renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c19 {
+.c18 {
   color: #000000;
   font-size: 0.75rem;
   line-height: normal;
   padding-bottom: 0.5rem;
 }
 
-.c19 p,
-.c19 span,
-.c19 * {
+.c18 p,
+.c18 span,
+.c18 * {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c20 {
+.c19 {
   margin-top: 1rem;
 }
 
-.c20 button {
+.c19 button {
   width: 100%;
   min-height: 48px;
 }
 
 @media (min-width: 740px) {
-  .c21 {
+  .c20 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .c21 {
+  .c20 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 740px) {
-  .c21 {
+  .c20 {
     width: auto;
   }
 }
 
 @media (min-width: 1024px) {
-  .c21 {
+  .c20 {
     width: auto;
   }
 }
@@ -343,16 +330,8 @@ exports[`Image banner left orientation renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c16 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c16 {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+  .c17 {
+    max-width: 290px;
   }
 }
 
@@ -447,7 +426,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c20 button {
+  .c19 button {
     padding: 1rem 2rem;
   }
 }
@@ -515,21 +494,20 @@ exports[`Image banner left orientation renders correctly 1`] = `
                     <div
                       className="c16"
                     >
-                      <div
+                      <input
+                        aria-describedby="first-name"
+                        aria-required={true}
                         className="c17"
-                      >
-                        <input
-                          aria-required={true}
-                          className="c18"
-                          id="first-name"
-                          name="firstName"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          placeholder="Enter your first name"
-                          required={false}
-                          type="text"
-                        />
-                      </div>
+                        error={false}
+                        id="first-name"
+                        name="firstName"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="Enter your first name"
+                        prefixLength={0}
+                        required={false}
+                        type="text"
+                      />
                     </div>
                   </label>
                 </div>
@@ -551,21 +529,20 @@ exports[`Image banner left orientation renders correctly 1`] = `
                     <div
                       className="c16"
                     >
-                      <div
+                      <input
+                        aria-describedby="last-name"
+                        aria-required={true}
                         className="c17"
-                      >
-                        <input
-                          aria-required={true}
-                          className="c18"
-                          id="last-name"
-                          name="lastName"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          placeholder="Enter your last name"
-                          required={false}
-                          type="text"
-                        />
-                      </div>
+                        error={false}
+                        id="last-name"
+                        name="lastName"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="Enter your last name"
+                        prefixLength={0}
+                        required={false}
+                        type="text"
+                      />
                     </div>
                   </label>
                 </div>
@@ -588,27 +565,26 @@ exports[`Image banner left orientation renders correctly 1`] = `
                   <div
                     className="c16"
                   >
-                    <div
+                    <input
+                      aria-describedby="email"
+                      aria-required={true}
                       className="c17"
-                    >
-                      <input
-                        aria-required={true}
-                        className="c18"
-                        id="email"
-                        name="email"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        placeholder="example@youremail.com"
-                        required={false}
-                        type="email"
-                      />
-                    </div>
+                      error={false}
+                      id="email"
+                      name="email"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="example@youremail.com"
+                      prefixLength={0}
+                      required={false}
+                      type="email"
+                    />
                   </div>
                 </label>
               </div>
             </div>
             <div
-              className="c19"
+              className="c18"
             >
               <div
                 className="c9"
@@ -620,10 +596,10 @@ exports[`Image banner left orientation renders correctly 1`] = `
               />
             </div>
             <div
-              className="c20"
+              className="c19"
             >
               <button
-                className="c21 c22"
+                className="c20 c21"
                 data-test="subscribe-button"
                 data-testid="Button"
                 disabled={false}
@@ -645,7 +621,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
 `;
 
 exports[`Image banner renders correctly 1`] = `
-.c21 {
+.c20 {
   display: inline-flex;
   position: relative;
   text-decoration: none;
@@ -668,24 +644,24 @@ exports[`Image banner renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c21 >a {
+.c20 >a {
   text-decoration: none;
 }
 
-.c21:hover,
-.c21:focus,
-.c21:focus-within,
-.c21:focus-visible {
+.c20:hover,
+.c20:focus,
+.c20:focus-within,
+.c20:focus-visible {
   background-color: #890B11;
   outline-offset: 3px;
 }
 
-.c21:disabled {
+.c20:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.c22:disabled {
+.c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -740,44 +716,31 @@ exports[`Image banner renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c16 {
-  position: relative;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
 .c17 {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.c18 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
-  border-color: #969598;
+  border-color: #E1E2E3;
   box-shadow: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c18:focus {
+.c17 :focus {
   border: 1px solid #666;
+}
+
+.c16 {
+  position: relative;
+  font-size: 1.25rem;
 }
 
 .c9 {
@@ -895,51 +858,51 @@ exports[`Image banner renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c19 {
+.c18 {
   color: #000000;
   font-size: 0.75rem;
   line-height: normal;
   padding-bottom: 0.5rem;
 }
 
-.c19 p,
-.c19 span,
-.c19 * {
+.c18 p,
+.c18 span,
+.c18 * {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c20 {
+.c19 {
   margin-top: 1rem;
 }
 
-.c20 button {
+.c19 button {
   width: 100%;
   min-height: 48px;
 }
 
 @media (min-width: 740px) {
-  .c21 {
+  .c20 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .c21 {
+  .c20 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 740px) {
-  .c21 {
+  .c20 {
     width: auto;
   }
 }
 
 @media (min-width: 1024px) {
-  .c21 {
+  .c20 {
     width: auto;
   }
 }
@@ -987,16 +950,8 @@ exports[`Image banner renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c16 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c16 {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+  .c17 {
+    max-width: 290px;
   }
 }
 
@@ -1091,7 +1046,7 @@ exports[`Image banner renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c20 button {
+  .c19 button {
     padding: 1rem 2rem;
   }
 }
@@ -1159,21 +1114,20 @@ exports[`Image banner renders correctly 1`] = `
                     <div
                       className="c16"
                     >
-                      <div
+                      <input
+                        aria-describedby="first-name"
+                        aria-required={true}
                         className="c17"
-                      >
-                        <input
-                          aria-required={true}
-                          className="c18"
-                          id="first-name"
-                          name="firstName"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          placeholder="Enter your first name"
-                          required={false}
-                          type="text"
-                        />
-                      </div>
+                        error={false}
+                        id="first-name"
+                        name="firstName"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="Enter your first name"
+                        prefixLength={0}
+                        required={false}
+                        type="text"
+                      />
                     </div>
                   </label>
                 </div>
@@ -1195,21 +1149,20 @@ exports[`Image banner renders correctly 1`] = `
                     <div
                       className="c16"
                     >
-                      <div
+                      <input
+                        aria-describedby="last-name"
+                        aria-required={true}
                         className="c17"
-                      >
-                        <input
-                          aria-required={true}
-                          className="c18"
-                          id="last-name"
-                          name="lastName"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          placeholder="Enter your last name"
-                          required={false}
-                          type="text"
-                        />
-                      </div>
+                        error={false}
+                        id="last-name"
+                        name="lastName"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="Enter your last name"
+                        prefixLength={0}
+                        required={false}
+                        type="text"
+                      />
                     </div>
                   </label>
                 </div>
@@ -1232,27 +1185,26 @@ exports[`Image banner renders correctly 1`] = `
                   <div
                     className="c16"
                   >
-                    <div
+                    <input
+                      aria-describedby="email"
+                      aria-required={true}
                       className="c17"
-                    >
-                      <input
-                        aria-required={true}
-                        className="c18"
-                        id="email"
-                        name="email"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        placeholder="example@youremail.com"
-                        required={false}
-                        type="email"
-                      />
-                    </div>
+                      error={false}
+                      id="email"
+                      name="email"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="example@youremail.com"
+                      prefixLength={0}
+                      required={false}
+                      type="email"
+                    />
                   </div>
                 </label>
               </div>
             </div>
             <div
-              className="c19"
+              className="c18"
             >
               <div
                 className="c9"
@@ -1264,10 +1216,10 @@ exports[`Image banner renders correctly 1`] = `
               />
             </div>
             <div
-              className="c20"
+              className="c19"
             >
               <button
-                className="c21 c22"
+                className="c20 c21"
                 data-test="subscribe-button"
                 data-testid="Button"
                 disabled={false}
@@ -1289,7 +1241,7 @@ exports[`Image banner renders correctly 1`] = `
 `;
 
 exports[`Text-only email widget renders correctly 1`] = `
-.c21 {
+.c20 {
   display: inline-flex;
   position: relative;
   text-decoration: none;
@@ -1312,24 +1264,24 @@ exports[`Text-only email widget renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c21 >a {
+.c20 >a {
   text-decoration: none;
 }
 
-.c21:hover,
-.c21:focus,
-.c21:focus-within,
-.c21:focus-visible {
+.c20:hover,
+.c20:focus,
+.c20:focus-within,
+.c20:focus-visible {
   background-color: #890B11;
   outline-offset: 3px;
 }
 
-.c21:disabled {
+.c20:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.c22:disabled {
+.c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -1384,44 +1336,31 @@ exports[`Text-only email widget renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c16 {
-  position: relative;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
 .c17 {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.c18 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
-  border-color: #969598;
+  border-color: #E1E2E3;
   box-shadow: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c18:focus {
+.c17 :focus {
   border: 1px solid #666;
+}
+
+.c16 {
+  position: relative;
+  font-size: 1.25rem;
 }
 
 .c9 {
@@ -1539,51 +1478,51 @@ exports[`Text-only email widget renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c19 {
+.c18 {
   color: #000000;
   font-size: 0.75rem;
   line-height: normal;
   padding-bottom: 0.5rem;
 }
 
-.c19 p,
-.c19 span,
-.c19 * {
+.c18 p,
+.c18 span,
+.c18 * {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c20 {
+.c19 {
   margin-top: 1rem;
 }
 
-.c20 button {
+.c19 button {
   width: 100%;
   min-height: 48px;
 }
 
 @media (min-width: 740px) {
-  .c21 {
+  .c20 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .c21 {
+  .c20 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 740px) {
-  .c21 {
+  .c20 {
     width: auto;
   }
 }
 
 @media (min-width: 1024px) {
-  .c21 {
+  .c20 {
     width: auto;
   }
 }
@@ -1631,16 +1570,8 @@ exports[`Text-only email widget renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c16 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c16 {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+  .c17 {
+    max-width: 290px;
   }
 }
 
@@ -1735,7 +1666,7 @@ exports[`Text-only email widget renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c20 button {
+  .c19 button {
     padding: 1rem 2rem;
   }
 }
@@ -1803,21 +1734,20 @@ exports[`Text-only email widget renders correctly 1`] = `
                     <div
                       className="c16"
                     >
-                      <div
+                      <input
+                        aria-describedby="first-name"
+                        aria-required={true}
                         className="c17"
-                      >
-                        <input
-                          aria-required={true}
-                          className="c18"
-                          id="first-name"
-                          name="firstName"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          placeholder="Enter your first name"
-                          required={false}
-                          type="text"
-                        />
-                      </div>
+                        error={false}
+                        id="first-name"
+                        name="firstName"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="Enter your first name"
+                        prefixLength={0}
+                        required={false}
+                        type="text"
+                      />
                     </div>
                   </label>
                 </div>
@@ -1839,21 +1769,20 @@ exports[`Text-only email widget renders correctly 1`] = `
                     <div
                       className="c16"
                     >
-                      <div
+                      <input
+                        aria-describedby="last-name"
+                        aria-required={true}
                         className="c17"
-                      >
-                        <input
-                          aria-required={true}
-                          className="c18"
-                          id="last-name"
-                          name="lastName"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          placeholder="Enter your last name"
-                          required={false}
-                          type="text"
-                        />
-                      </div>
+                        error={false}
+                        id="last-name"
+                        name="lastName"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="Enter your last name"
+                        prefixLength={0}
+                        required={false}
+                        type="text"
+                      />
                     </div>
                   </label>
                 </div>
@@ -1876,27 +1805,26 @@ exports[`Text-only email widget renders correctly 1`] = `
                   <div
                     className="c16"
                   >
-                    <div
+                    <input
+                      aria-describedby="email"
+                      aria-required={true}
                       className="c17"
-                    >
-                      <input
-                        aria-required={true}
-                        className="c18"
-                        id="email"
-                        name="email"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        placeholder="example@youremail.com"
-                        required={false}
-                        type="email"
-                      />
-                    </div>
+                      error={false}
+                      id="email"
+                      name="email"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="example@youremail.com"
+                      prefixLength={0}
+                      required={false}
+                      type="email"
+                    />
                   </div>
                 </label>
               </div>
             </div>
             <div
-              className="c19"
+              className="c18"
             >
               <div
                 className="c9"
@@ -1908,10 +1836,10 @@ exports[`Text-only email widget renders correctly 1`] = `
               />
             </div>
             <div
-              className="c20"
+              className="c19"
             >
               <button
-                className="c21 c22"
+                className="c20 c21"
                 data-test="subscribe-button"
                 data-testid="Button"
                 disabled={false}
@@ -1933,7 +1861,7 @@ exports[`Text-only email widget renders correctly 1`] = `
 `;
 
 exports[`Text-only email widget with copyColor renders correctly 1`] = `
-.c21 {
+.c20 {
   display: inline-flex;
   position: relative;
   text-decoration: none;
@@ -1956,24 +1884,24 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c21 >a {
+.c20 >a {
   text-decoration: none;
 }
 
-.c21:hover,
-.c21:focus,
-.c21:focus-within,
-.c21:focus-visible {
+.c20:hover,
+.c20:focus,
+.c20:focus-within,
+.c20:focus-visible {
   background-color: #890B11;
   outline-offset: 3px;
 }
 
-.c21:disabled {
+.c20:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.c22:disabled {
+.c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -2028,44 +1956,31 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c16 {
-  position: relative;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
 .c17 {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.c18 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
-  border-color: #969598;
+  border-color: #E1E2E3;
   box-shadow: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c18:focus {
+.c17 :focus {
   border: 1px solid #666;
+}
+
+.c16 {
+  position: relative;
+  font-size: 1.25rem;
 }
 
 .c9 {
@@ -2183,51 +2098,51 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c19 {
+.c18 {
   color: #000000;
   font-size: 0.75rem;
   line-height: normal;
   padding-bottom: 0.5rem;
 }
 
-.c19 p,
-.c19 span,
-.c19 * {
+.c18 p,
+.c18 span,
+.c18 * {
   font-size: inherit;
   line-height: inherit;
 }
 
-.c20 {
+.c19 {
   margin-top: 1rem;
 }
 
-.c20 button {
+.c19 button {
   width: 100%;
   min-height: 48px;
 }
 
 @media (min-width: 740px) {
-  .c21 {
+  .c20 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .c21 {
+  .c20 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 740px) {
-  .c21 {
+  .c20 {
     width: auto;
   }
 }
 
 @media (min-width: 1024px) {
-  .c21 {
+  .c20 {
     width: auto;
   }
 }
@@ -2275,16 +2190,8 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c16 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c16 {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+  .c17 {
+    max-width: 290px;
   }
 }
 
@@ -2379,7 +2286,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c20 button {
+  .c19 button {
     padding: 1rem 2rem;
   }
 }
@@ -2447,21 +2354,20 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                     <div
                       className="c16"
                     >
-                      <div
+                      <input
+                        aria-describedby="first-name"
+                        aria-required={true}
                         className="c17"
-                      >
-                        <input
-                          aria-required={true}
-                          className="c18"
-                          id="first-name"
-                          name="firstName"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          placeholder="Enter your first name"
-                          required={false}
-                          type="text"
-                        />
-                      </div>
+                        error={false}
+                        id="first-name"
+                        name="firstName"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="Enter your first name"
+                        prefixLength={0}
+                        required={false}
+                        type="text"
+                      />
                     </div>
                   </label>
                 </div>
@@ -2483,21 +2389,20 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                     <div
                       className="c16"
                     >
-                      <div
+                      <input
+                        aria-describedby="last-name"
+                        aria-required={true}
                         className="c17"
-                      >
-                        <input
-                          aria-required={true}
-                          className="c18"
-                          id="last-name"
-                          name="lastName"
-                          onBlur={[Function]}
-                          onChange={[Function]}
-                          placeholder="Enter your last name"
-                          required={false}
-                          type="text"
-                        />
-                      </div>
+                        error={false}
+                        id="last-name"
+                        name="lastName"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="Enter your last name"
+                        prefixLength={0}
+                        required={false}
+                        type="text"
+                      />
                     </div>
                   </label>
                 </div>
@@ -2520,27 +2425,26 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                   <div
                     className="c16"
                   >
-                    <div
+                    <input
+                      aria-describedby="email"
+                      aria-required={true}
                       className="c17"
-                    >
-                      <input
-                        aria-required={true}
-                        className="c18"
-                        id="email"
-                        name="email"
-                        onBlur={[Function]}
-                        onChange={[Function]}
-                        placeholder="example@youremail.com"
-                        required={false}
-                        type="email"
-                      />
-                    </div>
+                      error={false}
+                      id="email"
+                      name="email"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="example@youremail.com"
+                      prefixLength={0}
+                      required={false}
+                      type="email"
+                    />
                   </div>
                 </label>
               </div>
             </div>
             <div
-              className="c19"
+              className="c18"
             >
               <div
                 className="c9"
@@ -2552,10 +2456,10 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
               />
             </div>
             <div
-              className="c20"
+              className="c19"
             >
               <button
-                className="c21 c22"
+                className="c20 c21"
                 data-test="subscribe-button"
                 data-testid="Button"
                 disabled={false}

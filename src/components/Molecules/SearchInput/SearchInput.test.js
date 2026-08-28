@@ -50,44 +50,31 @@ it('renders correctly', () => {
   width: 1px;
 }
 
-.c8 {
-  position: relative;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
 .c9 {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.c10 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
-  border-color: #969598;
+  border-color: #E1E2E3;
   box-shadow: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c10:focus {
+.c9 :focus {
   border: 1px solid #666;
+}
+
+.c8 {
+  position: relative;
+  font-size: 1.25rem;
 }
 
 .c0 {
@@ -141,16 +128,8 @@ it('renders correctly', () => {
 }
 
 @media (min-width: 740px) {
-  .c8 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c8 {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+  .c9 {
+    max-width: 290px;
   }
 }
 
@@ -189,22 +168,20 @@ it('renders correctly', () => {
           <div
             className="c8"
           >
-            <div
+            <input
+              aria-describedby="search"
               className="c9"
-            >
-              <input
-                aria-required={false}
-                className="c10"
-                id="search"
-                name="search"
-                onChange={[Function]}
-                placeholder=""
-                required={false}
-                role="searchbox"
-                type="text"
-                value=""
-              />
-            </div>
+              error={false}
+              id="search"
+              name="search"
+              onChange={[Function]}
+              placeholder=""
+              prefixLength={0}
+              required={false}
+              role="searchbox"
+              type="text"
+              value=""
+            />
           </div>
         </label>
       </div>

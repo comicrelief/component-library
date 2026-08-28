@@ -97,7 +97,7 @@ it('renders correctly', () => {
   line-height: inherit;
 }
 
-.c23 {
+.c22 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
   text-transform: inherit;
@@ -106,13 +106,13 @@ it('renders correctly', () => {
   line-height: 1.25rem;
 }
 
-.c23 {
+.c22 {
   font-size: 1rem;
   line-height: normal;
   font-weight: 500;
 }
 
-.c23 span {
+.c22 span {
   font-size: inherit;
   line-height: inherit;
 }
@@ -135,44 +135,31 @@ it('renders correctly', () => {
   line-height: 1.25rem;
 }
 
-.c18 {
-  position: relative;
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
 .c19 {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.c20 {
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 48px;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   background-color: #F4F3F5;
   border: 1px solid;
-  border-color: #969598;
+  border-color: #E1E2E3;
   box-shadow: none;
   appearance: none;
   color: #000000;
   border-radius: 0.5rem;
   font-size: inherit;
   z-index: 2;
-  font-family: inherit;
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
 }
 
-.c20:focus {
+.c19 :focus {
   border: 1px solid #666;
+}
+
+.c18 {
+  position: relative;
+  font-size: 1.25rem;
 }
 
 .c1 {
@@ -201,11 +188,11 @@ it('renders correctly', () => {
   height: auto;
 }
 
-.c21 {
+.c20 {
   display: block;
 }
 
-.c21 input {
+.c20 input {
   border: 2px solid #E1E2E3;
   font-size: 1.5rem;
   font-weight: 700;
@@ -305,23 +292,23 @@ it('renders correctly', () => {
   border-color: #E52630;
 }
 
-.c22 {
+.c21 {
   display: flex;
   align-items: center;
 }
 
-.c24 {
+.c23 {
   margin-right: auto;
 }
 
-.c25 {
+.c24 {
   position: relative;
   flex: 0 0 50%;
   font-weight: 400;
   display: block;
 }
 
-.c25 span {
+.c24 span {
   position: absolute;
   padding: 0px 15px;
   font-size: 20px;
@@ -331,21 +318,21 @@ it('renders correctly', () => {
   font-weight: 500;
 }
 
-.c25 input {
+.c24 input {
   border: 2px solid #E1E2E3;
   background: transparent;
   padding: 0.5rem 1rem 0.5rem 2rem;
 }
 
-.c25 input:focus {
+.c24 input:focus {
   border: 2px solid #E52630;
 }
 
-.c27 {
+.c26 {
   line-height: 1.5;
 }
 
-.c26 {
+.c25 {
   width: 100%;
   color: #FFFFFF;
   font-size: 1rem;
@@ -357,9 +344,9 @@ it('renders correctly', () => {
   border-radius: 100px;
 }
 
-.c26:active,
-.c26:focus,
-.c26:hover {
+.c25:active,
+.c25:focus,
+.c25:hover {
   background-color: #961D35;
 }
 
@@ -420,14 +407,14 @@ it('renders correctly', () => {
 }
 
 @media (min-width: 740px) {
-  .c23 {
+  .c22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .c23 {
+  .c22 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
@@ -448,16 +435,8 @@ it('renders correctly', () => {
 }
 
 @media (min-width: 740px) {
-  .c18 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c18 {
-    font-size: 1.25rem;
-    line-height: 1.25rem;
+  .c19 {
+    max-width: 290px;
   }
 }
 
@@ -496,13 +475,13 @@ it('renders correctly', () => {
 }
 
 @media (min-width: 1024px) {
-  .c25 {
+  .c24 {
     flex: 0 0 60%;
   }
 }
 
 @media (min-width: 1024px) {
-  .c26 {
+  .c25 {
     width: auto;
     padding: 1rem 2rem;
     margin: 0 auto 2rem;
@@ -578,29 +557,27 @@ it('renders correctly', () => {
               <div
                 className="c18"
               >
-                <div
+                <input
+                  aria-describedby="mship-1--moneyBuy-box1"
+                  aria-label="£5"
+                  boxBorderColor=""
                   className="c19"
-                >
-                  <input
-                    aria-label="£5"
-                    aria-required={false}
-                    boxBorderColor=""
-                    className="c20"
-                    id="mship-1--moneyBuy-box1"
-                    isInputMatchBox="5"
-                    isSelected={false}
-                    name="mship-1--moneyBuy1"
-                    onClick={[Function]}
-                    placeholder=""
-                    required={false}
-                    type="button"
-                    value="£ 5"
-                  />
-                </div>
+                  error={false}
+                  id="mship-1--moneyBuy-box1"
+                  isInputMatchBox="5"
+                  isSelected={false}
+                  name="mship-1--moneyBuy1"
+                  onClick={[Function]}
+                  placeholder=""
+                  prefixLength={0}
+                  required={false}
+                  type="button"
+                  value="£ 5"
+                />
               </div>
             </label>
             <label
-              className="c14 c21"
+              className="c14 c20"
               htmlFor="mship-1--moneyBuy-box2"
             >
               <span
@@ -614,25 +591,23 @@ it('renders correctly', () => {
               <div
                 className="c18"
               >
-                <div
+                <input
+                  aria-describedby="mship-1--moneyBuy-box2"
+                  aria-label="£10"
+                  boxBorderColor=""
                   className="c19"
-                >
-                  <input
-                    aria-label="£10"
-                    aria-required={false}
-                    boxBorderColor=""
-                    className="c20"
-                    id="mship-1--moneyBuy-box2"
-                    isInputMatchBox="10"
-                    isSelected={true}
-                    name="mship-1--moneyBuy2"
-                    onClick={[Function]}
-                    placeholder=""
-                    required={false}
-                    type="button"
-                    value="£ 10"
-                  />
-                </div>
+                  error={false}
+                  id="mship-1--moneyBuy-box2"
+                  isInputMatchBox="10"
+                  isSelected={true}
+                  name="mship-1--moneyBuy2"
+                  onClick={[Function]}
+                  placeholder=""
+                  prefixLength={0}
+                  required={false}
+                  type="button"
+                  value="£ 10"
+                />
               </div>
             </label>
             <label
@@ -650,38 +625,36 @@ it('renders correctly', () => {
               <div
                 className="c18"
               >
-                <div
+                <input
+                  aria-describedby="mship-1--moneyBuy-box3"
+                  aria-label="£20"
+                  boxBorderColor=""
                   className="c19"
-                >
-                  <input
-                    aria-label="£20"
-                    aria-required={false}
-                    boxBorderColor=""
-                    className="c20"
-                    id="mship-1--moneyBuy-box3"
-                    isInputMatchBox="20"
-                    isSelected={false}
-                    name="mship-1--moneyBuy3"
-                    onClick={[Function]}
-                    placeholder=""
-                    required={false}
-                    type="button"
-                    value="£ 20"
-                  />
-                </div>
+                  error={false}
+                  id="mship-1--moneyBuy-box3"
+                  isInputMatchBox="20"
+                  isSelected={false}
+                  name="mship-1--moneyBuy3"
+                  onClick={[Function]}
+                  placeholder=""
+                  prefixLength={0}
+                  required={false}
+                  type="button"
+                  value="£ 20"
+                />
               </div>
             </label>
           </div>
           <div
-            className="c22"
+            className="c21"
           >
             <span
-              className="c23 c24"
+              className="c22 c23"
             >
               Other amount
             </span>
             <label
-              className="c14 c25"
+              className="c14 c24"
               htmlFor="mship-1--MoneyBuy-userInput"
             >
               <span
@@ -695,38 +668,36 @@ it('renders correctly', () => {
               <div
                 className="c18"
               >
-                <div
+                <input
+                  aria-describedby="mship-1--MoneyBuy-userInput"
+                  aria-label="Input a different amount"
                   className="c19"
-                >
-                  <input
-                    aria-label="Input a different amount"
-                    aria-required={false}
-                    className="c20"
-                    id="mship-1--MoneyBuy-userInput"
-                    max="25000"
-                    min="1"
-                    name="membership_amount"
-                    onChange={[Function]}
-                    onClick={[Function]}
-                    onKeyPress={[Function]}
-                    pattern="[^[0-9]+([,.][0-9]+)?$]"
-                    placeholder="0.00"
-                    required={false}
-                    step="0.01"
-                    type="number"
-                    value=""
-                  />
-                </div>
+                  error={false}
+                  id="mship-1--MoneyBuy-userInput"
+                  max="25000"
+                  min="1"
+                  name="membership_amount"
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyPress={[Function]}
+                  pattern="[^[0-9]+([,.][0-9]+)?$]"
+                  placeholder="0.00"
+                  prefixLength={0}
+                  required={false}
+                  step="0.01"
+                  type="number"
+                  value=""
+                />
               </div>
             </label>
           </div>
           <input
-            className="c26"
+            className="c25"
             type="submit"
             value="Donate"
           />
           <p
-            className="c27"
+            className="c26"
           />
         </fieldset>
       </form>
