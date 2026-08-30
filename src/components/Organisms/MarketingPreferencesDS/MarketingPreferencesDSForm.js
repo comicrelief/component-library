@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable no-console */
+import React, { useState } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import Text from '../../Atoms/Text/Text';
@@ -23,7 +24,8 @@ const { mpValidationSchema, mpValidationOptions } = mpValidation;
 
 // Or customise and override the config to suit the destination app's requirements:
 const initalValueOverrides = {
-  mp_email: 'user@website.com' // Potentially provided earlier in the journey
+  mp_email: 'user@website.com', // Potentially provided earlier in the journey
+  mp_permissionEmail: 'true'
 };
 const validationOverrides = {
   mp_permissionEmail: { hideInput: true }, // As we're passing a value above, hide the user input
@@ -41,9 +43,12 @@ const {
 } = mpValidationCustom;
 
 const MarketingPreferencesDSForm = () => {
+  const [emailInteractedWith, setEmailInteractedWith] = useState(false);
+
   function customSubmitHandler(formData) {
-    // eslint-disable-next-line no-console
+    // Obviously, in a *real* context, we'd do something useful with this data:
     console.log('Successful submission', formData);
+    console.log('emailInteractedWith:', emailInteractedWith);
   }
 
   // For our default instance:
@@ -71,6 +76,8 @@ const MarketingPreferencesDSForm = () => {
             mpValidationOptions={mpValidationOptions}
             id="default"
             formContext={formMethods}
+            // Directly pass in our useState 'set' function as the callback:
+            emailInteractedCallback={setEmailInteractedWith}
           />
           <input type="submit" />
         </form>
@@ -85,6 +92,8 @@ const MarketingPreferencesDSForm = () => {
             mpValidationOptions={mpValidationOptionsCustom}
             id="custom"
             formContext={formMethodsCustom}
+            // Directly pass in our useState 'set' function as the callback:
+            emailInteractedCallback={setEmailInteractedWith}
           />
           <input type="submit" />
         </form>
