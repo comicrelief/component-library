@@ -90,6 +90,12 @@ const buttonColors = {
     hoverBackground: color('grey'),
     hovertextColour: color('black')
   },
+  grey_medium: {
+    background: color('grey_medium'),
+    textColour: color('black'),
+    hoverBackground: color('red'),
+    hovertextColour: color('white')
+  },
   grey_light: {
     background: color('grey_light'),
     textColour: color('black'),
@@ -172,7 +178,7 @@ const buttonColors = {
     background: 'rgba(255, 255, 255, 0.5)',
     color: 'inherit',
     hoverBackground: 'rgba(255, 255, 255, 0.7)',
-    hoverColor: 'inherit'
+    hovertextColour: 'inherit'
   },
   yellow: {
     background: color('yellow'),
@@ -210,7 +216,7 @@ export default (colorName, buttonType) => {
       &:focus-within,
       &:focus-visible {
         background-color: ${buttonColors[thisColourName].hoverBackground};
-        color: ${buttonColors[thisColourName].hoverColor};
+        color: ${buttonColors[thisColourName].hovertextColour};
         outline-offset: 3px;
       }
 
