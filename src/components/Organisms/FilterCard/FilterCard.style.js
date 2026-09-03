@@ -40,10 +40,6 @@ const ShowHideFiltersBtn = styled(Button)`
 };
 `;
 
-// box-shadow: 0px 0px 0px 2px ${buttonColors[thisColourName].background} inset;
-
-// showFilters
-
 export {
   Container,
   FilterSection,
