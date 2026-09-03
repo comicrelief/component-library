@@ -2,15 +2,21 @@ import React from 'react';
 import { ExampleContainer } from '../../../demos/SharedStyles';
 import FilterCard from './FilterCard';
 
-// For now:
-const testBody = <p>Test body for now</p>;
+// Sticking this here for now:
+const testBody = (
+  <p>
+    From fundraising packs to bunting, certificates, cake labels and more,
+    find everything you need to take yourself funny for money this Red Nose Day.
+    Select a resource type to filters the results.
+  </p>
+);
 
 export default function FilterCardExample() {
   return (
     <>
       <ExampleContainer>
         <FilterCard
-          title="Test title value"
+          title="Your fundraising Resources"
           pageBackgroundColour="red"
           paddingAbove="1rem"
           paddingBelow="1rem"

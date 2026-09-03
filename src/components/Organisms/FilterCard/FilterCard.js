@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import buttonTypes from '../../../theme/crTheme/buttonTypes';
 
 import {
   Container,
@@ -16,11 +17,11 @@ const FilterCard = ({
   title,
   body
 }) => {
-  console.log('poo');
-
   const [showFilters, setShowFilters] = useState(true);
 
   const showHideFilterText = showFilters ? 'Show filters' : 'Hide filters';
+  const showHideFilterColour = showFilters ? 'black' : 'grey_medium';
+  const showHideFilterButtonType = showFilters ? buttonTypes.SECONDARY : buttonTypes.PRIMARY;
 
   return (
     <Container
@@ -28,7 +29,6 @@ const FilterCard = ({
       $paddingBelow={paddingBelow}
       $pageBackgroundColour={pageBackgroundColour}
     >
-
       <FilterSection>
 
         <Title tag="h1">
@@ -39,7 +39,13 @@ const FilterCard = ({
           {body}
         </BodyCopy>
 
-        <ShowHideFiltersBtn color="grey_medium">
+        <ShowHideFiltersBtn
+          buttonType={showHideFilterButtonType}
+          color={showHideFilterColour}
+          $showFilters={showFilters}
+          $borderColour={showHideFilterColour}
+          onClick={() => { setShowFilters(!showFilters); }}
+        >
           {showHideFilterText}
         </ShowHideFiltersBtn>
       </FilterSection>

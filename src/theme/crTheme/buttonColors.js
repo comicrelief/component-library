@@ -93,7 +93,7 @@ const buttonColors = {
   grey_medium: {
     background: color('grey_medium'),
     textColour: color('black'),
-    hoverBackground: color('red'),
+    hoverBackground: color('grey'),
     hovertextColour: color('white')
   },
   grey_light: {
