@@ -95,3 +95,4 @@ export {
 export { default as Membership } from './components/Organisms/Membership/Membership';
 export { default as RichtextCarousel } from './components/Organisms/RichtextCarousel/RichtextCarousel';
 export { default as WYMDCarousel } from './components/Organisms/WYMDCarousel/WYMDCarousel';
+export { default as FilterCard } from './components/Organisms/FilterCard/FilterCard';
