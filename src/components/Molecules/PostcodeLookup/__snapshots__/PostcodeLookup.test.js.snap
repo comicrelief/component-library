@@ -113,13 +113,13 @@ exports[`renders correctly 1`] = `
 .c9 {
   margin-top: 1.5rem;
   color: white;
-  background-color: #E52630;
+  background-color: #f04257;
   padding: 0 3rem;
 }
 
 .c9:hover {
   color: #FFFFFF;
-  background-color: #890B11;
+  background-color: #f04257;
 }
 
 .c1 {
@@ -186,9 +186,7 @@ exports[`renders correctly 1`] = `
   }
 }
 
-<div
-    buttonColour="#f04257"
-  >
+<div>
     <div
       className="c0 TextInputWithDropdown c1"
       data-testid="TextInputWithDropdownContainer"
@@ -229,8 +227,8 @@ exports[`renders correctly 1`] = `
       </label>
     </div>
     <button
-      buttonBgColour="#E52630"
-      buttonHoverBgColour="#890B11"
+      buttonBgColour="#f04257"
+      buttonHoverBgColour="#f04257"
       buttonHoverTextColour="white"
       buttonTextColour="white"
       className="c7 c8 c9"

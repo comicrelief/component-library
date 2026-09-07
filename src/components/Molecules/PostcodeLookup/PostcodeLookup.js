@@ -64,7 +64,10 @@ export default function PostcodeLookup({
         onSelect={handleAddressSelect}
         dropdownInstruction={dropdownInstruction}
         noResultsMessage={noResultsMessage}
-        buttonColour={buttonColour}
+        buttonBgColour={buttonColour}
+        buttonTextColour="white"
+        buttonHoverBgColour={buttonColour}
+        buttonHoverTextColour="white"
       />
       {!showFields && (
         <AddressManually onClick={handleManualClick}>
