@@ -90,12 +90,14 @@ const CardLink = styled.a`
     ${defaultBoxShadow()}
   }
 
-  &:hover,
-  &:focus {
-    ${CardLinkContent} {
-      ${defaultBoxShadow(true)}
+  ${({ $hasLink }) => ($hasLink && css`
+    &:hover,
+    &:focus {
+      ${CardLinkContent} {
+        ${defaultBoxShadow(true)}
+      }
     }
-  }
+  `)}
 
   // Side-by-side layout for single card desktop view
   ${({ $isSingleCard }) => $isSingleCard && css`
@@ -146,7 +148,7 @@ const CardLink = styled.a`
       ${bounceUpAnimation(true, 10, 2, true)};
 
       /* override the bounceUpAnimation transition (targetting the same child), ensuring we don't lose the box-shadow animation */
-      > div {
+      > ${CardLinkContent} {
         transition: transform 0.35s cubic-bezier(0.68, -1.15, 0.265, 2.35), box-shadow 0.35s;
       }
 
@@ -183,10 +185,6 @@ const CardWrapper = styled.div`
   flex-direction: column;
   align-self: stretch;
   border-radius: 1rem;
-
-  ${({ $hasLink }) => (!$hasLink && css`
-    ${defaultBoxShadow()}
-  `)}
 
   // Full width mode - always full width, no constraints
   ${({ $isFullWidth }) => $isFullWidth && css`

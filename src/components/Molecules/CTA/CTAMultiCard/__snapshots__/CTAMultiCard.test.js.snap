@@ -151,7 +151,7 @@ exports[`handles data structure correctly 1`] = `
   transition: transform 0.35s cubic-bezier(0.65,-0.19,0.37,1.16),box-shadow 0.35s;
 }
 
-.c28 {
+.c27 {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -164,13 +164,8 @@ exports[`handles data structure correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c28 .c7 {
+.c27 .c7 {
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
-}
-
-.c28:hover .c7,
-.c28:focus .c7 {
-  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c4 {
@@ -180,16 +175,6 @@ exports[`handles data structure correctly 1`] = `
   flex-direction: column;
   align-self: stretch;
   border-radius: 1rem;
-}
-
-.c27 {
-  width: auto;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-self: stretch;
-  border-radius: 1rem;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c13 {
@@ -313,7 +298,7 @@ exports[`handles data structure correctly 1`] = `
     transform: translateY(-10px);
   }
 
-  .c6 >div {
+  .c6 >.c7 {
     transition: transform 0.35s cubic-bezier(0.68,-1.15,0.265,2.35),box-shadow 0.35s;
   }
 
@@ -361,30 +346,6 @@ exports[`handles data structure correctly 1`] = `
 
 @media (min-width:1024px) {
   .c4 {
-    flex: 0 1 auto;
-    width: clamp(261px,calc((100% - 4rem) / 3),363px);
-    align-self: stretch;
-  }
-}
-
-@media (max-width:739px) {
-  .c27 {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-  }
-}
-
-@media (min-width:740px) and (max-width:1023px) {
-  .c27 {
-    align-self: stretch;
-    flex: 0 0 100%;
-    max-width: 309px;
-  }
-}
-
-@media (min-width:1024px) {
-  .c27 {
     flex: 0 1 auto;
     width: clamp(261px,calc((100% - 4rem) / 3),363px);
     align-self: stretch;
@@ -528,10 +489,10 @@ exports[`handles data structure correctly 1`] = `
           </a>
         </div>
         <div
-          className="c27"
+          className="c4"
         >
           <div
-            className="c28"
+            className="c27"
           >
             <div
               className="c7 c8"
@@ -893,7 +854,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   transition: transform 0.35s cubic-bezier(0.65,-0.19,0.37,1.16),box-shadow 0.35s;
 }
 
-.c28 {
+.c27 {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -906,13 +867,8 @@ exports[`renders 2 columns layout correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c28 .c7 {
+.c27 .c7 {
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
-}
-
-.c28:hover .c7,
-.c28:focus .c7 {
-  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c4 {
@@ -922,16 +878,6 @@ exports[`renders 2 columns layout correctly 1`] = `
   flex-direction: column;
   align-self: stretch;
   border-radius: 1rem;
-}
-
-.c27 {
-  width: auto;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-self: stretch;
-  border-radius: 1rem;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c13 {
@@ -1055,7 +1001,7 @@ exports[`renders 2 columns layout correctly 1`] = `
     transform: translateY(-10px);
   }
 
-  .c6 >div {
+  .c6 >.c7 {
     transition: transform 0.35s cubic-bezier(0.68,-1.15,0.265,2.35),box-shadow 0.35s;
   }
 
@@ -1096,23 +1042,6 @@ exports[`renders 2 columns layout correctly 1`] = `
 
 @media (min-width:1024px) {
   .c4 {
-    flex: 0 1 auto;
-    width: 100%;
-    align-self: stretch;
-  }
-}
-
-@media (max-width:1023px) {
-  .c27 {
-    scroll-snap-align: start;
-    flex: 0 0 309px;
-    width: 309px;
-    flex-shrink: 0;
-  }
-}
-
-@media (min-width:1024px) {
-  .c27 {
     flex: 0 1 auto;
     width: 100%;
     align-self: stretch;
@@ -1296,10 +1225,10 @@ exports[`renders 2 columns layout correctly 1`] = `
           </a>
         </div>
         <div
-          className="c27"
+          className="c4"
         >
           <div
-            className="c28"
+            className="c27"
           >
             <div
               className="c7 c8"
@@ -1661,7 +1590,7 @@ exports[`renders carousel mode correctly 1`] = `
   transition: transform 0.35s cubic-bezier(0.65,-0.19,0.37,1.16),box-shadow 0.35s;
 }
 
-.c28 {
+.c27 {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -1674,13 +1603,8 @@ exports[`renders carousel mode correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c28 .c7 {
+.c27 .c7 {
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
-}
-
-.c28:hover .c7,
-.c28:focus .c7 {
-  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c4 {
@@ -1690,16 +1614,6 @@ exports[`renders carousel mode correctly 1`] = `
   flex-direction: column;
   align-self: stretch;
   border-radius: 1rem;
-}
-
-.c27 {
-  width: auto;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-self: stretch;
-  border-radius: 1rem;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c13 {
@@ -1823,7 +1737,7 @@ exports[`renders carousel mode correctly 1`] = `
     transform: translateY(-10px);
   }
 
-  .c6 >div {
+  .c6 >.c7 {
     transition: transform 0.35s cubic-bezier(0.68,-1.15,0.265,2.35),box-shadow 0.35s;
   }
 
@@ -1864,23 +1778,6 @@ exports[`renders carousel mode correctly 1`] = `
 
 @media (min-width:1024px) {
   .c4 {
-    flex: 0 1 auto;
-    width: clamp(261px,calc((100% - 4rem) / 3),363px);
-    align-self: stretch;
-  }
-}
-
-@media (max-width:1023px) {
-  .c27 {
-    scroll-snap-align: start;
-    flex: 0 0 309px;
-    width: 309px;
-    flex-shrink: 0;
-  }
-}
-
-@media (min-width:1024px) {
-  .c27 {
     flex: 0 1 auto;
     width: clamp(261px,calc((100% - 4rem) / 3),363px);
     align-self: stretch;
@@ -2044,10 +1941,10 @@ exports[`renders carousel mode correctly 1`] = `
           </a>
         </div>
         <div
-          className="c27"
+          className="c4"
         >
           <div
-            className="c28"
+            className="c27"
           >
             <div
               className="c7 c8"
@@ -2409,7 +2306,7 @@ exports[`renders correctly with data prop 1`] = `
   transition: transform 0.35s cubic-bezier(0.65,-0.19,0.37,1.16),box-shadow 0.35s;
 }
 
-.c28 {
+.c27 {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -2422,13 +2319,8 @@ exports[`renders correctly with data prop 1`] = `
   box-sizing: border-box;
 }
 
-.c28 .c7 {
+.c27 .c7 {
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
-}
-
-.c28:hover .c7,
-.c28:focus .c7 {
-  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c4 {
@@ -2438,16 +2330,6 @@ exports[`renders correctly with data prop 1`] = `
   flex-direction: column;
   align-self: stretch;
   border-radius: 1rem;
-}
-
-.c27 {
-  width: auto;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-self: stretch;
-  border-radius: 1rem;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c13 {
@@ -2571,7 +2453,7 @@ exports[`renders correctly with data prop 1`] = `
     transform: translateY(-10px);
   }
 
-  .c6 >div {
+  .c6 >.c7 {
     transition: transform 0.35s cubic-bezier(0.68,-1.15,0.265,2.35),box-shadow 0.35s;
   }
 
@@ -2612,23 +2494,6 @@ exports[`renders correctly with data prop 1`] = `
 
 @media (min-width:1024px) {
   .c4 {
-    flex: 0 1 auto;
-    width: clamp(261px,calc((100% - 4rem) / 3),363px);
-    align-self: stretch;
-  }
-}
-
-@media (max-width:1023px) {
-  .c27 {
-    scroll-snap-align: start;
-    flex: 0 0 309px;
-    width: 309px;
-    flex-shrink: 0;
-  }
-}
-
-@media (min-width:1024px) {
-  .c27 {
     flex: 0 1 auto;
     width: clamp(261px,calc((100% - 4rem) / 3),363px);
     align-self: stretch;
@@ -2792,10 +2657,10 @@ exports[`renders correctly with data prop 1`] = `
           </a>
         </div>
         <div
-          className="c27"
+          className="c4"
         >
           <div
-            className="c28"
+            className="c27"
           >
             <div
               className="c7 c8"

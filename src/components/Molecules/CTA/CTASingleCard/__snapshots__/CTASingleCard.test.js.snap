@@ -327,7 +327,7 @@ exports[`renders correctly with data prop 1`] = `
     transform: translateY(-10px);
   }
 
-  .c4 >div {
+  .c4 >.c5 {
     transition: transform 0.35s cubic-bezier(0.68,-1.15,0.265,2.35),box-shadow 0.35s;
   }
 
@@ -777,7 +777,7 @@ exports[`renders correctly without image 1`] = `
     transform: translateY(-10px);
   }
 
-  .c4 >div {
+  .c4 >.c5 {
     transition: transform 0.35s cubic-bezier(0.68,-1.15,0.265,2.35),box-shadow 0.35s;
   }
 
