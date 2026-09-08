@@ -70,7 +70,7 @@ const CardLinkContent = styled.div`
   display: inherit;
   flex-direction: inherit;
   flex: inherit;
-  border-radius: 1rem;
+  border-radius: inherit;
 `;
 
 // Card wrapper link - makes entire card clickable
@@ -80,24 +80,14 @@ const CardLink = styled.a`
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
+  border-radius: 1rem;
   background: transparent;
   transition: box-shadow 0.35s;
   text-decoration: none;
+  overflow: hidden;
   cursor: ${({ $hasLink }) => ($hasLink ? 'pointer' : 'default')};
   box-sizing: border-box;
-
-  ${CardLinkContent} {
-    ${defaultBoxShadow()}
-  }
-
-  ${({ $hasLink }) => ($hasLink && css`
-    &:hover,
-    &:focus {
-      ${CardLinkContent} {
-        ${defaultBoxShadow(true)}
-      }
-    }
-  `)}
+  ${defaultBoxShadow()}
 
   // Side-by-side layout for single card desktop view
   ${({ $isSingleCard }) => $isSingleCard && css`
@@ -144,7 +134,29 @@ const CardLink = styled.a`
 
     // Desktop-only hover/focus effects
     @media ${({ theme }) => theme.allBreakpoints('L')} {
-      
+
+      // Allow the nested content and its box-shadow to be completely visible when it's animated upwards:
+      // TODO: ENSURE THIS DOESN'T BORK IN-SITU: IT'S NOT VERY HAPPY IN CL SINGLECARD EXAMPLE BECAUSE OF THE WIDTH CALCS:
+      overflow: visible;
+
+      // Remove the box shadow from this anchor...
+      box-shadow: none;
+
+      // ... and apply to the content wrapper inside, so it moves with the content:
+      ${CardLinkContent} {
+        ${defaultBoxShadow()}
+      }
+        
+      &:hover,
+      &:focus {
+        ${CardLinkContent} {
+          ${defaultBoxShadow(true)}
+          }
+        }
+    
+
+
+      // Using the 'target child' option here to transform that, to ensure our hoverable element doesn't also shift:
       ${bounceUpAnimation(true, 10, 2, true)};
 
       /* override the bounceUpAnimation transition (targetting the same child), ensuring we don't lose the box-shadow animation */

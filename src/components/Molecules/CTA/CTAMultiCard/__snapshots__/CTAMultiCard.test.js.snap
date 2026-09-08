@@ -121,7 +121,7 @@ exports[`handles data structure correctly 1`] = `
   display: inherit;
   flex-direction: inherit;
   flex: inherit;
-  border-radius: 1rem;
+  border-radius: inherit;
 }
 
 .c6 {
@@ -130,20 +130,14 @@ exports[`handles data structure correctly 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
+  border-radius: 1rem;
   background: transparent;
   transition: box-shadow 0.35s;
   text-decoration: none;
+  overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
-}
-
-.c6 .c7 {
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
-}
-
-.c6:hover .c7,
-.c6:focus .c7 {
-  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c6 .c9 img {
@@ -157,14 +151,13 @@ exports[`handles data structure correctly 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
+  border-radius: 1rem;
   background: transparent;
   transition: box-shadow 0.35s;
   text-decoration: none;
+  overflow: hidden;
   cursor: default;
   box-sizing: border-box;
-}
-
-.c27 .c7 {
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
@@ -288,6 +281,20 @@ exports[`handles data structure correctly 1`] = `
 }
 
 @media (min-width: 1024px) {
+  .c6 {
+    overflow: visible;
+    box-shadow: none;
+  }
+
+  .c6 .c7 {
+    box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+  }
+
+  .c6:hover .c7,
+  .c6:focus .c7 {
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+  }
+
   .c6 >div {
     transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
     transform-origin: center;
@@ -824,7 +831,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   display: inherit;
   flex-direction: inherit;
   flex: inherit;
-  border-radius: 1rem;
+  border-radius: inherit;
 }
 
 .c6 {
@@ -833,20 +840,14 @@ exports[`renders 2 columns layout correctly 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
+  border-radius: 1rem;
   background: transparent;
   transition: box-shadow 0.35s;
   text-decoration: none;
+  overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
-}
-
-.c6 .c7 {
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
-}
-
-.c6:hover .c7,
-.c6:focus .c7 {
-  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c6 .c9 img {
@@ -860,14 +861,13 @@ exports[`renders 2 columns layout correctly 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
+  border-radius: 1rem;
   background: transparent;
   transition: box-shadow 0.35s;
   text-decoration: none;
+  overflow: hidden;
   cursor: default;
   box-sizing: border-box;
-}
-
-.c27 .c7 {
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
@@ -991,6 +991,20 @@ exports[`renders 2 columns layout correctly 1`] = `
 }
 
 @media (min-width: 1024px) {
+  .c6 {
+    overflow: visible;
+    box-shadow: none;
+  }
+
+  .c6 .c7 {
+    box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+  }
+
+  .c6:hover .c7,
+  .c6:focus .c7 {
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+  }
+
   .c6 >div {
     transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
     transform-origin: center;
@@ -1560,7 +1574,7 @@ exports[`renders carousel mode correctly 1`] = `
   display: inherit;
   flex-direction: inherit;
   flex: inherit;
-  border-radius: 1rem;
+  border-radius: inherit;
 }
 
 .c6 {
@@ -1569,20 +1583,14 @@ exports[`renders carousel mode correctly 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
+  border-radius: 1rem;
   background: transparent;
   transition: box-shadow 0.35s;
   text-decoration: none;
+  overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
-}
-
-.c6 .c7 {
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
-}
-
-.c6:hover .c7,
-.c6:focus .c7 {
-  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c6 .c9 img {
@@ -1596,14 +1604,13 @@ exports[`renders carousel mode correctly 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
+  border-radius: 1rem;
   background: transparent;
   transition: box-shadow 0.35s;
   text-decoration: none;
+  overflow: hidden;
   cursor: default;
   box-sizing: border-box;
-}
-
-.c27 .c7 {
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
@@ -1727,6 +1734,20 @@ exports[`renders carousel mode correctly 1`] = `
 }
 
 @media (min-width: 1024px) {
+  .c6 {
+    overflow: visible;
+    box-shadow: none;
+  }
+
+  .c6 .c7 {
+    box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+  }
+
+  .c6:hover .c7,
+  .c6:focus .c7 {
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+  }
+
   .c6 >div {
     transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
     transform-origin: center;
@@ -2276,7 +2297,7 @@ exports[`renders correctly with data prop 1`] = `
   display: inherit;
   flex-direction: inherit;
   flex: inherit;
-  border-radius: 1rem;
+  border-radius: inherit;
 }
 
 .c6 {
@@ -2285,20 +2306,14 @@ exports[`renders correctly with data prop 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
+  border-radius: 1rem;
   background: transparent;
   transition: box-shadow 0.35s;
   text-decoration: none;
+  overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
-}
-
-.c6 .c7 {
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
-}
-
-.c6:hover .c7,
-.c6:focus .c7 {
-  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c6 .c9 img {
@@ -2312,14 +2327,13 @@ exports[`renders correctly with data prop 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
+  border-radius: 1rem;
   background: transparent;
   transition: box-shadow 0.35s;
   text-decoration: none;
+  overflow: hidden;
   cursor: default;
   box-sizing: border-box;
-}
-
-.c27 .c7 {
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
@@ -2443,6 +2457,20 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 @media (min-width: 1024px) {
+  .c6 {
+    overflow: visible;
+    box-shadow: none;
+  }
+
+  .c6 .c7 {
+    box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+  }
+
+  .c6:hover .c7,
+  .c6:focus .c7 {
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+  }
+
   .c6 >div {
     transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
     transform-origin: center;

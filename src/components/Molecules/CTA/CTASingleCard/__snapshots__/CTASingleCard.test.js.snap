@@ -121,7 +121,7 @@ exports[`renders correctly with data prop 1`] = `
   display: inherit;
   flex-direction: inherit;
   flex: inherit;
-  border-radius: 1rem;
+  border-radius: inherit;
 }
 
 .c4 {
@@ -130,20 +130,14 @@ exports[`renders correctly with data prop 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
+  border-radius: 1rem;
   background: transparent;
   transition: box-shadow 0.35s;
   text-decoration: none;
+  overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
-}
-
-.c4 .c5 {
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
-}
-
-.c4:hover .c5,
-.c4:focus .c5 {
-  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c4 .c7 img {
@@ -317,6 +311,20 @@ exports[`renders correctly with data prop 1`] = `
 }
 
 @media (min-width: 1024px) {
+  .c4 {
+    overflow: visible;
+    box-shadow: none;
+  }
+
+  .c4 .c5 {
+    box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+  }
+
+  .c4:hover .c5,
+  .c4:focus .c5 {
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+  }
+
   .c4 >div {
     transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
     transform-origin: center;
@@ -609,7 +617,7 @@ exports[`renders correctly without image 1`] = `
   display: inherit;
   flex-direction: inherit;
   flex: inherit;
-  border-radius: 1rem;
+  border-radius: inherit;
 }
 
 .c4 {
@@ -618,20 +626,14 @@ exports[`renders correctly without image 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
+  border-radius: 1rem;
   background: transparent;
   transition: box-shadow 0.35s;
   text-decoration: none;
+  overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
-}
-
-.c4 .c5 {
   box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
-}
-
-.c4:hover .c5,
-.c4:focus .c5 {
-  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c2 {
@@ -767,6 +769,20 @@ exports[`renders correctly without image 1`] = `
 }
 
 @media (min-width: 1024px) {
+  .c4 {
+    overflow: visible;
+    box-shadow: none;
+  }
+
+  .c4 .c5 {
+    box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
+  }
+
+  .c4:hover .c5,
+  .c4:focus .c5 {
+    box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+  }
+
   .c4 >div {
     transition: transform 0.4s cubic-bezier(0.68,-1.15,0.265,2.35);
     transform-origin: center;
