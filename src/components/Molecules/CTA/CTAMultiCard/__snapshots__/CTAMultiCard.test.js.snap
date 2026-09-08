@@ -130,8 +130,8 @@ exports[`handles data structure correctly 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
-  border-radius: 1rem;
   background: transparent;
+  border-radius: 1rem;
   transition: box-shadow 0.35s;
   text-decoration: none;
   overflow: hidden;
@@ -151,8 +151,8 @@ exports[`handles data structure correctly 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
-  border-radius: 1rem;
   background: transparent;
+  border-radius: 1rem;
   transition: box-shadow 0.35s;
   text-decoration: none;
   overflow: hidden;
@@ -840,8 +840,8 @@ exports[`renders 2 columns layout correctly 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
-  border-radius: 1rem;
   background: transparent;
+  border-radius: 1rem;
   transition: box-shadow 0.35s;
   text-decoration: none;
   overflow: hidden;
@@ -861,8 +861,8 @@ exports[`renders 2 columns layout correctly 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
-  border-radius: 1rem;
   background: transparent;
+  border-radius: 1rem;
   transition: box-shadow 0.35s;
   text-decoration: none;
   overflow: hidden;
@@ -1583,8 +1583,8 @@ exports[`renders carousel mode correctly 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
-  border-radius: 1rem;
   background: transparent;
+  border-radius: 1rem;
   transition: box-shadow 0.35s;
   text-decoration: none;
   overflow: hidden;
@@ -1604,8 +1604,8 @@ exports[`renders carousel mode correctly 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
-  border-radius: 1rem;
   background: transparent;
+  border-radius: 1rem;
   transition: box-shadow 0.35s;
   text-decoration: none;
   overflow: hidden;
@@ -2306,8 +2306,8 @@ exports[`renders correctly with data prop 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
-  border-radius: 1rem;
   background: transparent;
+  border-radius: 1rem;
   transition: box-shadow 0.35s;
   text-decoration: none;
   overflow: hidden;
@@ -2327,8 +2327,8 @@ exports[`renders correctly with data prop 1`] = `
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
-  border-radius: 1rem;
   background: transparent;
+  border-radius: 1rem;
   transition: box-shadow 0.35s;
   text-decoration: none;
   overflow: hidden;

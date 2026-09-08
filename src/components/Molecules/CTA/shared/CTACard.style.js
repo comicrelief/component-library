@@ -80,8 +80,8 @@ const CardLink = styled.a`
   flex-direction: column;
   width: 100%;
   flex: 1 1 auto;
-  border-radius: 1rem;
   background: transparent;
+  border-radius: 1rem;
   transition: box-shadow 0.35s;
   text-decoration: none;
   overflow: hidden;
@@ -151,15 +151,14 @@ const CardLink = styled.a`
       &:focus {
         ${CardLinkContent} {
           ${defaultBoxShadow(true)}
-          }
         }
+      }
     
-
-
-      // Using the 'target child' option here to transform that, to ensure our hoverable element doesn't also shift:
+      // Using the optional paramater here to target the child element (CardLinkContent) for the position animation
+      // rather than *THIS* element, to ensure we don't end up with that infinite bounce bug.
       ${bounceUpAnimation(true, 10, 2, true)};
 
-      /* override the bounceUpAnimation transition (targetting the same child), ensuring we don't lose the box-shadow animation */
+      /* Override the bounceUpAnimation transition (targetting the same child), ensuring we don't lose the box-shadow animation */
       > ${CardLinkContent} {
         transition: transform 0.35s cubic-bezier(0.68, -1.15, 0.265, 2.35), box-shadow 0.35s;
       }
