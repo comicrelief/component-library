@@ -27,7 +27,24 @@ const BodyCopy = styled.div`
 //
 `;
 
+const FiltersWrapper = styled.div`
+//
+`;
+
 const ShowHideFiltersBtn = styled(Button)`
+  // Will need a fixed width to stop resizing with switching button copy;
+  width: 225px;
+  height: 60px;
+  margin-top: 1rem;
+  justify-content: left;
+  
+  ${({ theme }) => css`
+    color: ${theme.color('black')};
+    box-shadow: 0px 0px 0px 2px ${theme.color('black')} inset;`
+};
+`;
+
+const FilterButton = styled(Button)`
   // Will need a fixed width to stop resizing with switching button copy;
   width: 225px;
   height: 60px;
@@ -45,5 +62,7 @@ export {
   FilterSection,
   Title,
   BodyCopy,
-  ShowHideFiltersBtn
+  ShowHideFiltersBtn,
+  FiltersWrapper,
+  FilterButton
 };
