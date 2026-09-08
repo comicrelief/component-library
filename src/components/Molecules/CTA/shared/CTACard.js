@@ -18,7 +18,7 @@ import {
   ArrowIconInner,
   ArrowIconWrapper,
   CardWrapper,
-  CardLinkInner
+  CardLinkContent
 } from './CTACard.style';
 
 const CTACard = ({
@@ -62,7 +62,7 @@ const CTACard = ({
         $isSingleCard={isSingleCard}
         $hasLink={hasLink}
       >
-        <CardLinkInner>
+        <CardLinkContent>
           {imageLow && (
           <ImageWrapper $isSingleCard={isSingleCard}>
             <Picture
@@ -105,8 +105,7 @@ const CTACard = ({
             </CTA>
             )}
           </CopyAndLinkSection>
-        </CardLinkInner>
-
+        </CardLinkContent>
       </CardLink>
     </CardWrapper>
   );

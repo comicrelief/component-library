@@ -66,6 +66,13 @@ const CTAText = styled.span`
   }
 `;
 
+const CardLinkContent = styled.div`
+  display: inherit;
+  flex-direction: inherit;
+  flex: inherit;
+  border-radius: 1rem;
+`;
+
 // Card wrapper link - makes entire card clickable
 const CardLink = styled.a`
   display: flex;
@@ -74,17 +81,20 @@ const CardLink = styled.a`
   width: 100%;
   flex: 1 1 auto;
   background: transparent;
-  border-radius: 1rem;
   transition: box-shadow 0.35s;
-  ${defaultBoxShadow()}
   text-decoration: none;
-  overflow: hidden;
   cursor: ${({ $hasLink }) => ($hasLink ? 'pointer' : 'default')};
   box-sizing: border-box;
 
+  ${CardLinkContent} {
+    ${defaultBoxShadow()}
+  }
+
   &:hover,
   &:focus {
-    ${defaultBoxShadow(true)}
+    ${CardLinkContent} {
+      ${defaultBoxShadow(true)}
+    }
   }
 
   // Side-by-side layout for single card desktop view
@@ -322,12 +332,6 @@ const CTA = styled.div`
   padding-top: 2rem;
 `;
 
-const CardLinkInner = styled.div`
-  display: inherit;
-  flex-direction: inherit;
-  flex: inherit;
-`;
-
 export {
   CardLink,
   ImageWrapper,
@@ -341,5 +345,5 @@ export {
   ArrowIconInner,
   ArrowIconWrapper,
   CardWrapper,
-  CardLinkInner
+  CardLinkContent
 };
