@@ -132,10 +132,13 @@ const CardLink = styled.a`
 
     // Desktop-only hover/focus effects
     @media ${({ theme }) => theme.allBreakpoints('L')} {
-    
-      ${bounceUpAnimation(true, 10, 1)};
-      /* override the bounceUpAnimation transition, ensuring we don't lose the box-shadow animation */
-      transition: transform 0.35s cubic-bezier(0.68, -1.15, 0.265, 2.35), box-shadow 0.35s;
+      
+      ${bounceUpAnimation(true, 10, 2, true)};
+
+      /* override the bounceUpAnimation transition (targetting the same child), ensuring we don't lose the box-shadow animation */
+      > div {
+        transition: transform 0.35s cubic-bezier(0.68, -1.15, 0.265, 2.35), box-shadow 0.35s;
+      }
 
       &:hover,
       &:focus {
@@ -319,6 +322,12 @@ const CTA = styled.div`
   padding-top: 2rem;
 `;
 
+const CardLinkInner = styled.div`
+  display: inherit;
+  flex-direction: inherit;
+  flex: inherit;
+`;
+
 export {
   CardLink,
   ImageWrapper,
@@ -331,5 +340,6 @@ export {
   ArrowIconOuter,
   ArrowIconInner,
   ArrowIconWrapper,
-  CardWrapper
+  CardWrapper,
+  CardLinkInner
 };

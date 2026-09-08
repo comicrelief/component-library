@@ -17,7 +17,8 @@ import {
   ArrowIconOuter,
   ArrowIconInner,
   ArrowIconWrapper,
-  CardWrapper
+  CardWrapper,
+  CardLinkInner
 } from './CTACard.style';
 
 const CTACard = ({
@@ -61,7 +62,8 @@ const CTACard = ({
         $isSingleCard={isSingleCard}
         $hasLink={hasLink}
       >
-        {imageLow && (
+        <CardLinkInner>
+          {imageLow && (
           <ImageWrapper $isSingleCard={isSingleCard}>
             <Picture
               alt={description}
@@ -73,17 +75,17 @@ const CTACard = ({
               height="100%"
             />
           </ImageWrapper>
-        )}
-        <CopyAndLinkSection $isSingleCard={isSingleCard}>
-          <Copy>
-            {isSingleCard && label && (
+          )}
+          <CopyAndLinkSection $isSingleCard={isSingleCard}>
+            <Copy>
+              {isSingleCard && label && (
               <CardLabel>
                 {label}
               </CardLabel>
-            )}
-            {body}
-          </Copy>
-          {linkLabel && (
+              )}
+              {body}
+            </Copy>
+            {linkLabel && (
             <CTA>
               <CTAText>
                 {linkLabel}
@@ -101,8 +103,10 @@ const CTACard = ({
                 </ArrowIconWrapper>
               </ArrowIconOuter>
             </CTA>
-          )}
-        </CopyAndLinkSection>
+            )}
+          </CopyAndLinkSection>
+        </CardLinkInner>
+
       </CardLink>
     </CardWrapper>
   );
