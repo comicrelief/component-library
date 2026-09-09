@@ -88,7 +88,6 @@ const CardLink = styled.a`
   overflow: hidden;
   cursor: ${({ $hasLink }) => ($hasLink ? 'pointer' : 'default')};
   box-sizing: border-box;
-  ${defaultBoxShadow()}
 
   // Side-by-side layout for single card desktop view
   ${({ $isSingleCard }) => $isSingleCard && css`
