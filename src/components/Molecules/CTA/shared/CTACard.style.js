@@ -83,6 +83,7 @@ const CardLink = styled.a`
   background: transparent;
   border-radius: 1rem;
   transition: box-shadow 0.35s;
+  ${defaultBoxShadow()}
   text-decoration: none;
   overflow: hidden;
   cursor: ${({ $hasLink }) => ($hasLink ? 'pointer' : 'default')};
@@ -136,7 +137,6 @@ const CardLink = styled.a`
     @media ${({ theme }) => theme.allBreakpoints('L')} {
 
       // Allow the nested content and its box-shadow to be completely visible when it's animated upwards:
-      // TODO: ENSURE THIS DOESN'T BORK IN-SITU: IT'S NOT VERY HAPPY IN CL SINGLECARD EXAMPLE BECAUSE OF THE WIDTH CALCS:
       overflow: visible;
 
       // Remove the box shadow from this anchor...
@@ -154,11 +154,12 @@ const CardLink = styled.a`
         }
       }
     
-      // Using the optional paramater here to target the child element (CardLinkContent) for the position animation
-      // rather than *THIS* element, to ensure we don't end up with that infinite bounce bug.
+      // Using the 4th, optional 'target child' paramater to target CardLinkContent for the position animation
+      // rather than *this* element, to ensure we don't end up with that infinite bounce bug.
       ${bounceUpAnimation(true, 10, 2, true)};
 
-      /* Override the bounceUpAnimation transition (targetting the same child), ensuring we don't lose the box-shadow animation */
+      /* Override the bounceUpAnimation transition (targetting the same child) for a tweaked transform,
+      while also ensuring we don't lose the previously-added box-shadow animation */
       > ${CardLinkContent} {
         transition: transform 0.35s cubic-bezier(0.68, -1.15, 0.265, 2.35), box-shadow 0.35s;
       }
