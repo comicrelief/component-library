@@ -122,6 +122,7 @@ exports[`handles data structure correctly 1`] = `
   flex-direction: inherit;
   flex: inherit;
   border-radius: inherit;
+  overflow: hidden;
 }
 
 .c6 {
@@ -133,11 +134,11 @@ exports[`handles data structure correctly 1`] = `
   background: transparent;
   border-radius: 1rem;
   transition: box-shadow 0.35s;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c6 .c9 img {
@@ -154,11 +155,11 @@ exports[`handles data structure correctly 1`] = `
   background: transparent;
   border-radius: 1rem;
   transition: box-shadow 0.35s;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
   cursor: default;
   box-sizing: border-box;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c4 {
@@ -832,6 +833,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   flex-direction: inherit;
   flex: inherit;
   border-radius: inherit;
+  overflow: hidden;
 }
 
 .c6 {
@@ -843,11 +845,11 @@ exports[`renders 2 columns layout correctly 1`] = `
   background: transparent;
   border-radius: 1rem;
   transition: box-shadow 0.35s;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c6 .c9 img {
@@ -864,11 +866,11 @@ exports[`renders 2 columns layout correctly 1`] = `
   background: transparent;
   border-radius: 1rem;
   transition: box-shadow 0.35s;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
   cursor: default;
   box-sizing: border-box;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c4 {
@@ -1575,6 +1577,7 @@ exports[`renders carousel mode correctly 1`] = `
   flex-direction: inherit;
   flex: inherit;
   border-radius: inherit;
+  overflow: hidden;
 }
 
 .c6 {
@@ -1586,11 +1589,11 @@ exports[`renders carousel mode correctly 1`] = `
   background: transparent;
   border-radius: 1rem;
   transition: box-shadow 0.35s;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c6 .c9 img {
@@ -1607,11 +1610,11 @@ exports[`renders carousel mode correctly 1`] = `
   background: transparent;
   border-radius: 1rem;
   transition: box-shadow 0.35s;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
   cursor: default;
   box-sizing: border-box;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c4 {
@@ -2298,6 +2301,7 @@ exports[`renders correctly with data prop 1`] = `
   flex-direction: inherit;
   flex: inherit;
   border-radius: inherit;
+  overflow: hidden;
 }
 
 .c6 {
@@ -2309,11 +2313,11 @@ exports[`renders correctly with data prop 1`] = `
   background: transparent;
   border-radius: 1rem;
   transition: box-shadow 0.35s;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c6 .c9 img {
@@ -2330,11 +2334,11 @@ exports[`renders correctly with data prop 1`] = `
   background: transparent;
   border-radius: 1rem;
   transition: box-shadow 0.35s;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
   overflow: hidden;
   cursor: default;
   box-sizing: border-box;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c4 {

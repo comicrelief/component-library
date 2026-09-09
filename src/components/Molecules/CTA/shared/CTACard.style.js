@@ -71,6 +71,7 @@ const CardLinkContent = styled.div`
   flex-direction: inherit;
   flex: inherit;
   border-radius: inherit;
+  overflow: hidden;
 `;
 
 // Card wrapper link - makes entire card clickable
