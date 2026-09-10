@@ -89,6 +89,13 @@ const CardLink = styled.a`
   cursor: ${({ $hasLink }) => ($hasLink ? 'pointer' : 'default')};
   box-sizing: border-box;
 
+  &:hover,
+  &:focus {
+    ${CardLinkContent} {
+      ${defaultBoxShadow(true)}
+    }
+  }
+
   // Side-by-side layout for single card desktop view
   ${({ $isSingleCard }) => $isSingleCard && css`
     @media ${({ theme }) => theme.breakpoints2026('M')} {
@@ -137,13 +144,6 @@ const CardLink = styled.a`
 
       // Allow the nested content and its box-shadow to be completely visible when it's animated upwards:
       overflow: visible;
-        
-      &:hover,
-      &:focus {
-        ${CardLinkContent} {
-          ${defaultBoxShadow(true)}
-        }
-      }
     
       // Using the 4th, optional 'target child' parameter to target CardLinkContent for the position animation
       // rather than *this* element, to ensure we don't end up with that infinite bounce bug.
