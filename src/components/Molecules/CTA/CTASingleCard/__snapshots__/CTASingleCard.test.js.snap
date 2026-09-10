@@ -123,6 +123,8 @@ exports[`renders correctly with data prop 1`] = `
   flex: inherit;
   border-radius: inherit;
   overflow: hidden;
+  transition: box-shadow 0.35s;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c4 {
@@ -133,10 +135,7 @@ exports[`renders correctly with data prop 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
-  transition: box-shadow 0.35s;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
-  overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
 }
@@ -314,11 +313,6 @@ exports[`renders correctly with data prop 1`] = `
 @media (min-width: 1024px) {
   .c4 {
     overflow: visible;
-    box-shadow: none;
-  }
-
-  .c4 .c5 {
-    box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   }
 
   .c4:hover .c5,
@@ -620,6 +614,8 @@ exports[`renders correctly without image 1`] = `
   flex: inherit;
   border-radius: inherit;
   overflow: hidden;
+  transition: box-shadow 0.35s;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c4 {
@@ -630,10 +626,7 @@ exports[`renders correctly without image 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
-  transition: box-shadow 0.35s;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
-  overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
 }
@@ -773,11 +766,6 @@ exports[`renders correctly without image 1`] = `
 @media (min-width: 1024px) {
   .c4 {
     overflow: visible;
-    box-shadow: none;
-  }
-
-  .c4 .c5 {
-    box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   }
 
   .c4:hover .c5,

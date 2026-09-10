@@ -123,6 +123,8 @@ exports[`handles data structure correctly 1`] = `
   flex: inherit;
   border-radius: inherit;
   overflow: hidden;
+  transition: box-shadow 0.35s;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c6 {
@@ -133,10 +135,7 @@ exports[`handles data structure correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
-  transition: box-shadow 0.35s;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
-  overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
 }
@@ -154,10 +153,7 @@ exports[`handles data structure correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
-  transition: box-shadow 0.35s;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
-  overflow: hidden;
   cursor: default;
   box-sizing: border-box;
 }
@@ -284,11 +280,6 @@ exports[`handles data structure correctly 1`] = `
 @media (min-width: 1024px) {
   .c6 {
     overflow: visible;
-    box-shadow: none;
-  }
-
-  .c6 .c7 {
-    box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   }
 
   .c6:hover .c7,
@@ -834,6 +825,8 @@ exports[`renders 2 columns layout correctly 1`] = `
   flex: inherit;
   border-radius: inherit;
   overflow: hidden;
+  transition: box-shadow 0.35s;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c6 {
@@ -844,10 +837,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
-  transition: box-shadow 0.35s;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
-  overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
 }
@@ -865,10 +855,7 @@ exports[`renders 2 columns layout correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
-  transition: box-shadow 0.35s;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
-  overflow: hidden;
   cursor: default;
   box-sizing: border-box;
 }
@@ -995,11 +982,6 @@ exports[`renders 2 columns layout correctly 1`] = `
 @media (min-width: 1024px) {
   .c6 {
     overflow: visible;
-    box-shadow: none;
-  }
-
-  .c6 .c7 {
-    box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   }
 
   .c6:hover .c7,
@@ -1578,6 +1560,8 @@ exports[`renders carousel mode correctly 1`] = `
   flex: inherit;
   border-radius: inherit;
   overflow: hidden;
+  transition: box-shadow 0.35s;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c6 {
@@ -1588,10 +1572,7 @@ exports[`renders carousel mode correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
-  transition: box-shadow 0.35s;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
-  overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
 }
@@ -1609,10 +1590,7 @@ exports[`renders carousel mode correctly 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
-  transition: box-shadow 0.35s;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
-  overflow: hidden;
   cursor: default;
   box-sizing: border-box;
 }
@@ -1739,11 +1717,6 @@ exports[`renders carousel mode correctly 1`] = `
 @media (min-width: 1024px) {
   .c6 {
     overflow: visible;
-    box-shadow: none;
-  }
-
-  .c6 .c7 {
-    box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   }
 
   .c6:hover .c7,
@@ -2302,6 +2275,8 @@ exports[`renders correctly with data prop 1`] = `
   flex: inherit;
   border-radius: inherit;
   overflow: hidden;
+  transition: box-shadow 0.35s;
+  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
 }
 
 .c6 {
@@ -2312,10 +2287,7 @@ exports[`renders correctly with data prop 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
-  transition: box-shadow 0.35s;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
-  overflow: hidden;
   cursor: pointer;
   box-sizing: border-box;
 }
@@ -2333,10 +2305,7 @@ exports[`renders correctly with data prop 1`] = `
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
-  transition: box-shadow 0.35s;
-  box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   text-decoration: none;
-  overflow: hidden;
   cursor: default;
   box-sizing: border-box;
 }
@@ -2463,11 +2432,6 @@ exports[`renders correctly with data prop 1`] = `
 @media (min-width: 1024px) {
   .c6 {
     overflow: visible;
-    box-shadow: none;
-  }
-
-  .c6 .c7 {
-    box-shadow: rgba(0,0,0,0.15) 0px 0px 1rem;
   }
 
   .c6:hover .c7,
