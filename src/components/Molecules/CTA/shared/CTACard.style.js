@@ -89,12 +89,14 @@ const CardLink = styled.a`
   cursor: ${({ $hasLink }) => ($hasLink ? 'pointer' : 'default')};
   box-sizing: border-box;
 
-  &:hover,
-  &:focus {
-    ${CardLinkContent} {
-      ${defaultBoxShadow(true)}
+  ${({ $hasLink }) => $hasLink && css`
+    &:hover,
+    &:focus {
+      ${CardLinkContent} {
+        ${defaultBoxShadow(true)}
+      }
     }
-  }
+  `};
 
   // Side-by-side layout for single card desktop view
   ${({ $isSingleCard }) => $isSingleCard && css`

@@ -163,11 +163,6 @@ exports[`handles data structure correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c27:hover .c7,
-.c27:focus .c7 {
-  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
-}
-
 .c4 {
   width: auto;
   flex-shrink: 0;
@@ -868,11 +863,6 @@ exports[`renders 2 columns layout correctly 1`] = `
   text-decoration: none;
   cursor: default;
   box-sizing: border-box;
-}
-
-.c27:hover .c7,
-.c27:focus .c7 {
-  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c4 {
@@ -1610,11 +1600,6 @@ exports[`renders carousel mode correctly 1`] = `
   box-sizing: border-box;
 }
 
-.c27:hover .c7,
-.c27:focus .c7 {
-  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
-}
-
 .c4 {
   width: auto;
   flex-shrink: 0;
@@ -2328,11 +2313,6 @@ exports[`renders correctly with data prop 1`] = `
   text-decoration: none;
   cursor: default;
   box-sizing: border-box;
-}
-
-.c27:hover .c7,
-.c27:focus .c7 {
-  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
 }
 
 .c4 {
