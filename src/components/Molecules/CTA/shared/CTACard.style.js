@@ -154,12 +154,12 @@ const CardLink = styled.a`
         }
       }
     
-      // Using the 4th, optional 'target child' paramater to target CardLinkContent for the position animation
+      // Using the 4th, optional 'target child' parameter to target CardLinkContent for the position animation
       // rather than *this* element, to ensure we don't end up with that infinite bounce bug.
       ${bounceUpAnimation(true, 10, 2, true)};
 
-      /* Override the bounceUpAnimation transition (targetting the same child) for a tweaked transform,
-      while also ensuring we don't lose the previously-added box-shadow animation */
+      /* Override the transition initially set by bounceUpAnimation (targetting the same child) to tweaked some values,
+      while also ensuring we don't lose the previously-added box-shadow animation by re-adding it here: */
       > ${CardLinkContent} {
         transition: transform 0.35s cubic-bezier(0.68, -1.15, 0.265, 2.35), box-shadow 0.35s;
       }
