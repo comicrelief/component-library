@@ -72,6 +72,8 @@ const CardLinkContent = styled.div`
   flex: inherit;
   border-radius: inherit;
   overflow: hidden;
+  transition: box-shadow 0.35s;
+  ${defaultBoxShadow()}
 `;
 
 // Card wrapper link - makes entire card clickable
@@ -83,10 +85,7 @@ const CardLink = styled.a`
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
-  transition: box-shadow 0.35s;
-  ${defaultBoxShadow()}
   text-decoration: none;
-  overflow: hidden;
   cursor: ${({ $hasLink }) => ($hasLink ? 'pointer' : 'default')};
   box-sizing: border-box;
 
@@ -138,14 +137,6 @@ const CardLink = styled.a`
 
       // Allow the nested content and its box-shadow to be completely visible when it's animated upwards:
       overflow: visible;
-
-      // Remove the box shadow from this anchor...
-      box-shadow: none;
-
-      // ... and apply to the content wrapper inside, so it moves with the content:
-      ${CardLinkContent} {
-        ${defaultBoxShadow()}
-      }
         
       &:hover,
       &:focus {
