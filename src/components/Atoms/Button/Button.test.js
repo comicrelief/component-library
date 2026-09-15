@@ -49,17 +49,6 @@ it('renders a standard styled link correctly', () => {
   opacity: 0.5;
 }
 
-.c1 {
-  width: 2rem;
-  height: 100%;
-}
-
-.c1 >img,
-.c1 >svg {
-  width: inherit;
-  height: inherit;
-}
-
 @media (min-width: 740px) {
   .c0 {
     font-size: 1rem;
@@ -92,9 +81,6 @@ it('renders a standard styled link correctly', () => {
   type="submit"
 >
   A standard link
-  <div
-    className="c1"
-  />
 </button>
 `);
 });

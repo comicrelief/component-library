@@ -41,17 +41,6 @@ exports[`renders correctly 1`] = `
   opacity: 0.5;
 }
 
-.c17 {
-  width: 2rem;
-  height: 100%;
-}
-
-.c17 >img,
-.c17 >svg {
-  width: inherit;
-  height: inherit;
-}
-
 .c16:disabled {
   cursor: not-allowed;
   opacity: 0.5;
@@ -176,18 +165,18 @@ exports[`renders correctly 1`] = `
   background-color: #E52630;
 }
 
-.c18 {
+.c17 {
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
 }
 
-.c18 p {
+.c17 p {
   font-size: 1rem;
   line-height: 2rem;
 }
 
-.c18 p a {
+.c17 p a {
   font-size: 1rem;
   color: #FFFFFF;
 }
@@ -459,14 +448,11 @@ exports[`renders correctly 1`] = `
             className=""
             data-testid="LoaderContainer"
           />
-          <div
-            className="c17"
-          />
         </button>
       </div>
     </div>
     <div
-      className="c18"
+      className="c17"
     >
       <span
         className="c4"

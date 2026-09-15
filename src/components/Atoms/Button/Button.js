@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { isString } from 'lodash';
 import { StyledButton, IconWrapper } from './Button.style';
 import buttonTypes from '../../../theme/crTheme/buttonTypes';
 
@@ -13,6 +14,7 @@ const Button = React.forwardRef(({
   ...rest
 }, ref) => {
   const hasIcon = Boolean(icon);
+  const hasIconPath = isString(icon);
 
   return (
     <StyledButton
@@ -24,12 +26,25 @@ const Button = React.forwardRef(({
       $buttonType={buttonType}
       data-testid="Button"
       $hasIcon={hasIcon}
+      $hasIconPath={hasIconPath}
     >
+      {/* Text */}
       {children}
 
-      <IconWrapper>
-        {icon}
-      </IconWrapper>
+      {/* Icon */}
+      {hasIcon && (
+        <IconWrapper>
+
+          {hasIconPath ? (
+            // TODO: use Picture component
+            <img
+              src={icon}
+              alt=""
+            />
+          ) : (icon)}
+        </IconWrapper>
+      )}
+
     </StyledButton>
   );
 });

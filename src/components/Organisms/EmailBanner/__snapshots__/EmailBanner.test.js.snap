@@ -41,17 +41,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
   opacity: 0.5;
 }
 
-.c23 {
-  width: 2rem;
-  height: 100%;
-}
-
-.c23 >img,
-.c23 >svg {
-  width: inherit;
-  height: inherit;
-}
-
 .c22:disabled {
   cursor: not-allowed;
   opacity: 0.5;
@@ -645,9 +634,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
                   className=""
                   data-testid="LoaderContainer"
                 />
-                <div
-                  className="c23"
-                />
               </button>
             </div>
           </fieldset>
@@ -697,17 +683,6 @@ exports[`Image banner renders correctly 1`] = `
 .c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
-}
-
-.c23 {
-  width: 2rem;
-  height: 100%;
-}
-
-.c23 >img,
-.c23 >svg {
-  width: inherit;
-  height: inherit;
 }
 
 .c22:disabled {
@@ -1303,9 +1278,6 @@ exports[`Image banner renders correctly 1`] = `
                   className=""
                   data-testid="LoaderContainer"
                 />
-                <div
-                  className="c23"
-                />
               </button>
             </div>
           </fieldset>
@@ -1355,17 +1327,6 @@ exports[`Text-only email widget renders correctly 1`] = `
 .c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
-}
-
-.c23 {
-  width: 2rem;
-  height: 100%;
-}
-
-.c23 >img,
-.c23 >svg {
-  width: inherit;
-  height: inherit;
 }
 
 .c22:disabled {
@@ -1961,9 +1922,6 @@ exports[`Text-only email widget renders correctly 1`] = `
                   className=""
                   data-testid="LoaderContainer"
                 />
-                <div
-                  className="c23"
-                />
               </button>
             </div>
           </fieldset>
@@ -2013,17 +1971,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 .c21:disabled {
   cursor: not-allowed;
   opacity: 0.5;
-}
-
-.c23 {
-  width: 2rem;
-  height: 100%;
-}
-
-.c23 >img,
-.c23 >svg {
-  width: inherit;
-  height: inherit;
 }
 
 .c22:disabled {
@@ -2618,9 +2565,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
                 <div
                   className=""
                   data-testid="LoaderContainer"
-                />
-                <div
-                  className="c23"
                 />
               </button>
             </div>

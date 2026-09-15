@@ -40,7 +40,7 @@ const StyledButton = styled.button`
 `;
 
 const IconWrapper = styled.div`
-  width: 2rem;
+  width: auto;
   height: 100%;
 
     > img,

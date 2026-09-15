@@ -5,7 +5,8 @@ import { ExampleContainer } from '../../../demos/SharedStyles';
 import Cross from '../Icons/Cross';
 
 export default function ButtonExample() {
-  console.log('typeof Cross', typeof Cross);
+  const placeholderIconUrl = 'https://images.ctfassets.net/zsfivwzfgl3t/4IlLxZnddkg1pHWZP3AZnA/447078df666932751c9c618a296f24db/Icon__Shelter.png';
+
   return (
     <>
       <h3>Primary</h3>
@@ -108,7 +109,16 @@ export default function ButtonExample() {
           type="button"
           icon={<Cross size={48} colour="white" />}
         >
-          Button with an icon
+          Button with an Icon component
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          icon={placeholderIconUrl}
+        >
+          Button with an image URL provided for the icon
         </Button>
       </ExampleContainer>
     </>
