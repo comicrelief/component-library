@@ -32,6 +32,22 @@ const StyledButton = styled.button`
     // place for now, just to avoid breaking anything downstream...
     width: ${({ $fullWidth }) => ($fullWidth ? '100%' : 'auto')};
   }
+
+  ${({ $hasIcon }) => $hasIcon && css`
+    justify-content: space-between;
+    gap: 0.6rem;
+  `}
 `;
 
-export default StyledButton;
+const IconWrapper = styled.div`
+  width: 2rem;
+  height: 100%;
+
+    > img,
+    > svg {
+      width: inherit;
+      height: inherit
+    }
+`;
+
+export { StyledButton, IconWrapper };

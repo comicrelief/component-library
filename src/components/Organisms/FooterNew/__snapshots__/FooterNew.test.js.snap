@@ -46,6 +46,17 @@ exports[`does not render copyright text when not supplied 1`] = `
   opacity: 0.5;
 }
 
+.c26 {
+  width: 2rem;
+  height: 100%;
+}
+
+.c26 >img,
+.c26 >svg {
+  width: inherit;
+  height: inherit;
+}
+
 .c17 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -60,7 +71,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   line-height: inherit;
 }
 
-.c29 {
+.c30 {
   text-decoration: none;
   cursor: pointer;
   display: block;
@@ -79,23 +90,23 @@ exports[`does not render copyright text when not supplied 1`] = `
   transform-origin: center;
 }
 
-.c29:hover,
-.c29:focus {
+.c30:hover,
+.c30:focus {
   opacity: 0.6;
 }
 
-.c29:hover,
-.c29:focus {
+.c30:hover,
+.c30:focus {
   transform: scale(1.15);
 }
 
-.c29:hover,
-.c29:focus {
+.c30:hover,
+.c30:focus {
   background-color: #3A3A3A;
   opacity: 1;
 }
 
-.c31 {
+.c32 {
   width: 100%;
   filter: brightness(0) invert(1);
 }
@@ -199,7 +210,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   vertical-align: bottom;
 }
 
-.c33 {
+.c34 {
   display: inline-block;
   z-index: 3;
   width: 59px;
@@ -207,7 +218,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   vertical-align: bottom;
 }
 
-.c27 {
+.c28 {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -218,14 +229,14 @@ exports[`does not render copyright text when not supplied 1`] = `
   align-items: center;
 }
 
-.c28 {
+.c29 {
   width: 54px;
   height: 54px;
   flex: 0 0 54px;
   margin-right: 0;
 }
 
-.c30 {
+.c31 {
   width: auto;
 }
 
@@ -395,21 +406,21 @@ exports[`does not render copyright text when not supplied 1`] = `
   max-width: 100%;
 }
 
-.c26 {
+.c27 {
   margin-bottom: 1rem;
   box-sizing: content-box;
   gap: 1rem;
   display: none;
 }
 
-.c39 {
+.c40 {
   margin-bottom: 1rem;
   box-sizing: content-box;
   gap: 1rem;
   display: block;
 }
 
-.c35 {
+.c36 {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -418,30 +429,30 @@ exports[`does not render copyright text when not supplied 1`] = `
   gap: 2rem;
 }
 
-.c36 {
+.c37 {
   margin: 0;
 }
 
-.c37 {
+.c38 {
   color: #FFFFFF;
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
 }
 
-.c37:hover,
-.c37:focus {
+.c38:hover,
+.c38:focus {
   text-decoration: underline;
   text-decoration-color: #FFFFFF;
 }
 
-.c38 {
+.c39 {
   color: #FFFFFF;
   font-weight: bold;
   font-size: 16px;
 }
 
-.c40 {
+.c41 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -452,24 +463,24 @@ exports[`does not render copyright text when not supplied 1`] = `
   align-items: center;
 }
 
-.c41 {
+.c42 {
   margin: 0;
   display: flex;
   align-items: center;
 }
 
-.c41:not(:last-child)::after {
+.c42:not(:last-child)::after {
   content: '|';
   margin-left: 0.5rem;
   color: #FFFFFF;
   opacity: 0.8;
 }
 
-.c42 {
+.c43 {
   text-decoration: none;
 }
 
-.c42 >span {
+.c43 >span {
   color: #FFFFFF;
   opacity: 0.8;
   text-decoration: none;
@@ -478,13 +489,13 @@ exports[`does not render copyright text when not supplied 1`] = `
   font-size: 0.875rem;
 }
 
-.c42:hover,
-.c42:focus {
+.c43:hover,
+.c43:focus {
   text-decoration: underline;
   text-decoration-color: #FFFFFF;
 }
 
-.c43 {
+.c44 {
   color: #FFFFFF;
   opacity: 0.8;
   font-weight: normal;
@@ -499,7 +510,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   padding-bottom: 2rem;
 }
 
-.c32 {
+.c33 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -509,7 +520,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   display: none;
 }
 
-.c34 {
+.c35 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -519,7 +530,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   display: none;
 }
 
-.c46 {
+.c47 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -546,7 +557,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   transform: rotate(-14deg);
 }
 
-.c44 {
+.c45 {
   display: block;
   width: 100%;
   height: 100%;
@@ -554,7 +565,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   margin-bottom: 2rem;
 }
 
-.c45 {
+.c46 {
   color: #FFFFFF;
   opacity: 0.8;
   font-size: 0.875rem;
@@ -628,20 +639,20 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 @media (min-width: 1150px) {
-  .c33 {
+  .c34 {
     width: 59px;
   }
 }
 
 @media (min-width: 740px) {
-  .c27 {
+  .c28 {
     justify-content: start;
     margin: 0.5rem 0;
   }
 }
 
 @media (min-width: 740px) {
-  .c28 {
+  .c29 {
     margin-right: 0;
   }
 }
@@ -759,7 +770,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c26 {
+  .c27 {
     box-sizing: border-box;
     display: flex;
     margin-bottom: 0;
@@ -768,7 +779,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c39 {
+  .c40 {
     box-sizing: border-box;
     display: none;
     margin-bottom: 1rem;
@@ -777,7 +788,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c35 {
+  .c36 {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -785,7 +796,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c41 {
+  .c42 {
     display: inline;
   }
 }
@@ -802,7 +813,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c32 {
+  .c33 {
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
@@ -813,7 +824,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c34 {
+  .c35 {
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
@@ -824,7 +835,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c46 {
+  .c47 {
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
@@ -835,7 +846,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 @media (min-width: 1024px) {
-  .c44 {
+  .c45 {
     margin-bottom: 0;
   }
 }
@@ -973,6 +984,9 @@ exports[`does not render copyright text when not supplied 1`] = `
                           </svg>
                         </span>
                       </span>
+                      <div
+                        className="c26"
+                      />
                     </button>
                   </div>
                 </div>
@@ -980,18 +994,18 @@ exports[`does not render copyright text when not supplied 1`] = `
             </form>
           </div>
           <div
-            className="c26"
+            className="c27"
           >
             <ul
-              className="c27"
+              className="c28"
               data-test="SocialIconsList"
             >
               <li
-                className="c28"
+                className="c29"
                 data-testid="SocialIcon-facebook"
               >
                 <a
-                  className="c29 c30"
+                  className="c30 c31"
                   data-test="icon-facebook"
                   href="https://www.facebook.com/comicrelief"
                   rel="noopener noreferrer"
@@ -1000,17 +1014,17 @@ exports[`does not render copyright text when not supplied 1`] = `
                 >
                   <img
                     alt="facebook"
-                    className="c31"
+                    className="c32"
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
-                className="c28"
+                className="c29"
                 data-testid="SocialIcon-instagram"
               >
                 <a
-                  className="c29 c30"
+                  className="c30 c31"
                   data-test="icon-instagram"
                   href="https://www.instagram.com/comicrelief"
                   rel="noopener noreferrer"
@@ -1019,17 +1033,17 @@ exports[`does not render copyright text when not supplied 1`] = `
                 >
                   <img
                     alt="instagram"
-                    className="c31"
+                    className="c32"
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
-                className="c28"
+                className="c29"
                 data-testid="SocialIcon-x"
               >
                 <a
-                  className="c29 c30"
+                  className="c30 c31"
                   data-test="icon-x"
                   href="https://x.com/comicrelief"
                   rel="noopener noreferrer"
@@ -1038,17 +1052,17 @@ exports[`does not render copyright text when not supplied 1`] = `
                 >
                   <img
                     alt="x"
-                    className="c31"
+                    className="c32"
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
-                className="c28"
+                className="c29"
                 data-testid="SocialIcon-tiktok"
               >
                 <a
-                  className="c29 c30"
+                  className="c30 c31"
                   data-test="icon-tiktok"
                   href="https://www.tiktok.com/@comicrelief"
                   rel="noopener noreferrer"
@@ -1057,17 +1071,17 @@ exports[`does not render copyright text when not supplied 1`] = `
                 >
                   <img
                     alt="tiktok"
-                    className="c31"
+                    className="c32"
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
-                className="c28"
+                className="c29"
                 data-testid="SocialIcon-youtube"
               >
                 <a
-                  className="c29 c30"
+                  className="c30 c31"
                   data-test="icon-youtube"
                   href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
                   rel="noopener noreferrer"
@@ -1076,7 +1090,7 @@ exports[`does not render copyright text when not supplied 1`] = `
                 >
                   <img
                     alt="youtube"
-                    className="c31"
+                    className="c32"
                     src="mock.asset"
                   />
                 </a>
@@ -1085,7 +1099,7 @@ exports[`does not render copyright text when not supplied 1`] = `
           </div>
         </div>
         <div
-          className="c32"
+          className="c33"
         >
           <a
             className="c3 c4"
@@ -1095,7 +1109,7 @@ exports[`does not render copyright text when not supplied 1`] = `
             type="standard"
           >
             <div
-              className="c33"
+              className="c34"
             >
               <img
                 alt="Comic Relief logo"
@@ -1106,7 +1120,7 @@ exports[`does not render copyright text when not supplied 1`] = `
           </a>
         </div>
         <div
-          className="c34"
+          className="c35"
         >
           <a
             className="c3 c4"
@@ -1116,7 +1130,7 @@ exports[`does not render copyright text when not supplied 1`] = `
             type="standard"
           >
             <div
-              className="c33"
+              className="c34"
             >
               <img
                 alt="Comic Relief logo"
@@ -1129,36 +1143,36 @@ exports[`does not render copyright text when not supplied 1`] = `
       </div>
       <nav
         aria-label="Primary footer navigation"
-        className="c35"
+        className="c36"
         role="navigation"
       >
         <li
-          className="c36"
+          className="c37"
         >
           <a
-            className="c3 c37"
+            className="c3 c38"
             href="/contact-us"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c38"
+              className="c17 c39"
             >
               Contact us
             </span>
           </a>
         </li>
         <li
-          className="c36"
+          className="c37"
         >
           <a
-            className="c3 c37"
+            className="c3 c38"
             href="https://www.comicrelief.com/frequently-asked-questions"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c38"
+              className="c17 c39"
             >
               FAQs
             </span>
@@ -1166,18 +1180,18 @@ exports[`does not render copyright text when not supplied 1`] = `
         </li>
       </nav>
       <div
-        className="c39"
+        className="c40"
       >
         <ul
-          className="c27"
+          className="c28"
           data-test="SocialIconsList"
         >
           <li
-            className="c28"
+            className="c29"
             data-testid="SocialIcon-facebook"
           >
             <a
-              className="c29 c30"
+              className="c30 c31"
               data-test="icon-facebook"
               href="https://www.facebook.com/comicrelief"
               rel="noopener noreferrer"
@@ -1186,17 +1200,17 @@ exports[`does not render copyright text when not supplied 1`] = `
             >
               <img
                 alt="facebook"
-                className="c31"
+                className="c32"
                 src="mock.asset"
               />
             </a>
           </li>
           <li
-            className="c28"
+            className="c29"
             data-testid="SocialIcon-instagram"
           >
             <a
-              className="c29 c30"
+              className="c30 c31"
               data-test="icon-instagram"
               href="https://www.instagram.com/comicrelief"
               rel="noopener noreferrer"
@@ -1205,17 +1219,17 @@ exports[`does not render copyright text when not supplied 1`] = `
             >
               <img
                 alt="instagram"
-                className="c31"
+                className="c32"
                 src="mock.asset"
               />
             </a>
           </li>
           <li
-            className="c28"
+            className="c29"
             data-testid="SocialIcon-x"
           >
             <a
-              className="c29 c30"
+              className="c30 c31"
               data-test="icon-x"
               href="https://x.com/comicrelief"
               rel="noopener noreferrer"
@@ -1224,17 +1238,17 @@ exports[`does not render copyright text when not supplied 1`] = `
             >
               <img
                 alt="x"
-                className="c31"
+                className="c32"
                 src="mock.asset"
               />
             </a>
           </li>
           <li
-            className="c28"
+            className="c29"
             data-testid="SocialIcon-tiktok"
           >
             <a
-              className="c29 c30"
+              className="c30 c31"
               data-test="icon-tiktok"
               href="https://www.tiktok.com/@comicrelief"
               rel="noopener noreferrer"
@@ -1243,17 +1257,17 @@ exports[`does not render copyright text when not supplied 1`] = `
             >
               <img
                 alt="tiktok"
-                className="c31"
+                className="c32"
                 src="mock.asset"
               />
             </a>
           </li>
           <li
-            className="c28"
+            className="c29"
             data-testid="SocialIcon-youtube"
           >
             <a
-              className="c29 c30"
+              className="c30 c31"
               data-test="icon-youtube"
               href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
               rel="noopener noreferrer"
@@ -1262,7 +1276,7 @@ exports[`does not render copyright text when not supplied 1`] = `
             >
               <img
                 alt="youtube"
-                className="c31"
+                className="c32"
                 src="mock.asset"
               />
             </a>
@@ -1271,36 +1285,36 @@ exports[`does not render copyright text when not supplied 1`] = `
       </div>
       <nav
         aria-label="Secondary footer navigation"
-        className="c40"
+        className="c41"
         role="navigation"
       >
         <li
-          className="c41"
+          className="c42"
         >
           <a
-            className="c3 c42"
+            className="c3 c43"
             href="https://www.comicrelief.com/terms-of-use"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c43"
+              className="c17 c44"
             >
               Terms of use
             </span>
           </a>
         </li>
         <li
-          className="c41"
+          className="c42"
         >
           <a
-            className="c3 c42"
+            className="c3 c43"
             href="https://www.comicrelief.com/privacy-notice"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c43"
+              className="c17 c44"
             >
               Privacy notice
             </span>
@@ -1308,16 +1322,16 @@ exports[`does not render copyright text when not supplied 1`] = `
         </li>
       </nav>
       <div
-        className="c44"
+        className="c45"
       >
         <p
-          className="c17 c45"
+          className="c17 c46"
         >
           Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
         </p>
       </div>
       <div
-        className="c46"
+        className="c47"
       />
     </div>
   </footer>
@@ -1370,6 +1384,17 @@ exports[`renders correctly 1`] = `
   opacity: 0.5;
 }
 
+.c26 {
+  width: 2rem;
+  height: 100%;
+}
+
+.c26 >img,
+.c26 >svg {
+  width: inherit;
+  height: inherit;
+}
+
 .c17 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1384,7 +1409,7 @@ exports[`renders correctly 1`] = `
   line-height: inherit;
 }
 
-.c29 {
+.c30 {
   text-decoration: none;
   cursor: pointer;
   display: block;
@@ -1403,23 +1428,23 @@ exports[`renders correctly 1`] = `
   transform-origin: center;
 }
 
-.c29:hover,
-.c29:focus {
+.c30:hover,
+.c30:focus {
   opacity: 0.6;
 }
 
-.c29:hover,
-.c29:focus {
+.c30:hover,
+.c30:focus {
   transform: scale(1.15);
 }
 
-.c29:hover,
-.c29:focus {
+.c30:hover,
+.c30:focus {
   background-color: #3A3A3A;
   opacity: 1;
 }
 
-.c31 {
+.c32 {
   width: 100%;
   filter: brightness(0) invert(1);
 }
@@ -1523,7 +1548,7 @@ exports[`renders correctly 1`] = `
   vertical-align: bottom;
 }
 
-.c33 {
+.c34 {
   display: inline-block;
   z-index: 3;
   width: 59px;
@@ -1531,7 +1556,7 @@ exports[`renders correctly 1`] = `
   vertical-align: bottom;
 }
 
-.c27 {
+.c28 {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -1542,14 +1567,14 @@ exports[`renders correctly 1`] = `
   align-items: center;
 }
 
-.c28 {
+.c29 {
   width: 54px;
   height: 54px;
   flex: 0 0 54px;
   margin-right: 0;
 }
 
-.c30 {
+.c31 {
   width: auto;
 }
 
@@ -1719,21 +1744,21 @@ exports[`renders correctly 1`] = `
   max-width: 100%;
 }
 
-.c26 {
+.c27 {
   margin-bottom: 1rem;
   box-sizing: content-box;
   gap: 1rem;
   display: none;
 }
 
-.c39 {
+.c40 {
   margin-bottom: 1rem;
   box-sizing: content-box;
   gap: 1rem;
   display: block;
 }
 
-.c35 {
+.c36 {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -1742,30 +1767,30 @@ exports[`renders correctly 1`] = `
   gap: 2rem;
 }
 
-.c36 {
+.c37 {
   margin: 0;
 }
 
-.c37 {
+.c38 {
   color: #FFFFFF;
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
 }
 
-.c37:hover,
-.c37:focus {
+.c38:hover,
+.c38:focus {
   text-decoration: underline;
   text-decoration-color: #FFFFFF;
 }
 
-.c38 {
+.c39 {
   color: #FFFFFF;
   font-weight: bold;
   font-size: 16px;
 }
 
-.c40 {
+.c41 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1776,24 +1801,24 @@ exports[`renders correctly 1`] = `
   align-items: center;
 }
 
-.c41 {
+.c42 {
   margin: 0;
   display: flex;
   align-items: center;
 }
 
-.c41:not(:last-child)::after {
+.c42:not(:last-child)::after {
   content: '|';
   margin-left: 0.5rem;
   color: #FFFFFF;
   opacity: 0.8;
 }
 
-.c42 {
+.c43 {
   text-decoration: none;
 }
 
-.c42 >span {
+.c43 >span {
   color: #FFFFFF;
   opacity: 0.8;
   text-decoration: none;
@@ -1802,13 +1827,13 @@ exports[`renders correctly 1`] = `
   font-size: 0.875rem;
 }
 
-.c42:hover,
-.c42:focus {
+.c43:hover,
+.c43:focus {
   text-decoration: underline;
   text-decoration-color: #FFFFFF;
 }
 
-.c43 {
+.c44 {
   color: #FFFFFF;
   opacity: 0.8;
   font-weight: normal;
@@ -1823,7 +1848,7 @@ exports[`renders correctly 1`] = `
   padding-bottom: 2rem;
 }
 
-.c32 {
+.c33 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1833,7 +1858,7 @@ exports[`renders correctly 1`] = `
   display: none;
 }
 
-.c34 {
+.c35 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1843,7 +1868,7 @@ exports[`renders correctly 1`] = `
   display: none;
 }
 
-.c46 {
+.c47 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1870,7 +1895,7 @@ exports[`renders correctly 1`] = `
   transform: rotate(-14deg);
 }
 
-.c44 {
+.c45 {
   display: block;
   width: 100%;
   height: 100%;
@@ -1878,7 +1903,7 @@ exports[`renders correctly 1`] = `
   margin-bottom: 2rem;
 }
 
-.c45 {
+.c46 {
   color: #FFFFFF;
   opacity: 0.8;
   font-size: 0.875rem;
@@ -1952,20 +1977,20 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 1150px) {
-  .c33 {
+  .c34 {
     width: 59px;
   }
 }
 
 @media (min-width: 740px) {
-  .c27 {
+  .c28 {
     justify-content: start;
     margin: 0.5rem 0;
   }
 }
 
 @media (min-width: 740px) {
-  .c28 {
+  .c29 {
     margin-right: 0;
   }
 }
@@ -2083,7 +2108,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c26 {
+  .c27 {
     box-sizing: border-box;
     display: flex;
     margin-bottom: 0;
@@ -2092,7 +2117,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c39 {
+  .c40 {
     box-sizing: border-box;
     display: none;
     margin-bottom: 1rem;
@@ -2101,7 +2126,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c35 {
+  .c36 {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -2109,7 +2134,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c41 {
+  .c42 {
     display: inline;
   }
 }
@@ -2126,7 +2151,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c32 {
+  .c33 {
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
@@ -2137,7 +2162,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c34 {
+  .c35 {
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
@@ -2148,7 +2173,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c46 {
+  .c47 {
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
@@ -2159,7 +2184,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 1024px) {
-  .c44 {
+  .c45 {
     margin-bottom: 0;
   }
 }
@@ -2297,6 +2322,9 @@ exports[`renders correctly 1`] = `
                           </svg>
                         </span>
                       </span>
+                      <div
+                        className="c26"
+                      />
                     </button>
                   </div>
                 </div>
@@ -2304,18 +2332,18 @@ exports[`renders correctly 1`] = `
             </form>
           </div>
           <div
-            className="c26"
+            className="c27"
           >
             <ul
-              className="c27"
+              className="c28"
               data-test="SocialIconsList"
             >
               <li
-                className="c28"
+                className="c29"
                 data-testid="SocialIcon-facebook"
               >
                 <a
-                  className="c29 c30"
+                  className="c30 c31"
                   data-test="icon-facebook"
                   href="https://www.facebook.com/comicrelief"
                   rel="noopener noreferrer"
@@ -2324,17 +2352,17 @@ exports[`renders correctly 1`] = `
                 >
                   <img
                     alt="facebook"
-                    className="c31"
+                    className="c32"
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
-                className="c28"
+                className="c29"
                 data-testid="SocialIcon-instagram"
               >
                 <a
-                  className="c29 c30"
+                  className="c30 c31"
                   data-test="icon-instagram"
                   href="https://www.instagram.com/comicrelief"
                   rel="noopener noreferrer"
@@ -2343,17 +2371,17 @@ exports[`renders correctly 1`] = `
                 >
                   <img
                     alt="instagram"
-                    className="c31"
+                    className="c32"
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
-                className="c28"
+                className="c29"
                 data-testid="SocialIcon-x"
               >
                 <a
-                  className="c29 c30"
+                  className="c30 c31"
                   data-test="icon-x"
                   href="https://x.com/comicrelief"
                   rel="noopener noreferrer"
@@ -2362,17 +2390,17 @@ exports[`renders correctly 1`] = `
                 >
                   <img
                     alt="x"
-                    className="c31"
+                    className="c32"
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
-                className="c28"
+                className="c29"
                 data-testid="SocialIcon-tiktok"
               >
                 <a
-                  className="c29 c30"
+                  className="c30 c31"
                   data-test="icon-tiktok"
                   href="https://www.tiktok.com/@comicrelief"
                   rel="noopener noreferrer"
@@ -2381,17 +2409,17 @@ exports[`renders correctly 1`] = `
                 >
                   <img
                     alt="tiktok"
-                    className="c31"
+                    className="c32"
                     src="mock.asset"
                   />
                 </a>
               </li>
               <li
-                className="c28"
+                className="c29"
                 data-testid="SocialIcon-youtube"
               >
                 <a
-                  className="c29 c30"
+                  className="c30 c31"
                   data-test="icon-youtube"
                   href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
                   rel="noopener noreferrer"
@@ -2400,7 +2428,7 @@ exports[`renders correctly 1`] = `
                 >
                   <img
                     alt="youtube"
-                    className="c31"
+                    className="c32"
                     src="mock.asset"
                   />
                 </a>
@@ -2409,7 +2437,7 @@ exports[`renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="c32"
+          className="c33"
         >
           <a
             className="c3 c4"
@@ -2419,7 +2447,7 @@ exports[`renders correctly 1`] = `
             type="standard"
           >
             <div
-              className="c33"
+              className="c34"
             >
               <img
                 alt="Comic Relief logo"
@@ -2430,7 +2458,7 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="c34"
+          className="c35"
         >
           <a
             className="c3 c4"
@@ -2440,7 +2468,7 @@ exports[`renders correctly 1`] = `
             type="standard"
           >
             <div
-              className="c33"
+              className="c34"
             >
               <img
                 alt="Comic Relief logo"
@@ -2453,36 +2481,36 @@ exports[`renders correctly 1`] = `
       </div>
       <nav
         aria-label="Primary footer navigation"
-        className="c35"
+        className="c36"
         role="navigation"
       >
         <li
-          className="c36"
+          className="c37"
         >
           <a
-            className="c3 c37"
+            className="c3 c38"
             href="/contact-us"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c38"
+              className="c17 c39"
             >
               Contact us
             </span>
           </a>
         </li>
         <li
-          className="c36"
+          className="c37"
         >
           <a
-            className="c3 c37"
+            className="c3 c38"
             href="https://www.comicrelief.com/frequently-asked-questions"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c38"
+              className="c17 c39"
             >
               FAQs
             </span>
@@ -2490,18 +2518,18 @@ exports[`renders correctly 1`] = `
         </li>
       </nav>
       <div
-        className="c39"
+        className="c40"
       >
         <ul
-          className="c27"
+          className="c28"
           data-test="SocialIconsList"
         >
           <li
-            className="c28"
+            className="c29"
             data-testid="SocialIcon-facebook"
           >
             <a
-              className="c29 c30"
+              className="c30 c31"
               data-test="icon-facebook"
               href="https://www.facebook.com/comicrelief"
               rel="noopener noreferrer"
@@ -2510,17 +2538,17 @@ exports[`renders correctly 1`] = `
             >
               <img
                 alt="facebook"
-                className="c31"
+                className="c32"
                 src="mock.asset"
               />
             </a>
           </li>
           <li
-            className="c28"
+            className="c29"
             data-testid="SocialIcon-instagram"
           >
             <a
-              className="c29 c30"
+              className="c30 c31"
               data-test="icon-instagram"
               href="https://www.instagram.com/comicrelief"
               rel="noopener noreferrer"
@@ -2529,17 +2557,17 @@ exports[`renders correctly 1`] = `
             >
               <img
                 alt="instagram"
-                className="c31"
+                className="c32"
                 src="mock.asset"
               />
             </a>
           </li>
           <li
-            className="c28"
+            className="c29"
             data-testid="SocialIcon-x"
           >
             <a
-              className="c29 c30"
+              className="c30 c31"
               data-test="icon-x"
               href="https://x.com/comicrelief"
               rel="noopener noreferrer"
@@ -2548,17 +2576,17 @@ exports[`renders correctly 1`] = `
             >
               <img
                 alt="x"
-                className="c31"
+                className="c32"
                 src="mock.asset"
               />
             </a>
           </li>
           <li
-            className="c28"
+            className="c29"
             data-testid="SocialIcon-tiktok"
           >
             <a
-              className="c29 c30"
+              className="c30 c31"
               data-test="icon-tiktok"
               href="https://www.tiktok.com/@comicrelief"
               rel="noopener noreferrer"
@@ -2567,17 +2595,17 @@ exports[`renders correctly 1`] = `
             >
               <img
                 alt="tiktok"
-                className="c31"
+                className="c32"
                 src="mock.asset"
               />
             </a>
           </li>
           <li
-            className="c28"
+            className="c29"
             data-testid="SocialIcon-youtube"
           >
             <a
-              className="c29 c30"
+              className="c30 c31"
               data-test="icon-youtube"
               href="https://www.youtube.com/channel/UCdF5u0ggeSETozc8fsprjcw"
               rel="noopener noreferrer"
@@ -2586,7 +2614,7 @@ exports[`renders correctly 1`] = `
             >
               <img
                 alt="youtube"
-                className="c31"
+                className="c32"
                 src="mock.asset"
               />
             </a>
@@ -2595,36 +2623,36 @@ exports[`renders correctly 1`] = `
       </div>
       <nav
         aria-label="Secondary footer navigation"
-        className="c40"
+        className="c41"
         role="navigation"
       >
         <li
-          className="c41"
+          className="c42"
         >
           <a
-            className="c3 c42"
+            className="c3 c43"
             href="https://www.comicrelief.com/terms-of-use"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c43"
+              className="c17 c44"
             >
               Terms of use
             </span>
           </a>
         </li>
         <li
-          className="c41"
+          className="c42"
         >
           <a
-            className="c3 c42"
+            className="c3 c43"
             href="https://www.comicrelief.com/privacy-notice"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c43"
+              className="c17 c44"
             >
               Privacy notice
             </span>
@@ -2632,21 +2660,21 @@ exports[`renders correctly 1`] = `
         </li>
       </nav>
       <div
-        className="c44"
+        className="c45"
       >
         <p
-          className="c17 c45"
+          className="c17 c46"
         >
           © 2026 Comic Relief
         </p>
         <p
-          className="c17 c45"
+          className="c17 c46"
         >
           Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
         </p>
       </div>
       <div
-        className="c46"
+        className="c47"
       />
     </div>
   </footer>

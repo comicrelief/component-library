@@ -2,8 +2,10 @@ import React from 'react';
 import Button from './Button';
 import buttonTypes from '../../../theme/crTheme/buttonTypes';
 import { ExampleContainer } from '../../../demos/SharedStyles';
+import Cross from '../Icons/Cross';
 
 export default function ButtonExample() {
+  console.log('typeof Cross', typeof Cross);
   return (
     <>
       <h3>Primary</h3>
@@ -99,6 +101,15 @@ export default function ButtonExample() {
 
       <ExampleContainer>
         <Button type="button" fullWidth>Full-width button</Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          icon={<Cross size={48} colour="white" />}
+        >
+          Button with an icon
+        </Button>
       </ExampleContainer>
     </>
   );
