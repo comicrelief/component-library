@@ -44,8 +44,10 @@ const StyledButton = styled.button`
 
     > *:nth-child(1) {
       grid-column-start: 2;
-      // To re-centre the copy against the 'gap'
-      // padding-left: 0.6rem
+
+      // Curtis request to rebalance the copy
+      ${({ $fullWidth }) => (!$fullWidth && css`padding-right: 0.6rem
+    `)};
     }
     
     > *:nth-child(2) {
