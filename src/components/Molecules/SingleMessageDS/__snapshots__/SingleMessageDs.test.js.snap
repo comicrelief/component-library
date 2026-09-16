@@ -86,7 +86,8 @@ exports[`renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c11 .icon-wrapper svg {
+.c11 .icon-wrapper svg,
+.c11 .icon-wrapper svg path {
   fill: #FFFFFF;
 }
 
@@ -102,7 +103,11 @@ exports[`renders correctly 1`] = `
 .c11:hover .icon-wrapper svg,
 .c11:focus .icon-wrapper svg,
 .c11:focus-within .icon-wrapper svg,
-.c11:focus-visible .icon-wrapper svg {
+.c11:focus-visible .icon-wrapper svg,
+.c11:hover .icon-wrapper svg path,
+.c11:focus .icon-wrapper svg path,
+.c11:focus-within .icon-wrapper svg path,
+.c11:focus-visible .icon-wrapper svg path {
   fill: #FFFFFF;
 }
 

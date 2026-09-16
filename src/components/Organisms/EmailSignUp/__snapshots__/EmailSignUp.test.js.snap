@@ -28,7 +28,8 @@ exports[`renders correctly 1`] = `
   text-decoration: none;
 }
 
-.c15 .icon-wrapper svg {
+.c15 .icon-wrapper svg,
+.c15 .icon-wrapper svg path {
   fill: #FFFFFF;
 }
 
@@ -44,7 +45,11 @@ exports[`renders correctly 1`] = `
 .c15:hover .icon-wrapper svg,
 .c15:focus .icon-wrapper svg,
 .c15:focus-within .icon-wrapper svg,
-.c15:focus-visible .icon-wrapper svg {
+.c15:focus-visible .icon-wrapper svg,
+.c15:hover .icon-wrapper svg path,
+.c15:focus .icon-wrapper svg path,
+.c15:focus-within .icon-wrapper svg path,
+.c15:focus-visible .icon-wrapper svg path {
   fill: #FFFFFF;
 }
 

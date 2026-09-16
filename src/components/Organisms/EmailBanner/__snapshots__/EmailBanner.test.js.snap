@@ -28,7 +28,8 @@ exports[`Image banner left orientation renders correctly 1`] = `
   text-decoration: none;
 }
 
-.c21 .icon-wrapper svg {
+.c21 .icon-wrapper svg,
+.c21 .icon-wrapper svg path {
   fill: #FFFFFF;
 }
 
@@ -44,7 +45,11 @@ exports[`Image banner left orientation renders correctly 1`] = `
 .c21:hover .icon-wrapper svg,
 .c21:focus .icon-wrapper svg,
 .c21:focus-within .icon-wrapper svg,
-.c21:focus-visible .icon-wrapper svg {
+.c21:focus-visible .icon-wrapper svg,
+.c21:hover .icon-wrapper svg path,
+.c21:focus .icon-wrapper svg path,
+.c21:focus-within .icon-wrapper svg path,
+.c21:focus-visible .icon-wrapper svg path {
   fill: #FFFFFF;
 }
 
@@ -684,7 +689,8 @@ exports[`Image banner renders correctly 1`] = `
   text-decoration: none;
 }
 
-.c21 .icon-wrapper svg {
+.c21 .icon-wrapper svg,
+.c21 .icon-wrapper svg path {
   fill: #FFFFFF;
 }
 
@@ -700,7 +706,11 @@ exports[`Image banner renders correctly 1`] = `
 .c21:hover .icon-wrapper svg,
 .c21:focus .icon-wrapper svg,
 .c21:focus-within .icon-wrapper svg,
-.c21:focus-visible .icon-wrapper svg {
+.c21:focus-visible .icon-wrapper svg,
+.c21:hover .icon-wrapper svg path,
+.c21:focus .icon-wrapper svg path,
+.c21:focus-within .icon-wrapper svg path,
+.c21:focus-visible .icon-wrapper svg path {
   fill: #FFFFFF;
 }
 
@@ -1340,7 +1350,8 @@ exports[`Text-only email widget renders correctly 1`] = `
   text-decoration: none;
 }
 
-.c21 .icon-wrapper svg {
+.c21 .icon-wrapper svg,
+.c21 .icon-wrapper svg path {
   fill: #FFFFFF;
 }
 
@@ -1356,7 +1367,11 @@ exports[`Text-only email widget renders correctly 1`] = `
 .c21:hover .icon-wrapper svg,
 .c21:focus .icon-wrapper svg,
 .c21:focus-within .icon-wrapper svg,
-.c21:focus-visible .icon-wrapper svg {
+.c21:focus-visible .icon-wrapper svg,
+.c21:hover .icon-wrapper svg path,
+.c21:focus .icon-wrapper svg path,
+.c21:focus-within .icon-wrapper svg path,
+.c21:focus-visible .icon-wrapper svg path {
   fill: #FFFFFF;
 }
 
@@ -1996,7 +2011,8 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   text-decoration: none;
 }
 
-.c21 .icon-wrapper svg {
+.c21 .icon-wrapper svg,
+.c21 .icon-wrapper svg path {
   fill: #FFFFFF;
 }
 
@@ -2012,7 +2028,11 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 .c21:hover .icon-wrapper svg,
 .c21:focus .icon-wrapper svg,
 .c21:focus-within .icon-wrapper svg,
-.c21:focus-visible .icon-wrapper svg {
+.c21:focus-visible .icon-wrapper svg,
+.c21:hover .icon-wrapper svg path,
+.c21:focus .icon-wrapper svg path,
+.c21:focus-within .icon-wrapper svg path,
+.c21:focus-visible .icon-wrapper svg path {
   fill: #FFFFFF;
 }
 

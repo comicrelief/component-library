@@ -258,8 +258,8 @@ export default function HeroBannerExample() {
           Full Height: Copy Left w/Logo (Right on L+)
         </Text>
         <Text tag="p">
-           SQUARE-ISH logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
-           overlappy example here.
+          SQUARE-ISH logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
+          overlappy example here.
         </Text>
       </HeroBanner>
 
@@ -278,8 +278,8 @@ export default function HeroBannerExample() {
           Full Height: Copy Right w/Logo (Left on L+)
         </Text>
         <Text tag="p">
-           SQUARE-ISH logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
-           overlappy example here.
+          SQUARE-ISH logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
+          overlappy example here.
         </Text>
       </HeroBanner>
 
@@ -298,8 +298,8 @@ export default function HeroBannerExample() {
           Full Height: Copy Right, w/Logo (Left on L+)
         </Text>
         <Text tag="p">
-           WIDE logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
-           overlappy example here.
+          WIDE logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
+          overlappy example here.
         </Text>
       </HeroBanner>
 
@@ -318,8 +318,8 @@ export default function HeroBannerExample() {
           Full Height: Copy Right, w/Logo (Left on L+)
         </Text>
         <Text tag="p">
-           TALL logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
-           overlappy example here.
+          TALL logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
+          overlappy example here.
         </Text>
       </HeroBanner>
 
@@ -330,7 +330,7 @@ export default function HeroBannerExample() {
         imageLow={defaultData.heroBannerImage}
         imageAltText="Image alt text"
         variant={variants.FULL_HEIGHT}
-        copyLeft={true}
+        copyLeft
         paddingTop="2rem"
         logoImage={defaultData.heroBannerLogoImageTall}
       >
@@ -338,8 +338,8 @@ export default function HeroBannerExample() {
           Full Height: Copy Right, w/Logo (Right on L+)
         </Text>
         <Text tag="p">
-           TALL logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
-           overlappy example here.
+          TALL logo shown top-right on Small and Medium breakpoints by design; images for those contexts will be picked to suit. However, as the image change logic happens at CRcom integration level (to avoid loading huge, unused images), we have a simpler, more
+          overlappy example here.
         </Text>
       </HeroBanner>
 

@@ -206,7 +206,8 @@ it('renders link styled as button correctly', () => {
   line-height: 1.25rem;
 }
 
-.c0 .icon-wrapper svg {
+.c0 .icon-wrapper svg,
+.c0 .icon-wrapper svg path {
   fill: #000000;
 }
 
@@ -222,7 +223,11 @@ it('renders link styled as button correctly', () => {
 .c0:hover .icon-wrapper svg,
 .c0:focus .icon-wrapper svg,
 .c0:focus-within .icon-wrapper svg,
-.c0:focus-visible .icon-wrapper svg {
+.c0:focus-visible .icon-wrapper svg,
+.c0:hover .icon-wrapper svg path,
+.c0:focus .icon-wrapper svg path,
+.c0:focus-within .icon-wrapper svg path,
+.c0:focus-visible .icon-wrapper svg path {
   fill: #000000;
 }
 

@@ -6,6 +6,7 @@ const StyledButton = styled.button`
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
+  // TODO: 4rem, will need alignment tweaks in the icon grid tho
   height: 2.5rem;
   width: 100%;
   justify-content: center;
@@ -62,8 +63,8 @@ const IconWrapper = styled.div`
   * {
     width: inherit;
     height: inherit;
-    // Use by SVGs only, but won't do any harm to img tags
-    transition: fill 0.2s;
+    // Used by SVGs only, but won't do any harm to img tags
+    transition: fill 0.1s;
   }
 `;
 

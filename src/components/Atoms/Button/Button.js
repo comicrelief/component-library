@@ -27,11 +27,10 @@ const Button = React.forwardRef(({
       $buttonType={buttonType}
       data-testid="Button"
       $hasIcon={hasIcon}
-      $hasIconPath={hasIconPath}
     >
 
       {hasIcon
-      // Wrapping span to allow for positioning
+        // Wrapping span to allow for grid positioning alongside icon
         ? <span>{children}</span>
         : children
       }
@@ -58,9 +57,15 @@ Button.propTypes = {
   fullWidth: PropTypes.bool,
   color: PropTypes.string,
   icon: PropTypes.oneOfType([
-    PropTypes.node,
     PropTypes.string,
-    PropTypes.object
+    PropTypes.object,
+    // Since React is a pain when it comes to rendering SVGs, this is the only useage where we
+    // get the 'match fill colour to text color' hover state functionality from buttonColours.js;
+    // passing in a React component wrapping SVG code, or passing SVG code directly.
+    // passing a *link* to an SVG will always just render it in an img
+    // tag, which won't allow CSS manipulation.
+    PropTypes.node
+
   ]),
   // Primary will the default for the vast majority of contexts; with
   // Secondary and Tertirary being manually set by developers where required

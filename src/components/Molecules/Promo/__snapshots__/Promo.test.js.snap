@@ -83,7 +83,8 @@ exports[`renders Promo correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c9 .icon-wrapper svg {
+.c9 .icon-wrapper svg,
+.c9 .icon-wrapper svg path {
   fill: #000000;
 }
 
@@ -99,7 +100,11 @@ exports[`renders Promo correctly 1`] = `
 .c9:hover .icon-wrapper svg,
 .c9:focus .icon-wrapper svg,
 .c9:focus-within .icon-wrapper svg,
-.c9:focus-visible .icon-wrapper svg {
+.c9:focus-visible .icon-wrapper svg,
+.c9:hover .icon-wrapper svg path,
+.c9:focus .icon-wrapper svg path,
+.c9:focus-within .icon-wrapper svg path,
+.c9:focus-visible .icon-wrapper svg path {
   fill: #000000;
 }
 
@@ -400,7 +405,8 @@ exports[`renders Promo correctly end position 1`] = `
   line-height: 1.25rem;
 }
 
-.c9 .icon-wrapper svg {
+.c9 .icon-wrapper svg,
+.c9 .icon-wrapper svg path {
   fill: #000000;
 }
 
@@ -416,7 +422,11 @@ exports[`renders Promo correctly end position 1`] = `
 .c9:hover .icon-wrapper svg,
 .c9:focus .icon-wrapper svg,
 .c9:focus-within .icon-wrapper svg,
-.c9:focus-visible .icon-wrapper svg {
+.c9:focus-visible .icon-wrapper svg,
+.c9:hover .icon-wrapper svg path,
+.c9:focus .icon-wrapper svg path,
+.c9:focus-within .icon-wrapper svg path,
+.c9:focus-visible .icon-wrapper svg path {
   fill: #000000;
 }
 

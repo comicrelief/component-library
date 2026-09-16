@@ -250,7 +250,8 @@ exports[`renders Single Message with Image correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c8 .icon-wrapper svg {
+.c8 .icon-wrapper svg,
+.c8 .icon-wrapper svg path {
   fill: #000000;
 }
 
@@ -266,7 +267,11 @@ exports[`renders Single Message with Image correctly 1`] = `
 .c8:hover .icon-wrapper svg,
 .c8:focus .icon-wrapper svg,
 .c8:focus-within .icon-wrapper svg,
-.c8:focus-visible .icon-wrapper svg {
+.c8:focus-visible .icon-wrapper svg,
+.c8:hover .icon-wrapper svg path,
+.c8:focus .icon-wrapper svg path,
+.c8:focus-within .icon-wrapper svg path,
+.c8:focus-visible .icon-wrapper svg path {
   fill: #000000;
 }
 
@@ -722,7 +727,8 @@ exports[`renders Single Message with full width correctly 1`] = `
   line-height: 1.25rem;
 }
 
-.c8 .icon-wrapper svg {
+.c8 .icon-wrapper svg,
+.c8 .icon-wrapper svg path {
   fill: #000000;
 }
 
@@ -738,7 +744,11 @@ exports[`renders Single Message with full width correctly 1`] = `
 .c8:hover .icon-wrapper svg,
 .c8:focus .icon-wrapper svg,
 .c8:focus-within .icon-wrapper svg,
-.c8:focus-visible .icon-wrapper svg {
+.c8:focus-visible .icon-wrapper svg,
+.c8:hover .icon-wrapper svg path,
+.c8:focus .icon-wrapper svg path,
+.c8:focus-within .icon-wrapper svg path,
+.c8:focus-visible .icon-wrapper svg path {
   fill: #000000;
 }
 

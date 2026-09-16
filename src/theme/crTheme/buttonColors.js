@@ -205,11 +205,13 @@ export default (colorName, buttonType) => {
       background-color: ${buttonColors[thisColourName].background};
       color: ${buttonColors[thisColourName].textColour};
       
-      // Frustratingly, trying to use the IconWrapper styled-component here directly borks the styles??
+      // Frustratingly, trying to use the IconWrapper styled-component directly here borks the styles :(
       .icon-wrapper svg {
-        fill: ${buttonColors[thisColourName].textColour};
+        &, & path {
+          fill: ${buttonColors[thisColourName].textColour};
+        }
       }
-
+        
       &:hover,
       &:focus,
       &:focus-within,
@@ -219,7 +221,9 @@ export default (colorName, buttonType) => {
         outline-offset: 3px;
 
         .icon-wrapper svg {
-          fill: ${buttonColors[thisColourName].hovertextColour};
+          &, & path {
+            fill: ${buttonColors[thisColourName].hovertextColour};
+          }
         }
       }
 
@@ -234,9 +238,10 @@ export default (colorName, buttonType) => {
         color: ${buttonColors[thisColourName].background};
 
         .icon-wrapper svg {
-          fill: ${buttonColors[thisColourName].background};
+          &, & path {
+            fill: ${buttonColors[thisColourName].background};
+          }
         }
-
         ${buttonType === theme.buttonTypes.SECONDARY && css`
           box-shadow: 0px 0px 0px 2px ${buttonColors[thisColourName].background} inset;
         `};

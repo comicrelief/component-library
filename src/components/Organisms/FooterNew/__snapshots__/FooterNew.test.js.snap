@@ -33,7 +33,8 @@ exports[`does not render copyright text when not supplied 1`] = `
   text-decoration: none;
 }
 
-.c23 .icon-wrapper svg {
+.c23 .icon-wrapper svg,
+.c23 .icon-wrapper svg path {
   fill: #000000;
 }
 
@@ -49,7 +50,11 @@ exports[`does not render copyright text when not supplied 1`] = `
 .c23:hover .icon-wrapper svg,
 .c23:focus .icon-wrapper svg,
 .c23:focus-within .icon-wrapper svg,
-.c23:focus-visible .icon-wrapper svg {
+.c23:focus-visible .icon-wrapper svg,
+.c23:hover .icon-wrapper svg path,
+.c23:focus .icon-wrapper svg path,
+.c23:focus-within .icon-wrapper svg path,
+.c23:focus-visible .icon-wrapper svg path {
   fill: #000000;
 }
 
@@ -1369,7 +1374,8 @@ exports[`renders correctly 1`] = `
   text-decoration: none;
 }
 
-.c23 .icon-wrapper svg {
+.c23 .icon-wrapper svg,
+.c23 .icon-wrapper svg path {
   fill: #000000;
 }
 
@@ -1385,7 +1391,11 @@ exports[`renders correctly 1`] = `
 .c23:hover .icon-wrapper svg,
 .c23:focus .icon-wrapper svg,
 .c23:focus-within .icon-wrapper svg,
-.c23:focus-visible .icon-wrapper svg {
+.c23:focus-visible .icon-wrapper svg,
+.c23:hover .icon-wrapper svg path,
+.c23:focus .icon-wrapper svg path,
+.c23:focus-within .icon-wrapper svg path,
+.c23:focus-visible .icon-wrapper svg path {
   fill: #000000;
 }
 

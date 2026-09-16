@@ -36,7 +36,8 @@ it('renders a standard styled link correctly', () => {
   text-decoration: none;
 }
 
-.c0 .icon-wrapper svg {
+.c0 .icon-wrapper svg,
+.c0 .icon-wrapper svg path {
   fill: #FFFFFF;
 }
 
@@ -52,7 +53,11 @@ it('renders a standard styled link correctly', () => {
 .c0:hover .icon-wrapper svg,
 .c0:focus .icon-wrapper svg,
 .c0:focus-within .icon-wrapper svg,
-.c0:focus-visible .icon-wrapper svg {
+.c0:focus-visible .icon-wrapper svg,
+.c0:hover .icon-wrapper svg path,
+.c0:focus .icon-wrapper svg path,
+.c0:focus-within .icon-wrapper svg path,
+.c0:focus-visible .icon-wrapper svg path {
   fill: #FFFFFF;
 }
 
