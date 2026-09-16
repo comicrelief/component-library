@@ -38,8 +38,6 @@ const StyledButton = styled.button`
     grid-template-columns: 1fr repeat(1, auto) 1fr;
     grid-column-gap: 0.6rem;
     justify-items: center;
-
-    // Matching the 
     grid-template-rows: 1.25rem;
 
     > *:nth-child(1) {
@@ -64,12 +62,9 @@ const IconWrapper = styled.div`
   * {
     width: inherit;
     height: inherit;
+    // Use by SVGs only, but won't do any harm to img tags
+    transition: fill 0.2s;
   }
-
-  // TODO: colour-change logic based on Button colour and hover state:
-  // svg {
-  //   fill: black;
-  // }
 `;
 
 export { StyledButton, IconWrapper };

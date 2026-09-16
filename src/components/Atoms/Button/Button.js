@@ -37,7 +37,7 @@ const Button = React.forwardRef(({
       }
 
       {hasIcon && (
-        <IconWrapper>
+        <IconWrapper className="icon-wrapper">
           {hasIconPath ? (
             <Picture
               alt=""

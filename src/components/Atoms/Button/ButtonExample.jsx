@@ -121,7 +121,8 @@ export default function ButtonExample() {
       <ExampleContainer>
         <Button
           type="button"
-          icon={<Cross size={48} colour="white" />}
+          icon={<Cross />}
+
         >
           Button with an Icon component
         </Button>
@@ -148,7 +149,8 @@ export default function ButtonExample() {
       <ExampleContainer>
         <Button
           type="button"
-          icon={<Cross size={48} colour="white" />}
+          icon={<Cross />}
+
           fullWidth
           color="black"
         >
@@ -181,10 +183,13 @@ export default function ButtonExample() {
       <br />
       <h3>Button variants with Icons</h3>
 
+      <h4>Primary</h4>
+
       <ExampleContainer>
         <Button
           type="button"
-          icon={<Cross size={48} colour="white" />}
+          icon={<Cross />}
+
         >
           Primary red button (default)
         </Button>
@@ -193,62 +198,131 @@ export default function ButtonExample() {
       <ExampleContainer>
         <Button
           type="button"
-          icon={<Cross size={48} colour="white" />}
-          disabled
-        >
-          Primary red button (default): disabled
-        </Button>
-      </ExampleContainer>
-
-      <ExampleContainer>
-        <Button
-          type="button"
           color="black"
-          icon={<Cross size={48} colour="white" />}
+          icon={<Cross />}
+
         >
           Primary black button
         </Button>
       </ExampleContainer>
 
-      <ExampleContainer>
-        <Button
-          type="button"
-          color="black"
-          disabled
-          icon={<Cross size={48} colour="white" />}
-        >
-          Primary black button: disabled
-        </Button>
-      </ExampleContainer>
-
       <ExampleContainer $bg="#222222">
         <Button
           type="button"
           color="white"
-          icon={<Cross size={48} colour="black" />}
+          icon={<Cross />}
+
         >
           Primary white button
         </Button>
       </ExampleContainer>
 
-      <ExampleContainer $bg="#222222">
+      <br />
+      <h4>Secondary</h4>
+
+      <ExampleContainer>
         <Button
           type="button"
-          color="white"
-          disabled
-          icon={<Cross size={48} colour="black" />}
+          buttonType={buttonTypes.SECONDARY}
+          icon={<Cross />}
+
         >
-          Primary white button: disabled
+          Secondary red button
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          color="black"
+          buttonType={buttonTypes.SECONDARY}
+          icon={<Cross />}
+
+        >
+          Secondary black button
         </Button>
       </ExampleContainer>
 
       <ExampleContainer $bg="#222222">
         <Button
           type="button"
-          color="non-existent-colour"
-          icon={<Cross size={48} colour="white" />}
+          color="white"
+          buttonType={buttonTypes.SECONDARY}
+          icon={<Cross />}
+
         >
-          Using a non-existent colour will default to red
+          Secondary white button
+        </Button>
+      </ExampleContainer>
+
+      <br />
+      <h3>Tertiary</h3>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          buttonType={buttonTypes.TERTIARY}
+          icon={<Cross />}
+
+        >
+          Tertiary red button
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          color="black"
+          buttonType={buttonTypes.TERTIARY}
+          icon={<Cross />}
+
+        >
+          Tertiary black button
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer $bg="#222222">
+        <Button
+          type="button"
+          color="white"
+          buttonType={buttonTypes.TERTIARY}
+          icon={<Cross />}
+
+        >
+          Tertiary white button
+        </Button>
+      </ExampleContainer>
+
+      <br />
+      <h3>A few funky offerings to show different hover state colours:</h3>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          color="blue_light"
+          icon={<Cross />}
+        >
+          blue_light button with icon
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          color="teal_dark"
+          icon={<Cross />}
+        >
+          teal_dark button with icon
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          color="yellow_light"
+          icon={<Cross />}
+        >
+          yellow_light button with icon
         </Button>
       </ExampleContainer>
 

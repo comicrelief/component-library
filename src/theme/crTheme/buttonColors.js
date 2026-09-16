@@ -172,7 +172,7 @@ const buttonColors = {
     background: 'rgba(255, 255, 255, 0.5)',
     color: 'inherit',
     hoverBackground: 'rgba(255, 255, 255, 0.7)',
-    hoverColor: 'inherit'
+    hovertextColour: 'inherit'
   },
   yellow: {
     background: color('yellow'),
@@ -204,14 +204,23 @@ export default (colorName, buttonType) => {
     style = css`
       background-color: ${buttonColors[thisColourName].background};
       color: ${buttonColors[thisColourName].textColour};
+      
+      // Frustratingly, trying to use the IconWrapper styled-component here directly borks the styles??
+      .icon-wrapper svg {
+        fill: ${buttonColors[thisColourName].textColour};
+      }
 
       &:hover,
       &:focus,
       &:focus-within,
       &:focus-visible {
         background-color: ${buttonColors[thisColourName].hoverBackground};
-        color: ${buttonColors[thisColourName].hoverColor};
+        color: ${buttonColors[thisColourName].hovertextColour};
         outline-offset: 3px;
+
+        .icon-wrapper svg {
+          fill: ${buttonColors[thisColourName].hovertextColour};
+        }
       }
 
       &:disabled {
@@ -224,6 +233,10 @@ export default (colorName, buttonType) => {
         background-color: transparent;
         color: ${buttonColors[thisColourName].background};
 
+        .icon-wrapper svg {
+          fill: ${buttonColors[thisColourName].background};
+        }
+
         ${buttonType === theme.buttonTypes.SECONDARY && css`
           box-shadow: 0px 0px 0px 2px ${buttonColors[thisColourName].background} inset;
         `};
@@ -234,6 +247,10 @@ export default (colorName, buttonType) => {
         &:focus-visible {
           color: ${buttonColors[thisColourName].hoverBackground};
           background-color: transparent;
+
+          .icon-wrapper svg {
+            fill: ${buttonColors[thisColourName].hoverBackground};
+          }
 
           ${buttonType === theme.buttonTypes.SECONDARY && css`
             box-shadow: 0px 0px 0px 2px ${buttonColors[thisColourName].hoverBackground} inset;
