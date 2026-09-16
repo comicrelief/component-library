@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { isString } from 'lodash';
 import { StyledButton, IconWrapper } from './Button.style';
 import buttonTypes from '../../../theme/crTheme/buttonTypes';
+import Picture from '../Picture/Picture';
 
 const Button = React.forwardRef(({
   children,
@@ -28,18 +29,20 @@ const Button = React.forwardRef(({
       $hasIcon={hasIcon}
       $hasIconPath={hasIconPath}
     >
-      {/* Text */}
-      {children}
 
-      {/* Icon */}
+      {hasIcon
+      // Wrapping span to allow for positioning
+        ? <span>{children}</span>
+        : children
+      }
+
       {hasIcon && (
         <IconWrapper>
-
           {hasIconPath ? (
-            // TODO: use Picture component
-            <img
-              src={icon}
+            <Picture
               alt=""
+              image={icon}
+              objectFit="contain"
             />
           ) : (icon)}
         </IconWrapper>

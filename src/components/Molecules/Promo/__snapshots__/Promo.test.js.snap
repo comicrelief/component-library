@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Promo correctly 1`] = `
+.c2 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c3 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .c7 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
@@ -80,20 +94,6 @@ exports[`renders Promo correctly 1`] = `
 .c9:disabled {
   cursor: not-allowed;
   opacity: 0.5;
-}
-
-.c2 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c3 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c0 {
@@ -306,6 +306,20 @@ exports[`renders Promo correctly 1`] = `
 `;
 
 exports[`renders Promo correctly end position 1`] = `
+.c2 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c3 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .c7 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
@@ -385,20 +399,6 @@ exports[`renders Promo correctly end position 1`] = `
 .c9:disabled {
   cursor: not-allowed;
   opacity: 0.5;
-}
-
-.c2 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c3 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c0 {

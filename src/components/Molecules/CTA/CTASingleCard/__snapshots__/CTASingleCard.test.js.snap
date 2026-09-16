@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly with data prop 1`] = `
+.c9 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c10 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .c14 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -26,20 +40,6 @@ exports[`renders correctly with data prop 1`] = `
 .c3:focus {
   color: #000000;
   text-decoration: none;
-}
-
-.c9 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c10 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c19 {

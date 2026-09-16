@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`handles data structure correctly 1`] = `
+.c11 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c12 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .c15 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -26,20 +40,6 @@ exports[`handles data structure correctly 1`] = `
 .c5:focus {
   color: #000000;
   text-decoration: none;
-}
-
-.c11 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c12 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c20 {
@@ -703,6 +703,20 @@ exports[`handles data structure correctly 1`] = `
 `;
 
 exports[`renders 2 columns layout correctly 1`] = `
+.c11 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c12 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .c15 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -728,20 +742,6 @@ exports[`renders 2 columns layout correctly 1`] = `
 .c5:focus {
   color: #000000;
   text-decoration: none;
-}
-
-.c11 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c12 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c20 {
@@ -1438,6 +1438,20 @@ exports[`renders 2 columns layout correctly 1`] = `
 `;
 
 exports[`renders carousel mode correctly 1`] = `
+.c11 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c12 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .c15 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -1463,20 +1477,6 @@ exports[`renders carousel mode correctly 1`] = `
 .c5:focus {
   color: #000000;
   text-decoration: none;
-}
-
-.c11 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c12 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c20 {
@@ -2153,6 +2153,20 @@ exports[`renders carousel mode correctly 1`] = `
 `;
 
 exports[`renders correctly with data prop 1`] = `
+.c11 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c12 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .c15 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -2178,20 +2192,6 @@ exports[`renders correctly with data prop 1`] = `
 .c5:focus {
   color: #000000;
   text-decoration: none;
-}
-
-.c11 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c12 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c20 {

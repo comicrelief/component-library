@@ -34,20 +34,40 @@ const StyledButton = styled.button`
   }
 
   ${({ $hasIcon }) => $hasIcon && css`
-    justify-content: space-between;
-    gap: 0.6rem;
+    display: grid;
+    grid-template-columns: 1fr repeat(1, auto) 1fr;
+    grid-column-gap: 0.6rem;
+    justify-items: center;
+
+    // Matching the 
+    grid-template-rows: 1.25rem;
+
+    > *:nth-child(1) {
+      grid-column-start: 2;
+      // To re-centre the copy against the 'gap'
+      // padding-left: 0.6rem
+    }
+    
+    > *:nth-child(2) {
+      margin-left: auto;
+    }
   `}
 `;
 
 const IconWrapper = styled.div`
   width: auto;
   height: 100%;
+  margin-left: auto;
 
-    > img,
-    > svg {
-      width: inherit;
-      height: inherit
-    }
+  * {
+    width: inherit;
+    height: inherit;
+  }
+
+  // TODO: colour-change logic based on Button colour and hover state:
+  // svg {
+  //   fill: black;
+  // }
 `;
 
 export { StyledButton, IconWrapper };
