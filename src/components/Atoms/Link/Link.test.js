@@ -206,12 +206,24 @@ it('renders link styled as button correctly', () => {
   line-height: 1.25rem;
 }
 
+.c0 .icon-wrapper svg {
+  fill: #000000;
+}
+
 .c0:hover,
 .c0:focus,
 .c0:focus-within,
 .c0:focus-visible {
   background-color: #FEFD5A;
+  color: #000000;
   outline-offset: 3px;
+}
+
+.c0:hover .icon-wrapper svg,
+.c0:focus .icon-wrapper svg,
+.c0:focus-within .icon-wrapper svg,
+.c0:focus-visible .icon-wrapper svg {
+  fill: #000000;
 }
 
 .c0:disabled {

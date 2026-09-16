@@ -49,12 +49,24 @@ exports[`renders Column view correctly 1`] = `
   line-height: 1.25rem;
 }
 
+.c7 .icon-wrapper svg {
+  fill: #FFFFFF;
+}
+
 .c7:hover,
 .c7:focus,
 .c7:focus-within,
 .c7:focus-visible {
   background-color: #890B11;
+  color: #FFFFFF;
   outline-offset: 3px;
+}
+
+.c7:hover .icon-wrapper svg,
+.c7:focus .icon-wrapper svg,
+.c7:focus-within .icon-wrapper svg,
+.c7:focus-visible .icon-wrapper svg {
+  fill: #FFFFFF;
 }
 
 .c7:disabled {
@@ -299,12 +311,24 @@ exports[`renders correctly 1`] = `
   line-height: 1.25rem;
 }
 
+.c7 .icon-wrapper svg {
+  fill: #FFFFFF;
+}
+
 .c7:hover,
 .c7:focus,
 .c7:focus-within,
 .c7:focus-visible {
   background-color: #890B11;
+  color: #FFFFFF;
   outline-offset: 3px;
+}
+
+.c7:hover .icon-wrapper svg,
+.c7:focus .icon-wrapper svg,
+.c7:focus-within .icon-wrapper svg,
+.c7:focus-visible .icon-wrapper svg {
+  fill: #FFFFFF;
 }
 
 .c7:disabled {

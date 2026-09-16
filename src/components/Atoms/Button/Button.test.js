@@ -36,12 +36,24 @@ it('renders a standard styled link correctly', () => {
   text-decoration: none;
 }
 
+.c0 .icon-wrapper svg {
+  fill: #FFFFFF;
+}
+
 .c0:hover,
 .c0:focus,
 .c0:focus-within,
 .c0:focus-visible {
   background-color: #890B11;
+  color: #FFFFFF;
   outline-offset: 3px;
+}
+
+.c0:hover .icon-wrapper svg,
+.c0:focus .icon-wrapper svg,
+.c0:focus-within .icon-wrapper svg,
+.c0:focus-visible .icon-wrapper svg {
+  fill: #FFFFFF;
 }
 
 .c0:disabled {

@@ -28,12 +28,24 @@ exports[`Image banner left orientation renders correctly 1`] = `
   text-decoration: none;
 }
 
+.c21 .icon-wrapper svg {
+  fill: #FFFFFF;
+}
+
 .c21:hover,
 .c21:focus,
 .c21:focus-within,
 .c21:focus-visible {
   background-color: #890B11;
+  color: #FFFFFF;
   outline-offset: 3px;
+}
+
+.c21:hover .icon-wrapper svg,
+.c21:focus .icon-wrapper svg,
+.c21:focus-within .icon-wrapper svg,
+.c21:focus-visible .icon-wrapper svg {
+  fill: #FFFFFF;
 }
 
 .c21:disabled {
@@ -672,12 +684,24 @@ exports[`Image banner renders correctly 1`] = `
   text-decoration: none;
 }
 
+.c21 .icon-wrapper svg {
+  fill: #FFFFFF;
+}
+
 .c21:hover,
 .c21:focus,
 .c21:focus-within,
 .c21:focus-visible {
   background-color: #890B11;
+  color: #FFFFFF;
   outline-offset: 3px;
+}
+
+.c21:hover .icon-wrapper svg,
+.c21:focus .icon-wrapper svg,
+.c21:focus-within .icon-wrapper svg,
+.c21:focus-visible .icon-wrapper svg {
+  fill: #FFFFFF;
 }
 
 .c21:disabled {
@@ -1316,12 +1340,24 @@ exports[`Text-only email widget renders correctly 1`] = `
   text-decoration: none;
 }
 
+.c21 .icon-wrapper svg {
+  fill: #FFFFFF;
+}
+
 .c21:hover,
 .c21:focus,
 .c21:focus-within,
 .c21:focus-visible {
   background-color: #890B11;
+  color: #FFFFFF;
   outline-offset: 3px;
+}
+
+.c21:hover .icon-wrapper svg,
+.c21:focus .icon-wrapper svg,
+.c21:focus-within .icon-wrapper svg,
+.c21:focus-visible .icon-wrapper svg {
+  fill: #FFFFFF;
 }
 
 .c21:disabled {
@@ -1960,12 +1996,24 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   text-decoration: none;
 }
 
+.c21 .icon-wrapper svg {
+  fill: #FFFFFF;
+}
+
 .c21:hover,
 .c21:focus,
 .c21:focus-within,
 .c21:focus-visible {
   background-color: #890B11;
+  color: #FFFFFF;
   outline-offset: 3px;
+}
+
+.c21:hover .icon-wrapper svg,
+.c21:focus .icon-wrapper svg,
+.c21:focus-within .icon-wrapper svg,
+.c21:focus-visible .icon-wrapper svg {
+  fill: #FFFFFF;
 }
 
 .c21:disabled {
