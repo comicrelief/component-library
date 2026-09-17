@@ -36,11 +36,6 @@ it('renders a standard styled link correctly', () => {
   text-decoration: none;
 }
 
-.c0 .icon-wrapper svg,
-.c0 .icon-wrapper svg path {
-  fill: #FFFFFF;
-}
-
 .c0:hover,
 .c0:focus,
 .c0:focus-within,
@@ -48,17 +43,6 @@ it('renders a standard styled link correctly', () => {
   background-color: #890B11;
   color: #FFFFFF;
   outline-offset: 3px;
-}
-
-.c0:hover .icon-wrapper svg,
-.c0:focus .icon-wrapper svg,
-.c0:focus-within .icon-wrapper svg,
-.c0:focus-visible .icon-wrapper svg,
-.c0:hover .icon-wrapper svg path,
-.c0:focus .icon-wrapper svg path,
-.c0:focus-within .icon-wrapper svg path,
-.c0:focus-visible .icon-wrapper svg path {
-  fill: #FFFFFF;
 }
 
 .c0:disabled {

@@ -73,11 +73,6 @@ it('renders correctly', () => {
   line-height: 1.25rem;
 }
 
-.c5 .icon-wrapper svg,
-.c5 .icon-wrapper svg path {
-  fill: #000000;
-}
-
 .c5:hover,
 .c5:focus,
 .c5:focus-within,
@@ -85,17 +80,6 @@ it('renders correctly', () => {
   background-color: #E1E2E3;
   color: #000000;
   outline-offset: 3px;
-}
-
-.c5:hover .icon-wrapper svg,
-.c5:focus .icon-wrapper svg,
-.c5:focus-within .icon-wrapper svg,
-.c5:focus-visible .icon-wrapper svg,
-.c5:hover .icon-wrapper svg path,
-.c5:focus .icon-wrapper svg path,
-.c5:focus-within .icon-wrapper svg path,
-.c5:focus-visible .icon-wrapper svg path {
-  fill: #000000;
 }
 
 .c5:disabled {

@@ -57,11 +57,7 @@ Button.propTypes = {
   fullWidth: PropTypes.bool,
   color: PropTypes.string,
   icon: PropTypes.oneOfType([
-    // Since React is a pain when it comes to rendering SVGs, this is the only useage where we
-    // get the 'match fill colour to text color' hover state functionality from buttonColours.js;
-    // passing in a React component wrapping SVG code, or passing SVG code directly.
-    // Passing a *link* to an SVG will always just render it in an img
-    // tag, something that doesn't allow for CSS manipulation.
+    // SVG / React component wrapping SVG code:
     PropTypes.node,
     // Icon URL
     PropTypes.string

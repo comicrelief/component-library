@@ -9,12 +9,11 @@ const IconWrapper = styled.div`
   width: auto;
   height: 100%;
   margin-left: auto;
+  transition: filter 0.2s;
 
   * {
     width: inherit;
     height: inherit;
-    // Used by SVGs only, but won't do any harm to img tags
-    transition: fill 0.1s;
   }
 `;
 
@@ -57,12 +56,13 @@ const StyledButton = styled.button`
     grid-template-rows: 1.75rem;
     justify-items: center;
 
-    // Our copy wrapper:
     > ${Copywrapper} {
       grid-column-start: 2;
 
       // Request from Curtis to aesthetically rebalance these smaller buttons:
-      ${({ $fullWidth }) => (!$fullWidth && css`padding-right: 0.6rem`)};
+      ${({ $fullWidth }) => (!$fullWidth && css`
+        padding-right: 0.6rem
+      `)};
     }
     
     > ${IconWrapper} {
