@@ -14,13 +14,13 @@ it('renders a standard styled link correctly', () => {
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
   border: none;
   cursor: pointer;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 0.5rem;
   background-color: #E52630;
   color: #FFFFFF;

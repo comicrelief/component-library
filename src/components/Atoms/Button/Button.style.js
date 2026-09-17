@@ -6,14 +6,13 @@ const StyledButton = styled.button`
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  // TODO: 4rem, will need alignment tweaks in the icon grid tho
-  height: 2.5rem;
+  height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
   border: none;
   cursor: pointer;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 0.5rem;
 
   > a {
@@ -38,13 +37,14 @@ const StyledButton = styled.button`
     display: inline-grid;
     grid-template-columns: 1fr repeat(1, auto) 1fr;
     grid-column-gap: 0.6rem;
+    grid-template-rows: 1.75rem;
     justify-items: center;
-    grid-template-rows: 1.25rem;
 
-    > *:nth-child(1) {
+    // Wildcarding, just in case.
+    > span:nth-child(1) {
       grid-column-start: 2;
 
-      // Curtis request to rebalance the copy
+      // Curtis request to rebalance th
       ${({ $fullWidth }) => (!$fullWidth && css`padding-right: 0.6rem
     `)};
     }
