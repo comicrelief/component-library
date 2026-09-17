@@ -35,7 +35,7 @@ const StyledButton = styled.button`
   }
 
   ${({ $hasIcon }) => $hasIcon && css`
-    display: grid;
+    display: inline-grid;
     grid-template-columns: 1fr repeat(1, auto) 1fr;
     grid-column-gap: 0.6rem;
     justify-items: center;

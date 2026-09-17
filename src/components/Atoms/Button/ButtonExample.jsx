@@ -33,7 +33,7 @@ export default function ButtonExample() {
       <h3>Primary</h3>
 
       <ExampleContainer>
-        <Button type="button">Primary red button (default)</Button>
+        <Button type="button" wrapper>Primary red button (default)</Button>
       </ExampleContainer>
 
       <ExampleContainer>
@@ -341,8 +341,9 @@ export default function ButtonExample() {
           type="button"
           color="teal_dark"
           icon={testIconComponent}
+          wrapper
         >
-          teal_dark button using React component
+          teal_dark button (as span) using React component
         </Button>
       </ExampleContainer>
     </>
