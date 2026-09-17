@@ -60,8 +60,8 @@ Button.propTypes = {
     // Since React is a pain when it comes to rendering SVGs, this is the only useage where we
     // get the 'match fill colour to text color' hover state functionality from buttonColours.js;
     // passing in a React component wrapping SVG code, or passing SVG code directly.
-    // passing a *link* to an SVG will always just render it in an img
-    // tag, which won't allow CSS manipulation.
+    // Passing a *link* to an SVG will always just render it in an img
+    // tag, something that doesn't allow for CSS manipulation.
     PropTypes.node,
     // Icon URL
     PropTypes.string

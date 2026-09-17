@@ -44,9 +44,8 @@ const StyledButton = styled.button`
     > span:nth-child(1) {
       grid-column-start: 2;
 
-      // Curtis request to rebalance th
-      ${({ $fullWidth }) => (!$fullWidth && css`padding-right: 0.6rem
-    `)};
+      // Curtis request to aesthetically rebalance these smaller buttons:
+      ${({ $fullWidth }) => (!$fullWidth && css`padding-right: 0.6rem`)};
     }
     
     > *:nth-child(2) {

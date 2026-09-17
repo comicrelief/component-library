@@ -6,6 +6,9 @@ import Cross from '../Icons/Cross';
 import { ButtonIconImgPath, ButtonIconSvgPath } from '../../../data/data';
 
 export default function ButtonExample() {
+  // Covering all of the use cases:
+  const testIconComponent = <Cross />;
+
   const testImage = (
     <img
       src={ButtonIconImgPath}
@@ -19,8 +22,6 @@ export default function ButtonExample() {
       alt="Test svg in img tag"
     />
   );
-
-  const testIconComponent = <Cross />;
 
   const inlineSvg = (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -314,7 +315,7 @@ export default function ButtonExample() {
       <br />
       <h4>
         A few funky offerings that include changing text colours on hover, showing icon hover-state
-        changes possible when passing SVG code directly or wrapped in React component:
+        changes possible when passing SVG code either directly or wrapped in a React component:
       </h4>
 
       <ExampleContainer>
