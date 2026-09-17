@@ -34,7 +34,7 @@ export default function ButtonExample() {
       <h3>Primary</h3>
 
       <ExampleContainer>
-        <Button type="button" wrapper>Primary red button (default)</Button>
+        <Button type="button">Primary red button (default)</Button>
       </ExampleContainer>
 
       <ExampleContainer>
@@ -133,8 +133,9 @@ export default function ButtonExample() {
         <Button
           type="button"
           icon={testIconComponent}
+          wrapper
         >
-          Button with an Icon component
+          Button with an Icon component - rendered as span
         </Button>
       </ExampleContainer>
 
