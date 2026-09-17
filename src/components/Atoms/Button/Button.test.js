@@ -20,7 +20,7 @@ it('renders a standard styled link correctly', () => {
   align-items: center;
   border: none;
   cursor: pointer;
-  padding: 0.6rem 1.5rem;
+  padding: 0.6rem 1rem;
   border-radius: 0.5rem;
   background-color: #E52630;
   color: #FFFFFF;

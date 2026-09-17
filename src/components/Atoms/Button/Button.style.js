@@ -12,7 +12,7 @@ const StyledButton = styled.button`
   align-items: center;
   border: none;
   cursor: pointer;
-  padding: 0.6rem 1.5rem;
+  padding: 0.6rem 1rem;
   border-radius: 0.5rem;
 
   > a {
