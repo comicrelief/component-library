@@ -26,7 +26,7 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 }
 
 .c23 {
-  fill: inherit;
+  fill: #000000;
 }
 
 .c9 {
@@ -619,7 +619,7 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 }
 
 .c17 {
-  fill: inherit;
+  fill: #000000;
 }
 
 .c3 {
