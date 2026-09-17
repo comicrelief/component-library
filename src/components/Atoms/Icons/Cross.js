@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { withTheme } from 'styled-components';
 
 const Icon = styled.svg`
-  fill: ${({ colour, theme }) => theme.color(colour)};
+  fill: ${({ $colour, theme }) => theme.color($colour)};
 `;
 
 const Cross = ({
