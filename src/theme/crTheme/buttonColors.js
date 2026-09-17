@@ -170,7 +170,7 @@ const buttonColors = {
   },
   transparent: {
     background: 'rgba(255, 255, 255, 0.5)',
-    color: 'inherit',
+    textColour: 'inherit',
     hoverBackground: 'rgba(255, 255, 255, 0.7)',
     hovertextColour: 'inherit'
   },
