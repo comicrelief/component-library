@@ -262,6 +262,12 @@ exports[`handle a Dynamic Gallery with mocked gallery nodes 1`] = `
 }
 
 @media (min-width: 1024px) {
+  .c23 {
+    fill: #000000;
+  }
+}
+
+@media (min-width: 1024px) {
   .c11 {
     margin-top: 84px;
   }
@@ -791,6 +797,12 @@ exports[`renders an empty Dynamic Gallery with no options set 1`] = `
 
 @media (min-width: 1024px) {
   .c14 {
+    fill: #000000;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c17 {
     fill: #000000;
   }
 }

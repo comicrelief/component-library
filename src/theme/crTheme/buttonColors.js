@@ -242,6 +242,7 @@ export default (colorName, buttonType) => {
             fill: ${buttonColors[thisColourName].background};
           }
         }
+
         ${buttonType === theme.buttonTypes.SECONDARY && css`
           box-shadow: 0px 0px 0px 2px ${buttonColors[thisColourName].background} inset;
         `};
@@ -254,7 +255,9 @@ export default (colorName, buttonType) => {
           background-color: transparent;
 
           .icon-wrapper svg {
-            fill: ${buttonColors[thisColourName].hoverBackground};
+            &, & path {
+              fill: ${buttonColors[thisColourName].hoverBackground};
+            }
           }
 
           ${buttonType === theme.buttonTypes.SECONDARY && css`
