@@ -28,7 +28,7 @@ const BodyCopy = styled.div`
 `;
 
 const FiltersWrapper = styled.div`
-//
+  display: ${({ $show }) => ($show ? 'block' : 'none')}
 `;
 
 const ShowHideFiltersBtn = styled(Button)`

@@ -19,12 +19,14 @@ const FilterCard = ({
   title,
   body
 }) => {
-  const [showFilters, setShowFilters] = useState(true);
+  const [showFilters, setShowFilters] = useState(false);
   const [currentFilters, setCurrentFilters] = useState([]);
 
-  const showHideFilterText = showFilters ? 'Show filters' : 'Hide filters';
+  const showHideFilterText = showFilters ? 'Hide filters' : 'Show filters';
   const showHideFilterColour = showFilters ? 'black' : 'grey_medium';
   const showHideFilterButtonType = showFilters ? buttonTypes.SECONDARY : buttonTypes.PRIMARY;
+  const contentFiltered = currentFilters.length > 0;
+  console.log('contentFiltered', contentFiltered);
 
   // Just for fun for now
   const fakeTags = ['Fundraising packs', 'Posters', 'Bake', 'Thank you', 'Schools', 'Pay in', 'Certificates', 'Workplace'];
@@ -38,6 +40,8 @@ const FilterCard = ({
     } else {
       updatedFilters.pop(thisTag);
     }
+
+    console.log('updatedFilters', updatedFilters);
 
     setCurrentFilters(updatedFilters);
   };
@@ -63,27 +67,30 @@ const FilterCard = ({
           $showFilters={showFilters}
           $borderColour={showHideFilterColour}
           onClick={() => { setShowFilters(!showFilters); }}
+          aria-pressed={showFilters}
         >
           {showHideFilterText}
         </ShowHideFiltersBtn>
 
-        <FiltersWrapper>
-          { fakeTags.map(tag => {
-            console.log('currentFilters.indexOf(tag)', currentFilters.indexOf(tag));
+        {/* <ShowHideFiltersBtn
+          disabled={contentFiltered}
+        >
+          Clear selection
+        </ShowHideFiltersBtn> */}
 
-            return (
-              <FilterButton
-                type="button"
+        <FiltersWrapper $show={showFilters}>
+          { fakeTags.map(tag => (
+            <FilterButton
+              type="button"
               // buttonType={showHideFilterButtonType}
               // color={showHideFilterColour}
               // $borderColour={showHideFilterColour}
-                value={tag}
-                onClick={() => { updateFilters(tag); }}
-              >
-                {tag}
-              </FilterButton>
-            );
-          })}
+              value={tag}
+              onClick={() => { updateFilters(tag); }}
+            >
+              {tag}
+            </FilterButton>
+          ))}
         </FiltersWrapper>
       </FilterSection>
 
