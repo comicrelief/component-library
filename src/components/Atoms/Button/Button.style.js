@@ -1,6 +1,23 @@
 import styled, { css } from 'styled-components';
 import fontHelper from '../../../theme/crTheme/fontHelper';
 
+const Copywrapper = styled.span`
+  // Purely for some cleaner markup :)
+`;
+
+const IconWrapper = styled.div`
+  width: auto;
+  height: 100%;
+  margin-left: auto;
+
+  * {
+    width: inherit;
+    height: inherit;
+    // Used by SVGs only, but won't do any harm to img tags
+    transition: fill 0.1s;
+  }
+`;
+
 const StyledButton = styled.button`
   display: inline-flex;
   position: relative;
@@ -40,31 +57,18 @@ const StyledButton = styled.button`
     grid-template-rows: 1.75rem;
     justify-items: center;
 
-    // Wildcarding, just in case.
-    > span:nth-child(1) {
+    // Our copy wrapper:
+    > ${Copywrapper} {
       grid-column-start: 2;
 
-      // Curtis request to aesthetically rebalance these smaller buttons:
+      // Request from Curtis to aesthetically rebalance these smaller buttons:
       ${({ $fullWidth }) => (!$fullWidth && css`padding-right: 0.6rem`)};
     }
     
-    > *:nth-child(2) {
+    > ${IconWrapper} {
       margin-left: auto;
     }
   `}
 `;
 
-const IconWrapper = styled.div`
-  width: auto;
-  height: 100%;
-  margin-left: auto;
-
-  * {
-    width: inherit;
-    height: inherit;
-    // Used by SVGs only, but won't do any harm to img tags
-    transition: fill 0.1s;
-  }
-`;
-
-export { StyledButton, IconWrapper };
+export { StyledButton, IconWrapper, Copywrapper };

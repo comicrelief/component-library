@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyledButton, IconWrapper } from './Button.style';
+import { StyledButton, IconWrapper, Copywrapper } from './Button.style';
 import buttonTypes from '../../../theme/crTheme/buttonTypes';
 import Picture from '../Picture/Picture';
 
@@ -8,10 +8,10 @@ const Button = React.forwardRef(({
   children,
   color = 'red',
   icon = null,
+  iconDescription = 'Icon',
   wrapper = false,
   fullWidth = false,
   buttonType = buttonTypes.PRIMARY,
-  iconDescription = 'Icon',
   ...rest
 }, ref) => {
   const hasIcon = Boolean(icon);
@@ -31,7 +31,7 @@ const Button = React.forwardRef(({
 
       {hasIcon
         // Wrapping span to allow for grid positioning alongside icon
-        ? <span>{children}</span>
+        ? <Copywrapper>{children}</Copywrapper>
         : children
       }
 
