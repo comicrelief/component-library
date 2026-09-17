@@ -61,6 +61,7 @@ exports[`renders a Quote Slice with basic props 1`] = `
 .c8:focus-within,
 .c8:focus-visible {
   background-color: #E1E2E3;
+  color: #000000;
   outline-offset: 3px;
 }
 

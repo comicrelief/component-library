@@ -2,8 +2,41 @@ import React from 'react';
 import Button from './Button';
 import buttonTypes from '../../../theme/crTheme/buttonTypes';
 import { ExampleContainer } from '../../../demos/SharedStyles';
+import Cross from '../Icons/Cross';
+import { ButtonIconImgPath, ButtonIconSvgPath } from '../../../data/data';
 
 export default function ButtonExample() {
+  // Covering all of the use cases:
+  const blackCrossIcon = <Cross />;
+  const whiteCrossIcon = <Cross colour="white" />;
+  const redCrossIcon = <Cross colour="red" />;
+
+  const testImage = (
+    <img
+      src={ButtonIconImgPath}
+      alt="Test img tag"
+    />
+  );
+
+  const testSvgImg = (
+    <img
+      src={ButtonIconSvgPath}
+      alt="Test svg in img tag"
+    />
+  );
+
+  const whiteInlineSvg = (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M23.404 5.91909C23.439 5.84409 23.4635 5.76309 23.479 5.67859C23.4825 5.65859 23.4875 5.63909 23.4895 5.61909C23.4915 5.60459 23.496 5.59109 23.497 5.57659C23.503 5.49709 23.497 5.41959 23.4855 5.34359C23.483 5.32809 23.4785 5.31409 23.475 5.29859C23.456 5.20659 23.4265 5.11859 23.3835 5.03709C23.381 5.03209 23.381 5.02659 23.378 5.02159C23.377 5.02009 23.3755 5.01859 23.3745 5.01709C23.3275 4.93259 23.267 4.85759 23.198 4.79009C23.185 4.77709 23.1725 4.76459 23.159 4.75259C23.0895 4.69109 23.013 4.63909 22.928 4.59859C22.916 4.59309 22.9035 4.58909 22.8915 4.58409C22.812 4.55009 22.7275 4.52609 22.6385 4.51359C22.626 4.51159 22.6145 4.50809 22.602 4.50709C22.593 4.50609 22.585 4.50309 22.576 4.50259L3.07601 3.00259C2.67651 2.97059 2.28551 3.19009 2.10401 3.55559C1.92301 3.92059 1.98201 4.35959 2.25251 4.66409L5.35251 8.15159L1.29051 9.02209C0.881009 9.11009 0.569009 9.44409 0.509509 9.85909C0.450509 10.2741 0.656509 10.6816 1.02551 10.8801L7.10151 14.1521L8.01551 19.1786C8.08201 19.5446 8.34601 19.8431 8.70101 19.9541C8.80001 19.9851 8.90051 20.0001 9.00001 20.0001C9.26101 20.0001 9.51651 19.8976 9.70701 19.7071L23.207 6.20709C23.2175 6.19659 23.2225 6.18209 23.233 6.17109C23.294 6.10509 23.349 6.03309 23.391 5.95159C23.396 5.94109 23.399 5.93009 23.404 5.91909ZM5.39301 5.18709L15.544 5.96809L7.60051 7.67009L5.39301 5.18709ZM9.64251 16.9436L8.98401 13.3211C8.93001 13.0221 8.74201 12.7636 8.47401 12.6196L4.36751 10.4081L19.3985 7.18709L9.64251 16.9436ZM3.00101 18.0001C2.63401 18.0001 2.28101 17.7976 2.10551 17.4471C1.85851 16.9531 2.05851 16.3526 2.55301 16.1051L4.55301 15.1051C5.04801 14.8571 5.64801 15.0586 5.89501 15.5526C6.14201 16.0466 5.94201 16.6471 5.44751 16.8946L3.44751 17.8946C3.30351 17.9666 3.15101 18.0001 3.00101 18.0001ZM6.70701 18.2931C7.09751 18.6836 7.09751 19.3166 6.70701 19.7071L4.70701 21.7071C4.51151 21.9026 4.25601 22.0001 4.00001 22.0001C3.74401 22.0001 3.48851 21.9026 3.29301 21.7071C2.90251 21.3166 2.90251 20.6836 3.29301 20.2931L5.29301 18.2931C5.68351 17.9026 6.31651 17.9026 6.70701 18.2931Z" fill="#fff" />
+    </svg>
+  );
+
+  const blackInlineSvg = (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M23.404 5.91909C23.439 5.84409 23.4635 5.76309 23.479 5.67859C23.4825 5.65859 23.4875 5.63909 23.4895 5.61909C23.4915 5.60459 23.496 5.59109 23.497 5.57659C23.503 5.49709 23.497 5.41959 23.4855 5.34359C23.483 5.32809 23.4785 5.31409 23.475 5.29859C23.456 5.20659 23.4265 5.11859 23.3835 5.03709C23.381 5.03209 23.381 5.02659 23.378 5.02159C23.377 5.02009 23.3755 5.01859 23.3745 5.01709C23.3275 4.93259 23.267 4.85759 23.198 4.79009C23.185 4.77709 23.1725 4.76459 23.159 4.75259C23.0895 4.69109 23.013 4.63909 22.928 4.59859C22.916 4.59309 22.9035 4.58909 22.8915 4.58409C22.812 4.55009 22.7275 4.52609 22.6385 4.51359C22.626 4.51159 22.6145 4.50809 22.602 4.50709C22.593 4.50609 22.585 4.50309 22.576 4.50259L3.07601 3.00259C2.67651 2.97059 2.28551 3.19009 2.10401 3.55559C1.92301 3.92059 1.98201 4.35959 2.25251 4.66409L5.35251 8.15159L1.29051 9.02209C0.881009 9.11009 0.569009 9.44409 0.509509 9.85909C0.450509 10.2741 0.656509 10.6816 1.02551 10.8801L7.10151 14.1521L8.01551 19.1786C8.08201 19.5446 8.34601 19.8431 8.70101 19.9541C8.80001 19.9851 8.90051 20.0001 9.00001 20.0001C9.26101 20.0001 9.51651 19.8976 9.70701 19.7071L23.207 6.20709C23.2175 6.19659 23.2225 6.18209 23.233 6.17109C23.294 6.10509 23.349 6.03309 23.391 5.95159C23.396 5.94109 23.399 5.93009 23.404 5.91909ZM5.39301 5.18709L15.544 5.96809L7.60051 7.67009L5.39301 5.18709ZM9.64251 16.9436L8.98401 13.3211C8.93001 13.0221 8.74201 12.7636 8.47401 12.6196L4.36751 10.4081L19.3985 7.18709L9.64251 16.9436ZM3.00101 18.0001C2.63401 18.0001 2.28101 17.7976 2.10551 17.4471C1.85851 16.9531 2.05851 16.3526 2.55301 16.1051L4.55301 15.1051C5.04801 14.8571 5.64801 15.0586 5.89501 15.5526C6.14201 16.0466 5.94201 16.6471 5.44751 16.8946L3.44751 17.8946C3.30351 17.9666 3.15101 18.0001 3.00101 18.0001ZM6.70701 18.2931C7.09751 18.6836 7.09751 19.3166 6.70701 19.7071L4.70701 21.7071C4.51151 21.9026 4.25601 22.0001 4.00001 22.0001C3.74401 22.0001 3.48851 21.9026 3.29301 21.7071C2.90251 21.3166 2.90251 20.6836 3.29301 20.2931L5.29301 18.2931C5.68351 17.9026 6.31651 17.9026 6.70701 18.2931Z" fill="#222" />
+    </svg>
+  );
+
   return (
     <>
       <h3>Primary</h3>
@@ -99,6 +132,229 @@ export default function ButtonExample() {
 
       <ExampleContainer>
         <Button type="button" fullWidth>Full-width button</Button>
+      </ExampleContainer>
+
+      <br />
+      <h3>Buttons with Icons</h3>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          icon={whiteCrossIcon}
+          wrapper
+        >
+          Button with an Icon component - rendered as span
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          icon={ButtonIconImgPath}
+          iconDescription="House with a heart-shaped window"
+        >
+          Button w/image URL for icon
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          icon={testImage}
+        >
+          Button w/image tag passed in directly
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          icon={ButtonIconSvgPath}
+        >
+          Button w/svg URL (rendered as img) for icon
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          icon={whiteInlineSvg}
+        >
+          Button w/inline svg code passed directly
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          icon={whiteCrossIcon}
+          fullWidth
+          color="black"
+        >
+          Black full-width Button with an Icon component
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer $bg="teal">
+        <Button
+          type="button"
+          icon={ButtonIconImgPath}
+          fullWidth
+          color="white"
+        >
+          White full-width Button w/image URL for icon
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          icon={testSvgImg}
+          fullWidth
+          iconDescription="Phone icon"
+        >
+          Red full-width Button w/svg URL, rendered as img
+        </Button>
+      </ExampleContainer>
+
+      <br />
+      <h3>Button variants with Icons</h3>
+
+      <h4>Primary</h4>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          icon={whiteCrossIcon}
+        >
+          Primary red button (default)
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          color="black"
+          icon={whiteCrossIcon}
+        >
+          Primary black button
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer $bg="#222222">
+        <Button
+          type="button"
+          color="white"
+          icon={blackCrossIcon}
+        >
+          Primary white button
+        </Button>
+      </ExampleContainer>
+
+      <br />
+      <h4>Secondary</h4>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          buttonType={buttonTypes.SECONDARY}
+          icon={redCrossIcon}
+        >
+          Secondary red button
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          color="black"
+          buttonType={buttonTypes.SECONDARY}
+          icon={blackCrossIcon}
+        >
+          Secondary black button
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer $bg="#222222">
+        <Button
+          type="button"
+          color="white"
+          buttonType={buttonTypes.SECONDARY}
+          icon={whiteCrossIcon}
+        >
+          Secondary white button
+        </Button>
+      </ExampleContainer>
+
+      <br />
+      <h4>Tertiary</h4>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          buttonType={buttonTypes.TERTIARY}
+          icon={redCrossIcon}
+        >
+          Tertiary red button
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          color="black"
+          buttonType={buttonTypes.TERTIARY}
+          icon={blackCrossIcon}
+        >
+          Tertiary black button
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer $bg="#222222">
+        <Button
+          type="button"
+          color="white"
+          buttonType={buttonTypes.TERTIARY}
+          icon={whiteCrossIcon}
+        >
+          Tertiary white button
+        </Button>
+      </ExampleContainer>
+
+      <br />
+      <h4>
+        A few additional funky offerings:
+      </h4>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          color="blue_light"
+          icon={blackCrossIcon}
+        >
+          blue_light button using React component
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          color="yellow_light"
+          icon={blackInlineSvg}
+        >
+          yellow_light button using inline SVG code
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          color="teal_dark"
+          icon={whiteCrossIcon}
+          wrapper
+        >
+          teal_dark button (as span) using React component
+        </Button>
       </ExampleContainer>
     </>
   );

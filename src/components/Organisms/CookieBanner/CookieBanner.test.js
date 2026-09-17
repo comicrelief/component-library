@@ -78,6 +78,7 @@ it('renders correctly', () => {
 .c5:focus-within,
 .c5:focus-visible {
   background-color: #E1E2E3;
+  color: #000000;
   outline-offset: 3px;
 }
 

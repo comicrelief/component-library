@@ -11,7 +11,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -38,6 +38,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 .c23:focus-within,
 .c23:focus-visible {
   background-color: #E1E2E3;
+  color: #000000;
   outline-offset: 3px;
 }
 
@@ -1335,7 +1336,7 @@ exports[`renders correctly 1`] = `
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -1362,6 +1363,7 @@ exports[`renders correctly 1`] = `
 .c23:focus-within,
 .c23:focus-visible {
   background-color: #E1E2E3;
+  color: #000000;
   outline-offset: 3px;
 }
 

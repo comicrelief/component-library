@@ -14,7 +14,7 @@ it('renders a standard styled link correctly', () => {
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -41,6 +41,7 @@ it('renders a standard styled link correctly', () => {
 .c0:focus-within,
 .c0:focus-visible {
   background-color: #890B11;
+  color: #FFFFFF;
   outline-offset: 3px;
 }
 

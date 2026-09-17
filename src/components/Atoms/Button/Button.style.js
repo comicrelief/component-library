@@ -1,12 +1,28 @@
 import styled, { css } from 'styled-components';
 import fontHelper from '../../../theme/crTheme/fontHelper';
 
+const Copywrapper = styled.span`
+  // Purely for some cleaner markup :)
+`;
+
+const IconWrapper = styled.div`
+  width: auto;
+  height: 100%;
+  margin-left: auto;
+  transition: filter 0.2s;
+
+  * {
+    width: inherit;
+    height: inherit;
+  }
+`;
+
 const StyledButton = styled.button`
   display: inline-flex;
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -32,6 +48,27 @@ const StyledButton = styled.button`
     // place for now, just to avoid breaking anything downstream...
     width: ${({ $fullWidth }) => ($fullWidth ? '100%' : 'auto')};
   }
+
+  ${({ $hasIcon }) => $hasIcon && css`
+    display: inline-grid;
+    grid-template-columns: 1fr repeat(1, auto) 1fr;
+    grid-column-gap: 0.6rem;
+    grid-template-rows: 1.75rem;
+    justify-items: center;
+
+    > ${Copywrapper} {
+      grid-column-start: 2;
+
+      // Request from Curtis to aesthetically rebalance these smaller buttons:
+      ${({ $fullWidth }) => (!$fullWidth && css`
+        padding-right: 0.6rem
+      `)};
+    }
+    
+    > ${IconWrapper} {
+      margin-left: auto;
+    }
+  `}
 `;
 
-export default StyledButton;
+export { StyledButton, IconWrapper, Copywrapper };

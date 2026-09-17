@@ -19,6 +19,20 @@ it('renders article teaser correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
+.c6 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c9 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .c11 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -78,20 +92,6 @@ it('renders article teaser correctly', () => {
 .c1:focus {
   color: #000000;
   text-decoration: none;
-}
-
-.c6 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c9 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c21 {
@@ -475,6 +475,20 @@ it('renders press realese correctly', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
+.c6 {
+  display: block;
+  width: 80px;
+  height: auto;
+  position: relative;
+}
+
+.c9 {
+  width: 80px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 .c11 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -534,20 +548,6 @@ it('renders press realese correctly', () => {
 .c1:focus {
   color: #000000;
   text-decoration: none;
-}
-
-.c6 {
-  display: block;
-  width: 80px;
-  height: auto;
-  position: relative;
-}
-
-.c9 {
-  width: 80px;
-  height: auto;
-  display: block;
-  object-fit: cover;
 }
 
 .c21 {

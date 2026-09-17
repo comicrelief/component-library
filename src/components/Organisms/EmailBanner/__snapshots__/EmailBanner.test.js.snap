@@ -6,7 +6,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -33,6 +33,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
 .c21:focus-within,
 .c21:focus-visible {
   background-color: #890B11;
+  color: #FFFFFF;
   outline-offset: 3px;
 }
 
@@ -271,7 +272,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 .c20 button {
   width: 100%;
-  min-height: 48px;
 }
 
 @media (min-width: 740px) {
@@ -443,12 +443,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c20 button {
-    padding: 1rem 2rem;
   }
 }
 
@@ -650,7 +644,7 @@ exports[`Image banner renders correctly 1`] = `
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -677,6 +671,7 @@ exports[`Image banner renders correctly 1`] = `
 .c21:focus-within,
 .c21:focus-visible {
   background-color: #890B11;
+  color: #FFFFFF;
   outline-offset: 3px;
 }
 
@@ -915,7 +910,6 @@ exports[`Image banner renders correctly 1`] = `
 
 .c20 button {
   width: 100%;
-  min-height: 48px;
 }
 
 @media (min-width: 740px) {
@@ -1087,12 +1081,6 @@ exports[`Image banner renders correctly 1`] = `
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c20 button {
-    padding: 1rem 2rem;
   }
 }
 
@@ -1294,7 +1282,7 @@ exports[`Text-only email widget renders correctly 1`] = `
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -1321,6 +1309,7 @@ exports[`Text-only email widget renders correctly 1`] = `
 .c21:focus-within,
 .c21:focus-visible {
   background-color: #890B11;
+  color: #FFFFFF;
   outline-offset: 3px;
 }
 
@@ -1559,7 +1548,6 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 .c20 button {
   width: 100%;
-  min-height: 48px;
 }
 
 @media (min-width: 740px) {
@@ -1731,12 +1719,6 @@ exports[`Text-only email widget renders correctly 1`] = `
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c20 button {
-    padding: 1rem 2rem;
   }
 }
 
@@ -1938,7 +1920,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -1965,6 +1947,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 .c21:focus-within,
 .c21:focus-visible {
   background-color: #890B11;
+  color: #FFFFFF;
   outline-offset: 3px;
 }
 
@@ -2203,7 +2186,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 
 .c20 button {
   width: 100%;
-  min-height: 48px;
 }
 
 @media (min-width: 740px) {
@@ -2375,12 +2357,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c20 button {
-    padding: 1rem 2rem;
   }
 }
 

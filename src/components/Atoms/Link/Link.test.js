@@ -211,6 +211,7 @@ it('renders link styled as button correctly', () => {
 .c0:focus-within,
 .c0:focus-visible {
   background-color: #FEFD5A;
+  color: #000000;
   outline-offset: 3px;
 }
 
