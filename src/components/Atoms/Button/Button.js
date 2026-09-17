@@ -11,6 +11,7 @@ const Button = React.forwardRef(({
   wrapper = false,
   fullWidth = false,
   buttonType = buttonTypes.PRIMARY,
+  iconDescription = 'Icon',
   ...rest
 }, ref) => {
   const hasIcon = Boolean(icon);
@@ -38,9 +39,9 @@ const Button = React.forwardRef(({
         <IconWrapper className="icon-wrapper">
           {hasIconPath ? (
             <Picture
-              alt=""
               image={icon}
               objectFit="contain"
+              alt={iconDescription}
             />
           ) : (icon)}
         </IconWrapper>
@@ -64,8 +65,8 @@ Button.propTypes = {
     PropTypes.node,
     // Icon URL
     PropTypes.string
-
   ]),
+  iconDescription: PropTypes.string,
   // Primary will the default for the vast majority of contexts; with
   // Secondary and Tertirary being manually set by developers where required
   buttonType: PropTypes.oneOf([

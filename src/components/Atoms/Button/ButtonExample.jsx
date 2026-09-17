@@ -132,7 +132,6 @@ export default function ButtonExample() {
         <Button
           type="button"
           icon={testIconComponent}
-
         >
           Button with an Icon component
         </Button>
@@ -142,6 +141,7 @@ export default function ButtonExample() {
         <Button
           type="button"
           icon={ButtonIconImgPath}
+          iconDescription="House with a heart-shaped window"
         >
           Button w/image URL for icon
         </Button>
@@ -201,6 +201,7 @@ export default function ButtonExample() {
           type="button"
           icon={testSvgImg}
           fullWidth
+          iconDescription="Phone icon"
         >
           Red full-width Button w/svg URL, rendered as img
         </Button>
