@@ -61,7 +61,7 @@ const StyledButton = styled.button`
 
       // Request from Curtis to aesthetically rebalance these smaller buttons:
       ${({ $fullWidth }) => (!$fullWidth && css`
-        padding-right: 0.6rem
+        padding-right: 1.5rem;
       `)};
     }
     
