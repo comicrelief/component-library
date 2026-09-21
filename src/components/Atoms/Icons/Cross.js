@@ -3,7 +3,14 @@ import PropTypes from 'prop-types';
 import styled, { withTheme } from 'styled-components';
 
 const Icon = styled.svg`
-  fill: ${({ colour, theme }) => theme.color(colour)};
+  // Mobile-colour if available, else use standard prop
+  fill: ${({ $mobileColour, $colour, theme }) => ($mobileColour ? theme.color($mobileColour) : theme.color($colour))};
+
+  // Reinstate standard styles for 'desktop', adding a fallback for good measure:
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    fill: ${({ $colour, theme }) => ($colour ? theme.color($colour) : theme.color('white'))};
+  }
+
 `;
 
 const Cross = ({
@@ -16,8 +23,8 @@ const Cross = ({
   <Icon
     width={size}
     height={size}
-    colour={colour}
-    mobileColour={mobileColour}
+    $colour={colour}
+    $mobileColour={mobileColour}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 96 96"
     {...rest}

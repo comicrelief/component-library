@@ -55,7 +55,8 @@ it('renders correctly', () => {
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: auto;
+  min-height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -78,6 +79,7 @@ it('renders correctly', () => {
 .c5:focus-within,
 .c5:focus-visible {
   background-color: #E1E2E3;
+  color: #000000;
   outline-offset: 3px;
 }
 

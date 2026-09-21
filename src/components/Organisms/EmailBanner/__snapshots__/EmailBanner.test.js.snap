@@ -2,17 +2,19 @@
 
 exports[`Image banner left orientation renders correctly 1`] = `
 .c21 {
+  --padding-top-and-bottom: 0.6rem;
   display: inline-flex;
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: auto;
+  min-height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
   border: none;
   cursor: pointer;
-  padding: 0.6rem 1rem;
+  padding: var(--padding-top-and-bottom) 1rem;
   border-radius: 0.5rem;
   background-color: #E52630;
   color: #FFFFFF;
@@ -33,6 +35,7 @@ exports[`Image banner left orientation renders correctly 1`] = `
 .c21:focus-within,
 .c21:focus-visible {
   background-color: #890B11;
+  color: #FFFFFF;
   outline-offset: 3px;
 }
 
@@ -271,7 +274,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 .c20 button {
   width: 100%;
-  min-height: 48px;
 }
 
 @media (min-width: 740px) {
@@ -443,12 +445,6 @@ exports[`Image banner left orientation renders correctly 1`] = `
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c20 button {
-    padding: 1rem 2rem;
   }
 }
 
@@ -646,17 +642,19 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 exports[`Image banner renders correctly 1`] = `
 .c21 {
+  --padding-top-and-bottom: 0.6rem;
   display: inline-flex;
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: auto;
+  min-height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
   border: none;
   cursor: pointer;
-  padding: 0.6rem 1rem;
+  padding: var(--padding-top-and-bottom) 1rem;
   border-radius: 0.5rem;
   background-color: #E52630;
   color: #FFFFFF;
@@ -677,6 +675,7 @@ exports[`Image banner renders correctly 1`] = `
 .c21:focus-within,
 .c21:focus-visible {
   background-color: #890B11;
+  color: #FFFFFF;
   outline-offset: 3px;
 }
 
@@ -915,7 +914,6 @@ exports[`Image banner renders correctly 1`] = `
 
 .c20 button {
   width: 100%;
-  min-height: 48px;
 }
 
 @media (min-width: 740px) {
@@ -1087,12 +1085,6 @@ exports[`Image banner renders correctly 1`] = `
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c20 button {
-    padding: 1rem 2rem;
   }
 }
 
@@ -1290,17 +1282,19 @@ exports[`Image banner renders correctly 1`] = `
 
 exports[`Text-only email widget renders correctly 1`] = `
 .c21 {
+  --padding-top-and-bottom: 0.6rem;
   display: inline-flex;
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: auto;
+  min-height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
   border: none;
   cursor: pointer;
-  padding: 0.6rem 1rem;
+  padding: var(--padding-top-and-bottom) 1rem;
   border-radius: 0.5rem;
   background-color: #E52630;
   color: #FFFFFF;
@@ -1321,6 +1315,7 @@ exports[`Text-only email widget renders correctly 1`] = `
 .c21:focus-within,
 .c21:focus-visible {
   background-color: #890B11;
+  color: #FFFFFF;
   outline-offset: 3px;
 }
 
@@ -1559,7 +1554,6 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 .c20 button {
   width: 100%;
-  min-height: 48px;
 }
 
 @media (min-width: 740px) {
@@ -1731,12 +1725,6 @@ exports[`Text-only email widget renders correctly 1`] = `
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c20 button {
-    padding: 1rem 2rem;
   }
 }
 
@@ -1934,17 +1922,19 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 exports[`Text-only email widget with copyColor renders correctly 1`] = `
 .c21 {
+  --padding-top-and-bottom: 0.6rem;
   display: inline-flex;
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: auto;
+  min-height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
   border: none;
   cursor: pointer;
-  padding: 0.6rem 1rem;
+  padding: var(--padding-top-and-bottom) 1rem;
   border-radius: 0.5rem;
   background-color: #E52630;
   color: #FFFFFF;
@@ -1965,6 +1955,7 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 .c21:focus-within,
 .c21:focus-visible {
   background-color: #890B11;
+  color: #FFFFFF;
   outline-offset: 3px;
 }
 
@@ -2203,7 +2194,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 
 .c20 button {
   width: 100%;
-  min-height: 48px;
 }
 
 @media (min-width: 740px) {
@@ -2375,12 +2365,6 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
   .c8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 740px) {
-  .c20 button {
-    padding: 1rem 2rem;
   }
 }
 

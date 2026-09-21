@@ -180,8 +180,11 @@ const Button = styled.button`
   color: ${({ theme }) => theme.color('white')};
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-weight: bold;
-  min-height: 44px;
+  height: auto;
+  min-height: 3rem;
   cursor: pointer;
+  padding: 0.6rem 1rem;
+
   background: ${({ theme, $color }) => theme.color($color)};
   text-decoration: none;
   border-radius: 0.5rem;

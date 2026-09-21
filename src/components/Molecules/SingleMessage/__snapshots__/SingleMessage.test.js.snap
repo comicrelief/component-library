@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Single Message with 100% vertical height image correctly 1`] = `
+.c3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c4 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .c6 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -19,20 +33,6 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 .c6 span {
   font-size: inherit;
   line-height: inherit;
-}
-
-.c3 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c4 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c0 {
@@ -173,6 +173,20 @@ exports[`renders Single Message with 100% vertical height image correctly 1`] = 
 `;
 
 exports[`renders Single Message with Image correctly 1`] = `
+.c3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c4 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .c6 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
@@ -218,7 +232,8 @@ exports[`renders Single Message with Image correctly 1`] = `
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: auto;
+  min-height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -241,26 +256,13 @@ exports[`renders Single Message with Image correctly 1`] = `
 .c8:focus-within,
 .c8:focus-visible {
   background-color: #E1E2E3;
+  color: #000000;
   outline-offset: 3px;
 }
 
 .c8:disabled {
   cursor: not-allowed;
   opacity: 0.5;
-}
-
-.c3 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c4 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c0 {
@@ -446,6 +448,20 @@ exports[`renders Single Message with Image correctly 1`] = `
 `;
 
 exports[`renders Single Message with double image correctly 1`] = `
+.c3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c4 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .c6 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -464,20 +480,6 @@ exports[`renders Single Message with double image correctly 1`] = `
 .c6 span {
   font-size: inherit;
   line-height: inherit;
-}
-
-.c3 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c4 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c0 {
@@ -633,6 +635,20 @@ exports[`renders Single Message with double image correctly 1`] = `
 `;
 
 exports[`renders Single Message with full width correctly 1`] = `
+.c3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c4 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .c6 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
@@ -678,7 +694,8 @@ exports[`renders Single Message with full width correctly 1`] = `
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: auto;
+  min-height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -701,26 +718,13 @@ exports[`renders Single Message with full width correctly 1`] = `
 .c8:focus-within,
 .c8:focus-visible {
   background-color: #E1E2E3;
+  color: #000000;
   outline-offset: 3px;
 }
 
 .c8:disabled {
   cursor: not-allowed;
   opacity: 0.5;
-}
-
-.c3 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c4 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c0 {

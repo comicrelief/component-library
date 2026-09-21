@@ -271,8 +271,10 @@ exports[`Monthly donation renders correctly 1`] = `
   color: #FFFFFF;
   font-size: 1rem;
   font-weight: bold;
-  min-height: 44px;
+  height: auto;
+  min-height: 3rem;
   cursor: pointer;
+  padding: 0.6rem 1rem;
   background: #E52630;
   text-decoration: none;
   border-radius: 0.5rem;
@@ -1055,8 +1057,10 @@ exports[`Single donation renders correctly 1`] = `
   color: #FFFFFF;
   font-size: 1rem;
   font-weight: bold;
-  min-height: 44px;
+  height: auto;
+  min-height: 3rem;
   cursor: pointer;
+  padding: 0.6rem 1rem;
   background: #E52630;
   text-decoration: none;
   border-radius: 0.5rem;
@@ -1706,8 +1710,10 @@ exports[`Single donation with no Money Buys renders correctly 1`] = `
   color: #FFFFFF;
   font-size: 1rem;
   font-weight: bold;
-  min-height: 44px;
+  height: auto;
+  min-height: 3rem;
   cursor: pointer;
+  padding: 0.6rem 1rem;
   background: #E52630;
   text-decoration: none;
   border-radius: 0.5rem;
@@ -2218,8 +2224,10 @@ exports[`Text-only donate widget renders correctly 1`] = `
   color: #FFFFFF;
   font-size: 1rem;
   font-weight: bold;
-  min-height: 44px;
+  height: auto;
+  min-height: 3rem;
   cursor: pointer;
+  padding: 0.6rem 1rem;
   background: #E52630;
   text-decoration: none;
   border-radius: 0.5rem;
