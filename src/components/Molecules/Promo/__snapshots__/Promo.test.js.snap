@@ -65,7 +65,8 @@ exports[`renders Promo correctly 1`] = `
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: auto;
+  min-height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -371,7 +372,8 @@ exports[`renders Promo correctly end position 1`] = `
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: auto;
+  min-height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
