@@ -10,17 +10,19 @@ it('renders a standard styled link correctly', () => {
 
   expect(tree).toMatchInlineSnapshot(`
 .c0 {
+  --padding-top-and-bottom: 0.6rem;
   display: inline-flex;
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 3rem;
+  height: auto;
+  min-height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
   border: none;
   cursor: pointer;
-  padding: 0.6rem 1rem;
+  padding: var(--padding-top-and-bottom) 1rem;
   border-radius: 0.5rem;
   background-color: #E52630;
   color: #FFFFFF;

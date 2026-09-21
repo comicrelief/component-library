@@ -134,6 +134,13 @@ export default function ButtonExample() {
         <Button type="button" fullWidth>Full-width button</Button>
       </ExampleContainer>
 
+      <ExampleContainer>
+        <Button>
+          Button with loads and loads and loads of copy
+          to illustrate new min-height sizing
+        </Button>
+      </ExampleContainer>
+
       <br />
       <h3>Buttons with Icons</h3>
 

@@ -18,17 +18,19 @@ const IconWrapper = styled.div`
 `;
 
 const StyledButton = styled.button`
+  --padding-top-and-bottom: 0.6rem;
   display: inline-flex;
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 3rem;
+  height: auto;
+  min-height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
   border: none;
   cursor: pointer;
-  padding: 0.6rem 1rem;
+  padding: var(--padding-top-and-bottom) 1rem;
   border-radius: 0.5rem;
 
   > a {
@@ -53,7 +55,7 @@ const StyledButton = styled.button`
     display: inline-grid;
     grid-template-columns: 1fr repeat(1, auto) 1fr;
     grid-column-gap: 0.6rem;
-    grid-template-rows: 1.75rem;
+    grid-template-rows: auto;
     justify-items: center;
 
     > ${Copywrapper} {
@@ -67,6 +69,10 @@ const StyledButton = styled.button`
     
     > ${IconWrapper} {
       margin-left: auto;
+      // While Button heights now scale to fit content (important for lots
+      // of copy on a small breakpoint), we so still need to constrain the
+      // icon, to prevent silliness:
+      height: calc(3rem - (var(--padding-top-and-bottom) * 2));
     }
   `}
 `;
