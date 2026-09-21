@@ -308,6 +308,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   border-radius: 0.5rem;
   overflow: hidden;
   min-width: max-content;
+  min-height: 2.25rem;
   width: 100%;
 }
 
@@ -1635,6 +1636,7 @@ exports[`renders correctly 1`] = `
   border-radius: 0.5rem;
   overflow: hidden;
   min-width: max-content;
+  min-height: 2.25rem;
   width: 100%;
 }
 

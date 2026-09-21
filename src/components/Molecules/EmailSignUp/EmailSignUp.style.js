@@ -105,6 +105,8 @@ export const StyledEmailSignUpButton = styled(Button)`
   border-radius: 0.5rem;
   overflow: hidden;
   min-width: max-content;
+  // Customised for this context
+  min-height: 2.25rem;
   width: 100%;
 
   @media ${({ theme }) => theme.breakpoints2026('M')} {
