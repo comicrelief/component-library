@@ -11,23 +11,42 @@ export default function LogoLinkedExample() {
       </ExampleContainer>
 
       <ExampleContainer>
-        <h3>Sport Relief</h3>
-        <LogoLinked campaign="Sport Relief" sizeSm="50px" sizeMd="60px" />
+        <h3>Comic Relief wide, w/pulse animation and new tab functionality</h3>
+        <LogoLinked
+          campaign="Comic Relief wide"
+          sizeSm="150px"
+          sizeMd="150px"
+          url="https://www.comicrelief.com"
+          newTab
+          animatePulse
+        />
       </ExampleContainer>
 
       <ExampleContainer>
-        <h3>Sport Relief Gameon</h3>
-        <LogoLinked campaign="Sport Relief Gameon" sizeSm="50px" sizeMd="60px" />
+        <h3>Sport Relief</h3>
+        <LogoLinked
+          campaign="Sport Relief"
+          sizeSm="50px"
+          sizeMd="60px"
+        />
       </ExampleContainer>
 
       <ExampleContainer>
         <h3>Pride</h3>
-        <LogoLinked campaign="Pride" sizeSm="50px" sizeMd="60px" />
+        <LogoLinked
+          campaign="Pride"
+          sizeSm="50px"
+          sizeMd="60px"
+        />
       </ExampleContainer>
 
       <ExampleContainer>
-        <h3>With rotation animation</h3>
-        <LogoLinked sizeSm="50px" sizeMd="60px" animateRotate />
+        <h3>Comic Relief (default) w/rotation animation</h3>
+        <LogoLinked
+          sizeSm="50px"
+          sizeMd="60px"
+          animateRotate
+        />
       </ExampleContainer>
     </>
   );
