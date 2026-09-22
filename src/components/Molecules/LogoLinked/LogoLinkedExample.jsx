@@ -26,7 +26,7 @@ export default function LogoLinkedExample() {
         <h3>Sport Relief</h3>
         <LogoLinked
           campaign="Sport Relief"
-          izeSm="50px"
+          sizeSm="50px"
           sizeMd="60px"
         />
       </ExampleContainer>
