@@ -6,7 +6,6 @@ import zIndex from '../../../theme/shared/zIndex';
 import spacing from '../../../theme/shared/spacing';
 import crLogo from './assets/cr-logo.svg';
 import srLogo from './assets/sr-logo.svg';
-import srLogoGameOn from './assets/sr-gameon-logo.svg';
 import crLogoPride from './assets/CR_LOGO_PRIDE_KEY_RGB.svg';
 
 const Image = styled.img`
@@ -32,8 +31,6 @@ const themeSwitcher = theme => {
   switch (theme) {
     case 'Sport Relief':
       return srLogo;
-    case 'Sport Relief Gameon':
-      return srLogoGameOn;
     case 'Pride':
       return crLogoPride;
     default:
