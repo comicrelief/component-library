@@ -11,7 +11,7 @@ export default function LogoLinkedExample() {
       </ExampleContainer>
 
       <ExampleContainer>
-        <h3>Comic Relief wide</h3>
+        <h3>Comic Relief wide, w/pulse animation and new tab functionality</h3>
         <LogoLinked
           campaign="Comic Relief wide"
           sizeSm="150px"
@@ -48,7 +48,6 @@ export default function LogoLinkedExample() {
           animateRotate
         />
       </ExampleContainer>
-
     </>
   );
 }
