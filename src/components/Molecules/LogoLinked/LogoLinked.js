@@ -51,7 +51,8 @@ const LogoLinked = ({
     );
   }
 
-  // Our 'modern' alt, as used within the CRcom header nav (lives purely within that codebase):
+  // Our 'modern' alt, as used within the CRcom header nav
+  // (which exists 100% within that codebase, for now):
   if (campaign === 'Comic Relief wide') {
     return (
       <LogoLink
