@@ -7,6 +7,7 @@ import spacing from '../../../theme/shared/spacing';
 import crLogo from './assets/cr-logo.svg';
 import srLogo from './assets/sr-logo.svg';
 import crLogoPride from './assets/CR_LOGO_PRIDE_KEY_RGB.svg';
+import crLogoWide from './assets/cr-logo--wide.svg';
 
 const Image = styled.img`
   object-fit: cover;
@@ -33,6 +34,8 @@ const themeSwitcher = theme => {
       return srLogo;
     case 'Pride':
       return crLogoPride;
+    case 'Comic Relief wide':
+      return crLogoWide;
     default:
       return crLogo;
   }
@@ -45,7 +48,7 @@ const Logo = ({
     <Image
       src={themeSwitcher(campaign)}
       alt={
-          campaign === 'Comic Relief' || campaign === 'Pride'
+          campaign === 'Comic Relief' || campaign === 'Pride' || campaign === 'Comic Relief wide'
             ? 'Comic Relief logo'
             : 'Sport Relief logo'
         }
