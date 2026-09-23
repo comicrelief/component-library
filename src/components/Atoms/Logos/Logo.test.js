@@ -23,6 +23,12 @@ it('renders correctly', () => {
   vertical-align: bottom;
 }
 
+@media (min-width: 740px) {
+  .c0 {
+    width: 51px;
+  }
+}
+
 <div
   className="c0"
 >

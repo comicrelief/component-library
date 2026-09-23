@@ -35,7 +35,7 @@ const Footer = ({
             </SocialIconWrapper>
 
             <Brand href="/" title={`Go to ${campaign} homepage`} data-test="footer-logo">
-              <Logo sizeSm="48px" sizeLg="72px" rotate={false} campaign={campaign} />
+              <Logo sizeSm="48px" sizeMd="48px" sizeLg="72px" rotate={false} campaign={campaign} />
             </Brand>
           </FooterBranding>
           <FooterNav navItems={navItems} overrideallowList={overrideallowList} {...rest} />

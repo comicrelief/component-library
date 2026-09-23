@@ -18,7 +18,7 @@ const LogoWrapper = styled.div`
   vertical-align: bottom; // height fix
   
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    // width: ${props => props.$sizeMd};
+    width: ${props => props.$sizeMd};
   }
 
   @media ${({ theme }) => theme.allBreakpoints('Nav')} {

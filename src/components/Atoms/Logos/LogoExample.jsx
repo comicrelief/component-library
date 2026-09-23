@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import Logo from './Logo';
 import LogoNav2026 from '../LogoNav2026/_LogoNav2026';
 import { ExampleContainer } from '../../../demos/SharedStyles';
@@ -9,12 +8,12 @@ export default function LogoExample() {
     <>
       <ExampleContainer>
         <h3>Comic Relief Logo</h3>
-        <Logo rotate={false} sizeSm="50px" sizeLg="60px" />
+        <Logo rotate={false} sizeSm="50px" sizeMd="50px" sizeLg="60px" />
       </ExampleContainer>
 
       <ExampleContainer>
         <h3>Sport Relief Logo</h3>
-        <Logo rotate={false} sizeSm="50px" sizeLg="60px" campaign="Sport Relief" />
+        <Logo rotate={false} sizeSm="50px" sizeMd="50px" sizeLg="60px" campaign="Sport Relief" />
       </ExampleContainer>
 
       <ExampleContainer>

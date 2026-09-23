@@ -618,6 +618,12 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c5 {
+    width: 59px;
+  }
+}
+
+@media (min-width: 740px) {
   .c27 {
     justify-content: start;
     margin: 0.5rem 0;
@@ -1922,6 +1928,12 @@ exports[`renders correctly 1`] = `
   .c19 {
     font-size: 1.25rem;
     line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c5 {
+    width: 59px;
   }
 }
 
