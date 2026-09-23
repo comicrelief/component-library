@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import Arrow from '../../Atoms/Icons/Arrow';
 import {
@@ -14,7 +14,7 @@ import {
 } from './ExpandedButton.style';
 
 function ExpandedButton({ options = [], selectedId, onSelect }) {
-  const handleClick = useCallback((id) => {
+  const handleClick = useCallback(id => {
     if (onSelect) {
       onSelect(id);
     }
