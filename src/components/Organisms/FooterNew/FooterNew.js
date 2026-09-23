@@ -80,7 +80,7 @@ const FooterNew = ({
 
           <LogosContainer $mobileOnly>
             <Brand href="/" title={`Go to ${campaign} homepage`} $animateRotate={animateRotate}>
-              <Logo sizeSm="59px" sizeMd="72px" rotate={false} campaign={campaign} />
+              <Logo sizeSm="59px" sizeLg="72px" rotate={false} campaign={campaign} />
             </Brand>
           </LogosContainer>
 
@@ -110,12 +110,12 @@ const FooterNew = ({
             </TopSectionLeft>
             <LogosContainer $desktopOnly $showCRLogoOnly>
               <Brand href="/" title={`Go to ${campaign} homepage`} $animateRotate={animateRotate}>
-                <Logo sizeSm="59px" sizeMd="59px" rotate={false} campaign={campaign} />
+                <Logo sizeSm="59px" sizeLg="59px" rotate={false} campaign={campaign} />
               </Brand>
             </LogosContainer>
             <LogosContainer $desktopOnly $showPairedLogos>
               <Brand href="/" title={`Go to ${campaign} homepage`} $animateRotate={animateRotate}>
-                <Logo sizeSm="59px" sizeMd="59px" rotate={false} campaign={campaign} />
+                <Logo sizeSm="59px" sizeLg="59px" rotate={false} campaign={campaign} />
               </Brand>
               {showFundraisingRegulatorLogo && <FundraisingRegulatorLogo animateOnHover noMargin />}
             </LogosContainer>

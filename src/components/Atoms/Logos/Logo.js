@@ -1,32 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import zIndex from '../../../theme/shared/zIndex';
-import spacing from '../../../theme/shared/spacing';
+import { Image, LogoWrapper } from './Logo.style';
+
 import crLogo from './assets/cr-logo.svg';
 import srLogo from './assets/sr-logo.svg';
 import crLogoPride from './assets/CR_LOGO_PRIDE_KEY_RGB.svg';
 import crLogoWide from './assets/cr-logo--wide.svg';
-
-const Image = styled.img`
-  object-fit: cover;
-  width: 100%;
-  display: block;
-  height: auto;
-  margin-right: ${spacing('md')};
-`;
-
-const LogoWrapper = styled.div`
-  display: inline-block;
-  ${zIndex('high')}
-  width: ${props => props.$sizeSm};
-  transform: ${props => (props.$rotate ? 'rotate(-14deg)' : 'inherit')};
-  vertical-align: bottom; // height fix
-  @media ${({ theme }) => theme.allBreakpoints('Nav')} {
-    width: ${props => props.$sizeMd};
-  }
-`;
 
 const themeSwitcher = theme => {
   switch (theme) {
@@ -42,9 +22,9 @@ const themeSwitcher = theme => {
 };
 
 const Logo = ({
-  rotate = false, sizeSm = '51px', sizeMd = '70px', campaign = 'Comic Relief'
+  rotate = false, sizeSm = '51px', sizeMd = '51px', sizeLg = '70px', campaign = 'Comic Relief'
 }) => (
-  <LogoWrapper $rotate={rotate ? 1 : 0} $sizeSm={sizeSm} $sizeMd={sizeMd}>
+  <LogoWrapper $rotate={rotate ? 1 : 0} $sizeSm={sizeSm} $sizeMd={sizeMd} $sizeLG={sizeLg}>
     <Image
       src={themeSwitcher(campaign)}
       alt={
@@ -61,6 +41,7 @@ Logo.propTypes = {
   rotate: PropTypes.bool,
   sizeSm: PropTypes.string,
   sizeMd: PropTypes.string,
+  sizeLg: PropTypes.string,
   campaign: PropTypes.string
 };
 

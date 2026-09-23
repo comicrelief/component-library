@@ -9,12 +9,12 @@ export default function LogoExample() {
     <>
       <ExampleContainer>
         <h3>Comic Relief Logo</h3>
-        <Logo rotate={false} sizeSm="50px" sizeMd="60px" />
+        <Logo rotate={false} sizeSm="50px" sizeLg="60px" />
       </ExampleContainer>
 
       <ExampleContainer>
         <h3>Sport Relief Logo</h3>
-        <Logo rotate={false} sizeSm="50px" sizeMd="60px" campaign="Sport Relief" />
+        <Logo rotate={false} sizeSm="50px" sizeLg="60px" campaign="Sport Relief" />
       </ExampleContainer>
 
       <ExampleContainer>

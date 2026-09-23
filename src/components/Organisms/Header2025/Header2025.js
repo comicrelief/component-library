@@ -18,7 +18,7 @@ const Header2025 = ({
         <LogoLinked
           campaign={campaign}
           sizeSm="50px"
-          sizeMd="55px"
+          sizeLg="55px"
           animateRotate
         />
       </Brand>
