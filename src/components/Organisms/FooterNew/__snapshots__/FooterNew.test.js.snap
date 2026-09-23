@@ -625,9 +625,21 @@ exports[`does not render copyright text when not supplied 1`] = `
   }
 }
 
+@media (min-width: 740px) {
+  .c5 {
+    width: 59px;
+  }
+}
+
 @media (min-width: 1150px) {
   .c5 {
     width: 72px;
+  }
+}
+
+@media (min-width: 740px) {
+  .c33 {
+    width: 59px;
   }
 }
 
@@ -1953,9 +1965,21 @@ exports[`renders correctly 1`] = `
   }
 }
 
+@media (min-width: 740px) {
+  .c5 {
+    width: 59px;
+  }
+}
+
 @media (min-width: 1150px) {
   .c5 {
     width: 72px;
+  }
+}
+
+@media (min-width: 740px) {
+  .c33 {
+    width: 59px;
   }
 }
 

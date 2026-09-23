@@ -403,6 +403,12 @@ exports[`renders correctly 1`] = `
   }
 }
 
+@media (min-width: 740px) {
+  .c10 {
+    width: 48px;
+  }
+}
+
 @media (min-width: 1150px) {
   .c10 {
     width: 72px;

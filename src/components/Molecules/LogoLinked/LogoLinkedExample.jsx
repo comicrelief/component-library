@@ -7,7 +7,7 @@ export default function LogoLinkedExample() {
     <>
       <ExampleContainer>
         <h3>Comic Relief (default)</h3>
-        <LogoLinked sizeSm="50px" sizeMd="60px" />
+        <LogoLinked sizeSm="50px" sizeMd="50px" sizeLg="60px" />
       </ExampleContainer>
 
       <ExampleContainer>
@@ -16,6 +16,7 @@ export default function LogoLinkedExample() {
           campaign="Comic Relief wide"
           sizeSm="150px"
           sizeMd="150px"
+          sizeLg="150px"
           url="https://www.comicrelief.com"
           newTab
           animatePulse
@@ -27,7 +28,8 @@ export default function LogoLinkedExample() {
         <LogoLinked
           campaign="Sport Relief"
           sizeSm="50px"
-          sizeMd="60px"
+          sizeMd="50px"
+          sizeLg="60px"
         />
       </ExampleContainer>
 
@@ -36,7 +38,8 @@ export default function LogoLinkedExample() {
         <LogoLinked
           campaign="Pride"
           sizeSm="50px"
-          sizeMd="60px"
+          sizeMd="50px"
+          sizeLg="60px"
         />
       </ExampleContainer>
 
@@ -44,7 +47,8 @@ export default function LogoLinkedExample() {
         <h3>Comic Relief (default) w/rotation animation</h3>
         <LogoLinked
           sizeSm="50px"
-          sizeMd="60px"
+          sizeMd="50px"
+          sizeLg="60px"
           animateRotate
         />
       </ExampleContainer>

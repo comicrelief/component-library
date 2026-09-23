@@ -5,7 +5,7 @@ import Logo from '../../Atoms/Logos/Logo';
 import { TitleLabel, LogoLink } from './LogoLinked.style';
 
 const LogoLinked = ({
-  sizeSm, sizeMd,
+  sizeSm, sizeMd, sizeLg,
   campaign = 'Comic Relief',
   title = 'Go to Comic Relief homepage',
   url = '/',
@@ -25,6 +25,9 @@ const LogoLinked = ({
           rotate={false}
           campaign="Sport Relief"
           title="Sport Relief in homepage"
+          sizeSm={sizeSm}
+          sizeMd={sizeMd}
+          sizeLg={sizeLg}
         />
         <TitleLabel>Go to Sport Relief homepage</TitleLabel>
       </LogoLink>
@@ -45,6 +48,7 @@ const LogoLinked = ({
           title="Go to Comic Relief homepage"
           sizeSm={sizeSm}
           sizeMd={sizeMd}
+          sizeLg={sizeLg}
         />
         <TitleLabel>Go to Comic Relief homepage</TitleLabel>
       </LogoLink>
@@ -67,6 +71,7 @@ const LogoLinked = ({
           title="Go to Comic Relief homepage"
           sizeSm={sizeSm}
           sizeMd={sizeMd}
+          sizeLg={sizeLg}
         />
         <TitleLabel>Go to Comic Relief homepage</TitleLabel>
       </LogoLink>
@@ -86,6 +91,7 @@ const LogoLinked = ({
         title={title}
         sizeSm={sizeSm}
         sizeMd={sizeMd}
+        sizeLg={sizeLg}
       />
       <TitleLabel>{title}</TitleLabel>
     </LogoLink>
@@ -100,6 +106,7 @@ LogoLinked.propTypes = {
   url: PropTypes.string,
   sizeSm: PropTypes.string,
   sizeMd: PropTypes.string,
+  sizeLg: PropTypes.string,
   newTab: PropTypes.bool
 };
 
