@@ -29,6 +29,12 @@ it('renders correctly', () => {
   }
 }
 
+@media (min-width: 1150px) {
+  .c0 {
+    width: 70px;
+  }
+}
+
 <div
   className="c0"
 >

@@ -202,6 +202,14 @@ exports[`does not render copyright text when not supplied 1`] = `
   vertical-align: bottom;
 }
 
+.c33 {
+  display: inline-block;
+  z-index: 3;
+  width: 59px;
+  transform: inherit;
+  vertical-align: bottom;
+}
+
 .c27 {
   display: flex;
   flex-wrap: wrap;
@@ -398,14 +406,14 @@ exports[`does not render copyright text when not supplied 1`] = `
   display: none;
 }
 
-.c38 {
+.c39 {
   margin-bottom: 1rem;
   box-sizing: content-box;
   gap: 1rem;
   display: block;
 }
 
-.c34 {
+.c35 {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -414,30 +422,30 @@ exports[`does not render copyright text when not supplied 1`] = `
   gap: 2rem;
 }
 
-.c35 {
+.c36 {
   margin: 0;
 }
 
-.c36 {
+.c37 {
   color: #FFFFFF;
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
 }
 
-.c36:hover,
-.c36:focus {
+.c37:hover,
+.c37:focus {
   text-decoration: underline;
   text-decoration-color: #FFFFFF;
 }
 
-.c37 {
+.c38 {
   color: #FFFFFF;
   font-weight: bold;
   font-size: 16px;
 }
 
-.c39 {
+.c40 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -448,24 +456,24 @@ exports[`does not render copyright text when not supplied 1`] = `
   align-items: center;
 }
 
-.c40 {
+.c41 {
   margin: 0;
   display: flex;
   align-items: center;
 }
 
-.c40:not(:last-child)::after {
+.c41:not(:last-child)::after {
   content: '|';
   margin-left: 0.5rem;
   color: #FFFFFF;
   opacity: 0.8;
 }
 
-.c41 {
+.c42 {
   text-decoration: none;
 }
 
-.c41 >span {
+.c42 >span {
   color: #FFFFFF;
   opacity: 0.8;
   text-decoration: none;
@@ -474,13 +482,13 @@ exports[`does not render copyright text when not supplied 1`] = `
   font-size: 0.875rem;
 }
 
-.c41:hover,
-.c41:focus {
+.c42:hover,
+.c42:focus {
   text-decoration: underline;
   text-decoration-color: #FFFFFF;
 }
 
-.c42 {
+.c43 {
   color: #FFFFFF;
   opacity: 0.8;
   font-weight: normal;
@@ -505,7 +513,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   display: none;
 }
 
-.c33 {
+.c34 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -515,7 +523,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   display: none;
 }
 
-.c45 {
+.c46 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -542,7 +550,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   transform: rotate(-14deg);
 }
 
-.c43 {
+.c44 {
   display: block;
   width: 100%;
   height: 100%;
@@ -550,7 +558,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   margin-bottom: 2rem;
 }
 
-.c44 {
+.c45 {
   color: #FFFFFF;
   opacity: 0.8;
   font-size: 0.875rem;
@@ -619,6 +627,24 @@ exports[`does not render copyright text when not supplied 1`] = `
 
 @media (min-width: 740px) {
   .c5 {
+    width: 59px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .c5 {
+    width: 72px;
+  }
+}
+
+@media (min-width: 740px) {
+  .c33 {
+    width: 59px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .c33 {
     width: 59px;
   }
 }
@@ -758,7 +784,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c38 {
+  .c39 {
     box-sizing: border-box;
     display: none;
     margin-bottom: 1rem;
@@ -767,7 +793,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c34 {
+  .c35 {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -775,7 +801,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c40 {
+  .c41 {
     display: inline;
   }
 }
@@ -803,7 +829,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c33 {
+  .c34 {
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
@@ -814,7 +840,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c45 {
+  .c46 {
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
@@ -825,7 +851,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 @media (min-width: 1024px) {
-  .c43 {
+  .c44 {
     margin-bottom: 0;
   }
 }
@@ -1085,7 +1111,7 @@ exports[`does not render copyright text when not supplied 1`] = `
             type="standard"
           >
             <div
-              className="c5"
+              className="c33"
             >
               <img
                 alt="Comic Relief logo"
@@ -1096,7 +1122,7 @@ exports[`does not render copyright text when not supplied 1`] = `
           </a>
         </div>
         <div
-          className="c33"
+          className="c34"
         >
           <a
             className="c3 c4"
@@ -1106,7 +1132,7 @@ exports[`does not render copyright text when not supplied 1`] = `
             type="standard"
           >
             <div
-              className="c5"
+              className="c33"
             >
               <img
                 alt="Comic Relief logo"
@@ -1119,36 +1145,36 @@ exports[`does not render copyright text when not supplied 1`] = `
       </div>
       <nav
         aria-label="Primary footer navigation"
-        className="c34"
+        className="c35"
         role="navigation"
       >
         <li
-          className="c35"
+          className="c36"
         >
           <a
-            className="c3 c36"
+            className="c3 c37"
             href="/contact-us"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c37"
+              className="c17 c38"
             >
               Contact us
             </span>
           </a>
         </li>
         <li
-          className="c35"
+          className="c36"
         >
           <a
-            className="c3 c36"
+            className="c3 c37"
             href="https://www.comicrelief.com/frequently-asked-questions"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c37"
+              className="c17 c38"
             >
               FAQs
             </span>
@@ -1156,7 +1182,7 @@ exports[`does not render copyright text when not supplied 1`] = `
         </li>
       </nav>
       <div
-        className="c38"
+        className="c39"
       >
         <ul
           className="c27"
@@ -1261,36 +1287,36 @@ exports[`does not render copyright text when not supplied 1`] = `
       </div>
       <nav
         aria-label="Secondary footer navigation"
-        className="c39"
+        className="c40"
         role="navigation"
       >
         <li
-          className="c40"
+          className="c41"
         >
           <a
-            className="c3 c41"
+            className="c3 c42"
             href="https://www.comicrelief.com/terms-of-use"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c42"
+              className="c17 c43"
             >
               Terms of use
             </span>
           </a>
         </li>
         <li
-          className="c40"
+          className="c41"
         >
           <a
-            className="c3 c41"
+            className="c3 c42"
             href="https://www.comicrelief.com/privacy-notice"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c42"
+              className="c17 c43"
             >
               Privacy notice
             </span>
@@ -1298,16 +1324,16 @@ exports[`does not render copyright text when not supplied 1`] = `
         </li>
       </nav>
       <div
-        className="c43"
+        className="c44"
       >
         <p
-          className="c17 c44"
+          className="c17 c45"
         >
           Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
         </p>
       </div>
       <div
-        className="c45"
+        className="c46"
       />
     </div>
   </footer>
@@ -1516,6 +1542,14 @@ exports[`renders correctly 1`] = `
   vertical-align: bottom;
 }
 
+.c33 {
+  display: inline-block;
+  z-index: 3;
+  width: 59px;
+  transform: inherit;
+  vertical-align: bottom;
+}
+
 .c27 {
   display: flex;
   flex-wrap: wrap;
@@ -1712,14 +1746,14 @@ exports[`renders correctly 1`] = `
   display: none;
 }
 
-.c38 {
+.c39 {
   margin-bottom: 1rem;
   box-sizing: content-box;
   gap: 1rem;
   display: block;
 }
 
-.c34 {
+.c35 {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -1728,30 +1762,30 @@ exports[`renders correctly 1`] = `
   gap: 2rem;
 }
 
-.c35 {
+.c36 {
   margin: 0;
 }
 
-.c36 {
+.c37 {
   color: #FFFFFF;
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
 }
 
-.c36:hover,
-.c36:focus {
+.c37:hover,
+.c37:focus {
   text-decoration: underline;
   text-decoration-color: #FFFFFF;
 }
 
-.c37 {
+.c38 {
   color: #FFFFFF;
   font-weight: bold;
   font-size: 16px;
 }
 
-.c39 {
+.c40 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1762,24 +1796,24 @@ exports[`renders correctly 1`] = `
   align-items: center;
 }
 
-.c40 {
+.c41 {
   margin: 0;
   display: flex;
   align-items: center;
 }
 
-.c40:not(:last-child)::after {
+.c41:not(:last-child)::after {
   content: '|';
   margin-left: 0.5rem;
   color: #FFFFFF;
   opacity: 0.8;
 }
 
-.c41 {
+.c42 {
   text-decoration: none;
 }
 
-.c41 >span {
+.c42 >span {
   color: #FFFFFF;
   opacity: 0.8;
   text-decoration: none;
@@ -1788,13 +1822,13 @@ exports[`renders correctly 1`] = `
   font-size: 0.875rem;
 }
 
-.c41:hover,
-.c41:focus {
+.c42:hover,
+.c42:focus {
   text-decoration: underline;
   text-decoration-color: #FFFFFF;
 }
 
-.c42 {
+.c43 {
   color: #FFFFFF;
   opacity: 0.8;
   font-weight: normal;
@@ -1819,7 +1853,7 @@ exports[`renders correctly 1`] = `
   display: none;
 }
 
-.c33 {
+.c34 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1829,7 +1863,7 @@ exports[`renders correctly 1`] = `
   display: none;
 }
 
-.c45 {
+.c46 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1856,7 +1890,7 @@ exports[`renders correctly 1`] = `
   transform: rotate(-14deg);
 }
 
-.c43 {
+.c44 {
   display: block;
   width: 100%;
   height: 100%;
@@ -1864,7 +1898,7 @@ exports[`renders correctly 1`] = `
   margin-bottom: 2rem;
 }
 
-.c44 {
+.c45 {
   color: #FFFFFF;
   opacity: 0.8;
   font-size: 0.875rem;
@@ -1933,6 +1967,24 @@ exports[`renders correctly 1`] = `
 
 @media (min-width: 740px) {
   .c5 {
+    width: 59px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .c5 {
+    width: 72px;
+  }
+}
+
+@media (min-width: 740px) {
+  .c33 {
+    width: 59px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .c33 {
     width: 59px;
   }
 }
@@ -2072,7 +2124,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c38 {
+  .c39 {
     box-sizing: border-box;
     display: none;
     margin-bottom: 1rem;
@@ -2081,7 +2133,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c34 {
+  .c35 {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -2089,7 +2141,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c40 {
+  .c41 {
     display: inline;
   }
 }
@@ -2117,7 +2169,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c33 {
+  .c34 {
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
@@ -2128,7 +2180,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c45 {
+  .c46 {
     flex: 0 0 auto;
     margin-top: 0;
     margin-bottom: 0;
@@ -2139,7 +2191,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 1024px) {
-  .c43 {
+  .c44 {
     margin-bottom: 0;
   }
 }
@@ -2399,7 +2451,7 @@ exports[`renders correctly 1`] = `
             type="standard"
           >
             <div
-              className="c5"
+              className="c33"
             >
               <img
                 alt="Comic Relief logo"
@@ -2410,7 +2462,7 @@ exports[`renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="c33"
+          className="c34"
         >
           <a
             className="c3 c4"
@@ -2420,7 +2472,7 @@ exports[`renders correctly 1`] = `
             type="standard"
           >
             <div
-              className="c5"
+              className="c33"
             >
               <img
                 alt="Comic Relief logo"
@@ -2433,36 +2485,36 @@ exports[`renders correctly 1`] = `
       </div>
       <nav
         aria-label="Primary footer navigation"
-        className="c34"
+        className="c35"
         role="navigation"
       >
         <li
-          className="c35"
+          className="c36"
         >
           <a
-            className="c3 c36"
+            className="c3 c37"
             href="/contact-us"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c37"
+              className="c17 c38"
             >
               Contact us
             </span>
           </a>
         </li>
         <li
-          className="c35"
+          className="c36"
         >
           <a
-            className="c3 c36"
+            className="c3 c37"
             href="https://www.comicrelief.com/frequently-asked-questions"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c37"
+              className="c17 c38"
             >
               FAQs
             </span>
@@ -2470,7 +2522,7 @@ exports[`renders correctly 1`] = `
         </li>
       </nav>
       <div
-        className="c38"
+        className="c39"
       >
         <ul
           className="c27"
@@ -2575,36 +2627,36 @@ exports[`renders correctly 1`] = `
       </div>
       <nav
         aria-label="Secondary footer navigation"
-        className="c39"
+        className="c40"
         role="navigation"
       >
         <li
-          className="c40"
+          className="c41"
         >
           <a
-            className="c3 c41"
+            className="c3 c42"
             href="https://www.comicrelief.com/terms-of-use"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c42"
+              className="c17 c43"
             >
               Terms of use
             </span>
           </a>
         </li>
         <li
-          className="c40"
+          className="c41"
         >
           <a
-            className="c3 c41"
+            className="c3 c42"
             href="https://www.comicrelief.com/privacy-notice"
             target="_self"
             type="standard"
           >
             <span
-              className="c17 c42"
+              className="c17 c43"
             >
               Privacy notice
             </span>
@@ -2612,21 +2664,21 @@ exports[`renders correctly 1`] = `
         </li>
       </nav>
       <div
-        className="c43"
+        className="c44"
       >
         <p
-          className="c17 c44"
+          className="c17 c45"
         >
           © 2026 Comic Relief
         </p>
         <p
-          className="c17 c44"
+          className="c17 c45"
         >
           Comic Relief is the trading name of Charity Projects, a registered charity in England and Wales (326568) and Scotland (SC039730), which is a company limited by guarantee registered in England and Wales (01806414). Registered address: 6th Floor, The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS.
         </p>
       </div>
       <div
-        className="c45"
+        className="c46"
       />
     </div>
   </footer>
