@@ -93,8 +93,6 @@ const HeadingIconWrapper = styled.span`
   }
 `;
 
-const HeadingText = styled.span``;
-
 const CardDescription = styled.p`
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;

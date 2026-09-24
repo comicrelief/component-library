@@ -9,8 +9,7 @@ import {
   CardDescription,
   ArrowWrapper,
   HeadingContentWrapper,
-  HeadingIconWrapper,
-  HeadingText
+  HeadingIconWrapper
 } from './ExpandedButton.style';
 
 function ExpandedButton({ options = [], selectedId, onSelect }) {
@@ -41,7 +40,7 @@ function ExpandedButton({ options = [], selectedId, onSelect }) {
                     <img src={option.icon} alt="" />
                   </HeadingIconWrapper>
                 )}
-                <HeadingText>{option.title}</HeadingText>
+                <span>{option.title}</span>
               </HeadingContentWrapper>
             </CardTitle>
             <CardDescription>{option.description}</CardDescription>
