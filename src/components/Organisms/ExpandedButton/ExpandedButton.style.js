@@ -28,7 +28,6 @@ const ButtonCard = styled.button`
   position: relative;
   display: block;
   padding: 1rem;
-  padding-right: 50px;
   background: ${crTheme.color('white')};
   border: 2px solid ${crTheme.color('grey')};
   border-radius: 8px;
@@ -40,12 +39,11 @@ const ButtonCard = styled.button`
   width: 100%;
 
   &:hover {
-    background-color: ${crTheme.color('grey_light')};
+    background-color: ${crTheme.color('grey_medium')};
   }
 
   @media ${crTheme.allBreakpoints('M')} {
-    padding: 3rem;
-    padding-right: 60px;
+    padding: 1rem;
     min-height: 200px;
   }
 `;
@@ -57,36 +55,25 @@ const ArrowWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   transform: rotate(45deg);
 
   svg {
     width: 100%;
     height: 100%;
   }
-
-  @media ${crTheme.allBreakpoints('M')} {
-    width: 28px;
-    height: 28px;
-    top: 1.5rem;
-    right: 1.5rem;
-  }
 `;
 
 const CardTitle = styled.h3`
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  font-weight: bold;
-  line-height: 1.4;
+  font-weight: 700;
+  line-height: 20px;
   color: ${crTheme.color('black')};
   margin: 0 0 0.25rem 0;
   display: flex;
   align-items: center;
-
-  @media ${crTheme.allBreakpoints('M')} {
-    font-size: 18px;
-  }
 `;
 
 const HeadingContentWrapper = styled.div`
@@ -101,15 +88,8 @@ const HeadingIconWrapper = styled.span`
   justify-content: center;
 
   svg {
-    width: 24px;
-    height: 24px;
-  }
-
-  @media ${crTheme.allBreakpoints('M')} {
-    svg {
-      width: 28px;
-      height: 28px;
-    }
+    width: 18px;
+    height: 18px;
   }
 `;
 
@@ -117,14 +97,11 @@ const HeadingText = styled.span``;
 
 const CardDescription = styled.p`
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
   color: ${crTheme.color('black')};
   margin: 0;
-
-  @media ${crTheme.allBreakpoints('M')} {
-    font-size: 15px;
-  }
 `;
 
 export {
@@ -135,6 +112,5 @@ export {
   CardDescription,
   ArrowWrapper,
   HeadingContentWrapper,
-  HeadingIconWrapper,
-  HeadingText
+  HeadingIconWrapper
 };
