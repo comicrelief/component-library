@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
+.c3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c4 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .c8 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
@@ -35,20 +49,6 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
 .c9 span {
   font-size: inherit;
   line-height: inherit;
-}
-
-.c3 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c4 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c0 {
@@ -276,6 +276,20 @@ exports[`renders "Full Height Media" Hero Banner correctly 1`] = `
 `;
 
 exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
+.c3 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c4 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .c8 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
@@ -310,20 +324,6 @@ exports[`renders "Half Height Media" Hero Banner correctly 1`] = `
 .c9 span {
   font-size: inherit;
   line-height: inherit;
-}
-
-.c3 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c4 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c0 {
@@ -769,34 +769,6 @@ exports[`renders "Text Banner" Hero Banner correctly 1`] = `
 `;
 
 exports[`renders "Text Banner" Hero Banner correctly 2`] = `
-.c8 {
-  font-family: 'Anton',Impact,sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0;
-  font-size: 2rem;
-  line-height: 2rem;
-}
-
-.c8 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.c9 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c9 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
 .c3 {
   display: block;
   width: 100%;
@@ -823,6 +795,34 @@ exports[`renders "Text Banner" Hero Banner correctly 2`] = `
   height: auto;
   display: block;
   object-fit: contain;
+}
+
+.c8 {
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.c8 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c9 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c9 span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .c0 {

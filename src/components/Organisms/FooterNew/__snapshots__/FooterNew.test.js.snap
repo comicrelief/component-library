@@ -7,17 +7,19 @@ exports[`does not render copyright text when not supplied 1`] = `
 }
 
 .c23 {
+  --padding-top-and-bottom: 0.6rem;
   display: inline-flex;
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: auto;
+  min-height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
   border: none;
   cursor: pointer;
-  padding: 0.6rem 1rem;
+  padding: var(--padding-top-and-bottom) 1rem;
   border-radius: 0.5rem;
   background-color: #FFFFFF;
   color: #000000;
@@ -38,6 +40,7 @@ exports[`does not render copyright text when not supplied 1`] = `
 .c23:focus-within,
 .c23:focus-visible {
   background-color: #E1E2E3;
+  color: #000000;
   outline-offset: 3px;
 }
 
@@ -305,6 +308,7 @@ exports[`does not render copyright text when not supplied 1`] = `
   border-radius: 0.5rem;
   overflow: hidden;
   min-width: max-content;
+  min-height: 2.25rem;
   width: 100%;
 }
 
@@ -621,9 +625,21 @@ exports[`does not render copyright text when not supplied 1`] = `
   }
 }
 
+@media (min-width: 740px) {
+  .c5 {
+    width: 59px;
+  }
+}
+
 @media (min-width: 1150px) {
   .c5 {
     width: 72px;
+  }
+}
+
+@media (min-width: 740px) {
+  .c33 {
+    width: 59px;
   }
 }
 
@@ -1331,17 +1347,19 @@ exports[`renders correctly 1`] = `
 }
 
 .c23 {
+  --padding-top-and-bottom: 0.6rem;
   display: inline-flex;
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: auto;
+  min-height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
   border: none;
   cursor: pointer;
-  padding: 0.6rem 1rem;
+  padding: var(--padding-top-and-bottom) 1rem;
   border-radius: 0.5rem;
   background-color: #FFFFFF;
   color: #000000;
@@ -1362,6 +1380,7 @@ exports[`renders correctly 1`] = `
 .c23:focus-within,
 .c23:focus-visible {
   background-color: #E1E2E3;
+  color: #000000;
   outline-offset: 3px;
 }
 
@@ -1629,6 +1648,7 @@ exports[`renders correctly 1`] = `
   border-radius: 0.5rem;
   overflow: hidden;
   min-width: max-content;
+  min-height: 2.25rem;
   width: 100%;
 }
 
@@ -1945,9 +1965,21 @@ exports[`renders correctly 1`] = `
   }
 }
 
+@media (min-width: 740px) {
+  .c5 {
+    width: 59px;
+  }
+}
+
 @media (min-width: 1150px) {
   .c5 {
     width: 72px;
+  }
+}
+
+@media (min-width: 740px) {
+  .c33 {
+    width: 59px;
   }
 }
 

@@ -17,7 +17,8 @@ import {
   ArrowIconOuter,
   ArrowIconInner,
   ArrowIconWrapper,
-  CardWrapper
+  CardWrapper,
+  CardLinkContent
 } from './CTACard.style';
 
 const CTACard = ({
@@ -52,7 +53,6 @@ const CTACard = ({
       $isCarousel={isCarousel}
       $isFullWidth={effectiveIsFullWidth}
       $columns={columns}
-      $hasLink={hasLink}
     >
       <CardLink
         as={hasLink ? Link : 'div'}
@@ -61,7 +61,8 @@ const CTACard = ({
         $isSingleCard={isSingleCard}
         $hasLink={hasLink}
       >
-        {imageLow && (
+        <CardLinkContent>
+          {imageLow && (
           <ImageWrapper $isSingleCard={isSingleCard}>
             <Picture
               alt={description}
@@ -73,17 +74,17 @@ const CTACard = ({
               height="100%"
             />
           </ImageWrapper>
-        )}
-        <CopyAndLinkSection $isSingleCard={isSingleCard}>
-          <Copy>
-            {isSingleCard && label && (
+          )}
+          <CopyAndLinkSection $isSingleCard={isSingleCard}>
+            <Copy>
+              {isSingleCard && label && (
               <CardLabel>
                 {label}
               </CardLabel>
-            )}
-            {body}
-          </Copy>
-          {linkLabel && (
+              )}
+              {body}
+            </Copy>
+            {linkLabel && (
             <CTA>
               <CTAText>
                 {linkLabel}
@@ -101,8 +102,9 @@ const CTACard = ({
                 </ArrowIconWrapper>
               </ArrowIconOuter>
             </CTA>
-          )}
-        </CopyAndLinkSection>
+            )}
+          </CopyAndLinkSection>
+        </CardLinkContent>
       </CardLink>
     </CardWrapper>
   );

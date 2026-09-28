@@ -342,9 +342,14 @@ const RichtextCarouselItemsWithPadding = {
   carouselBackgroundColour: 'grey_light'
 };
 
+const ButtonIconImgPath = 'https://images.ctfassets.net/zsfivwzfgl3t/4IlLxZnddkg1pHWZP3AZnA/447078df666932751c9c618a296f24db/Icon__Shelter.png';
+
+const ButtonIconSvgPath = 'https://images.ctfassets.net/0p265iutoxgq/3GaahqcCBaXrLBm5fu8HAj/d965a32d93fe82bf103c2f444e0bb9ec/Phone--white.svg';
+
 export {
   defaultData, mobileImages, testImpactSliderItems,
   carouselItemsComplete, carouselItemsCompleteWithPadding,
   carouselItemsIncomplete, carouselItemsMinimal,
-  RichtextCarouselItems, RichtextCarouselItemsWithPadding
+  RichtextCarouselItems, RichtextCarouselItemsWithPadding,
+  ButtonIconImgPath, ButtonIconSvgPath
 };

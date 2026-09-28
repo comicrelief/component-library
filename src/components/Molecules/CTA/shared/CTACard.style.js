@@ -66,6 +66,16 @@ const CTAText = styled.span`
   }
 `;
 
+const CardLinkContent = styled.div`
+  display: inherit;
+  flex-direction: inherit;
+  flex: inherit;
+  border-radius: inherit;
+  overflow: hidden;
+  transition: box-shadow 0.35s;
+  ${defaultBoxShadow()}
+`;
+
 // Card wrapper link - makes entire card clickable
 const CardLink = styled.a`
   display: flex;
@@ -75,17 +85,18 @@ const CardLink = styled.a`
   flex: 1 1 auto;
   background: transparent;
   border-radius: 1rem;
-  transition: box-shadow 0.35s;
-  ${defaultBoxShadow()}
   text-decoration: none;
-  overflow: hidden;
   cursor: ${({ $hasLink }) => ($hasLink ? 'pointer' : 'default')};
   box-sizing: border-box;
 
-  &:hover,
-  &:focus {
-    ${defaultBoxShadow(true)}
-  }
+  ${({ $hasLink }) => $hasLink && css`
+    &:hover,
+    &:focus {
+      ${CardLinkContent} {
+        ${defaultBoxShadow(true)}
+      }
+    }
+  `};
 
   // Side-by-side layout for single card desktop view
   ${({ $isSingleCard }) => $isSingleCard && css`
@@ -132,10 +143,19 @@ const CardLink = styled.a`
 
     // Desktop-only hover/focus effects
     @media ${({ theme }) => theme.allBreakpoints('L')} {
+
+      // Allow the nested content and its box-shadow to be completely visible when it's animated upwards:
+      overflow: visible;
     
-      ${bounceUpAnimation(true, 10, 1)};
-      /* override the bounceUpAnimation transition, ensuring we don't lose the box-shadow animation */
-      transition: transform 0.35s cubic-bezier(0.68, -1.15, 0.265, 2.35), box-shadow 0.35s;
+      // Using the 4th, optional 'target child' parameter to target CardLinkContent for the position animation
+      // rather than *this* element, to ensure we don't end up with that infinite bounce bug.
+      ${bounceUpAnimation(true, 10, 2, true)};
+
+      /* Override the transition initially set by bounceUpAnimation (targetting the same child) to tweaked some values,
+      while also ensuring we don't lose the previously-added box-shadow animation by re-adding it here: */
+      > ${CardLinkContent} {
+        transition: transform 0.35s cubic-bezier(0.68, -1.15, 0.265, 2.35), box-shadow 0.35s;
+      }
 
       &:hover,
       &:focus {
@@ -170,10 +190,6 @@ const CardWrapper = styled.div`
   flex-direction: column;
   align-self: stretch;
   border-radius: 1rem;
-
-  ${({ $hasLink }) => (!$hasLink && css`
-    ${defaultBoxShadow()}
-  `)}
 
   // Full width mode - always full width, no constraints
   ${({ $isFullWidth }) => $isFullWidth && css`
@@ -331,5 +347,6 @@ export {
   ArrowIconOuter,
   ArrowIconInner,
   ArrowIconWrapper,
-  CardWrapper
+  CardWrapper,
+  CardLinkContent
 };

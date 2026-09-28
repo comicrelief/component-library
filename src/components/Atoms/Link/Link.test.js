@@ -188,7 +188,8 @@ it('renders link styled as button correctly', () => {
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: auto;
+  min-height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -211,6 +212,7 @@ it('renders link styled as button correctly', () => {
 .c0:focus-within,
 .c0:focus-visible {
   background-color: #FEFD5A;
+  color: #000000;
   outline-offset: 3px;
 }
 

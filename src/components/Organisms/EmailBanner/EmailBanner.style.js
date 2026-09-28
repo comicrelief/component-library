@@ -113,13 +113,6 @@ const ButtonWrapper = styled.div`
 
   button {
     width: 100%;
-    min-height: 48px;
-  }
-
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    button {
-      padding: ${spacing('md')} ${spacing('l')};
-    }
   }
 `;
 

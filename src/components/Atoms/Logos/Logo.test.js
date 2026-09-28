@@ -23,6 +23,12 @@ it('renders correctly', () => {
   vertical-align: bottom;
 }
 
+@media (min-width: 740px) {
+  .c0 {
+    width: 51px;
+  }
+}
+
 @media (min-width: 1150px) {
   .c0 {
     width: 70px;

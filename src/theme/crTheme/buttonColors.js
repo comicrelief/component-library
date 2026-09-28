@@ -83,6 +83,7 @@ const buttonColors = {
     textColour: color('black'),
     hoverBackground: color('grey_light'),
     hovertextColour: color('black')
+
   },
   grey_dark: {
     background: color('grey_dark'),
@@ -161,6 +162,7 @@ const buttonColors = {
     textColour: color('black'),
     hoverBackground: color('teal_light'),
     hovertextColour: color('black')
+
   },
   teal_dark: {
     background: color('teal_dark'),
@@ -176,7 +178,7 @@ const buttonColors = {
   },
   transparent: {
     background: 'rgba(255, 255, 255, 0.5)',
-    color: 'inherit',
+    textColour: 'inherit',
     hoverBackground: 'rgba(255, 255, 255, 0.7)',
     hovertextColour: 'inherit'
   },
@@ -210,7 +212,7 @@ export default (colorName, buttonType) => {
     style = css`
       background-color: ${buttonColors[thisColourName].background};
       color: ${buttonColors[thisColourName].textColour};
-
+      
       &:hover,
       &:focus,
       &:focus-within,
@@ -218,6 +220,14 @@ export default (colorName, buttonType) => {
         background-color: ${buttonColors[thisColourName].hoverBackground};
         color: ${buttonColors[thisColourName].hovertextColour};
         outline-offset: 3px;
+
+        // If there's a hover change for this button, update the icon accordingly:
+        ${buttonColors[thisColourName].textColour !== buttonColors[thisColourName].hovertextColour && css`
+          // Frustratingly, using IconWrapper styled-component directly here borks the styles :(
+          .icon-wrapper {
+            filter: invert(1);
+          }
+        `}
       }
 
       &:disabled {
@@ -240,6 +250,13 @@ export default (colorName, buttonType) => {
         &:focus-visible {
           color: ${buttonColors[thisColourName].hoverBackground};
           background-color: transparent;
+
+          // Slight tweak of logic and filter type to suit the Secondary and Tertiary buttons:
+          ${buttonColors[thisColourName].background !== buttonColors[thisColourName].hoverBackground && css`
+            .icon-wrapper {
+              filter: brightness(70%);
+            }
+          `}
 
           ${buttonType === theme.buttonTypes.SECONDARY && css`
             box-shadow: 0px 0px 0px 2px ${buttonColors[thisColourName].hoverBackground} inset;

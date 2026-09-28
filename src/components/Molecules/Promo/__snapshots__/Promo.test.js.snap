@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders Promo correctly 1`] = `
+.c2 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c3 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .c7 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
@@ -51,7 +65,8 @@ exports[`renders Promo correctly 1`] = `
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: auto;
+  min-height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -74,26 +89,13 @@ exports[`renders Promo correctly 1`] = `
 .c9:focus-within,
 .c9:focus-visible {
   background-color: #E1E2E3;
+  color: #000000;
   outline-offset: 3px;
 }
 
 .c9:disabled {
   cursor: not-allowed;
   opacity: 0.5;
-}
-
-.c2 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c3 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c0 {
@@ -306,6 +308,20 @@ exports[`renders Promo correctly 1`] = `
 `;
 
 exports[`renders Promo correctly end position 1`] = `
+.c2 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.c3 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .c7 {
   font-family: 'Anton',Impact,sans-serif;
   font-weight: 400;
@@ -356,7 +372,8 @@ exports[`renders Promo correctly end position 1`] = `
   position: relative;
   text-decoration: none;
   transition: all 0.2s;
-  height: 2.5rem;
+  height: auto;
+  min-height: 3rem;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -379,26 +396,13 @@ exports[`renders Promo correctly end position 1`] = `
 .c9:focus-within,
 .c9:focus-visible {
   background-color: #E1E2E3;
+  color: #000000;
   outline-offset: 3px;
 }
 
 .c9:disabled {
   cursor: not-allowed;
   opacity: 0.5;
-}
-
-.c2 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.c3 {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .c0 {
