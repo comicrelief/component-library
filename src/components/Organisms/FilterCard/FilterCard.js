@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import buttonTypes from '../../../theme/crTheme/buttonTypes';
 
+import Cross from '../../Atoms/Icons/Cross';
+import Filter from '../../Atoms/Icons/Filter';
+
 import {
   Container,
   FilterSection,
@@ -22,9 +25,15 @@ const FilterCard = ({
   const [showFilters, setShowFilters] = useState(false);
   const [currentFilters, setCurrentFilters] = useState([]);
 
-  const showHideFilterText = showFilters ? 'Hide filters' : 'Show filters';
+  const showHideFilterText = showFilters ? 'Hide Filters' : 'Show Filters';
   const showHideFilterColour = showFilters ? 'black' : 'grey_medium';
   const showHideFilterButtonType = showFilters ? buttonTypes.SECONDARY : buttonTypes.PRIMARY;
+
+  const CrossIcon = <Cross />;
+  const FilterIcon = <Filter />;
+
+  const currentIcon = showFilters ? FilterIcon : CrossIcon;
+
   const contentFiltered = currentFilters.length > 0;
   console.log('contentFiltered', contentFiltered);
 
@@ -68,6 +77,7 @@ const FilterCard = ({
           $borderColour={showHideFilterColour}
           onClick={() => { setShowFilters(!showFilters); }}
           aria-pressed={showFilters}
+          icon={currentIcon}
         >
           {showHideFilterText}
         </ShowHideFiltersBtn>
