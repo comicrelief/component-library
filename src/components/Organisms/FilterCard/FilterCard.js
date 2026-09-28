@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import buttonTypes from '../../../theme/crTheme/buttonTypes';
-
 import Cross from '../../Atoms/Icons/Cross';
 import Filter from '../../Atoms/Icons/Filter';
 
@@ -10,7 +9,9 @@ import {
   FilterSection,
   Title,
   BodyCopy,
-  ShowHideFiltersBtn,
+  ShowHideFiltersButton,
+  ClearSelectionButton,
+  UpperButtonWrapper,
   FiltersWrapper,
   FilterButton
 } from './FilterCard.style';
@@ -24,18 +25,13 @@ const FilterCard = ({
 }) => {
   const [showFilters, setShowFilters] = useState(false);
   const [currentFilters, setCurrentFilters] = useState([]);
-
+  const [contentIsFiltered, setContentIsFiltered] = useState(false);
   const showHideFilterText = showFilters ? 'Hide Filters' : 'Show Filters';
   const showHideFilterColour = showFilters ? 'black' : 'grey_medium';
+
+  // TODO: feels needless fussy, maybe just do with styles?
   const showHideFilterButtonType = showFilters ? buttonTypes.SECONDARY : buttonTypes.PRIMARY;
-
-  const CrossIcon = <Cross />;
-  const FilterIcon = <Filter />;
-
-  const currentIcon = showFilters ? FilterIcon : CrossIcon;
-
-  const contentFiltered = currentFilters.length > 0;
-  console.log('contentFiltered', contentFiltered);
+  const currentIcon = showFilters ? <Cross /> : <Filter />;
 
   // Just for fun for now
   const fakeTags = ['Fundraising packs', 'Posters', 'Bake', 'Thank you', 'Schools', 'Pay in', 'Certificates', 'Workplace'];
@@ -50,9 +46,8 @@ const FilterCard = ({
       updatedFilters.pop(thisTag);
     }
 
-    console.log('updatedFilters', updatedFilters);
-
     setCurrentFilters(updatedFilters);
+    setContentIsFiltered(updatedFilters.length > 0);
   };
 
   return (
@@ -70,23 +65,31 @@ const FilterCard = ({
           {body}
         </BodyCopy>
 
-        <ShowHideFiltersBtn
-          buttonType={showHideFilterButtonType}
-          color={showHideFilterColour}
-          $showFilters={showFilters}
-          $borderColour={showHideFilterColour}
-          onClick={() => { setShowFilters(!showFilters); }}
-          aria-pressed={showFilters}
-          icon={currentIcon}
-        >
-          {showHideFilterText}
-        </ShowHideFiltersBtn>
+        {/* Come up with a different name lol */}
+        <UpperButtonWrapper>
+          <ShowHideFiltersButton
+            buttonType={showHideFilterButtonType}
+            color={showHideFilterColour}
+            $showFilters={showFilters}
+            $borderColour={showHideFilterColour}
+            onClick={() => { setShowFilters(!showFilters); }}
+            aria-pressed={showFilters}
+            icon={currentIcon}
+          >
+            {showHideFilterText}
+          </ShowHideFiltersButton>
 
-        {/* <ShowHideFiltersBtn
-          disabled={contentFiltered}
-        >
-          Clear selection
-        </ShowHideFiltersBtn> */}
+          <ClearSelectionButton
+            color="white"
+            disabled={!contentIsFiltered}
+            onClick={() => {
+              setCurrentFilters([]);
+              setContentIsFiltered(false);
+            }}
+          >
+            Clear selection
+          </ClearSelectionButton>
+        </UpperButtonWrapper>
 
         <FiltersWrapper $show={showFilters}>
           { fakeTags.map(tag => (

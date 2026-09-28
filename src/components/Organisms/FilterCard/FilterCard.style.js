@@ -28,17 +28,15 @@ const BodyCopy = styled.div`
 //
 `;
 
-const FiltersWrapper = styled.div`
-  display: ${({ $show }) => ($show ? 'block' : 'none')}
-`;
-
-const ShowHideFiltersBtn = styled(Button)`
-  margin-top: 1rem;
-  justify-content: left;
+const CustomisedButton = styled(Button)`
   // Override Button w/icon styles to match styles:
   display: inline-flex;
   grid-column-gap: 0;
   width: auto;
+
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    justify-content: left;
+  }
   
   ${({ theme }) => css`
     color: ${theme.color('black')};
@@ -63,12 +61,40 @@ const ShowHideFiltersBtn = styled(Button)`
   }
 `;
 
+const ShowHideFiltersButton = styled(CustomisedButton)`
+//
+`;
+
+const ClearSelectionButton = styled(CustomisedButton)`
+//
+`;
+
+const UpperButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    flex-direction: row;
+  }
+//
+`;
+
+const FiltersWrapper = styled.div`
+  display: ${({ $show }) => ($show ? 'flex' : 'none')};
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+`;
+
 const FilterButton = styled(Button)`
   // Will need a fixed width to stop resizing with switching button copy;
-  width: 225px;
-  height: 60px;
-  margin-top: 1rem;
-  justify-content: left;
+  // width: 225px;
+  // height: 60px;
+  // margin-top: 1rem;
+  // justify-content: left;
+  display: flex;
   
   ${({ theme }) => css`
     color: ${theme.color('black')};
@@ -81,7 +107,9 @@ export {
   FilterSection,
   Title,
   BodyCopy,
-  ShowHideFiltersBtn,
+  UpperButtonWrapper,
+  ShowHideFiltersButton,
+  ClearSelectionButton,
   FiltersWrapper,
   FilterButton
 };
