@@ -28,8 +28,9 @@ const BodyCopy = styled.div`
 //
 `;
 
+// Tweaks to suit this context:
 const CustomisedButton = styled(Button)`
-  // Override Button w/icon styles to match styles:
+  // Override 'Button w/icon' styles for this use-case:
   display: inline-flex;
   grid-column-gap: 0.5rem;
   width: auto;
@@ -42,8 +43,6 @@ const CustomisedButton = styled(Button)`
     color: ${theme.color('black')};
     box-shadow: 0px 0px 0px 1px ${theme.color('black')} inset;
   `};
-
-
 
   > ${Copywrapper} {
     padding-right: 0;
@@ -97,9 +96,18 @@ const FilterButtonsWrapper = styled.div`
 
 const FilterButton = styled(Button)`
   box-shadow: 0px 0px 0px 1px ${({ theme }) => theme.color('grey_medium')} inset;
+  display: inline-flex;
 
   // Increase specificity to override style defaults:
   ${FilterButtonsWrapper} & {
+
+    > ${IconWrapper} {
+      margin: 0;
+    }
+
+    > ${Copywrapper} {
+      padding-inline: 0;
+    }
     
     // Match the focus and hover states to default, as it makes for confusing UX:
     &:hover,
@@ -107,13 +115,17 @@ const FilterButton = styled(Button)`
       box-shadow: 0px 0px 0px 1px ${({ theme }) => theme.color('grey')} inset;
     }
 
-    ${({ $isActive }) => ($isActive && css`
+    ${({ $isSelected }) => ($isSelected && css`
       &,
       &:hover,
       &:focus {
         background-color: ${({ theme }) => theme.color('red')};
         color: ${({ theme }) => theme.color('white')};
         box-shadow: none;
+
+        > ${IconWrapper} {
+          filter: invert(1);
+        }
       }
   `)};
   }

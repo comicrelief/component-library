@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Cross from '../../Atoms/Icons/Cross';
 import Filter from '../../Atoms/Icons/Filter';
 import Undo from '../../Atoms/Icons/Undo';
+// DEBUG
+import ChildrenIcon from '../../../data/test-icons/Children.svg';
 
 import {
   Container,
@@ -34,11 +36,11 @@ const FilterCard = ({
   const fakeTags = ['Fundraising packs', 'Posters', 'Bake', 'Thank you', 'Schools', 'Pay in', 'Certificates', 'Workplace'];
 
   // Add/remove this filter tag from the state array accordingly:
-  const updateFilters = (thisTag, theseCurrentFilters) => {
+  const updateFilters = thisTag => {
     // Cache current state:
-    let updatedFilters = theseCurrentFilters;
+    let updatedFilters = currentFilters;
 
-    if (theseCurrentFilters.includes(thisTag)) {
+    if (updatedFilters.includes(thisTag)) {
       // Grab the index of the tag we want to remove:
       const thisIndex = updatedFilters.indexOf(thisTag);
 
@@ -99,18 +101,24 @@ const FilterCard = ({
         </FilterControlsWrapper>
 
         <FilterButtonsWrapper $show={showFilters}>
-          { fakeTags.map(tag => (
-            <FilterButton
-              type="button"
-              color="grey_light"
-              value={tag}
-              key={tag}
-              $isActive={currentFilters.includes(tag)}
-              onClick={() => { updateFilters(tag, currentFilters); }}
-            >
-              {tag}
-            </FilterButton>
-          ))}
+          { fakeTags.map(tag => {
+            const isSelected = currentFilters.includes(tag);
+            return (
+              <FilterButton
+                type="button"
+                color="grey_light"
+                value={tag}
+                key={tag}
+                $isSelected={isSelected}
+                aria-pressed={isSelected}
+                onClick={() => { updateFilters(tag); }}
+                icon={ChildrenIcon}
+                iconLeft
+              >
+                {tag}
+              </FilterButton>
+            );
+          })}
         </FilterButtonsWrapper>
       </FilterSection>
 
