@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import crTheme from '../../../theme/crTheme/theme';
 import containers from '../../../theme/shared/containers';
-import Text from '../../Atoms/Text/Text';
 
 const Wrapper = styled.div`
   background: ${crTheme.color('grey_light')};
