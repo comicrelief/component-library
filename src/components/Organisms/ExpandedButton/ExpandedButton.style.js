@@ -35,7 +35,6 @@ const ButtonCard = styled.button`
   flex: 1;
   text-align: left;
   transition: all linear 0.2s;
-  min-height: 180px;
   width: 100%;
 
   &:hover {
@@ -44,7 +43,6 @@ const ButtonCard = styled.button`
 
   @media ${crTheme.allBreakpoints('M')} {
     padding: 1rem;
-    min-height: 200px;
   }
 `;
 
