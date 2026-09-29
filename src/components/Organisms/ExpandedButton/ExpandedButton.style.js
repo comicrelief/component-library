@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import crTheme from '../../../theme/crTheme/theme';
 import containers from '../../../theme/shared/containers';
+import Text from '../../Atoms/Text/Text';
 
 const Wrapper = styled.div`
   background: ${crTheme.color('grey_light')};
@@ -25,8 +26,8 @@ const Grid = styled.div`
 `;
 
 const ButtonCard = styled.button`
-  position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   background: ${crTheme.color('white')};
   border: 2px solid ${crTheme.color('grey')};
@@ -49,31 +50,27 @@ const ButtonCard = styled.button`
 `;
 
 const ArrowWrapper = styled.div`
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 18px;
   height: 18px;
   transform: rotate(45deg);
+  flex-shrink: 0;
 
   svg {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
   }
 `;
 
-const CardTitle = styled.h3`
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
-  color: ${crTheme.color('black')};
-  margin: 0 0 0.25rem 0;
+const CardTopWrapper = styled.div`
+  margin: 0 0 8px 0;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
 `;
 
 const HeadingContentWrapper = styled.div`
@@ -88,27 +85,26 @@ const HeadingIconWrapper = styled.span`
   justify-content: center;
 
   svg {
-    width: 18px;
-    height: 18px;
+    width: auto;
+    height: auto;
   }
 `;
 
-const CardDescription = styled.p`
+const CardHeading = styled.h3`
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
+  font-weight: 700;
+  line-height: 20px;
   color: ${crTheme.color('black')};
-  margin: 0;
 `;
 
 export {
   Wrapper,
   Grid,
   ButtonCard,
-  CardTitle,
-  CardDescription,
+  CardTopWrapper,
   ArrowWrapper,
   HeadingContentWrapper,
-  HeadingIconWrapper
+  HeadingIconWrapper,
+  CardHeading
 };

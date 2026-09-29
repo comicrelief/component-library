@@ -1,15 +1,16 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import Arrow from '../../Atoms/Icons/Arrow';
+import Text from '../../Atoms/Text/Text';
 import {
   Wrapper,
   Grid,
   ButtonCard,
-  CardTitle,
-  CardDescription,
+  CardTopWrapper,
   ArrowWrapper,
   HeadingContentWrapper,
-  HeadingIconWrapper
+  HeadingIconWrapper,
+  CardHeading
 } from './ExpandedButton.style';
 
 function ExpandedButton({ options = [], selectedId, onSelect }) {
@@ -30,20 +31,26 @@ function ExpandedButton({ options = [], selectedId, onSelect }) {
             $isSelected={selectedId === option.id}
             data-test={`expanded-button-${option.id}`}
           >
-            <ArrowWrapper>
-              <Arrow colour="black" />
-            </ArrowWrapper>
-            <CardTitle>
+
+            <CardTopWrapper>
+
               <HeadingContentWrapper>
                 {option.icon && (
                   <HeadingIconWrapper>
                     <img src={option.icon} alt="" />
                   </HeadingIconWrapper>
                 )}
-                <span>{option.title}</span>
+                <CardHeading>{option.title}</CardHeading>
               </HeadingContentWrapper>
-            </CardTitle>
-            <CardDescription>{option.description}</CardDescription>
+
+              <ArrowWrapper>
+                <Arrow colour="black" />
+              </ArrowWrapper>
+
+            </CardTopWrapper>
+
+            <Text>{option.description}</Text>
+
           </ButtonCard>
         ))}
       </Grid>
