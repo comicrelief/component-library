@@ -104,9 +104,7 @@ const FilterButton = styled(Button)`
     // Match the focus and hover states to default, as it makes for confusing UX:
     &:hover,
     &:focus {
-      background-color: ${({ theme }) => theme.color('grey_medium')};
       box-shadow: 0px 0px 0px 1px ${({ theme }) => theme.color('grey')} inset;
-      color: ${({ theme }) => theme.color('black')};
     }
 
     ${({ $isActive }) => ($isActive && css`
