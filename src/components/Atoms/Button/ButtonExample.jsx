@@ -159,6 +159,17 @@ export default function ButtonExample() {
           type="button"
           icon={ButtonIconImgPath}
           iconDescription="House with a heart-shaped window"
+          iconLeft
+        >
+          Button w/image URL for (left-aligned) icon
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          icon={ButtonIconImgPath}
+          iconDescription="House with a heart-shaped window"
         >
           Button w/image URL for icon
         </Button>
@@ -221,6 +232,19 @@ export default function ButtonExample() {
           iconDescription="Phone icon"
         >
           Red full-width Button w/svg URL, rendered as img
+        </Button>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Button
+          type="button"
+          icon={testSvgImg}
+          fullWidth
+          iconDescription="Phone icon"
+          color="blue"
+          iconLeft
+        >
+          Blue full-width Button w/svg URL, rendered as (left-aligned)
         </Button>
       </ExampleContainer>
 

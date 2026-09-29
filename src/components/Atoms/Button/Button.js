@@ -9,6 +9,7 @@ const Button = React.forwardRef(({
   color = 'red',
   icon = null,
   iconDescription = 'Icon',
+  iconLeft = false,
   wrapper = false,
   fullWidth = false,
   buttonType = buttonTypes.PRIMARY,
@@ -27,6 +28,7 @@ const Button = React.forwardRef(({
       $buttonType={buttonType}
       data-testid="Button"
       $hasIcon={hasIcon}
+      $iconLeft={iconLeft}
     >
 
       {hasIcon
@@ -63,6 +65,7 @@ Button.propTypes = {
     PropTypes.string
   ]),
   iconDescription: PropTypes.string,
+  iconLeft: PropTypes.bool,
   // Primary will the default for the vast majority of contexts; with
   // Secondary and Tertirary being manually set by developers where required
   buttonType: PropTypes.oneOf([
