@@ -34,19 +34,29 @@ const FilterCard = ({
   const fakeTags = ['Fundraising packs', 'Posters', 'Bake', 'Thank you', 'Schools', 'Pay in', 'Certificates', 'Workplace'];
 
   // Add/remove this filter tag from the state array accordingly:
-  const updateFilters = thisTag => {
-    const updatedFilters = currentFilters;
-    // console.log('updatedFilters.indexOf(thisTag)', updatedFilters.indexOf(thisTag));
+  const updateFilters = (thisTag, theseCurrentFilters) => {
+    // Cache current state:
+    let updatedFilters = theseCurrentFilters;
 
-    if (updatedFilters.includes(thisTag)) {
-      updatedFilters.pop(thisTag);
+    if (theseCurrentFilters.includes(thisTag)) {
+      // Grab the index of the tag we want to remove:
+      const thisIndex = updatedFilters.indexOf(thisTag);
+
+      // Create a new array of the 2 sliced-off halves:
+      updatedFilters = [
+        ...updatedFilters.slice(0, thisIndex),
+        ...updatedFilters.slice(thisIndex + 1)
+      ];
     } else {
       updatedFilters.push(thisTag);
     }
+
     // Spread as 'new' array to trigger re-render:
     setCurrentFilters([...updatedFilters]);
     setContentIsFiltered(updatedFilters.length > 0);
   };
+
+  // console.log('currentFilters', currentFilters);
 
   return (
     <Container
@@ -96,7 +106,7 @@ const FilterCard = ({
               value={tag}
               key={tag}
               $isActive={currentFilters.includes(tag)}
-              onClick={() => { updateFilters(tag); }}
+              onClick={() => { updateFilters(tag, currentFilters); }}
             >
               {tag}
             </FilterButton>
