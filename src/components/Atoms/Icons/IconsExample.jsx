@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {
-  Arrow, AtSign, Chevron, CtaArrow, Download, External, Favourite, Internal, Post, Filter
+  Arrow, AtSign, Chevron, CtaArrow, Download, External, Favourite, Internal, Post, Filter, Undo
 } from './index';
 import Cross from './Cross';
 import Curve from './Curve';
@@ -51,7 +51,8 @@ export default function IconsExample() {
             ['AtSign', <AtSign size={48} colour="black" />],
             ['Cross', <Cross size={48} colour="black" />],
             ['Post', <Post size={48} colour="black" />],
-            ['Post', <Filter size={48} colour="black" />]
+            ['Filter', <Filter size={48} colour="black" />],
+            ['Undo', <Undo size={48} colour="black" />]
 
           ].map(([name, icon]) => (
             <IconCard key={name}>

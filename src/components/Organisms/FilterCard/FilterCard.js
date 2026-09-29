@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import buttonTypes from '../../../theme/crTheme/buttonTypes';
 import Cross from '../../Atoms/Icons/Cross';
 import Filter from '../../Atoms/Icons/Filter';
+import Undo from '../../Atoms/Icons/Undo';
 
 import {
   Container,
@@ -11,8 +11,8 @@ import {
   BodyCopy,
   ShowHideFiltersButton,
   ClearSelectionButton,
-  UpperButtonWrapper,
-  FiltersWrapper,
+  FilterControlsWrapper,
+  FilterButtonsWrapper,
   FilterButton
 } from './FilterCard.style';
 
@@ -23,15 +23,12 @@ const FilterCard = ({
   title,
   body
 }) => {
-  const [showFilters, setShowFilters] = useState(false);
+  const [showFilters, setShowFilters] = useState(true); // DEBUG
   const [currentFilters, setCurrentFilters] = useState([]);
   const [contentIsFiltered, setContentIsFiltered] = useState(false);
   const showHideFilterText = showFilters ? 'Hide Filters' : 'Show Filters';
-  const showHideFilterColour = showFilters ? 'black' : 'grey_medium';
-
-  // TODO: feels needless fussy, maybe just do with styles?
-  const showHideFilterButtonType = showFilters ? buttonTypes.SECONDARY : buttonTypes.PRIMARY;
-  const currentIcon = showFilters ? <Cross /> : <Filter />;
+  const currentFilterIcon = showFilters ? <Cross /> : <Filter />;
+  const undoIcon = <Undo />;
 
   // Just for fun for now
   const fakeTags = ['Fundraising packs', 'Posters', 'Bake', 'Thank you', 'Schools', 'Pay in', 'Certificates', 'Workplace'];
@@ -39,14 +36,15 @@ const FilterCard = ({
   // Add/remove this filter tag from the state array accordingly:
   const updateFilters = thisTag => {
     const updatedFilters = currentFilters;
+    // console.log('updatedFilters.indexOf(thisTag)', updatedFilters.indexOf(thisTag));
 
-    if (updatedFilters.indexOf(thisTag) === -1) {
-      updatedFilters.push(thisTag);
-    } else {
+    if (updatedFilters.includes(thisTag)) {
       updatedFilters.pop(thisTag);
+    } else {
+      updatedFilters.push(thisTag);
     }
-
-    setCurrentFilters(updatedFilters);
+    // Spread as 'new' array to trigger re-render:
+    setCurrentFilters([...updatedFilters]);
     setContentIsFiltered(updatedFilters.length > 0);
   };
 
@@ -65,16 +63,13 @@ const FilterCard = ({
           {body}
         </BodyCopy>
 
-        {/* Come up with a different name lol */}
-        <UpperButtonWrapper>
+        <FilterControlsWrapper>
           <ShowHideFiltersButton
-            buttonType={showHideFilterButtonType}
-            color={showHideFilterColour}
+            color="white"
             $showFilters={showFilters}
-            $borderColour={showHideFilterColour}
             onClick={() => { setShowFilters(!showFilters); }}
             aria-pressed={showFilters}
-            icon={currentIcon}
+            icon={currentFilterIcon}
           >
             {showHideFilterText}
           </ShowHideFiltersButton>
@@ -82,6 +77,8 @@ const FilterCard = ({
           <ClearSelectionButton
             color="white"
             disabled={!contentIsFiltered}
+            icon={undoIcon}
+            $show={showFilters}
             onClick={() => {
               setCurrentFilters([]);
               setContentIsFiltered(false);
@@ -89,22 +86,22 @@ const FilterCard = ({
           >
             Clear selection
           </ClearSelectionButton>
-        </UpperButtonWrapper>
+        </FilterControlsWrapper>
 
-        <FiltersWrapper $show={showFilters}>
+        <FilterButtonsWrapper $show={showFilters}>
           { fakeTags.map(tag => (
             <FilterButton
               type="button"
-              // buttonType={showHideFilterButtonType}
-              // color={showHideFilterColour}
-              // $borderColour={showHideFilterColour}
+              color="grey_light"
               value={tag}
+              key={tag}
+              $isActive={currentFilters.includes(tag)}
               onClick={() => { updateFilters(tag); }}
             >
               {tag}
             </FilterButton>
           ))}
-        </FiltersWrapper>
+        </FilterButtonsWrapper>
       </FilterSection>
 
     </Container>

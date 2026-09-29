@@ -31,7 +31,7 @@ const BodyCopy = styled.div`
 const CustomisedButton = styled(Button)`
   // Override Button w/icon styles to match styles:
   display: inline-flex;
-  grid-column-gap: 0;
+  grid-column-gap: 0.5rem;
   width: auto;
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
@@ -40,36 +40,44 @@ const CustomisedButton = styled(Button)`
   
   ${({ theme }) => css`
     color: ${theme.color('black')};
-    box-shadow: 0px 0px 0px 2px ${theme.color('black')} inset;`};
+    box-shadow: 0px 0px 0px 2px ${theme.color('black')} inset;
+  `};
+
+
 
   > ${Copywrapper} {
     padding-right: 0;
     text-align: left;
-    
-    // Fixed label width to prevent squirming when the label copy changes:
-    width: 7rem;
-    @media ${({ theme }) => theme.allBreakpoints('L')} {
-      width: 8rem;
-    }
   }
 
   > ${IconWrapper} {
     margin-left: 0;
     height: calc(2.25rem - (0.6rem * 2));
-    // More squirm-prevention when switching icons:
-    width: 1rem;
   }
 `;
 
 const ShowHideFiltersButton = styled(CustomisedButton)`
-//
+  > ${Copywrapper} {
+    // Fixed label width to prevent squirming when the label copy changes:
+    width: 7rem;
+    text-align: center;
+
+    @media ${({ theme }) => theme.allBreakpoints('L')} {
+      width: 8rem;
+    }
+  }
+
+  // More squirm-prevention when switching icons:
+  > ${IconWrapper} {
+    width: 1rem;
+  }
 `;
 
 const ClearSelectionButton = styled(CustomisedButton)`
-//
+  display: ${({ $show }) => ($show ? 'flex' : 'none')};
 `;
 
-const UpperButtonWrapper = styled.div`
+const FilterControlsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -78,10 +86,9 @@ const UpperButtonWrapper = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: row;
   }
-//
 `;
 
-const FiltersWrapper = styled.div`
+const FilterButtonsWrapper = styled.div`
   display: ${({ $show }) => ($show ? 'flex' : 'none')};
   margin-top: 1rem;
   flex-wrap: wrap;
@@ -89,17 +96,29 @@ const FiltersWrapper = styled.div`
 `;
 
 const FilterButton = styled(Button)`
-  // Will need a fixed width to stop resizing with switching button copy;
-  // width: 225px;
-  // height: 60px;
-  // margin-top: 1rem;
-  // justify-content: left;
-  display: flex;
-  
-  ${({ theme }) => css`
-    color: ${theme.color('black')};
-    box-shadow: 0px 0px 0px 2px ${theme.color('black')} inset;`
-};
+  box-shadow: 0px 0px 0px 2px ${({ theme }) => theme.color('grey_medium')} inset;
+
+  // Increase specificity to override style defaults:
+  ${FilterButtonsWrapper} & {
+    
+    // Match the focus and hover states to default, as it makes for confusing UX:
+    &:hover,
+    &:focus {
+      background-color: ${({ theme }) => theme.color('grey_medium')};
+      box-shadow: 0px 0px 0px 2px ${({ theme }) => theme.color('grey')} inset;
+      color: ${({ theme }) => theme.color('black')};
+    }
+
+    ${({ $isActive }) => ($isActive && css`
+      &,
+      &:hover,
+      &:focus {
+        background-color: ${({ theme }) => theme.color('red')};
+        color: ${({ theme }) => theme.color('white')};
+        box-shadow: none;
+      }
+  `)};
+  }
 `;
 
 export {
@@ -107,9 +126,9 @@ export {
   FilterSection,
   Title,
   BodyCopy,
-  UpperButtonWrapper,
+  FilterControlsWrapper,
   ShowHideFiltersButton,
   ClearSelectionButton,
-  FiltersWrapper,
+  FilterButtonsWrapper,
   FilterButton
 };

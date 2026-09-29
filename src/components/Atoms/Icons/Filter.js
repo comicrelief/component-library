@@ -34,7 +34,7 @@ const Filter = ({
     </g>
     <defs>
       <clipPath id="clip0_2092_16160">
-        <rect width={size} height={size} fill="white" />
+        <rect width={size} height={size} fill={colour} />
       </clipPath>
     </defs>
   </Icon>
