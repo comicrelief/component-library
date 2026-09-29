@@ -18,7 +18,6 @@ function ExpandedButton({ options = [], selectedId, onSelect }) {
     if (onSelect) {
       onSelect(id);
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [onSelect]);
 
   return (
