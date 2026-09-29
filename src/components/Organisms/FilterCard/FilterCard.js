@@ -4,7 +4,8 @@ import Cross from '../../Atoms/Icons/Cross';
 import Filter from '../../Atoms/Icons/Filter';
 import Undo from '../../Atoms/Icons/Undo';
 // DEBUG
-import ChildrenIcon from '../../../data/test-icons/Children.svg';
+import ChildrenIconWhite from '../../../data/test-icons/Children--white.svg';
+import ChildrenIconBlack from '../../../data/test-icons/Children--black.svg';
 
 import {
   Container,
@@ -112,7 +113,8 @@ const FilterCard = ({
                 $isSelected={isSelected}
                 aria-pressed={isSelected}
                 onClick={() => { updateFilters(tag); }}
-                icon={ChildrenIcon}
+                // DEBUG
+                icon={isSelected ? ChildrenIconWhite : ChildrenIconBlack}
                 iconLeft
               >
                 {tag}

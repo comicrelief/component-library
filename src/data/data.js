@@ -344,6 +344,8 @@ const RichtextCarouselItemsWithPadding = {
 
 const ButtonIconImgPath = 'https://images.ctfassets.net/zsfivwzfgl3t/4IlLxZnddkg1pHWZP3AZnA/447078df666932751c9c618a296f24db/Icon__Shelter.png';
 
+const ButtonIconImagePath2 = 'https://images.ctfassets.net/zsfivwzfgl3t/1olBuz2b2baO5qKsOFvNjr/7df1553e56b7b50ff3d27cfbeae92370/Legal_assistance_packages.png';
+
 const ButtonIconSvgPath = 'https://images.ctfassets.net/0p265iutoxgq/3GaahqcCBaXrLBm5fu8HAj/d965a32d93fe82bf103c2f444e0bb9ec/Phone--white.svg';
 
 export {
@@ -351,5 +353,5 @@ export {
   carouselItemsComplete, carouselItemsCompleteWithPadding,
   carouselItemsIncomplete, carouselItemsMinimal,
   RichtextCarouselItems, RichtextCarouselItemsWithPadding,
-  ButtonIconImgPath, ButtonIconSvgPath
+  ButtonIconImgPath, ButtonIconSvgPath, ButtonIconImagePath2
 };
