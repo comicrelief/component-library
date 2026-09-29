@@ -130,7 +130,7 @@ const FilterButton = styled(Button)`
     ${({ $isSelected }) => ($isSelected && css`
 
       > ${IconWrapper} {
-        animation: ${fadeInAnimation} 0.2s ease-in;
+        animation: ${fadeInAnimation} 0.2s ease-in-out;
       }
 
       &,
