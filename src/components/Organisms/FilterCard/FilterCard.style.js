@@ -40,7 +40,7 @@ const CustomisedButton = styled(Button)`
   
   ${({ theme }) => css`
     color: ${theme.color('black')};
-    box-shadow: 0px 0px 0px 2px ${theme.color('black')} inset;
+    box-shadow: 0px 0px 0px 1px ${theme.color('black')} inset;
   `};
 
 
@@ -96,7 +96,7 @@ const FilterButtonsWrapper = styled.div`
 `;
 
 const FilterButton = styled(Button)`
-  box-shadow: 0px 0px 0px 2px ${({ theme }) => theme.color('grey_medium')} inset;
+  box-shadow: 0px 0px 0px 1px ${({ theme }) => theme.color('grey_medium')} inset;
 
   // Increase specificity to override style defaults:
   ${FilterButtonsWrapper} & {
@@ -105,7 +105,7 @@ const FilterButton = styled(Button)`
     &:hover,
     &:focus {
       background-color: ${({ theme }) => theme.color('grey_medium')};
-      box-shadow: 0px 0px 0px 2px ${({ theme }) => theme.color('grey')} inset;
+      box-shadow: 0px 0px 0px 1px ${({ theme }) => theme.color('grey')} inset;
       color: ${({ theme }) => theme.color('black')};
     }
 
