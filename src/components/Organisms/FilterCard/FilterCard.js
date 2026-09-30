@@ -21,6 +21,9 @@ import {
   FilterButton
 } from './FilterCard.style';
 
+// A handy global var to store away from state and re-renders:
+let numberOfResults = 0;
+
 const FilterCard = ({ data }) => {
   const {
     title,
@@ -37,10 +40,12 @@ const FilterCard = ({ data }) => {
   const [showFilters, setShowFilters] = useState(true); // DEBUG
   const [currentFilters, setCurrentFilters] = useState([]);
   const [contentIsFiltered, setContentIsFiltered] = useState(false);
-  const [totalResults, setTotalResults] = useState(0);
 
   // Add/remove this filter tag from the state array accordingly:
   const updateFilters = thisTag => {
+    // Reset our counter for every change:
+    numberOfResults = 0;
+
     // Cache current state:
     let updatedFilters = currentFilters;
 
@@ -126,9 +131,9 @@ const FilterCard = ({ data }) => {
 
               <ResultsWrapper>
                 <Text tag="span">
-                  {totalResults}
+                  {numberOfResults}
                   {' '}
-                  {totalResults === 1 ? 'result' : 'results'}
+                  {numberOfResults === 1 ? 'result' : 'results'}
                 </Text>
               </ResultsWrapper>
 
@@ -167,6 +172,7 @@ const FilterCard = ({ data }) => {
                 || currentFilters.some(thisTag => thisNode.tags.includes(thisTag));
 
                 if (renderNode) {
+                  numberOfResults += 1;
                   return (
                     <div style={{ marginTop: '1rem' }}>
                       <p>
