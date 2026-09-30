@@ -3,15 +3,10 @@ import Text from '../../Atoms/Text/Text';
 import Button from '../../Atoms/Button/Button';
 import { Copywrapper, IconWrapper } from '../../Atoms/Button/Button.style';
 
-// Attempt to stop image flashing when switching icons:
-const fadeInAnimation = keyframes`
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+// To reduce icon flash when switching between images:
+const iconFadeIn = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
 `;
 
 const Container = styled.div`
@@ -115,6 +110,7 @@ const FilterButton = styled(Button)`
     > ${IconWrapper} {
       margin: 0;
       width: 1.25rem;
+      animation: ${iconFadeIn} 0.2s ease-in;
     }
 
     > ${Copywrapper} {
@@ -128,11 +124,6 @@ const FilterButton = styled(Button)`
     }
 
     ${({ $isSelected }) => ($isSelected && css`
-
-      > ${IconWrapper} {
-        animation: ${fadeInAnimation} 0.2s ease-in-out;
-      }
-
       &,
       &:hover,
       &:focus {
@@ -141,7 +132,6 @@ const FilterButton = styled(Button)`
         box-shadow: none;
 
         // Flip the colour 
-        // TODO: may not need this
         // > ${IconWrapper} {
         //   // filter: invert(1);
         // }

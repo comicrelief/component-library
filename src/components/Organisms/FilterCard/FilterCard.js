@@ -29,9 +29,6 @@ const FilterCard = ({
   const [showFilters, setShowFilters] = useState(true); // DEBUG
   const [currentFilters, setCurrentFilters] = useState([]);
   const [contentIsFiltered, setContentIsFiltered] = useState(false);
-  const showHideFilterText = showFilters ? 'Hide Filters' : 'Show Filters';
-  const currentFilterIcon = showFilters ? <Cross /> : <Filter />;
-  const undoIcon = <Undo />;
 
   // Just for fun for now
   const fakeTags = ['Fundraising packs', 'Posters', 'Bake', 'Thank you', 'Schools', 'Pay in', 'Certificates', 'Workplace'];
@@ -45,7 +42,7 @@ const FilterCard = ({
       // Grab the index of the tag we want to remove:
       const thisIndex = updatedFilters.indexOf(thisTag);
 
-      // Create a new array of the 2 sliced-off halves:
+      // Create a new array from the 2 remaining slices:
       updatedFilters = [
         ...updatedFilters.slice(0, thisIndex),
         ...updatedFilters.slice(thisIndex + 1)
@@ -58,8 +55,6 @@ const FilterCard = ({
     setCurrentFilters([...updatedFilters]);
     setContentIsFiltered(updatedFilters.length > 0);
   };
-
-  // console.log('currentFilters', currentFilters);
 
   return (
     <Container
@@ -82,15 +77,15 @@ const FilterCard = ({
             $showFilters={showFilters}
             onClick={() => { setShowFilters(!showFilters); }}
             aria-pressed={showFilters}
-            icon={currentFilterIcon}
+            icon={showFilters ? <Cross /> : <Filter />}
           >
-            {showHideFilterText}
+            {showFilters ? 'Hide Filters' : 'Show Filters'}
           </ShowHideFiltersButton>
 
           <ClearSelectionButton
             color="white"
             disabled={!contentIsFiltered}
-            icon={undoIcon}
+            icon={<Undo />}
             $show={showFilters}
             onClick={() => {
               setCurrentFilters([]);
@@ -106,15 +101,16 @@ const FilterCard = ({
             const isSelected = currentFilters.includes(tag);
             return (
               <FilterButton
+                key={tag}
                 type="button"
                 color="grey_light"
                 value={tag}
-                key={tag}
                 $isSelected={isSelected}
                 aria-pressed={isSelected}
                 onClick={() => { updateFilters(tag); }}
-                // DEBUG
-                icon={isSelected ? ChildrenIconWhite : ChildrenIconBlack}
+                // Force a re-render for our flash-reducing icon fade-in animation
+                iconKey={`${isSelected}-`}
+                icon={isSelected ? ChildrenIconWhite : ChildrenIconBlack} // DEBUG
                 iconLeft
               >
                 {tag}
