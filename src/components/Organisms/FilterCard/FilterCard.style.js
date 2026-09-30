@@ -107,6 +107,8 @@ const FilterButton = styled(Button)`
   // Increase specificity to override style defaults:
   ${FilterButtonsWrapper} & {
 
+    transition: all 0.2s ease-in;
+
     > ${IconWrapper} {
       margin: 0;
       width: 1.25rem;

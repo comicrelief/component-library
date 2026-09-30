@@ -63,6 +63,7 @@ const FilterCard = ({
       $pageBackgroundColour={pageBackgroundColour}
     >
       <FilterSection>
+
         <Title tag="h1">
           {title}
         </Title>
@@ -75,8 +76,8 @@ const FilterCard = ({
           <ShowHideFiltersButton
             color="white"
             $showFilters={showFilters}
-            onClick={() => { setShowFilters(!showFilters); }}
             aria-pressed={showFilters}
+            onClick={() => { setShowFilters(!showFilters); }}
             icon={showFilters ? <Cross /> : <Filter />}
           >
             {showFilters ? 'Hide Filters' : 'Show Filters'}
@@ -107,11 +108,11 @@ const FilterCard = ({
                 value={tag}
                 $isSelected={isSelected}
                 aria-pressed={isSelected}
+                iconLeft
+                icon={isSelected ? ChildrenIconWhite : ChildrenIconBlack} // DEBUG
                 onClick={() => { updateFilters(tag); }}
                 // Force a re-render for our flash-reducing icon fade-in animation
-                iconKey={`${isSelected}-`}
-                icon={isSelected ? ChildrenIconWhite : ChildrenIconBlack} // DEBUG
-                iconLeft
+                iconKey={`${isSelected}`}
               >
                 {tag}
               </FilterButton>
