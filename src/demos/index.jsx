@@ -140,6 +140,8 @@ import RichtextCarouselExample from '../components/Organisms/RichtextCarousel/Ri
 import richtextCarouselExampleSrc from '../components/Organisms/RichtextCarousel/RichtextCarouselExample.jsx?raw';
 import DynamicGalleryExample from '../components/Organisms/DynamicGallery/DynamicGalleryExample.jsx';
 import dynamicGalleryExampleSrc from '../components/Organisms/DynamicGallery/DynamicGalleryExample.jsx?raw';
+import ExpandedButtonExample from '../components/Organisms/ExpandedButton/ExpandedButtonExample.jsx';
+import expandedButtonExampleSrc from '../components/Organisms/ExpandedButton/ExpandedButtonExample.jsx?raw';
 
 const Placeholder = ({ name }) => (
   <div style={{ padding: '1rem', background: '#f5f5f5', borderRadius: '4px', color: '#666' }}>
@@ -215,6 +217,7 @@ export const organisms = [
   { name: 'Donate', examples: [<DonateExample1 />, <DonateExample2 />, <DonateExample3 />, <DonateExample4 />, <DonateExample5 />, <DonateExample6 />, <DonateExample7 />, <DonateExample8 />, <DonateExample9 />, <DonateExample10 />, <DonateExample11 />, <DonateExample12 />, <DonateExample13 />, <DonateExample14 />, <DonateExample15 />, <DonateExample16 />, <DonateExample17 />, <DonateExample18 />, <DonateExample19 />, <DonateExample20 />, <DonateExample21 />, <DonateExample22 />] },
   { name: 'DonateBanner', demo: demo(DonateBannerExample, donateBannerExampleSrc) },
   { name: 'DynamicGallery', demo: demo(DynamicGalleryExample, dynamicGalleryExampleSrc) },
+  { name: 'ExpandedButton', demo: demo(ExpandedButtonExample, expandedButtonExampleSrc) },
   { name: 'EmailBanner', examples: [<EmailBannerExample1 />, <EmailBannerExample2 />, <EmailBannerExample3 />, <EmailBannerExample4 />, <EmailBannerExample5 />] },
   { name: 'EmailSignUpForm', demo: demo(EmailSignUpExample, emailSignUpExampleSrc) },
   { name: 'Footer', examples: [<FooterExample1 />, <FooterExample2 />, <FooterExample3 />] },
