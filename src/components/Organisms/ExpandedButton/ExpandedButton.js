@@ -1,7 +1,6 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import Arrow from '../../Atoms/Icons/Arrow';
-import Text from '../../Atoms/Text/Text';
 import {
   Wrapper,
   Grid,
@@ -10,7 +9,8 @@ import {
   ArrowWrapper,
   HeadingContentWrapper,
   HeadingIconWrapper,
-  CardHeading
+  CardHeading,
+  CardBlurb
 } from './ExpandedButton.style';
 
 function ExpandedButton({ options = [], selectedId, onSelect }) {
@@ -48,7 +48,7 @@ function ExpandedButton({ options = [], selectedId, onSelect }) {
 
             </CardTopWrapper>
 
-            <Text>{option.description}</Text>
+            <CardBlurb>{option.description}</CardBlurb>
 
           </ButtonCard>
         ))}

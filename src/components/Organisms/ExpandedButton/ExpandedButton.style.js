@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import crTheme from '../../../theme/crTheme/theme';
 import containers from '../../../theme/shared/containers';
+import Text from '../../Atoms/Text/Text';
 
 const Wrapper = styled.div`
   background: ${crTheme.color('grey_light')};
@@ -29,7 +30,7 @@ const ButtonCard = styled.button`
   flex-direction: column;
   padding: 1rem;
   background: ${crTheme.color('white')};
-  border: 2px solid ${crTheme.color('grey')};
+  border: 1px solid ${crTheme.color('grey')};
   border-radius: 8px;
   cursor: pointer;
   flex: 1;
@@ -95,6 +96,13 @@ const CardHeading = styled.h3`
   color: ${crTheme.color('black')};
 `;
 
+const CardBlurb = styled(Text)`
+  font-size: 14px;
+  @media ${crTheme.allBreakpoints('M')} {
+    font-size: 16px;
+  }
+`;
+
 export {
   Wrapper,
   Grid,
@@ -103,5 +111,6 @@ export {
   ArrowWrapper,
   HeadingContentWrapper,
   HeadingIconWrapper,
-  CardHeading
+  CardHeading,
+  CardBlurb
 };
