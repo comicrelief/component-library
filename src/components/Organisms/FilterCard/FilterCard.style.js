@@ -4,7 +4,7 @@ import Button from '../../Atoms/Button/Button';
 import { Copywrapper, IconWrapper } from '../../Atoms/Button/Button.style';
 
 // To reduce icon flash when switching between images:
-const iconFadeIn = keyframes`
+const fadeIn = keyframes`
   from { opacity: 0; }
   to { opacity: 1; }
 `;
@@ -20,7 +20,7 @@ const Container = styled.div`
   ${({ $paddingAbove, $paddingBelow }) => css`padding: ${$paddingAbove} 2rem ${$paddingBelow};`}
 `;
 
-const FilterSection = styled.div`
+const OuterWrapper = styled.div`
   background: white;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -31,12 +31,20 @@ const Title = styled(Text)`
 `;
 
 const BodyCopy = styled.div`
-//
+  margin-bottom: 1rem;
 `;
 
-const Results = styled(Text)`
-  display: flex;
-  align-items: center;
+const DynamicContentWrapper = styled.div`
+  animation: ${fadeIn} 0.2s ease-in;
+`;
+
+const ResultsWrapper = styled.div`
+  text-align: center;
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    display: flex;
+    align-items: center;
+  }
 `;
 
 // Tweaks to suit this context:
@@ -87,11 +95,10 @@ const ClearSelectionButton = styled(CustomisedButton)`
   display: ${({ $show }) => ($show ? 'flex' : 'none')};
 `;
 
-const FilterControlsWrapper = styled.div`
+const ControlsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 1rem;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex-direction: row;
@@ -103,6 +110,7 @@ const FilterButtonsWrapper = styled.div`
   margin-top: 1rem;
   flex-wrap: wrap;
   gap: 0.5rem;
+  animation: ${fadeIn} 0.1s ease-in;
 `;
 
 const FilterButton = styled(Button)`
@@ -119,7 +127,7 @@ const FilterButton = styled(Button)`
       margin: 0;
       // Squirm-reduction
       width: 1.25rem;
-      animation: ${iconFadeIn} 0.2s ease-in;
+      animation: ${fadeIn} 0.2s ease-in;
     }
 
     > ${Copywrapper} {
@@ -151,11 +159,12 @@ const FilterButton = styled(Button)`
 
 export {
   Container,
-  FilterSection,
+  OuterWrapper,
   Title,
   BodyCopy,
-  Results,
-  FilterControlsWrapper,
+  ResultsWrapper,
+  DynamicContentWrapper,
+  ControlsWrapper,
   ShowHideFiltersButton,
   ClearSelectionButton,
   FilterButtonsWrapper,

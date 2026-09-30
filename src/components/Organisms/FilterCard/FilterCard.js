@@ -1,45 +1,43 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import PulseLoader from 'react-spinners/PulseLoader';
 import Cross from '../../Atoms/Icons/Cross';
 import Filter from '../../Atoms/Icons/Filter';
 import Undo from '../../Atoms/Icons/Undo';
+import Text from '../../Atoms/Text/Text';
 import preprocessNodes from './_utils/_utils';
-// DEBUG
-import ChildrenIconWhite from '../../../data/test-icons/Children--white.svg';
-import ChildrenIconBlack from '../../../data/test-icons/Children--black.svg';
 
 import {
   Container,
-  FilterSection,
+  OuterWrapper,
   Title,
   BodyCopy,
-  Results,
+  ResultsWrapper,
   ShowHideFiltersButton,
   ClearSelectionButton,
-  FilterControlsWrapper,
+  DynamicContentWrapper,
+  ControlsWrapper,
   FilterButtonsWrapper,
   FilterButton
 } from './FilterCard.style';
 
 const FilterCard = ({ data }) => {
   const {
-    paddingAbove = '0rem',
-    paddingBelow = '1rem',
-    pageBackgroundColour = 'transparent',
     title,
     body,
-    filterCardNodes
+    filterCardNodes,
+    paddingAbove = '0rem',
+    paddingBelow = '1rem',
+    pageBackgroundColour = 'transparent'
   } = data;
 
   const [isLoading, setIsLoading] = useState(true);
-  const [isReady, setIsReady] = useState(false);
+  const [processedNodes, setProcessedNodes] = useState(false);
+  const [processedTags, setProcessedTags] = useState(false);
   const [showFilters, setShowFilters] = useState(true); // DEBUG
   const [currentFilters, setCurrentFilters] = useState([]);
   const [contentIsFiltered, setContentIsFiltered] = useState(false);
   const [totalResults, setTotalResults] = useState(0);
-
-  // Just for fun for now
-  const fakeTags = ['Fundraising packs', 'Posters', 'Bake', 'Thank you', 'Schools', 'Pay in', 'Certificates', 'Workplace'];
 
   // Add/remove this filter tag from the state array accordingly:
   const updateFilters = thisTag => {
@@ -66,14 +64,18 @@ const FilterCard = ({ data }) => {
 
   useEffect(() => {
     if (isLoading) {
-      setIsLoading(false);
+      // Use our helper function to best transform the Contentful output for our use cases:
+      const { outputNodes, outputTags } = preprocessNodes(filterCardNodes);
 
-      const { processedNodes, processedTags } = preprocessNodes(filterCardNodes);
-      console.log('processedNodes', processedNodes);
-      console.log('processedTags', processedTags);
-
-      if (processedNodes && processedTags) {
-        setIsReady(true);
+      // Only go ahead once we've got the goods:
+      if (outputNodes && outputTags) {
+        console.log('outputNodes', outputNodes);
+        // Pause for a second before going ahead, to prevent nasty flashes:
+        setTimeout(() => {
+          setProcessedNodes(outputNodes);
+          setProcessedTags(outputTags);
+          setIsLoading(false);
+        }, 1000);
       }
     }
   }, [isLoading, filterCardNodes]);
@@ -84,75 +86,120 @@ const FilterCard = ({ data }) => {
       $paddingBelow={paddingBelow}
       $pageBackgroundColour={pageBackgroundColour}
     >
-      {isReady && (
-        <FilterSection>
 
-          <Title tag="h1">
-            {title}
-          </Title>
+      <OuterWrapper>
 
-          {/* TODO: suss this properly */}
-          <BodyCopy>
-            {body.raw}
-          </BodyCopy>
+        <Title tag="h1">
+          {title}
+        </Title>
 
-          <FilterControlsWrapper>
-            <ShowHideFiltersButton
-              color="white"
-              $showFilters={showFilters}
-              aria-pressed={showFilters}
-              onClick={() => { setShowFilters(!showFilters); }}
-              icon={showFilters ? <Cross /> : <Filter />}
-            >
-              {showFilters ? 'Hide Filters' : 'Show Filters'}
-            </ShowHideFiltersButton>
+        {/* TODO: suss this properly */}
+        <BodyCopy>
+          {body.raw}
+        </BodyCopy>
 
-            <ClearSelectionButton
-              color="white"
-              disabled={!contentIsFiltered}
-              icon={<Undo />}
-              $show={showFilters}
-              onClick={() => {
-                setCurrentFilters([]);
-                setContentIsFiltered(false);
-              }}
-            >
-              Clear selection
-            </ClearSelectionButton>
+        {(processedTags && processedNodes) ? (
+          <DynamicContentWrapper>
+            <ControlsWrapper>
+              <ShowHideFiltersButton
+                color="white"
+                $showFilters={showFilters}
+                aria-pressed={showFilters}
+                onClick={() => { setShowFilters(!showFilters); }}
+                icon={showFilters ? <Cross /> : <Filter />}
+              >
+                {showFilters ? 'Hide Filters' : 'Show Filters'}
+              </ShowHideFiltersButton>
 
-            <Results tag="span">
-              {totalResults}
-              {' '}
-              {totalResults === 1 ? 'result' : 'results'}
-            </Results>
+              <ClearSelectionButton
+                color="white"
+                disabled={!contentIsFiltered}
+                icon={<Undo />}
+                $show={showFilters}
+                onClick={() => {
+                  setCurrentFilters([]);
+                  setContentIsFiltered(false);
+                }}
+              >
+                Clear selection
+              </ClearSelectionButton>
 
-          </FilterControlsWrapper>
+              <ResultsWrapper>
+                <Text tag="span">
+                  {totalResults}
+                  {' '}
+                  {totalResults === 1 ? 'result' : 'results'}
+                </Text>
+              </ResultsWrapper>
 
-          <FilterButtonsWrapper $show={showFilters}>
-            { fakeTags.map(tag => {
-              const isSelected = currentFilters.includes(tag);
-              return (
-                <FilterButton
-                  key={tag}
-                  type="button"
-                  color="grey_light"
-                  value={tag}
-                  $isSelected={isSelected}
-                  aria-pressed={isSelected}
-                  iconLeft
-                  icon={isSelected ? ChildrenIconWhite : ChildrenIconBlack} // DEBUG
-                  onClick={() => { updateFilters(tag); }}
-                // Force a re-render for our flash-reducing icon fade-in animation
-                  iconKey={`${isSelected}`}
-                >
-                  {tag}
-                </FilterButton>
-              );
-            })}
-          </FilterButtonsWrapper>
-        </FilterSection>
-      )}
+            </ControlsWrapper>
 
+            <FilterButtonsWrapper $show={showFilters}>
+              { Object.keys(processedTags).map(key => {
+                const { tag, selectedIcon, unselectedIcon } = processedTags[key];
+                const isSelected = currentFilters.includes(tag);
+
+                return (
+                  <FilterButton
+                    key={tag}
+                    type="button"
+                    color="grey_light"
+                    value={tag}
+                    $isSelected={isSelected}
+                    aria-pressed={isSelected}
+                    iconLeft
+                    icon={isSelected ? selectedIcon : unselectedIcon}
+                    onClick={() => { updateFilters(tag); }}
+                    // Force a re-render for our flash-reducing icon fade-in animation
+                    iconKey={`${isSelected}`}
+                  >
+                    {tag}
+                  </FilterButton>
+                );
+              })}
+            </FilterButtonsWrapper>
+
+            {/* Render content: */}
+            <div style={{ marginTop: '1rem' }}>
+              { processedNodes.map(thisNode => {
+                // Determine whether we display this content or not:
+                const renderNode = currentFilters.length === 0
+                || currentFilters.some(thisTag => thisNode.tags.includes(thisTag));
+
+                if (renderNode) {
+                  return (
+                    <div style={{ marginTop: '1rem' }}>
+                      <p>
+                        TITLE:
+                        {thisNode.title}
+                        <br />
+                        TAGS:
+                        {thisNode.tags[0]}
+                        {' '}
+                        /
+                        {' '}
+                        {thisNode.tags[1]}
+                        {' '}
+                        /
+                        {' '}
+                        {thisNode.tags[2]}
+                        {' '}
+                        /
+                        {' '}
+                        {thisNode.tags[3]}
+                      </p>
+                    </div>
+                  );
+                }
+                return null;
+              })}
+            </div>
+
+          </DynamicContentWrapper>
+        )
+          : <PulseLoader color="black" style={{ textAlign: 'center', display: 'block' }} />
+        }
+      </OuterWrapper>
     </Container>
   );
 };

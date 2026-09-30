@@ -1,25 +1,28 @@
 const preprocessNodes = nodesToProcess => {
-  const processedNodes = [];
-  let processedTags = [];
+  const outputNodes = [];
+  const outputTags = {};
 
-  nodesToProcess.forEach((node, index) => {
+  nodesToProcess.forEach((thisNode, index) => {
     // Deconstruct the Contentful objects into something way more usable:
-    processedNodes[index] = {
-      title: node.title,
-      url: node.url,
+    outputNodes[index] = {
+      title: thisNode.title,
+      url: thisNode.url,
       // Create a new array of just the Filter Tag 'tag' values associated with this node:
-      tags: node.filterTags.map(thisTag => {
-        // And also, keep a dedicated list of all of the tags we've seen:
-        processedTags.push(thisTag.tag);
+      tags: thisNode.filterTags.map(thisTag => {
+        // While we're here, keep a dedicated object of all of the tags we've seen;
+        // this will naturally handle any reused tags across nodes:
+        outputTags[thisTag.title] = {
+          tag: thisTag.tag,
+          selectedIcon: thisTag.filterIconSelected.file.url,
+          unselectedIcon: thisTag.filterIconUnselected.file.url
+        };
+
         return thisTag.tag;
       })
     };
   });
 
-  // Remove any duplicate tags:
-  processedTags = [...new Set(processedTags)];
-
-  return { processedNodes, processedTags };
+  return { outputNodes, outputTags };
 };
 
 export default preprocessNodes;
