@@ -348,10 +348,163 @@ const ButtonIconImagePath2 = 'https://images.ctfassets.net/zsfivwzfgl3t/1olBuz2b
 
 const ButtonIconSvgPath = 'https://images.ctfassets.net/0p265iutoxgq/3GaahqcCBaXrLBm5fu8HAj/d965a32d93fe82bf103c2f444e0bb9ec/Phone--white.svg';
 
+const filterCardTestData = {
+  id: '8c17eb9e-1435-5a8f-9d18-426c03c35e9e',
+  __typename: 'ContentfulFilterCard',
+  title: 'My Filter Card component',
+  paddingAbove: '2rem',
+  paddingBelow: '2rem',
+  pageBackgroundColour: 'teal_light',
+  loadingBehaviour: 'Load all cards at once',
+  body: {
+    raw: 'From fundraising packs to bunting, certificates, cake labels and more, find everything you need to take yourself funny for money this Red Nose Day. Select a resource type to filters the results.'
+  },
+  firstFilterCardNodeAsHero: false,
+  filterCardNodes: [
+    {
+      title: 'Filter card 1 (tag 1)',
+      url: 'https://www.google.com',
+      filterTags: [
+        {
+          tag: 'Tag 1',
+          title: 'Tag 1',
+          filterIconSelected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+            }
+          },
+          filterIconUnselected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+            }
+          }
+        }
+      ]
+    },
+    {
+      title: 'Filter card 2 (tag 2)',
+      url: 'https://www.google.com',
+      filterTags: [
+        {
+          tag: 'Tag 2',
+          title: 'Tag 2',
+          filterIconSelected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+            }
+          },
+          filterIconUnselected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+            }
+          }
+        }
+      ]
+    },
+    {
+      title: 'Filter card 3 (tags 1, 2, 3 + 4)',
+      url: 'https://www.google.com',
+      filterTags: [
+        {
+          tag: 'Tag 1',
+          title: 'Tag 1',
+          filterIconSelected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+            }
+          },
+          filterIconUnselected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+            }
+          }
+        },
+        {
+          tag: 'Tag 2',
+          title: 'Tag 2',
+          filterIconSelected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+            }
+          },
+          filterIconUnselected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+            }
+          }
+        },
+        {
+          tag: 'Tag 3',
+          title: 'Tag 3',
+          filterIconSelected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+            }
+          },
+          filterIconUnselected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+            }
+          }
+        },
+        {
+          tag: 'Tag 4',
+          title: 'Tag 4',
+          filterIconSelected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+            }
+          },
+          filterIconUnselected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+            }
+          }
+        }
+      ]
+    },
+    {
+      title: 'Filter card 4 (tags 1 + 4)',
+      url: 'https://www.google.com',
+      filterTags: [
+        {
+          tag: 'Tag 1',
+          title: 'Tag 1',
+          filterIconSelected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+            }
+          },
+          filterIconUnselected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+            }
+          }
+        },
+        {
+          tag: 'Tag 4',
+          title: 'Tag 4',
+          filterIconSelected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+            }
+          },
+          filterIconUnselected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+            }
+          }
+        }
+      ]
+    }
+  ]
+};
+
 export {
   defaultData, mobileImages, testImpactSliderItems,
   carouselItemsComplete, carouselItemsCompleteWithPadding,
   carouselItemsIncomplete, carouselItemsMinimal,
   RichtextCarouselItems, RichtextCarouselItemsWithPadding,
-  ButtonIconImgPath, ButtonIconSvgPath, ButtonIconImagePath2
+  ButtonIconImgPath, ButtonIconSvgPath, ButtonIconImagePath2,
+  filterCardTestData
 };

@@ -34,6 +34,11 @@ const BodyCopy = styled.div`
 //
 `;
 
+const Results = styled(Text)`
+  display: flex;
+  align-items: center;
+`;
+
 // Tweaks to suit this context:
 const CustomisedButton = styled(Button)`
   // Override 'Button w/icon' styles for this use-case:
@@ -107,10 +112,12 @@ const FilterButton = styled(Button)`
   // Increase specificity to override style defaults:
   ${FilterButtonsWrapper} & {
 
+    // Match the pre-existing transition with the icon animation so it looks as natural as poss:
     transition: all 0.2s ease-in;
 
     > ${IconWrapper} {
       margin: 0;
+      // Squirm-reduction
       width: 1.25rem;
       animation: ${iconFadeIn} 0.2s ease-in;
     }
@@ -147,6 +154,7 @@ export {
   FilterSection,
   Title,
   BodyCopy,
+  Results,
   FilterControlsWrapper,
   ShowHideFiltersButton,
   ClearSelectionButton,
