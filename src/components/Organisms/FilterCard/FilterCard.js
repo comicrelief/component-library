@@ -122,27 +122,28 @@ const FilterCard = ({ data }) => {
 
             <FilterCardNodeCopy>
               <p>
-                {cardTitle}
-                <br />
+                {/* {cardTitle}
+                <br /> */}
+                <strong>LABEL: </strong>
                 {label}
                 <br />
+                <strong>HEADING: </strong>
+
                 {heading}
                 <br />
+                <strong>DESC: </strong>
+                {description}
+                <br />
+                <strong>CTA TEXT: </strong>
                 {ctaText}
                 <br />
+                <strong>URL: </strong>
                 {url}
                 <br />
+                <strong>CTAICON: </strong>
+
                 {ctaIcon}
-                <br />
-                {tags[0]}
-                {' '}
-                {tags[1]}
-                {' '}
-                {tags[2]}
-                {' '}
-                {tags[3]}
-                <br />
-                {description}
+
               </p>
             </FilterCardNodeCopy>
 
