@@ -208,28 +208,10 @@ const HeaderWrapper = styled.div`
     padding: 4rem;
 
     &:after {
-    left: 4rem;
+      left: 4rem;
     }
   }
 `;
-
-// const Diamond = styled.div`
-//   // position: absolute;
-
-//   // &:after {
-//   //   --size: 1.5rem;
-//   //   position: absolute;
-//   //   z-index: -1;
-//   //   content: "";
-//   //   background-color: inherit;
-//   //   bottom: calc(var(--size) / -2);
-//   //   left: calc(50% - (var(--size) / 2));
-//   //   width: var(--size);
-//   //   height: var(--size);
-//   //   transform: rotate(45deg);
-//   //   ${defaultBoxShadow}}
-//   // }
-// `;
 
 export {
   Container,
