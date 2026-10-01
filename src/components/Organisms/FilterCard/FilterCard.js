@@ -46,8 +46,6 @@ const FilterCard = ({ data }) => {
   const totalResults = useRef(0);
 
   // Add/remove this filter tag from the state array accordingly:
-  //
-  // TODO: rework this; it's supposed to be only be one filter at a time 🤦
   const updateFilters = thisTag => {
     // Cache current state:
     let updatedFilters = currentFilters;
@@ -101,11 +99,11 @@ const FilterCard = ({ data }) => {
         totalResults.current += 1;
 
         const {
-          title, label, heading, ctaText, url, ctaIcon, tags,
+          title: cardTitle, label, heading, ctaText, url, ctaIcon, tags,
           description, image, imageLow, imageSet, imageAltText
         } = thisNode;
 
-        console.log('thisNode', thisNode);
+        console.log('thisNode', thisNode, description);
 
         return (
           <FilterCardNode>
@@ -124,7 +122,7 @@ const FilterCard = ({ data }) => {
 
             <FilterCardNodeCopy>
               <p>
-                {title}
+                {cardTitle}
                 <br />
                 {label}
                 <br />
