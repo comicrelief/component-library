@@ -371,9 +371,9 @@ const filterCardTestData = {
       url: 'https://www.google.com',
       ctaIcon: 'Download',
       description: 'This is the description',
-      image: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&fl=progressive&q=80&fm=jpg',
-      imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&fl=progressive&q=80&fm=jpg',
-      imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&q=80&fm=webp 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1080&h=810&q=80&fm=webp 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1366&h=1025&q=80&fm=webp 1366w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1920&h=1440&q=80&fm=webp 1920w',
+      image: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
+      imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=10&h=10&fl=progressive&q=80&fm=jpg',
+      imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
       imageAltText: 'Test 1-to-1 image description',
       filterTags: [
         {
@@ -402,9 +402,9 @@ const filterCardTestData = {
       url: 'https://www.google.com',
       ctaIcon: 'Download',
       description: null,
-      image: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&fl=progressive&q=80&fm=jpg',
-      imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&fl=progressive&q=80&fm=jpg',
-      imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&q=80&fm=webp 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1080&h=810&q=80&fm=webp 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1366&h=1025&q=80&fm=webp 1366w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1920&h=1440&q=80&fm=webp 1920w',
+      image: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
+      imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=10&h=10&fl=progressive&q=80&fm=jpg',
+      imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
       imageAltText: 'Test 1-to-1 image description',
       filterTags: [
         {
@@ -433,9 +433,9 @@ const filterCardTestData = {
       url: 'https://www.google.com',
       ctaIcon: 'Download',
       description: null,
-      image: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&fl=progressive&q=80&fm=jpg',
-      imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&fl=progressive&q=80&fm=jpg',
-      imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&q=80&fm=webp 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1080&h=810&q=80&fm=webp 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1366&h=1025&q=80&fm=webp 1366w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1920&h=1440&q=80&fm=webp 1920w',
+      image: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
+      imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=10&h=10&fl=progressive&q=80&fm=jpg',
+      imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
       imageAltText: 'Test 1-to-1 image description',
       filterTags: [
         {
@@ -506,9 +506,9 @@ const filterCardTestData = {
       url: 'https://www.google.com',
       ctaIcon: 'Download',
       description: 'This is the description',
-      image: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&fl=progressive&q=80&fm=jpg',
-      imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&fl=progressive&q=80&fm=jpg',
-      imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&q=80&fm=webp 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1080&h=810&q=80&fm=webp 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1366&h=1025&q=80&fm=webp 1366w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1920&h=1440&q=80&fm=webp 1920w',
+      image: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
+      imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=10&h=10&fl=progressive&q=80&fm=jpg',
+      imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
       imageAltText: 'Test 1-to-1 image description',
       filterTags: [
         {

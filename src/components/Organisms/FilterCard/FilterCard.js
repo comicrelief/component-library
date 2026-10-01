@@ -5,6 +5,7 @@ import Cross from '../../Atoms/Icons/Cross';
 import Filter from '../../Atoms/Icons/Filter';
 import Undo from '../../Atoms/Icons/Undo';
 import Text from '../../Atoms/Text/Text';
+import Picture from '../../Atoms/Picture/Picture';
 import preprocessNodes from './_utils/_utils';
 
 import {
@@ -18,7 +19,12 @@ import {
   DynamicContentWrapper,
   ControlsWrapper,
   FilterButtonsWrapper,
-  FilterButton
+  FilterButton,
+  FilterCardsWrapper,
+  FilterCardNode,
+  FilterCardNodeImage,
+  FilterCardNodeCopy,
+  HeaderWrapper
 } from './FilterCard.style';
 
 const FilterCard = ({ data }) => {
@@ -40,6 +46,8 @@ const FilterCard = ({ data }) => {
   const totalResults = useRef(0);
 
   // Add/remove this filter tag from the state array accordingly:
+  //
+  // TODO: rework this; it's supposed to be only be one filter at a time 🤦
   const updateFilters = thisTag => {
     // Cache current state:
     let updatedFilters = currentFilters;
@@ -86,34 +94,61 @@ const FilterCard = ({ data }) => {
     return processedNodes.map(thisNode => {
       // Determine whether we display this content or not:
       const renderNode = currentFilters.length === 0
-          || currentFilters.some(thisTag => thisNode.tags.includes(thisTag));
+        || currentFilters.some(thisTag => thisNode.tags.includes(thisTag));
 
       if (renderNode) {
         // Increment the counter for every node we've got a tag match for:
         totalResults.current += 1;
 
+        const {
+          title, label, heading, ctaText, url, ctaIcon, tags,
+          description, image, imageLow, imageSet, imageAltText
+        } = thisNode;
+
+        console.log('thisNode', thisNode);
+
         return (
-          <div style={{ marginTop: '1rem' }}>
-            <p>
-              TITLE:
-              {thisNode.title}
-              <br />
-              TAGS:
-              {thisNode.tags[0]}
-              {' '}
-              /
-              {' '}
-              {thisNode.tags[1]}
-              {' '}
-              /
-              {' '}
-              {thisNode.tags[2]}
-              {' '}
-              /
-              {' '}
-              {thisNode.tags[3]}
-            </p>
-          </div>
+          <FilterCardNode>
+
+            <FilterCardNodeImage>
+              <Picture
+                image={image}
+                images={imageSet}
+                imageLow={imageLow}
+                objectFit="cover"
+                width="100%"
+                height="100%"
+                alt={imageAltText}
+              />
+            </FilterCardNodeImage>
+
+            <FilterCardNodeCopy>
+              <p>
+                {title}
+                <br />
+                {label}
+                <br />
+                {heading}
+                <br />
+                {ctaText}
+                <br />
+                {url}
+                <br />
+                {ctaIcon}
+                <br />
+                {tags[0]}
+                {' '}
+                {tags[1]}
+                {' '}
+                {tags[2]}
+                {' '}
+                {tags[3]}
+                <br />
+                {description}
+              </p>
+            </FilterCardNodeCopy>
+
+          </FilterCardNode>
         );
       }
       return null;
@@ -128,88 +163,91 @@ const FilterCard = ({ data }) => {
     >
       <OuterWrapper>
 
-        <Title tag="h1">
-          {title}
-        </Title>
+        <HeaderWrapper>
 
-        {/* TODO: suss this properly */}
-        <BodyCopy>
-          {body.raw}
-        </BodyCopy>
+          <Title tag="h1">
+            {title}
+          </Title>
 
-        {(processedTags && processedNodes) ? (
-          <DynamicContentWrapper>
-            <ControlsWrapper>
-              <ShowHideFiltersButton
-                color="white"
-                $showFilters={showFilters}
-                aria-pressed={showFilters}
-                onClick={() => { setShowFilters(!showFilters); }}
-                icon={showFilters ? <Cross /> : <Filter />}
-              >
-                {showFilters ? 'Hide Filters' : 'Show Filters'}
-              </ShowHideFiltersButton>
+          {/* TODO: suss this properly */}
+          <BodyCopy>
+            {body.raw}
+          </BodyCopy>
 
-              <ClearSelectionButton
-                color="white"
-                disabled={!contentIsFiltered}
-                icon={<Undo />}
-                $show={showFilters}
-                onClick={() => {
-                  setCurrentFilters([]);
-                  setContentIsFiltered(false);
-                }}
-              >
-                Clear selection
-              </ClearSelectionButton>
+          {(processedTags && processedNodes) ? (
+            <DynamicContentWrapper>
+              <ControlsWrapper>
+                <ShowHideFiltersButton
+                  color="white"
+                  $showFilters={showFilters}
+                  aria-pressed={showFilters}
+                  onClick={() => { setShowFilters(!showFilters); }}
+                  icon={showFilters ? <Cross /> : <Filter />}
+                >
+                  {showFilters ? 'Hide Filters' : 'Show Filters'}
+                </ShowHideFiltersButton>
 
-              <ResultsWrapper>
-                <Text tag="span">
-                  {totalResults.current}
-                  {' '}
-                  {totalResults.current === 1 ? 'result' : 'results'}
-                </Text>
-              </ResultsWrapper>
+                <ClearSelectionButton
+                  color="white"
+                  disabled={!contentIsFiltered}
+                  icon={<Undo />}
+                  $show={showFilters}
+                  onClick={() => {
+                    setCurrentFilters([]);
+                    setContentIsFiltered(false);
+                  }}
+                >
+                  Clear selection
+                </ClearSelectionButton>
 
-            </ControlsWrapper>
+                <ResultsWrapper>
+                  <Text tag="span">
+                    {totalResults.current}
+                    {' '}
+                    {totalResults.current === 1 ? 'result' : 'results'}
+                  </Text>
+                </ResultsWrapper>
 
-            <FilterButtonsWrapper $show={showFilters}>
-              {Object.keys(processedTags).map(key => {
-                const { tag, selectedIcon, unselectedIcon } = processedTags[key];
-                const isSelected = currentFilters.includes(tag);
+              </ControlsWrapper>
 
-                return (
-                  <FilterButton
-                    key={tag}
-                    type="button"
-                    color="grey_light"
-                    value={tag}
-                    $isSelected={isSelected}
-                    aria-pressed={isSelected}
-                    iconLeft
-                    icon={isSelected ? selectedIcon : unselectedIcon}
-                    onClick={() => { updateFilters(tag); }}
-                    // Force a re-render for our flash-reducing icon fade-in animation
-                    iconKey={`${isSelected}`}
-                  >
-                    {tag}
-                  </FilterButton>
-                );
-              })}
-            </FilterButtonsWrapper>
+              <FilterButtonsWrapper $show={showFilters}>
+                {Object.keys(processedTags).map(key => {
+                  const { tag, selectedIcon, unselectedIcon } = processedTags[key];
+                  const isSelected = currentFilters.includes(tag);
 
-            {/* Render Cards content */}
-            <div style={{ marginTop: '1rem' }}>
+                  return (
+                    <FilterButton
+                      key={tag}
+                      type="button"
+                      color="grey_light"
+                      value={tag}
+                      $isSelected={isSelected}
+                      aria-pressed={isSelected}
+                      iconLeft
+                      icon={isSelected ? selectedIcon : unselectedIcon}
+                      onClick={() => { updateFilters(tag); }}
+                      // Force a re-render for our flash-reducing icon fade-in animation
+                      iconKey={`${isSelected}`}
+                    >
+                      {tag}
+                    </FilterButton>
+                  );
+                })}
+              </FilterButtonsWrapper>
 
-              {/* Reset counter for each render */}
-              {renderCards()}
+            </DynamicContentWrapper>
+          )
+            : <PulseLoader color="black" style={{ textAlign: 'center', display: 'block' }} />
+          }
 
-            </div>
+        </HeaderWrapper>
 
-          </DynamicContentWrapper>
-        )
-          : <PulseLoader color="black" style={{ textAlign: 'center', display: 'block' }} />
-        }
+        {(processedTags && processedNodes) && (
+          <FilterCardsWrapper>
+            {renderCards()}
+          </FilterCardsWrapper>
+        )}
+
       </OuterWrapper>
     </Container>
   );
@@ -233,10 +271,11 @@ FilterCard.propTypes = {
         heading: PropTypes.string.isRequired,
         ctaText: PropTypes.string.isRequired,
         url: PropTypes.string.isRequired,
-        // Image stuff as per HeroBanner
+        description: PropTypes.string,
+        // GatsbyImageData deconstruction to happen within CRcom repo to feed these:
+        image: PropTypes.string.isRequired,
         imageLow: PropTypes.string.isRequired,
         imageSet: PropTypes.string.isRequired,
-        image: PropTypes.string.isRequired,
         imageAltText: PropTypes.string.isRequired,
         filterTags: PropTypes.arrayOf(
           PropTypes.shape({

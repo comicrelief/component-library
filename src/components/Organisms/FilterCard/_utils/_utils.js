@@ -3,23 +3,23 @@ const preprocessNodes = nodesToProcess => {
   const outputTags = {};
 
   nodesToProcess.forEach((thisNode, index) => {
-    // Deconstruct the Contentful objects into something way more usable:
-    outputNodes[index] = {
-      title: thisNode.title,
-      url: thisNode.url,
-      // Create a new array of just the Filter Tag 'tag' values associated with this node:
-      tags: thisNode.filterTags.map(thisTag => {
-        // While we're here, keep a dedicated object of all of the tags we've seen;
-        // this will naturally handle any reused tags across nodes:
-        outputTags[thisTag.title] = {
-          tag: thisTag.tag,
-          selectedIcon: thisTag.filterIconSelected.file.url,
-          unselectedIcon: thisTag.filterIconUnselected.file.url
-        };
+    // Copy over this entire node:
+    outputNodes[index] = { ...thisNode };
 
-        return thisTag.tag;
-      })
-    };
+    // Create a way simplier, non-nested representation of the nested 'FilterTag' content:
+    outputNodes[index].tags = thisNode.filterTags.map(thisTag => {
+      // But, while we're here, first keep a dedicated array of *every* tags we've seen:
+      outputTags[thisTag.title] = {
+        tag: thisTag?.tag,
+        selectedIcon: thisTag?.filterIconSelected?.file?.url,
+        unselectedIcon: thisTag?.filterIconUnselected?.file?.url
+      };
+
+      return thisTag.tag;
+    });
+
+    // Finally, remove the obtuse Contentful object we no longer need:
+    delete outputNodes[index].filterTags;
   });
 
   return { outputNodes, outputTags };

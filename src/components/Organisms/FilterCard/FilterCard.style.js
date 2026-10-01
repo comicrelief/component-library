@@ -2,6 +2,7 @@ import styled, { css, keyframes } from 'styled-components';
 import Text from '../../Atoms/Text/Text';
 import Button from '../../Atoms/Button/Button';
 import { Copywrapper, IconWrapper } from '../../Atoms/Button/Button.style';
+import defaultBoxShadow from '../../../theme/shared/boxShadows';
 
 // To reduce icon flash when switching between images:
 const fadeIn = keyframes`
@@ -21,9 +22,7 @@ const Container = styled.div`
 `;
 
 const OuterWrapper = styled.div`
-  background: white;
-  padding: 1rem;
-  border-radius: 0.5rem;
+//
 `;
 
 const Title = styled(Text)`
@@ -124,9 +123,9 @@ const FilterButton = styled(Button)`
     transition: all 0.2s ease-in;
 
     > ${IconWrapper} {
-      margin: 0;
       // Squirm-reduction
       width: 1.25rem;
+      margin: 0;
       animation: ${fadeIn} 0.2s ease-in;
     }
 
@@ -147,15 +146,90 @@ const FilterButton = styled(Button)`
         background-color: ${({ theme }) => theme.color('red')};
         color: ${({ theme }) => theme.color('white')};
         box-shadow: none;
-
-        // Flip the colour 
-        // > ${IconWrapper} {
-        //   // filter: invert(1);
-        // }
       }
   `)};
   }
 `;
+
+const FilterCardsWrapper = styled.div`
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+`;
+
+const FilterCardNode = styled.div`
+  background-color: orange;
+  flex: 0 0 calc(100% - 0.5rem);
+  display: flex;
+  flex-direction: row;
+  // padding: 1rem;
+  border-radius: 0.5rem;
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+`;
+
+const FilterCardNodeImage = styled.div`
+  flex: 0 0 40%;
+`;
+
+const FilterCardNodeCopy = styled.div`
+  flex: 0 0 60%;
+  padding: 1rem;
+`;
+
+const HeaderWrapper = styled.div`
+  background: ${({ theme }) => theme.color('white')};
+  border-radius: 0.5rem;
+  padding: 2rem;
+  position: relative;
+  ${defaultBoxShadow};
+
+  &:after {
+    --size: 1.5rem;
+    position: absolute;
+    content: "";
+    width: 0; 
+    height: 0;
+    // Tiny lil' overlap to prevent ugliness when zooming the browser
+    bottom: calc((var(--size) * -1) + 1px);
+    left: calc(50% - (var(--size) / 2));
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid ${({ theme }) => theme.color('white')};
+    // Recreating defaultBoxShadow in a manner that actual works with all the CSS funkiness:
+    filter: drop-shadow(0px 6px 3px rgba(0, 0, 0, 0.1));
+  }
+  
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    padding: 4rem;
+
+    &:after {
+    left: 4rem;
+    }
+  }
+`;
+
+// const Diamond = styled.div`
+//   // position: absolute;
+
+//   // &:after {
+//   //   --size: 1.5rem;
+//   //   position: absolute;
+//   //   z-index: -1;
+//   //   content: "";
+//   //   background-color: inherit;
+//   //   bottom: calc(var(--size) / -2);
+//   //   left: calc(50% - (var(--size) / 2));
+//   //   width: var(--size);
+//   //   height: var(--size);
+//   //   transform: rotate(45deg);
+//   //   ${defaultBoxShadow}}
+//   // }
+// `;
 
 export {
   Container,
@@ -168,5 +242,10 @@ export {
   ShowHideFiltersButton,
   ClearSelectionButton,
   FilterButtonsWrapper,
-  FilterButton
+  FilterButton,
+  FilterCardsWrapper,
+  FilterCardNode,
+  FilterCardNodeImage,
+  FilterCardNodeCopy,
+  HeaderWrapper
 };
