@@ -362,12 +362,23 @@ const filterCardTestData = {
   firstFilterCardNodeAsHero: false,
   filterCardNodes: [
     {
+      id: '09da5344-0104-5b36-833f-83e042cb4068',
+      __typename: 'ContentfulFilterCardNode',
       title: 'Filter card 1 (tag 1)',
+      label: 'This is the label',
+      heading: 'This is the heading',
+      ctaText: 'This is the CTA test',
       url: 'https://www.google.com',
+      ctaIcon: 'Download',
+      description: 'This is the description',
+      image: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&fl=progressive&q=80&fm=jpg',
+      imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&fl=progressive&q=80&fm=jpg',
+      imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&q=80&fm=webp 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1080&h=810&q=80&fm=webp 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1366&h=1025&q=80&fm=webp 1366w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1920&h=1440&q=80&fm=webp 1920w',
+      imageAltText: 'Test 1-to-1 image description',
       filterTags: [
         {
-          tag: 'Fundraising packs',
-          title: 'Tag 1 (CMS title)',
+          tag: 'Tag 1',
+          title: 'Tag 1',
           filterIconSelected: {
             file: {
               url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -382,12 +393,23 @@ const filterCardTestData = {
       ]
     },
     {
-      title: 'Filter card 2 (tag 2)',
+      id: 'e80379c0-a0ea-565c-b91a-65d874554d84',
+      __typename: 'ContentfulFilterCardNode',
+      title: 'Filter card 2 (tag 2, no description)',
+      label: 'This is the label',
+      heading: 'This is the heading',
+      ctaText: 'This is the CTA test',
       url: 'https://www.google.com',
+      ctaIcon: 'Download',
+      description: null,
+      image: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&fl=progressive&q=80&fm=jpg',
+      imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&fl=progressive&q=80&fm=jpg',
+      imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&q=80&fm=webp 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1080&h=810&q=80&fm=webp 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1366&h=1025&q=80&fm=webp 1366w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1920&h=1440&q=80&fm=webp 1920w',
+      imageAltText: 'Test 1-to-1 image description',
       filterTags: [
         {
-          tag: 'Posters',
-          title: 'Tag 2 (CMS title)',
+          tag: 'Tag 2',
+          title: 'Tag 2',
           filterIconSelected: {
             file: {
               url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -402,12 +424,23 @@ const filterCardTestData = {
       ]
     },
     {
+      id: 'e7c5c130-ae26-5ead-abef-c908bba5bd18',
+      __typename: 'ContentfulFilterCardNode',
       title: 'Filter card 3 (tags 1, 2, 3 + 4)',
+      label: 'This is the label',
+      heading: 'This is the heading',
+      ctaText: 'This is the CTA test',
       url: 'https://www.google.com',
+      ctaIcon: 'Download',
+      description: null,
+      image: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&fl=progressive&q=80&fm=jpg',
+      imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&fl=progressive&q=80&fm=jpg',
+      imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&q=80&fm=webp 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1080&h=810&q=80&fm=webp 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1366&h=1025&q=80&fm=webp 1366w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1920&h=1440&q=80&fm=webp 1920w',
+      imageAltText: 'Test 1-to-1 image description',
       filterTags: [
         {
-          tag: 'Fundraising packs',
-          title: 'Tag 1 (CMS title)',
+          tag: 'Tag 1',
+          title: 'Tag 1',
           filterIconSelected: {
             file: {
               url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -420,8 +453,8 @@ const filterCardTestData = {
           }
         },
         {
-          tag: 'Posters',
-          title: 'Tag 2 (CMS title)',
+          tag: 'Tag 2',
+          title: 'Tag 2',
           filterIconSelected: {
             file: {
               url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -434,8 +467,8 @@ const filterCardTestData = {
           }
         },
         {
-          tag: 'Bake',
-          title: 'Tag 3 (CMS title)',
+          tag: 'Tag 3',
+          title: 'Tag 3',
           filterIconSelected: {
             file: {
               url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -448,8 +481,8 @@ const filterCardTestData = {
           }
         },
         {
-          tag: 'Schools',
-          title: 'Tag 4 (CMS title)',
+          tag: 'Tag 4',
+          title: 'Tag 4',
           filterIconSelected: {
             file: {
               url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -464,12 +497,23 @@ const filterCardTestData = {
       ]
     },
     {
+      id: '469fa12c-e425-5372-9899-ba69924d5603',
+      __typename: 'ContentfulFilterCardNode',
       title: 'Filter card 4 (tags 1 + 4)',
+      label: 'This is the label',
+      heading: 'This is the heading',
+      ctaText: 'This is the CTA test',
       url: 'https://www.google.com',
+      ctaIcon: 'Download',
+      description: 'This is the description',
+      image: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&fl=progressive&q=80&fm=jpg',
+      imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&fl=progressive&q=80&fm=jpg',
+      imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=750&h=563&q=80&fm=webp 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1080&h=810&q=80&fm=webp 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1366&h=1025&q=80&fm=webp 1366w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/8PpleTj3TwM07IOA61LrR/75588caf393ad5f08e82d97f523c4d3a/mobileImage.jpeg?w=1920&h=1440&q=80&fm=webp 1920w',
+      imageAltText: 'Test 1-to-1 image description',
       filterTags: [
         {
-          tag: 'Fundraising packs',
-          title: 'Tag 1 (CMS title)',
+          tag: 'Tag 1',
+          title: 'Tag 1',
           filterIconSelected: {
             file: {
               url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -482,8 +526,8 @@ const filterCardTestData = {
           }
         },
         {
-          tag: 'Schools',
-          title: 'Tag 4 (CMS title)',
+          tag: 'Tag 4',
+          title: 'Tag 4',
           filterIconSelected: {
             file: {
               url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'

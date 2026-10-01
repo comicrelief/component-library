@@ -229,7 +229,15 @@ FilterCard.propTypes = {
     filterCardNodes: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        heading: PropTypes.string.isRequired,
+        ctaText: PropTypes.string.isRequired,
         url: PropTypes.string.isRequired,
+        // Image stuff as per HeroBanner
+        imageLow: PropTypes.string.isRequired,
+        imageSet: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        imageAltText: PropTypes.string.isRequired,
         filterTags: PropTypes.arrayOf(
           PropTypes.shape({
             tag: PropTypes.string.isRequired,
