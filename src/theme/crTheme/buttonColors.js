@@ -83,7 +83,6 @@ const buttonColors = {
     textColour: color('black'),
     hoverBackground: color('grey_light'),
     hovertextColour: color('black')
-
   },
   grey_dark: {
     background: color('grey_dark'),
@@ -91,11 +90,17 @@ const buttonColors = {
     hoverBackground: color('grey'),
     hovertextColour: color('black')
   },
+  grey_medium: {
+    background: color('grey_medium'),
+    textColour: color('black'),
+    hoverBackground: color('grey'),
+    hovertextColour: color('white')
+  },
   grey_light: {
     background: color('grey_light'),
     textColour: color('black'),
-    hoverBackground: color('grey_dark'),
-    hovertextColour: color('white')
+    hoverBackground: color('grey_medium'),
+    hovertextColour: color('black')
   },
   magenta: {
     background: color('magenta'),

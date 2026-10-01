@@ -344,12 +344,211 @@ const RichtextCarouselItemsWithPadding = {
 
 const ButtonIconImgPath = 'https://images.ctfassets.net/zsfivwzfgl3t/4IlLxZnddkg1pHWZP3AZnA/447078df666932751c9c618a296f24db/Icon__Shelter.png';
 
+const ButtonIconImagePath2 = 'https://images.ctfassets.net/zsfivwzfgl3t/1olBuz2b2baO5qKsOFvNjr/7df1553e56b7b50ff3d27cfbeae92370/Legal_assistance_packages.png';
+
 const ButtonIconSvgPath = 'https://images.ctfassets.net/0p265iutoxgq/3GaahqcCBaXrLBm5fu8HAj/d965a32d93fe82bf103c2f444e0bb9ec/Phone--white.svg';
+
+const filterCardTestData = {
+  id: '8c17eb9e-1435-5a8f-9d18-426c03c35e9e',
+  __typename: 'ContentfulFilterCard',
+  title: 'My Filter Card component',
+  paddingAbove: '2rem',
+  paddingBelow: '2rem',
+  pageBackgroundColour: 'teal_light',
+  loadingBehaviour: 'Load all cards at once',
+  body: {
+    raw: 'From fundraising packs to bunting, certificates, cake labels and more, find everything you need to take yourself funny for money this Red Nose Day. Select a resource type to filters the results.'
+  },
+  firstFilterCardNodeAsHero: false,
+  filterCardNodes: [
+    {
+      id: '09da5344-0104-5b36-833f-83e042cb4068',
+      __typename: 'ContentfulFilterCardNode',
+      title: 'Filter card 1 (tag 1)',
+      label: 'This is the label',
+      heading: 'This is the heading',
+      ctaText: 'This is the CTA test',
+      url: 'https://www.google.com',
+      ctaIcon: 'Download',
+      description: 'This is the description',
+      image: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
+      imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=10&h=10&fl=progressive&q=80&fm=jpg',
+      imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
+      imageAltText: 'Test 1-to-1 image description',
+      filterTags: [
+        {
+          tag: 'Tag 1',
+          title: 'Tag 1',
+          filterIconSelected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+            }
+          },
+          filterIconUnselected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+            }
+          }
+        }
+      ]
+    },
+    {
+      id: 'e80379c0-a0ea-565c-b91a-65d874554d84',
+      __typename: 'ContentfulFilterCardNode',
+      title: 'Filter card 2 (tag 2, no description)',
+      label: 'This is the label',
+      heading: 'This is the heading',
+      ctaText: 'This is the CTA test',
+      url: 'https://www.google.com',
+      ctaIcon: 'Download',
+      description: null,
+      image: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
+      imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=10&h=10&fl=progressive&q=80&fm=jpg',
+      imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
+      imageAltText: 'Test 1-to-1 image description',
+      filterTags: [
+        {
+          tag: 'Tag 2',
+          title: 'Tag 2',
+          filterIconSelected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+            }
+          },
+          filterIconUnselected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+            }
+          }
+        }
+      ]
+    },
+    {
+      id: 'e7c5c130-ae26-5ead-abef-c908bba5bd18',
+      __typename: 'ContentfulFilterCardNode',
+      title: 'Filter card 3 (tags 1, 2, 3 + 4)',
+      label: 'This is the label',
+      heading: 'This is the heading',
+      ctaText: 'This is the CTA test',
+      url: 'https://www.google.com',
+      ctaIcon: 'Download',
+      description: 'This is the description',
+      image: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
+      imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=10&h=10&fl=progressive&q=80&fm=jpg',
+      imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
+      imageAltText: 'Test 1-to-1 image description',
+      filterTags: [
+        {
+          tag: 'Tag 1',
+          title: 'Tag 1',
+          filterIconSelected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+            }
+          },
+          filterIconUnselected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+            }
+          }
+        },
+        {
+          tag: 'Tag 2',
+          title: 'Tag 2',
+          filterIconSelected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+            }
+          },
+          filterIconUnselected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+            }
+          }
+        },
+        {
+          tag: 'Tag 3',
+          title: 'Tag 3',
+          filterIconSelected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+            }
+          },
+          filterIconUnselected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+            }
+          }
+        },
+        {
+          tag: 'Tag 4',
+          title: 'Tag 4',
+          filterIconSelected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+            }
+          },
+          filterIconUnselected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+            }
+          }
+        }
+      ]
+    },
+    {
+      id: '469fa12c-e425-5372-9899-ba69924d5603',
+      __typename: 'ContentfulFilterCardNode',
+      title: 'Filter card 4 (tags 1 + 4)',
+      label: 'This is the label',
+      heading: 'This is the heading',
+      ctaText: 'This is the CTA test',
+      url: 'https://www.google.com',
+      ctaIcon: 'Download',
+      description: 'This is the description',
+      image: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
+      imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=10&h=10&fl=progressive&q=80&fm=jpg',
+      imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
+      imageAltText: 'Test 1-to-1 image description',
+      filterTags: [
+        {
+          tag: 'Tag 1',
+          title: 'Tag 1',
+          filterIconSelected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+            }
+          },
+          filterIconUnselected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+            }
+          }
+        },
+        {
+          tag: 'Tag 4',
+          title: 'Tag 4',
+          filterIconSelected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+            }
+          },
+          filterIconUnselected: {
+            file: {
+              url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+            }
+          }
+        }
+      ]
+    }
+  ]
+};
 
 export {
   defaultData, mobileImages, testImpactSliderItems,
   carouselItemsComplete, carouselItemsCompleteWithPadding,
   carouselItemsIncomplete, carouselItemsMinimal,
   RichtextCarouselItems, RichtextCarouselItemsWithPadding,
-  ButtonIconImgPath, ButtonIconSvgPath
+  ButtonIconImgPath, ButtonIconSvgPath, ButtonIconImagePath2,
+  filterCardTestData
 };

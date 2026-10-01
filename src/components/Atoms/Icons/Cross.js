@@ -10,7 +10,6 @@ const Icon = styled.svg`
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     fill: ${({ $colour, theme }) => ($colour ? theme.color($colour) : theme.color('white'))};
   }
-
 `;
 
 const Cross = ({
