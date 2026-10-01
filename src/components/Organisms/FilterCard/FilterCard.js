@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import PulseLoader from 'react-spinners/PulseLoader';
 import Cross from '../../Atoms/Icons/Cross';
@@ -21,9 +21,6 @@ import {
   FilterButton
 } from './FilterCard.style';
 
-// A handy global var to store away from state and re-renders:
-let numberOfResults = 0;
-
 const FilterCard = ({ data }) => {
   const {
     title,
@@ -40,12 +37,10 @@ const FilterCard = ({ data }) => {
   const [showFilters, setShowFilters] = useState(true); // DEBUG
   const [currentFilters, setCurrentFilters] = useState([]);
   const [contentIsFiltered, setContentIsFiltered] = useState(false);
+  const totalResults = useRef(0);
 
   // Add/remove this filter tag from the state array accordingly:
   const updateFilters = thisTag => {
-    // Reset our counter for every change:
-    numberOfResults = 0;
-
     // Cache current state:
     let updatedFilters = currentFilters;
 
@@ -74,7 +69,6 @@ const FilterCard = ({ data }) => {
 
       // Only go ahead once we've got the goods:
       if (outputNodes && outputTags) {
-        console.log('outputNodes', outputNodes);
         // Pause for a second before going ahead, to prevent nasty flashes:
         setTimeout(() => {
           setProcessedNodes(outputNodes);
@@ -85,13 +79,53 @@ const FilterCard = ({ data }) => {
     }
   }, [isLoading, filterCardNodes]);
 
+  const renderCards = () => {
+    // Reset counter for every re-render:
+    totalResults.current = 0;
+
+    return processedNodes.map(thisNode => {
+      // Determine whether we display this content or not:
+      const renderNode = currentFilters.length === 0
+          || currentFilters.some(thisTag => thisNode.tags.includes(thisTag));
+
+      if (renderNode) {
+        // Increment the counter for every node we've got a tag match for:
+        totalResults.current += 1;
+
+        return (
+          <div style={{ marginTop: '1rem' }}>
+            <p>
+              TITLE:
+              {thisNode.title}
+              <br />
+              TAGS:
+              {thisNode.tags[0]}
+              {' '}
+              /
+              {' '}
+              {thisNode.tags[1]}
+              {' '}
+              /
+              {' '}
+              {thisNode.tags[2]}
+              {' '}
+              /
+              {' '}
+              {thisNode.tags[3]}
+            </p>
+          </div>
+        );
+      }
+      return null;
+    });
+  };
+
   return (
     <Container
       $paddingAbove={paddingAbove}
       $paddingBelow={paddingBelow}
       $pageBackgroundColour={pageBackgroundColour}
     >
-
       <OuterWrapper>
 
         <Title tag="h1">
@@ -131,16 +165,16 @@ const FilterCard = ({ data }) => {
 
               <ResultsWrapper>
                 <Text tag="span">
-                  {numberOfResults}
+                  {totalResults.current}
                   {' '}
-                  {numberOfResults === 1 ? 'result' : 'results'}
+                  {totalResults.current === 1 ? 'result' : 'results'}
                 </Text>
               </ResultsWrapper>
 
             </ControlsWrapper>
 
             <FilterButtonsWrapper $show={showFilters}>
-              { Object.keys(processedTags).map(key => {
+              {Object.keys(processedTags).map(key => {
                 const { tag, selectedIcon, unselectedIcon } = processedTags[key];
                 const isSelected = currentFilters.includes(tag);
 
@@ -164,41 +198,12 @@ const FilterCard = ({ data }) => {
               })}
             </FilterButtonsWrapper>
 
-            {/* Render content: */}
+            {/* Render Cards content */}
             <div style={{ marginTop: '1rem' }}>
-              { processedNodes.map(thisNode => {
-                // Determine whether we display this content or not:
-                const renderNode = currentFilters.length === 0
-                || currentFilters.some(thisTag => thisNode.tags.includes(thisTag));
 
-                if (renderNode) {
-                  numberOfResults += 1;
-                  return (
-                    <div style={{ marginTop: '1rem' }}>
-                      <p>
-                        TITLE:
-                        {thisNode.title}
-                        <br />
-                        TAGS:
-                        {thisNode.tags[0]}
-                        {' '}
-                        /
-                        {' '}
-                        {thisNode.tags[1]}
-                        {' '}
-                        /
-                        {' '}
-                        {thisNode.tags[2]}
-                        {' '}
-                        /
-                        {' '}
-                        {thisNode.tags[3]}
-                      </p>
-                    </div>
-                  );
-                }
-                return null;
-              })}
+              {/* Reset counter for each render */}
+              {renderCards()}
+
             </div>
 
           </DynamicContentWrapper>
