@@ -151,6 +151,8 @@ import richtextCarouselExampleSrc from '../components/Organisms/RichtextCarousel
 
 import DynamicGalleryExample from '../components/Organisms/DynamicGallery/DynamicGalleryExample.jsx';
 import dynamicGalleryExampleSrc from '../components/Organisms/DynamicGallery/DynamicGalleryExample.jsx?raw';
+import ExpandedButtonExample from '../components/Organisms/ExpandedButton/ExpandedButtonExample.jsx';
+import expandedButtonExampleSrc from '../components/Organisms/ExpandedButton/ExpandedButtonExample.jsx?raw';
 
 import FilterCardExample from '../components/Organisms/FilterCard/FilterCardExample.jsx';
 import filterCardExampleSrc from '../components/Organisms/FilterCard/FilterCardExample.jsx?raw';
@@ -236,6 +238,7 @@ export const organisms = [
   { name: 'Donate', examples: [<DonateExample1 />, <DonateExample2 />, <DonateExample3 />, <DonateExample4 />, <DonateExample5 />, <DonateExample6 />, <DonateExample7 />, <DonateExample8 />, <DonateExample9 />, <DonateExample10 />, <DonateExample11 />, <DonateExample12 />, <DonateExample13 />, <DonateExample14 />, <DonateExample15 />, <DonateExample16 />, <DonateExample17 />, <DonateExample18 />, <DonateExample19 />, <DonateExample20 />, <DonateExample21 />, <DonateExample22 />] },
   { name: 'DonateBanner', demo: demo(DonateBannerExample, donateBannerExampleSrc) },
   { name: 'DynamicGallery', demo: demo(DynamicGalleryExample, dynamicGalleryExampleSrc) },
+  { name: 'ExpandedButton', demo: demo(ExpandedButtonExample, expandedButtonExampleSrc) },
   { name: 'EmailBanner', examples: [<EmailBannerExample1 />, <EmailBannerExample2 />, <EmailBannerExample3 />, <EmailBannerExample4 />, <EmailBannerExample5 />] },
   { name: 'EmailSignUpForm', demo: demo(EmailSignUpExample, emailSignUpExampleSrc) },
   { name: 'FilterCard', demo: demo(FilterCardExample, filterCardExampleSrc) },

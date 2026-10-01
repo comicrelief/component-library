@@ -77,6 +77,7 @@ export { default as Donate } from './components/Organisms/Donate/Donate';
 export { default as DonateBanner } from './components/Organisms/DonateBanner/DonateBanner';
 export { default as DynamicGallery } from './components/Organisms/DynamicGallery/DynamicGallery';
 export { default as EmailBanner } from './components/Organisms/EmailBanner/EmailBanner';
+export { default as ExpandedButton } from './components/Organisms/ExpandedButton/ExpandedButton';
 export {
   EmailSignUp,
   buildEsuValidationSchema,
