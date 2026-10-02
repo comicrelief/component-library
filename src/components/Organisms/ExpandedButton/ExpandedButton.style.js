@@ -8,6 +8,7 @@ const Grid = styled.div`
   margin: 0 auto;
   flex-direction: column;
   gap: 1rem;
+  border: 1px solid red;
 `;
 
 const ButtonCard = styled.button`

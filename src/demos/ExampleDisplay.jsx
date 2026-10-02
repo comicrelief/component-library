@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ExampleWrapper = styled.div`
+const ClExampleWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
@@ -37,12 +37,12 @@ const CodeStyle = styled.div`
 
 export default function ExampleDisplay({ component, src }) {
   return (
-    <ExampleWrapper>
+    <ClExampleWrapper>
       <div>{component}</div>
       <CodeWrapper>
         <CodeLabel>source</CodeLabel>
         <CodeStyle>{src}</CodeStyle>
       </CodeWrapper>
-    </ExampleWrapper>
+    </ClExampleWrapper>
   );
 }
