@@ -104,6 +104,7 @@ const MarketingPreferencesDS = ({
               type="email"
               id="mp_email"
               formContext={formContext}
+              $isError={hasEmailError}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -139,6 +140,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionPost[postChoice]}
               id="mp_address1"
               formContext={formContext}
+              $isError={Boolean(errors.mp_address1)}
             />
             <MPTextInput
               placeholder=""
@@ -147,6 +149,7 @@ const MarketingPreferencesDS = ({
               optional
               id="mp_address2"
               formContext={formContext}
+              $isError={Boolean(errors.mp_address2)}
             />
             <MPTextInput
               placeholder=""
@@ -155,6 +158,7 @@ const MarketingPreferencesDS = ({
               optional
               id="mp_address3"
               formContext={formContext}
+              $isError={Boolean(errors.mp_address3)}
             />
             <MPTextInput
               placeholder=""
@@ -163,6 +167,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionPost[postChoice]}
               id="mp_town"
               formContext={formContext}
+              $isError={Boolean(errors.mp_town)}
             />
             <MPTextInput
               placeholder=""
@@ -171,6 +176,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionPost[postChoice]}
               id="mp_postcode"
               formContext={formContext}
+              $isError={Boolean(errors.mp_postcode)}
             />
             <MPTextInput
               placeholder=""
@@ -179,6 +185,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionPost[postChoice]}
               id="mp_country"
               formContext={formContext}
+              $isError={Boolean(errors.mp_country)}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -214,6 +221,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionSMS[smsChoice]}
               id="mp_mobile"
               formContext={formContext}
+              $isError={hasSMSError}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -249,6 +257,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionPhone[phoneChoice]}
               id="mp_phone"
               formContext={formContext}
+              $isError={hasPhoneError}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
