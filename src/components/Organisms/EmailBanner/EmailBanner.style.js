@@ -84,7 +84,6 @@ const InputField = styled.div`
 const BodyCopyWrapper = styled.div`
   padding-bottom: ${spacing('md')};
   color: ${({ theme }) => theme.color('black')};
-  background-color: red;
   ${({ theme }) => fontHelper(theme, 'span')}
 `;
 
