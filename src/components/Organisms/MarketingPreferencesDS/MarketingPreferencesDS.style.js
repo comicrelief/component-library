@@ -1,34 +1,16 @@
 import styled, { css } from 'styled-components';
 
 import spacing from '../../../theme/shared/spacing';
-import checkBoxIcon from './assets/CR_Tick_black.svg';
+import checkBoxIcon from './assets/CR_Tick.svg';
 import TextInput from './_TextInput';
 import EmailIcon from './assets/Email.svg';
 import PhoneIcon from './assets/Phone.svg';
 import PostIcon from './assets/Post.svg';
 import SMSIcon from './assets/Text.svg';
-import EmailIconWhite from './assets/Email--white.svg';
-import PhoneIconWhite from './assets/Phone--white.svg';
-import PostIconWhite from './assets/Post--white.svg';
-import SMSIconWhite from './assets/Text--white.svg';
 
 const OuterWrapper = styled.div`
   display: flex;
   flex-direction: column;
-
-  /* Preload 'selected' icons */
-  &:after {
-    position:absolute;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    z-index: -1;
-    content:
-      url("${EmailIconWhite}")
-      url("${PhoneIconWhite}")
-      url("${PostIconWhite}")
-      url("${SMSIconWhite}");
-  }
 `;
 
 const TopCopyWrapper = styled.div`
@@ -78,47 +60,17 @@ const FormField = styled.div`${({ theme, $isError }) => css`
   display: flex;
   flex-direction: column;
   padding: ${spacing('m')};
-  background-color: ${theme.color('grey_light')};
-  transition: background-color 0.3s, color 0.3s;
+  background-color: ${theme.color('white')};
   border-radius: 0.5rem;
-  border: 1px solid ${theme.color('grey')};
-
-  &.selected {
-    background-color: ${$isError ? theme.color('red') : theme.color('blue_donate')};
-    &:hover {
-      background-color: ${$isError ? theme.color('red_dark') : theme.color('blue_donate')};
-      border-color: ${theme.color('grey_4')};
-    }
-
-    span.icon-mp_permissionEmail {
-      background-image: url("${EmailIconWhite}");
-    }
-
-    span.icon-mp_permissionPhone {
-      background-image: url("${PhoneIconWhite}");
-    }
-
-    span.icon-mp_permissionPost {
-      background-image: url("${PostIconWhite}");
-    }
-
-    span.icon-mp_permissionSMS {
-      background-image: url("${SMSIconWhite}");
-    }
-
-    > div {
-      label, > span {
-        color: ${theme.color('white')};
-      }
-    }
-  }
+  border: 1px solid ${$isError ? theme.color('red') : theme.color('grey')};
+  color: ${$isError ? theme.color('red') : theme.color('black')};
 
   /* All labels; input AND checkbox */
   label {
     position: relative;
     margin-bottom: 0;
     width: 100%;
-    color: ${theme.color('black')};
+    color: inherit;
     font-weight: 600;
     display: flex;
     justify-content: space-between;
@@ -148,6 +100,7 @@ const CheckContainer = styled.div`${({ theme }) => css`
 `}`;
 
 const CheckLabel = styled.label`${({ theme }) => css`
+  position: relative;
   display: flex;
   align-items: center;
   font-size: ${theme.fontSize('xs')};
@@ -157,31 +110,42 @@ const CheckLabel = styled.label`${({ theme }) => css`
   }
 `}`;
 
-const CheckInput = styled.input`
-  font-size: ${({ theme }) => theme.fontSize('sm')};
+const CheckInput = styled.input`${({ theme }) => css`
+  font-size: ${theme.fontSize('sm')};
   display: block;
   box-sizing: border-box;
   opacity: 0;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top:0;
   margin: 0;
-  border: 1px solid ${({ theme }) => theme.color('grey')};
+  cursor: pointer;
+
   + span {
     width: 30px;
     height: 30px;
-    background-color: ${({ theme }) => theme.color('white')};
-    border: 1px solid ${({ theme }) => theme.color('grey')};
-    float: left;
+    flex-shrink: 0;
+    background-color: ${theme.color('white')};
+    border: 1px solid ${theme.color('grey')};
     border-radius: 0.5rem;
+    pointer-events: none;
   }
+
+  &:not(:checked):hover + span,
+  &:not(:checked):focus-visible + span {
+    background-color: ${theme.color('grey_extra_light')};
+  }
+
   &:checked + span {
-    background: url("${checkBoxIcon}") no-repeat center ${({ theme }) => theme.color('white')};
+    background: url("${checkBoxIcon}") no-repeat center ${theme.color('red')};
     background-size: contain;
+    border-color: ${theme.color('red')};
   }
-`;
+
+  &:checked:hover + span,
+  &:checked:focus-visible + span {
+    background-color: ${theme.color('red_dark')};
+    border-color: ${theme.color('red_dark')};
+  }
+`}`;
 
 const ShowHideInputWrapper = styled.div`
   display: ${({ $show }) => ($show ? 'block' : 'none')};
@@ -204,7 +168,7 @@ const ExtraInfo = styled.span`
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   margin-bottom: 0rem;
   margin-top: 1rem;
-  color: ${({ theme }) => theme.color('black')};
+  color: inherit;
 
   + label {
     margin-top: ${spacing('md')};
@@ -227,20 +191,16 @@ const ExtraInfo = styled.span`
         clip: rect(1px 1px 1px 1px);
         word-wrap: normal;
       }
+    }
   }
 `;
 
 const MPTextInput = styled(TextInput)`
   input {
-    border: 1px solid  ${({ theme }) => theme.color('black')};
     background-color: ${({ theme }) => theme.color('white')};
     @media ${({ theme }) => theme.allBreakpoints('M')} {
       max-width: none;
     }
-  }
-  /* error message text colour */
-  span {
-    color: white;
   }
 `;
 
