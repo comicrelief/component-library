@@ -1,47 +1,48 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const wrapperStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-};
+const ExampleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
-const sourceWrapperStyle = {
-  marginTop: '1.5rem',
-  borderRadius: '4px',
-  overflow: 'hidden',
-  border: '1px solid #333',
-};
+const CodeWrapper = styled.div`
+  margin-top: 1.5rem;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #333;
+`;
 
-const sourceLabelStyle = {
-  background: '#2d2d2d',
-  color: '#888',
-  padding: '0.35rem 0.75rem',
-  fontSize: '0.7rem',
-  fontFamily: 'monospace',
-  letterSpacing: '0.05em',
-  textTransform: 'uppercase',
-};
+const CodeLabel = styled.div`
+  background: #2d2d2d;
+  color: #888;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.7rem;
+  font-family: monospace;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+`;
 
-const preStyle = {
-  background: '#1e1e1e',
-  color: '#d4d4d4',
-  padding: '1rem',
-  overflowX: 'auto',
-  fontSize: '0.75rem',
-  lineHeight: '1.6',
-  fontFamily: "'Fira Code', 'Consolas', 'Monaco', monospace",
-  margin: 0,
-  whiteSpace: 'pre',
-};
+const CodeStyle = styled.div`
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  font-family: Fira Code, Consolas, Monaco, monospace;
+  margin: 0;
+  white-space: pre;
+`;
 
 export default function ExampleDisplay({ component, src }) {
   return (
-    <div style={wrapperStyle}>
+    <ExampleWrapper>
       <div>{component}</div>
-      <div style={sourceWrapperStyle}>
-        <div style={sourceLabelStyle}>source</div>
-        <pre style={preStyle}>{src}</pre>
-      </div>
-    </div>
+      <CodeWrapper>
+        <CodeLabel>source</CodeLabel>
+        <CodeStyle>{src}</CodeStyle>
+      </CodeWrapper>
+    </ExampleWrapper>
   );
 }

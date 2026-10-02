@@ -2,7 +2,6 @@ import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import Arrow from '../../Atoms/Icons/Arrow';
 import {
-  Wrapper,
   Grid,
   ButtonCard,
   CardTopWrapper,
@@ -21,7 +20,7 @@ function ExpandedButton({ options = [], selectedId, onSelect }) {
   }, [onSelect]);
 
   return (
-    <Wrapper>
+    <>
       <Grid>
         {options.map(option => (
           <ButtonCard
@@ -53,7 +52,7 @@ function ExpandedButton({ options = [], selectedId, onSelect }) {
           </ButtonCard>
         ))}
       </Grid>
-    </Wrapper>
+    </>
   );
 }
 
