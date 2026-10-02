@@ -195,14 +195,17 @@ const ExtraInfo = styled.span`
   }
 `;
 
-const MPTextInput = styled(TextInput)`
+const MPTextInput = styled(TextInput)`${({ theme, $isError }) => css`
+  color: ${$isError ? theme.color('red') : theme.color('black')};
+
   input {
-    background-color: ${({ theme }) => theme.color('white')};
-    @media ${({ theme }) => theme.allBreakpoints('M')} {
+    background-color: ${theme.color('white')};
+    color: ${$isError ? theme.color('red') : theme.color('black')};
+    @media ${theme.allBreakpoints('M')} {
       max-width: none;
     }
   }
-`;
+`}`;
 
 export {
   TopCopyWrapper,
