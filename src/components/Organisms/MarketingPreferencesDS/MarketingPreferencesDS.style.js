@@ -7,6 +7,10 @@ import EmailIcon from './assets/Email.svg';
 import PhoneIcon from './assets/Phone.svg';
 import PostIcon from './assets/Post.svg';
 import SMSIcon from './assets/Text.svg';
+import EmailIconRed from './assets/Email--red.svg';
+import PhoneIconRed from './assets/Phone--red.svg';
+import PostIconRed from './assets/Post--red.svg';
+import SMSIconRed from './assets/Text--red.svg';
 
 const OuterWrapper = styled.div`
   display: flex;
@@ -64,6 +68,26 @@ const FormField = styled.div`${({ theme, $isError }) => css`
   border-radius: 0.5rem;
   border: 1px solid ${$isError ? theme.color('red') : theme.color('grey')};
   color: ${$isError ? theme.color('red') : theme.color('black')};
+
+  ${$isError && css`
+    ${AssociatedFieldsName} {
+      &.icon-mp_permissionEmail {
+        background-image: url("${EmailIconRed}");
+      }
+
+      &.icon-mp_permissionPhone {
+        background-image: url("${PhoneIconRed}");
+      }
+
+      &.icon-mp_permissionPost {
+        background-image: url("${PostIconRed}");
+      }
+
+      &.icon-mp_permissionSMS {
+        background-image: url("${SMSIconRed}");
+      }
+    }
+  `}
 
   /* All labels; input AND checkbox */
   label {
