@@ -35,7 +35,7 @@ function ExpandedButton({ options = [], selectedId, onSelect }) {
               <HeadingContentWrapper data-testid="expanded-button-heading-content-wrapper">
                 {option.icon && (
                   <HeadingIconWrapper data-testid="expanded-button-heading-icon-wrapper">
-                    <img src={option.icon} alt=""  data-testid="expanded-button-heading-icon-img"/>
+                    <img src={option.icon} alt="" data-testid="expanded-button-heading-icon-img" />
                   </HeadingIconWrapper>
                 )}
                 <CardHeading data-testid="expanded-button-card-heading">{option.title}</CardHeading>
