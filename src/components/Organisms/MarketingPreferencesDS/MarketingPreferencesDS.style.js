@@ -128,6 +128,7 @@ const CheckLabel = styled.label`${({ theme }) => css`
   display: flex;
   align-items: center;
   font-size: ${theme.fontSize('xs')};
+  cursor: pointer;
 
   @media ${theme.allBreakpoints('M')} {
     font-size: ${theme.fontSize('s')};
@@ -141,7 +142,6 @@ const CheckInput = styled.input`${({ theme }) => css`
   opacity: 0;
   position: absolute;
   margin: 0;
-  cursor: pointer;
 
   + span {
     width: 30px;
