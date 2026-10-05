@@ -354,7 +354,7 @@ const filterCardTestData = {
   title: 'My Filter Card component',
   paddingAbove: '2rem',
   paddingBelow: '2rem',
-  pageBackgroundColour: 'teal_light',
+  pageBackgroundColour: 'grey_light',
   loadingBehaviour: 'Load all cards at once',
   body: {
     raw: 'From fundraising packs to bunting, certificates, cake labels and more, find everything you need to take yourself funny for money this Red Nose Day. Select a resource type to filters the results.'
@@ -395,12 +395,12 @@ const filterCardTestData = {
     {
       id: 'e80379c0-a0ea-565c-b91a-65d874554d84',
       __typename: 'ContentfulFilterCardNode',
-      title: 'Filter card 2 (tag 2, no description)',
+      title: 'Filter card 2 (tag 2, no description, External link)',
       label: 'This is the label',
       heading: 'This is the heading',
-      ctaText: 'This is the CTA test',
+      ctaText: 'CTA Text: External URL',
       url: 'https://www.google.com',
-      ctaIcon: 'Download',
+      ctaIcon: 'External URL',
       description: null,
       image: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
       imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/MmFdI7gfXD1WH7d29gVXI/9bf3b85ef830681e04ea7a31196f1120/test-square.jpg?w=10&h=10&fl=progressive&q=80&fm=jpg',

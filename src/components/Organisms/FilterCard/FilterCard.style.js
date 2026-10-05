@@ -4,6 +4,7 @@ import Text from '../../Atoms/Text/Text';
 import Button from '../../Atoms/Button/Button';
 import { Copywrapper, IconWrapper } from '../../Atoms/Button/Button.style';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
+import Link from '../../Atoms/Link/Link';
 
 // To reduce icon flash when switching between images:
 const fadeIn = keyframes`
@@ -26,6 +27,38 @@ const OuterWrapper = styled.div`
 //
 `;
 
+const HeaderWrapper = styled.div`
+  background: ${({ theme }) => theme.color('white')};
+  border-radius: 0.5rem;
+  padding: 2rem;
+  position: relative;
+  ${defaultBoxShadow};
+
+  &:after {
+    --size: 1.5rem;
+    position: absolute;
+    content: "";
+    width: 0; 
+    height: 0;
+    // Tiny lil' overlap to prevent ugliness when zooming the browser
+    bottom: calc((var(--size) * -1) + 1px);
+    left: calc(50% - (var(--size) / 2));
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid ${({ theme }) => theme.color('white')};
+    // Recreating defaultBoxShadow in a manner that actual works with all the CSS funkiness:
+    filter: drop-shadow(0px 6px 3px rgba(0, 0, 0, 0.1));
+  }
+  
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    padding: 4rem;
+
+    &:after {
+      left: 4rem;
+    }
+  }
+`;
+
 const Title = styled(Text)`
 //
 `;
@@ -38,12 +71,13 @@ const DynamicContentWrapper = styled.div`
   animation: ${fadeIn} 0.2s ease-in;
 `;
 
-const ResultsWrapper = styled.div`
-  text-align: center;
+const ControlsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
   }
 `;
 
@@ -91,18 +125,17 @@ const ShowHideFiltersButton = styled(CustomisedButton)`
   }
 `;
 
-const ClearSelectionButton = styled(CustomisedButton)`
-  display: ${({ $show }) => ($show ? 'flex' : 'none')};
-`;
-
-const ControlsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+const ResultsWrapper = styled.div`
+  text-align: center;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex-direction: row;
+    display: flex;
+    align-items: center;
   }
+`;
+
+const ClearSelectionButton = styled(CustomisedButton)`
+  display: ${({ $show }) => ($show ? 'flex' : 'none')};
 `;
 
 const FilterButtonsWrapper = styled.div`
@@ -152,7 +185,7 @@ const FilterButton = styled(Button)`
   }
 `;
 
-const FilterCardsWrapper = styled.div`
+const NodeWrapper = styled.div`
   display: flex;
   gap: 1rem;
   flex-direction: row;
@@ -160,7 +193,7 @@ const FilterCardsWrapper = styled.div`
   margin-top: 4rem;
 `;
 
-const FilterCardNode = styled.div`
+const Node = styled.div`
   flex: 0 0 calc(100% - 0.5rem);
   display: flex;
   flex-direction: row;
@@ -173,69 +206,52 @@ const FilterCardNode = styled.div`
   }
 `;
 
-const FilterCardNodeImageWrapper = styled.div`
+const NodeImageWrapper = styled.div`
   flex: 0 0 40%;
 `;
 
-const FilterCardNodeImage = styled(Picture)`  
+const NodeImage = styled(Picture)`  
   img {
     border-radius: 0.5rem;
   }
 `;
 
-const FilterCardNodeCopy = styled.div`
+const NodeCopyWrapper = styled.div`
   flex: 0 0 calc(60% - 1rem);
   align-self: start;
 `;
 
-const HeaderWrapper = styled.div`
-  background: ${({ theme }) => theme.color('white')};
-  border-radius: 0.5rem;
-  padding: 2rem;
-  position: relative;
-  ${defaultBoxShadow};
+const NodeCopyLabel = styled(Text)`
+  font-size: 14px;
+`;
 
-  &:after {
-    --size: 1.5rem;
-    position: absolute;
-    content: "";
-    width: 0; 
-    height: 0;
-    // Tiny lil' overlap to prevent ugliness when zooming the browser
-    bottom: calc((var(--size) * -1) + 1px);
-    left: calc(50% - (var(--size) / 2));
-    border-left: var(--size) solid transparent;
-    border-right: var(--size) solid transparent;
-    border-top: var(--size) solid ${({ theme }) => theme.color('white')};
-    // Recreating defaultBoxShadow in a manner that actual works with all the CSS funkiness:
-    filter: drop-shadow(0px 6px 3px rgba(0, 0, 0, 0.1));
-  }
-  
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    padding: 4rem;
+const NodeCopyDescription = styled(Text)`
+  margin-bottom: 1.5rem; 
+`;
 
-    &:after {
-      left: 4rem;
-    }
-  }
+const NodeCopyLink = styled(Link)`
+  display: inline-block;
 `;
 
 export {
   Container,
   OuterWrapper,
+  HeaderWrapper,
   Title,
   BodyCopy,
-  ResultsWrapper,
   DynamicContentWrapper,
   ControlsWrapper,
   ShowHideFiltersButton,
   ClearSelectionButton,
+  ResultsWrapper,
   FilterButtonsWrapper,
   FilterButton,
-  FilterCardsWrapper,
-  FilterCardNode,
-  FilterCardNodeImageWrapper,
-  FilterCardNodeImage,
-  FilterCardNodeCopy,
-  HeaderWrapper
+  NodeWrapper,
+  Node,
+  NodeImageWrapper,
+  NodeImage,
+  NodeCopyWrapper,
+  NodeCopyLabel,
+  NodeCopyDescription,
+  NodeCopyLink
 };

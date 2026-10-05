@@ -6,25 +6,30 @@ import Filter from '../../Atoms/Icons/Filter';
 import Undo from '../../Atoms/Icons/Undo';
 import Text from '../../Atoms/Text/Text';
 import preprocessNodes from './_utils/_utils';
+// TODO: update icons?
+import { Download, External } from '../../Atoms/Icons/index';
 
 import {
   Container,
   OuterWrapper,
+  HeaderWrapper,
   Title,
   BodyCopy,
-  ResultsWrapper,
-  ShowHideFiltersButton,
-  ClearSelectionButton,
   DynamicContentWrapper,
   ControlsWrapper,
+  ShowHideFiltersButton,
+  ClearSelectionButton,
+  ResultsWrapper,
   FilterButtonsWrapper,
   FilterButton,
-  FilterCardsWrapper,
-  FilterCardNode,
-  FilterCardNodeImageWrapper,
-  FilterCardNodeImage,
-  FilterCardNodeCopy,
-  HeaderWrapper
+  NodeWrapper,
+  Node,
+  NodeImageWrapper,
+  NodeImage,
+  NodeCopyWrapper,
+  NodeCopyLabel,
+  NodeCopyDescription,
+  NodeCopyLink
 } from './FilterCard.style';
 
 const FilterCard = ({ data }) => {
@@ -44,6 +49,18 @@ const FilterCard = ({ data }) => {
   const [currentFilters, setCurrentFilters] = useState([]);
   const [contentIsFiltered, setContentIsFiltered] = useState(false);
   const totalResults = useRef(0);
+
+  const getIcon = whichIcon => {
+    switch (whichIcon) {
+      case 'Download':
+        return <Download colour="black" size={20} />;
+      case 'External URL':
+        return <External colour="black" size={20} />;
+      case 'None':
+      default:
+        return null;
+    }
+  };
 
   // Add/remove this filter tag from the state array accordingly:
   const updateFilters = thisTag => {
@@ -99,15 +116,15 @@ const FilterCard = ({ data }) => {
         totalResults.current += 1;
 
         const {
-          label, heading, ctaText, url, ctaIcon,
-          description, image, imageLow, imageSet, imageAltText
+          label, heading, description,
+          image, imageLow, imageSet, imageAltText,
+          ctaText, url, ctaIcon
         } = thisNode;
 
         return (
-          <FilterCardNode>
-
-            <FilterCardNodeImageWrapper>
-              <FilterCardNodeImage
+          <Node key={thisNode.title}>
+            <NodeImageWrapper>
+              <NodeImage
                 image={image}
                 images={imageSet}
                 imageLow={imageLow}
@@ -116,34 +133,36 @@ const FilterCard = ({ data }) => {
                 height="100%"
                 alt={imageAltText}
               />
-            </FilterCardNodeImageWrapper>
+            </NodeImageWrapper>
 
-            <FilterCardNodeCopy>
-              <p>
-                <strong>LABEL: </strong>
+            <NodeCopyWrapper>
+
+              <NodeCopyLabel tag="p" color="grey" weight="500">
                 {label}
-                <br />
-                <strong>HEADING: </strong>
+              </NodeCopyLabel>
 
+              <Text tag="p" weight="700">
                 {heading}
-                <br />
-                <strong>DESC: </strong>
+              </Text>
+
+              <NodeCopyDescription tag="p">
                 {description}
-                <br />
-                <strong>CTA TEXT: </strong>
-                {ctaText}
-                <br />
-                <strong>URL: </strong>
-                {url}
-                <br />
-                <strong>CTAICON: </strong>
+              </NodeCopyDescription>
 
-                {ctaIcon}
+              <Text tag="p">
+                <NodeCopyLink
+                  href={url}
+                  $underline
+                  target="blank"
+                  icon={getIcon(ctaIcon)}
+                >
+                  {ctaText}
+                </NodeCopyLink>
+              </Text>
 
-              </p>
-            </FilterCardNodeCopy>
+            </NodeCopyWrapper>
 
-          </FilterCardNode>
+          </Node>
         );
       }
       return null;
@@ -238,9 +257,9 @@ const FilterCard = ({ data }) => {
         </HeaderWrapper>
 
         {(processedTags && processedNodes) && (
-          <FilterCardsWrapper>
+          <NodeWrapper>
             {renderCards()}
-          </FilterCardsWrapper>
+          </NodeWrapper>
         )}
 
       </OuterWrapper>

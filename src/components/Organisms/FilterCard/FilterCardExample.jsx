@@ -6,7 +6,7 @@ import { filterCardTestData } from '../../../data/data';
 export default function FilterCardExample() {
   return (
     <>
-      <ExampleContainer>
+      <ExampleContainer $bg="grey_light">
         <FilterCard
           data={filterCardTestData}
         />
