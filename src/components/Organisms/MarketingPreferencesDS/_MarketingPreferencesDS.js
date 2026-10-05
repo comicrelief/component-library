@@ -210,9 +210,7 @@ const MarketingPreferencesDS = ({
         <MaybeDisabled disabled={disableSMSInput}>
           <ShowHideInputWrapper $show={showSMSField}>
             <ExtraInfo>
-              Please confirm the mobile number we will use to
-              <b> text </b>
-              you on:
+              Please enter a telephone or mobile number:
             </ExtraInfo>
             <MPTextInput
               placeholder=""
@@ -246,9 +244,7 @@ const MarketingPreferencesDS = ({
         <MaybeDisabled disabled={disablePhoneInput}>
           <ShowHideInputWrapper $show={showPhoneField}>
             <ExtraInfo>
-              Please confirm the telephone number we will use to
-              <b> phone </b>
-              you on:
+              Please enter a telephone or mobile number
             </ExtraInfo>
             <MPTextInput
               placeholder=""
