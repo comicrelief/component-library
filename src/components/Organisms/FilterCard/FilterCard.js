@@ -108,9 +108,14 @@ const FilterCard = ({ data }) => {
     totalResults.current = 0;
 
     return processedNodes.map((thisNode, index) => {
+      const heroFirstNode = index === 0 && firstFilterCardNodeAsHero;
+
       // Determine whether we display this content or not:
       const renderNode = currentFilters.length === 0
-        || currentFilters.some(thisTag => thisNode.tags.includes(thisTag));
+        || currentFilters.some(thisTag => thisNode.tags.includes(thisTag))
+        // TODO: is this correct; do we 'pin' the hero node always?
+        // Or do we hero the first node in the LIST?
+        || heroFirstNode;
 
       if (renderNode) {
         // Increment the counter for every node we've got a tag match for:
@@ -119,11 +124,8 @@ const FilterCard = ({ data }) => {
         const {
           id, label, heading, description,
           image, imageLow, imageSet, imageAltText,
-          ctaText, url, ctaIcon
+          url, ctaText, ctaIcon
         } = thisNode;
-
-        // TOOD: should this be "pinned" to the top always, regardless of filter?
-        const heroFirstNode = index === 0 && firstFilterCardNodeAsHero;
 
         return (
           <Node
