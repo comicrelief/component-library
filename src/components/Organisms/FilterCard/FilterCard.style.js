@@ -188,38 +188,55 @@ const FilterButton = styled(Button)`
 
 const NodeWrapper = styled.div`
   display: flex;
-  gap: 1rem;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 4rem;
-`;
-
-const Node = styled.div`
-  flex: 0 0 calc(100% - 0.5rem);
-  display: flex;
-  flex-direction: row;
-  border-radius: 0.5rem;
-  align-items: center;
-  gap: 1rem;
-
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
-    flex: 0 0 calc(50% - 0.5rem);
-  }
+  // gap: 1rem;
 `;
 
 const NodeImageWrapper = styled.div`
   flex: 0 0 40%;
 `;
 
+const NodeCopyWrapper = styled.div`
+  flex: 0 0 calc(60% - 1rem);
+  align-self: start;
+`;
+
+const Node = styled.div`
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.5rem;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+
+  ${({ $isHero }) => ($isHero && css`
+    flex-direction: column;
+    flex: 0 0 100%;
+    height: fit-content;
+    
+    ${NodeImageWrapper} {
+      width: 100%;
+    }
+
+    ${NodeCopyWrapper} {
+      width: 100%;
+    }
+  `)}
+
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    flex: 0 0 ${({ $isHero }) => ($isHero ? '100%' : 'calc(50% - 0.5rem)')};
+    flex-direction: row;
+
+  }
+`;
+
 const NodeImage = styled(Picture)`  
   img {
     border-radius: 0.5rem;
   }
-`;
-
-const NodeCopyWrapper = styled.div`
-  flex: 0 0 calc(60% - 1rem);
-  align-self: start;
 `;
 
 const NodeCopyLabel = styled(Text)`

@@ -351,7 +351,7 @@ const ButtonIconSvgPath = 'https://images.ctfassets.net/0p265iutoxgq/3GaahqcCBaX
 const filterCardTestData = {
   id: '8c17eb9e-1435-5a8f-9d18-426c03c35e9e',
   __typename: 'ContentfulFilterCard',
-  title: 'My Filter Card component',
+  title: 'Your fundraising resources',
   paddingAbove: '2rem',
   paddingBelow: '2rem',
   pageBackgroundColour: 'grey_light',
@@ -544,11 +544,16 @@ const filterCardTestData = {
   ]
 };
 
+const filterCardTestDataHero = {
+  ...filterCardTestData,
+  firstFilterCardNodeAsHero: true
+};
+
 export {
   defaultData, mobileImages, testImpactSliderItems,
   carouselItemsComplete, carouselItemsCompleteWithPadding,
   carouselItemsIncomplete, carouselItemsMinimal,
   RichtextCarouselItems, RichtextCarouselItemsWithPadding,
   ButtonIconImgPath, ButtonIconSvgPath, ButtonIconImagePath2,
-  filterCardTestData
+  filterCardTestData, filterCardTestDataHero
 };

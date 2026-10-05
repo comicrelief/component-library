@@ -37,6 +37,7 @@ const FilterCard = ({ data }) => {
     title,
     body,
     filterCardNodes,
+    firstFilterCardNodeAsHero,
     paddingAbove = '0rem',
     paddingBelow = '1rem',
     pageBackgroundColour = 'transparent'
@@ -106,7 +107,7 @@ const FilterCard = ({ data }) => {
     // Reset counter for every re-render:
     totalResults.current = 0;
 
-    return processedNodes.map(thisNode => {
+    return processedNodes.map((thisNode, index) => {
       // Determine whether we display this content or not:
       const renderNode = currentFilters.length === 0
         || currentFilters.some(thisTag => thisNode.tags.includes(thisTag));
@@ -121,8 +122,14 @@ const FilterCard = ({ data }) => {
           ctaText, url, ctaIcon
         } = thisNode;
 
+        // TOOD: should this be "pinned" to the top always, regardless of filter?
+        const heroFirstNode = index === 0 && firstFilterCardNodeAsHero;
+
         return (
-          <Node key={id}>
+          <Node
+            key={id}
+            $isHero={heroFirstNode}
+          >
             <NodeImageWrapper>
               <NodeImage
                 image={image}
@@ -136,7 +143,6 @@ const FilterCard = ({ data }) => {
             </NodeImageWrapper>
 
             <NodeCopyWrapper>
-
               <NodeCopyLabel tag="p" color="grey" weight="500">
                 {label}
               </NodeCopyLabel>
@@ -159,7 +165,6 @@ const FilterCard = ({ data }) => {
                   {ctaText}
                 </NodeCopyLink>
               </Text>
-
             </NodeCopyWrapper>
           </Node>
         );
@@ -175,7 +180,6 @@ const FilterCard = ({ data }) => {
       $pageBackgroundColour={pageBackgroundColour}
     >
       <OuterWrapper>
-
         <HeaderWrapper>
 
           <Title tag="h1">
@@ -220,7 +224,6 @@ const FilterCard = ({ data }) => {
                     {totalResults.current === 1 ? 'result' : 'results'}
                   </Text>
                 </ResultsWrapper>
-
               </ControlsWrapper>
 
               <FilterButtonsWrapper $show={showFilters}>
@@ -247,12 +250,10 @@ const FilterCard = ({ data }) => {
                   );
                 })}
               </FilterButtonsWrapper>
-
             </DynamicContentWrapper>
           )
             : <PulseLoader color="black" style={{ textAlign: 'center', display: 'block' }} />
           }
-
         </HeaderWrapper>
 
         {(processedTags && processedNodes) && (
