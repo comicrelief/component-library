@@ -5,6 +5,7 @@ import Button from '../../Atoms/Button/Button';
 import { Copywrapper, IconWrapper } from '../../Atoms/Button/Button.style';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
 import Link from '../../Atoms/Link/Link';
+import { IconWrapper as LinkIconWrapper } from '../../Atoms/Link/Link.style';
 
 // To reduce icon flash when switching between images:
 const fadeIn = keyframes`
@@ -229,8 +230,16 @@ const NodeCopyDescription = styled(Text)`
   margin-bottom: 1.5rem; 
 `;
 
+// Override 'interesting' styling choices made within the underlying Link
+// component to ensure icon doesn't escape constraints of the parent:
 const NodeCopyLink = styled(Link)`
   display: inline-block;
+  padding-right: 2rem;
+
+  ${LinkIconWrapper} {
+      right: 0;
+      margin: 0;
+  }
 `;
 
 export {
