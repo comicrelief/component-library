@@ -63,8 +63,10 @@ const MarketingPreferencesDS = ({
 
   // Check for field-specific errors
   const hasEmailErroring = Boolean(errors.mp_permissionEmail || errors.mp_email);
-  const hasPostErroring = Boolean(errors.mp_permissionPost || errors.mp_address1 || errors.mp_address2
-  || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode);
+  const hasPostErroring = Boolean(errors.mp_permissionPost || 
+    errors.mp_address1 || errors.mp_address2 ||
+    errors.mp_address3 || errors.mp_town ||
+    errors.mp_country || errors.mp_postcode);
   const hasSMSErroring = Boolean(errors.mp_permissionSMS || errors.mp_mobile);
   const hasPhoneErroring = Boolean(errors.mp_permissionPhone || errors.mp_phone);
 
