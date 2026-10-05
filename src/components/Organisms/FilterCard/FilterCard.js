@@ -5,7 +5,6 @@ import Cross from '../../Atoms/Icons/Cross';
 import Filter from '../../Atoms/Icons/Filter';
 import Undo from '../../Atoms/Icons/Undo';
 import Text from '../../Atoms/Text/Text';
-import Picture from '../../Atoms/Picture/Picture';
 import preprocessNodes from './_utils/_utils';
 
 import {
@@ -22,6 +21,7 @@ import {
   FilterButton,
   FilterCardsWrapper,
   FilterCardNode,
+  FilterCardNodeImageWrapper,
   FilterCardNodeImage,
   FilterCardNodeCopy,
   HeaderWrapper
@@ -99,31 +99,27 @@ const FilterCard = ({ data }) => {
         totalResults.current += 1;
 
         const {
-          title: cardTitle, label, heading, ctaText, url, ctaIcon, tags,
+          label, heading, ctaText, url, ctaIcon,
           description, image, imageLow, imageSet, imageAltText
         } = thisNode;
-
-        console.log('thisNode', thisNode, description);
 
         return (
           <FilterCardNode>
 
-            <FilterCardNodeImage>
-              <Picture
+            <FilterCardNodeImageWrapper>
+              <FilterCardNodeImage
                 image={image}
                 images={imageSet}
                 imageLow={imageLow}
-                objectFit="cover"
+                objectFit="contain"
                 width="100%"
                 height="100%"
                 alt={imageAltText}
               />
-            </FilterCardNodeImage>
+            </FilterCardNodeImageWrapper>
 
             <FilterCardNodeCopy>
               <p>
-                {/* {cardTitle}
-                <br /> */}
                 <strong>LABEL: </strong>
                 {label}
                 <br />

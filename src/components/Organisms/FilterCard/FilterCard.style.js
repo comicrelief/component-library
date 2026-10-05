@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
+import Picture from '../../Atoms/Picture/Picture';
 import Text from '../../Atoms/Text/Text';
 import Button from '../../Atoms/Button/Button';
 import { Copywrapper, IconWrapper } from '../../Atoms/Button/Button.style';
@@ -160,25 +161,31 @@ const FilterCardsWrapper = styled.div`
 `;
 
 const FilterCardNode = styled.div`
-  background-color: orange;
   flex: 0 0 calc(100% - 0.5rem);
   display: flex;
   flex-direction: row;
-  // padding: 1rem;
   border-radius: 0.5rem;
+  align-items: center;
+  gap: 1rem;
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     flex: 0 0 calc(50% - 0.5rem);
   }
 `;
 
-const FilterCardNodeImage = styled.div`
+const FilterCardNodeImageWrapper = styled.div`
   flex: 0 0 40%;
 `;
 
+const FilterCardNodeImage = styled(Picture)`  
+  img {
+    border-radius: 0.5rem;
+  }
+`;
+
 const FilterCardNodeCopy = styled.div`
-  flex: 0 0 60%;
-  padding: 1rem;
+  flex: 0 0 calc(60% - 1rem);
+  align-self: start;
 `;
 
 const HeaderWrapper = styled.div`
@@ -227,6 +234,7 @@ export {
   FilterButton,
   FilterCardsWrapper,
   FilterCardNode,
+  FilterCardNodeImageWrapper,
   FilterCardNodeImage,
   FilterCardNodeCopy,
   HeaderWrapper
