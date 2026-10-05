@@ -43,7 +43,7 @@ export default function ExpandedButtonExample() {
 
   return (
     <>
-      <ExpandedButtonExampleWrapper>
+      <ExpandedButtonExampleWrapper data-testid="expanded-button-example-wrapper">
         <h3>Expanded Button with icons</h3>
         <ExpandedButton
           options={optionsWithIcons}
@@ -51,7 +51,7 @@ export default function ExpandedButtonExample() {
           onSelect={setSelectedId}
         />
       </ExpandedButtonExampleWrapper>
-      <ExpandedButtonExampleWrapper>
+      <ExpandedButtonExampleWrapper data-testid="expanded-button-example-wrapper">
         <h3>Expanded Button without icons</h3>
         <ExpandedButton
           options={baseOptions}

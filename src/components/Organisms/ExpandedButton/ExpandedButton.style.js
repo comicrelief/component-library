@@ -7,8 +7,10 @@ const Grid = styled.div`
   width: 100%;
   margin: 0 auto;
   flex-direction: column;
-  gap: 1rem;
-  border: 1px solid red;
+  gap: 8px;
+  @media ${crTheme.allBreakpoints('M')} {
+    gap: 16px;
+  }
 `;
 
 const ButtonCard = styled.button`
@@ -76,10 +78,13 @@ const HeadingIconWrapper = styled.span`
 
 const CardHeading = styled.h3`
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
   font-weight: 700;
   line-height: 20px;
   color: ${crTheme.color('black')};
+  font-size: 14px;
+  @media ${crTheme.allBreakpoints('M')} {
+    font-size: 16px;
+  }
 `;
 
 const CardBlurb = styled(Text)`
