@@ -57,7 +57,7 @@ const AssociatedFieldsName = styled.span`
   }
 `;
 
-const FormField = styled.div`${({ theme, $isErroring }) => css`
+const FormField = styled.div`${({ theme, $isError }) => css`
   position: relative;
   margin-bottom: ${spacing('md')};
   width: 100%;
@@ -66,10 +66,10 @@ const FormField = styled.div`${({ theme, $isErroring }) => css`
   padding: ${spacing('m')};
   background-color: ${theme.color('white')};
   border-radius: 0.5rem;
-  border: 1px solid ${$isErroring ? theme.color('red') : theme.color('grey')};
-  color: ${$isErroring ? theme.color('red') : theme.color('black')};
+  border: 1px solid ${$isError ? theme.color('red') : theme.color('grey')};
+  color: ${$isError ? theme.color('red') : theme.color('black')};
 
-  ${$isErroring && css`
+  ${$isError && css`
     ${AssociatedFieldsName} {
       &.icon-mp_permissionEmail {
         background-image: url("${EmailIconRed}");
@@ -219,12 +219,12 @@ const ExtraInfo = styled.span`
   }
 `;
 
-const MPTextInput = styled(TextInput)`${({ theme, $isErroring }) => css`
-  color: ${$isErroring ? theme.color('red') : theme.color('black')};
+const MPTextInput = styled(TextInput)`${({ theme, $isError }) => css`
+  color: ${$isError ? theme.color('red') : theme.color('black')};
 
   input {
     background-color: ${theme.color('white')};
-    color: ${$isErroring ? theme.color('red') : theme.color('black')};
+    color: ${$isError ? theme.color('red') : theme.color('black')};
     @media ${theme.allBreakpoints('M')} {
       max-width: none;
     }

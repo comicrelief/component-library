@@ -62,13 +62,11 @@ const MarketingPreferencesDS = ({
   const customId = id ? `marketing-preferences--${id}` : 'marketing-preferences';
 
   // Check for field-specific errors
-  const hasEmailErroring = Boolean(errors.mp_permissionEmail || errors.mp_email);
-  const hasPostErroring = Boolean(errors.mp_permissionPost || 
-    errors.mp_address1 || errors.mp_address2 ||
-    errors.mp_address3 || errors.mp_town ||
-    errors.mp_country || errors.mp_postcode);
-  const hasSMSErroring = Boolean(errors.mp_permissionSMS || errors.mp_mobile);
-  const hasPhoneErroring = Boolean(errors.mp_permissionPhone || errors.mp_phone);
+  const hasEmailError = Boolean(errors.mp_permissionEmail || errors.mp_email);
+  const hasPostError = Boolean(errors.mp_permissionPost || errors.mp_address1 || errors.mp_address2
+  || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode);
+  const hasSMSError = Boolean(errors.mp_permissionSMS || errors.mp_mobile);
+  const hasPhoneError = Boolean(errors.mp_permissionPhone || errors.mp_phone);
 
   return (
     <OuterWrapper id={customId} {...rest}>
@@ -78,7 +76,7 @@ const MarketingPreferencesDS = ({
       {!mp_permissionEmail.disableOption && (
       <FormField
         className={`field-email ${emailChoice && 'selected'}`}
-        $isErroring={hasEmailErroring}
+        $isError={hasEmailError}
       >
         <CheckboxWrapper>
           <OptInCheckbox
@@ -106,7 +104,7 @@ const MarketingPreferencesDS = ({
               type="email"
               id="mp_email"
               formContext={formContext}
-              $isErroring={hasEmailErroring}
+              $isError={hasEmailError}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -117,7 +115,7 @@ const MarketingPreferencesDS = ({
       {!mp_permissionPost.disableOption && (
       <FormField
         className={`field-post ${postChoice && 'selected'}`}
-        $isErroring={hasPostErroring}
+        $isError={hasPostError}
       >
         <CheckboxWrapper>
           <OptInCheckbox
@@ -142,7 +140,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionPost[postChoice]}
               id="mp_address1"
               formContext={formContext}
-              $isErroring={Boolean(errors.mp_address1)}
+              $isError={Boolean(errors.mp_address1)}
             />
             <MPTextInput
               placeholder=""
@@ -151,7 +149,7 @@ const MarketingPreferencesDS = ({
               optional
               id="mp_address2"
               formContext={formContext}
-              $isErroring={Boolean(errors.mp_address2)}
+              $isError={Boolean(errors.mp_address2)}
             />
             <MPTextInput
               placeholder=""
@@ -160,7 +158,7 @@ const MarketingPreferencesDS = ({
               optional
               id="mp_address3"
               formContext={formContext}
-              $isErroring={Boolean(errors.mp_address3)}
+              $isError={Boolean(errors.mp_address3)}
             />
             <MPTextInput
               placeholder=""
@@ -169,7 +167,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionPost[postChoice]}
               id="mp_town"
               formContext={formContext}
-              $isErroring={Boolean(errors.mp_town)}
+              $isError={Boolean(errors.mp_town)}
             />
             <MPTextInput
               placeholder=""
@@ -178,7 +176,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionPost[postChoice]}
               id="mp_postcode"
               formContext={formContext}
-              $isErroring={Boolean(errors.mp_postcode)}
+              $isError={Boolean(errors.mp_postcode)}
             />
             <MPTextInput
               placeholder=""
@@ -187,7 +185,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionPost[postChoice]}
               id="mp_country"
               formContext={formContext}
-              $isErroring={Boolean(errors.mp_country)}
+              $isError={Boolean(errors.mp_country)}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -198,7 +196,7 @@ const MarketingPreferencesDS = ({
       {!mp_permissionSMS.disableOption && (
       <FormField
         className={`field-sms ${smsChoice && 'selected'}`}
-        $isErroring={hasSMSErroring}
+        $isError={hasSMSError}
       >
         <CheckboxWrapper>
           <OptInCheckbox
@@ -221,7 +219,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionSMS[smsChoice]}
               id="mp_mobile"
               formContext={formContext}
-              $isErroring={hasSMSErroring}
+              $isError={hasSMSError}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -232,7 +230,7 @@ const MarketingPreferencesDS = ({
       {!mp_permissionPhone.disableOption && (
       <FormField
         className={`field-phone ${phoneChoice && 'selected'}`}
-        $isErroring={hasPhoneErroring}
+        $isError={hasPhoneError}
       >
         <CheckboxWrapper>
           <OptInCheckbox
@@ -255,7 +253,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionPhone[phoneChoice]}
               id="mp_phone"
               formContext={formContext}
-              $isErroring={hasPhoneErroring}
+              $isError={hasPhoneError}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
