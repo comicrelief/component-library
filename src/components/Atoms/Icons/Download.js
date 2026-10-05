@@ -4,7 +4,7 @@ import styled, { withTheme } from 'styled-components';
 
 const StyledSVG = styled.svg`
   // Mobile-colour if available, else use standard prop
-  fill: ${({ mobileColour, colour, theme }) => (mobileColour ? theme.color(mobileColour) : theme.color(colour))};
+  fill: ${({ $mobileColour, colour, theme }) => ($mobileColour ? theme.color($mobileColour) : theme.color(colour))};
 
   // Reinstate standard styles for 'desktop', adding a fallback for good measure:
   @media ${({ theme }) => theme.allBreakpoints('L')} {
@@ -21,7 +21,7 @@ const Download = ({
     height={size}
     fill={theme.color(colour)}
     colour={colour}
-    mobileColour={mobileColour}
+    $mobileColour={mobileColour}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 96 96"
   >
