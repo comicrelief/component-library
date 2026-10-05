@@ -116,13 +116,13 @@ const FilterCard = ({ data }) => {
         totalResults.current += 1;
 
         const {
-          label, heading, description,
+          id, label, heading, description,
           image, imageLow, imageSet, imageAltText,
           ctaText, url, ctaIcon
         } = thisNode;
 
         return (
-          <Node key={thisNode.title}>
+          <Node key={id}>
             <NodeImageWrapper>
               <NodeImage
                 image={image}
@@ -161,7 +161,6 @@ const FilterCard = ({ data }) => {
               </Text>
 
             </NodeCopyWrapper>
-
           </Node>
         );
       }
@@ -280,6 +279,7 @@ FilterCard.propTypes = {
     firstFilterCardNodeAsHero: PropTypes.bool,
     filterCardNodes: PropTypes.arrayOf(
       PropTypes.shape({
+        id: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired,
         heading: PropTypes.string.isRequired,

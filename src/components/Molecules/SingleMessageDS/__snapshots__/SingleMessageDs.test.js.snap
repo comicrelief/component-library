@@ -337,7 +337,6 @@ exports[`renders correctly 1`] = `
         >
           <svg
             className="c13"
-            colour="white"
             fill="#FFFFFF"
             height={24}
             viewBox="0 0 96 96"
