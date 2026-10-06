@@ -100,7 +100,7 @@ const FilterCard = ({ data }) => {
     }
   }, [isLoading, filterCardNodes]);
 
-  // TODO: extrapolate into own file:
+  // TODO: extrapolate into own file?
   const renderNodes = () => {
     // Reset counter for every re-render:
     totalResults.current = 0;
@@ -109,9 +109,9 @@ const FilterCard = ({ data }) => {
       // Applies pinned, hero styling to the first node, when the CMS is set to do so:
       const heroFirstNode = index === 0 && firstFilterCardNodeAsHero;
 
-      // Check if we SHOULD be limiting nodes before checking the current index against the limit:
-      const belowLimit = nodeDisplayLimit === false
-      || (nodeDisplayLimit && index < nodeDisplayLimit);
+      // Check to see if we've even got a display limit before comparing to the current index:
+      const underLimit = nodeDisplayLimit === 0
+      || (nodeDisplayLimit > 0 && index < nodeDisplayLimit);
 
       // We can render this node when:
       const renderThisNode = (
@@ -127,7 +127,7 @@ const FilterCard = ({ data }) => {
       // Or do we 'hero' the first node in the filtered list?
       // If the former, do we update the result total to include this or not?
 
-      if (renderThisNode && belowLimit) {
+      if (renderThisNode && underLimit) {
         // Increment the counter for every node we've got a tag match for:
         totalResults.current += 1;
 

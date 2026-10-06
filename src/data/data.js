@@ -922,11 +922,17 @@ const filterCardTestDataExtra = {
   )
 };
 
+const filterCardTestDataHeroExtra = {
+  ...filterCardTestDataExtra,
+  title: 'Your fundraising resources: HERO + LOADER',
+  firstFilterCardNodeAsHero: true
+};
 export {
   defaultData, mobileImages, testImpactSliderItems,
   carouselItemsComplete, carouselItemsCompleteWithPadding,
   carouselItemsIncomplete, carouselItemsMinimal,
   RichtextCarouselItems, RichtextCarouselItemsWithPadding,
   ButtonIconImgPath, ButtonIconSvgPath, ButtonIconImagePath2,
-  filterCardTestData, filterCardTestDataHero, filterCardTestDataExtra
+  filterCardTestData, filterCardTestDataHero, filterCardTestDataExtra,
+  filterCardTestDataHeroExtra
 };

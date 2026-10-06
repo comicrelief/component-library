@@ -1,7 +1,9 @@
 import React from 'react';
 import { ExampleContainer } from '../../../demos/SharedStyles';
 import FilterCard from './FilterCard';
-import { filterCardTestData, filterCardTestDataHero, filterCardTestDataExtra } from '../../../data/data';
+import {
+  filterCardTestData, filterCardTestDataHero, filterCardTestDataExtra, filterCardTestDataHeroExtra
+} from '../../../data/data';
 
 export default function FilterCardExample() {
   return (
@@ -21,6 +23,12 @@ export default function FilterCardExample() {
       <ExampleContainer $bg="#F4F3F5" style={{ padding: 0 }}>
         <FilterCard
           data={filterCardTestDataExtra}
+        />
+      </ExampleContainer>
+
+      <ExampleContainer $bg="#F4F3F5" style={{ padding: 0 }}>
+        <FilterCard
+          data={filterCardTestDataHeroExtra}
         />
       </ExampleContainer>
     </>
