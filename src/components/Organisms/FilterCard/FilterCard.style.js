@@ -21,7 +21,11 @@ const Container = styled.div`
   flex-direction: column;
   background: ${({ theme, $pageBackgroundColour }) => theme.color($pageBackgroundColour)};
   justify-content: center;
-  ${({ $paddingAbove, $paddingBelow }) => css`padding: ${$paddingAbove} 2rem ${$paddingBelow};`}
+  ${({ $paddingAbove, $paddingBelow }) => css`padding: ${$paddingAbove} 1rem ${$paddingBelow};`}
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    padding-inline: 2rem;
+  }
 `;
 
 const OuterWrapper = styled.div`
@@ -35,6 +39,7 @@ const HeaderWrapper = styled.div`
   position: relative;
   ${defaultBoxShadow};
 
+  // Down 'arrow':
   &:after {
     --size: 1.5rem;
     position: absolute;
@@ -50,10 +55,16 @@ const HeaderWrapper = styled.div`
     // Recreating defaultBoxShadow in a manner that actual works with all the CSS funkiness:
     filter: drop-shadow(0px 6px 3px rgba(0, 0, 0, 0.1));
   }
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    &:after {
+      left: 3rem;
+    }
+  }
   
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     padding: 4rem;
-
+    
     &:after {
       left: 4rem;
     }
@@ -147,7 +158,7 @@ const FilterButtonsWrapper = styled.div`
   animation: ${fadeIn} 0.1s ease-in;
 `;
 
-const FilterButton = styled(Button)`
+const FilterButton = styled(CustomisedButton)`
   box-shadow: 0px 0px 0px 1px ${({ theme }) => theme.color('grey_medium')} inset;
   display: inline-flex;
 
@@ -190,60 +201,117 @@ const NodeWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 4rem;
+  margin-top: 3rem;
+  gap: 1.5rem;
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    gap: 2rem;
+    margin-top: 4rem;
+  }
 `;
 
 const NodeImageWrapper = styled.div`
-  flex: 0 0 40%;
+  flex: 0 0 20%;
   aspect-ratio: 1;
+  align-self: start;
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    flex: 0 0 20%;
+  }
 `;
 
 const NodeCopyWrapper = styled.div`
-  flex: 0 0 calc(60% - 1rem);
+  --s-gap: 1rem;
+  --m-gap: 2rem;
+  flex: 0 0 calc(80% - var(--s-gap));
   align-self: start;
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    flex: 0 0 calc(80% - var(--m-gap));
+  }
 `;
 
 const Node = styled.div`
-  flex: 0 0 100%;
+  --s-gap: 1rem;
+  --m-gap: 2rem;
+  position: relative;
   display: flex;
+  flex: 0 0 100%;
   flex-direction: row;
-  border-radius: 0.5rem;
   align-items: center;
-  gap: 1rem;
-  margin: 1rem 0;
-  // DEBUG
-  // background-color: orange;
-
-  ${({ $isHero }) => ($isHero && css`
-    flex-direction: column;
-    height: fit-content;
+  gap: var(--s-gap);
+  border-radius: 0.5rem;
+  height: fit-content;
     
-    ${NodeImageWrapper} {
-      flex: 0 0 100%;
-    }
+  // Hero-only customisations:
+  ${({ $isHero }) => ($isHero
+    ? css`
+    flex-direction: column;
+    margin-bottom: 2.5rem;
 
+    ${NodeImageWrapper},
     ${NodeCopyWrapper} {
-      flex: 0 0 100%;
-      align-self: center;
+      width: 100%;
+    }`
+    : css`
+    // Add a funky underline accent to all non-Hero, non-last nodes:
+    &:not(:last-child) {
+      // Space for funky accent
+      padding-bottom: 1.5rem;
+
+      // The titular funky accent
+      &:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color:  ${({ theme }) => theme.color('grey_medium')};
+      }
     }
-  `)}
+  `)};
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex: 0 0 ${({ $isHero }) => ($isHero ? '100%' : 'calc(50% - 0.5rem)')};
+    gap: var(--m-gap);
+
+    ${({ $isHero }) => ($isHero ? css`
+      flex-direction: row;
+
+      ${NodeImageWrapper} {
+        flex: 0 0 calc(40% - var(--s-gap));
+      }
+
+      ${NodeCopyWrapper} {
+        flex: 0 0 calc(60% - var(--s-gap));
+      }
+  ` : css`
+    // Remove funky underline from all non-Hero nodes on this breakpoint
+    &&:after {
+      content: none;
+    }
+  `)}
+  }
+
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
     flex-direction: row;
 
-    ${({ $isHero }) => ($isHero && css`
-      gap: 2rem;
+    ${({ $isHero }) => ($isHero
+    ? css`
+      gap: var(--m-gap);
+      flex: 0 0 100%;
 
       ${NodeImageWrapper} {
         flex: 0 0 40%;
       }
 
       ${NodeCopyWrapper} {
-        // align-self: center;
-        flex: 0 0 calc(60% - 2rem);
-      }
-    `)}
+        flex: 0 0 calc(60% - var(--m-gap));
+        align-self: center;
+      }`
+    : css`
+    flex: 0 0 calc(50% - 1rem);
+  `)};
   }
 `;
 
