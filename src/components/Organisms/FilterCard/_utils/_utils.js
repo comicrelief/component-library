@@ -1,3 +1,6 @@
+import React from 'react';
+import { Download, External } from '../../../Atoms/Icons/index';
+
 const preprocessNodes = nodesToProcess => {
   const outputNodes = [];
   const outputTags = {};
@@ -25,4 +28,27 @@ const preprocessNodes = nodesToProcess => {
   return { outputNodes, outputTags };
 };
 
-export default preprocessNodes;
+const getIcon = whichIcon => {
+  switch (whichIcon) {
+    case 'Download':
+      return <Download colour="black" size={20} />;
+    case 'External URL':
+      return <External colour="black" size={20} />;
+    case 'None':
+    default:
+      return null;
+  }
+};
+
+// Over-engineered to allow us to easily add more options in the future:
+const shouldShowAllNodes = optionLabel => {
+  switch (optionLabel) {
+    case 'Load all cards at once':
+      return true;
+    case 'Load 6 cards at a time + Hero Node (if set)':
+    default:
+      return false;
+  }
+};
+
+export { preprocessNodes, getIcon, shouldShowAllNodes };

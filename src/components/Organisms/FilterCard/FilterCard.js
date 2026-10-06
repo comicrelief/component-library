@@ -5,17 +5,15 @@ import Cross from '../../Atoms/Icons/Cross';
 import Filter from '../../Atoms/Icons/Filter';
 import Undo from '../../Atoms/Icons/Undo';
 import Text from '../../Atoms/Text/Text';
-import preprocessNodes from './_utils/_utils';
-// TODO: update icons?
-import { Download, External } from '../../Atoms/Icons/index';
+import { preprocessNodes, getIcon, shouldShowAllNodes } from './_utils/_utils';
+import Button from '../../Atoms/Button/Button';
 
 import {
   Container,
   OuterWrapper,
   HeaderWrapper,
   Title,
-  BodyCopy,
-  DynamicContentWrapper,
+  Body,
   ControlsWrapper,
   ShowHideFiltersButton,
   ClearSelectionButton,
@@ -30,7 +28,9 @@ import {
   NodeCopyLabel,
   NodeCopyHeading,
   NodeCopyDescription,
-  NodeCopyLink
+  NodeCopyLink,
+  ShowMoreButtonWrapper
+
 } from './FilterCard.style';
 
 const FilterCard = ({ data }) => {
@@ -39,32 +39,29 @@ const FilterCard = ({ data }) => {
     body,
     filterCardNodes,
     firstFilterCardNodeAsHero,
+    loadingBehaviour = null,
     paddingAbove = '0rem',
     paddingBelow = '1rem',
     pageBackgroundColour = 'transparent'
   } = data;
 
+  // Load state and content:
   const [isLoading, setIsLoading] = useState(true);
   const [processedNodes, setProcessedNodes] = useState(false);
   const [processedTags, setProcessedTags] = useState(false);
-  const [showFilters, setShowFilters] = useState(true); // DEBUG
+
+  // Determine our display behaviour based on the CMS option
+  const loadAllNodes = shouldShowAllNodes(loadingBehaviour);
+  const [nodeDisplayLimit, setNodeDisplayLimit] = useState(loadAllNodes ? false : 6);
+
+  // Keep track of user interactions:
+  const [showFilters, setShowFilters] = useState(true);
   const [currentFilters, setCurrentFilters] = useState([]);
-  const [contentIsFiltered, setContentIsFiltered] = useState(false);
   const totalResults = useRef(0);
 
-  const getIcon = whichIcon => {
-    switch (whichIcon) {
-      case 'Download':
-        return <Download colour="black" size={20} />;
-      case 'External URL':
-        return <External colour="black" size={20} />;
-      case 'None':
-      default:
-        return null;
-    }
-  };
-
   // Add/remove this filter tag from the state array accordingly:
+  //
+  // TODO: extrapolate into own file?
   const updateFilters = thisTag => {
     // Cache current state:
     let updatedFilters = currentFilters;
@@ -84,7 +81,6 @@ const FilterCard = ({ data }) => {
 
     // Spread as 'new' array to trigger re-render:
     setCurrentFilters([...updatedFilters]);
-    setContentIsFiltered(updatedFilters.length > 0);
   };
 
   useEffect(() => {
@@ -104,6 +100,7 @@ const FilterCard = ({ data }) => {
     }
   }, [isLoading, filterCardNodes]);
 
+  // TODO: extrapolate into own file?
   const renderCards = () => {
     // Reset counter for every re-render:
     totalResults.current = 0;
@@ -112,13 +109,15 @@ const FilterCard = ({ data }) => {
       const heroFirstNode = index === 0 && firstFilterCardNodeAsHero;
 
       // Determine whether we display this content or not:
-      const renderNode = currentFilters.length === 0
+      const renderNode = (currentFilters.length === 0
         || currentFilters.some(thisTag => thisNode.tags.includes(thisTag))
         // TODO: to check with Curtis; when the 'hero' display is chosen,
         // do we always 'hero' the first node in the CMS list, regardless of filter?
         // Or do we 'hero' the first node in the filtered list?
         // If the former, do we update the result total to include this or not?
-        || heroFirstNode;
+        || heroFirstNode)
+        // Only render as many nodes as we're allowed to:
+        && index < nodeDisplayLimit;
 
       if (renderNode) {
         // Increment the counter for every node we've got a tag match for:
@@ -197,13 +196,13 @@ const FilterCard = ({ data }) => {
             {title}
           </Title>
 
-          <BodyCopy>
+          <Body>
             {body.raw}
-          </BodyCopy>
+          </Body>
 
           {/* Only render the controls once the content's been fully processed: */}
           {(processedTags && processedNodes) ? (
-            <DynamicContentWrapper>
+            <>
               <ControlsWrapper>
                 <ShowHideFiltersButton
                   color="white"
@@ -217,22 +216,23 @@ const FilterCard = ({ data }) => {
 
                 <ClearSelectionButton
                   color="white"
-                  disabled={!contentIsFiltered}
                   icon={<Undo />}
                   $show={showFilters}
+                  disabled={currentFilters.length === 0}
                   onClick={() => {
                     setCurrentFilters([]);
-                    setContentIsFiltered(false);
                   }}
+
                 >
                   Clear selection
                 </ClearSelectionButton>
 
                 <ResultsWrapper>
                   <Text tag="span">
-                    { currentTotal}
+                    { currentTotal }
                   </Text>
                 </ResultsWrapper>
+
               </ControlsWrapper>
 
               <FilterButtonsWrapper $show={showFilters}>
@@ -246,9 +246,9 @@ const FilterCard = ({ data }) => {
                       type="button"
                       color="grey_light"
                       value={tag}
+                      iconLeft
                       $isSelected={isSelected}
                       aria-pressed={isSelected}
-                      iconLeft
                       icon={isSelected ? selectedIcon : unselectedIcon}
                       onClick={() => { updateFilters(tag); }}
                       // Forces a re-render to trigger our flash-reducing, icon fade in:
@@ -259,7 +259,7 @@ const FilterCard = ({ data }) => {
                   );
                 })}
               </FilterButtonsWrapper>
-            </DynamicContentWrapper>
+            </>
           )
             // Otherwise, shown the nifty loader:
             : <PulseLoader color="black" style={{ textAlign: 'center', display: 'block' }} />
@@ -271,6 +271,17 @@ const FilterCard = ({ data }) => {
           <NodeWrapper>
             {renderCards()}
           </NodeWrapper>
+        )}
+
+        {/* Only show Loader when appropriate */}
+        {(!loadAllNodes && nodeDisplayLimit && nodeDisplayLimit < processedNodes.length) && (
+          <ShowMoreButtonWrapper>
+            <Button
+              onClick={() => setNodeDisplayLimit(nodeDisplayLimit + 1)}
+            >
+              Show more
+            </Button>
+          </ShowMoreButtonWrapper>
         )}
 
       </OuterWrapper>

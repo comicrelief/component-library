@@ -76,12 +76,8 @@ const HeaderWrapper = styled.div`
   }
 `;
 
-const BodyCopy = styled.div`
+const Body = styled.div`
   margin-bottom: 2.5rem;
-`;
-
-const DynamicContentWrapper = styled.div`
-  animation: ${fadeIn} 0.2s ease-in;
 `;
 
 const ControlsWrapper = styled.div`
@@ -243,7 +239,8 @@ const Node = styled.div`
   gap: var(--s-gap);
   border-radius: 0.5rem;
   height: fit-content;
-    
+  animation: ${fadeIn} 0.2s ease-in;
+
   // Hero-only customisations:
   ${({ $isHero }) => ($isHero ? css`
     flex-direction: column;
@@ -354,13 +351,18 @@ const NodeCopyLink = styled(Link)`
   }
 `;
 
+const ShowMoreButtonWrapper = styled.div`
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+`;
+
 export {
   Container,
   OuterWrapper,
   HeaderWrapper,
   Title,
-  BodyCopy,
-  DynamicContentWrapper,
+  Body,
   ControlsWrapper,
   ShowHideFiltersButton,
   ClearSelectionButton,
@@ -375,5 +377,6 @@ export {
   NodeCopyLabel,
   NodeCopyHeading,
   NodeCopyDescription,
-  NodeCopyLink
+  NodeCopyLink,
+  ShowMoreButtonWrapper
 };
