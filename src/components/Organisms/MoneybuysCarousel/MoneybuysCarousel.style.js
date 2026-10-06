@@ -8,11 +8,10 @@ const Wrapper = styled.div`
 const CarouselCard = styled.div`
   position: relative;
   width: 100%;
-  margin-bottom: ${spacing('l')};
   background-color: ${({ theme }) => theme.color('white')};
   border: 1px solid ${({ theme }) => theme.color('grey')};
   border-radius: 10px;
-  padding: ${spacing('l')} ${spacing('xl')};
+  padding: ${spacing('l')} ${spacing('md')};
   box-sizing: border-box;
 
   .splide {
@@ -59,7 +58,7 @@ const CarouselCard = styled.div`
     }
 
     &:hover:not(:disabled) {
-      opacity: 0.85;
+      background-color: ${({ theme }) => theme.color('grey_3')};
     }
   }
 
@@ -103,8 +102,9 @@ const CarouselCard = styled.div`
 
 const SlideCopy = styled.p`
   margin: 0;
-  padding: 0 ${spacing('xl')};
+  padding: 0 4.5rem;
   font-size: ${({ theme }) => theme.fontSize('s')};
+  font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
   line-height: 1.4;
   color: ${({ theme }) => theme.color('black')};
 
