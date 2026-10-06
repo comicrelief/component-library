@@ -28,6 +28,7 @@ import {
   NodeImage,
   NodeCopyWrapper,
   NodeCopyLabel,
+  NodeCopyHeading,
   NodeCopyDescription,
   NodeCopyLink
 } from './FilterCard.style';
@@ -149,9 +150,13 @@ const FilterCard = ({ data }) => {
                 {label}
               </NodeCopyLabel>
 
-              <Text tag="p" weight="700">
+              <NodeCopyHeading
+                tag={heroFirstNode ? 'h2' : 'p'}
+                $isHero={heroFirstNode}
+                weight="700"
+              >
                 {heading}
-              </Text>
+              </NodeCopyHeading>
 
               <NodeCopyDescription tag="p">
                 {description}

@@ -65,7 +65,7 @@ const Title = styled(Text)`
 `;
 
 const BodyCopy = styled.div`
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
 `;
 
 const DynamicContentWrapper = styled.div`
@@ -191,7 +191,6 @@ const NodeWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 4rem;
-  // gap: 1rem;
 `;
 
 const NodeImageWrapper = styled.div`
@@ -212,25 +211,39 @@ const Node = styled.div`
   align-items: center;
   gap: 1rem;
   margin: 1rem 0;
+  // DEBUG
+  // background-color: orange;
 
   ${({ $isHero }) => ($isHero && css`
     flex-direction: column;
-    flex: 0 0 100%;
     height: fit-content;
     
     ${NodeImageWrapper} {
-      width: 100%;
+      flex: 0 0 100%;
     }
 
     ${NodeCopyWrapper} {
-      width: 100%;
+      flex: 0 0 100%;
+      align-self: center;
     }
   `)}
 
-  @media ${({ theme }) => theme.allBreakpoints('L')} {
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex: 0 0 ${({ $isHero }) => ($isHero ? '100%' : 'calc(50% - 0.5rem)')};
     flex-direction: row;
 
+    ${({ $isHero }) => ($isHero && css`
+      gap: 2rem;
+
+      ${NodeImageWrapper} {
+        flex: 0 0 40%;
+      }
+
+      ${NodeCopyWrapper} {
+        // align-self: center;
+        flex: 0 0 calc(60% - 2rem);
+      }
+    `)}
   }
 `;
 
@@ -246,6 +259,13 @@ const NodeCopyLabel = styled(Text)`
 
 const NodeCopyDescription = styled(Text)`
   margin-bottom: 1.5rem; 
+`;
+
+const NodeCopyHeading = styled(Text)`
+  ${({ $isHero }) => ($isHero && css`
+    font-weight: normal;
+    margin-top: 0;
+  `)}
 `;
 
 // Override 'interesting' styling choices made within the underlying Link
@@ -279,6 +299,7 @@ export {
   NodeImage,
   NodeCopyWrapper,
   NodeCopyLabel,
+  NodeCopyHeading,
   NodeCopyDescription,
   NodeCopyLink
 };
