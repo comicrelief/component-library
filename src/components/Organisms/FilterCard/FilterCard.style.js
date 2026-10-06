@@ -13,6 +13,15 @@ const fadeIn = keyframes`
   to { opacity: 1; }
 `;
 
+// Just for the lovely clean markup:
+const OuterWrapper = styled.div`
+//
+`;
+
+const Title = styled(Text)`
+//
+`;
+
 const Container = styled.div`
   width: 100%;
   height: auto;
@@ -26,10 +35,6 @@ const Container = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding-inline: 2rem;
   }
-`;
-
-const OuterWrapper = styled.div`
-//
 `;
 
 const HeaderWrapper = styled.div`
@@ -69,10 +74,6 @@ const HeaderWrapper = styled.div`
       left: 4rem;
     }
   }
-`;
-
-const Title = styled(Text)`
-//
 `;
 
 const BodyCopy = styled.div`
@@ -244,10 +245,9 @@ const Node = styled.div`
   height: fit-content;
     
   // Hero-only customisations:
-  ${({ $isHero }) => ($isHero
-    ? css`
+  ${({ $isHero }) => ($isHero ? css`
     flex-direction: column;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 
     ${NodeImageWrapper},
     ${NodeCopyWrapper} {
@@ -277,6 +277,7 @@ const Node = styled.div`
 
     ${({ $isHero }) => ($isHero ? css`
       flex-direction: row;
+      margin-bottom: 2rem;
 
       ${NodeImageWrapper} {
         flex: 0 0 calc(40% - var(--s-gap));
@@ -287,8 +288,12 @@ const Node = styled.div`
       }
   ` : css`
     // Remove funky underline from all non-Hero nodes on this breakpoint
-    &&:after {
-      content: none;
+    && {
+      padding-bottom: 0;
+      
+      &:after {
+        content: none;
+      }
     }
   `)}
   }
@@ -337,14 +342,15 @@ const NodeCopyHeading = styled(Text)`
 `;
 
 // Override 'interesting' styling choices made within the underlying Link
-// component to ensure icon doesn't escape constraints of the parent:
+// component in the past to ensure icon doesn't escape constraints of the parent:
+// without accidentally borking anything in other contexts:
 const NodeCopyLink = styled(Link)`
   display: inline-block;
   padding-right: 2rem;
 
   ${LinkIconWrapper} {
-      right: 0;
-      margin: 0;
+    right: 0;
+    margin: 0;
   }
 `;
 

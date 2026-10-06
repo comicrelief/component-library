@@ -432,7 +432,7 @@ const filterCardTestData = {
       ctaText: 'CTA Text: Download',
       url: 'https://www.google.com',
       ctaIcon: 'Download',
-      description: 'Filter Card description, but longer and more latin. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      description: 'Filter Card description, but longer and more latin: Lorem ipsum dolor sit amet.',
       image: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
       imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=10&h=10&fl=progressive&q=80&fm=jpg',
       imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
