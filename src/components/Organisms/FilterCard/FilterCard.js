@@ -5,7 +5,9 @@ import Cross from '../../Atoms/Icons/Cross';
 import Filter from '../../Atoms/Icons/Filter';
 import Undo from '../../Atoms/Icons/Undo';
 import Text from '../../Atoms/Text/Text';
-import { preprocessNodes, getIcon, shouldShowAllNodes } from './_utils/_utils';
+import {
+  preprocessNodes, getIcon, showNodeLimit
+} from './_utils/_utils';
 import Button from '../../Atoms/Button/Button';
 
 import {
@@ -51,8 +53,7 @@ const FilterCard = ({ data }) => {
   const [processedTags, setProcessedTags] = useState(false);
 
   // Determine our display behaviour based on the CMS option
-  const loadAllNodes = shouldShowAllNodes(loadingBehaviour);
-  const [nodeDisplayLimit, setNodeDisplayLimit] = useState(loadAllNodes ? false : 6);
+  const [nodeDisplayLimit, setNodeDisplayLimit] = useState(showNodeLimit(loadingBehaviour));
 
   // Keep track of user interactions:
   const [showFilters, setShowFilters] = useState(true);
@@ -60,7 +61,6 @@ const FilterCard = ({ data }) => {
   const totalResults = useRef(0);
 
   // Add/remove this filter tag from the state array accordingly:
-  //
   // TODO: extrapolate into own file?
   const updateFilters = thisTag => {
     // Cache current state:
@@ -100,26 +100,34 @@ const FilterCard = ({ data }) => {
     }
   }, [isLoading, filterCardNodes]);
 
-  // TODO: extrapolate into own file?
-  const renderCards = () => {
+  // TODO: extrapolate into own file:
+  const renderNodes = () => {
     // Reset counter for every re-render:
     totalResults.current = 0;
 
     return processedNodes.map((thisNode, index) => {
+      // Applies pinned, hero styling to the first node, when the CMS is set to do so:
       const heroFirstNode = index === 0 && firstFilterCardNodeAsHero;
 
-      // Determine whether we display this content or not:
-      const renderNode = (currentFilters.length === 0
-        || currentFilters.some(thisTag => thisNode.tags.includes(thisTag))
-        // TODO: to check with Curtis; when the 'hero' display is chosen,
-        // do we always 'hero' the first node in the CMS list, regardless of filter?
-        // Or do we 'hero' the first node in the filtered list?
-        // If the former, do we update the result total to include this or not?
-        || heroFirstNode)
-        // Only render as many nodes as we're allowed to:
-        && index < nodeDisplayLimit;
+      // Check if we SHOULD be limiting nodes before checking the current index against the limit:
+      const belowLimit = nodeDisplayLimit === false
+      || (nodeDisplayLimit && index < nodeDisplayLimit);
 
-      if (renderNode) {
+      // We can render this node when:
+      const renderThisNode = (
+        // No filters are active...
+        currentFilters.length === 0
+        // Or when this node includes tags that are being filtered for...
+        || currentFilters.some(thisTag => thisNode.tags.includes(thisTag))
+        // Or if we're 'hero'-ing it, which bypasses filters (see note below)...
+        || heroFirstNode);
+
+      // TODO: to check with Curtis; when the 'hero' display is chosen,
+      // do we always 'hero' the first node in the CMS list, regardless of filter?
+      // Or do we 'hero' the first node in the filtered list?
+      // If the former, do we update the result total to include this or not?
+
+      if (renderThisNode && belowLimit) {
         // Increment the counter for every node we've got a tag match for:
         totalResults.current += 1;
 
@@ -269,14 +277,15 @@ const FilterCard = ({ data }) => {
         {/* And render the content once it's fully processed */}
         {(processedTags && processedNodes) && (
           <NodeWrapper>
-            {renderCards()}
+            {renderNodes()}
           </NodeWrapper>
         )}
 
-        {/* Only show Loader when appropriate */}
-        {(!loadAllNodes && nodeDisplayLimit && nodeDisplayLimit < processedNodes.length) && (
+        {/* Only show Loader when approved to do so, and we've still got more nodes to display */}
+        {(nodeDisplayLimit && nodeDisplayLimit < processedNodes.length) && (
           <ShowMoreButtonWrapper>
             <Button
+            // TODO: check incremement amount
               onClick={() => setNodeDisplayLimit(nodeDisplayLimit + 1)}
             >
               Show more

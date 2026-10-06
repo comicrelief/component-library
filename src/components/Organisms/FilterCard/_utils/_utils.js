@@ -51,4 +51,17 @@ const shouldShowAllNodes = optionLabel => {
   }
 };
 
-export { preprocessNodes, getIcon, shouldShowAllNodes };
+// Over-engineered to allow us to easily add more options in the future:
+const showNodeLimit = optionLabel => {
+  switch (optionLabel) {
+    case 'Load 6 cards at a time + Hero Node (if set)':
+      return 6;
+    case 'Load all cards at once':
+    default:
+      return false;
+  }
+};
+
+export {
+  preprocessNodes, getIcon, shouldShowAllNodes, showNodeLimit
+};

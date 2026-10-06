@@ -6,7 +6,7 @@ import { filterCardTestData, filterCardTestDataHero, filterCardTestDataExtra } f
 export default function FilterCardExample() {
   return (
     <>
-      {/* <ExampleContainer $bg="#F4F3F5" style={{ padding: 0 }}>
+      <ExampleContainer $bg="#F4F3F5" style={{ padding: 0 }}>
         <FilterCard
           data={filterCardTestData}
         />
@@ -16,7 +16,7 @@ export default function FilterCardExample() {
         <FilterCard
           data={filterCardTestDataHero}
         />
-      </ExampleContainer> */}
+      </ExampleContainer>
 
       <ExampleContainer $bg="#F4F3F5" style={{ padding: 0 }}>
         <FilterCard
