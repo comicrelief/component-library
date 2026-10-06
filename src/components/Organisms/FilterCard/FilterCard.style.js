@@ -196,6 +196,7 @@ const NodeWrapper = styled.div`
 
 const NodeImageWrapper = styled.div`
   flex: 0 0 40%;
+  aspect-ratio: 1;
 `;
 
 const NodeCopyWrapper = styled.div`
