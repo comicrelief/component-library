@@ -114,8 +114,10 @@ const FilterCard = ({ data }) => {
       // Determine whether we display this content or not:
       const renderNode = currentFilters.length === 0
         || currentFilters.some(thisTag => thisNode.tags.includes(thisTag))
-        // TODO: is this correct; do we 'pin' the hero node always?
-        // Or do we hero the first node in the LIST?
+        // TODO: to check with Curtis; when the 'hero' display is chosen,
+        // do we always 'hero' the first node in the CMS list, regardless of filter?
+        // Or do we 'hero' the first node in the filtered list?
+        // If the former, do we update the result total to include this or not?
         || heroFirstNode;
 
       if (renderNode) {
@@ -180,6 +182,8 @@ const FilterCard = ({ data }) => {
     });
   };
 
+  const currentTotal = `${totalResults.current} ${totalResults.current === 1 ? ' result' : 'results'}`;
+
   return (
     <Container
       $paddingAbove={paddingAbove}
@@ -193,11 +197,11 @@ const FilterCard = ({ data }) => {
             {title}
           </Title>
 
-          {/* TODO: suss this properly */}
           <BodyCopy>
             {body.raw}
           </BodyCopy>
 
+          {/* Only render the controls once the content's been fully processed: */}
           {(processedTags && processedNodes) ? (
             <DynamicContentWrapper>
               <ControlsWrapper>
@@ -226,9 +230,7 @@ const FilterCard = ({ data }) => {
 
                 <ResultsWrapper>
                   <Text tag="span">
-                    {totalResults.current}
-                    {' '}
-                    {totalResults.current === 1 ? 'result' : 'results'}
+                    { currentTotal}
                   </Text>
                 </ResultsWrapper>
               </ControlsWrapper>
@@ -249,7 +251,7 @@ const FilterCard = ({ data }) => {
                       iconLeft
                       icon={isSelected ? selectedIcon : unselectedIcon}
                       onClick={() => { updateFilters(tag); }}
-                      // Force a re-render for our flash-reducing icon fade-in animation
+                      // Forces a re-render to trigger our flash-reducing, icon fade in:
                       iconKey={`${isSelected}`}
                     >
                       {tag}
@@ -259,10 +261,12 @@ const FilterCard = ({ data }) => {
               </FilterButtonsWrapper>
             </DynamicContentWrapper>
           )
+            // Otherwise, shown the nifty loader:
             : <PulseLoader color="black" style={{ textAlign: 'center', display: 'block' }} />
           }
         </HeaderWrapper>
 
+        {/* And render the content once it's fully processed */}
         {(processedTags && processedNodes) && (
           <NodeWrapper>
             {renderCards()}

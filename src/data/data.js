@@ -351,7 +351,7 @@ const ButtonIconSvgPath = 'https://images.ctfassets.net/0p265iutoxgq/3GaahqcCBaX
 const filterCardTestData = {
   id: '8c17eb9e-1435-5a8f-9d18-426c03c35e9e',
   __typename: 'ContentfulFilterCard',
-  title: 'Your fundraising resources',
+  title: 'Your fundraising resources: STANDARD',
   paddingAbove: '2rem',
   paddingBelow: '2rem',
   pageBackgroundColour: 'grey_light',
@@ -546,7 +546,379 @@ const filterCardTestData = {
 
 const filterCardTestDataHero = {
   ...filterCardTestData,
+  title: 'Your fundraising resources: HERO',
   firstFilterCardNodeAsHero: true
+};
+
+const filterCardTestDataExtra = {
+  ...filterCardTestData,
+  // firstFilterCardNodeAsHero: true,
+  title: 'Your fundraising resources: LOADER',
+  // Concatenate 8 more examples to illustrate loader functionality:
+  filterCardNodes: filterCardTestData.filterCardNodes.concat(
+    [
+      {
+        id: '09da5344-0104-5b36-833f-83e042cb4068-2',
+        __typename: 'ContentfulFilterCardNode',
+        title: 'Filter card 1 (tag 1)',
+        label: 'Filter Card label',
+        heading: 'Filter Card heading',
+        ctaText: 'CTA Text: Download',
+        url: 'https://www.google.com',
+        ctaIcon: 'Download',
+        description: 'Filter Card description',
+        image: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
+        imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=10&h=10&fl=progressive&q=80&fm=jpg',
+        imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
+        imageAltText: 'Test 1-to-1 image description',
+        filterTags: [
+          {
+            tag: 'Tag 1',
+            title: 'Tag 1',
+            filterIconSelected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+              }
+            },
+            filterIconUnselected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+              }
+            }
+          }
+        ]
+      },
+      {
+        id: 'e80379c0-a0ea-565c-b91a-65d874554d84-2',
+        __typename: 'ContentfulFilterCardNode',
+        title: 'Filter card 2 (tag 2, no description, External link)',
+        label: 'Filter Card label',
+        heading: 'Filter Card heading',
+        ctaText: 'CTA Text: External URL',
+        url: 'https://www.google.com',
+        ctaIcon: 'External URL',
+        description: null,
+        image: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
+        imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=10&h=10&fl=progressive&q=80&fm=jpg',
+        imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
+        imageAltText: 'Test 1-to-1 image description',
+        filterTags: [
+          {
+            tag: 'Tag 2',
+            title: 'Tag 2',
+            filterIconSelected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+              }
+            },
+            filterIconUnselected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+              }
+            }
+          }
+        ]
+      },
+      {
+        id: 'e7c5c130-ae26-5ead-abef-c908bba5bd18-2',
+        __typename: 'ContentfulFilterCardNode',
+        title: 'Filter card 3 (tags 1, 2, 3 + 4)',
+        label: 'Filter Card label',
+        heading: 'Filter Card heading',
+        ctaText: 'CTA Text: Download',
+        url: 'https://www.google.com',
+        ctaIcon: 'Download',
+        description: 'Filter Card description, but longer and more latin: Lorem ipsum dolor sit amet.',
+        image: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
+        imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=10&h=10&fl=progressive&q=80&fm=jpg',
+        imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
+        imageAltText: 'Test 1-to-1 image description',
+        filterTags: [
+          {
+            tag: 'Tag 1',
+            title: 'Tag 1',
+            filterIconSelected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+              }
+            },
+            filterIconUnselected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+              }
+            }
+          },
+          {
+            tag: 'Tag 2',
+            title: 'Tag 2',
+            filterIconSelected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+              }
+            },
+            filterIconUnselected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+              }
+            }
+          },
+          {
+            tag: 'Tag 3',
+            title: 'Tag 3',
+            filterIconSelected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+              }
+            },
+            filterIconUnselected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+              }
+            }
+          },
+          {
+            tag: 'Tag 4',
+            title: 'Tag 4',
+            filterIconSelected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+              }
+            },
+            filterIconUnselected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+              }
+            }
+          }
+        ]
+      },
+      {
+        id: '469fa12c-e425-5372-9899-ba69924d5603-2',
+        __typename: 'ContentfulFilterCardNode',
+        title: 'Filter card 4 (tags 1 + 4)',
+        label: 'Filter Card label',
+        heading: 'Filter Card heading (no description)',
+        ctaText: 'CTA Text: no icon',
+        url: 'https://www.google.com',
+        ctaIcon: null,
+        description: null,
+        image: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
+        imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=10&h=10&fl=progressive&q=80&fm=jpg',
+        imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
+        imageAltText: 'Test 1-to-1 image description',
+        filterTags: [
+          {
+            tag: 'Tag 1',
+            title: 'Tag 1',
+            filterIconSelected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+              }
+            },
+            filterIconUnselected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+              }
+            }
+          },
+          {
+            tag: 'Tag 4',
+            title: 'Tag 4',
+            filterIconSelected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+              }
+            },
+            filterIconUnselected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+              }
+            }
+          }
+        ]
+      },
+      {
+        id: '09da5344-0104-5b36-833f-83e042cb4068-3',
+        __typename: 'ContentfulFilterCardNode',
+        title: 'Filter card 1 (tag 1)',
+        label: 'Filter Card label',
+        heading: 'Filter Card heading',
+        ctaText: 'CTA Text: Download',
+        url: 'https://www.google.com',
+        ctaIcon: 'Download',
+        description: 'Filter Card description',
+        image: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
+        imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=10&h=10&fl=progressive&q=80&fm=jpg',
+        imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
+        imageAltText: 'Test 1-to-1 image description',
+        filterTags: [
+          {
+            tag: 'Tag 1',
+            title: 'Tag 1',
+            filterIconSelected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+              }
+            },
+            filterIconUnselected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+              }
+            }
+          }
+        ]
+      },
+      {
+        id: 'e80379c0-a0ea-565c-b91a-65d874554d84-3',
+        __typename: 'ContentfulFilterCardNode',
+        title: 'Filter card 2 (tag 2, no description, External link)',
+        label: 'Filter Card label',
+        heading: 'Filter Card heading',
+        ctaText: 'CTA Text: External URL',
+        url: 'https://www.google.com',
+        ctaIcon: 'External URL',
+        description: null,
+        image: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
+        imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=10&h=10&fl=progressive&q=80&fm=jpg',
+        imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
+        imageAltText: 'Test 1-to-1 image description',
+        filterTags: [
+          {
+            tag: 'Tag 2',
+            title: 'Tag 2',
+            filterIconSelected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+              }
+            },
+            filterIconUnselected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+              }
+            }
+          }
+        ]
+      },
+      {
+        id: 'e7c5c130-ae26-5ead-abef-c908bba5bd18-3',
+        __typename: 'ContentfulFilterCardNode',
+        title: 'Filter card 3 (tags 1, 2, 3 + 4)',
+        label: 'Filter Card label',
+        heading: 'Filter Card heading',
+        ctaText: 'CTA Text: Download',
+        url: 'https://www.google.com',
+        ctaIcon: 'Download',
+        description: 'Filter Card description, but longer and more latin: Lorem ipsum dolor sit amet.',
+        image: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
+        imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=10&h=10&fl=progressive&q=80&fm=jpg',
+        imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
+        imageAltText: 'Test 1-to-1 image description',
+        filterTags: [
+          {
+            tag: 'Tag 1',
+            title: 'Tag 1',
+            filterIconSelected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+              }
+            },
+            filterIconUnselected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+              }
+            }
+          },
+          {
+            tag: 'Tag 2',
+            title: 'Tag 2',
+            filterIconSelected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+              }
+            },
+            filterIconUnselected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+              }
+            }
+          },
+          {
+            tag: 'Tag 3',
+            title: 'Tag 3',
+            filterIconSelected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+              }
+            },
+            filterIconUnselected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+              }
+            }
+          },
+          {
+            tag: 'Tag 4',
+            title: 'Tag 4',
+            filterIconSelected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+              }
+            },
+            filterIconUnselected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+              }
+            }
+          }
+        ]
+      },
+      {
+        id: '469fa12c-e425-5372-9899-ba69924d5603-3',
+        __typename: 'ContentfulFilterCardNode',
+        title: 'Filter card 4 (tags 1 + 4)',
+        label: 'Filter Card label',
+        heading: 'Filter Card heading (no description)',
+        ctaText: 'CTA Text: no icon',
+        url: 'https://www.google.com',
+        ctaIcon: null,
+        description: null,
+        image: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
+        imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=10&h=10&fl=progressive&q=80&fm=jpg',
+        imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
+        imageAltText: 'Test 1-to-1 image description',
+        filterTags: [
+          {
+            tag: 'Tag 1',
+            title: 'Tag 1',
+            filterIconSelected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+              }
+            },
+            filterIconUnselected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+              }
+            }
+          },
+          {
+            tag: 'Tag 4',
+            title: 'Tag 4',
+            filterIconSelected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
+              }
+            },
+            filterIconUnselected: {
+              file: {
+                url: '//images.ctfassets.net/zsfivwzfgl3t/ZK8zc9MK3KyawoCRy86fl/cdea45ddfcabb6660acaab214e558e48/Children--black.svg'
+              }
+            }
+          }
+        ]
+      }
+    ]
+  )
 };
 
 export {
@@ -555,5 +927,5 @@ export {
   carouselItemsIncomplete, carouselItemsMinimal,
   RichtextCarouselItems, RichtextCarouselItemsWithPadding,
   ButtonIconImgPath, ButtonIconSvgPath, ButtonIconImagePath2,
-  filterCardTestData, filterCardTestDataHero
+  filterCardTestData, filterCardTestDataHero, filterCardTestDataExtra
 };
