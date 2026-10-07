@@ -58,7 +58,8 @@ const MoneybuysCarousel = ({
     pauseOnHover: true,
     pauseOnFocus: true,
     perPage: 1,
-    rewind: true
+    rewind: true,
+    padding: { left: '1rem', right: '1rem' }
   }), [hasMultipleSlides, shouldAutoplay]);
 
   const goToMatchedSlide = useCallback(splideInstance => {

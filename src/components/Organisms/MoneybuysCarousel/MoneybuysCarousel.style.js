@@ -8,11 +8,7 @@ const Wrapper = styled.div`
 const CarouselCard = styled.div`
   position: relative;
   width: 100%;
-  background-color: ${({ theme }) => theme.color('white')};
-  border: 1px solid ${({ theme }) => theme.color('grey')};
-  border-radius: 10px;
-  padding: ${spacing('l')} ${spacing('md')};
-  box-sizing: border-box;
+  margin-bottom: ${spacing('l')};
 
   .splide {
     position: relative;
@@ -21,6 +17,14 @@ const CarouselCard = styled.div`
 
   .splide__track {
     overflow: hidden;
+    background-color: ${({ theme }) => theme.color('white')};
+    border: 1px solid ${({ theme }) => theme.color('grey_medium')};
+    border-radius: 10px;
+    // Can only set vertical padding on the track; 
+    // inline padding has to be set via splide's padding option.
+    padding-top: ${spacing('l')};
+    padding-bottom: ${spacing('l')};
+    box-sizing: border-box;
   }
 
   .splide__slide {
@@ -42,9 +46,10 @@ const CarouselCard = styled.div`
   button.splide__arrow {
     pointer-events: auto;
     background-color: ${({ theme }) => theme.color('grey_light')};
+    border: 1px solid ${({ theme }) => theme.color('grey_medium')};
     opacity: 1;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
     transform: translateY(-50%);
 
     &:disabled {
@@ -53,8 +58,8 @@ const CarouselCard = styled.div`
 
     svg {
       fill: ${({ theme }) => theme.color('black')};
-      height: 0.85rem;
-      width: 0.85rem;
+      height: 0.8rem;
+      width: 0.8rem;
     }
 
     &:hover:not(:disabled) {
@@ -63,11 +68,11 @@ const CarouselCard = styled.div`
   }
 
   .splide__arrow--prev {
-    left: 0;
+    left: 1rem;
   }
 
   .splide__arrow--next {
-    right: 0;
+    right: 1rem;
   }
 
   .splide__pagination {
@@ -77,7 +82,14 @@ const CarouselCard = styled.div`
     right: 0;
     padding: 0;
     margin: 0;
+    background: transparent;
     pointer-events: auto;
+    
+    & li > button {
+      height: 6px;
+      width: 6px;
+      }
+    }
   }
 
   .splide__pagination__page {
@@ -105,7 +117,7 @@ const SlideCopy = styled.p`
   padding: 0 4.5rem;
   font-size: ${({ theme }) => theme.fontSize('s')};
   font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
-  line-height: 1.4;
+  line-height: 20px;
   color: ${({ theme }) => theme.color('black')};
 
   strong {
