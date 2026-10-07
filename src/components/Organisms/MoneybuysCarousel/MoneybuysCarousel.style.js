@@ -52,17 +52,13 @@ const CarouselCard = styled.div`
     height: 1.5rem;
     transform: translateY(-50%);
 
-    &:disabled {
-      opacity: 0.35;
-    }
-
     svg {
       fill: ${({ theme }) => theme.color('black')};
       height: 0.8rem;
       width: 0.8rem;
     }
 
-    &:hover:not(:disabled) {
+    &:hover {
       background-color: ${({ theme }) => theme.color('grey_3')};
     }
   }
