@@ -7,9 +7,9 @@ const Grid = styled.div`
   width: 100%;
   margin: 0 auto;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
   @media ${crTheme.allBreakpoints('M')} {
-    gap: 16px;
+    gap: 1rem;
   }
 `;
 
