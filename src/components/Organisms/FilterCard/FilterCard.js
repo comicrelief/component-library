@@ -282,7 +282,7 @@ const FilterCard = ({ data }) => {
         )}
 
         {/* Only show Loader when approved to do so, and we've still got more nodes to display */}
-        {(nodeDisplayLimit && nodeDisplayLimit < processedNodes.length) && (
+        {(nodeDisplayLimit > 0 && nodeDisplayLimit < processedNodes.length) && (
           <ShowMoreButtonWrapper>
             <Button
             // TODO: check incremement amount
