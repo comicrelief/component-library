@@ -1,6 +1,8 @@
 import * as yup from 'yup';
 import { merge } from 'lodash';
 
+const phoneRegex = /^(((((\+44)|(0044))\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((((\+44)|(0044))\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((((\+44)|(0044))\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\\#(\d{4}|\d{3}))?$/;
+
 const setInitialValues = overrideValues => {
   const defaultValues = {
     mp_email: '',
@@ -60,8 +62,6 @@ const buildValidationSchema = overrideOptions => {
 
   // Override with any custom options supplied
   const mpValidationOptions = merge(defaultOptions, overrideOptions);
-
-  const phoneRegex = /^(((((\+44)|(0044))\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((((\+44)|(0044))\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((((\+44)|(0044))\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\\#(\d{4}|\d{3}))?$/;
 
   const mpValidationFields = {
     mp_email: yup.string()
