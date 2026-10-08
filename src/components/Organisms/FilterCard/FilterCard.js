@@ -5,9 +5,8 @@ import Cross from '../../Atoms/Icons/Cross';
 import Filter from '../../Atoms/Icons/Filter';
 import Undo from '../../Atoms/Icons/Undo';
 import Text from '../../Atoms/Text/Text';
-import {
-  preprocessNodes, getIcon, showNodeLimit
-} from './_utils/_utils';
+import FilterCardNodes from './FilterCardNodes';
+import { preprocessNodes, showNodeLimit } from './_utils/_utils';
 import Button from '../../Atoms/Button/Button';
 
 import {
@@ -23,16 +22,7 @@ import {
   FilterButtonsWrapper,
   FilterButton,
   NodeWrapper,
-  Node,
-  NodeImageWrapper,
-  NodeImage,
-  NodeCopyWrapper,
-  NodeCopyLabel,
-  NodeCopyHeading,
-  NodeCopyDescription,
-  NodeCopyLink,
   ShowMoreButtonWrapper
-
 } from './FilterCard.style';
 
 const FilterCard = ({ data }) => {
@@ -59,6 +49,14 @@ const FilterCard = ({ data }) => {
   const [showFilters, setShowFilters] = useState(true);
   const [currentFilters, setCurrentFilters] = useState([]);
   const totalResults = useRef(0);
+
+  const updateTotalResult = increment => {
+    if (!increment) {
+      totalResults.current = 0;
+    } else {
+      totalResults.current += increment;
+    }
+  };
 
   // Add/remove this filter tag from the state array accordingly:
   // TODO: extrapolate into own file?
@@ -99,95 +97,6 @@ const FilterCard = ({ data }) => {
       }
     }
   }, [isLoading, filterCardNodes]);
-
-  // TODO: extrapolate into own file?
-  const renderNodes = () => {
-    // Reset counter for every re-render:
-    totalResults.current = 0;
-
-    return processedNodes.map((thisNode, index) => {
-      // Applies pinned, hero styling to the first node, when the CMS is set to do so:
-      const heroFirstNode = index === 0 && firstFilterCardNodeAsHero;
-
-      // Check to see if we've even got a display limit before comparing to the current index:
-      const underLimit = nodeDisplayLimit === 0
-      || (nodeDisplayLimit > 0 && index < nodeDisplayLimit);
-
-      // We can render this node when:
-      const renderThisNode = (
-        // No filters are active...
-        currentFilters.length === 0
-        // Or when this node includes tags that are being filtered for...
-        || currentFilters.some(thisTag => thisNode.tags.includes(thisTag))
-        // Or if we're 'hero'-ing it, which bypasses filters (see note below)...
-        || heroFirstNode);
-
-      // TODO: to check with Curtis; when the 'hero' display is chosen,
-      // do we always 'hero' the first node in the CMS list, regardless of filter?
-      // Or do we 'hero' the first node in the filtered list?
-      // If the former, do we update the result total to include this or not?
-
-      if (renderThisNode && underLimit) {
-        // Increment the counter for every node we've got a tag match for:
-        totalResults.current += 1;
-
-        const {
-          id, label, heading, description,
-          image, imageLow, imageSet, imageAltText,
-          url, ctaText, ctaIcon
-        } = thisNode;
-
-        return (
-          <Node
-            key={id}
-            $isHero={heroFirstNode}
-          >
-            <NodeImageWrapper>
-              <NodeImage
-                image={image}
-                images={imageSet}
-                imageLow={imageLow}
-                objectFit="cover"
-                width="100%"
-                height="100%"
-                alt={imageAltText}
-              />
-            </NodeImageWrapper>
-
-            <NodeCopyWrapper>
-              <NodeCopyLabel tag="p" color="grey" weight="500">
-                {label}
-              </NodeCopyLabel>
-
-              <NodeCopyHeading
-                tag={heroFirstNode ? 'h2' : 'p'}
-                $isHero={heroFirstNode}
-                weight="700"
-              >
-                {heading}
-              </NodeCopyHeading>
-
-              <NodeCopyDescription tag="p">
-                {description}
-              </NodeCopyDescription>
-
-              <Text tag="p">
-                <NodeCopyLink
-                  href={url}
-                  $underline
-                  target="blank"
-                  icon={getIcon(ctaIcon)}
-                >
-                  {ctaText}
-                </NodeCopyLink>
-              </Text>
-            </NodeCopyWrapper>
-          </Node>
-        );
-      }
-      return null;
-    });
-  };
 
   const currentTotal = `${totalResults.current} ${totalResults.current === 1 ? ' result' : 'results'}`;
 
@@ -277,7 +186,13 @@ const FilterCard = ({ data }) => {
         {/* And render the content once it's fully processed */}
         {(processedTags && processedNodes) && (
           <NodeWrapper>
-            {renderNodes()}
+            <FilterCardNodes
+              updateTotalResult={updateTotalResult}
+              processedNodes={processedNodes}
+              firstFilterCardNodeAsHero={firstFilterCardNodeAsHero}
+              nodeDisplayLimit={nodeDisplayLimit}
+              currentFilters={currentFilters}
+            />
           </NodeWrapper>
         )}
 
