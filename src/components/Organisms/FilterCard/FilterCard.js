@@ -48,14 +48,21 @@ const FilterCard = ({ data }) => {
   // Keep track of user interactions:
   const [showFilters, setShowFilters] = useState(true);
   const [currentFilters, setCurrentFilters] = useState([]);
-  const totalResults = useRef(0);
 
+  // Troubleshooting...
+  const totalResults = useRef(0);
+  const [testState, setTestState] = useState(0);
+
+  // TODO: does this make *any* sense?
   const updateTotalResult = increment => {
     if (!increment) {
       totalResults.current = 0;
     } else {
       totalResults.current += increment;
     }
+
+    // Update our local state to trigger a single re-render:
+    setTestState(totalResults.current);
   };
 
   // Add/remove this filter tag from the state array accordingly:
@@ -98,7 +105,7 @@ const FilterCard = ({ data }) => {
     }
   }, [isLoading, filterCardNodes]);
 
-  const currentTotal = `${totalResults.current} ${totalResults.current === 1 ? ' result' : 'results'}`;
+  const currentTotal = `${testState} ${testState === 1 ? ' result' : 'results'}`;
 
   return (
     <Container
