@@ -36,7 +36,7 @@ const CheckboxWrapper = styled.div`
 
 const AssociatedFieldsName = styled.span`
   padding-left: calc(24px + 1rem);
-  line-height: 30px;
+  line-height: 24px;
   background-repeat: no-repeat;
   background-position: left center;
 
@@ -68,6 +68,9 @@ const FormField = styled.div`${({ theme, $isErroring }) => css`
   border-radius: 0.5rem;
   border: 1px solid ${$isErroring ? theme.color('red') : theme.color('grey')};
   color: ${$isErroring ? theme.color('red') : theme.color('black')};
+  span {
+    background-size: contain;
+  }
 
   ${$isErroring && css`
     ${AssociatedFieldsName} {
