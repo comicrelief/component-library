@@ -22,7 +22,7 @@ const MarketingPreferencesDS = ({
   formContext = null,
   ...rest
 }) => {
-  const { formState: { errors }, control } = formContext;
+  const { formState: { errors }, control, getValues } = formContext;
 
   // For brevity
   const emailChoice = useWatch({ control, name: 'mp_permissionEmail', defaultValue: null });
@@ -52,12 +52,26 @@ const MarketingPreferencesDS = ({
     return errors.mp_address1 || errors.mp_address2
     || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
   };
-  /* Only show the field if config hasn't hidden it (to pass in parent values)
-    or if a choice has been made */
-  const showEmailField = !mp_permissionEmail.hideInput && (emailChoice || errors.mp_email);
-  const showSMSField = !mp_permissionSMS.hideInput && (smsChoice || errors.mp_mobile);
-  const showPhoneField = !mp_permissionPhone.hideInput && (phoneChoice || errors.mp_phone);
-  const showPostFields = !mp_permissionPost.hideInput && (postChoice || isAddressErroring());
+
+  const hasStoredAddress = () => [
+    'mp_address1', 'mp_address2', 'mp_address3', 'mp_town', 'mp_country', 'mp_postcode'
+  ].some(field => getValues(field));
+
+  /* Only show the field if config hasn't hidden it (to pass in parent values),
+    if a choice has been made, or if the form already has a value in redux (e.g. returning
+    back to the page). */
+  const showEmailField = !mp_permissionEmail.hideInput && (
+    emailChoice || errors.mp_email || getValues('mp_email')
+  );
+  const showSMSField = !mp_permissionSMS.hideInput && (
+    smsChoice || errors.mp_mobile || getValues('mp_mobile')
+  );
+  const showPhoneField = !mp_permissionPhone.hideInput && (
+    phoneChoice || errors.mp_phone || getValues('mp_phone')
+  );
+  const showPostFields = !mp_permissionPost.hideInput && (
+    postChoice || isAddressErroring() || hasStoredAddress()
+  );
 
   const customId = id ? `marketing-preferences--${id}` : 'marketing-preferences';
 
