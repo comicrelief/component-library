@@ -350,7 +350,6 @@ const ButtonIconSvgPath = 'https://images.ctfassets.net/0p265iutoxgq/3GaahqcCBaX
 
 const filterCardTestData = {
   id: '8c17eb9e-1435-5a8f-9d18-426c03c35e9e',
-  __typename: 'ContentfulFilterCard',
   title: 'Your fundraising resources: STANDARD',
   paddingAbove: '2rem',
   paddingBelow: '2rem',
@@ -363,10 +362,10 @@ const filterCardTestData = {
   filterCardNodes: [
     {
       id: '09da5344-0104-5b36-833f-83e042cb4068',
-      __typename: 'ContentfulFilterCardNode',
-      title: 'Filter card 1 (tag 1)',
+
+      title: 'Filter card 1 (Tag A)',
       label: 'Filter Card label',
-      heading: 'Filter Card heading',
+      heading: 'Filter Card heading (tag A)',
       ctaText: 'CTA Text: Download',
       url: 'https://www.google.com',
       ctaIcon: 'Download',
@@ -377,8 +376,8 @@ const filterCardTestData = {
       imageAltText: 'Test 1-to-1 image description',
       filterTags: [
         {
-          tag: 'Tag 1',
-          title: 'Tag 1',
+          tag: 'Tag A',
+          title: 'Tag A',
           filterIconSelected: {
             file: {
               url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -394,10 +393,9 @@ const filterCardTestData = {
     },
     {
       id: 'e80379c0-a0ea-565c-b91a-65d874554d84',
-      __typename: 'ContentfulFilterCardNode',
-      title: 'Filter card 2 (tag 2, no description, External link)',
+      title: 'Filter card 2 (Tag B, no description, External link)',
       label: 'Filter Card label',
-      heading: 'Filter Card heading',
+      heading: 'Filter Card heading (tag B, no description)',
       ctaText: 'CTA Text: External URL',
       url: 'https://www.google.com',
       ctaIcon: 'External URL',
@@ -408,8 +406,8 @@ const filterCardTestData = {
       imageAltText: 'Test 1-to-1 image description',
       filterTags: [
         {
-          tag: 'Tag 2',
-          title: 'Tag 2',
+          tag: 'Tag B',
+          title: 'Tag B',
           filterIconSelected: {
             file: {
               url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -425,22 +423,22 @@ const filterCardTestData = {
     },
     {
       id: 'e7c5c130-ae26-5ead-abef-c908bba5bd18',
-      __typename: 'ContentfulFilterCardNode',
-      title: 'Filter card 3 (tags 1, 2, 3 + 4)',
+
+      title: 'Filter card 3 (tags A, B, C & D)',
       label: 'Filter Card label',
-      heading: 'Filter Card heading',
+      heading: 'Filter Card heading (tags A, B, C & D)',
       ctaText: 'CTA Text: Download',
       url: 'https://www.google.com',
       ctaIcon: 'Download',
-      description: 'Filter Card description, but longer and more latin: Lorem ipsum dolor sit amet.',
+      description: 'Filter Card description, but longer & more latin: Lorem ipsum dolor sit amet.',
       image: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg',
       imageLow: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=10&h=10&fl=progressive&q=80&fm=jpg',
       imageSet: 'https://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=750&h=750&fl=progressive&q=80&fm=jpg 750w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1080&h=1080&fl=progressive&q=80&fm=jpg 1080w,\nhttps://images.ctfassets.net/zsfivwzfgl3t/19gVltIYtQiacZFN2kUbsz/94e90bf01e30dc576d60adc2cc0ed40f/FilterCardImgLarge.png?w=1200&h=1200&fl=progressive&q=80&fm=jpg 1200w',
       imageAltText: 'Test 1-to-1 image description',
       filterTags: [
         {
-          tag: 'Tag 1',
-          title: 'Tag 1',
+          tag: 'Tag A',
+          title: 'Tag A',
           filterIconSelected: {
             file: {
               url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -453,8 +451,8 @@ const filterCardTestData = {
           }
         },
         {
-          tag: 'Tag 2',
-          title: 'Tag 2',
+          tag: 'Tag B',
+          title: 'Tag B',
           filterIconSelected: {
             file: {
               url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -467,8 +465,8 @@ const filterCardTestData = {
           }
         },
         {
-          tag: 'Tag 3',
-          title: 'Tag 3',
+          tag: 'Tag C',
+          title: 'Tag C',
           filterIconSelected: {
             file: {
               url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -481,8 +479,8 @@ const filterCardTestData = {
           }
         },
         {
-          tag: 'Tag 4',
-          title: 'Tag 4',
+          tag: 'Tag D',
+          title: 'Tag D',
           filterIconSelected: {
             file: {
               url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -498,10 +496,9 @@ const filterCardTestData = {
     },
     {
       id: '469fa12c-e425-5372-9899-ba69924d5603',
-      __typename: 'ContentfulFilterCardNode',
-      title: 'Filter card 4 (tags 1 + 4)',
+      title: 'Filter card 4 (tags A & D)',
       label: 'Filter Card label',
-      heading: 'Filter Card heading (no description)',
+      heading: 'Filter Card heading (tags A & D, no description)',
       ctaText: 'CTA Text: no icon',
       url: 'https://www.google.com',
       ctaIcon: null,
@@ -512,8 +509,8 @@ const filterCardTestData = {
       imageAltText: 'Test 1-to-1 image description',
       filterTags: [
         {
-          tag: 'Tag 1',
-          title: 'Tag 1',
+          tag: 'Tag A',
+          title: 'Tag A',
           filterIconSelected: {
             file: {
               url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -526,8 +523,8 @@ const filterCardTestData = {
           }
         },
         {
-          tag: 'Tag 4',
-          title: 'Tag 4',
+          tag: 'Tag D',
+          title: 'Tag D',
           filterIconSelected: {
             file: {
               url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -560,10 +557,10 @@ const filterCardTestDataExtra = {
     [
       {
         id: '09da5344-0104-5b36-833f-83e042cb4068-2',
-        __typename: 'ContentfulFilterCardNode',
-        title: 'Filter card 1 (tag 1)',
+
+        title: 'Filter card 1 (Tag A)',
         label: 'Filter Card label',
-        heading: 'Filter Card heading TWO',
+        heading: 'Filter Card heading (tag A) TWO',
         ctaText: 'CTA Text: Download',
         url: 'https://www.google.com',
         ctaIcon: 'Download',
@@ -574,8 +571,8 @@ const filterCardTestDataExtra = {
         imageAltText: 'Test 1-to-1 image description',
         filterTags: [
           {
-            tag: 'Tag 1',
-            title: 'Tag 1',
+            tag: 'Tag A',
+            title: 'Tag A',
             filterIconSelected: {
               file: {
                 url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -591,10 +588,9 @@ const filterCardTestDataExtra = {
       },
       {
         id: 'e80379c0-a0ea-565c-b91a-65d874554d84-2',
-        __typename: 'ContentfulFilterCardNode',
-        title: 'Filter card 2 (tag 2, no description, External link)',
+        title: 'Filter card 2 (Tag B, no description, External link)',
         label: 'Filter Card label',
-        heading: 'Filter Card heading TWO',
+        heading: 'Filter Card heading (tag B) TWO',
         ctaText: 'CTA Text: External URL',
         url: 'https://www.google.com',
         ctaIcon: 'External URL',
@@ -605,8 +601,8 @@ const filterCardTestDataExtra = {
         imageAltText: 'Test 1-to-1 image description',
         filterTags: [
           {
-            tag: 'Tag 2',
-            title: 'Tag 2',
+            tag: 'Tag B',
+            title: 'Tag B',
             filterIconSelected: {
               file: {
                 url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -622,10 +618,9 @@ const filterCardTestDataExtra = {
       },
       {
         id: 'e7c5c130-ae26-5ead-abef-c908bba5bd18-2',
-        __typename: 'ContentfulFilterCardNode',
-        title: 'Filter card 3 (tags 1, 2, 3 + 4)',
+        title: 'Filter card 3 (tags A, B, C & D)',
         label: 'Filter Card label',
-        heading: 'Filter Card heading TWO',
+        heading: 'Filter Card heading (tags A, B, C & D) TWO',
         ctaText: 'CTA Text: Download',
         url: 'https://www.google.com',
         ctaIcon: 'Download',
@@ -636,8 +631,8 @@ const filterCardTestDataExtra = {
         imageAltText: 'Test 1-to-1 image description',
         filterTags: [
           {
-            tag: 'Tag 1',
-            title: 'Tag 1',
+            tag: 'Tag A',
+            title: 'Tag A',
             filterIconSelected: {
               file: {
                 url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -650,8 +645,8 @@ const filterCardTestDataExtra = {
             }
           },
           {
-            tag: 'Tag 2',
-            title: 'Tag 2',
+            tag: 'Tag B',
+            title: 'Tag B',
             filterIconSelected: {
               file: {
                 url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -664,8 +659,8 @@ const filterCardTestDataExtra = {
             }
           },
           {
-            tag: 'Tag 3',
-            title: 'Tag 3',
+            tag: 'Tag C',
+            title: 'Tag C',
             filterIconSelected: {
               file: {
                 url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -678,8 +673,8 @@ const filterCardTestDataExtra = {
             }
           },
           {
-            tag: 'Tag 4',
-            title: 'Tag 4',
+            tag: 'Tag D',
+            title: 'Tag D',
             filterIconSelected: {
               file: {
                 url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -695,10 +690,9 @@ const filterCardTestDataExtra = {
       },
       {
         id: '469fa12c-e425-5372-9899-ba69924d5603-2',
-        __typename: 'ContentfulFilterCardNode',
-        title: 'Filter card 4 (tags 1 + 4)',
+        title: 'Filter card 4 (tags A & D)',
         label: 'Filter Card label',
-        heading: 'Filter Card heading (no description) TWO',
+        heading: 'Filter Card heading (tags A & D, no description) TWO',
         ctaText: 'CTA Text: no icon',
         url: 'https://www.google.com',
         ctaIcon: null,
@@ -709,8 +703,8 @@ const filterCardTestDataExtra = {
         imageAltText: 'Test 1-to-1 image description',
         filterTags: [
           {
-            tag: 'Tag 1',
-            title: 'Tag 1',
+            tag: 'Tag A',
+            title: 'Tag A',
             filterIconSelected: {
               file: {
                 url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -723,8 +717,8 @@ const filterCardTestDataExtra = {
             }
           },
           {
-            tag: 'Tag 4',
-            title: 'Tag 4',
+            tag: 'Tag D',
+            title: 'Tag D',
             filterIconSelected: {
               file: {
                 url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -740,10 +734,9 @@ const filterCardTestDataExtra = {
       },
       {
         id: '09da5344-0104-5b36-833f-83e042cb4068-3',
-        __typename: 'ContentfulFilterCardNode',
-        title: 'Filter card 1 (tag 1)',
+        title: 'Filter card 1 (Tag A)',
         label: 'Filter Card label',
-        heading: 'Filter Card heading THREE',
+        heading: 'Filter Card heading (tag A) THREE',
         ctaText: 'CTA Text: Download',
         url: 'https://www.google.com',
         ctaIcon: 'Download',
@@ -754,8 +747,8 @@ const filterCardTestDataExtra = {
         imageAltText: 'Test 1-to-1 image description',
         filterTags: [
           {
-            tag: 'Tag 1',
-            title: 'Tag 1',
+            tag: 'Tag A',
+            title: 'Tag A',
             filterIconSelected: {
               file: {
                 url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -771,10 +764,9 @@ const filterCardTestDataExtra = {
       },
       {
         id: 'e80379c0-a0ea-565c-b91a-65d874554d84-3',
-        __typename: 'ContentfulFilterCardNode',
-        title: 'Filter card 2 (tag 2, no description, External link)',
+        title: 'Filter card 2 (Tag B, no description, External link)',
         label: 'Filter Card label',
-        heading: 'Filter Card heading THREE',
+        heading: 'Filter Card heading (tag B) THREE',
         ctaText: 'CTA Text: External URL',
         url: 'https://www.google.com',
         ctaIcon: 'External URL',
@@ -785,8 +777,8 @@ const filterCardTestDataExtra = {
         imageAltText: 'Test 1-to-1 image description',
         filterTags: [
           {
-            tag: 'Tag 2',
-            title: 'Tag 2',
+            tag: 'Tag B',
+            title: 'Tag B',
             filterIconSelected: {
               file: {
                 url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -802,10 +794,9 @@ const filterCardTestDataExtra = {
       },
       {
         id: 'e7c5c130-ae26-5ead-abef-c908bba5bd18-3',
-        __typename: 'ContentfulFilterCardNode',
-        title: 'Filter card 3 (tags 1, 2, 3 + 4)',
-        label: 'Filter Card label',
-        heading: 'Filter Card heading THREE',
+        title: 'Filter card 3 (tags A, B, C & D)',
+        label: 'Filter Card label (tags A, B, C & D)',
+        heading: 'Filter Card heading (tags A, B, C & D) THREE',
         ctaText: 'CTA Text: Download',
         url: 'https://www.google.com',
         ctaIcon: 'Download',
@@ -816,8 +807,8 @@ const filterCardTestDataExtra = {
         imageAltText: 'Test 1-to-1 image description',
         filterTags: [
           {
-            tag: 'Tag 1',
-            title: 'Tag 1',
+            tag: 'Tag A',
+            title: 'Tag A',
             filterIconSelected: {
               file: {
                 url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -830,8 +821,8 @@ const filterCardTestDataExtra = {
             }
           },
           {
-            tag: 'Tag 2',
-            title: 'Tag 2',
+            tag: 'Tag B',
+            title: 'Tag B',
             filterIconSelected: {
               file: {
                 url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -844,8 +835,8 @@ const filterCardTestDataExtra = {
             }
           },
           {
-            tag: 'Tag 3',
-            title: 'Tag 3',
+            tag: 'Tag C',
+            title: 'Tag C',
             filterIconSelected: {
               file: {
                 url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -858,8 +849,8 @@ const filterCardTestDataExtra = {
             }
           },
           {
-            tag: 'Tag 4',
-            title: 'Tag 4',
+            tag: 'Tag D',
+            title: 'Tag D',
             filterIconSelected: {
               file: {
                 url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -875,10 +866,9 @@ const filterCardTestDataExtra = {
       },
       {
         id: '469fa12c-e425-5372-9899-ba69924d5603-3',
-        __typename: 'ContentfulFilterCardNode',
-        title: 'Filter card 4 (tags 1 + 4)',
+        title: 'Filter card 4 (tags A & D)',
         label: 'Filter Card label',
-        heading: 'Filter Card heading (no description) THREE',
+        heading: 'Filter Card heading (tags A & D, no description) THREE',
         ctaText: 'CTA Text: no icon',
         url: 'https://www.google.com',
         ctaIcon: null,
@@ -889,8 +879,8 @@ const filterCardTestDataExtra = {
         imageAltText: 'Test 1-to-1 image description',
         filterTags: [
           {
-            tag: 'Tag 1',
-            title: 'Tag 1',
+            tag: 'Tag A',
+            title: 'Tag A',
             filterIconSelected: {
               file: {
                 url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'
@@ -903,8 +893,8 @@ const filterCardTestDataExtra = {
             }
           },
           {
-            tag: 'Tag 4',
-            title: 'Tag 4',
+            tag: 'Tag D',
+            title: 'Tag D',
             filterIconSelected: {
               file: {
                 url: '//images.ctfassets.net/zsfivwzfgl3t/37zrdIgtbb244ji5hsERZ2/638ab38dd2f25c2958abb4f09165ebfc/Children--white.svg'

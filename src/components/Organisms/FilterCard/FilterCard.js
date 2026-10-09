@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import PulseLoader from 'react-spinners/PulseLoader';
 import Cross from '../../Atoms/Icons/Cross';
@@ -25,12 +25,12 @@ import {
   ShowMoreButtonWrapper
 } from './FilterCard.style';
 
-const FilterCard = ({ data }) => {
+const FilterCard = ({ showMoreIncrement = 6, data }) => {
   const {
-    title,
     body,
     filterCardNodes,
     firstFilterCardNodeAsHero,
+    title,
     loadingBehaviour = null,
     paddingAbove = '0rem',
     paddingBelow = '1rem',
@@ -43,27 +43,15 @@ const FilterCard = ({ data }) => {
   const [processedTags, setProcessedTags] = useState(false);
 
   // Determine our display behaviour based on the CMS option
-  const [nodeDisplayLimit, setNodeDisplayLimit] = useState(showNodeLimit(loadingBehaviour));
+  const [nodeDisplayLimit, setNodeDisplayLimit] = useState(
+    showNodeLimit(loadingBehaviour)
+  );
 
   // Keep track of user interactions:
   const [showFilters, setShowFilters] = useState(true);
   const [currentFilters, setCurrentFilters] = useState([]);
 
-  // Troubleshooting...
-  const totalResults = useRef(0);
-  const [testState, setTestState] = useState(0);
-
-  // TODO: does this make *any* sense?
-  const updateTotalResult = increment => {
-    if (!increment) {
-      totalResults.current = 0;
-    } else {
-      totalResults.current += increment;
-    }
-
-    // Update our local state to trigger a single re-render:
-    setTestState(totalResults.current);
-  };
+  const [totalResults, setTotalResults] = useState(0);
 
   // Add/remove this filter tag from the state array accordingly:
   // TODO: extrapolate into own file?
@@ -105,7 +93,7 @@ const FilterCard = ({ data }) => {
     }
   }, [isLoading, filterCardNodes]);
 
-  const currentTotal = `${testState} ${testState === 1 ? ' result' : 'results'}`;
+  const currentTotal = `${totalResults} ${totalResults === 1 ? ' result' : 'results'}`;
 
   return (
     <Container
@@ -194,7 +182,7 @@ const FilterCard = ({ data }) => {
         {(processedTags && processedNodes) && (
           <NodeWrapper>
             <FilterCardNodes
-              updateTotalResult={updateTotalResult}
+              updateTotalResult={setTotalResults}
               processedNodes={processedNodes}
               firstFilterCardNodeAsHero={firstFilterCardNodeAsHero}
               nodeDisplayLimit={nodeDisplayLimit}
@@ -203,12 +191,12 @@ const FilterCard = ({ data }) => {
           </NodeWrapper>
         )}
 
-        {/* Only show Loader when approved to do so, and we've still got more nodes to display */}
+        {/* Only display the Show More button when we that functionality has
+         been selected in the CMS, and we've also still got more nodes to display */}
         {(nodeDisplayLimit > 0 && nodeDisplayLimit < processedNodes.length) && (
           <ShowMoreButtonWrapper>
             <Button
-            // TODO: check incremement amount
-              onClick={() => setNodeDisplayLimit(nodeDisplayLimit + 1)}
+              onClick={() => setNodeDisplayLimit(nodeDisplayLimit + showMoreIncrement)}
             >
               Show more
             </Button>
@@ -221,6 +209,10 @@ const FilterCard = ({ data }) => {
 };
 
 FilterCard.propTypes = {
+  // Not a CMS option (currently) but gives flexibility to better
+  // demonstrate this functionality in the Component Library examples:
+  showMoreIncrement: PropTypes.number,
+  // CMS content:
   data: PropTypes.shape({
     title: PropTypes.string,
     paddingAbove: PropTypes.string,

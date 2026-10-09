@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
 import { getIcon } from './_utils/_utils';
@@ -21,8 +21,15 @@ const FilterCardNodes = ({
   nodeDisplayLimit,
   currentFilters
 }) => {
-  // Reset counter for every re-render:
-  updateTotalResult();
+  const resultState = useState(0);
+
+  useEffect(() => {
+    updateTotalResult(resultState[0]);
+  }, [resultState, updateTotalResult]);
+
+  // Resetting useState variable *directly* (rather than a setResultState),
+  // to avoid re-render loops but still utlise useEffect
+  resultState[0] = 0;
 
   return processedNodes.map((thisNode, index) => {
     // Applies pinned, hero styling to the first node, when the CMS is set to do so:
@@ -47,8 +54,8 @@ const FilterCardNodes = ({
     // If the former, do we update the result total to include this or not?
 
     if (renderThisNode && underLimit) {
-      // Increment the counter for every node we've got a tag match for:
-      updateTotalResult(1);
+      // Update our counter
+      resultState[0] += 1;
 
       const {
         id, label, heading, description,
@@ -110,7 +117,7 @@ const FilterCardNodes = ({
 
 FilterCardNodes.propTypes = {
   processedNodes: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-  currentFilters: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  currentFilters: PropTypes.arrayOf(PropTypes.string).isRequired,
   firstFilterCardNodeAsHero: PropTypes.bool.isRequired,
   updateTotalResult: PropTypes.func.isRequired,
   nodeDisplayLimit: PropTypes.number.isRequired
