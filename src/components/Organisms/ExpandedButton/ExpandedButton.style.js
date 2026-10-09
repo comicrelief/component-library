@@ -35,21 +35,6 @@ const ButtonCard = styled.button`
   }
 `;
 
-const ArrowWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  transform: rotate(45deg);
-  flex-shrink: 0;
-
-  svg {
-    width: auto;
-    height: auto;
-  }
-`;
-
 const CardTopWrapper = styled.div`
   margin: 0 0 8px 0;
   display: flex;
@@ -57,11 +42,13 @@ const CardTopWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
+border: 1px solid red;
 `;
 
 const HeadingContentWrapper = styled.div`
   display: flex;
   align-items: center;
+border: 1px solid green;
 `;
 
 const HeadingIconWrapper = styled.span`
@@ -84,6 +71,21 @@ const CardHeading = styled.h3`
   font-size: 14px;
   @media ${crTheme.allBreakpoints('M')} {
     font-size: 16px;
+  }
+`;
+
+const ArrowWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+
+  svg {
+    width: auto;
+    height: auto;
   }
 `;
 
