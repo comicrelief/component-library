@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
 import { getIcon } from './_utils/_utils';
@@ -21,15 +21,15 @@ const FilterCardNodes = ({
   nodeDisplayLimit,
   currentFilters
 }) => {
-  const resultState = useState(0);
+  // Somewhere to store our results 'counter' without triggering re-renders:
+  const resultRef = useRef(0);
 
   useEffect(() => {
-    updateTotalResult(resultState[0]);
-  }, [resultState, updateTotalResult]);
+    updateTotalResult(resultRef.current);
+  }, [resultRef.current, updateTotalResult]);
 
-  // Resetting useState variable *directly* (rather than a setResultState),
-  // to avoid re-render loops but still utlise useEffect
-  resultState[0] = 0;
+  // Reset this for every re-render:
+  resultRef.current = 0;
 
   return processedNodes.map((thisNode, index) => {
     // Applies pinned, hero styling to the first node, when the CMS is set to do so:
@@ -55,7 +55,7 @@ const FilterCardNodes = ({
 
     if (renderThisNode && underLimit) {
       // Update our counter
-      resultState[0] += 1;
+      resultRef.current += 1;
 
       const {
         id, label, heading, description,

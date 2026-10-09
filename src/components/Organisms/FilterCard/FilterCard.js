@@ -50,11 +50,9 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
   // Keep track of user interactions:
   const [showFilters, setShowFilters] = useState(true);
   const [currentFilters, setCurrentFilters] = useState([]);
-
   const [totalResults, setTotalResults] = useState(0);
 
   // Add/remove this filter tag from the state array accordingly:
-  // TODO: extrapolate into own file?
   const updateFilters = thisTag => {
     // Cache current state:
     let updatedFilters = currentFilters;
@@ -83,7 +81,8 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
 
       // Only go ahead once we've got the goods:
       if (outputNodes && outputTags) {
-        // Pause for a second before going ahead, to prevent nasty flashes:
+        // Pause for a second before going ahead, to prevent nasty Loader
+        // flashes, and let the user clock that something has happened:
         setTimeout(() => {
           setProcessedNodes(outputNodes);
           setProcessedTags(outputTags);
