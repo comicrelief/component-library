@@ -124,28 +124,49 @@ import marketingPreferencesDSExampleSrc from '../components/Organisms/MarketingP
 import { MembershipExample1, MembershipExample2 } from '../components/Organisms/Membership/MembershipExample.jsx';
 import DonateBannerExample from '../components/Organisms/DonateBanner/DonateBannerExample.jsx';
 import donateBannerExampleSrc from '../components/Organisms/DonateBanner/DonateBannerExample.jsx?raw';
-import { EmailBannerExample1, EmailBannerExample2, EmailBannerExample3, EmailBannerExample4, EmailBannerExample5 } from '../components/Organisms/EmailBanner/EmailBannerExample.jsx';
+import {
+  EmailBannerExample1, EmailBannerExample2, EmailBannerExample3, EmailBannerExample4, EmailBannerExample5
+} from '../components/Organisms/EmailBanner/EmailBannerExample.jsx';
 import FooterNewExample from '../components/Organisms/FooterNew/FooterNewExample.jsx';
 import footerNewExampleSrc from '../components/Organisms/FooterNew/FooterNewExample.jsx?raw';
-import { HeaderExample1, HeaderExample2, HeaderExample3, HeaderExample4, HeaderExample5 } from '../components/Organisms/Header/HeaderExample.jsx';
+import {
+  HeaderExample1, HeaderExample2, HeaderExample3, HeaderExample4, HeaderExample5
+} from '../components/Organisms/Header/HeaderExample.jsx';
 import Header2025Example from '../components/Organisms/Header2025/Header2025Example.jsx';
 import header2025ExampleSrc from '../components/Organisms/Header2025/Header2025Example.jsx?raw';
-import { DonateExample1, DonateExample2, DonateExample3, DonateExample4, DonateExample5, DonateExample6, DonateExample7, DonateExample8, DonateExample9, DonateExample10, DonateExample11, DonateExample12, DonateExample13, DonateExample14, DonateExample15, DonateExample16, DonateExample17, DonateExample18, DonateExample19, DonateExample20, DonateExample21, DonateExample22 } from '../components/Organisms/Donate/DonateExample.jsx';
+
+import {
+  DonateExample1, DonateExample2, DonateExample3, DonateExample4, DonateExample5, DonateExample6, DonateExample7, DonateExample8, DonateExample9, DonateExample10, DonateExample11, DonateExample12, DonateExample13, DonateExample14, DonateExample15, DonateExample16, DonateExample17, DonateExample18, DonateExample19, DonateExample20, DonateExample21, DonateExample22
+} from '../components/Organisms/Donate/DonateExample.jsx';
+
 import CookieBannerExample from '../components/Organisms/CookieBanner/CookieBannerExample.jsx';
 import cookieBannerExampleSrc from '../components/Organisms/CookieBanner/CookieBannerExample.jsx?raw';
 import { ImpactSliderExample1, ImpactSliderExample2 } from '../components/Organisms/ImpactSlider/ImpactSliderExample.jsx';
+
 import WYMDCarouselExample from '../components/Organisms/WYMDCarousel/WYMDCarouselExample.jsx';
 import wymdCarouselExampleSrc from '../components/Organisms/WYMDCarousel/WYMDCarouselExample.jsx?raw';
+
 import RichtextCarouselExample from '../components/Organisms/RichtextCarousel/RichtextCarouselExample.jsx';
 import richtextCarouselExampleSrc from '../components/Organisms/RichtextCarousel/RichtextCarouselExample.jsx?raw';
+
 import DynamicGalleryExample from '../components/Organisms/DynamicGallery/DynamicGalleryExample.jsx';
 import dynamicGalleryExampleSrc from '../components/Organisms/DynamicGallery/DynamicGalleryExample.jsx?raw';
 import ExpandedButtonExample from '../components/Organisms/ExpandedButton/ExpandedButtonExample.jsx';
 import expandedButtonExampleSrc from '../components/Organisms/ExpandedButton/ExpandedButtonExample.jsx?raw';
 
+import FilterCardExample from '../components/Organisms/FilterCard/FilterCardExample.jsx';
+import filterCardExampleSrc from '../components/Organisms/FilterCard/FilterCardExample.jsx?raw';
+
 const Placeholder = ({ name }) => (
-  <div style={{ padding: '1rem', background: '#f5f5f5', borderRadius: '4px', color: '#666' }}>
-    <em>{name} — no example in place.</em>
+  <div style={{
+    padding: '1rem', background: '#f5f5f5', borderRadius: '4px', color: '#666'
+  }}
+  >
+    <em>
+      {name}
+      {' '}
+      — no example in place.
+    </em>
   </div>
 );
 
@@ -175,7 +196,7 @@ export const atoms = [
   { name: 'SocialIcons', demo: demo(SocialIconsExample, socialIconsExampleSrc) },
   { name: 'Text', demo: demo(TextExample, textExampleSrc) },
   { name: 'TextArea', demo: demo(TextAreaExample, textAreaExampleSrc) },
-  { name: 'TextInputWithDropdown', demo: demo(TextInputWithDropdownExample, textInputWithDropdownExampleSrc) },
+  { name: 'TextInputWithDropdown', demo: demo(TextInputWithDropdownExample, textInputWithDropdownExampleSrc) }
 ];
 
 export const molecules = [
@@ -209,7 +230,7 @@ export const molecules = [
   { name: 'SingleMessageDs', demo: demo(SingleMessageDsExample, singleMessageDsExampleSrc) },
   { name: 'StatsSlice', demo: demo(StatsSliceExample, statsSliceExampleSrc) },
   { name: 'Typeahead', demo: demo(TypeaheadExample, typeaheadExampleSrc) },
-  { name: 'VideoBanner', demo: demo(VideoBannerExample, videoBannerExampleSrc) },
+  { name: 'VideoBanner', demo: demo(VideoBannerExample, videoBannerExampleSrc) }
 ];
 
 export const organisms = [
@@ -220,6 +241,7 @@ export const organisms = [
   { name: 'ExpandedButton', demo: demo(ExpandedButtonExample, expandedButtonExampleSrc) },
   { name: 'EmailBanner', examples: [<EmailBannerExample1 />, <EmailBannerExample2 />, <EmailBannerExample3 />, <EmailBannerExample4 />, <EmailBannerExample5 />] },
   { name: 'EmailSignUpForm', demo: demo(EmailSignUpExample, emailSignUpExampleSrc) },
+  { name: 'FilterCard', demo: demo(FilterCardExample, filterCardExampleSrc) },
   { name: 'Footer', examples: [<FooterExample1 />, <FooterExample2 />, <FooterExample3 />] },
   { name: 'FooterNew', demo: demo(FooterNewExample, footerNewExampleSrc) },
   { name: 'Header', examples: [<HeaderExample1 />, <HeaderExample2 />, <HeaderExample3 />, <HeaderExample4 />, <HeaderExample5 />] },
@@ -228,12 +250,12 @@ export const organisms = [
   { name: 'MarketingPreferencesDSForm', demo: demo(MarketingPreferencesDSExample, marketingPreferencesDSExampleSrc) },
   { name: 'Membership', examples: [<MembershipExample1 />, <MembershipExample2 />] },
   { name: 'RichtextCarousel', demo: demo(RichtextCarouselExample, richtextCarouselExampleSrc) },
-  { name: 'WYMDCarousel', demo: demo(WYMDCarouselExample, wymdCarouselExampleSrc) },
+  { name: 'WYMDCarousel', demo: demo(WYMDCarouselExample, wymdCarouselExampleSrc) }
 ];
 
 export const docs = [
   { name: 'Introduction', demo: <IntroductionDoc /> },
   { name: 'Installation', demo: <InstallationDoc /> },
   { name: 'Utils', demo: <UtilsDoc /> },
-  { name: 'Theme', demo: <ThemeExample /> },
+  { name: 'Theme', demo: <ThemeExample /> }
 ];

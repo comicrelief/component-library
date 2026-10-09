@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Arrow, AtSign, Chevron, CtaArrow, Download, External, Favourite, Internal, Post } from './index';
+import {
+  Arrow, AtSign, Chevron, CtaArrow, Download, External, Favourite, Internal, Post, Filter, Undo
+} from './index';
 import Cross from './Cross';
 import Curve from './Curve';
 import { ExampleContainer } from '../../../demos/SharedStyles';
@@ -21,12 +23,12 @@ const IconCard = styled.div`
   border: 1px solid #e1e2e3;
   border-radius: 6px;
   min-width: 100px;
-  background: ${({ dark }) => dark ? '#222' : '#fff'};
+  background: ${({ dark }) => (dark ? '#222' : '#fff')};
 `;
 
 const Name = styled.p`
   font-size: 0.75rem;
-  color: ${({ dark }) => dark ? '#fff' : '#333'};
+  color: ${({ dark }) => (dark ? '#fff' : '#333')};
   margin: 0;
   text-align: center;
 `;
@@ -49,6 +51,9 @@ export default function IconsExample() {
             ['AtSign', <AtSign size={48} colour="black" />],
             ['Cross', <Cross size={48} colour="black" />],
             ['Post', <Post size={48} colour="black" />],
+            ['Filter', <Filter size={48} colour="black" />],
+            ['Undo', <Undo size={48} colour="black" />]
+
           ].map(([name, icon]) => (
             <IconCard key={name}>
               {icon}

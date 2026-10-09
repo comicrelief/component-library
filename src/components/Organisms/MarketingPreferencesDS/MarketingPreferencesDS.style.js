@@ -169,6 +169,8 @@ const CheckInput = styled.input`
   top:0;
   margin: 0;
   border: 1px solid ${({ theme }) => theme.color('grey')};
+  cursor: pointer;
+  
   + span {
     width: 30px;
     height: 30px;

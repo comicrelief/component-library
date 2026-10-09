@@ -337,10 +337,8 @@ exports[`renders correctly 1`] = `
         >
           <svg
             className="c13"
-            colour="white"
             fill="#FFFFFF"
             height={24}
-            mobileColour={null}
             viewBox="0 0 96 96"
             width={24}
             xmlns="http://www.w3.org/2000/svg"
