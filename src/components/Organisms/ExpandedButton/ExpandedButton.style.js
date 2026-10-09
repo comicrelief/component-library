@@ -39,16 +39,14 @@ const CardTopWrapper = styled.div`
   margin: 0 0 8px 0;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 0.5rem;
-border: 1px solid red;
 `;
 
 const HeadingContentWrapper = styled.div`
   display: flex;
-  align-items: center;
-border: 1px solid green;
+  align-items: flex-start;
 `;
 
 const HeadingIconWrapper = styled.span`
