@@ -221,7 +221,7 @@ const ExtraInfo = styled.span`
 
 const MPTextInput = styled(TextInput)`${({ theme, $isErroring }) => css`
   color: ${$isErroring ? theme.color('red') : theme.color('black')};
-
+  margin-top: 1rem;
   input {
     background-color: ${theme.color('white')};
     color: ${$isErroring ? theme.color('red') : theme.color('black')};
