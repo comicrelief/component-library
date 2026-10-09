@@ -22,7 +22,7 @@ const MarketingPreferencesDS = ({
   formContext = null,
   ...rest
 }) => {
-  const { formState: { errors }, control } = formContext;
+  const { formState: { errors }, control, getValues } = formContext;
 
   // For brevity
   const emailChoice = useWatch({ control, name: 'mp_permissionEmail', defaultValue: null });
@@ -52,19 +52,35 @@ const MarketingPreferencesDS = ({
     return errors.mp_address1 || errors.mp_address2
     || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode;
   };
-  /* Only show the field if config hasn't hidden it (to pass in parent values)
-    or if a choice has been made */
-  const showEmailField = !mp_permissionEmail.hideInput && (emailChoice || errors.mp_email);
-  const showSMSField = !mp_permissionSMS.hideInput && (smsChoice || errors.mp_mobile);
-  const showPhoneField = !mp_permissionPhone.hideInput && (phoneChoice || errors.mp_phone);
-  const showPostFields = !mp_permissionPost.hideInput && (postChoice || isAddressErroring());
+
+  const hasStoredAddress = () => [
+    'mp_address1', 'mp_address2', 'mp_address3', 'mp_town', 'mp_country', 'mp_postcode'
+  ].some(field => getValues(field));
+
+  /* Only show the field if config hasn't hidden it (to pass in parent values),
+    if a choice has been made, or if the form already has a value in redux (e.g. returning
+    back to the page). */
+  const showEmailField = !mp_permissionEmail.hideInput && (
+    emailChoice || errors.mp_email || getValues('mp_email')
+  );
+  const showSMSField = !mp_permissionSMS.hideInput && (
+    smsChoice || errors.mp_mobile || getValues('mp_mobile')
+  );
+  const showPhoneField = !mp_permissionPhone.hideInput && (
+    phoneChoice || errors.mp_phone || getValues('mp_phone')
+  );
+  const showPostFields = !mp_permissionPost.hideInput && (
+    postChoice || isAddressErroring() || hasStoredAddress()
+  );
 
   const customId = id ? `marketing-preferences--${id}` : 'marketing-preferences';
 
   // Check for field-specific errors
   const hasEmailError = Boolean(errors.mp_permissionEmail || errors.mp_email);
-  const hasPostError = Boolean(errors.mp_permissionPost || errors.mp_address1 || errors.mp_address2
-  || errors.mp_address3 || errors.mp_town || errors.mp_country || errors.mp_postcode);
+  const hasPostError = Boolean(errors.mp_permissionPost
+    || errors.mp_address1 || errors.mp_address2
+    || errors.mp_address3 || errors.mp_town
+    || errors.mp_country || errors.mp_postcode);
   const hasSMSError = Boolean(errors.mp_permissionSMS || errors.mp_mobile);
   const hasPhoneError = Boolean(errors.mp_permissionPhone || errors.mp_phone);
 
@@ -76,7 +92,7 @@ const MarketingPreferencesDS = ({
       {!mp_permissionEmail.disableOption && (
       <FormField
         className={`field-email ${emailChoice && 'selected'}`}
-        $isError={hasEmailError}
+        $isErroring={hasEmailError}
       >
         <CheckboxWrapper>
           <OptInCheckbox
@@ -104,6 +120,7 @@ const MarketingPreferencesDS = ({
               type="email"
               id="mp_email"
               formContext={formContext}
+              $isErroring={hasEmailError}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -114,7 +131,7 @@ const MarketingPreferencesDS = ({
       {!mp_permissionPost.disableOption && (
       <FormField
         className={`field-post ${postChoice && 'selected'}`}
-        $isError={hasPostError}
+        $isErroring={hasPostError}
       >
         <CheckboxWrapper>
           <OptInCheckbox
@@ -139,6 +156,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionPost[postChoice]}
               id="mp_address1"
               formContext={formContext}
+              $isErroring={Boolean(errors.mp_address1)}
             />
             <MPTextInput
               placeholder=""
@@ -147,6 +165,7 @@ const MarketingPreferencesDS = ({
               optional
               id="mp_address2"
               formContext={formContext}
+              $isErroring={Boolean(errors.mp_address2)}
             />
             <MPTextInput
               placeholder=""
@@ -155,6 +174,7 @@ const MarketingPreferencesDS = ({
               optional
               id="mp_address3"
               formContext={formContext}
+              $isErroring={Boolean(errors.mp_address3)}
             />
             <MPTextInput
               placeholder=""
@@ -163,6 +183,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionPost[postChoice]}
               id="mp_town"
               formContext={formContext}
+              $isErroring={Boolean(errors.mp_town)}
             />
             <MPTextInput
               placeholder=""
@@ -171,6 +192,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionPost[postChoice]}
               id="mp_postcode"
               formContext={formContext}
+              $isErroring={Boolean(errors.mp_postcode)}
             />
             <MPTextInput
               placeholder=""
@@ -179,6 +201,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionPost[postChoice]}
               id="mp_country"
               formContext={formContext}
+              $isErroring={Boolean(errors.mp_country)}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -189,7 +212,7 @@ const MarketingPreferencesDS = ({
       {!mp_permissionSMS.disableOption && (
       <FormField
         className={`field-sms ${smsChoice && 'selected'}`}
-        $isError={hasSMSError}
+        $isErroring={hasSMSError}
       >
         <CheckboxWrapper>
           <OptInCheckbox
@@ -203,9 +226,7 @@ const MarketingPreferencesDS = ({
         <MaybeDisabled disabled={disableSMSInput}>
           <ShowHideInputWrapper $show={showSMSField}>
             <ExtraInfo>
-              Please confirm the mobile number we will use to
-              <b> text </b>
-              you on:
+              Please enter a telephone or mobile number:
             </ExtraInfo>
             <MPTextInput
               placeholder=""
@@ -214,6 +235,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionSMS[smsChoice]}
               id="mp_mobile"
               formContext={formContext}
+              $isErroring={hasSMSError}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
@@ -224,7 +246,7 @@ const MarketingPreferencesDS = ({
       {!mp_permissionPhone.disableOption && (
       <FormField
         className={`field-phone ${phoneChoice && 'selected'}`}
-        $isError={hasPhoneError}
+        $isErroring={hasPhoneError}
       >
         <CheckboxWrapper>
           <OptInCheckbox
@@ -238,9 +260,7 @@ const MarketingPreferencesDS = ({
         <MaybeDisabled disabled={disablePhoneInput}>
           <ShowHideInputWrapper $show={showPhoneField}>
             <ExtraInfo>
-              Please confirm the telephone number we will use to
-              <b> phone </b>
-              you on:
+              Please enter a telephone or mobile number
             </ExtraInfo>
             <MPTextInput
               placeholder=""
@@ -249,6 +269,7 @@ const MarketingPreferencesDS = ({
               optional={!mp_permissionPhone[phoneChoice]}
               id="mp_phone"
               formContext={formContext}
+              $isErroring={hasPhoneError}
             />
           </ShowHideInputWrapper>
         </MaybeDisabled>
