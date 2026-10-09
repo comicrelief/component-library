@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders FilterCard correctly 1`] = `
+.c2 {
+  font-family: 'Anton',Impact,sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.c2 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.c0 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background: #F4F3F5;
+  justify-content: center;
+  padding: 2rem 1rem 2rem;
+}
+
+.c1 {
+  background: #FFFFFF;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  position: relative;
+  box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
+}
+
+.c1:after {
+  --size: 1.5rem;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  bottom: calc((var(--size) * -1) + 1px);
+  left: calc(50% - (var(--size) / 2));
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid #FFFFFF;
+  filter: drop-shadow(0px 6px 3px rgba(0,0,0,0.1));
+}
+
+.c3 {
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 740px) {
+  .c2 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c2 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c0 {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 740px) {
+  .c1:after {
+    left: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c1 {
+    padding: 4rem;
+  }
+
+  .c1:after {
+    left: 4rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className=""
+  >
+    <div
+      className="c1"
+    >
+      <h1
+        className="c2 "
+      >
+        Your fundraising resources: STANDARD
+      </h1>
+      <div
+        className="c3"
+      >
+        From fundraising packs to bunting, certificates, cake labels and more, find everything you need to take yourself funny for money this Red Nose Day. Select a resource type to filters the results.
+      </div>
+      <span
+        style={
+          {
+            "display": "block",
+            "textAlign": "center",
+          }
+        }
+      >
+        <span
+          style={
+            {
+              "animation": "react-spinners-PulseLoader-pulse 0.75s 0.12s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08)",
+              "animationFillMode": "both",
+              "backgroundColor": "black",
+              "borderRadius": "100%",
+              "display": "inline-block",
+              "height": "15px",
+              "margin": "2px",
+              "width": "15px",
+            }
+          }
+        />
+        <span
+          style={
+            {
+              "animation": "react-spinners-PulseLoader-pulse 0.75s 0.24s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08)",
+              "animationFillMode": "both",
+              "backgroundColor": "black",
+              "borderRadius": "100%",
+              "display": "inline-block",
+              "height": "15px",
+              "margin": "2px",
+              "width": "15px",
+            }
+          }
+        />
+        <span
+          style={
+            {
+              "animation": "react-spinners-PulseLoader-pulse 0.75s 0.36s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08)",
+              "animationFillMode": "both",
+              "backgroundColor": "black",
+              "borderRadius": "100%",
+              "display": "inline-block",
+              "height": "15px",
+              "margin": "2px",
+              "width": "15px",
+            }
+          }
+        />
+      </span>
+    </div>
+  </div>
+</div>
+`;
