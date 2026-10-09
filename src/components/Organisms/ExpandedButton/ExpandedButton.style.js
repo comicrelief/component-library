@@ -1,28 +1,16 @@
 import styled from 'styled-components';
 import crTheme from '../../../theme/crTheme/theme';
-import containers from '../../../theme/shared/containers';
 import Text from '../../Atoms/Text/Text';
-
-const Wrapper = styled.div`
-  background: ${crTheme.color('grey_light')};
-  padding: 3rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  text-align: center;
-
-  @media ${crTheme.allBreakpoints('M')} {
-    padding: 3rem 2rem;
-  }
-`;
 
 const Grid = styled.div`
   display: flex;
   width: 100%;
-  max-width: ${containers.medium};
   margin: 0 auto;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
+  @media ${crTheme.allBreakpoints('M')} {
+    gap: 1rem;
+  }
 `;
 
 const ButtonCard = styled.button`
@@ -47,33 +35,18 @@ const ButtonCard = styled.button`
   }
 `;
 
-const ArrowWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  height: 18px;
-  transform: rotate(45deg);
-  flex-shrink: 0;
-
-  svg {
-    width: auto;
-    height: auto;
-  }
-`;
-
 const CardTopWrapper = styled.div`
   margin: 0 0 8px 0;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 0.5rem;
 `;
 
 const HeadingContentWrapper = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 const HeadingIconWrapper = styled.span`
@@ -90,10 +63,28 @@ const HeadingIconWrapper = styled.span`
 
 const CardHeading = styled.h3`
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
   font-weight: 700;
   line-height: 20px;
   color: ${crTheme.color('black')};
+  font-size: 14px;
+  @media ${crTheme.allBreakpoints('M')} {
+    font-size: 16px;
+  }
+`;
+
+const ArrowWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+
+  svg {
+    width: auto;
+    height: auto;
+  }
 `;
 
 const CardBlurb = styled(Text)`
@@ -104,7 +95,6 @@ const CardBlurb = styled(Text)`
 `;
 
 export {
-  Wrapper,
   Grid,
   ButtonCard,
   CardTopWrapper,
