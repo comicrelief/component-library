@@ -1,10 +1,11 @@
-import React, { useRef, useCallback } from 'react';
+import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
 import { getIcon } from './_utils/_utils';
 
 import {
   Node,
+  NodeWrapper,
   NodeImageWrapper,
   NodeImage,
   NodeCopyWrapper,
@@ -24,14 +25,10 @@ const FilterCardNodes = ({
   // Somewhere to store our results 'counter' without triggering re-renders:
   const resultRef = useRef(0);
 
-  const nodeRef = useCallback(() => {
-    updateTotalResult(resultRef.current);
-  }, [updateTotalResult]);
-
   // Reset this for every re-render:
   resultRef.current = 0;
 
-  return processedNodes.map((thisNode, index) => {
+  const createNodes = processedNodes.map((thisNode, index) => {
     // Applies pinned, hero styling to the first node, when the CMS is set to do so:
     const heroFirstNode = index === 0 && firstFilterCardNodeAsHero;
 
@@ -67,7 +64,6 @@ const FilterCardNodes = ({
         <Node
           key={id}
           $isHero={heroFirstNode}
-          ref={nodeRef}
         >
           <NodeImageWrapper>
             <NodeImage
@@ -114,6 +110,19 @@ const FilterCardNodes = ({
     }
     return null;
   });
+
+  // Remove any nulls:
+  const nodesToRender = createNodes.filter(Boolean);
+
+  useEffect(() => {
+    updateTotalResult(nodesToRender.length);
+  }, [nodesToRender, updateTotalResult]);
+
+  return (
+    <NodeWrapper>
+      {nodesToRender}
+    </NodeWrapper>
+  );
 };
 
 FilterCardNodes.propTypes = {

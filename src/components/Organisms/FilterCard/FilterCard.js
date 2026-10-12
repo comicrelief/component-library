@@ -21,7 +21,6 @@ import {
   ResultsWrapper,
   FilterButtonsWrapper,
   FilterButton,
-  NodeWrapper,
   ShowMoreButtonWrapper
 } from './FilterCard.style';
 
@@ -179,15 +178,13 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
 
         {/* And render the content once it's fully processed */}
         {(processedTags && processedNodes) && (
-          <NodeWrapper>
-            <FilterCardNodes
-              updateTotalResult={setTotalResults}
-              processedNodes={processedNodes}
-              firstFilterCardNodeAsHero={firstFilterCardNodeAsHero}
-              nodeDisplayLimit={nodeDisplayLimit}
-              currentFilters={currentFilters}
-            />
-          </NodeWrapper>
+        <FilterCardNodes
+          updateTotalResult={setTotalResults}
+          processedNodes={processedNodes}
+          firstFilterCardNodeAsHero={firstFilterCardNodeAsHero}
+          nodeDisplayLimit={nodeDisplayLimit}
+          currentFilters={currentFilters}
+        />
         )}
 
         {/* Only display the Show More button when we that functionality has
