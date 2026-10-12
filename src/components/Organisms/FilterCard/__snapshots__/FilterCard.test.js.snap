@@ -15,6 +15,20 @@ exports[`renders dynamic-loading FilterCard correctly 1`] = `
   line-height: inherit;
 }
 
+.c4 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c4 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c0 {
   width: 100%;
   height: auto;
@@ -67,6 +81,20 @@ exports[`renders dynamic-loading FilterCard correctly 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c4 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
   .c0 {
     padding-inline: 2rem;
   }
@@ -105,7 +133,11 @@ exports[`renders dynamic-loading FilterCard correctly 1`] = `
       <div
         className="c3"
       >
-        From fundraising packs to bunting, certificates, cake labels and more, find everything you need to take yourself funny for money this Red Nose Day. Select a resource type to filters the results.
+        <span
+          className="c4"
+        >
+          From fundraising packs to bunting, certificates, cake labels and more, find everything you need to take yourself funny for money this Red Nose Day. Select a resource type to filters the results.
+        </span>
       </div>
       <span
         style={
@@ -178,6 +210,20 @@ exports[`renders dynamic-loading FilterCard w/hero correctly 1`] = `
   line-height: inherit;
 }
 
+.c4 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c4 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c0 {
   width: 100%;
   height: auto;
@@ -230,6 +276,20 @@ exports[`renders dynamic-loading FilterCard w/hero correctly 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c4 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
   .c0 {
     padding-inline: 2rem;
   }
@@ -268,7 +328,11 @@ exports[`renders dynamic-loading FilterCard w/hero correctly 1`] = `
       <div
         className="c3"
       >
-        From fundraising packs to bunting, certificates, cake labels and more, find everything you need to take yourself funny for money this Red Nose Day. Select a resource type to filters the results.
+        <span
+          className="c4"
+        >
+          From fundraising packs to bunting, certificates, cake labels and more, find everything you need to take yourself funny for money this Red Nose Day. Select a resource type to filters the results.
+        </span>
       </div>
       <span
         style={
@@ -341,6 +405,20 @@ exports[`renders standard FilterCard correctly 1`] = `
   line-height: inherit;
 }
 
+.c4 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c4 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c0 {
   width: 100%;
   height: auto;
@@ -393,6 +471,20 @@ exports[`renders standard FilterCard correctly 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c4 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
   .c0 {
     padding-inline: 2rem;
   }
@@ -431,7 +523,11 @@ exports[`renders standard FilterCard correctly 1`] = `
       <div
         className="c3"
       >
-        From fundraising packs to bunting, certificates, cake labels and more, find everything you need to take yourself funny for money this Red Nose Day. Select a resource type to filters the results.
+        <span
+          className="c4"
+        >
+          From fundraising packs to bunting, certificates, cake labels and more, find everything you need to take yourself funny for money this Red Nose Day. Select a resource type to filters the results.
+        </span>
       </div>
       <span
         style={
@@ -504,6 +600,20 @@ exports[`renders standard FilterCard w/hero correctly 1`] = `
   line-height: inherit;
 }
 
+.c4 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  text-transform: inherit;
+  letter-spacing: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.c4 span {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .c0 {
   width: 100%;
   height: auto;
@@ -556,6 +666,20 @@ exports[`renders standard FilterCard w/hero correctly 1`] = `
 }
 
 @media (min-width: 740px) {
+  .c4 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c4 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 740px) {
   .c0 {
     padding-inline: 2rem;
   }
@@ -594,7 +718,11 @@ exports[`renders standard FilterCard w/hero correctly 1`] = `
       <div
         className="c3"
       >
-        From fundraising packs to bunting, certificates, cake labels and more, find everything you need to take yourself funny for money this Red Nose Day. Select a resource type to filters the results.
+        <span
+          className="c4"
+        >
+          From fundraising packs to bunting, certificates, cake labels and more, find everything you need to take yourself funny for money this Red Nose Day. Select a resource type to filters the results.
+        </span>
       </div>
       <span
         style={
