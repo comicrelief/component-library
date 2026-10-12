@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import Text from '../../Atoms/Text/Text';
 import { getIcon } from './_utils/_utils';
@@ -24,9 +24,9 @@ const FilterCardNodes = ({
   // Somewhere to store our results 'counter' without triggering re-renders:
   const resultRef = useRef(0);
 
-  useEffect(() => {
+  const nodeRef = useCallback(() => {
     updateTotalResult(resultRef.current);
-  }, [resultRef.current, updateTotalResult]);
+  }, [updateTotalResult]);
 
   // Reset this for every re-render:
   resultRef.current = 0;
@@ -67,6 +67,7 @@ const FilterCardNodes = ({
         <Node
           key={id}
           $isHero={heroFirstNode}
+          ref={nodeRef}
         >
           <NodeImageWrapper>
             <NodeImage
