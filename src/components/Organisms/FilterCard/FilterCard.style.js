@@ -6,6 +6,7 @@ import { Copywrapper, IconWrapper } from '../../Atoms/Button/Button.style';
 import defaultBoxShadow from '../../../theme/shared/boxShadows';
 import Link from '../../Atoms/Link/Link';
 import { IconWrapper as LinkIconWrapper } from '../../Atoms/Link/Link.style';
+import Rectangle from './assets/Rectangle.svg';
 
 // To reduce icon flash when switching between images:
 const fadeIn = keyframes`
@@ -46,18 +47,15 @@ const HeaderWrapper = styled.div`
 
   // Down 'arrow':
   &:after {
-    --size: 1.5rem;
+    --size: 3rem;
     position: absolute;
     content: "";
-    width: 0; 
-    height: 0;
-    // Tiny lil' overlap to prevent ugliness when zooming the browser
-    bottom: calc((var(--size) * -1) + 1px);
+    width: var(--size); 
+    height: var(--size); 
+    bottom: calc((var(--size) * -0.5));
     left: calc(50% - (var(--size) / 2));
-    border-left: var(--size) solid transparent;
-    border-right: var(--size) solid transparent;
-    border-top: var(--size) solid ${({ theme }) => theme.color('white')};
-    // Recreating defaultBoxShadow in a manner that actual works with all the CSS funkiness:
+    background: center / contain no-repeat url("${Rectangle}");
+    // Recreating defaultBoxShadow to allow icon to blend against its parent:
     filter: drop-shadow(0px 6px 3px rgba(0, 0, 0, 0.1));
   }
 

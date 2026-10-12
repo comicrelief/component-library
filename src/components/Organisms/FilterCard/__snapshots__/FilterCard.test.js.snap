@@ -49,16 +49,14 @@ exports[`renders dynamic-loading FilterCard correctly 1`] = `
 }
 
 .c1:after {
-  --size: 1.5rem;
+  --size: 3rem;
   position: absolute;
   content: "";
-  width: 0;
-  height: 0;
-  bottom: calc((var(--size) * -1) + 1px);
+  width: var(--size);
+  height: var(--size);
+  bottom: calc((var(--size) * -0.5));
   left: calc(50% - (var(--size) / 2));
-  border-left: var(--size) solid transparent;
-  border-right: var(--size) solid transparent;
-  border-top: var(--size) solid #FFFFFF;
+  background: center/contain no-repeat url("mock.asset");
   filter: drop-shadow(0px 6px 3px rgba(0,0,0,0.1));
 }
 
@@ -244,16 +242,14 @@ exports[`renders dynamic-loading FilterCard w/hero correctly 1`] = `
 }
 
 .c1:after {
-  --size: 1.5rem;
+  --size: 3rem;
   position: absolute;
   content: "";
-  width: 0;
-  height: 0;
-  bottom: calc((var(--size) * -1) + 1px);
+  width: var(--size);
+  height: var(--size);
+  bottom: calc((var(--size) * -0.5));
   left: calc(50% - (var(--size) / 2));
-  border-left: var(--size) solid transparent;
-  border-right: var(--size) solid transparent;
-  border-top: var(--size) solid #FFFFFF;
+  background: center/contain no-repeat url("mock.asset");
   filter: drop-shadow(0px 6px 3px rgba(0,0,0,0.1));
 }
 
@@ -439,16 +435,14 @@ exports[`renders standard FilterCard correctly 1`] = `
 }
 
 .c1:after {
-  --size: 1.5rem;
+  --size: 3rem;
   position: absolute;
   content: "";
-  width: 0;
-  height: 0;
-  bottom: calc((var(--size) * -1) + 1px);
+  width: var(--size);
+  height: var(--size);
+  bottom: calc((var(--size) * -0.5));
   left: calc(50% - (var(--size) / 2));
-  border-left: var(--size) solid transparent;
-  border-right: var(--size) solid transparent;
-  border-top: var(--size) solid #FFFFFF;
+  background: center/contain no-repeat url("mock.asset");
   filter: drop-shadow(0px 6px 3px rgba(0,0,0,0.1));
 }
 
@@ -634,16 +628,14 @@ exports[`renders standard FilterCard w/hero correctly 1`] = `
 }
 
 .c1:after {
-  --size: 1.5rem;
+  --size: 3rem;
   position: absolute;
   content: "";
-  width: 0;
-  height: 0;
-  bottom: calc((var(--size) * -1) + 1px);
+  width: var(--size);
+  height: var(--size);
+  bottom: calc((var(--size) * -0.5));
   left: calc(50% - (var(--size) / 2));
-  border-left: var(--size) solid transparent;
-  border-right: var(--size) solid transparent;
-  border-top: var(--size) solid #FFFFFF;
+  background: center/contain no-repeat url("mock.asset");
   filter: drop-shadow(0px 6px 3px rgba(0,0,0,0.1));
 }
 
