@@ -145,6 +145,7 @@ const CheckInput = styled.input`${({ theme }) => css`
   opacity: 0;
   position: absolute;
   margin: 0;
+  
   + span {
     width: 30px;
     height: 30px;
