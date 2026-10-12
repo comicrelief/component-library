@@ -127,7 +127,7 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
                 <ClearSelectionButton
                   color="white"
                   icon={<Undo />}
-                  $show={showFilters}
+                  $show={showFilters || (!showFilters && currentFilters.length !== 0)}
                   disabled={currentFilters.length === 0}
                   onClick={() => {
                     setCurrentFilters([]);

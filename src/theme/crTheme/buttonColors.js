@@ -231,7 +231,7 @@ export default (colorName, buttonType) => {
 
       &:disabled {
         cursor: not-allowed;
-        opacity: 0.5;
+        opacity: 0.35;
       }
 
       // 'Secondary' and 'Tertiary' buttonType tweaks

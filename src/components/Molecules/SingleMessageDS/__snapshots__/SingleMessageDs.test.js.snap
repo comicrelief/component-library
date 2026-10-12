@@ -98,7 +98,7 @@ exports[`renders correctly 1`] = `
 
 .c11:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .c13 {

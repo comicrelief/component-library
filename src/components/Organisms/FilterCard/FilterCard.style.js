@@ -75,7 +75,7 @@ const HeaderWrapper = styled.div`
 `;
 
 const Body = styled.div`
-  margin-bottom: 2rem;
+  margin-bottom: 40px;
 `;
 
 const ControlsWrapper = styled.div`
@@ -147,7 +147,7 @@ const ClearSelectionButton = styled(CustomisedButton)`
 
 const FilterButtonsWrapper = styled.div`
   display: ${({ $show }) => ($show ? 'flex' : 'none')};
-  margin-top: 1rem;
+  margin-top: 2rem;
   flex-wrap: wrap;
   gap: 0.5rem;
   animation: ${fadeIn} 0.1s ease-in;

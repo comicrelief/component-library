@@ -49,7 +49,7 @@ it('renders a standard styled link correctly', () => {
 
 .c0:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 @media (min-width: 740px) {

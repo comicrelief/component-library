@@ -41,12 +41,12 @@ exports[`Image banner left orientation renders correctly 1`] = `
 
 .c21:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .c22:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .c6 {
@@ -681,12 +681,12 @@ exports[`Image banner renders correctly 1`] = `
 
 .c21:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .c22:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .c6 {
@@ -1321,12 +1321,12 @@ exports[`Text-only email widget renders correctly 1`] = `
 
 .c21:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .c22:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .c6 {
@@ -1961,12 +1961,12 @@ exports[`Text-only email widget with copyColor renders correctly 1`] = `
 
 .c21:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .c22:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .c6 {

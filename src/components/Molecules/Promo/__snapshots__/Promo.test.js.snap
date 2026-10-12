@@ -95,7 +95,7 @@ exports[`renders Promo correctly 1`] = `
 
 .c9:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .c0 {
@@ -402,7 +402,7 @@ exports[`renders Promo correctly end position 1`] = `
 
 .c9:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .c0 {
