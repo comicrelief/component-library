@@ -2,7 +2,6 @@ import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import Arrow from '../../Atoms/Icons/Arrow';
 import {
-  Wrapper,
   Grid,
   ButtonCard,
   CardTopWrapper,
@@ -21,8 +20,8 @@ function ExpandedButton({ options = [], selectedId, onSelect }) {
   }, [onSelect]);
 
   return (
-    <Wrapper>
-      <Grid>
+    <>
+      <Grid data-testid="expanded-button-grid">
         {options.map(option => (
           <ButtonCard
             key={option.id}
@@ -31,29 +30,29 @@ function ExpandedButton({ options = [], selectedId, onSelect }) {
             data-test={`expanded-button-${option.id}`}
           >
 
-            <CardTopWrapper>
+            <CardTopWrapper data-testid="expanded-button-card-top-wrapper">
 
-              <HeadingContentWrapper>
+              <HeadingContentWrapper data-testid="expanded-button-heading-content-wrapper">
                 {option.icon && (
-                  <HeadingIconWrapper>
-                    <img src={option.icon} alt="" />
+                  <HeadingIconWrapper data-testid="expanded-button-heading-icon-wrapper">
+                    <img src={option.icon} alt="" data-testid="expanded-button-heading-icon-img" />
                   </HeadingIconWrapper>
                 )}
-                <CardHeading>{option.title}</CardHeading>
+                <CardHeading data-testid="expanded-button-card-heading">{option.title}</CardHeading>
               </HeadingContentWrapper>
 
-              <ArrowWrapper>
-                <Arrow colour="black" />
+              <ArrowWrapper data-testid="expanded-button-arrow-wrapper">
+                <Arrow colour="black" data-testid="expanded-button-arrow" />
               </ArrowWrapper>
 
             </CardTopWrapper>
 
-            <CardBlurb>{option.description}</CardBlurb>
+            <CardBlurb data-testid="expanded-button-card-blurb">{option.description}</CardBlurb>
 
           </ButtonCard>
         ))}
       </Grid>
-    </Wrapper>
+    </>
   );
 }
 
