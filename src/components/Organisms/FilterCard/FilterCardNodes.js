@@ -40,15 +40,9 @@ const FilterCardNodes = ({
     const renderThisNode = (
       // No filters are active...
       currentFilters.length === 0
-          // Or when this node includes tags that are being filtered for...
-          || currentFilters.some(thisTag => thisNode.tags.includes(thisTag))
-          // Or if we're 'hero'-ing it, which bypasses filters (see note below)...
-          || heroFirstNode);
-
-    // TODO: to check with Curtis; when the 'hero' display is chosen,
-    // do we always 'hero' the first node in the CMS list, regardless of filter?
-    // Or do we 'hero' the first node in the filtered list?
-    // If the former, do we update the result total to include this or not?
+      // ... or when this node includes tags that are being filtered for:
+      || currentFilters.some(thisTag => thisNode.tags.includes(thisTag))
+    );
 
     if (renderThisNode && underLimit) {
       // Update our counter
