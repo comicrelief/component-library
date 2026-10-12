@@ -68,25 +68,37 @@ const FilterCardNodes = ({
               width="100%"
               height="100%"
               alt={imageAltText}
+              $isHero={heroFirstNode}
             />
           </NodeImageWrapper>
 
           <NodeCopyWrapper>
-            <NodeCopyLabel tag="p" color="grey" weight="500">
+            <NodeCopyLabel
+              tag="p"
+              color="grey"
+              weight="500"
+              $isHero={heroFirstNode}
+            >
               {label}
             </NodeCopyLabel>
 
             <NodeCopyHeading
               tag={heroFirstNode ? 'h2' : 'p'}
-              $isHero={heroFirstNode}
               weight="700"
+              $isHero={heroFirstNode}
+              $hasDescription={description}
             >
               {heading}
             </NodeCopyHeading>
 
-            <NodeCopyDescription tag="p">
+            {description && (
+            <NodeCopyDescription
+              tag="p"
+              $isHero={heroFirstNode}
+            >
               {description}
             </NodeCopyDescription>
+            )}
 
             <Text tag="p">
               <NodeCopyLink

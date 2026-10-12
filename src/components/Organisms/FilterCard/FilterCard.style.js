@@ -222,6 +222,7 @@ const NodeImageWrapper = styled.div`
 const NodeCopyWrapper = styled.div`
   --s-gap: 1rem;
   --m-gap: 2rem;
+
   flex: 0 0 calc(80% - var(--s-gap));
   align-self: start;
 
@@ -233,6 +234,7 @@ const NodeCopyWrapper = styled.div`
 const Node = styled.div`
   --s-gap: 1rem;
   --m-gap: 2rem;
+  --l-gap: 4rem;
   position: relative;
   display: flex;
   flex: 0 0 100%;
@@ -284,6 +286,7 @@ const Node = styled.div`
 
       ${NodeCopyWrapper} {
         flex: 0 0 calc(60% - var(--s-gap));
+        align-self: center;
       }
   ` : css`
     // Remove funky underline from all non-Hero nodes on this breakpoint
@@ -302,7 +305,7 @@ const Node = styled.div`
 
     ${({ $isHero }) => ($isHero
     ? css`
-      gap: var(--m-gap);
+      gap: var(--l-gap);
       flex: 0 0 100%;
 
       ${NodeImageWrapper} {
@@ -311,7 +314,6 @@ const Node = styled.div`
 
       ${NodeCopyWrapper} {
         flex: 0 0 calc(60% - var(--m-gap));
-        align-self: center;
       }`
     : css`
     flex: 0 0 calc(50% - 1rem);
@@ -321,22 +323,44 @@ const Node = styled.div`
 
 const NodeImage = styled(Picture)`  
   img {
-    border-radius: 0.5rem;
+    border-radius: ${({ $isHero }) => ($isHero ? '1rem' : '0.5rem')};
+
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      border-radius: 1rem;
+    }
   }
 `;
 
 const NodeCopyLabel = styled(Text)`
   font-size: 14px;
+
+  // TODO: Hero styles?
+  margin-bottom: 6px;
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    margin-bottom: 12px;
+  }
 `;
 
 const NodeCopyDescription = styled(Text)`
-  margin-bottom: 1.5rem; 
+  margin-bottom: ${({ $isHero }) => ($isHero ? '2rem' : '1.5rem')};
 `;
 
 const NodeCopyHeading = styled(Text)`
-  ${({ $isHero }) => ($isHero && css`
-    font-weight: normal;
-    margin-top: 0;
+  // TODO: Hero styles?
+
+    ${({ $isHero }) => ($isHero ? css`
+      ${({ $hasDescription }) => (!$hasDescription && css`margin-bottom: 2rem;`)};
+      font-weight: normal;
+      margin-top: 0;`
+    : css`
+    // Replicates the larger, standard margin Description usually has, allowing
+    // spacing above the CTA to be consistent when Desciption isn't present:
+    margin-bottom: ${({ $hasDescription }) => ($hasDescription ? '6px' : '1.5rem')};
+
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      margin-bottom: ${({ $hasDescription }) => ($hasDescription ? '12px' : '1.5rem')};
+    }
   `)}
 `;
 
