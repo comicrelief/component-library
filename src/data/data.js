@@ -1,3 +1,4 @@
+import React from 'react';
 import picture1 from '../assets/picture-1.jpg';
 import picture2 from '../assets/picture-2.jpg';
 import picture3 from '../assets/picture-3.jpg';
@@ -6,6 +7,7 @@ import heroBannerImg from '../assets/PromoLW.jpg';
 import heroBannerLogoSquare from '../assets/HeroBannerLogo-Square.png';
 import heroBannerLogoWide from '../assets/HeroBannerLogo-Wide.png';
 import heroBannerLogoTall from '../assets/HeroBannerLogo-Tall.png';
+import Text from '../components/Atoms/Text/Text';
 
 const defaultData = {
   title: 'What your money does',
@@ -355,14 +357,16 @@ const filterCardTestData = {
   paddingBelow: '2rem',
   pageBackgroundColour: 'grey_light',
   loadingBehaviour: 'Load all cards at once',
-  body: {
-    raw: 'From fundraising packs to bunting, certificates, cake labels and more, find everything you need to take yourself funny for money this Red Nose Day. Select a resource type to filters the results.'
-  },
+  body:
+  <Text>
+    From fundraising packs to bunting, certificates, cake labels and more, find everything
+    you need to take yourself funny for money this Red Nose Day. Select a resource type to
+    filters the results.
+  </Text>,
   firstFilterCardNodeAsHero: false,
   filterCardNodes: [
     {
       id: '09da5344-0104-5b36-833f-83e042cb4068',
-
       title: 'Filter card 1 (Tag A)',
       label: 'Filter Card label',
       heading: 'Filter Card heading (tag A)',

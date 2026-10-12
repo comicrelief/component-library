@@ -107,7 +107,7 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
           </Title>
 
           <Body>
-            {body.raw}
+            {body}
           </Body>
 
           {/* Only render the controls once the content's been fully processed: */}
@@ -211,13 +211,14 @@ FilterCard.propTypes = {
   // CMS content:
   data: PropTypes.shape({
     title: PropTypes.string,
+    body: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.string
+    ]),
     paddingAbove: PropTypes.string,
     paddingBelow: PropTypes.string,
     pageBackgroundColour: PropTypes.string,
     loadingBehaviour: PropTypes.string,
-    body: PropTypes.shape({
-      raw: PropTypes.node
-    }),
     firstFilterCardNodeAsHero: PropTypes.bool,
     filterCardNodes: PropTypes.arrayOf(
       PropTypes.shape({
