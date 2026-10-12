@@ -28,7 +28,7 @@ exports[`renders dynamic-loading FilterCard correctly 1`] = `
 
 .c1 {
   background: #FFFFFF;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   padding: 2rem;
   position: relative;
   box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
@@ -49,7 +49,7 @@ exports[`renders dynamic-loading FilterCard correctly 1`] = `
 }
 
 .c3 {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 740px) {
@@ -191,7 +191,7 @@ exports[`renders dynamic-loading FilterCard w/hero correctly 1`] = `
 
 .c1 {
   background: #FFFFFF;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   padding: 2rem;
   position: relative;
   box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
@@ -212,7 +212,7 @@ exports[`renders dynamic-loading FilterCard w/hero correctly 1`] = `
 }
 
 .c3 {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 740px) {
@@ -354,7 +354,7 @@ exports[`renders standard FilterCard correctly 1`] = `
 
 .c1 {
   background: #FFFFFF;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   padding: 2rem;
   position: relative;
   box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
@@ -375,7 +375,7 @@ exports[`renders standard FilterCard correctly 1`] = `
 }
 
 .c3 {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 740px) {
@@ -517,7 +517,7 @@ exports[`renders standard FilterCard w/hero correctly 1`] = `
 
 .c1 {
   background: #FFFFFF;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   padding: 2rem;
   position: relative;
   box-shadow: rgba(0,0,0,0.25) 0px 0px 1rem;
@@ -538,7 +538,7 @@ exports[`renders standard FilterCard w/hero correctly 1`] = `
 }
 
 .c3 {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 740px) {

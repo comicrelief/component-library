@@ -39,7 +39,7 @@ const Container = styled.div`
 
 const HeaderWrapper = styled.div`
   background: ${({ theme }) => theme.color('white')};
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   padding: 2rem;
   position: relative;
   ${defaultBoxShadow};
@@ -77,7 +77,7 @@ const HeaderWrapper = styled.div`
 `;
 
 const Body = styled.div`
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 `;
 
 const ControlsWrapper = styled.div`
@@ -153,6 +153,10 @@ const FilterButtonsWrapper = styled.div`
   flex-wrap: wrap;
   gap: 0.5rem;
   animation: ${fadeIn} 0.1s ease-in;
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    gap: 1rem;
+  }
 `;
 
 const FilterButton = styled(CustomisedButton)`
