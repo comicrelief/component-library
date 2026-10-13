@@ -43,7 +43,7 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
 
   // Determine our display behaviour based on the CMS option
   const [nodeDisplayLimit, setNodeDisplayLimit] = useState(
-    showNodeLimit(loadingBehaviour)
+    showNodeLimit(loadingBehaviour, firstFilterCardNodeAsHero)
   );
 
   // Keep track of user interactions:

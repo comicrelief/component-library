@@ -120,14 +120,11 @@ const CustomisedButton = styled(Button)`
 const ShowHideFiltersButton = styled(CustomisedButton)`
   // Override all normal button styles to make this work more as a 'toggle':
   &,
+  &:hover,
   &:focus,
   &:focus-within,
   &:focus-visible {
     background-color: ${({ theme, $isActive }) => ($isActive ? `${theme.color('grey_medium')}` : `${theme.color('white')}`)};
-  }
-
-  &:hover {
-    background-color: ${({ theme, $isActive }) => ($isActive ? `${theme.color('white')}` : `${theme.color('grey_medium')}`)};
   }
 
   > ${Copywrapper} {

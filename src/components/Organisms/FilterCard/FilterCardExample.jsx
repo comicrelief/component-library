@@ -23,14 +23,12 @@ export default function FilterCardExample() {
       <ExampleContainer $bg="#F4F3F5" style={{ padding: 0 }}>
         <FilterCard
           data={filterCardTestDataExtra}
-          showMoreIncrement={2}
         />
       </ExampleContainer>
 
       <ExampleContainer $bg="#F4F3F5" style={{ padding: 0 }}>
         <FilterCard
           data={filterCardTestDataHeroExtra}
-          showMoreIncrement={2}
         />
       </ExampleContainer>
     </>

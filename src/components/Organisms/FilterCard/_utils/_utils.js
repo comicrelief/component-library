@@ -41,10 +41,11 @@ const getIcon = whichIcon => {
 };
 
 // Over-engineered to allow us to easily add more options in the future:
-const showNodeLimit = optionLabel => {
+const showNodeLimit = (optionLabel, hasHero) => {
   switch (optionLabel) {
     case 'Load 6 cards at a time + Hero Node (if set)':
-      return 6;
+      // Factor-in any Hero node which would resulting in an uneven grid:
+      return 6 + (hasHero ? 1 : 0);
     case 'Load all cards at once':
     default:
       return 0;
