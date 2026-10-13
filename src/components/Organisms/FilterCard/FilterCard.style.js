@@ -334,8 +334,9 @@ const Node = styled.div`
   }
 `;
 
-const NodeImage = styled(Picture)`  
+const NodeImage = styled(Picture)`
   img {
+    ${defaultBoxShadow()};
     border-radius: ${({ $isHero }) => ($isHero ? '1rem' : '0.5rem')};
 
     @media ${({ theme }) => theme.allBreakpoints('M')} {

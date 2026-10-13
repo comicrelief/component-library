@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, {
+  useState, useEffect, useCallback, useRef
+} from 'react';
 import PropTypes from 'prop-types';
 import PulseLoader from 'react-spinners/PulseLoader';
 import Cross from '../../Atoms/Icons/Cross';
@@ -40,19 +42,41 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [processedNodes, setProcessedNodes] = useState(false);
   const [processedTags, setProcessedTags] = useState(false);
-
-  // Determine our display behaviour based on the CMS option
-  const [nodeDisplayLimit, setNodeDisplayLimit] = useState(
-    showNodeLimit(loadingBehaviour, firstFilterCardNodeAsHero)
-  );
+  const [hideShowMoreButton, setHideShowMoreButton] = useState(false);
+  const initialNodeLimit = useRef(showNodeLimit(loadingBehaviour, firstFilterCardNodeAsHero));
 
   // Keep track of user interactions:
   const [showFilters, setShowFilters] = useState(false);
   const [currentFilters, setCurrentFilters] = useState([]);
-  const [totalState, setTotalState] = useState(0);
+  const [totalNodes, setTotalNodes] = useState(0);
 
-  // Add/remove this filter tag from the state array accordingly:
-  const updateFilters = thisTag => {
+  // Determine our display behaviour based on the CMS option
+  const [nodeRenderLimit, setNodeRenderLimit] = useState(initialNodeLimit.current);
+
+  // Transform the Contentful output for our use-case on initialisation:
+  useEffect(() => {
+    if (isLoading) {
+      setIsLoading(false);
+      const { outputNodes, outputTags } = preprocessNodes(filterCardNodes);
+
+      // Only go ahead once we've got the goods:
+      if (outputNodes && outputTags) {
+        // Pause for a second before going ahead, to prevent nasty Loader
+        // flashes, and let the user register that something has happened:
+        setTimeout(() => {
+          setProcessedNodes(outputNodes);
+          setProcessedTags(outputTags);
+        }, 1000);
+      }
+    }
+  }, [isLoading, filterCardNodes]);
+
+  // Adds/removes a clicked filter tag button from the state accordingly:
+  const updateFilters = useCallback(thisTag => {
+    // When updating filters, reset render and show more displays back to their defaults:
+    setNodeRenderLimit(initialNodeLimit.current);
+    setHideShowMoreButton(true);
+
     // Cache current state:
     let updatedFilters = currentFilters;
 
@@ -71,50 +95,12 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
 
     // Spread as 'new' array to trigger re-render:
     setCurrentFilters([...updatedFilters]);
-  };
-
-  // Callback
-  const setTotalResults = () => {
-    // Only run this check when we're filtering:
-    if (currentFilters.length > 0) {
-      let counter = 0;
-
-      processedNodes.forEach(thisNode => {
-        // Checks this node for a match in the current filters:
-        if (thisNode.tags.some(element => currentFilters.includes(element))) {
-          counter += 1;
-        }
-      });
-
-      setTotalState(counter);
-    } else {
-      // Else if we're not filtering, just render the total amount of content available:
-      setTotalState(processedNodes.length);
-    }
-  };
-
-  useEffect(() => {
-    if (isLoading) {
-      // Use our helper function to best transform the Contentful output for our use cases:
-      const { outputNodes, outputTags } = preprocessNodes(filterCardNodes);
-
-      // Only go ahead once we've got the goods:
-      if (outputNodes && outputTags) {
-        // Pause for a second before going ahead, to prevent nasty Loader
-        // flashes, and let the user register that something has happened:
-        setTimeout(() => {
-          setProcessedNodes(outputNodes);
-          setProcessedTags(outputTags);
-          setIsLoading(false);
-        }, 1000);
-      }
-    }
-  }, [isLoading, filterCardNodes]);
+  }, [currentFilters]);
 
   // Extremely specific active state logic:
   const showHideFilterActive = !(!showFilters && currentFilters.length === 0);
 
-  const currentTotal = `${totalState} ${totalState === 1 ? ' result' : 'results'}`;
+  const currentTotal = `${totalNodes} ${totalNodes === 1 ? ' result' : 'results'}`;
 
   return (
     <Container
@@ -133,7 +119,7 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
             {body}
           </Body>
 
-          {/* Only render the controls once the content's been fully processed: */}
+          {/* Only render the controls once all content has been fully processed: */}
           {(processedTags && processedNodes) ? (
             <>
               <ControlsWrapper>
@@ -170,7 +156,9 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
 
               <FilterButtonsWrapper $show={showFilters}>
                 {Object.keys(processedTags).map(key => {
+                  //
                   const { tag, selectedIcon, unselectedIcon } = processedTags[key];
+                  // Determine 'active' styles
                   const isSelected = currentFilters.includes(tag);
 
                   return (
@@ -204,22 +192,21 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
         <FilterCardNodes
           processedNodes={processedNodes}
           firstFilterCardNodeAsHero={firstFilterCardNodeAsHero}
-          nodeDisplayLimit={nodeDisplayLimit}
+          nodeRenderLimit={nodeRenderLimit}
           currentFilters={currentFilters}
-          updateTotalResult={setTotalResults}
+          updateTotalResult={setTotalNodes}
+          hideShowMoreButton={setHideShowMoreButton}
         />
         )}
 
-        {/* Only display the Show More button when we that functionality has
-         been selected in the CMS, and we've also still got more nodes to display */}
-        {(nodeDisplayLimit > 0 && nodeDisplayLimit < processedNodes.length) && (
-          <ShowMoreButtonWrapper>
-            <Button
-              onClick={() => setNodeDisplayLimit(nodeDisplayLimit + showMoreIncrement)}
-            >
-              Show more
-            </Button>
-          </ShowMoreButtonWrapper>
+        {(!hideShowMoreButton && processedTags && processedNodes) && (
+        <ShowMoreButtonWrapper>
+          <Button
+            onClick={() => setNodeRenderLimit(nodeRenderLimit + showMoreIncrement)}
+          >
+            Show more
+          </Button>
+        </ShowMoreButtonWrapper>
         )}
 
       </OuterWrapper>
