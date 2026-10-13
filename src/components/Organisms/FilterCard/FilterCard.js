@@ -49,7 +49,7 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
   // Keep track of user interactions:
   const [showFilters, setShowFilters] = useState(false);
   const [currentFilters, setCurrentFilters] = useState([]);
-  const [totalResults, setTotalResults] = useState(0);
+  const [totalState, setTotalState] = useState(0);
 
   // Add/remove this filter tag from the state array accordingly:
   const updateFilters = thisTag => {
@@ -73,6 +73,26 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
     setCurrentFilters([...updatedFilters]);
   };
 
+  // Callback
+  const setTotalResults = () => {
+    // Only run this check when we're filtering:
+    if (currentFilters.length > 0) {
+      let counter = 0;
+
+      processedNodes.forEach(thisNode => {
+        // Checks this node for a match in the current filters:
+        if (thisNode.tags.some(element => currentFilters.includes(element))) {
+          counter += 1;
+        }
+      });
+
+      setTotalState(counter);
+    } else {
+      // Else if we're not filtering, just render the total amount of content available:
+      setTotalState(processedNodes.length);
+    }
+  };
+
   useEffect(() => {
     if (isLoading) {
       // Use our helper function to best transform the Contentful output for our use cases:
@@ -81,7 +101,7 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
       // Only go ahead once we've got the goods:
       if (outputNodes && outputTags) {
         // Pause for a second before going ahead, to prevent nasty Loader
-        // flashes, and let the user clock that something has happened:
+        // flashes, and let the user register that something has happened:
         setTimeout(() => {
           setProcessedNodes(outputNodes);
           setProcessedTags(outputTags);
@@ -91,10 +111,10 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
     }
   }, [isLoading, filterCardNodes]);
 
-  const currentTotal = `${totalResults} ${totalResults === 1 ? ' result' : 'results'}`;
-
   // Extremely specific active state logic:
   const showHideFilterActive = !(!showFilters && currentFilters.length === 0);
+
+  const currentTotal = `${totalState} ${totalState === 1 ? ' result' : 'results'}`;
 
   return (
     <Container
@@ -182,11 +202,11 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
         {/* And render the content once it's fully processed */}
         {(processedTags && processedNodes) && (
         <FilterCardNodes
-          updateTotalResult={setTotalResults}
           processedNodes={processedNodes}
           firstFilterCardNodeAsHero={firstFilterCardNodeAsHero}
           nodeDisplayLimit={nodeDisplayLimit}
           currentFilters={currentFilters}
+          updateTotalResult={setTotalResults}
         />
         )}
 

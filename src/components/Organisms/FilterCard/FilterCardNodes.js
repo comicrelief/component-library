@@ -22,12 +22,6 @@ const FilterCardNodes = ({
   nodeDisplayLimit,
   currentFilters
 }) => {
-  // Somewhere to store our results 'counter' without triggering re-renders:
-  const resultRef = useRef(0);
-
-  // Reset this for every re-render:
-  resultRef.current = 0;
-
   const createNodes = processedNodes.map((thisNode, index) => {
     // Applies pinned, hero styling to the first node, when the CMS is set to do so:
     const heroFirstNode = index === 0 && firstFilterCardNodeAsHero;
@@ -45,9 +39,6 @@ const FilterCardNodes = ({
     );
 
     if (renderThisNode && underLimit) {
-      // Update our counter
-      resultRef.current += 1;
-
       const {
         id, label, heading, description,
         image, imageLow, imageSet, imageAltText,
@@ -121,7 +112,8 @@ const FilterCardNodes = ({
   const nodesToRender = createNodes.filter(Boolean);
 
   useEffect(() => {
-    updateTotalResult(nodesToRender.length);
+    // Trigger total-updating callback once we've got nodes to render:
+    updateTotalResult();
   }, [nodesToRender, updateTotalResult]);
 
   return (

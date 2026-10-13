@@ -45,7 +45,7 @@ const HeaderWrapper = styled.div`
   border-radius: 1rem;
   padding: 2rem;
   position: relative;
-  ${defaultBoxShadow};
+  ${defaultBoxShadow()};
 
   // Down 'arrow':
   &:after {
@@ -57,8 +57,8 @@ const HeaderWrapper = styled.div`
     bottom: calc((var(--size) * -0.5));
     left: calc(50% - (var(--size) / 2));
     background: center / contain no-repeat url("${Rectangle}");
-    // Recreating defaultBoxShadow to allow icon to blend against its parent:
-    filter: drop-shadow(0px 6px 3px rgba(0, 0, 0, 0.1));
+    // Since the boxShadow won't extend to cover this, adding a little dropshadow to help it blend better:
+    filter: drop-shadow(0px 6px 3px rgba(0, 0, 0, 0.05));
   }
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {

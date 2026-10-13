@@ -44,8 +44,8 @@ const getIcon = whichIcon => {
 const showNodeLimit = (optionLabel, hasHero) => {
   switch (optionLabel) {
     case 'Load 6 cards at a time + Hero Node (if set)':
-      // Factor-in any Hero node which would resulting in an uneven grid:
-      return 6 + (hasHero ? 1 : 0);
+      // Factor-in any Hero node which'd result in an uneven grid:
+      return (hasHero ? 7 : 6);
     case 'Load all cards at once':
     default:
       return 0;
