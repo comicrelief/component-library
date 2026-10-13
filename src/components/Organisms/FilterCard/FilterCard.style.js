@@ -227,9 +227,11 @@ const NodeImageWrapper = styled.div`
   flex: 0 0 20%;
   aspect-ratio: 1;
   align-self: start;
+  min-width: 75px;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     flex: 0 0 20%;
+    min-width: 165px;
   }
 `;
 
@@ -237,11 +239,11 @@ const NodeCopyWrapper = styled.div`
   --s-gap: 1rem;
   --m-gap: 2rem;
 
-  flex: 0 0 calc(80% - var(--s-gap));
+  flex: 0 0 calc(auto - var(--s-gap));
   align-self: start;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    flex: 0 0 calc(80% - var(--m-gap));
+    flex: 0 0 calc(auto - var(--m-gap));
   }
 `;
 
