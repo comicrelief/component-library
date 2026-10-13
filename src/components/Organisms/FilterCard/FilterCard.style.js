@@ -334,12 +334,13 @@ const NodeImage = styled(Picture)`
 const NodeCopyLabel = styled(Text)`
   font-size: 14px;
 
-  // TODO: Hero styles?
-  margin-bottom: 6px;
+  ${({ $isHero }) => (!$isHero && css`
+    margin-bottom: 6px;
 
-  @media ${({ theme }) => theme.allBreakpoints('M')} {
-    margin-bottom: 12px;
-  }
+    @media ${({ theme }) => theme.allBreakpoints('M')} {
+      margin-bottom: 12px;
+    }`
+  )}
 `;
 
 const NodeCopyDescription = styled(Text)`
@@ -347,8 +348,6 @@ const NodeCopyDescription = styled(Text)`
 `;
 
 const NodeCopyHeading = styled(Text)`
-  // TODO: Hero styles?
-
     ${({ $isHero }) => ($isHero ? css`
       ${({ $hasDescription }) => (!$hasDescription && css`margin-bottom: 2rem;`)};
       font-weight: normal;
