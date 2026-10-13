@@ -47,7 +47,7 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
   );
 
   // Keep track of user interactions:
-  const [showFilters, setShowFilters] = useState(true);
+  const [showFilters, setShowFilters] = useState(false);
   const [currentFilters, setCurrentFilters] = useState([]);
   const [totalResults, setTotalResults] = useState(0);
 
@@ -93,6 +93,9 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
 
   const currentTotal = `${totalResults} ${totalResults === 1 ? ' result' : 'results'}`;
 
+  // Extremely specific active state logic:
+  const showHideFilterActive = !(!showFilters && currentFilters.length === 0);
+
   return (
     <Container
       $paddingAbove={paddingAbove}
@@ -116,7 +119,7 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
               <ControlsWrapper>
                 <ShowHideFiltersButton
                   color="white"
-                  $showFilters={showFilters}
+                  $isActive={showHideFilterActive}
                   aria-pressed={showFilters}
                   onClick={() => { setShowFilters(!showFilters); }}
                   icon={showFilters ? <Cross /> : <Filter />}
@@ -127,7 +130,7 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
                 <ClearSelectionButton
                   color="white"
                   icon={<Undo />}
-                  $show={showFilters || (!showFilters && currentFilters.length !== 0)}
+                  $show={showHideFilterActive}
                   disabled={currentFilters.length === 0}
                   onClick={() => {
                     setCurrentFilters([]);

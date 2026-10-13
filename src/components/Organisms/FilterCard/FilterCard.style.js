@@ -20,7 +20,9 @@ const OuterWrapper = styled.div`
 `;
 
 const Title = styled(Text)`
-//
+   @media ${({ theme }) => theme.allBreakpoints('L')} {
+    margin-bottom: 2rem;
+  }
 `;
 
 const Container = styled.div`
@@ -116,6 +118,18 @@ const CustomisedButton = styled(Button)`
 `;
 
 const ShowHideFiltersButton = styled(CustomisedButton)`
+  // Override all normal button styles to make this work more as a 'toggle':
+  &,
+  &:focus,
+  &:focus-within,
+  &:focus-visible {
+    background-color: ${({ theme, $isActive }) => ($isActive ? `${theme.color('grey_medium')}` : `${theme.color('white')}`)};
+  }
+
+  &:hover {
+    background-color: ${({ theme, $isActive }) => ($isActive ? `${theme.color('white')}` : `${theme.color('grey_medium')}`)};
+  }
+
   > ${Copywrapper} {
     // Fixed label width to prevent squirming when the label copy changes:
     width: 7rem;
