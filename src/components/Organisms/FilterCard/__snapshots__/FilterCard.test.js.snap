@@ -122,6 +122,8 @@ exports[`renders standard FilterCard correctly 1`] = `
 
 <div
   className="c0"
+  data-testid="FilterCard"
+  id="filtercard-STANDARD"
 >
   <div
     className=""
@@ -321,6 +323,8 @@ exports[`renders standard FilterCard w/expanded content + loader 1`] = `
 
 <div
   className="c0"
+  data-testid="FilterCard"
+  id="filtercard--EXPANDED-LOADER"
 >
   <div
     className=""
@@ -520,6 +524,8 @@ exports[`renders standard FilterCard w/expanded content 1`] = `
 
 <div
   className="c0"
+  data-testid="FilterCard"
+  id="filtercard--EXPANDED"
 >
   <div
     className=""
@@ -719,6 +725,8 @@ exports[`renders standard FilterCard w/expanded content, loader + hero 1`] = `
 
 <div
   className="c0"
+  data-testid="FilterCard"
+  id="filtercard--EXPANDED-LOADER-HERO"
 >
   <div
     className=""
@@ -918,6 +926,8 @@ exports[`renders standard FilterCard w/hero correctly 1`] = `
 
 <div
   className="c0"
+  data-testid="FilterCard"
+  id="filtercard-HERO"
 >
   <div
     className=""

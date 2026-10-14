@@ -367,14 +367,14 @@ const filterCardConfig = {
 
 const filterCardTestDataStandard = {
   ...filterCardConfig,
-  id: '8c17eb9e-1435-5a8f-9d18-426c03c35e9e-STANDARD',
+  id: 'filtercard-STANDARD',
   title: 'Your fundraising resources: STANDARD',
   filterCardNodes: FilterCardNodes4
 };
 
 const filterCardTestDataHero = {
   ...filterCardConfig,
-  id: '8c17eb9e-1435-5a8f-9d18-426c03c35e9e-HERO',
+  id: 'filtercard-HERO',
   title: 'Your fundraising resources: HERO',
   firstFilterCardNodeAsHero: true,
   filterCardNodes: FilterCardNodes5
@@ -382,14 +382,14 @@ const filterCardTestDataHero = {
 
 const filterCardTestDataExpanded = {
   ...filterCardConfig,
-  id: '8c17eb9e-1435-5a8f-9d18-426c03c35e9e-EXPANDED',
+  id: 'filtercard--EXPANDED',
   title: 'Your fundraising resources: EXPANDED',
   filterCardNodes: FilterCardNodes20
 };
 
 const filterCardTestDataExpandedLoader = {
   ...filterCardConfig,
-  id: '8c17eb9e-1435-5a8f-9d18-426c03c35e9e-EXPANDED-LOADER',
+  id: 'filtercard--EXPANDED-LOADER',
   title: 'Your fundraising resources: EXPANDED + LOADER',
   loadingBehaviour: 'Load 6 cards at a time + Hero Node (if set)',
   filterCardNodes: FilterCardNodes20
@@ -397,7 +397,7 @@ const filterCardTestDataExpandedLoader = {
 
 const filterCardTestDataExpandedLoaderHero = {
   ...filterCardConfig,
-  id: '8c17eb9e-1435-5a8f-9d18-426c03c35e9e-EXPANDED-LOADER-HERO',
+  id: 'filtercard--EXPANDED-LOADER-HERO',
   title: 'Your fundraising resources: EXPANDED + LOADER + HERO',
   loadingBehaviour: 'Load 6 cards at a time + Hero Node (if set)',
   filterCardNodes: FilterCardNodes20,

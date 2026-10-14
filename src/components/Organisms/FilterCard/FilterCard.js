@@ -29,6 +29,7 @@ import {
 const FilterCard = ({ data }) => {
   const {
     body,
+    id,
     filterCardNodes,
     title,
     firstFilterCardNodeAsHero = false,
@@ -106,6 +107,8 @@ const FilterCard = ({ data }) => {
       $paddingAbove={paddingAbove}
       $paddingBelow={paddingBelow}
       $pageBackgroundColour={pageBackgroundColour}
+      data-testid="FilterCard"
+      id={id}
     >
       <OuterWrapper>
         <HeaderWrapper>
@@ -215,6 +218,7 @@ const FilterCard = ({ data }) => {
 FilterCard.propTypes = {
   // CMS content:
   data: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     body: PropTypes.oneOfType([
       PropTypes.node,
