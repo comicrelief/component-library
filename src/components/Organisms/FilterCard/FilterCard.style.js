@@ -171,6 +171,7 @@ const FilterButtonsWrapper = styled.div`
 const FilterButton = styled(CustomisedButton)`
   box-shadow: 0px 0px 0px 1px ${({ theme }) => theme.color('grey_medium')} inset;
   display: inline-flex;
+  flex-grow: 1;
 
   // Increase specificity to override style defaults:
   ${FilterButtonsWrapper} & {
@@ -204,6 +205,10 @@ const FilterButton = styled(CustomisedButton)`
         box-shadow: none;
       }
   `)};
+  }
+
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    flex-grow: 0;
   }
 `;
 
