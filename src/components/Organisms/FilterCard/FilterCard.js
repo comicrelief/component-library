@@ -43,7 +43,6 @@ const FilterCard = ({ data }) => {
   const showMoreIncrement = 6;
 
   // Load state and content:
-  const [isLoading, setIsLoading] = useState(true);
   const [processedNodes, setProcessedNodes] = useState(false);
   const [processedTags, setProcessedTags] = useState(false);
   const [hideShowMoreButton, setHideShowMoreButton] = useState(false);
@@ -59,21 +58,21 @@ const FilterCard = ({ data }) => {
 
   // Transform the Contentful output for our use case on initialisation:
   useEffect(() => {
-    if (isLoading) {
-      setIsLoading(false);
-      const { outputNodes, outputTags } = preprocessNodes(filterCardNodes);
+    let preprocessTimer;
 
-      // Only go ahead once we've got the goods:
-      if (outputNodes && outputTags) {
-        // Pause for a second before going ahead, to prevent nasty Loader
-        // flashes, and let the user register that something has happened:
-        setTimeout(() => {
-          setProcessedNodes(outputNodes);
-          setProcessedTags(outputTags);
-        }, 1000);
-      }
+    const { outputNodes, outputTags } = preprocessNodes(filterCardNodes);
+
+    // Only go ahead once we've got the goods:
+    if (outputNodes && outputTags) {
+      // Pause for a second before going ahead, to prevent nasty Loader
+      // flashes, and let the user register that something has happened:
+      preprocessTimer = setTimeout(() => {
+        setProcessedNodes(outputNodes);
+        setProcessedTags(outputTags);
+      }, 1000);
     }
-  }, [isLoading, filterCardNodes]);
+    return () => clearTimeout(preprocessTimer);
+  }, [filterCardNodes]);
 
   // Adds/removes a clicked filter tag button from the state array accordingly:
   const updateFilters = useCallback(thisTag => {
@@ -100,7 +99,7 @@ const FilterCard = ({ data }) => {
 
   const showHideFilterActive = !(!showFilters && currentFilters.length === 0);
 
-  const currentTotal = `${totalNodes} ${totalNodes === 1 ? ' result' : 'results'}`;
+  const currentTotal = `${totalNodes} ${totalNodes === 1 ? 'result' : 'results'}`;
 
   return (
     <Container
