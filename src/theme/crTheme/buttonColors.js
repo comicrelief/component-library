@@ -90,12 +90,6 @@ const buttonColors = {
     hoverBackground: color('grey'),
     hovertextColour: color('black')
   },
-  grey_medium: {
-    background: color('grey_medium'),
-    textColour: color('black'),
-    hoverBackground: color('grey'),
-    hovertextColour: color('white')
-  },
   grey_light: {
     background: color('grey_light'),
     textColour: color('black'),

@@ -26,7 +26,7 @@ import {
   ShowMoreButtonWrapper
 } from './FilterCard.style';
 
-const FilterCard = ({ showMoreIncrement = 6, data }) => {
+const FilterCard = ({ data }) => {
   const {
     body,
     filterCardNodes,
@@ -37,6 +37,9 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
     paddingBelow = '1rem',
     pageBackgroundColour = 'transparent'
   } = data;
+
+  // Not currently a CMS option, but keeping it extrapolated for good measure for now:
+  const showMoreIncrement = 6;
 
   // Load state and content:
   const [isLoading, setIsLoading] = useState(true);
@@ -53,7 +56,7 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
   // Determine our display behaviour based on the CMS option
   const [nodeRenderLimit, setNodeRenderLimit] = useState(initialNodeLimit.current);
 
-  // Transform the Contentful output for our use-case on initialisation:
+  // Transform the Contentful output for our use case on initialisation:
   useEffect(() => {
     if (isLoading) {
       setIsLoading(false);
@@ -71,9 +74,9 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
     }
   }, [isLoading, filterCardNodes]);
 
-  // Adds/removes a clicked filter tag button from the state accordingly:
+  // Adds/removes a clicked filter tag button from the state array accordingly:
   const updateFilters = useCallback(thisTag => {
-    // When updating filters, reset render and show more displays back to their defaults:
+    // When updating filters, reset render and 'Show More' displays config back to defaults:
     setNodeRenderLimit(initialNodeLimit.current);
     setHideShowMoreButton(true);
 
@@ -81,23 +84,19 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
     let updatedFilters = currentFilters;
 
     if (updatedFilters.includes(thisTag)) {
-      // Grab the index of the tag we want to remove:
-      const thisIndex = updatedFilters.indexOf(thisTag);
-
-      // Create a new array from the 2 remaining slices:
+      // Create 2 slices either side of the tag we're removing, and combine into a new array
       updatedFilters = [
-        ...updatedFilters.slice(0, thisIndex),
-        ...updatedFilters.slice(thisIndex + 1)
+        ...updatedFilters.slice(0, updatedFilters.indexOf(thisTag)),
+        ...updatedFilters.slice(updatedFilters.indexOf(thisTag) + 1)
       ];
     } else {
       updatedFilters.push(thisTag);
     }
 
-    // Spread as 'new' array to trigger re-render:
+    // Spread as a new array to trigger re-render:
     setCurrentFilters([...updatedFilters]);
   }, [currentFilters]);
 
-  // Extremely specific active state logic:
   const showHideFilterActive = !(!showFilters && currentFilters.length === 0);
 
   const currentTotal = `${totalNodes} ${totalNodes === 1 ? ' result' : 'results'}`;
@@ -141,7 +140,6 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
                   onClick={() => {
                     setCurrentFilters([]);
                   }}
-
                 >
                   Clear selection
                 </ClearSelectionButton>
@@ -156,9 +154,7 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
 
               <FilterButtonsWrapper $show={showFilters}>
                 {Object.keys(processedTags).map(key => {
-                  //
                   const { tag, selectedIcon, unselectedIcon } = processedTags[key];
-                  // Determine 'active' styles
                   const isSelected = currentFilters.includes(tag);
 
                   return (
@@ -172,7 +168,7 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
                       aria-pressed={isSelected}
                       icon={isSelected ? selectedIcon : unselectedIcon}
                       onClick={() => { updateFilters(tag); }}
-                      // Forces a re-render to trigger our flash-reducing, icon fade in:
+                      // Force a re-render to trigger our flash-reducing, fade-in CSS animation:
                       iconKey={`${isSelected}`}
                     >
                       {tag}
@@ -182,12 +178,12 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
               </FilterButtonsWrapper>
             </>
           )
-            // Otherwise, shown the nifty loader:
+            // If content is still loading, shown the nifty loader:
             : <PulseLoader color="black" style={{ textAlign: 'center', display: 'block' }} />
           }
         </HeaderWrapper>
 
-        {/* And render the content once it's fully processed */}
+        {/* Render the content itself once it's fully processed */}
         {(processedTags && processedNodes) && (
         <FilterCardNodes
           processedNodes={processedNodes}
@@ -199,6 +195,8 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
         />
         )}
 
+        {/* Only show the Show More button when appropriate,
+        hideShowMoreButton set within FilterCardNodes */}
         {(!hideShowMoreButton && processedTags && processedNodes) && (
         <ShowMoreButtonWrapper>
           <Button
@@ -215,9 +213,6 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
 };
 
 FilterCard.propTypes = {
-  // Not a CMS option (currently) but gives flexibility to better
-  // demonstrate this functionality in the Component Library examples:
-  showMoreIncrement: PropTypes.number,
   // CMS content:
   data: PropTypes.shape({
     title: PropTypes.string.isRequired,

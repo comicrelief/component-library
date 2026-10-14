@@ -23,8 +23,8 @@ const FilterCardNodes = ({
   currentFilters,
   hideShowMoreButton
 }) => {
-  // To keep track of how many nodes we successfully rendered,
-  // plus how many nodes the current filter has associated with it:
+  // Track of how many nodes we successfully rendered, plus how
+  // many the current filter has associated with it in total:
   let currentNodeCount = 0;
   let totalNodeCount = 0;
 
@@ -35,18 +35,17 @@ const FilterCardNodes = ({
     // Whether or not this node contains a tag we're currently filtering for:
     const tagMatch = currentFilters.some(thisTag => thisNode.tags.includes(thisTag));
 
-    // Only insist on a match when filtering, otherwise just count _every_ node;
-    // required for the 'results' readout in the parent component:
+    // Only insist on a tag match when filtering, otherwise just count _every_ node;
     if ((filtersActive && tagMatch) || !filtersActive) totalNodeCount += 1;
-
-    // Check to see if we've even got a render limit before comparing to the current counter:
-    const underLimit = nodeRenderLimit === 0
-      || (nodeRenderLimit > 0 && currentNodeCount < nodeRenderLimit);
 
     // Render this node when all filters are inactive, or when it matches 1+ of our active filters:
     const renderThisNode = (!filtersActive || tagMatch);
 
-    // If we meet the criteria, go forth and render:
+    // Finally, check if we've even got a render limit before comparing to the current counter:
+    const underLimit = nodeRenderLimit === 0
+      || (nodeRenderLimit > 0 && currentNodeCount < nodeRenderLimit);
+
+    // If we meet both criteria, go forth and render:
     if (renderThisNode && underLimit) {
       const {
         id, label, heading, description,
@@ -54,8 +53,9 @@ const FilterCardNodes = ({
         url, ctaText, ctaIcon
       } = thisNode;
 
-      // Applies the hero styling to the first node, when the CMS is set to do so:
+      // Applies the Hero styling to the first node, when the CMS is set to do so:
       const heroFirstNode = index === 0 && firstFilterCardNodeAsHero;
+
       // Bump the counter for this successful render:
       currentNodeCount += 1;
 
@@ -122,15 +122,15 @@ const FilterCardNodes = ({
     return null;
   });
 
-  // Remove any nulls:
+  // Remove any nulls from our map-function created createNodes array:
   const nodesToRender = createNodes.filter(Boolean);
 
   useEffect(() => {
-    // Let the parent know how many *total* nodes this filter combination has associated
-    // with it (for the 'Results' readout), rather than how many we're *currently* rendering:
+    // Let the parent know how many _total_ nodes this filter combination has associated
+    // with it (for the 'Results' readout), rather than how many we're _currently_ rendering:
     updateTotalResult(totalNodeCount);
 
-    // And let the parent know if we've hit the limit or not
+    // And also let it know if we've rendered everything we can:
     hideShowMoreButton(currentNodeCount === totalNodeCount);
   }, [nodesToRender, updateTotalResult, hideShowMoreButton, currentNodeCount, totalNodeCount]);
 
