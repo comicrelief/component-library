@@ -93,6 +93,7 @@ const FilterCardNodes = ({
               weight="700"
               $isHero={heroFirstNode}
               $hasDescription={description}
+              data-testid="FilterCard-Node--Heading"
             >
               {heading}
             </NodeCopyHeading>
