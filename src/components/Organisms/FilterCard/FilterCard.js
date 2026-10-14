@@ -131,6 +131,7 @@ const FilterCard = ({ data }) => {
                   aria-pressed={showFilters}
                   onClick={() => { setShowFilters(!showFilters); }}
                   icon={showFilters ? <Cross /> : <Filter />}
+                  data-testid="FilterCard-ShowHideButton"
                 >
                   {showFilters ? 'Hide Filters' : 'Show Filters'}
                 </ShowHideFiltersButton>
@@ -143,11 +144,14 @@ const FilterCard = ({ data }) => {
                   onClick={() => {
                     setCurrentFilters([]);
                   }}
+                  data-testid="FilterCard-ClearSelectionButton"
                 >
                   Clear selection
                 </ClearSelectionButton>
 
-                <ResultsWrapper>
+                <ResultsWrapper
+                  data-testid="FilterCard-Results"
+                >
                   <Text tag="span">
                     { currentTotal }
                   </Text>
@@ -173,6 +177,7 @@ const FilterCard = ({ data }) => {
                       onClick={() => { updateFilters(tag); }}
                       // Force a re-render to trigger our flash-reducing, fade-in CSS animation:
                       iconKey={`${isSelected}`}
+                      data-testid="FilterCard-FilterButton"
                     >
                       {tag}
                     </FilterButton>
@@ -195,6 +200,7 @@ const FilterCard = ({ data }) => {
           currentFilters={currentFilters}
           updateTotalResult={setTotalNodes}
           hideShowMoreButton={setHideShowMoreButton}
+          data-testid="FilterCard-Nodes"
         />
         )}
 
@@ -204,6 +210,7 @@ const FilterCard = ({ data }) => {
         <ShowMoreButtonWrapper>
           <Button
             onClick={() => setNodeRenderLimit(nodeRenderLimit + showMoreIncrement)}
+            data-testid="FilterCard-ShowMoreButton"
           >
             Show more
           </Button>

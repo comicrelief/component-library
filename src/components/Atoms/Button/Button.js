@@ -21,7 +21,6 @@ const Button = React.forwardRef(({
 
   return (
     <StyledButton
-      {...rest}
       as={wrapper ? 'span' : 'button'}
       ref={ref}
       $fullWidth={fullWidth}
@@ -30,6 +29,7 @@ const Button = React.forwardRef(({
       data-testid="Button"
       $hasIcon={hasIcon}
       $iconLeft={iconLeft}
+      {...rest}
     >
 
       {hasIcon

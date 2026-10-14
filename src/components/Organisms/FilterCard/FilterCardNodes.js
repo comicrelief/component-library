@@ -63,6 +63,7 @@ const FilterCardNodes = ({
         <Node
           key={id}
           $isHero={heroFirstNode}
+          data-testid="FilterCard-Node"
         >
           <NodeImageWrapper>
             <NodeImage
