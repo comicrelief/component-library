@@ -8,7 +8,7 @@ import Filter from '../../Atoms/Icons/Filter';
 import Undo from '../../Atoms/Icons/Undo';
 import Text from '../../Atoms/Text/Text';
 import FilterCardNodes from './FilterCardNodes';
-import { preprocessNodes, showNodeLimit } from './_utils/_utils';
+import { preprocessNodes, renderNodeLimit } from './_utils/_utils';
 import Button from '../../Atoms/Button/Button';
 
 import {
@@ -43,7 +43,7 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
   const [processedNodes, setProcessedNodes] = useState(false);
   const [processedTags, setProcessedTags] = useState(false);
   const [hideShowMoreButton, setHideShowMoreButton] = useState(false);
-  const initialNodeLimit = useRef(showNodeLimit(loadingBehaviour, firstFilterCardNodeAsHero));
+  const initialNodeLimit = useRef(renderNodeLimit(loadingBehaviour, firstFilterCardNodeAsHero));
 
   // Keep track of user interactions:
   const [showFilters, setShowFilters] = useState(false);

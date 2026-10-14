@@ -53,7 +53,6 @@ export default function IconsExample() {
             ['Post', <Post size={48} colour="black" />],
             ['Filter', <Filter size={48} colour="black" />],
             ['Undo', <Undo size={48} colour="black" />]
-
           ].map(([name, icon]) => (
             <IconCard key={name}>
               {icon}
