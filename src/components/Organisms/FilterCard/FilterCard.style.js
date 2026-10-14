@@ -233,9 +233,6 @@ const NodeImageWrapper = styled.div`
 `;
 
 const NodeCopyWrapper = styled.div`
-  --s-gap: 1rem;
-  --m-gap: 2rem;
-
   flex: 0 0 calc(auto - var(--s-gap));
   align-self: start;
 

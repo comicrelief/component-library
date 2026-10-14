@@ -23,12 +23,12 @@ const IconCard = styled.div`
   border: 1px solid #e1e2e3;
   border-radius: 6px;
   min-width: 100px;
-  background: ${({ dark }) => (dark ? '#222' : '#fff')};
+  background: ${({ $dark }) => ($dark ? '#222' : '#fff')};
 `;
 
 const Name = styled.p`
   font-size: 0.75rem;
-  color: ${({ dark }) => (dark ? '#fff' : '#333')};
+  color: ${({ $dark }) => ($dark ? '#fff' : '#333')};
   margin: 0;
   text-align: center;
 `;
@@ -90,9 +90,9 @@ export default function IconsExample() {
         <h3>CtaArrow — directions</h3>
         <Grid>
           {directions.map(dir => (
-            <IconCard key={dir} dark>
+            <IconCard key={dir} $dark>
               <CtaArrow size={48} colour="red" direction={dir} />
-              <Name dark>{dir}</Name>
+              <Name $dark>{dir}</Name>
             </IconCard>
           ))}
         </Grid>
