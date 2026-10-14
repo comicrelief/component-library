@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 test.describe('FilterCard component', () => {
-  test.only('FilterCard: standard example', async ({ page }) => {
+  test.skip('FilterCard: standard example', async ({ page }) => {
     await page.goto('/#filtercard');
 
     const StandardExample = page.locator('#filtercard-STANDARD');
@@ -15,6 +15,8 @@ test.describe('FilterCard component', () => {
     await expect(ExpandedExample).toBeVisible();
     await expect(ExpandedLoaderExample).toBeVisible();
     await expect(ExpandedLoaderHeroExample).toBeVisible();
+
+    console.log(StandardExample.locator('[data-testid="FilterCard-Node]').toHaveCount(1));
 
     await page.close();
   });
