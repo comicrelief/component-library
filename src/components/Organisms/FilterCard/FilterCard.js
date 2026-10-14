@@ -159,7 +159,10 @@ const FilterCard = ({ data }) => {
 
               </ControlsWrapper>
 
-              <FilterButtonsWrapper $show={showFilters}>
+              <FilterButtonsWrapper
+                $show={showFilters}
+                data-testid="FilterCard-FilterButtonsWrapper"
+              >
                 {Object.keys(processedTags).map(key => {
                   const { tag, selectedIcon, unselectedIcon } = processedTags[key];
                   const isSelected = currentFilters.includes(tag);

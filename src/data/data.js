@@ -367,14 +367,14 @@ const filterCardConfig = {
 
 const filterCardTestDataStandard = {
   ...filterCardConfig,
-  id: 'filtercard-STANDARD',
+  id: 'filtercard--standard',
   title: 'Your fundraising resources: STANDARD',
   filterCardNodes: FilterCardNodes4
 };
 
 const filterCardTestDataHero = {
   ...filterCardConfig,
-  id: 'filtercard-HERO',
+  id: 'filtercard--hero',
   title: 'Your fundraising resources: HERO',
   firstFilterCardNodeAsHero: true,
   filterCardNodes: FilterCardNodes5
@@ -382,14 +382,14 @@ const filterCardTestDataHero = {
 
 const filterCardTestDataExpanded = {
   ...filterCardConfig,
-  id: 'filtercard--EXPANDED',
+  id: 'filtercard--expanded',
   title: 'Your fundraising resources: EXPANDED',
   filterCardNodes: FilterCardNodes20
 };
 
 const filterCardTestDataExpandedLoader = {
   ...filterCardConfig,
-  id: 'filtercard--EXPANDED-LOADER',
+  id: 'filtercard--expanded-loader',
   title: 'Your fundraising resources: EXPANDED + LOADER',
   loadingBehaviour: 'Load 6 cards at a time + Hero Node (if set)',
   filterCardNodes: FilterCardNodes20
@@ -397,7 +397,7 @@ const filterCardTestDataExpandedLoader = {
 
 const filterCardTestDataExpandedLoaderHero = {
   ...filterCardConfig,
-  id: 'filtercard--EXPANDED-LOADER-HERO',
+  id: 'filtercard--expanded-loader-hero',
   title: 'Your fundraising resources: EXPANDED + LOADER + HERO',
   loadingBehaviour: 'Load 6 cards at a time + Hero Node (if set)',
   filterCardNodes: FilterCardNodes20,
