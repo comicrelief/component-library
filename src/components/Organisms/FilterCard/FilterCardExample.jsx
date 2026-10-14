@@ -2,7 +2,12 @@ import React from 'react';
 import { ExampleContainer } from '../../../demos/SharedStyles';
 import FilterCard from './FilterCard';
 import {
-  filterCardTestData, filterCardTestDataHero, filterCardTestDataExtra, filterCardTestDataHeroExtra
+  filterCardTestDataStandard,
+  filterCardTestDataHero,
+  filterCardTestDataExpanded,
+  filterCardTestDataExpandedLoader,
+  filterCardTestDataExpandedLoaderHero
+
 } from '../../../data/data';
 
 export default function FilterCardExample() {
@@ -10,7 +15,7 @@ export default function FilterCardExample() {
     <>
       <ExampleContainer $bg="#F4F3F5" style={{ padding: 0 }}>
         <FilterCard
-          data={filterCardTestData}
+          data={filterCardTestDataStandard}
         />
       </ExampleContainer>
 
@@ -22,15 +27,22 @@ export default function FilterCardExample() {
 
       <ExampleContainer $bg="#F4F3F5" style={{ padding: 0 }}>
         <FilterCard
-          data={filterCardTestDataExtra}
+          data={filterCardTestDataExpanded}
         />
       </ExampleContainer>
 
       <ExampleContainer $bg="#F4F3F5" style={{ padding: 0 }}>
         <FilterCard
-          data={filterCardTestDataHeroExtra}
+          data={filterCardTestDataExpandedLoader}
         />
       </ExampleContainer>
+
+      <ExampleContainer $bg="#F4F3F5" style={{ padding: 0 }}>
+        <FilterCard
+          data={filterCardTestDataExpandedLoaderHero}
+        />
+      </ExampleContainer>
+
     </>
   );
 }

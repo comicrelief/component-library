@@ -30,8 +30,8 @@ const FilterCard = ({ showMoreIncrement = 6, data }) => {
   const {
     body,
     filterCardNodes,
-    firstFilterCardNodeAsHero,
     title,
+    firstFilterCardNodeAsHero = false,
     loadingBehaviour = null,
     paddingAbove = '0rem',
     paddingBelow = '1rem',
@@ -220,11 +220,11 @@ FilterCard.propTypes = {
   showMoreIncrement: PropTypes.number,
   // CMS content:
   data: PropTypes.shape({
-    title: PropTypes.string,
+    title: PropTypes.string.isRequired,
     body: PropTypes.oneOfType([
       PropTypes.node,
       PropTypes.string
-    ]),
+    ]).isRequired,
     paddingAbove: PropTypes.string,
     paddingBelow: PropTypes.string,
     pageBackgroundColour: PropTypes.string,
