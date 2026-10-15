@@ -21,7 +21,6 @@ const Link = ({
   target = null,
   mobileColour = null,
   icon = null,
-  helperText = '',
   ...rest
 }) => {
   const [documentHost, setDocumentHost] = useState('');
@@ -51,9 +50,6 @@ const Link = ({
   }
   const hasIcon = icon !== null;
 
-  // Handle all 4 possibilities
-  const combinedHelperText = `${helperText}${(helperText && window === '_blank') && ' - '}${window === '_blank' ? '(opens in new window)' : ''}`;
-
   useEffect(() => {
     setDocumentHost(document.location.host);
   }, []);
@@ -73,8 +69,7 @@ const Link = ({
       $buttonType={buttonType}
     >
       {children}
-
-      {combinedHelperText && (<HelperText>{combinedHelperText}</HelperText>)}
+      {window === '_blank' && <HelperText>(opens in new window)</HelperText>}
       {hasIcon && <IconWrapper type={type}>{icon}</IconWrapper>}
     </StyledLink>
   );
@@ -99,7 +94,6 @@ Link.propTypes = {
   /** Embed icons */
   icon: PropTypes.node,
   fullWidth: PropTypes.bool,
-  helperText: PropTypes.string,
   // Primary will the default for the vast majority of contexts; with
   // Secondary and Tertirary being manually set by developers where required
   buttonType: PropTypes.oneOf([

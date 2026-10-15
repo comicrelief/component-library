@@ -48,8 +48,8 @@ export default function LinkExample() {
       </ExampleContainer>
 
       <ExampleContainer>
-        <Link color="yellow" href="/test" target="blank" type="button" helperText="Some useful content for screenreaders">
-          Link as button with extra HelperText
+        <Link color="yellow" href="/test" target="blank" type="button">
+          Link as button
         </Link>
       </ExampleContainer>
 
