@@ -1,7 +1,9 @@
 import React from 'react';
 import Link from './Link';
 import buttonTypes from '../../../theme/crTheme/buttonTypes';
-import { External, Download, Favourite, Internal, Chevron, Arrow, AtSign } from '../Icons/index';
+import {
+  External, Download, Favourite, Internal, Chevron, Arrow, AtSign
+} from '../Icons/index';
 import { ExampleContainer } from '../../../demos/SharedStyles';
 
 export default function LinkExample() {
@@ -46,8 +48,8 @@ export default function LinkExample() {
       </ExampleContainer>
 
       <ExampleContainer>
-        <Link color="yellow" href="/test" target="blank" type="button">
-          Link as button
+        <Link color="yellow" href="/test" target="blank" type="button" helperText="Some useful content for screenreaders">
+          Link as button with extra HelperText
         </Link>
       </ExampleContainer>
 
@@ -106,7 +108,7 @@ export default function LinkExample() {
           href="#anchor"
           target="blank"
           type="button"
-          icon={<Internal colour="white" mobileColour="red"/>}
+          icon={<Internal colour="white" mobileColour="red" />}
         >
           Internal link, 'blue' with red icon on tablet and mobile
         </Link>
