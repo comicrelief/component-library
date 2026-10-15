@@ -78,7 +78,7 @@ const FilterCardNodes = ({
             />
           </NodeImageWrapper>
 
-          <NodeCopyWrapper>
+          <NodeCopyWrapper tabIndex="0">
             <NodeCopyLabel
               tag="p"
               color="grey"
