@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 
 // Global variables accessible by all tests:
 let thisExample; let filterCardNode; let filterButtonsWrapper; let clearSelectionButton;
-let tagAButton; let tagBButton; let tagCButton; let tagDButton;
+let tagAButton; let tagBButton; let tagCButton; let tagDButton; let showMoreButton;
 let showHideFiltersButton; let totalResults; let filterCardNodeHeading;
 
 test.describe('FilterCard component', () => {
@@ -22,12 +22,15 @@ test.describe('FilterCard component', () => {
     tagCButton = page.locator('button[data-testid="FilterCard-FilterButton"][value="Tag C"]');
     tagDButton = page.locator('button[data-testid="FilterCard-FilterButton"][value="Tag D"]');
 
+    // Show More button:
+    showMoreButton = page.locator('button[data-testid="FilterCard-ShowMoreButton"]');
+
     // Let's a-go
     await page.goto('/#filtercard');
   });
 
   // Focuses on the general filter functionality:
-  test.only('FilterCard: test filtering on Standard example', async ({ page }) => {
+  test('FilterCard: test filtering on Standard example', async ({ page }) => {
     thisExample = page.locator('#filtercard--standard');
 
     // Assert this example:
@@ -97,6 +100,86 @@ test.describe('FilterCard component', () => {
 
     // And the 'clear' button disbled once again:
     await expect(thisExample.locator(clearSelectionButton)).toBeDisabled();
+
+    await page.close();
+  });
+
+  // Focuses on the Show More functionality:
+  test('FilterCard: test filtering on expanded loader hero example', async ({ page }) => {
+    thisExample = page.locator('#filtercard--expanded-loader-hero');
+
+    // Assert this example:
+    await expect(thisExample).toBeVisible();
+
+    // Only 7 should be currently _visible_; the default 6 when using the loader, + the Hero'd node:
+    await expect(thisExample.locator(filterCardNode)).toHaveCount(7);
+
+    // But the Result display lists how many _potential_ Nodes are available to this filter state.
+    // Since we're not filtering yet, this is the full array of content:
+    await expect(thisExample.locator(totalResults)).toHaveText('20 results');
+
+    // Show filters with the toggle:
+    await thisExample.locator(showHideFiltersButton).click();
+
+    // Click the Tag A filter button:
+    await thisExample.locator(tagAButton).click();
+
+    // We've now got a smaller potential of Nodes:
+    await expect(thisExample.locator(totalResults)).toHaveText('15 results');
+    // But still _rendering_ 7:
+    await expect(thisExample.locator(filterCardNode)).toHaveCount(7);
+
+    // Verify our Hero'd Node's title:
+    await expect(thisExample.locator(filterCardNodeHeading).locator('nth=0')).toHaveText('Filter Card heading (tag A)');
+    // And asserting that it's a heading tag (h2) rather than the non-Hero p tag;
+    await expect(thisExample.getByRole('heading', { name: 'Filter Card heading (tag A)' })).toBeVisible();
+
+    // Find and click ShowMore button render 6 more Nodes:
+    await expect(thisExample.locator(showMoreButton)).toBeVisible();
+    await thisExample.locator(showMoreButton).click();
+
+    // Again, the _total_ possible should be unchanged:
+    await expect(thisExample.locator(totalResults)).toHaveText('15 results');
+    // But we've now got 6 additional Nodes rendered:
+    await expect(thisExample.locator(filterCardNode)).toHaveCount(13);
+
+    // _Try_ to load 6 more Nodes:
+    await thisExample.locator(showMoreButton).click();
+    // But since there's only 15 Nodes using this Tag in total, we only get 15:
+    await expect(thisExample.locator(filterCardNode)).toHaveCount(15);
+    // And now the Show More button should've disappeared:
+    await expect(thisExample.locator(showMoreButton)).not.toBeVisible();
+
+    // Changing the filter state in any way will reset the Show More display, so unselect Tag A:
+    await thisExample.locator(tagAButton).click();
+    // And we're back to the start:
+    await expect(thisExample.locator(showMoreButton)).toBeVisible();
+    await expect(thisExample.locator(totalResults)).toHaveText('20 results');
+    await expect(thisExample.locator(filterCardNode)).toHaveCount(7);
+
+    // Select Tag C:
+    await thisExample.locator(tagCButton).click();
+
+    // Way fewer Nodes tagged with this tag:
+    await expect(thisExample.locator(totalResults)).toHaveText('5 results');
+    await expect(thisExample.locator(filterCardNode)).toHaveCount(5);
+
+    // And since we're already showing everything available, we don't show the Show More button:
+    await expect(thisExample.locator(showMoreButton)).not.toBeVisible();
+
+    // Add another tag to combine filters, and show the lot:
+    await thisExample.locator(tagDButton).click();
+    await thisExample.locator(showMoreButton).click();
+    await expect(thisExample.locator(totalResults)).toHaveText('10 results');
+    await expect(thisExample.locator(filterCardNode)).toHaveCount(10);
+    // So no more Show More:
+    await expect(thisExample.locator(showMoreButton)).not.toBeVisible();
+
+    // Clear both filters, back to the start;
+    await thisExample.locator(clearSelectionButton).click();
+    await expect(thisExample.locator(totalResults)).toHaveText('20 results');
+    await expect(thisExample.locator(filterCardNode)).toHaveCount(7);
+    await expect(thisExample.locator(showMoreButton)).toBeVisible();
 
     await page.close();
   });

@@ -144,7 +144,10 @@ const FilterCard = ({ data }) => {
                   $show={showHideFilterActive}
                   disabled={currentFilters.length === 0}
                   onClick={() => {
+                    // Reset everything:
                     setCurrentFilters([]);
+                    setNodeRenderLimit(initialNodeLimit.current);
+                    setHideShowMoreButton(true);
                   }}
                   data-testid="FilterCard-ClearSelectionButton"
                 >
