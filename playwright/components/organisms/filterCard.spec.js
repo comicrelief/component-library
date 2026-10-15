@@ -27,7 +27,7 @@ test.describe('FilterCard component', () => {
   });
 
   // Focuses on the general filter functionality:
-  test('FilterCard: test filtering on Standard example', async ({ page }) => {
+  test.only('FilterCard: test filtering on Standard example', async ({ page }) => {
     thisExample = page.locator('#filtercard--standard');
 
     // Assert this example:
@@ -53,9 +53,9 @@ test.describe('FilterCard component', () => {
     )).toBeVisible();
 
     // Check before and after clicking a filter button:
-    await expect(thisExample.locator(tagCButton)).toHaveAttribute('aria-pressed', 'false');
+    await expect(thisExample.locator(tagCButton)).toHaveAttribute('aria-checked', 'false');
     await thisExample.locator(tagCButton).click();
-    await expect(thisExample.locator(tagCButton)).toHaveAttribute('aria-pressed', 'true');
+    await expect(thisExample.locator(tagCButton)).toHaveAttribute('aria-checked', 'true');
 
     // Now we've got filters active, the 'clear' button should be enabled:
     await expect(thisExample.locator(clearSelectionButton)).toBeEnabled();
@@ -90,10 +90,10 @@ test.describe('FilterCard component', () => {
 
     // Reset filters, all 4 filter buttons should now be unselected:
     await thisExample.locator(clearSelectionButton).click();
-    await expect(thisExample.locator(tagAButton)).toHaveAttribute('aria-pressed', 'false');
-    await expect(thisExample.locator(tagBButton)).toHaveAttribute('aria-pressed', 'false');
-    await expect(thisExample.locator(tagCButton)).toHaveAttribute('aria-pressed', 'false');
-    await expect(thisExample.locator(tagDButton)).toHaveAttribute('aria-pressed', 'false');
+    await expect(thisExample.locator(tagAButton)).toHaveAttribute('aria-checked', 'false');
+    await expect(thisExample.locator(tagBButton)).toHaveAttribute('aria-checked', 'false');
+    await expect(thisExample.locator(tagCButton)).toHaveAttribute('aria-checked', 'false');
+    await expect(thisExample.locator(tagDButton)).toHaveAttribute('aria-checked', 'false');
 
     // And the 'clear' button disbled once again:
     await expect(thisExample.locator(clearSelectionButton)).toBeDisabled();

@@ -212,12 +212,13 @@ const FilterButton = styled(CustomisedButton)`
   }
 `;
 
-const NodeWrapper = styled.div`
+const NodeWrapper = styled.ul`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 3rem;
+  margin: 3rem 0 0;
   gap: 1.5rem;
+  padding: 0;
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     gap: 2rem;
@@ -246,7 +247,7 @@ const NodeCopyWrapper = styled.div`
   }
 `;
 
-const Node = styled.div`
+const Node = styled.li`
   --s-gap: 1rem;
   --m-gap: 2rem;
   --l-gap: 4rem;

@@ -127,7 +127,10 @@ const FilterCard = ({ data }) => {
                 <ShowHideFiltersButton
                   color="white"
                   $isActive={showHideFilterActive}
-                  aria-pressed={showFilters}
+                  // As this button is acting as a checkbox (toggle-style),
+                  // let assistive technologies know its role and state:
+                  role="checkbox"
+                  aria-checked={showFilters}
                   onClick={() => { setShowFilters(!showFilters); }}
                   icon={showFilters ? <Cross /> : <Filter />}
                   data-testid="FilterCard-ShowHideButton"
@@ -150,6 +153,7 @@ const FilterCard = ({ data }) => {
 
                 <ResultsWrapper
                   data-testid="FilterCard-Results"
+                  role="status"
                 >
                   <Text tag="span">
                     { currentTotal }
@@ -172,9 +176,12 @@ const FilterCard = ({ data }) => {
                       type="button"
                       color="grey_light"
                       value={tag}
+                      name={tag}
                       iconLeft
                       $isSelected={isSelected}
-                      aria-pressed={isSelected}
+                      // Also acting as a checkbox, so let assistive technologies know too:
+                      role="checkbox"
+                      aria-checked={isSelected}
                       icon={isSelected ? selectedIcon : unselectedIcon}
                       onClick={() => { updateFilters(tag); }}
                       // Force a re-render to trigger our flash-reducing, fade-in CSS animation:
