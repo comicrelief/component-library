@@ -8,7 +8,7 @@ const Button = React.forwardRef(({
   children,
   color = 'red',
   icon = null,
-  iconDescription = 'Icon',
+  iconDescription = '',
   iconLeft = false,
   iconKey = '',
   wrapper = false,
