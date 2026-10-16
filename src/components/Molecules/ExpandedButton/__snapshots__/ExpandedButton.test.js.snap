@@ -40,14 +40,11 @@ exports[`renders correctly 1`] = `
   text-align: left;
   transition: all linear 0.2s;
   width: 100%;
+  color: #000000;
 }
 
 .c1:hover {
   background-color: #E1E2E3;
-}
-
-.c1 * {
-  color: #000000;
 }
 
 .c2 {
