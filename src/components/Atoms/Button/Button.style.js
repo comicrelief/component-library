@@ -51,7 +51,7 @@ const StyledButton = styled.button`
     width: ${({ $fullWidth }) => ($fullWidth ? '100%' : 'auto')};
   }
 
-  ${({ $hasIcon }) => $hasIcon && css`
+  ${({ $hasIcon, $iconLeft }) => $hasIcon && css`
     display: inline-grid;
     grid-template-columns: 1fr repeat(1, auto) 1fr;
     grid-column-gap: 0.6rem;
@@ -74,6 +74,24 @@ const StyledButton = styled.button`
       // icon, to prevent silliness:
       height: calc(3rem - (var(--padding-top-and-bottom) * 2));
     }
+
+    ${($iconLeft && css`
+      > ${Copywrapper} {
+        order: 2;
+
+        ${({ $fullWidth }) => (!$fullWidth && css`
+          // Swap sides for the 'aesthetic rebalance' mentioned aobve:
+          padding-inline: 1.5rem 0;
+        `)};
+      }
+
+      > ${IconWrapper} {
+        // Place the icon before the copy in the Grid:
+        order: 1;
+        // Swap other alignment rule:
+        margin-inline: 0 auto;
+       }
+    `)};
   `}
 `;
 

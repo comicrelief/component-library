@@ -85,7 +85,7 @@ it('renders correctly', () => {
 
 .c5:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .c0 {

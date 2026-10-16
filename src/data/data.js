@@ -1,3 +1,4 @@
+import React from 'react';
 import picture1 from '../assets/picture-1.jpg';
 import picture2 from '../assets/picture-2.jpg';
 import picture3 from '../assets/picture-3.jpg';
@@ -6,6 +7,8 @@ import heroBannerImg from '../assets/PromoLW.jpg';
 import heroBannerLogoSquare from '../assets/HeroBannerLogo-Square.png';
 import heroBannerLogoWide from '../assets/HeroBannerLogo-Wide.png';
 import heroBannerLogoTall from '../assets/HeroBannerLogo-Tall.png';
+import Text from '../components/Atoms/Text/Text';
+import { FilterCardNodes4, FilterCardNodes5, FilterCardNodes20 } from './TestFilterCardNodeData';
 
 const defaultData = {
   title: 'What your money does',
@@ -344,12 +347,72 @@ const RichtextCarouselItemsWithPadding = {
 
 const ButtonIconImgPath = 'https://images.ctfassets.net/zsfivwzfgl3t/4IlLxZnddkg1pHWZP3AZnA/447078df666932751c9c618a296f24db/Icon__Shelter.png';
 
+const ButtonIconImagePath2 = 'https://images.ctfassets.net/zsfivwzfgl3t/1olBuz2b2baO5qKsOFvNjr/7df1553e56b7b50ff3d27cfbeae92370/Legal_assistance_packages.png';
+
 const ButtonIconSvgPath = 'https://images.ctfassets.net/0p265iutoxgq/3GaahqcCBaXrLBm5fu8HAj/d965a32d93fe82bf103c2f444e0bb9ec/Phone--white.svg';
+
+// Reused config and 'top' content for the FilterCard examples:
+const filterCardConfig = {
+  paddingAbove: '2rem',
+  paddingBelow: '2rem',
+  pageBackgroundColour: 'grey_light',
+  loadingBehaviour: 'Load all cards at once',
+  body:
+  <Text>
+    From fundraising packs to bunting, certificates, cake labels and more, find everything
+    you need to take yourself funny for money this Red Nose Day. Select a resource type to
+    filters the results.
+  </Text>
+};
+
+const filterCardTestDataStandard = {
+  ...filterCardConfig,
+  id: 'filtercard--standard',
+  title: 'Your fundraising resources: STANDARD',
+  filterCardNodes: FilterCardNodes4
+};
+
+const filterCardTestDataHero = {
+  ...filterCardConfig,
+  id: 'filtercard--hero',
+  title: 'Your fundraising resources: HERO',
+  firstFilterCardNodeAsHero: true,
+  filterCardNodes: FilterCardNodes5
+};
+
+const filterCardTestDataExpanded = {
+  ...filterCardConfig,
+  id: 'filtercard--expanded',
+  title: 'Your fundraising resources: EXPANDED',
+  filterCardNodes: FilterCardNodes20
+};
+
+const filterCardTestDataExpandedLoader = {
+  ...filterCardConfig,
+  id: 'filtercard--expanded-loader',
+  title: 'Your fundraising resources: EXPANDED + LOADER',
+  loadingBehaviour: 'Load 6 cards at a time + Hero Node (if set)',
+  filterCardNodes: FilterCardNodes20
+};
+
+const filterCardTestDataExpandedLoaderHero = {
+  ...filterCardConfig,
+  id: 'filtercard--expanded-loader-hero',
+  title: 'Your fundraising resources: EXPANDED + LOADER + HERO',
+  loadingBehaviour: 'Load 6 cards at a time + Hero Node (if set)',
+  filterCardNodes: FilterCardNodes20,
+  firstFilterCardNodeAsHero: true
+};
 
 export {
   defaultData, mobileImages, testImpactSliderItems,
   carouselItemsComplete, carouselItemsCompleteWithPadding,
   carouselItemsIncomplete, carouselItemsMinimal,
   RichtextCarouselItems, RichtextCarouselItemsWithPadding,
-  ButtonIconImgPath, ButtonIconSvgPath
+  ButtonIconImgPath, ButtonIconSvgPath, ButtonIconImagePath2,
+  filterCardTestDataStandard,
+  filterCardTestDataHero,
+  filterCardTestDataExpanded,
+  filterCardTestDataExpandedLoader,
+  filterCardTestDataExpandedLoaderHero
 };

@@ -25,6 +25,7 @@ const ButtonCard = styled.button`
   text-align: left;
   transition: all linear 0.2s;
   width: 100%;
+  color: ${crTheme.color('black')};
 
   &:hover {
     background-color: ${crTheme.color('grey_medium')};
