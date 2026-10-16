@@ -172,6 +172,17 @@ const FilterButton = styled(CustomisedButton)`
   box-shadow: 0px 0px 0px 1px ${({ theme }) => theme.color('grey_medium')} inset;
   display: inline-flex;
   flex-grow: 1;
+  background-color: ${({ theme }) => theme.color('grey_light')};
+
+  ${({ $isSelected }) => ($isSelected && css`
+    &,
+    &:hover,
+    &:focus {
+      background-color: ${({ theme }) => theme.color('red')};
+      color: ${({ theme }) => theme.color('white')};
+      box-shadow: none;
+    }
+  `)};
 
   // Increase specificity to override style defaults:
   ${FilterButtonsWrapper} & {
@@ -195,16 +206,6 @@ const FilterButton = styled(CustomisedButton)`
     &:focus {
       box-shadow: 0px 0px 0px 1px ${({ theme }) => theme.color('grey')} inset;
     }
-
-    ${({ $isSelected }) => ($isSelected && css`
-      &,
-      &:hover,
-      &:focus {
-        background-color: ${({ theme }) => theme.color('red')};
-        color: ${({ theme }) => theme.color('white')};
-        box-shadow: none;
-      }
-  `)};
   }
 
   @media ${({ theme }) => theme.allBreakpoints('M')} {
