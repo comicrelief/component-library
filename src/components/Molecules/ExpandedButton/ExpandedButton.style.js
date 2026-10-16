@@ -33,6 +33,10 @@ const ButtonCard = styled.button`
   @media ${crTheme.allBreakpoints('M')} {
     padding: 1rem;
   }
+  // Fix for iOS pedantic default blue for link / button text colour:
+  * {
+    color: ${crTheme.color('black')};
+  }
 `;
 
 const CardTopWrapper = styled.div`
