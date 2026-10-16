@@ -8,7 +8,9 @@ const Button = React.forwardRef(({
   children,
   color = 'red',
   icon = null,
-  iconDescription = 'Icon',
+  iconDescription = '',
+  iconLeft = false,
+  iconKey = '',
   wrapper = false,
   fullWidth = false,
   buttonType = buttonTypes.PRIMARY,
@@ -19,7 +21,6 @@ const Button = React.forwardRef(({
 
   return (
     <StyledButton
-      {...rest}
       as={wrapper ? 'span' : 'button'}
       ref={ref}
       $fullWidth={fullWidth}
@@ -27,6 +28,8 @@ const Button = React.forwardRef(({
       $buttonType={buttonType}
       data-testid="Button"
       $hasIcon={hasIcon}
+      $iconLeft={iconLeft}
+      {...rest}
     >
 
       {hasIcon
@@ -36,7 +39,12 @@ const Button = React.forwardRef(({
       }
 
       {hasIcon && (
-        <IconWrapper className="icon-wrapper">
+        <IconWrapper
+          // Allows us to force a re-render (to avoid flashing when switching img srcs)
+          // by passing a dynamically-set `iconKey` prop, based on when that src is switched:
+          key={`${children}-${iconKey}`}
+          className="icon-wrapper"
+        >
           {hasIconPath ? (
             <Picture
               image={icon}
@@ -63,6 +71,8 @@ Button.propTypes = {
     PropTypes.string
   ]),
   iconDescription: PropTypes.string,
+  iconLeft: PropTypes.bool,
+  iconKey: PropTypes.string,
   // Primary will the default for the vast majority of contexts; with
   // Secondary and Tertirary being manually set by developers where required
   buttonType: PropTypes.oneOf([

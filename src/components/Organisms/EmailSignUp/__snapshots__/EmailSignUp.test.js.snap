@@ -41,12 +41,12 @@ exports[`renders correctly 1`] = `
 
 .c15:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .c16:disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .c1 {
@@ -442,7 +442,7 @@ exports[`renders correctly 1`] = `
         <button
           className="c15 c16"
           data-test="subscribe-button"
-          data-testid="Button"
+          data-testid="ButtonWithStates"
           disabled={true}
           type="submit"
         >

@@ -55,7 +55,7 @@ export const SidebarItem = styled.button`
 export const Preview = styled.main`
   flex: 1;
   overflow-y: auto;
-  padding: 2rem;
+  padding: ${import.meta.env.VITE_REMOVE_PADDING === 'true' ? '0' : '2rem'};
   background: ${color('grey_light')};
 `;
 
@@ -78,7 +78,7 @@ export const PreviewBox = styled.div`
   background: ${color('white')};
   border: 1px solid ${color('grey_medium')};
   border-radius: 6px;
-  padding: 2rem;
+  padding: ${import.meta.env.VITE_REMOVE_PADDING === 'true' ? '0' : '2rem'};
 `;
 
 export const Logo = styled.div`
