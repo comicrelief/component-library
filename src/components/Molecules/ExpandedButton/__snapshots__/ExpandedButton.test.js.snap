@@ -46,6 +46,10 @@ exports[`renders correctly 1`] = `
   background-color: #E1E2E3;
 }
 
+.c1 * {
+  color: #000000;
+}
+
 .c2 {
   margin: 0 0 8px 0;
   display: flex;
