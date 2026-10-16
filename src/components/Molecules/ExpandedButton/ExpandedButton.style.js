@@ -25,6 +25,7 @@ const ButtonCard = styled.button`
   text-align: left;
   transition: all linear 0.2s;
   width: 100%;
+  color: ${crTheme.color('black')};
 
   &:hover {
     background-color: ${crTheme.color('grey_medium')};
@@ -32,10 +33,6 @@ const ButtonCard = styled.button`
 
   @media ${crTheme.allBreakpoints('M')} {
     padding: 1rem;
-  }
-  // Fix for iOS pedantic default blue for link / button text colour:
-  * {
-    color: ${crTheme.color('black')};
   }
 `;
 
