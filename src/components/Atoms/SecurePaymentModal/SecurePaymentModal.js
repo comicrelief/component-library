@@ -32,10 +32,14 @@ const SecurePaymentModal = ({
     {...rest}
   >
     <BodyText tag="p">
-      We’ve partnered with trusted payment services like Braintree, Stripe, GoCardless, PayPal, Google, and Apple to keep your payment information safe and sound. Every transaction is fully encrypted.
+      We’ve partnered with trusted payment services like
+      Braintree, Stripe, GoCardless, PayPal, Google, and Apple to keep your
+      payment information safe and sound. Every transaction is fully encrypted.
     </BodyText>
     <BodyText tag="p">
-      We also use a secure server and follow best practices to protect your data, like your name and address. Our systems get checked every year by the NCC Group, and we regularly chat with AWS to stay ahead of any potential issues.
+      We also use a secure server and follow best practices to protect your data,
+      like your name and address. Our systems get checked every year by the NCC Group,
+      and we regularly chat with AWS to stay ahead of any potential issues.
     </BodyText>
   </Wrapper>
 );

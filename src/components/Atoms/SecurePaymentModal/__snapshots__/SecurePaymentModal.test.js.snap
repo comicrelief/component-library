@@ -17,6 +17,7 @@ exports[`renders coral_light variant 1`] = `
 
 .c0 {
   background-color: #FFCECE;
+  color: #000000;
   border-radius: 1rem;
   padding: 2rem;
   display: flex;
@@ -77,7 +78,8 @@ exports[`renders default blue_light variant 1`] = `
 }
 
 .c0 {
-  background-color: #FFFFFF;
+  background-color: #969598;
+  color: #000000;
   border-radius: 1rem;
   padding: 2rem;
   display: flex;
