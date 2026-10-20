@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Text from '../Text/Text';
+import Cross from '../Icons/Cross';
 
 const Wrapper = styled.div`
   background-color: ${({ theme, $backgroundColor }) => theme.color($backgroundColor)};
@@ -16,13 +17,21 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
-const BodyText = styled(Text)`
+const CloseButton = styled.button`
+  align-self: flex-end;
+  display: flex;
+  padding: 0;
   margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
 `;
 
 const SecurePaymentModal = ({
-  backgroundColor = 'grey',
+  backgroundColor = 'white',
   textColor = 'black',
+  /** call for function in the consuming App / parent decides what closing does. */
+  onClose,
   ...rest
 }) => (
   <Wrapper
@@ -31,22 +40,27 @@ const SecurePaymentModal = ({
     data-testid="secure-payment-modal"
     {...rest}
   >
-    <BodyText tag="p">
+    <CloseButton type="button" onClick={onClose} aria-label="Close">
+      <Cross colour={textColor} size={24} />
+    </CloseButton>
+    <Text tag="h3">How we keep your donations secure and encrypted</Text>
+    <Text tag="p">
       We’ve partnered with trusted payment services like
       Braintree, Stripe, GoCardless, PayPal, Google, and Apple to keep your
       payment information safe and sound. Every transaction is fully encrypted.
-    </BodyText>
-    <BodyText tag="p">
+    </Text>
+    <Text tag="p">
       We also use a secure server and follow best practices to protect your data,
       like your name and address. Our systems get checked every year by the NCC Group,
       and we regularly chat with AWS to stay ahead of any potential issues.
-    </BodyText>
+    </Text>
   </Wrapper>
 );
 
 SecurePaymentModal.propTypes = {
   backgroundColor: PropTypes.string,
-  textColor: PropTypes.string
+  textColor: PropTypes.string,
+  onClose: PropTypes.func
 };
 
 export default SecurePaymentModal;
