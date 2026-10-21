@@ -4,6 +4,7 @@ import {
   Arrow, AtSign, Chevron, CtaArrow, Download, External, Favourite, Internal, Post, Filter, Undo
 } from './index';
 import Cross from './Cross';
+import Padlock from './Padlock';
 import Curve from './Curve';
 import { ExampleContainer } from '../../../demos/SharedStyles';
 
@@ -50,6 +51,7 @@ export default function IconsExample() {
             ['Internal', <Internal size={48} colour="black" />],
             ['AtSign', <AtSign size={48} colour="black" />],
             ['Cross', <Cross size={48} colour="black" />],
+            ['Padlock', <Padlock size={48} colour="black" />],
             ['Post', <Post size={48} colour="black" />],
             ['Filter', <Filter size={48} colour="black" />],
             ['Undo', <Undo size={48} colour="black" />]

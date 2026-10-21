@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Text from '../Text/Text';
 import Cross from '../Icons/Cross';
@@ -9,12 +9,26 @@ const Wrapper = styled.div`
   background-color: ${({ theme, $backgroundColor }) => theme.color($backgroundColor)};
   color: ${({ theme, $textColor }) => theme.color($textColor)};
   border-radius: 1rem;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  box-sizing: border-box;
   width: 100%;
+  box-sizing: border-box;
+
+  ${({ $isOpen }) => ($isOpen
+    ? css`padding: 2rem;`
+    : css`padding: 0;`)}
+`;
+
+const SecureButton = styled.button`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+  padding: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
 `;
 
 const CloseButton = styled.button`
@@ -30,37 +44,60 @@ const CloseButton = styled.button`
 const SecurePaymentModal = ({
   backgroundColor = 'white',
   textColor = 'black',
-  /** call for function in the consuming App / parent decides what closing does. */
-  onClose,
+  initialText,
+  icon,
+  headingText,
+  para1,
+  para2,
+  para3,
   ...rest
-}) => (
-  <Wrapper
-    $backgroundColor={backgroundColor}
-    $textColor={textColor}
-    data-testid="secure-payment-modal"
-    {...rest}
-  >
-    <CloseButton type="button" onClick={onClose} aria-label="Close">
-      <Cross colour={textColor} size={24} />
-    </CloseButton>
-    <Text tag="h3">How we keep your donations secure and encrypted</Text>
-    <Text tag="p">
-      We’ve partnered with trusted payment services like
-      Braintree, Stripe, GoCardless, PayPal, Google, and Apple to keep your
-      payment information safe and sound. Every transaction is fully encrypted.
-    </Text>
-    <Text tag="p">
-      We also use a secure server and follow best practices to protect your data,
-      like your name and address. Our systems get checked every year by the NCC Group,
-      and we regularly chat with AWS to stay ahead of any potential issues.
-    </Text>
-  </Wrapper>
-);
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
+
+  return (
+    <Wrapper
+      $backgroundColor={backgroundColor}
+      $textColor={textColor}
+      $isOpen={isOpen}
+      data-testid="secure-payment-modal"
+      {...rest}
+    >
+      {isOpen ? (
+        <>
+          <CloseButton type="button" onClick={closeModal} aria-label="Close">
+            <Cross colour={textColor} size={24} />
+          </CloseButton>
+
+          {headingText && <Text tag="h3">{headingText}</Text>}
+
+          {para1 && <Text tag="p">{para1}</Text>}
+
+          {para2 && <Text tag="p">{para2}</Text>}
+
+          {para3 && <Text tag="p">{para3}</Text>}
+        </>
+      ) : (
+        <SecureButton type="button" onClick={openModal} aria-expanded="false">
+          {icon}
+          {initialText && <Text>{initialText}</Text>}
+        </SecureButton>
+      )}
+    </Wrapper>
+  );
+};
 
 SecurePaymentModal.propTypes = {
   backgroundColor: PropTypes.string,
   textColor: PropTypes.string,
-  onClose: PropTypes.func
+  initialText: PropTypes.string,
+  icon: PropTypes.node,
+  headingText: PropTypes.string,
+  para1: PropTypes.string,
+  para2: PropTypes.string,
+  para3: PropTypes.string
 };
 
 export default SecurePaymentModal;
