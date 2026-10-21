@@ -69,8 +69,8 @@ const StyledLink = styled.a`
   // New style is rounded square buttons with dark grey background, and animation.
   // When we've moved fully to the new design,
   // this prop and the old styles can be removed.
-  ${({ $newStyle }) => $newStyle && css`
-    background-color: ${({ theme }) => theme.color('grey_4')};
+  ${({ $newStyle, theme }) => $newStyle && css`
+    background-color: ${theme.color('grey_4')};
     border-radius: 0.5rem;
     padding: 0.5rem;
     box-sizing: border-box;
@@ -84,7 +84,7 @@ const StyledLink = styled.a`
 
     &:hover,
     &:focus {
-      background-color: ${({ theme }) => theme.color('grey_4_hover')};
+      background-color: ${theme.color('grey_4_hover')};
       opacity: 1;
     }
   `}
