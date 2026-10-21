@@ -47,9 +47,7 @@ const SecurePaymentModal = ({
   initialText,
   icon,
   headingText,
-  para1,
-  para2,
-  para3,
+  bodyText,
   ...rest
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,11 +71,8 @@ const SecurePaymentModal = ({
 
           {headingText && <Text tag="h3">{headingText}</Text>}
 
-          {para1 && <Text tag="p">{para1}</Text>}
+          {bodyText && <Text tag="p">{bodyText}</Text>}
 
-          {para2 && <Text tag="p">{para2}</Text>}
-
-          {para3 && <Text tag="p">{para3}</Text>}
         </>
       ) : (
         <SecureButton type="button" onClick={openModal} aria-expanded="false">
@@ -95,9 +90,7 @@ SecurePaymentModal.propTypes = {
   initialText: PropTypes.string,
   icon: PropTypes.node,
   headingText: PropTypes.string,
-  para1: PropTypes.string,
-  para2: PropTypes.string,
-  para3: PropTypes.string
+  bodyText: PropTypes.node
 };
 
 export default SecurePaymentModal;
