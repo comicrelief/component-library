@@ -41,7 +41,7 @@ const CloseButton = styled.button`
   cursor: pointer;
 `;
 
-const SecurePaymentModal = ({
+const PopUpInfoModal = ({
   backgroundColor = 'white',
   textColor = 'black',
   initialText,
@@ -60,7 +60,7 @@ const SecurePaymentModal = ({
       $backgroundColor={backgroundColor}
       $textColor={textColor}
       $isOpen={isOpen}
-      data-testid="secure-payment-modal"
+      data-testid="pop-up-info-modal"
       {...rest}
     >
       {isOpen ? (
@@ -84,7 +84,7 @@ const SecurePaymentModal = ({
   );
 };
 
-SecurePaymentModal.propTypes = {
+PopUpInfoModal.propTypes = {
   backgroundColor: PropTypes.string,
   textColor: PropTypes.string,
   initialText: PropTypes.string,
@@ -93,4 +93,4 @@ SecurePaymentModal.propTypes = {
   bodyText: PropTypes.node
 };
 
-export default SecurePaymentModal;
+export default PopUpInfoModal;

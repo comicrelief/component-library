@@ -1,5 +1,5 @@
 import React from 'react';
-import SecurePaymentModal from './SecurePaymentModal';
+import PopUpInfoModal from './PopUpInfoModal';
 import Padlock from '../Icons/Padlock';
 import Post from '../Icons/Post';
 import styled from 'styled-components';
@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   padding: 10px;
 `;
 
-const Example1Body = () => (
+const SecurePaymentBody = () => (
   <>
     <p>
         We’ve partnered with trusted payment services like Braintree, Stripe, GoCardless, PayPal, Google, and Apple to keep your payment information safe and sound. Every transaction is fully encrypted.
@@ -20,7 +20,7 @@ const Example1Body = () => (
   </>
 );
 
-const Example2Body = () => (
+const GiftAidInfoBody = () => (
   <>
     <p>
       As a UK taxpayer, you pay tax on your income, savings, or pensions. When you donate to charity, it comes from money you've already paid tax on. Charities can reclaim this tax back from the Government through Gift Aid, so if you donated £10 and used Gift Aid, it’s will actually be worth £12.50! How awesome is that?
@@ -34,27 +34,27 @@ const Example2Body = () => (
   </>
 );
 
-export default function SecurePaymentModalExample() {
+export default function PopUpInfoModalExample() {
   return (
     <Wrapper>
 
-      <h3>Example using para1 and para2 props:</h3>
-      <SecurePaymentModal
+      <h3>Secure Payments Example</h3>
+      <PopUpInfoModal
         icon={<Padlock colour="black" size={16} />}
         initialText="Your donation is secure and encrypted"
         headingText="How we keep your donations secure and encrypted"
-        bodyText={<Example1Body/>}
+        bodyText={<SecurePaymentBody/>}
       />
 
       <br />
 
-      <h3>Example using backgroundColor prop:</h3>
-      <SecurePaymentModal
+      <h3>Gift Aid Info Example</h3>
+      <PopUpInfoModal
         icon={<Post colour="black" size={16} />}
-        initialText="giftaid popup"
+        initialText="What is Gift Aid?"
         headingText="What is Gift Aid and how does it work?"
         backgroundColor="coral_light"
-        bodyText={<Example2Body/>}
+        bodyText={<GiftAidInfoBody/>}
       />
 
     </Wrapper>

@@ -50,8 +50,8 @@ import ButtonWithStatesExample from '../components/Atoms/ButtonWithStates/Button
 import buttonWithStatesExampleSrc from '../components/Atoms/ButtonWithStates/ButtonWithStatesExample.jsx?raw';
 import InfoMessageExample from '../components/Atoms/InfoMessage/InfoMessageExample.jsx';
 import infoMessageExampleSrc from '../components/Atoms/InfoMessage/InfoMessageExample.jsx?raw';
-import SecurePaymentModalExample from '../components/Atoms/SecurePaymentModal/SecurePaymentModalExample.jsx';
-import securePaymentModalExampleSrc from '../components/Atoms/SecurePaymentModal/SecurePaymentModalExample.jsx?raw';
+import PopUpInfoModalExample from '../components/Atoms/PopUpInfoModal/PopUpInfoModalExample.jsx';
+import popUpInfoModalExampleSrc from '../components/Atoms/PopUpInfoModal/PopUpInfoModalExample.jsx?raw';
 
 // Molecule examples
 import InfoBannerExample from '../components/Molecules/InfoBanner/InfoBannerExample.jsx';
@@ -194,7 +194,7 @@ export const atoms = [
   { name: 'Picture', demo: demo(PictureExample, pictureExampleSrc) },
   { name: 'RadioButton', demo: demo(RadioButtonExample, radioButtonExampleSrc) },
   { name: 'RichText', demo: demo(RichTextExample, richTextExampleSrc) },
-  { name: 'SecurePaymentModal', demo: demo(SecurePaymentModalExample, securePaymentModalExampleSrc) },
+  { name: 'PopUpInfoModal', demo: demo(PopUpInfoModalExample, popUpInfoModalExampleSrc) },
   { name: 'Select', demo: demo(SelectExample, selectExampleSrc) },
   { name: 'SocialIcons', demo: demo(SocialIconsExample, socialIconsExampleSrc) },
   { name: 'Text', demo: demo(TextExample, textExampleSrc) },

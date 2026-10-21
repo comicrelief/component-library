@@ -33,7 +33,7 @@ export { default as Picture } from './components/Atoms/Picture/Picture';
 export { default as Post } from './components/Atoms/Icons/Post';
 export { default as RadioButton } from './components/Atoms/RadioButton/RadioButton';
 export { default as RichText } from './components/Atoms/RichText/RichText';
-export { default as SecurePaymentModal } from './components/Atoms/SecurePaymentModal/SecurePaymentModal';
+export { default as PopUpInfoModal } from './components/Atoms/PopUpInfoModal/PopUpInfoModal';
 export { default as Select } from './components/Atoms/Select/Select';
 export { default as SocialIcons } from './components/Atoms/SocialIcons/SocialIcons';
 export { default as Text } from './components/Atoms/Text/Text';
