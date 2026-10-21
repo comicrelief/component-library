@@ -13,9 +13,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   width: 100%;
   box-sizing: border-box;
-
   ${({ $isOpen }) => ($isOpen
-    ? css`padding: 2rem;`
+    ? css`padding: 1rem;`
     : css`padding: 0;`)}
 `;
 
@@ -72,7 +71,6 @@ const PopUpInfoModal = ({
           {headingText && <Text tag="h3">{headingText}</Text>}
 
           {bodyText && <Text tag="p">{bodyText}</Text>}
-
         </>
       ) : (
         <SecureButton type="button" onClick={openModal} aria-expanded="false">
