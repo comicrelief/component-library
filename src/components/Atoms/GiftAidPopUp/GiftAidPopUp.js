@@ -5,6 +5,8 @@ import styled, { css } from 'styled-components';
 import Text from '../Text/Text';
 import Cross from '../Icons/Cross';
 
+import giftAidLogo from './assets/gift-aid-logo.svg';
+
 const Wrapper = styled.div`
   background-color: ${({ theme, $backgroundColor }) => theme.color($backgroundColor)};
   color: ${({ theme, $textColor }) => theme.color($textColor)};
@@ -30,6 +32,13 @@ const SecureButton = styled.button`
   cursor: pointer;
 `;
 
+const Logo = styled.img`
+  display: block;
+  width: 140px;
+  height: auto;
+  margin: 0 0 1rem;
+`;
+
 const CloseButton = styled.button`
   align-self: flex-end;
   display: flex;
@@ -40,7 +49,7 @@ const CloseButton = styled.button`
   cursor: pointer;
 `;
 
-const PopUpInfoModal = ({
+const GiftAidPopUp = ({
   backgroundColor = 'white',
   textColor = 'black',
   initialText,
@@ -59,7 +68,7 @@ const PopUpInfoModal = ({
       $backgroundColor={backgroundColor}
       $textColor={textColor}
       $isOpen={isOpen}
-      data-testid="pop-up-info-modal"
+      data-testid="gift-aid-pop-up"
       {...rest}
     >
       {isOpen ? (
@@ -67,6 +76,8 @@ const PopUpInfoModal = ({
           <CloseButton type="button" onClick={closeModal} aria-label="Close">
             <Cross colour={textColor} size={24} />
           </CloseButton>
+
+          <Logo src={giftAidLogo} alt="Gift Aid logo" />
 
           {headingText && <Text tag="h3">{headingText}</Text>}
 
@@ -82,7 +93,7 @@ const PopUpInfoModal = ({
   );
 };
 
-PopUpInfoModal.propTypes = {
+GiftAidPopUp.propTypes = {
   backgroundColor: PropTypes.string,
   textColor: PropTypes.string,
   initialText: PropTypes.string,
@@ -91,4 +102,4 @@ PopUpInfoModal.propTypes = {
   bodyText: PropTypes.node
 };
 
-export default PopUpInfoModal;
+export default GiftAidPopUp;

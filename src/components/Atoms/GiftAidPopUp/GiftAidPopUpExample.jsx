@@ -1,6 +1,5 @@
 import React from 'react';
-import PopUpInfoModal from './PopUpInfoModal';
-import Padlock from '../Icons/Padlock';
+import GiftAidPopUp from './GiftAidPopUp';
 import Post from '../Icons/Post';
 import styled from 'styled-components';
 
@@ -8,17 +7,6 @@ const Wrapper = styled.div`
   background: green;
   padding: 10px;
 `;
-
-const SecurePaymentBody = () => (
-  <>
-    <p>
-        We’ve partnered with trusted payment services like Braintree, Stripe, GoCardless, PayPal, Google, and Apple to keep your payment information safe and sound. Every transaction is fully encrypted.
-    </p>
-    <p>
-        We also use a secure server and follow best practices to protect your data, like your name and address. Our systems get checked every year by the NCC Group, and we regularly chat with AWS to stay ahead of any potential issues.
-    </p>
-  </>
-);
 
 const GiftAidInfoBody = () => (
   <>
@@ -34,22 +22,12 @@ const GiftAidInfoBody = () => (
   </>
 );
 
-export default function PopUpInfoModalExample() {
+export default function GiftAidPopUpExample() {
   return (
     <Wrapper>
 
-      <h3>Secure Payments Example</h3>
-      <PopUpInfoModal
-        icon={<Padlock colour="black" size={16} />}
-        initialText="Your donation is secure and encrypted"
-        headingText="How we keep your donations secure and encrypted"
-        bodyText={<SecurePaymentBody/>}
-      />
-
-      <br />
-
       <h3>Gift Aid Info Example</h3>
-      <PopUpInfoModal
+      <GiftAidPopUp
         icon={<Post colour="black" size={16} />}
         initialText="What is Gift Aid?"
         headingText="What is Gift Aid and how does it work?"

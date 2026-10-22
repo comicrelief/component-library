@@ -50,8 +50,10 @@ import ButtonWithStatesExample from '../components/Atoms/ButtonWithStates/Button
 import buttonWithStatesExampleSrc from '../components/Atoms/ButtonWithStates/ButtonWithStatesExample.jsx?raw';
 import InfoMessageExample from '../components/Atoms/InfoMessage/InfoMessageExample.jsx';
 import infoMessageExampleSrc from '../components/Atoms/InfoMessage/InfoMessageExample.jsx?raw';
-import PopUpInfoModalExample from '../components/Atoms/PopUpInfoModal/PopUpInfoModalExample.jsx';
-import popUpInfoModalExampleSrc from '../components/Atoms/PopUpInfoModal/PopUpInfoModalExample.jsx?raw';
+import SecurePaymentPopUpExample from '../components/Atoms/SecurePaymentPopUp/SecurePaymentPopUpExample.jsx';
+import securePaymentPopUpExampleSrc from '../components/Atoms/SecurePaymentPopUp/SecurePaymentPopUpExample.jsx?raw';
+import GiftAidPopUpExample from '../components/Atoms/GiftAidPopUp/GiftAidPopUpExample.jsx';
+import giftAidPopUpExampleSrc from '../components/Atoms/GiftAidPopUp/GiftAidPopUpExample.jsx?raw';
 
 // Molecule examples
 import InfoBannerExample from '../components/Molecules/InfoBanner/InfoBannerExample.jsx';
@@ -184,6 +186,7 @@ export const atoms = [
   { name: 'Checkbox', demo: demo(CheckboxExample, checkboxExampleSrc) },
   { name: 'Confetti', demo: demo(ConfettiExample, confettiExampleSrc) },
   { name: 'ErrorText', demo: demo(ErrorTextExample, errorTextExampleSrc) },
+  { name: 'GiftAidPopUp', demo: demo(GiftAidPopUpExample, giftAidPopUpExampleSrc) },
   { name: 'InfoMessage', demo: demo(InfoMessageExample, infoMessageExampleSrc) },
   { name: 'Icons', demo: demo(IconsExample, iconsExampleSrc) },
   { name: 'Input', demo: demo(InputExample, inputExampleSrc) },
@@ -194,8 +197,8 @@ export const atoms = [
   { name: 'Picture', demo: demo(PictureExample, pictureExampleSrc) },
   { name: 'RadioButton', demo: demo(RadioButtonExample, radioButtonExampleSrc) },
   { name: 'RichText', demo: demo(RichTextExample, richTextExampleSrc) },
-  { name: 'PopUpInfoModal', demo: demo(PopUpInfoModalExample, popUpInfoModalExampleSrc) },
   { name: 'Select', demo: demo(SelectExample, selectExampleSrc) },
+  { name: 'SecurePaymentPopUp', demo: demo(SecurePaymentPopUpExample, securePaymentPopUpExampleSrc) },
   { name: 'SocialIcons', demo: demo(SocialIconsExample, socialIconsExampleSrc) },
   { name: 'Text', demo: demo(TextExample, textExampleSrc) },
   { name: 'TextArea', demo: demo(TextAreaExample, textAreaExampleSrc) },

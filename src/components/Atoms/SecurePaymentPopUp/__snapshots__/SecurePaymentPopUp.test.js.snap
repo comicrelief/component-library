@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders coral_light variant 1`] = `
+.c0 {
+  background-color: #FFCECE;
+  color: #000000;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+  padding: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+<div
+  className="c0"
+  data-testid="secure-payment-pop-up"
+>
+  <button
+    aria-expanded="false"
+    className="c1"
+    onClick={[Function]}
+    type="button"
+  />
+</div>
+`;
+
+exports[`renders default blue_light variant 1`] = `
+.c0 {
+  background-color: #FFFFFF;
+  color: #000000;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+  padding: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+<div
+  className="c0"
+  data-testid="secure-payment-pop-up"
+>
+  <button
+    aria-expanded="false"
+    className="c1"
+    onClick={[Function]}
+    type="button"
+  />
+</div>
+`;
