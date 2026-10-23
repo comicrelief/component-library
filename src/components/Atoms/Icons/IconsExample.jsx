@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {
-  Arrow, AtSign, Chevron, CtaArrow, Download, External, Favourite, Internal, Post, Filter, Undo
+  Arrow, AtSign, Chevron, CtaArrow, Download, External, Favourite, GiftAidLogo, Internal, Post, Filter, Undo
 } from './index';
 import Cross from './Cross';
 import Padlock from './Padlock';
@@ -54,6 +54,7 @@ export default function IconsExample() {
             ['Padlock', <Padlock size={48} colour="black" />],
             ['Post', <Post size={48} colour="black" />],
             ['Filter', <Filter size={48} colour="black" />],
+            ['GiftAidLogo', <GiftAidLogo size={96} colour="black" />],
             ['Undo', <Undo size={48} colour="black" />]
           ].map(([name, icon]) => (
             <IconCard key={name}>
