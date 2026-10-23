@@ -94,6 +94,7 @@ const MoneybuysCarousel = ({
           ref={splideRef}
           className="moneybuys-carousel"
           data-testid="moneybuys-carousel--splide"
+          aria-label="What your money buys"
           options={splideOptions}
           onMounted={handleMounted}
         >
@@ -102,6 +103,7 @@ const MoneybuysCarousel = ({
               key={`${amount}-${description}`}
               data-testid="moneybuys-carousel--slide"
               data-amount={amount}
+              aria-label={`${currency}${amount}: ${description}`}
             >
               <SlideCopy data-testid="moneybuys-carousel--copy">
                 <strong>{`${currency}${amount}`}</strong>
