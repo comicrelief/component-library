@@ -2,33 +2,10 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
-import Text from '../../Atoms/Text/Text';
-import Cross from '../../Atoms/Icons/Cross';
-import Padlock from '../../Atoms/Icons/Padlock';
-
-const Container = styled.div`
-  background-color: ${({ theme, $backgroundColour }) => theme.color($backgroundColour)};
-  color: ${({ theme, $textColour }) => theme.color($textColour)};
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  border-radius: 1rem;
-  ${({ $isOpen }) => ($isOpen
-    ? css`padding: 1rem;`
-    : css`padding: 0;`)}
-
-  ${({ $hoverColour, theme }) => $hoverColour && css`
-    &:hover {
-      color: ${theme.color($hoverColour)};
-    }
-  `}
-`;
-
-const PopUp = styled.div`
-  color: ${({ theme, $textColour }) => theme.color($textColour)};
-  display: flex;
-  flex-direction: column;
-`;
+import Text from '../../../Atoms/Text/Text';
+import Cross from '../../../Atoms/Icons/Cross';
+import Padlock from '../../../Atoms/Icons/Padlock';
+import PopUpWindow from '../PopUpWindow';
 
 const SecureButton = styled.button`
   display: flex;
@@ -36,6 +13,7 @@ const SecureButton = styled.button`
   align-items: center;
   gap: 0.5rem;
   margin: 0 auto;
+  padding: 1rem;
   border: none;
   background: none;
   cursor: pointer;
@@ -52,7 +30,6 @@ const SecureButton = styled.button`
       fill: ${theme.color($hoverColour)};
     }
   `}
-border: 1px solid red;
 `;
 
 const CloseButton = styled.button`
@@ -82,16 +59,16 @@ const PopUpSecurePayment = ({
   const closeModal = () => setIsOpen(false);
 
   return (
-    <Container
-      $backgroundColour="white"
-      $textColour={textColour}
-      $hoverColour={hoverColour}
-      $isOpen={isOpen}
-      data-testid="pop-up-secure-payment"
-      {...rest}
-    >
+    <>
       {isOpen ? (
-        <PopUp $textColour={textColour}>
+        <PopUpWindow
+          $backgroundColour="white"
+          $textColour={textColour}
+          $hoverColour={hoverColour}
+          $isOpen={isOpen}
+          data-testid="pop-up-secure-payment"
+          {...rest}
+        >
           <CloseButton
             type="button"
             onClick={closeModal}
@@ -115,7 +92,7 @@ const PopUpSecurePayment = ({
             the NCC Group, and we regularly chat with AWS to stay ahead of any
             potential issues.
           </Text>
-        </PopUp>
+        </PopUpWindow>
       ) : (
         <SecureButton
           type="button"
@@ -127,7 +104,7 @@ const PopUpSecurePayment = ({
           <Text color={textColour}>Your donation is secure and encrypted</Text>
         </SecureButton>
       )}
-    </Container>
+    </>
   );
 };
 

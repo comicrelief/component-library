@@ -2,22 +2,10 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
-import Text from '../../Atoms/Text/Text';
-import Cross from '../../Atoms/Icons/Cross';
-import GiftAidLogo from '../../Atoms/Icons/GiftAidLogo';
-
-const Container = styled.div`
-  background-color: ${({ theme, $backgroundColour }) => theme.color($backgroundColour)};
-  color: ${({ theme, $textColour }) => theme.color($textColour)};
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  box-sizing: border-box;
-  ${({ $isOpen }) => ($isOpen
-    ? css`padding: 1rem;`
-    : css`padding: 0;`)}
-`;
+import Text from '../../../Atoms/Text/Text';
+import Cross from '../../../Atoms/Icons/Cross';
+import GiftAidLogo from '../../../Atoms/Icons/GiftAidLogo';
+import PopUpWindow from '../PopUpWindow';
 
 const LogoWrapper = styled.button`
   border: none;
@@ -58,7 +46,7 @@ const PopUpGiftAid = ({
   const closeModal = () => setIsOpen(false);
 
   return (
-    <Container
+    <PopUpWindow
       $backgroundColour="white"
       $textColour={textColour}
       $isOpen={isOpen}
@@ -107,7 +95,7 @@ const PopUpGiftAid = ({
           <GiftAidLogo size={140} colour={textColour} />
         </LogoWrapper>
       )}
-    </Container>
+    </PopUpWindow>
   );
 };
 

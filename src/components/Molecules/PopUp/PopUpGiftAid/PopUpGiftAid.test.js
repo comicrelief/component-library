@@ -2,7 +2,7 @@ import React from 'react';
 import 'jest-styled-components';
 import { act } from 'react-test-renderer';
 
-import renderWithTheme from '../../../../tests/hoc/shallowWithTheme';
+import renderWithTheme from '../../../../../tests/hoc/shallowWithTheme';
 import PopUpGiftAid from './PopUpGiftAid';
 
 it('renders default blue_light variant', () => {

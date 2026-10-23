@@ -50,10 +50,10 @@ import ButtonWithStatesExample from '../components/Atoms/ButtonWithStates/Button
 import buttonWithStatesExampleSrc from '../components/Atoms/ButtonWithStates/ButtonWithStatesExample.jsx?raw';
 import InfoMessageExample from '../components/Atoms/InfoMessage/InfoMessageExample.jsx';
 import infoMessageExampleSrc from '../components/Atoms/InfoMessage/InfoMessageExample.jsx?raw';
-import PopUpSecurePaymentExample from '../components/Molecules/PopUpSecurePayment/PopUpSecurePaymentExample.jsx';
-import popUpSecurePaymentExampleSrc from '../components/Molecules/PopUpSecurePayment/PopUpSecurePaymentExample.jsx?raw';
-import PopUpGiftAidExample from '../components/Molecules/PopUpGiftAid/PopUpGiftAidExample.jsx';
-import popUpGiftAidExampleSrc from '../components/Molecules/PopUpGiftAid/PopUpGiftAidExample.jsx?raw';
+import PopUpSecurePaymentExample from '../components/Molecules/PopUp/PopUpSecurePayment/PopUpSecurePaymentExample.jsx';
+import popUpSecurePaymentExampleSrc from '../components/Molecules/PopUp/PopUpSecurePayment/PopUpSecurePaymentExample.jsx?raw';
+import PopUpGiftAidExample from '../components/Molecules/PopUp/PopUpGiftAid/PopUpGiftAidExample.jsx';
+import popUpGiftAidExampleSrc from '../components/Molecules/PopUp/PopUpGiftAid/PopUpGiftAidExample.jsx?raw';
 
 // Molecule examples
 import InfoBannerExample from '../components/Molecules/InfoBanner/InfoBannerExample.jsx';
