@@ -20,8 +20,10 @@ const CarouselCard = styled.div`
     background-color: ${({ theme }) => theme.color('white')};
     border: 1px solid ${({ theme }) => theme.color('grey_medium')};
     border-radius: 10px;
-    // Can only set vertical padding on the track; 
-    // inline padding has to be set via splide's padding option.
+    /*
+     Can only set vertical padding on the track; 
+     inline padding has to be set via splide's padding option.
+     */
     padding-top: ${spacing('l')};
     padding-bottom: ${spacing('l')};
     box-sizing: border-box;
