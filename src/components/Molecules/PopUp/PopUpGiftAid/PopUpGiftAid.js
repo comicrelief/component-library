@@ -5,7 +5,18 @@ import styled, { css } from 'styled-components';
 import Text from '../../../Atoms/Text/Text';
 import Cross from '../../../Atoms/Icons/Cross';
 import GiftAidLogo from '../../../Atoms/Icons/GiftAidLogo';
-import PopUpWindow from '../PopUpWindow';
+import PopUpWindow, { PopUpBackdrop } from '../PopUpWindow';
+
+const Container = styled.div`
+  position: relative;
+  width: 100%;
+`;
+
+// Hidden rather than unmounted when open, so the closed trigger keeps its
+// space and content below the popup doesn't do the janky move around when it overlays/opens
+const Trigger = styled.div`
+  visibility: ${({ $hidden }) => ($hidden ? 'hidden' : 'visible')};
+`;
 
 const LogoWrapper = styled.button`
   border: none;
@@ -38,23 +49,52 @@ const CloseButton = styled.button`
 const PopUpGiftAid = ({
   textColour = 'black',
   hoverColour = 'red',
+  onOpenChange,
   ...rest
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
+  const updateOpen = nextOpen => {
+    setIsOpen(nextOpen);
+    if (onOpenChange) {
+      onOpenChange(nextOpen);
+    }
+  };
+
+  const openModal = () => updateOpen(true);
+  const closeModal = () => updateOpen(false);
 
   return (
-    <PopUpWindow
-      $backgroundColour="white"
-      $textColour={textColour}
-      $isOpen={isOpen}
+    <Container
       data-testid="pop-up-gift-aid"
+      data-open={isOpen ? 'true' : 'false'}
       {...rest}
     >
-      {isOpen ? (
-        <>
+      <Trigger $hidden={isOpen}>
+        <PopUpWindow
+          $backgroundColour="white"
+          $textColour={textColour}
+        >
+          <LogoWrapper
+            type="button"
+            onClick={openModal}
+            aria-expanded={isOpen ? 'true' : 'false'}
+            aria-label="What is Gift Aid?"
+            $hoverColour={hoverColour}
+          >
+            <GiftAidLogo size={140} colour={textColour} />
+          </LogoWrapper>
+        </PopUpWindow>
+      </Trigger>
+
+      {isOpen && <PopUpBackdrop />}
+
+      {isOpen && (
+        <PopUpWindow
+          $backgroundColour="white"
+          $textColour={textColour}
+          $isOpen={isOpen}
+        >
           <CloseButton
             type="button"
             onClick={closeModal}
@@ -83,25 +123,16 @@ const PopUpGiftAid = ({
           <Text tag="p">
             In short, £1 + Gift Aid = £1.25, at no extra cost to you.
           </Text>
-        </>
-      ) : (
-        <LogoWrapper
-          type="button"
-          onClick={openModal}
-          aria-expanded="false"
-          aria-label="What is Gift Aid?"
-          $hoverColour={hoverColour}
-        >
-          <GiftAidLogo size={140} colour={textColour} />
-        </LogoWrapper>
+        </PopUpWindow>
       )}
-    </PopUpWindow>
+    </Container>
   );
 };
 
 PopUpGiftAid.propTypes = {
   textColour: PropTypes.string,
-  hoverColour: PropTypes.string
+  hoverColour: PropTypes.string,
+  onOpenChange: PropTypes.func
 };
 
 export default PopUpGiftAid;

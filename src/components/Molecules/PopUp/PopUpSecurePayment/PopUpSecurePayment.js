@@ -5,7 +5,18 @@ import styled, { css } from 'styled-components';
 import Text from '../../../Atoms/Text/Text';
 import Cross from '../../../Atoms/Icons/Cross';
 import Padlock from '../../../Atoms/Icons/Padlock';
-import PopUpWindow from '../PopUpWindow';
+import PopUpWindow, { PopUpBackdrop } from '../PopUpWindow';
+
+const Container = styled.div`
+  position: relative;
+  width: 100%;
+`;
+
+// Hidden rather than unmounted when open, so the closed trigger keeps its
+// space and content below the popup doesn't do the janky move around when it overlays/opens
+const Trigger = styled.div`
+  visibility: ${({ $hidden }) => ($hidden ? 'hidden' : 'visible')};
+`;
 
 const SecureButton = styled.button`
   display: flex;
@@ -51,23 +62,47 @@ const CloseButton = styled.button`
 const PopUpSecurePayment = ({
   textColour = 'black',
   hoverColour = 'red',
+  onOpenChange,
   ...rest
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
+  const updateOpen = nextOpen => {
+    setIsOpen(nextOpen);
+    if (onOpenChange) {
+      onOpenChange(nextOpen);
+    }
+  };
+
+  const openModal = () => updateOpen(true);
+  const closeModal = () => updateOpen(false);
 
   return (
-    <>
-      {isOpen ? (
+    <Container
+      data-testid="pop-up-secure-payment"
+      data-open={isOpen ? 'true' : 'false'}
+      {...rest}
+    >
+      <Trigger $hidden={isOpen}>
+        <SecureButton
+          type="button"
+          onClick={openModal}
+          aria-expanded={isOpen ? 'true' : 'false'}
+          $hoverColour={hoverColour}
+        >
+          <Padlock colour={textColour} size={16} />
+          <Text color={textColour}>Your donation is secure and encrypted</Text>
+        </SecureButton>
+      </Trigger>
+
+      {isOpen && <PopUpBackdrop />}
+
+      {isOpen && (
         <PopUpWindow
           $backgroundColour="white"
           $textColour={textColour}
           $hoverColour={hoverColour}
           $isOpen={isOpen}
-          data-testid="pop-up-secure-payment"
-          {...rest}
         >
           <CloseButton
             type="button"
@@ -93,24 +128,15 @@ const PopUpSecurePayment = ({
             potential issues.
           </Text>
         </PopUpWindow>
-      ) : (
-        <SecureButton
-          type="button"
-          onClick={openModal}
-          aria-expanded="false"
-          $hoverColour={hoverColour}
-        >
-          <Padlock colour={textColour} size={16} />
-          <Text color={textColour}>Your donation is secure and encrypted</Text>
-        </SecureButton>
       )}
-    </>
+    </Container>
   );
 };
 
 PopUpSecurePayment.propTypes = {
   textColour: PropTypes.string,
-  hoverColour: PropTypes.string
+  hoverColour: PropTypes.string,
+  onOpenChange: PropTypes.func
 };
 
 export default PopUpSecurePayment;
