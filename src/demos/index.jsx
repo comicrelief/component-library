@@ -50,6 +50,10 @@ import ButtonWithStatesExample from '../components/Atoms/ButtonWithStates/Button
 import buttonWithStatesExampleSrc from '../components/Atoms/ButtonWithStates/ButtonWithStatesExample.jsx?raw';
 import InfoMessageExample from '../components/Atoms/InfoMessage/InfoMessageExample.jsx';
 import infoMessageExampleSrc from '../components/Atoms/InfoMessage/InfoMessageExample.jsx?raw';
+import PopUpSecurePaymentExample from '../components/Molecules/PopUp/PopUpSecurePayment/PopUpSecurePaymentExample.jsx';
+import popUpSecurePaymentExampleSrc from '../components/Molecules/PopUp/PopUpSecurePayment/PopUpSecurePaymentExample.jsx?raw';
+import PopUpGiftAidExample from '../components/Molecules/PopUp/PopUpGiftAid/PopUpGiftAidExample.jsx';
+import popUpGiftAidExampleSrc from '../components/Molecules/PopUp/PopUpGiftAid/PopUpGiftAidExample.jsx?raw';
 
 // Molecule examples
 import InfoBannerExample from '../components/Molecules/InfoBanner/InfoBannerExample.jsx';
@@ -222,6 +226,8 @@ export const molecules = [
   { name: 'Lookup', demo: demo(LookupExample, lookupExampleSrc) },
   { name: 'PartnerLink', demo: demo(PartnerLinkExample, partnerLinkExampleSrc) },
   { name: 'PictureOrVideo', demo: demo(PictureOrVideoExample, pictureOrVideoExampleSrc) },
+  { name: 'PopUpGiftAid', demo: demo(PopUpGiftAidExample, popUpGiftAidExampleSrc) },
+  { name: 'PopUpSecurePayment', demo: demo(PopUpSecurePaymentExample, popUpSecurePaymentExampleSrc) },
   { name: 'Promo', demo: demo(PromoExample, promoExampleSrc) },
   { name: 'QuoteSlice', demo: demo(QuoteSliceExample, quoteSliceExampleSrc) },
   { name: 'SchoolLookup', demo: demo(SchoolLookupExample, schoolLookupExampleSrc) },
