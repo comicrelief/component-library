@@ -147,6 +147,8 @@ import { ImpactSliderExample1, ImpactSliderExample2 } from '../components/Organi
 
 import WYMDCarouselExample from '../components/Organisms/WYMDCarousel/WYMDCarouselExample.jsx';
 import wymdCarouselExampleSrc from '../components/Organisms/WYMDCarousel/WYMDCarouselExample.jsx?raw';
+import MoneybuysCarouselExample from '../components/Organisms/MoneybuysCarousel/MoneybuysCarouselExample.jsx';
+import moneybuysCarouselExampleSrc from '../components/Organisms/MoneybuysCarousel/MoneybuysCarouselExample.jsx?raw';
 
 import RichtextCarouselExample from '../components/Organisms/RichtextCarousel/RichtextCarouselExample.jsx';
 import richtextCarouselExampleSrc from '../components/Organisms/RichtextCarousel/RichtextCarouselExample.jsx?raw';
@@ -249,6 +251,7 @@ export const organisms = [
   { name: 'ImpactSlider', examples: [<ImpactSliderExample1 />, <ImpactSliderExample2 />] },
   { name: 'MarketingPreferencesDSForm', demo: demo(MarketingPreferencesDSExample, marketingPreferencesDSExampleSrc) },
   { name: 'Membership', examples: [<MembershipExample1 />, <MembershipExample2 />] },
+  { name: 'MoneybuysCarousel', demo: demo(MoneybuysCarouselExample, moneybuysCarouselExampleSrc) },
   { name: 'RichtextCarousel', demo: demo(RichtextCarouselExample, richtextCarouselExampleSrc) },
   { name: 'WYMDCarousel', demo: demo(WYMDCarouselExample, wymdCarouselExampleSrc) }
 ];
