@@ -86,7 +86,6 @@ const CarouselCard = styled.div`
       width: 6px;
       }
     }
-  }
 
   .splide__pagination__page {
     background: transparent;
