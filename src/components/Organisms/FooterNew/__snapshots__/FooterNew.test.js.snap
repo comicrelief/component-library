@@ -89,13 +89,13 @@ exports[`does not render copyright text when not supplied 1`] = `
 
 .c29:hover,
 .c29:focus {
-  transform: scale(1.15);
+  background-color: #3A3A3A;
+  opacity: 1;
 }
 
 .c29:hover,
 .c29:focus {
-  background-color: #3A3A3A;
-  opacity: 1;
+  transform: scale(1.15);
 }
 
 .c31 {
@@ -817,6 +817,12 @@ exports[`does not render copyright text when not supplied 1`] = `
   }
 }
 
+@media (min-width: 1024px) {
+  .c2 {
+    display: none;
+  }
+}
+
 @media (min-width: 740px) {
   .c32 {
     flex: 0 0 auto;
@@ -825,6 +831,12 @@ exports[`does not render copyright text when not supplied 1`] = `
     padding-top: 2rem;
     display: flex;
     justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c32 {
+    display: none;
   }
 }
 
@@ -839,6 +851,12 @@ exports[`does not render copyright text when not supplied 1`] = `
   }
 }
 
+@media (min-width: 1024px) {
+  .c34 {
+    display: flex;
+  }
+}
+
 @media (min-width: 740px) {
   .c46 {
     flex: 0 0 auto;
@@ -847,6 +865,12 @@ exports[`does not render copyright text when not supplied 1`] = `
     padding-top: 0;
     display: flex;
     justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c46 {
+    display: none;
   }
 }
 
@@ -1325,6 +1349,7 @@ exports[`does not render copyright text when not supplied 1`] = `
       </nav>
       <div
         className="c44"
+        data-testid="footer-copyright"
       >
         <p
           className="c17 c45"
@@ -1429,13 +1454,13 @@ exports[`renders correctly 1`] = `
 
 .c29:hover,
 .c29:focus {
-  transform: scale(1.15);
+  background-color: #3A3A3A;
+  opacity: 1;
 }
 
 .c29:hover,
 .c29:focus {
-  background-color: #3A3A3A;
-  opacity: 1;
+  transform: scale(1.15);
 }
 
 .c31 {
@@ -2157,6 +2182,12 @@ exports[`renders correctly 1`] = `
   }
 }
 
+@media (min-width: 1024px) {
+  .c2 {
+    display: none;
+  }
+}
+
 @media (min-width: 740px) {
   .c32 {
     flex: 0 0 auto;
@@ -2165,6 +2196,12 @@ exports[`renders correctly 1`] = `
     padding-top: 2rem;
     display: flex;
     justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c32 {
+    display: none;
   }
 }
 
@@ -2179,6 +2216,12 @@ exports[`renders correctly 1`] = `
   }
 }
 
+@media (min-width: 1024px) {
+  .c34 {
+    display: flex;
+  }
+}
+
 @media (min-width: 740px) {
   .c46 {
     flex: 0 0 auto;
@@ -2187,6 +2230,12 @@ exports[`renders correctly 1`] = `
     padding-top: 0;
     display: flex;
     justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c46 {
+    display: none;
   }
 }
 
@@ -2665,6 +2714,7 @@ exports[`renders correctly 1`] = `
       </nav>
       <div
         className="c44"
+        data-testid="footer-copyright"
       >
         <p
           className="c17 c45"

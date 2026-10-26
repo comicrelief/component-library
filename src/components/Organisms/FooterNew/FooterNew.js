@@ -138,7 +138,7 @@ const FooterNew = ({
 
           <SecondaryNav navItems={secondaryLinksList} {...rest} />
 
-          <FooterCopyright>
+          <FooterCopyright data-testid="footer-copyright">
             {displayCopyrightText.length > 0 && (
               <FooterCopyrightText>
                 {displayCopyrightText}
