@@ -236,9 +236,6 @@ const LogosContainer = styled.div`
   }};
   }
 
-
-  }
-
   @media ${({ theme }) => theme.breakpoints2026('L')} {
     display: ${({
     $desktopOnly, $mobileOnly, $showCRLogoOnly, $showPairedLogos, $showFundraiserAtBottom
