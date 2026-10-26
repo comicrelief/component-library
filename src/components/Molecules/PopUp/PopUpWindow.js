@@ -38,23 +38,6 @@ const PopUpWindow = styled.div`
       animation: none;
     }
   `}
-
-  ${({ $hoverColour, theme }) => $hoverColour && css`
-    &:hover {
-      color: ${theme.color($hoverColour)};
-    }
-  `}
-`;
-
-// Opaque backdrop over the popup's original footprint, so content behind it doesn't show
-export const PopUpBackdrop = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: ${({ theme }) => theme.color('grey_light')};
-  ${zIndex('medium')}
 `;
 
 export default PopUpWindow;

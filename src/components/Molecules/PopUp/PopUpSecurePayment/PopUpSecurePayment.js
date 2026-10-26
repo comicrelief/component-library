@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 import Text from '../../../Atoms/Text/Text';
 import Cross from '../../../Atoms/Icons/Cross';
 import Padlock from '../../../Atoms/Icons/Padlock';
-import PopUpWindow, { PopUpBackdrop } from '../PopUpWindow';
+import PopUpWindow from '../PopUpWindow';
 
 const Container = styled.div`
   position: relative;
@@ -95,13 +95,10 @@ const PopUpSecurePayment = ({
         </SecureButton>
       </Trigger>
 
-      {isOpen && <PopUpBackdrop />}
-
       {isOpen && (
         <PopUpWindow
           $backgroundColour="white"
           $textColour={textColour}
-          $hoverColour={hoverColour}
           $isOpen={isOpen}
         >
           <CloseButton

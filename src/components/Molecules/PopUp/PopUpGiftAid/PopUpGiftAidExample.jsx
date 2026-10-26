@@ -1,16 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PopUpGiftAid from './PopUpGiftAid';
 import styled from 'styled-components';
 
+// Parent styling from the JS state (onOpenChange) and from the CSS
+// data-open attribute on the popup's container, via :has()
 const Wrapper = styled.div`
-  background: green;
+  position: relative;
+  background: ${({ $isOpen }) => ($isOpen ? 'orange' : 'green')};
   padding: 1rem;
+
+  &:has([data-open="true"]) {
+    outline: 2px solid black;
+  }
+
+  /* Shade over the wrapper's content while the popup is open */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    display: ${({ $isOpen }) => ($isOpen ? 'block' : 'none')};
+  }
+`;
+
+const Status = styled.p`
+  margin: 0 0 0.5rem;
+  color: white;
 `;
 
 export default function PopUpGiftAidExample() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <Wrapper>
-      <PopUpGiftAid/>
+    <Wrapper $isOpen={isOpen}>
+      <Status>{isOpen ? 'Gift Aid popup is open' : 'Gift Aid popup is closed'}</Status>
+      <PopUpGiftAid onOpenChange={setIsOpen} />
     </Wrapper>
   );
 }

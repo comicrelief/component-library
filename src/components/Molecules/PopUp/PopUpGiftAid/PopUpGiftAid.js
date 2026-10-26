@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 import Text from '../../../Atoms/Text/Text';
 import Cross from '../../../Atoms/Icons/Cross';
 import GiftAidLogo from '../../../Atoms/Icons/GiftAidLogo';
-import PopUpWindow, { PopUpBackdrop } from '../PopUpWindow';
+import PopUpWindow from '../PopUpWindow';
 
 const Container = styled.div`
   position: relative;
@@ -86,8 +86,6 @@ const PopUpGiftAid = ({
           </LogoWrapper>
         </PopUpWindow>
       </Trigger>
-
-      {isOpen && <PopUpBackdrop />}
 
       {isOpen && (
         <PopUpWindow
