@@ -22,7 +22,7 @@ const StyledLink = styled.a`
   }
 
   // 'isHeader' is only set and passed in Header2025, so the pre-existing Header isn't affected:
-  ${({ $isHeader }) => $isHeader && css`
+  ${({ $isHeader, theme }) => $isHeader && css`
     overflow: hidden;
     padding-right: 0px;
     transition: padding-right ${RevealTextSpeed}s cubic-bezier(0.5, 1.5, 0.5, 0.75);
@@ -33,7 +33,7 @@ const StyledLink = styled.a`
     }
 
     // No hover state for mobile, so targetting Medium+:
-    @media ${({ theme }) => theme.breakpoints2026('M')} {
+    @media ${theme.breakpoints2026('M')} {
       &:hover,
       &:focus {
         img {
@@ -42,7 +42,7 @@ const StyledLink = styled.a`
       }
     }
 
-    @media ${({ theme }) => theme.allBreakpoints('NavWide')} {
+    @media ${theme.allBreakpoints('NavWide')} {
       &:hover,
       &:focus {
         // Default
@@ -80,14 +80,17 @@ const StyledLink = styled.a`
     width: 100%;
     height: 100%;
 
-    ${springScaleAnimation(true, 1.15, 2)}
-
     &:hover,
     &:focus {
       background-color: ${theme.color('grey_4_hover')};
       opacity: 1;
     }
   `}
+
+  // springScaleAnimation must stay a sibling — nesting it inside the $newStyle css block
+  // breaks flattening so rules, it bugs out and compiles as global :hover, :focus 
+  // when you try to combine them
+  ${({ $newStyle }) => $newStyle && springScaleAnimation(true, 1.15, 2)}
 `;
 
 const RevealText = styled(Text)`
