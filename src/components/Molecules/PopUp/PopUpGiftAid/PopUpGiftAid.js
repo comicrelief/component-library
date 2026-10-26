@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
@@ -6,35 +6,11 @@ import Text from '../../../Atoms/Text/Text';
 import Cross from '../../../Atoms/Icons/Cross';
 import GiftAidLogo from '../../../Atoms/Icons/GiftAidLogo';
 import PopUpWindow from '../PopUpWindow';
-
-const Container = styled.div`
-  position: relative;
-  width: 100%;
-`;
-
-// Hidden rather than unmounted when open, so the closed trigger keeps its
-// space and content below the popup doesn't do the janky move around when it overlays/opens
-const Trigger = styled.div`
-  visibility: ${({ $hidden }) => ($hidden ? 'hidden' : 'visible')};
-`;
+import {
+  Container, Trigger, CloseButton, usePopUpOpen
+} from '../PopUpShared';
 
 const LogoWrapper = styled.button`
-  border: none;
-  background: none;
-  cursor: pointer;
-
-  ${({ $hoverColour, theme }) => $hoverColour && css`
-    &:hover svg {
-      fill: ${theme.color($hoverColour)};
-    }
-  `}
-`;
-
-const CloseButton = styled.button`
-  align-self: flex-end;
-  display: flex;
-  padding: 0;
-  margin: 0;
   border: none;
   background: none;
   cursor: pointer;
@@ -52,17 +28,7 @@ const PopUpGiftAid = ({
   onOpenChange,
   ...rest
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const updateOpen = nextOpen => {
-    setIsOpen(nextOpen);
-    if (onOpenChange) {
-      onOpenChange(nextOpen);
-    }
-  };
-
-  const openModal = () => updateOpen(true);
-  const closeModal = () => updateOpen(false);
+  const { isOpen, openPopUp, closePopUp } = usePopUpOpen(onOpenChange);
 
   return (
     <Container
@@ -77,7 +43,7 @@ const PopUpGiftAid = ({
         >
           <LogoWrapper
             type="button"
-            onClick={openModal}
+            onClick={openPopUp}
             aria-expanded={isOpen ? 'true' : 'false'}
             aria-label="What is Gift Aid?"
             $hoverColour={hoverColour}
@@ -95,7 +61,7 @@ const PopUpGiftAid = ({
         >
           <CloseButton
             type="button"
-            onClick={closeModal}
+            onClick={closePopUp}
             aria-label="Close"
             $hoverColour={hoverColour}
           >

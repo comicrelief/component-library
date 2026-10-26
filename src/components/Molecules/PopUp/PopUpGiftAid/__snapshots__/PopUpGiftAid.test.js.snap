@@ -12,10 +12,6 @@ exports[`renders coral_light variant 1`] = `
   padding: 0;
 }
 
-.c4 {
-  fill: #000000;
-}
-
 .c0 {
   position: relative;
   width: 100%;
@@ -23,6 +19,10 @@ exports[`renders coral_light variant 1`] = `
 
 .c1 {
   visibility: visible;
+}
+
+.c4 {
+  fill: #000000;
 }
 
 .c3 {
@@ -92,10 +92,6 @@ exports[`renders default blue_light variant 1`] = `
   padding: 0;
 }
 
-.c4 {
-  fill: #000000;
-}
-
 .c0 {
   position: relative;
   width: 100%;
@@ -103,6 +99,10 @@ exports[`renders default blue_light variant 1`] = `
 
 .c1 {
   visibility: visible;
+}
+
+.c4 {
+  fill: #000000;
 }
 
 .c3 {

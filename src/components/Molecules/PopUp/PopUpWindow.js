@@ -1,7 +1,9 @@
 import styled, { css, keyframes } from 'styled-components';
 import zIndex from '../../../theme/shared/zIndex';
 
-// The overlay mounts when opened, so an entrance animation covers the transition
+/**
+ * The overlay mounts when opened, so an entrance animation covers the transition
+ */
 const openOverlay = keyframes`
   from {
     opacity: 0;

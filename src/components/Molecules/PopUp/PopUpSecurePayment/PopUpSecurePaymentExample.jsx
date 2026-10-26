@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import PopUpSecurePayment from './PopUpSecurePayment';
 import styled from 'styled-components';
 
-// Parent styling from the JS state (onOpenChange) and from the CSS
-// data-open attribute on the popup's container, via :has()
+/**
+  * Parent styling from the JS state (onOpenChange) uses data-open attribute
+  * on the popup's container to fire CSS styles via :has()
+ */
 const Wrapper = styled.div`
   position: relative;
   padding: 1rem;
@@ -37,7 +39,7 @@ export default function PopUpSecurePaymentExample() {
 
   return (
     <Wrapper $isOpen={isOpen}>
-      <Status>{isOpen ? 'Secure payment popup is open' : 'Secure payment popup is closed'}</Status>
+      <Status>{isOpen ? 'Popup is open' : 'popup is closed'}</Status>
       <PopUpSecurePayment onOpenChange={setIsOpen} />
     </Wrapper>
   );
