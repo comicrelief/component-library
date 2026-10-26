@@ -1325,6 +1325,7 @@ exports[`does not render copyright text when not supplied 1`] = `
       </nav>
       <div
         className="c44"
+        data-testid="footer-copyright"
       >
         <p
           className="c17 c45"
@@ -2665,6 +2666,7 @@ exports[`renders correctly 1`] = `
       </nav>
       <div
         className="c44"
+        data-testid="footer-copyright"
       >
         <p
           className="c17 c45"
