@@ -14,11 +14,11 @@ const FundraisingRegulatorWrapper = styled.div`
     display: block;
   }
 
-  ${({ animateOnHover }) => animateOnHover && springScaleAnimation(true, 1.03, 1)}
+  ${({ $animateOnHover }) => $animateOnHover && springScaleAnimation(true, 1.03, 1)}
 `;
 
 const FundraisingRegulatorLogo = ({ animateOnHover = false, noMargin = false }) => (
-  <FundraisingRegulatorWrapper animateOnHover={animateOnHover} $noMargin={noMargin}>
+  <FundraisingRegulatorWrapper $animateOnHover={animateOnHover} $noMargin={noMargin}>
     {/* Code from https://www.fundraisingregulator.org.uk/ */}
     {/* eslint-disable-next-line react/jsx-no-target-blank */}
     <a href="https://www.fundraisingregulator.org.uk/validate?registrant=COMIC+RELIEF" className="fr-digital-badge" style={{ height: 'auto', width: '150px', textDecoration: 'none' }} target="_blank">
