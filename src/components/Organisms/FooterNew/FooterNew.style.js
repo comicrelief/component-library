@@ -213,6 +213,7 @@ const LogosContainer = styled.div`
     margin-bottom: 0;
     padding-top: ${({ $desktopOnly }) => ($desktopOnly ? spacing('l') : '0')};
 
+    // THIS IS BOKRED
     display: ${({
     $desktopOnly, $mobileOnly, $showCRLogoOnly, $showPairedLogos, $showFundraiserAtBottom
   }) => {
@@ -228,15 +229,12 @@ const LogosContainer = styled.div`
     return 'flex';
   }};
 
-    justify-content: ${({ $desktopOnly, $showCRLogoOnly, $showFundraiserAtBottom }) => {
+      justify-content: ${({ $desktopOnly, $showCRLogoOnly, $showFundraiserAtBottom }) => {
     if ($showFundraiserAtBottom) return 'flex-start';
     if ($desktopOnly && $showCRLogoOnly) return 'flex-end';
     if ($desktopOnly) return 'flex-end';
     return 'center';
   }};
-  }
-
-
   }
 
   @media ${({ theme }) => theme.breakpoints2026('L')} {
