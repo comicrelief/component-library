@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import {
+  useCallback, useEffect, useRef, useState
+} from 'react';
 import styled, { css, keyframes } from 'styled-components';
 import zIndex from '../../../theme/shared/zIndex';
 
@@ -17,7 +19,26 @@ const openOverlay = keyframes`
   }
 `;
 
+/**
+ * Plays when the popup closes, before it is unmounted (see CLOSE_DURATION)
+ */
+const closeOverlay = keyframes`
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+`;
+
+// Keep in step with the closeOverlay animation below
+const CLOSE_DURATION = 200;
+
 export const PopUpWindow = styled.div`
+  font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
   background-color: ${({ theme, $backgroundColour }) => theme.color($backgroundColour)};
   color: ${({ theme, $textColour }) => theme.color($textColour)};
   display: flex;
@@ -43,6 +64,14 @@ export const PopUpWindow = styled.div`
     ${zIndex('high')}
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
     animation: ${openOverlay} 250ms ease-out;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
+  `}
+
+  ${({ $isClosing }) => $isClosing && css`
+    animation: ${closeOverlay} ${CLOSE_DURATION}ms ease-in forwards;
 
     @media (prefers-reduced-motion: reduce) {
       animation: none;
@@ -97,18 +126,59 @@ export const CloseButton = styled.button`
  * Tracks open state and reports changes to the parent via onOpenChange
  */
 export const usePopUpOpen = onOpenChange => {
-  const [isOpen, setIsOpen] = useState(false);
+  // 'closed' -> 'open' -> 'closing' -> 'closed'; 'closing' keeps the popup
+  // mounted long enough to play its exit animation
+  const [phase, setPhase] = useState('closed');
+  const containerRef = useRef(null);
 
-  const updateOpen = nextOpen => {
-    setIsOpen(nextOpen);
+  const isOpen = phase === 'open';
+
+  const openPopUp = () => {
+    setPhase('open');
     if (onOpenChange) {
-      onOpenChange(nextOpen);
+      onOpenChange(true);
     }
   };
 
+  const closePopUp = useCallback(() => {
+    setPhase('closing');
+    if (onOpenChange) {
+      onOpenChange(false);
+    }
+  }, [onOpenChange]);
+
+  // Unmount once the exit animation has finished
+  useEffect(() => {
+    if (phase !== 'closing') {
+      return undefined;
+    }
+
+    const timer = setTimeout(() => setPhase('closed'), CLOSE_DURATION);
+    return () => clearTimeout(timer);
+  }, [phase]);
+
+  // Close when a press lands outside the popup while it is open
+  useEffect(() => {
+    if (!isOpen) {
+      return undefined;
+    }
+
+    const handlePointerDown = event => {
+      if (containerRef.current && !containerRef.current.contains(event.target)) {
+        closePopUp();
+      }
+    };
+
+    document.addEventListener('pointerdown', handlePointerDown);
+    return () => document.removeEventListener('pointerdown', handlePointerDown);
+  }, [isOpen, closePopUp]);
+
   return {
     isOpen,
-    openPopUp: () => updateOpen(true),
-    closePopUp: () => updateOpen(false)
+    isClosing: phase === 'closing',
+    isRendered: phase !== 'closed',
+    containerRef,
+    openPopUp,
+    closePopUp
   };
 };

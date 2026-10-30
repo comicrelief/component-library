@@ -29,15 +29,18 @@ const PopUpSecurePayment = ({
   onOpenChange,
   ...rest
 }) => {
-  const { isOpen, openPopUp, closePopUp } = usePopUpOpen(onOpenChange);
+  const {
+    isOpen, isClosing, isRendered, containerRef, openPopUp, closePopUp
+  } = usePopUpOpen(onOpenChange);
 
   return (
     <Container
+      ref={containerRef}
       data-testid="pop-up-secure-payment"
       data-open={isOpen ? 'true' : 'false'}
       {...rest}
     >
-      <Trigger $hidden={isOpen}>
+      <Trigger $hidden={isRendered}>
         <SecureButton
           type="button"
           onClick={openPopUp}
@@ -48,10 +51,11 @@ const PopUpSecurePayment = ({
         </SecureButton>
       </Trigger>
 
-      {isOpen && (
+      {isRendered && (
         <PopUpWindow
           $backgroundColour="white"
-          $isOpen={isOpen}
+          $isOpen={isRendered}
+          $isClosing={isClosing}
         >
           <CloseButton
             type="button"

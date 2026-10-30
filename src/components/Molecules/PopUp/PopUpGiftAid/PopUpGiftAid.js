@@ -26,15 +26,18 @@ const PopUpGiftAid = ({
   onOpenChange,
   ...rest
 }) => {
-  const { isOpen, openPopUp, closePopUp } = usePopUpOpen(onOpenChange);
+  const {
+    isOpen, isClosing, isRendered, containerRef, openPopUp, closePopUp
+  } = usePopUpOpen(onOpenChange);
 
   return (
     <Container
+      ref={containerRef}
       data-testid="pop-up-gift-aid"
       data-open={isOpen ? 'true' : 'false'}
       {...rest}
     >
-      <Trigger $hidden={isOpen}>
+      <Trigger $hidden={isRendered}>
         <PopUpWindow
           $backgroundColour="white"
           $textColour={textColour}
@@ -51,11 +54,12 @@ const PopUpGiftAid = ({
         </PopUpWindow>
       </Trigger>
 
-      {isOpen && (
+      {isRendered && (
         <PopUpWindow
           $backgroundColour="white"
           $textColour={textColour}
-          $isOpen={isOpen}
+          $isOpen={isRendered}
+          $isClosing={isClosing}
         >
           <CloseButton
             type="button"
