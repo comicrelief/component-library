@@ -2,6 +2,7 @@
 
 exports[`renders coral_light variant 1`] = `
 .c2 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   background-color: #FFFFFF;
   color: #000000;
   display: flex;
@@ -81,6 +82,7 @@ exports[`renders coral_light variant 1`] = `
 
 exports[`renders default blue_light variant 1`] = `
 .c2 {
+  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   background-color: #FFFFFF;
   color: #000000;
   display: flex;
