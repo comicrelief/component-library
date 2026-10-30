@@ -9,3 +9,5 @@ export { default as CtaArrow } from './CtaArrow';
 export { default as Post } from './Post';
 export { default as Filter } from './Filter';
 export { default as Undo } from './Undo';
+export { default as Padlock } from './Padlock';
+export { default as GiftAidLogo } from './GiftAidLogo';
