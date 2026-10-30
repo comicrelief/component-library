@@ -6,7 +6,7 @@ import Text from '../../../Atoms/Text/Text';
 import Cross from '../../../Atoms/Icons/Cross';
 import Padlock from '../../../Atoms/Icons/Padlock';
 import {
-  Container, Trigger, CloseButton, PopUpWindow, usePopUpOpen
+  Container, Trigger, CloseButton, PopUpWindow, usePopUpOpen, PopUpHeading
 } from '../PopUpShared';
 
 const SecureButton = styled.button`
@@ -65,7 +65,7 @@ const PopUpSecurePayment = ({
             <Cross colour="black" size={24} />
           </CloseButton>
 
-          <h3>How we keep your donations secure and encrypted</h3>
+          <PopUpHeading>How we keep your donations secure and encrypted</PopUpHeading>
 
           <p>
             We’ve partnered with trusted payment services like Braintree, Stripe,

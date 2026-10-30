@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 import Cross from '../../../Atoms/Icons/Cross';
 import GiftAidLogo from '../../../Atoms/Icons/GiftAidLogo';
 import {
-  Container, Trigger, CloseButton, PopUpWindow, usePopUpOpen
+  Container, Trigger, CloseButton, PopUpWindow, usePopUpOpen, PopUpHeading
 } from '../PopUpShared';
 
 const LogoWrapper = styled.button`
@@ -70,7 +70,7 @@ const PopUpGiftAid = ({
             <Cross colour={textColour} size={24} />
           </CloseButton>
 
-          <h3>What is Gift Aid and how does it work?</h3>
+          <PopUpHeading>What is Gift Aid and how does it work?</PopUpHeading>
 
           <p>
             As a UK taxpayer, you pay tax on your income, savings, or pensions.
