@@ -63,8 +63,8 @@ const StyledLink = styled.a`
           display: block;
         }
       }
-    `}
     };
+  `}
 
   // New style is rounded square buttons with dark grey background, and animation.
   // When we've moved fully to the new design,
@@ -80,17 +80,14 @@ const StyledLink = styled.a`
     width: 100%;
     height: 100%;
 
+    ${springScaleAnimation(true, 1.15, 2)}
+
     &:hover,
     &:focus {
       background-color: ${theme.color('grey_4_hover')};
       opacity: 1;
     }
   `}
-
-  // springScaleAnimation must stay a sibling — nesting it inside the $newStyle css block
-  // breaks flattening so rules, it bugs out and compiles as global :hover, :focus 
-  // when you try to combine them
-  ${({ $newStyle }) => $newStyle && springScaleAnimation(true, 1.15, 2)}
 `;
 
 const RevealText = styled(Text)`
@@ -139,7 +136,7 @@ const Icon = ({
     $newStyle={newStyle}
   >
     <StyledImage src={icon} alt={brand} $invertColor={invertColor} />
-    { isHeader && (
+    {isHeader && (
       <RevealText>{title}</RevealText>
     )}
 

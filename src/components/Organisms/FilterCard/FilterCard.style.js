@@ -38,6 +38,10 @@ const Container = styled.div`
   @media ${({ theme }) => theme.allBreakpoints('M')} {
     padding-inline: 2rem;
   }
+
+  @media ${({ theme }) => theme.allBreakpoints('L')} {
+    padding-inline: 4rem;
+  }
 `;
 
 const HeaderWrapper = styled.div`
