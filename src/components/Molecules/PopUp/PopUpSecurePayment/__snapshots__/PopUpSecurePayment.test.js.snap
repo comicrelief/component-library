@@ -10,10 +10,6 @@ exports[`renders coral_light variant 1`] = `
   line-height: 1.25rem;
 }
 
-.c4 {
-  color: #000000;
-}
-
 .c4 span {
   font-size: inherit;
   line-height: inherit;
@@ -46,13 +42,6 @@ exports[`renders coral_light variant 1`] = `
 
 .c2:hover span {
   text-decoration: underline;
-}
-
-.c2:hover,
-.c2:hover span,
-.c2:hover svg {
-  color: #E52630;
-  fill: #E52630;
 }
 
 @media (min-width: 740px) {
@@ -121,10 +110,6 @@ exports[`renders default blue_light variant 1`] = `
   line-height: 1.25rem;
 }
 
-.c4 {
-  color: #000000;
-}
-
 .c4 span {
   font-size: inherit;
   line-height: inherit;
@@ -157,13 +142,6 @@ exports[`renders default blue_light variant 1`] = `
 
 .c2:hover span {
   text-decoration: underline;
-}
-
-.c2:hover,
-.c2:hover span,
-.c2:hover svg {
-  color: #E52630;
-  fill: #E52630;
 }
 
 @media (min-width: 740px) {

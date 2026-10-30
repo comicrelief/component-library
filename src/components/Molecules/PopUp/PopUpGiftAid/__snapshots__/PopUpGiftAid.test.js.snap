@@ -9,7 +9,6 @@ exports[`renders coral_light variant 1`] = `
   width: 100%;
   box-sizing: border-box;
   border-radius: 1rem;
-  padding: 0;
 }
 
 .c0 {
@@ -89,7 +88,6 @@ exports[`renders default blue_light variant 1`] = `
   width: 100%;
   box-sizing: border-box;
   border-radius: 1rem;
-  padding: 0;
 }
 
 .c0 {
