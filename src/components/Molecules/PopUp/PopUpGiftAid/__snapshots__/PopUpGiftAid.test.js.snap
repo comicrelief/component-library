@@ -12,6 +12,10 @@ exports[`renders coral_light variant 1`] = `
   border-radius: 1rem;
 }
 
+.c2 h3 {
+  margin-right: 16px;
+}
+
 .c0 {
   position: relative;
   width: 100%;
@@ -90,6 +94,10 @@ exports[`renders default blue_light variant 1`] = `
   width: 100%;
   box-sizing: border-box;
   border-radius: 1rem;
+}
+
+.c2 h3 {
+  margin-right: 16px;
 }
 
 .c0 {

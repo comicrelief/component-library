@@ -47,6 +47,11 @@ export const PopUpWindow = styled.div`
   box-sizing: border-box;
   border-radius: 1rem;
 
+  /* Keeps the heading clear of the close button */
+  h3 {
+    margin-right: 16px;
+  }
+
   ${({ $isOpen }) => $isOpen && css`
     font-size: 0.875rem;
     @media ${({ theme }) => theme.allBreakpoints('M')} {

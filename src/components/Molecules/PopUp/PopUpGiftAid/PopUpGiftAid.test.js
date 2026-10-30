@@ -16,6 +16,7 @@ it('renders coral_light variant', () => {
 });
 
 it('starts collapsed, opens on row click and closes again with the cross', () => {
+  jest.useFakeTimers();
   const renderer = renderWithTheme(<PopUpGiftAid />);
   expect(renderer.root.findAll(node => node.type === 'button' && node.props['aria-label'] === 'Close')).toHaveLength(0);
 
@@ -26,6 +27,11 @@ it('starts collapsed, opens on row click and closes again with the cross', () =>
 
   act(() => {
     renderer.root.find(node => node.type === 'button' && node.props['aria-label'] === 'Close').props.onClick();
+  });
+
+  // Wait for the 200ms exit animation before the popup unmounts
+  act(() => {
+    jest.advanceTimersByTime(200);
   });
   expect(renderer.root.findAll(node => node.type === 'button' && node.props['aria-label'] === 'Close')).toHaveLength(0);
   expect(renderer.root.find(node => node.type === 'button' && node.props['aria-expanded'] === 'false')).toBeTruthy();
