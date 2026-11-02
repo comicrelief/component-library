@@ -40,6 +40,7 @@ const FooterNew = ({
   showFundraisingRegulatorLogo = false,
   showEmailSignup = true,
   animateRotate = true,
+  externalCRLink = null,
   ...rest
 }) => {
   // Remove white space between words
@@ -79,7 +80,12 @@ const FooterNew = ({
           )}
 
           <LogosContainer $mobileOnly>
-            <Brand href="/" title={`Go to ${campaign} homepage`} $animateRotate={animateRotate}>
+            <Brand
+              href={externalCRLink ?? '/'}
+              title={`Go to ${campaign} homepage`}
+              $animateRotate={animateRotate}
+              target={externalCRLink ? 'blank' : 'self'}
+            >
               <Logo sizeSm="59px" sizeMd="59px" sizeLg="72px" rotate={false} campaign={campaign} />
             </Brand>
           </LogosContainer>
@@ -109,12 +115,22 @@ const FooterNew = ({
               </SocialIconWrapper>
             </TopSectionLeft>
             <LogosContainer $desktopOnly $showCRLogoOnly>
-              <Brand href="/" title={`Go to ${campaign} homepage`} $animateRotate={animateRotate}>
+              <Brand
+                href={externalCRLink ?? '/'}
+                title={`Go to ${campaign} homepage`}
+                $animateRotate={animateRotate}
+                target={externalCRLink ? 'blank' : 'self'}
+              >
                 <Logo sizeSm="59px" sizeMd="59px" sizeLg="59px" rotate={false} campaign={campaign} />
               </Brand>
             </LogosContainer>
             <LogosContainer $desktopOnly $showPairedLogos>
-              <Brand href="/" title={`Go to ${campaign} homepage`} $animateRotate={animateRotate}>
+              <Brand
+                href={externalCRLink ?? '/'}
+                title={`Go to ${campaign} homepage`}
+                $animateRotate={animateRotate}
+                target={externalCRLink ? 'blank' : 'self'}
+              >
                 <Logo sizeSm="59px" sizeMd="59px" sizeLg="59px" rotate={false} campaign={campaign} />
               </Brand>
               {showFundraisingRegulatorLogo && <FundraisingRegulatorLogo animateOnHover noMargin />}
@@ -203,7 +219,10 @@ FooterNew.propTypes = {
   /** Animate logo rotation on hover */
   animateRotate: PropTypes.bool,
   /** Optional function to handle newsletter signup form submission */
-  onNewsletterSubmit: PropTypes.func
+  onNewsletterSubmit: PropTypes.func,
+  // Rather than just using a boolean here, this will allow us to point
+  // the CR logo at any Sorry/Lite version of CRcom, if needs arise:
+  externalCRLink: PropTypes.string
 };
 
 export default FooterNew;
