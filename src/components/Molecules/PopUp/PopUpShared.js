@@ -188,7 +188,7 @@ const CloseButton = styled.button`
   }
 `;
 
-const PopUpHeading = styled.div`
+const PopUpHeading = styled.h3`
   font-weight: 700;
   margin-bottom: 1rem;
   font-size: 0.875rem;
@@ -197,6 +197,14 @@ const PopUpHeading = styled.div`
   }
 `;
 
+const PopUpBodyText = styled.p`
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  @media ${({ theme }) => theme.allBreakpoints('M')} {
+    font-size: 1rem;
+  }
+`;
+
 export {
-  Container, Trigger, CloseButton, PopUpWindow, usePopUpOpen, PopUpHeading
+  Container, Trigger, CloseButton, PopUpWindow, usePopUpOpen, PopUpHeading, PopUpBodyText
 };

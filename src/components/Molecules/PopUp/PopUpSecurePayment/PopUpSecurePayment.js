@@ -6,7 +6,7 @@ import Text from '../../../Atoms/Text/Text';
 import Cross from '../../../Atoms/Icons/Cross';
 import Padlock from '../../../Atoms/Icons/Padlock';
 import {
-  Container, Trigger, CloseButton, PopUpWindow, usePopUpOpen, PopUpHeading
+  Container, Trigger, CloseButton, PopUpWindow, usePopUpOpen, PopUpHeading, PopUpBodyText
 } from '../PopUpShared';
 
 const SecureButton = styled.button`
@@ -67,18 +67,18 @@ const PopUpSecurePayment = ({
 
           <PopUpHeading>How we keep your donations secure and encrypted</PopUpHeading>
 
-          <p>
+          <PopUpBodyText>
             We’ve partnered with trusted payment services like Braintree, Stripe,
             GoCardless, PayPal, Google, and Apple to keep your payment information
             safe and sound. Every transaction is fully encrypted.
-          </p>
+          </PopUpBodyText>
 
-          <p>
+          <PopUpBodyText>
             We also use a secure server and follow best practices to protect your
             data, like your name and address. Our systems get checked every year by
             the NCC Group, and we regularly chat with AWS to stay ahead of any
             potential issues.
-          </p>
+          </PopUpBodyText>
         </PopUpWindow>
       )}
     </Container>

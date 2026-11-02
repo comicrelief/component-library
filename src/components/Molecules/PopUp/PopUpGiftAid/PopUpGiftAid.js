@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 import Cross from '../../../Atoms/Icons/Cross';
 import GiftAidLogo from '../../../Atoms/Icons/GiftAidLogo';
 import {
-  Container, Trigger, CloseButton, PopUpWindow, usePopUpOpen, PopUpHeading
+  Container, Trigger, CloseButton, PopUpWindow, usePopUpOpen, PopUpHeading, PopUpBodyText
 } from '../PopUpShared';
 
 const LogoWrapper = styled.button`
@@ -72,23 +72,23 @@ const PopUpGiftAid = ({
 
           <PopUpHeading>What is Gift Aid and how does it work?</PopUpHeading>
 
-          <p>
+          <PopUpBodyText>
             As a UK taxpayer, you pay tax on your income, savings, or pensions.
             When you donate to charity, it comes from money you&apos;ve already
             paid tax on. Charities can reclaim this tax back from the Government
             through Gift Aid, so if you donated £10 and used Gift Aid, it’s will
             actually be worth £12.50! How awesome is that?
-          </p>
+          </PopUpBodyText>
 
-          <p>
+          <PopUpBodyText>
             Since this extra cash comes straight from the government and not from
             your pocket, you’ll still only be spending £10 of your own money. Which
             is great news for you!
-          </p>
+          </PopUpBodyText>
 
-          <p>
+          <PopUpBodyText>
             In short, £1 + Gift Aid = £1.25, at no extra cost to you.
-          </p>
+          </PopUpBodyText>
         </PopUpWindow>
       )}
     </Container>
