@@ -40,7 +40,7 @@ const FooterNew = ({
   showFundraisingRegulatorLogo = false,
   showEmailSignup = true,
   animateRotate = true,
-  externalCRLink = '',
+  externalCRLink = null,
   ...rest
 }) => {
   // Remove white space between words

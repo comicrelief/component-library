@@ -893,7 +893,7 @@ exports[`does not render copyright text when not supplied 1`] = `
       >
         <a
           className="c3 c4"
-          href=""
+          href="/"
           target="_self"
           title="Go to Comic Relief homepage"
           type="standard"
@@ -1129,7 +1129,7 @@ exports[`does not render copyright text when not supplied 1`] = `
         >
           <a
             className="c3 c4"
-            href=""
+            href="/"
             target="_self"
             title="Go to Comic Relief homepage"
             type="standard"
@@ -1150,7 +1150,7 @@ exports[`does not render copyright text when not supplied 1`] = `
         >
           <a
             className="c3 c4"
-            href=""
+            href="/"
             target="_self"
             title="Go to Comic Relief homepage"
             type="standard"
@@ -2258,7 +2258,7 @@ exports[`renders correctly 1`] = `
       >
         <a
           className="c3 c4"
-          href=""
+          href="/"
           target="_self"
           title="Go to Comic Relief homepage"
           type="standard"
@@ -2494,7 +2494,7 @@ exports[`renders correctly 1`] = `
         >
           <a
             className="c3 c4"
-            href=""
+            href="/"
             target="_self"
             title="Go to Comic Relief homepage"
             type="standard"
@@ -2515,7 +2515,7 @@ exports[`renders correctly 1`] = `
         >
           <a
             className="c3 c4"
-            href=""
+            href="/"
             target="_self"
             title="Go to Comic Relief homepage"
             type="standard"
