@@ -34,8 +34,8 @@ const FilterCard = ({ data }) => {
     title,
     firstFilterCardNodeAsHero = false,
     loadingBehaviour = null,
-    paddingAbove = '0rem',
-    paddingBelow = '1rem',
+    paddingAbove = '2rem',
+    paddingBelow = '2rem',
     pageBackgroundColour = 'transparent'
   } = data;
 

@@ -199,6 +199,7 @@ const FilterButton = styled(CustomisedButton)`
       width: 1.25rem;
       margin: 0;
       animation: ${fadeIn} 0.2s ease-in;
+      height: auto;
     }
 
     > ${Copywrapper} {

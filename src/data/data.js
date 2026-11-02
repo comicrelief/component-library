@@ -353,8 +353,6 @@ const ButtonIconSvgPath = 'https://images.ctfassets.net/0p265iutoxgq/3GaahqcCBaX
 
 // Reused config and 'top' content for the FilterCard examples:
 const filterCardConfig = {
-  paddingAbove: '2rem',
-  paddingBelow: '2rem',
   pageBackgroundColour: 'grey_light',
   loadingBehaviour: 'Load all cards at once',
   body:
