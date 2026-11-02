@@ -80,7 +80,12 @@ const FooterNew = ({
           )}
 
           <LogosContainer $mobileOnly>
-            <Brand href={externalCRLink ?? '/'} title={`Go to ${campaign} homepage`} $animateRotate={animateRotate}>
+            <Brand
+              href={externalCRLink ?? '/'}
+              title={`Go to ${campaign} homepage`}
+              $animateRotate={animateRotate}
+              target={externalCRLink ? 'blank' : 'self'}
+            >
               <Logo sizeSm="59px" sizeMd="59px" sizeLg="72px" rotate={false} campaign={campaign} />
             </Brand>
           </LogosContainer>
@@ -120,7 +125,12 @@ const FooterNew = ({
               </Brand>
             </LogosContainer>
             <LogosContainer $desktopOnly $showPairedLogos>
-              <Brand href={externalCRLink ?? '/'} title={`Go to ${campaign} homepage`} $animateRotate={animateRotate}>
+              <Brand
+                href={externalCRLink ?? '/'}
+                title={`Go to ${campaign} homepage`}
+                $animateRotate={animateRotate}
+                target={externalCRLink ? 'blank' : 'self'}
+              >
                 <Logo sizeSm="59px" sizeMd="59px" sizeLg="59px" rotate={false} campaign={campaign} />
               </Brand>
               {showFundraisingRegulatorLogo && <FundraisingRegulatorLogo animateOnHover noMargin />}
