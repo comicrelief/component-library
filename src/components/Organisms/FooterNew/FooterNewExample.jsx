@@ -21,7 +21,7 @@ export default function FooterNewExample() {
         showTikTokSocialIcon
         showYouTubeSocialIcon
         animateRotate
-        onNewsletterSubmit={(email) => console.log('Newsletter submitted. Normally at this point, the frontend would run its own function to send.', email)}
+        onNewsletterSubmit={email => console.log('Newsletter submitted. Normally at this point, the frontend would run its own function to send.', email)}
       />
 
       <h3>FooterNew without email signup</h3>
@@ -38,6 +38,23 @@ export default function FooterNewExample() {
         showTikTokSocialIcon
         showYouTubeSocialIcon
         animateRotate
+      />
+
+      <h3>FooterNew without email signup + external CR logo link (as per Donate)</h3>
+      <FooterNew
+        primaryLinksList={primaryLinksList}
+        secondaryLinksList={secondaryLinksList}
+        legalText={footerCopy.copy}
+        campaign="Comic Relief"
+        showEmailSignup={false}
+        showFundraisingRegulatorLogo
+        showFacebookSocialIcon
+        showInstagramSocialIcon
+        showXSocialIcon
+        showTikTokSocialIcon
+        showYouTubeSocialIcon
+        animateRotate
+        externalCRLink="https://www.comicrelief.com"
       />
 
     </div>
