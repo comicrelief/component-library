@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
-import Cross from '../../../Atoms/Icons/Cross';
+import Cross from '../../../Atoms/Icons/CrossRoundedCorners';
 import GiftAidLogo from '../../../Atoms/Icons/GiftAidLogo';
 import {
   Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText

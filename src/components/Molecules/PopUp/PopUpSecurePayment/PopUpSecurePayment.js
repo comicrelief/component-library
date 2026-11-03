@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Text from '../../../Atoms/Text/Text';
-import Cross from '../../../Atoms/Icons/Cross';
+import Cross from '../../../Atoms/Icons/CrossRoundedCorners';
 import Padlock from '../../../Atoms/Icons/Padlock';
 import {
   Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText
