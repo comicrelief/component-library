@@ -7,9 +7,9 @@ import { ButtonIconImgPath, ButtonIconSvgPath } from '../../../data/data';
 
 export default function ButtonExample() {
   // Covering all of the use cases:
-  const blackCrossIcon = <Cross />;
-  const whiteCrossIcon = <Cross colour="white" />;
-  const redCrossIcon = <Cross colour="red" />;
+  const blackCrossIcon = <Cross size={20} />;
+  const whiteCrossIcon = <Cross colour="white" size={20} />;
+  const redCrossIcon = <Cross colour="red" size={20} />;
 
   const testImage = (
     <img

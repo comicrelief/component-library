@@ -3,6 +3,10 @@ import spacing from '../../../theme/shared/spacing';
 import hideVisually from '../../../theme/shared/hideVisually';
 import fontHelper from '../../../theme/crTheme/fontHelper';
 
+export const Copywrapper = styled.span`
+  // Purely for some cleaner markup :)
+`;
+
 const buttonStyle = () => css`
   display: inline-flex;
   position: relative;
@@ -68,6 +72,7 @@ export const IconWrapper = styled.span`
     width: auto;
     right: auto;
     position: relative;
+
     ${({ type }) => type === 'standard' && css`
       position: absolute;
       right: -2rem;
@@ -80,14 +85,62 @@ export const IconWrapper = styled.span`
 const StyledLink = styled.a`
   ${props => (props.type === 'button' ? buttonStyle : linkStyle)}
 
-  ${({ $iconFirst }) => $iconFirst
+  ${props => props.$iconFirst && props.type === 'button'
     && css`
       flex-direction: row-reverse;
+      
       span[type="button"] {
         margin-left: 0;
         margin-right: 1rem;
       }
     `};
+
+    // Icon-based tweaks, recreating updates to Button:
+    ${props => (props.$hasIcon && props.type === 'button') && css`
+      display: inline-grid;
+      grid-template-columns: 1fr repeat(1, auto) 1fr;
+      grid-column-gap: 0.6rem;
+      grid-template-rows: auto;
+      justify-items: center;
+
+      > ${Copywrapper} {
+        grid-column-start: 2;
+
+        // Request from Curtis to aesthetically rebalance these smaller buttons:
+        ${({ $fullWidth }) => (!$fullWidth && css`
+          padding-right: 1.5rem;
+        `)};
+      }
+
+      > ${IconWrapper} {
+        margin-left: auto;
+        // While Button heights now scale to fit content (important for lots
+        // of copy on a small breakpoint), we so still need to constrain the
+        // icon, to prevent silliness:
+        height: 1.25rem;
+      }
+
+    ${(props.$iconFirst && css`
+      > ${Copywrapper} {
+        order: 2;
+
+        ${({ $fullWidth }) => (!$fullWidth && css`
+          // Swap sides for the 'aesthetic rebalance' mentioned aobve:
+          padding-inline: 1.5rem 0;
+        `)};
+      }
+
+      > ${IconWrapper} {
+        // Place the icon before the copy in the Grid:
+        order: 1;
+
+        // Swap other alignment rule:
+        &[type="button"] {
+          margin-inline: 0 auto;
+        }
+       }
+    `)};
+  `};
 `;
 
 export const HelperText = styled.span`

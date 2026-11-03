@@ -101,7 +101,11 @@ it('renders a button with an icon', () => {
   target="_self"
   type="standard"
 >
-  Internal link
+  <span
+    className=""
+  >
+    Internal link
+  </span>
   <span
     className="c1"
     type="standard"

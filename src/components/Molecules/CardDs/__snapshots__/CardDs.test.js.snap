@@ -15,11 +15,11 @@ exports[`renders Column view correctly 1`] = `
   object-fit: cover;
 }
 
-.c9 {
+.c10 {
   fill: #FFFFFF;
 }
 
-.c8 {
+.c9 {
   display: inline-flex;
   margin-left: 1rem;
   align-self: center;
@@ -48,6 +48,11 @@ exports[`renders Column view correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  display: inline-grid;
+  grid-template-columns: 1fr repeat(1,auto) 1fr;
+  grid-column-gap: 0.6rem;
+  grid-template-rows: auto;
+  justify-items: center;
 }
 
 .c7:hover,
@@ -62,6 +67,16 @@ exports[`renders Column view correctly 1`] = `
 .c7:disabled {
   cursor: not-allowed;
   opacity: 0.35;
+}
+
+.c7 >.{
+  grid-column-start: 2;
+  padding-right: 1.5rem;
+}
+
+.c7 >.c8 {
+  margin-left: auto;
+  height: 1.25rem;
 }
 
 .c0 {
@@ -109,13 +124,13 @@ exports[`renders Column view correctly 1`] = `
 }
 
 @media (min-width: 1024px) {
-  .c9 {
+  .c10 {
     fill: #FFFFFF;
   }
 }
 
 @media (min-width: 740px) {
-  .c8 {
+  .c9 {
     width: auto;
     right: auto;
     position: relative;
@@ -227,13 +242,17 @@ exports[`renders Column view correctly 1`] = `
       target="_self"
       type="button"
     >
-      Find out more
       <span
-        className="c8"
+        className=""
+      >
+        Find out more
+      </span>
+      <span
+        className="c8 c9"
         type="button"
       >
         <svg
-          className="c9"
+          className="c10"
           colour="white"
           fill="#FFFFFF"
           height={20}
@@ -267,11 +286,11 @@ exports[`renders correctly 1`] = `
   object-fit: cover;
 }
 
-.c9 {
+.c10 {
   fill: #FFFFFF;
 }
 
-.c8 {
+.c9 {
   display: inline-flex;
   margin-left: 1rem;
   align-self: center;
@@ -300,6 +319,11 @@ exports[`renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  display: inline-grid;
+  grid-template-columns: 1fr repeat(1,auto) 1fr;
+  grid-column-gap: 0.6rem;
+  grid-template-rows: auto;
+  justify-items: center;
 }
 
 .c7:hover,
@@ -314,6 +338,16 @@ exports[`renders correctly 1`] = `
 .c7:disabled {
   cursor: not-allowed;
   opacity: 0.35;
+}
+
+.c7 >.{
+  grid-column-start: 2;
+  padding-right: 1.5rem;
+}
+
+.c7 >.c8 {
+  margin-left: auto;
+  height: 1.25rem;
 }
 
 .c0 {
@@ -361,13 +395,13 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 1024px) {
-  .c9 {
+  .c10 {
     fill: #FFFFFF;
   }
 }
 
 @media (min-width: 740px) {
-  .c8 {
+  .c9 {
     width: auto;
     right: auto;
     position: relative;
@@ -510,13 +544,17 @@ exports[`renders correctly 1`] = `
       target="_self"
       type="button"
     >
-      Find out more
       <span
-        className="c8"
+        className=""
+      >
+        Find out more
+      </span>
+      <span
+        className="c8 c9"
         type="button"
       >
         <svg
-          className="c9"
+          className="c10"
           colour="white"
           fill="#FFFFFF"
           height={20}
