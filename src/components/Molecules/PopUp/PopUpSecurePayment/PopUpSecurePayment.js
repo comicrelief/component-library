@@ -6,8 +6,9 @@ import Text from '../../../Atoms/Text/Text';
 import Cross from '../../../Atoms/Icons/Cross';
 import Padlock from '../../../Atoms/Icons/Padlock';
 import {
-  Container, Trigger, CloseButton, PopUpWindow, usePopUpOpen, PopUpHeading, PopUpBodyText
-} from '../PopUpShared';
+  Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText
+} from '../PopUpShared.style';
+import { usePopUpOpen } from '../PopUpShared.utils';
 
 const DEFAULT_TRIGGER_TEXT = 'Your donation is secure and encrypted';
 

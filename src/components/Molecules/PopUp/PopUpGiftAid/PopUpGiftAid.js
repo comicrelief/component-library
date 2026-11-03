@@ -5,8 +5,9 @@ import styled, { css } from 'styled-components';
 import Cross from '../../../Atoms/Icons/Cross';
 import GiftAidLogo from '../../../Atoms/Icons/GiftAidLogo';
 import {
-  Container, Trigger, CloseButton, PopUpWindow, usePopUpOpen, PopUpHeading, PopUpBodyText
-} from '../PopUpShared';
+  Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText
+} from '../PopUpShared.style';
+import { usePopUpOpen } from '../PopUpShared.utils';
 
 const DEFAULT_HEADING = 'What is Gift Aid and how does it work?';
 
