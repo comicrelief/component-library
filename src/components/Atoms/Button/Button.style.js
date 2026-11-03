@@ -72,7 +72,7 @@ const StyledButton = styled.button`
       // While Button heights now scale to fit content (important for lots
       // of copy on a small breakpoint), we so still need to constrain the
       // icon, to prevent silliness:
-      height: calc(3rem - (var(--padding-top-and-bottom) * 2));
+      height: 1.25rem;
     }
 
     ${($iconLeft && css`
