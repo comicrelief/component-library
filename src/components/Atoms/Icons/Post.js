@@ -11,7 +11,7 @@ const StyledSVG = styled.svg`
 `;
 
 const Post = ({
-  colour = 'white', mobileColour = null, theme, size = 20, ...rest
+  colour = 'white', mobileColour = null, theme, size = 24, ...rest
 }) => (
   <StyledSVG
     {...rest}

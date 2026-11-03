@@ -255,10 +255,10 @@ exports[`renders Column view correctly 1`] = `
           className="c10"
           colour="white"
           fill="#FFFFFF"
-          height={20}
+          height={24}
           mobileColour={null}
           viewBox="0 0 15 15"
-          width={20}
+          width={24}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -557,10 +557,10 @@ exports[`renders correctly 1`] = `
           className="c10"
           colour="white"
           fill="#FFFFFF"
-          height={20}
+          height={24}
           mobileColour={null}
           viewBox="0 0 15 15"
-          width={20}
+          width={24}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path

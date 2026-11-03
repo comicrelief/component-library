@@ -42,7 +42,7 @@ function ExpandedButton({ options = [], selectedId, onSelect }) {
               </HeadingContentWrapper>
 
               <ArrowWrapper data-testid="expanded-button-arrow-wrapper">
-                <Arrow colour="black" data-testid="expanded-button-arrow" size={24} />
+                <Arrow colour="black" data-testid="expanded-button-arrow" />
               </ArrowWrapper>
 
             </CardTopWrapper>

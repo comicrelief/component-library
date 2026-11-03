@@ -22,7 +22,7 @@ const Icon = styled.svg`
 `;
 
 const Arrow = ({
-  colour = 'white', mobileColour = null, theme, size = 20, direction = 'up', ...rest
+  colour = 'white', mobileColour = null, theme, size = 24, direction = 'up', ...rest
 }) => (
   <Icon
     $direction={direction}
