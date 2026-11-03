@@ -88,14 +88,13 @@ const StyledLink = styled.a`
   ${props => props.$iconFirst && props.type === 'button'
     && css`
       flex-direction: row-reverse;
-      // TODO: what??
       span[type="button"] {
         margin-left: 0;
         margin-right: 1rem;
       }
     `};
 
-    // Icon-based tweaks:
+    // Icon-based tweaks, recreating updates to Button:
     ${props => (props.$hasIcon && props.type === 'button') && css`
       display: inline-grid;
       grid-template-columns: 1fr repeat(1, auto) 1fr;
