@@ -88,6 +88,7 @@ const StyledLink = styled.a`
   ${props => props.$iconFirst && props.type === 'button'
     && css`
       flex-direction: row-reverse;
+      
       span[type="button"] {
         margin-left: 0;
         margin-right: 1rem;
@@ -119,7 +120,6 @@ const StyledLink = styled.a`
         height: 1.25rem;
       }
 
-
     ${(props.$iconFirst && css`
       > ${Copywrapper} {
         order: 2;
@@ -133,9 +133,11 @@ const StyledLink = styled.a`
       > ${IconWrapper} {
         // Place the icon before the copy in the Grid:
         order: 1;
+
         // Swap other alignment rule:
-        // TOOD: having to override weird rule above
-        margin-inline: 0 auto !important;
+        &[type="button"] {
+          margin-inline: 0 auto;
+        }
        }
     `)};
   `};
