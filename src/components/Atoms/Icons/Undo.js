@@ -16,7 +16,7 @@ const Undo = ({
   colour = 'black',
   mobileColour = null,
   theme,
-  size = 24,
+  size = 20,
   ...rest
 }) => (
   <Icon

@@ -15,7 +15,7 @@ const StyledSVG = styled.svg`
 `;
 
 const AtSign = ({
-  theme, size = 24, colour = 'white', mobileColour = null, ...rest
+  theme, size = 20, colour = 'white', mobileColour = null, ...rest
 }) => (
   <StyledSVG
     width={size}

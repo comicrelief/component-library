@@ -13,7 +13,7 @@ const StyledSVG = styled.svg`
 `;
 
 const Favourite = ({
-  colour = 'white', mobileColour = null, theme, size = 24, ...rest
+  colour = 'white', mobileColour = null, theme, size = 20, ...rest
 }) => (
   <StyledSVG
     {...rest}

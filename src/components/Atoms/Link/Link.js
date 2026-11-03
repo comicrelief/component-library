@@ -70,7 +70,7 @@ const Link = ({
       $hasIcon={hasIcon}
     >
       {hasIcon
-      // Wrapping span to allow for grid positioning alongside icon
+        // Wrapping span to allow for grid positioning alongside icon
         ? <Copywrapper>{children}</Copywrapper>
         : children
       }
