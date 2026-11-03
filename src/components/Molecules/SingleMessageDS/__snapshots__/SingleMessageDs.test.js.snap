@@ -56,7 +56,7 @@ exports[`renders correctly 1`] = `
   line-height: inherit;
 }
 
-.c12 {
+.c13 {
   display: inline-flex;
   margin-left: 1rem;
   align-self: center;
@@ -85,6 +85,11 @@ exports[`renders correctly 1`] = `
   letter-spacing: 0;
   font-size: 1rem;
   line-height: 1.25rem;
+  display: inline-grid;
+  grid-template-columns: 1fr repeat(1,auto) 1fr;
+  grid-column-gap: 0.6rem;
+  grid-template-rows: auto;
+  justify-items: center;
 }
 
 .c11:hover,
@@ -101,7 +106,17 @@ exports[`renders correctly 1`] = `
   opacity: 0.35;
 }
 
-.c13 {
+.c11 >.{
+  grid-column-start: 2;
+  padding-right: 1.5rem;
+}
+
+.c11 >.c12 {
+  margin-left: auto;
+  height: 1.25rem;
+}
+
+.c14 {
   fill: #FFFFFF;
 }
 
@@ -187,7 +202,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 740px) {
-  .c12 {
+  .c13 {
     width: auto;
     right: auto;
     position: relative;
@@ -221,7 +236,7 @@ exports[`renders correctly 1`] = `
 }
 
 @media (min-width: 1024px) {
-  .c13 {
+  .c14 {
     fill: #FFFFFF;
   }
 }
@@ -330,13 +345,17 @@ exports[`renders correctly 1`] = `
         target="_self"
         type="button"
       >
-        Check out the shop
         <span
-          className="c12"
+          className=""
+        >
+          Check out the shop
+        </span>
+        <span
+          className="c12 c13"
           type="button"
         >
           <svg
-            className="c13"
+            className="c14"
             fill="#FFFFFF"
             height={24}
             viewBox="0 0 96 96"

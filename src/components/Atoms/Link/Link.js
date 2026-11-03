@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import StyledLink, { HelperText, IconWrapper } from './Link.style';
+import StyledLink, { HelperText, IconWrapper, Copywrapper } from './Link.style';
 import allowListed from '../../../utils/allowListed';
 import { getDomain } from '../../../utils/internalLinkHelper';
 import buttonTypes from '../../../theme/crTheme/buttonTypes';
@@ -67,8 +67,13 @@ const Link = ({
       $underline={underline}
       $fullWidth={fullWidth}
       $buttonType={buttonType}
+      $hasIcon={hasIcon}
     >
-      {children}
+      {hasIcon
+      // Wrapping span to allow for grid positioning alongside icon
+        ? <Copywrapper>{children}</Copywrapper>
+        : children
+      }
       {window === '_blank' && <HelperText>(opens in new window)</HelperText>}
       {hasIcon && <IconWrapper type={type}>{icon}</IconWrapper>}
     </StyledLink>

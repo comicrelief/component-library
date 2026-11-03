@@ -99,6 +99,33 @@ export default function LinkExample() {
         </Link>
       </ExampleContainer>
 
+      <ExampleContainer>
+        <Link
+          color="red"
+          href="/test"
+          target="blank"
+          type="button"
+          fullWidth
+          icon={<Internal colour="white" />}
+        >
+          Link as full-width red button with an icon
+        </Link>
+      </ExampleContainer>
+
+      <ExampleContainer>
+        <Link
+          color="red"
+          href="/test"
+          target="blank"
+          type="button"
+          fullWidth
+          icon={<Internal colour="white" />}
+          iconFirst
+        >
+          Link as full-width red button with an icon first
+        </Link>
+      </ExampleContainer>
+
       <h3>Iconography</h3>
 
       <ExampleContainer>
@@ -110,7 +137,7 @@ export default function LinkExample() {
           type="button"
           icon={<Internal colour="white" mobileColour="red" />}
         >
-          Internal link, 'blue' with red icon on tablet and mobile
+          Internal link, &apos;blue&apos; with red icon on tablet and mobile
         </Link>
       </ExampleContainer>
 
