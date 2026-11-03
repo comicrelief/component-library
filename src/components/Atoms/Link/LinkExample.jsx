@@ -106,7 +106,7 @@ export default function LinkExample() {
           target="blank"
           type="button"
           fullWidth
-          icon={<Internal colour="white" />}
+          icon={<Internal colour="white" size={20} />}
         >
           Link as full-width red button with an icon
         </Link>
@@ -119,7 +119,7 @@ export default function LinkExample() {
           target="blank"
           type="button"
           fullWidth
-          icon={<Internal colour="white" />}
+          icon={<Internal colour="white" size={20} />}
           iconFirst
         >
           Link as full-width red button with an icon first
@@ -135,7 +135,7 @@ export default function LinkExample() {
           href="#anchor"
           target="blank"
           type="button"
-          icon={<Internal colour="white" mobileColour="red" />}
+          icon={<Internal colour="white" mobileColour="red" size={20} />}
         >
           Internal link, &apos;blue&apos; with red icon on tablet and mobile
         </Link>
@@ -148,7 +148,7 @@ export default function LinkExample() {
           href="#anchor"
           target="blank"
           type="button"
-          icon={<External colour="white" mobileColour="blue" />}
+          icon={<External colour="white" mobileColour="blue" size={20} />}
         >
           External link (black on mobile, blue on desktop)
         </Link>
@@ -160,7 +160,7 @@ export default function LinkExample() {
           href="#anchor"
           target="blank"
           type="button"
-          icon={<Download colour="white" mobileColour="blue" />}
+          icon={<Download colour="white" mobileColour="blue" size={20} />}
         >
           Download link (blue mobile-tablet icon, white desktop icon)
         </Link>
@@ -172,7 +172,7 @@ export default function LinkExample() {
           href="#anchor"
           target="blank"
           type="button"
-          icon={<Favourite colour="white" mobileColour="blue" />}
+          icon={<Favourite colour="white" mobileColour="blue" size={20} />}
         >
           Favourite link (blue mobile-tablet icon, white desktop icon)
         </Link>
@@ -184,7 +184,7 @@ export default function LinkExample() {
           href="#anchor"
           target="blank"
           type="button"
-          icon={<Chevron direction="up" colour="white" mobileColour="blue" />}
+          icon={<Chevron direction="up" colour="white" mobileColour="blue" size={20} />}
         >
           Chevron Up (blue mobile-tablet icon, white desktop icon)
         </Link>
@@ -196,7 +196,7 @@ export default function LinkExample() {
           href="#anchor"
           target="blank"
           type="button"
-          icon={<Chevron direction="down" colour="white" mobileColour="blue" />}
+          icon={<Chevron direction="down" colour="white" mobileColour="blue" size={20} />}
         >
           Chevron Down (blue mobile-tablet icon, white desktop icon)
         </Link>
@@ -208,7 +208,7 @@ export default function LinkExample() {
           href="#anchor"
           target="blank"
           type="button"
-          icon={<Chevron direction="left" colour="white" mobileColour="blue" />}
+          icon={<Chevron direction="left" colour="white" mobileColour="blue" size={20} />}
         >
           Chevron Left (blue mobile-tablet icon, white desktop icon)
         </Link>
@@ -220,7 +220,7 @@ export default function LinkExample() {
           href="#anchor"
           target="blank"
           type="button"
-          icon={<Chevron direction="right" colour="white" mobileColour="blue" />}
+          icon={<Chevron direction="right" colour="white" mobileColour="blue" size={20} />}
         >
           Chevron Right (blue mobile-tablet icon, white desktop icon)
         </Link>
@@ -233,7 +233,7 @@ export default function LinkExample() {
           target="blank"
           type="button"
           iconFirst
-          icon={<Arrow direction="left" colour="white" mobileColour="blue" />}
+          icon={<Arrow direction="left" colour="white" mobileColour="blue" size={20} />}
         >
           Arrow Left (blue mobile-tablet icon, white desktop icon)
         </Link>
@@ -245,7 +245,7 @@ export default function LinkExample() {
           href="#anchor"
           target="blank"
           type="button"
-          icon={<AtSign colour="white" mobileColour="blue" />}
+          icon={<AtSign colour="white" mobileColour="blue" size={20} />}
         >
           At Sign (blue mobile-tablet icon, white desktop icon)
         </Link>

@@ -114,10 +114,10 @@ it('renders a button with an icon', () => {
       className="c2"
       colour="white"
       fill="#FFFFFF"
-      height={20}
+      height={24}
       mobileColour={null}
       viewBox="0 0 15 15"
-      width={20}
+      width={24}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
