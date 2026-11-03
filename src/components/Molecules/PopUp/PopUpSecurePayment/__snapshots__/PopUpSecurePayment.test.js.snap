@@ -40,7 +40,8 @@ exports[`renders coral_light variant 1`] = `
   cursor: pointer;
 }
 
-.c2:hover span {
+.c2:hover span,
+.c2:focus span {
   text-decoration: underline;
 }
 
@@ -140,7 +141,8 @@ exports[`renders default blue_light variant 1`] = `
   cursor: pointer;
 }
 
-.c2:hover span {
+.c2:hover span,
+.c2:focus span {
   text-decoration: underline;
 }
 
