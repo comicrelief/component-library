@@ -38,6 +38,7 @@ exports[`renders coral_light variant 1`] = `
   border: none;
   background: none;
   cursor: pointer;
+  color: #000000;
 }
 
 .c2:hover span,
@@ -139,6 +140,7 @@ exports[`renders default blue_light variant 1`] = `
   border: none;
   background: none;
   cursor: pointer;
+  color: #000000;
 }
 
 .c2:hover span,
