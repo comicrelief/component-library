@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   }
 
   /* Shade over the wrapper's content while the popup is open */
-  &::before {
+  &:before {
     content: '';
     position: absolute;
     top: 0;

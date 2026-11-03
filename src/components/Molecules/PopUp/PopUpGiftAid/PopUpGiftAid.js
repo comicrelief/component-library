@@ -8,6 +8,14 @@ import {
   Container, Trigger, CloseButton, PopUpWindow, usePopUpOpen, PopUpHeading, PopUpBodyText
 } from '../PopUpShared';
 
+const DEFAULT_HEADING = 'What is Gift Aid and how does it work?';
+
+const DEFAULT_PARAGRAPHS = [
+  "As a UK taxpayer, you pay tax on your income, savings, or pensions. When you donate to charity, it comes from money you've already paid tax on. Charities can reclaim this tax back from the Government through Gift Aid, so if you donated £10 and used Gift Aid, it’s will actually be worth £12.50! How awesome is that?",
+  'Since this extra cash comes straight from the government and not from your pocket, you’ll still only be spending £10 of your own money. Which is great news for you!',
+  'In short, £1 + Gift Aid = £1.25, at no extra cost to you.'
+];
+
 const LogoWrapper = styled.button`
   border: none;
   background: none;
@@ -23,6 +31,8 @@ const LogoWrapper = styled.button`
 const PopUpGiftAid = ({
   textColour = 'black',
   hoverColour = 'red',
+  heading = DEFAULT_HEADING,
+  paragraphs = DEFAULT_PARAGRAPHS,
   onOpenChange,
   ...rest
 }) => {
@@ -70,25 +80,11 @@ const PopUpGiftAid = ({
             <Cross colour={textColour} size={24} />
           </CloseButton>
 
-          <PopUpHeading>What is Gift Aid and how does it work?</PopUpHeading>
+          <PopUpHeading>{heading}</PopUpHeading>
 
-          <PopUpBodyText>
-            As a UK taxpayer, you pay tax on your income, savings, or pensions.
-            When you donate to charity, it comes from money you&apos;ve already
-            paid tax on. Charities can reclaim this tax back from the Government
-            through Gift Aid, so if you donated £10 and used Gift Aid, it’s will
-            actually be worth £12.50! How awesome is that?
-          </PopUpBodyText>
-
-          <PopUpBodyText>
-            Since this extra cash comes straight from the government and not from
-            your pocket, you’ll still only be spending £10 of your own money. Which
-            is great news for you!
-          </PopUpBodyText>
-
-          <PopUpBodyText>
-            In short, £1 + Gift Aid = £1.25, at no extra cost to you.
-          </PopUpBodyText>
+          {paragraphs.map(paragraph => (
+            <PopUpBodyText key={paragraph}>{paragraph}</PopUpBodyText>
+          ))}
         </PopUpWindow>
       )}
     </Container>
@@ -98,6 +94,8 @@ const PopUpGiftAid = ({
 PopUpGiftAid.propTypes = {
   textColour: PropTypes.string,
   hoverColour: PropTypes.string,
+  heading: PropTypes.string,
+  paragraphs: PropTypes.arrayOf(PropTypes.string),
   onOpenChange: PropTypes.func
 };
 

@@ -9,6 +9,15 @@ import {
   Container, Trigger, CloseButton, PopUpWindow, usePopUpOpen, PopUpHeading, PopUpBodyText
 } from '../PopUpShared';
 
+const DEFAULT_TRIGGER_TEXT = 'Your donation is secure and encrypted';
+
+const DEFAULT_HEADING = 'How we keep your donations secure and encrypted';
+
+const DEFAULT_PARAGRAPHS = [
+  'We’ve partnered with trusted payment services like Braintree, Stripe, GoCardless, PayPal, Google, and Apple to keep your payment information safe and sound. Every transaction is fully encrypted.',
+  'We also use a secure server and follow best practices to protect your data, like your name and address. Our systems get checked every year by the NCC Group, and we regularly chat with AWS to stay ahead of any potential issues.'
+];
+
 const SecureButton = styled.button`
   display: flex;
   flex-direction: row;
@@ -20,12 +29,16 @@ const SecureButton = styled.button`
   background: none;
   cursor: pointer;
 
-  &:hover span {
+  &:hover span,
+  &:focus span {
     text-decoration: underline;
   }
 `;
 
 const PopUpSecurePayment = ({
+  triggerText = DEFAULT_TRIGGER_TEXT,
+  heading = DEFAULT_HEADING,
+  paragraphs = DEFAULT_PARAGRAPHS,
   onOpenChange,
   ...rest
 }) => {
@@ -47,7 +60,7 @@ const PopUpSecurePayment = ({
           aria-expanded={isOpen ? 'true' : 'false'}
         >
           <Padlock colour="black" size={16} />
-          <Text>Your donation is secure and encrypted</Text>
+          <Text>{triggerText}</Text>
         </SecureButton>
       </Trigger>
 
@@ -65,20 +78,11 @@ const PopUpSecurePayment = ({
             <Cross colour="black" size={24} />
           </CloseButton>
 
-          <PopUpHeading>How we keep your donations secure and encrypted</PopUpHeading>
+          <PopUpHeading>{heading}</PopUpHeading>
 
-          <PopUpBodyText>
-            We’ve partnered with trusted payment services like Braintree, Stripe,
-            GoCardless, PayPal, Google, and Apple to keep your payment information
-            safe and sound. Every transaction is fully encrypted.
-          </PopUpBodyText>
-
-          <PopUpBodyText>
-            We also use a secure server and follow best practices to protect your
-            data, like your name and address. Our systems get checked every year by
-            the NCC Group, and we regularly chat with AWS to stay ahead of any
-            potential issues.
-          </PopUpBodyText>
+          {paragraphs.map(paragraph => (
+            <PopUpBodyText key={paragraph}>{paragraph}</PopUpBodyText>
+          ))}
         </PopUpWindow>
       )}
     </Container>
@@ -86,6 +90,9 @@ const PopUpSecurePayment = ({
 };
 
 PopUpSecurePayment.propTypes = {
+  triggerText: PropTypes.string,
+  heading: PropTypes.string,
+  paragraphs: PropTypes.arrayOf(PropTypes.string),
   onOpenChange: PropTypes.func
 };
 
