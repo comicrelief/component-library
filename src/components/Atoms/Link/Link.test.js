@@ -49,11 +49,11 @@ it('renders a button with an icon', () => {
   ).toJSON();
 
   expect(tree).toMatchInlineSnapshot(`
-.c3 {
+.c2 {
   fill: #FFFFFF;
 }
 
-.c2 {
+.c1 {
   display: inline-flex;
   margin-left: 1rem;
   align-self: center;
@@ -69,11 +69,6 @@ it('renders a button with an icon', () => {
   display: inline;
   color: #000000;
   font-weight: normal;
-  display: inline-grid;
-  grid-template-columns: 1fr repeat(1,auto) 1fr;
-  grid-column-gap: 0.6rem;
-  grid-template-rows: auto;
-  justify-items: center;
 }
 
 .c0:hover,
@@ -82,24 +77,14 @@ it('renders a button with an icon', () => {
   text-decoration: none;
 }
 
-.c0 >.{
-  grid-column-start: 2;
-  padding-right: 1.5rem;
-}
-
-.c0 >.c1 {
-  margin-left: auto;
-  height: 1.25rem;
-}
-
 @media (min-width: 1024px) {
-  .c3 {
+  .c2 {
     fill: #FFFFFF;
   }
 }
 
 @media (min-width: 740px) {
-  .c2 {
+  .c1 {
     width: auto;
     right: auto;
     position: relative;
@@ -122,11 +107,11 @@ it('renders a button with an icon', () => {
     Internal link
   </span>
   <span
-    className="c1 c2"
+    className="c1"
     type="standard"
   >
     <svg
-      className="c3"
+      className="c2"
       colour="white"
       fill="#FFFFFF"
       height={20}

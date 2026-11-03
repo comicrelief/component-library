@@ -85,7 +85,7 @@ export const IconWrapper = styled.span`
 const StyledLink = styled.a`
   ${props => (props.type === 'button' ? buttonStyle : linkStyle)}
 
-  ${({ $iconFirst }) => $iconFirst
+  ${props => props.$iconFirst && props.type === 'button'
     && css`
       flex-direction: row-reverse;
       // TODO: what??
@@ -96,7 +96,7 @@ const StyledLink = styled.a`
     `};
 
     // Icon-based tweaks:
-    ${({ $hasIcon, $iconFirst }) => $hasIcon && css`
+    ${props => (props.$hasIcon && props.type === 'button') && css`
       display: inline-grid;
       grid-template-columns: 1fr repeat(1, auto) 1fr;
       grid-column-gap: 0.6rem;
@@ -121,7 +121,7 @@ const StyledLink = styled.a`
       }
 
 
-    ${($iconFirst && css`
+    ${(props.$iconFirst && css`
       > ${Copywrapper} {
         order: 2;
 
