@@ -82,8 +82,9 @@ const PopUpSecurePayment = ({
 
           <PopUpHeading>{heading}</PopUpHeading>
 
-          {paragraphs.map(paragraph => (
-            <PopUpBodyText key={paragraph}>{paragraph}</PopUpBodyText>
+          {paragraphs.map((paragraph, index) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <PopUpBodyText key={index}>{paragraph}</PopUpBodyText>
           ))}
         </PopUpWindow>
       )}
