@@ -28,6 +28,7 @@ const SecureButton = styled.button`
   border: none;
   background: none;
   cursor: pointer;
+  color: ${({ theme }) => theme.colour('black')};
 
   &:hover span,
   &:focus span {
