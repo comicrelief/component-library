@@ -32,6 +32,7 @@ const LogoWrapper = styled.button`
 const PopUpGiftAid = ({
   textColour = 'black',
   hoverColour = 'red',
+  backgroundColour = 'white',
   heading = DEFAULT_HEADING,
   paragraphs = DEFAULT_PARAGRAPHS,
   onOpenChange,
@@ -50,7 +51,7 @@ const PopUpGiftAid = ({
     >
       <Trigger $hidden={isRendered}>
         <PopUpWindow
-          $backgroundColour="white"
+          $backgroundColour={backgroundColour}
           $textColour={textColour}
         >
           <LogoWrapper

@@ -40,7 +40,7 @@ export default function PopUpGiftAidExample() {
   return (
     <Wrapper $isOpen={isOpen}>
       <Status>{isOpen ? 'Popup is open' : 'Popup is closed'}</Status>
-      <PopUpGiftAid onOpenChange={setIsOpen} />
+      <PopUpGiftAid onOpenChange={setIsOpen} backgroundColour='grey' />
     </Wrapper>
   );
 }
