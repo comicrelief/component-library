@@ -8,14 +8,10 @@ import styled from 'styled-components';
  */
 const Container = styled.div`
   position: relative;
-  background: ${({ $isOpen }) => ($isOpen ? 'orange' : 'green')};
   padding: 1rem;
+  background: ${({ $isOpen }) => ($isOpen ? 'orange' : 'green')};
   height: 100px;
-  margin: 0 auto;
-
-  &:has([data-open="true"]) {
-    outline: 2px solid black;
-  }
+  margin: 0 0 0 auto;
 
   /* Shade over the Container's content while the popup is open */
   &::before {
@@ -25,16 +21,21 @@ const Container = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: pink;
+    background-color: rgba(0, 0, 0, 0.4);
     pointer-events: none;
     display: ${({ $isOpen }) => ($isOpen ? 'block' : 'none')};
+  }
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  > * {
+    border: 1px solid red;
   }
 `;
 
 const PopUpExampleWrapper = styled.div`
   width: 150px;
   height: auto;
-  margin: 0 auto;
 `;
 
 export default function PopUpGiftAidExample() {
@@ -42,8 +43,9 @@ export default function PopUpGiftAidExample() {
 
   return (
     <Container $isOpen={isOpen}>
+      <h1>Heading</h1>
       <PopUpExampleWrapper>
-        <PopUpGiftAid onOpenChange={setIsOpen} />
+        <PopUpGiftAid onOpenChange={setIsOpen} openWindowWidth='550px'/>
       </PopUpExampleWrapper>
     </Container>
   );

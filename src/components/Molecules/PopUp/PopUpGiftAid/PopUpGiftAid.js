@@ -17,6 +17,17 @@ const DEFAULT_PARAGRAPHS = [
   'In short, £1 + Gift Aid = £1.25, at no extra cost to you.'
 ];
 
+/**
+ * The open popup is positioned over the trigger, so its width is set
+ * independently of the trigger's width (via openWindowWidth)
+ */
+const OpenPopUpWindow = styled(PopUpWindow)`
+  width: ${({ $openWindowWidth }) => $openWindowWidth};
+  left: 50%;
+  right: auto;
+  margin-left: ${({ $openWindowWidth }) => `calc(${$openWindowWidth} / -2)`};
+`;
+
 const LogoWrapper = styled.button`
   display: block;
   width: 100%;
@@ -36,6 +47,7 @@ const PopUpGiftAid = ({
   textColour = 'black',
   hoverColour = 'red',
   backgroundColour = 'transparent',
+  openWindowWidth = '20rem',
   heading = DEFAULT_HEADING,
   paragraphs = DEFAULT_PARAGRAPHS,
   onOpenChange,
@@ -70,11 +82,12 @@ const PopUpGiftAid = ({
       </Trigger>
 
       {isRendered && (
-        <PopUpWindow
+        <OpenPopUpWindow
           $backgroundColour="white"
           $textColour={textColour}
           $isOpen={isRendered}
           $isClosing={isClosing}
+          $openWindowWidth={openWindowWidth}
         >
           <CloseButton
             type="button"
@@ -90,7 +103,7 @@ const PopUpGiftAid = ({
           {paragraphs.map(paragraph => (
             <PopUpBodyText key={paragraph}>{paragraph}</PopUpBodyText>
           ))}
-        </PopUpWindow>
+        </OpenPopUpWindow>
       )}
     </Container>
   );
@@ -100,6 +113,7 @@ PopUpGiftAid.propTypes = {
   textColour: PropTypes.string,
   hoverColour: PropTypes.string,
   backgroundColour: PropTypes.string,
+  openWindowWidth: PropTypes.string,
   heading: PropTypes.string,
   paragraphs: PropTypes.arrayOf(PropTypes.string),
   onOpenChange: PropTypes.func

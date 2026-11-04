@@ -11,10 +11,6 @@ const Wrapper = styled.div`
   padding: 1rem;
   background: ${({ $isOpen }) => ($isOpen ? 'orange' : 'green')};
 
-  &:has([data-open="true"]) {
-    outline: 2px solid black;
-  }
-
   /* Shade over the wrapper's content while the popup is open */
   &:before {
     content: '';
@@ -29,18 +25,12 @@ const Wrapper = styled.div`
   }
 `;
 
-const Status = styled.p`
-  margin: 0 0 0.5rem;
-  color: white;
-`;
-
 export default function PopUpSecurePaymentExample() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Wrapper $isOpen={isOpen}>
-      <Status>{isOpen ? 'Popup is open' : 'popup is closed'}</Status>
-      <PopUpSecurePayment onOpenChange={setIsOpen} />
+      <PopUpSecurePayment onOpenChange={setIsOpen} openWindowWidth='450px'/>
     </Wrapper>
   );
 }
