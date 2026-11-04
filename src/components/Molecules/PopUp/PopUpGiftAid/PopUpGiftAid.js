@@ -96,6 +96,7 @@ const PopUpGiftAid = ({
 PopUpGiftAid.propTypes = {
   textColour: PropTypes.string,
   hoverColour: PropTypes.string,
+  backgroundColour: PropTypes.string,
   heading: PropTypes.string,
   paragraphs: PropTypes.arrayOf(PropTypes.string),
   onOpenChange: PropTypes.func
