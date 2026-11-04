@@ -18,6 +18,9 @@ const DEFAULT_PARAGRAPHS = [
 ];
 
 const LogoWrapper = styled.button`
+  display: block;
+  width: 100%;
+  padding: 0;
   border: none;
   background: none;
   cursor: pointer;
@@ -32,7 +35,7 @@ const LogoWrapper = styled.button`
 const PopUpGiftAid = ({
   textColour = 'black',
   hoverColour = 'red',
-  backgroundColour = 'white',
+  backgroundColour = 'transparent',
   heading = DEFAULT_HEADING,
   paragraphs = DEFAULT_PARAGRAPHS,
   onOpenChange,
@@ -61,7 +64,7 @@ const PopUpGiftAid = ({
             aria-label="What is Gift Aid?"
             $hoverColour={hoverColour}
           >
-            <GiftAidLogo size={140} colour={textColour} />
+            <GiftAidLogo colour={textColour} />
           </LogoWrapper>
         </PopUpWindow>
       </Trigger>

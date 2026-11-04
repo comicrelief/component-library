@@ -34,6 +34,10 @@ const Name = styled.p`
   text-align: center;
 `;
 
+const GiftAidLogoWrapper = styled.div`
+  width: 96px;
+`;
+
 const directions = ['up', 'down', 'left', 'right'];
 
 export default function IconsExample() {
@@ -54,7 +58,7 @@ export default function IconsExample() {
             ['Padlock', <Padlock size={48} colour="black" />],
             ['Post', <Post size={48} colour="black" />],
             ['Filter', <Filter size={48} colour="black" />],
-            ['GiftAidLogo', <GiftAidLogo size={96} colour="black" />],
+            ['GiftAidLogo', <GiftAidLogoWrapper><GiftAidLogo colour="black" /></GiftAidLogoWrapper>],
             ['Undo', <Undo size={48} colour="black" />]
           ].map(([name, icon]) => (
             <IconCard key={name}>
