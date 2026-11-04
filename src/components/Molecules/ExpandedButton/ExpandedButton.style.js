@@ -37,12 +37,16 @@ const ButtonCard = styled.button`
 `;
 
 const CardTopWrapper = styled.div`
-  margin: 0 0 8px 0;
+  margin: 0 0 4px 0;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   gap: 0.5rem;
+  
+  @media ${crTheme.allBreakpoints('M')} {
+    margin: 0 0 8px 0;
+  }
 `;
 
 const HeadingContentWrapper = styled.div`
