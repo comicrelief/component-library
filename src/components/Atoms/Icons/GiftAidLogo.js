@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { withTheme } from 'styled-components';
+import styled, { css, withTheme } from 'styled-components';
 
 const StyledSVG = styled.svg`
   display: block;
-  width: 100%;
-  height: auto;
+  ${({ $fluid }) => $fluid && css`
+    width: 100%;
+    height: auto;
+  `}
   fill: ${({ mobileColour, colour, theme }) => (mobileColour ? theme.color(mobileColour) : theme.color(colour))};
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
@@ -14,10 +16,13 @@ const StyledSVG = styled.svg`
 `;
 
 const GiftAidLogo = ({
-  colour = 'black', mobileColour = null, theme, ...rest
+  colour = 'black', mobileColour = null, size = null, theme, ...rest
 }) => (
   <StyledSVG
     {...rest}
+    width={size || undefined}
+    height={size ? (size * 124) / 350 : undefined}
+    $fluid={!size}
     fill={theme.color(colour)}
     colour={colour}
     mobileColour={mobileColour}
@@ -31,6 +36,7 @@ const GiftAidLogo = ({
 GiftAidLogo.propTypes = {
   colour: PropTypes.string,
   mobileColour: PropTypes.string,
+  size: PropTypes.number,
   theme: PropTypes.objectOf(PropTypes.shape).isRequired
 };
 

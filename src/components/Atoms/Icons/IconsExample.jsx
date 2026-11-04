@@ -4,6 +4,7 @@ import {
   Arrow, AtSign, Chevron, CtaArrow, Download, External, Favourite, GiftAidLogo, Internal, Post, Filter, Undo
 } from './index';
 import Cross from './Cross';
+import CrossRoundedCorners from './CrossRoundedCorners';
 import Padlock from './Padlock';
 import Curve from './Curve';
 import { ExampleContainer } from '../../../demos/SharedStyles';
@@ -34,10 +35,6 @@ const Name = styled.p`
   text-align: center;
 `;
 
-const GiftAidLogoWrapper = styled.div`
-  width: 96px;
-`;
-
 const directions = ['up', 'down', 'left', 'right'];
 
 export default function IconsExample() {
@@ -55,10 +52,11 @@ export default function IconsExample() {
             ['Internal', <Internal size={48} colour="black" />],
             ['AtSign', <AtSign size={48} colour="black" />],
             ['Cross', <Cross size={48} colour="black" />],
+            ['CrossRoundedCorners', <CrossRoundedCorners size={48} colour="black" />],
             ['Padlock', <Padlock size={48} colour="black" />],
             ['Post', <Post size={48} colour="black" />],
             ['Filter', <Filter size={48} colour="black" />],
-            ['GiftAidLogo', <GiftAidLogoWrapper><GiftAidLogo colour="black" /></GiftAidLogoWrapper>],
+            ['GiftAidLogo', <GiftAidLogo size={130} colour="black" />],
             ['Undo', <Undo size={48} colour="black" />]
           ].map(([name, icon]) => (
             <IconCard key={name}>
