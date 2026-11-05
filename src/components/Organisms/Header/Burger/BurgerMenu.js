@@ -10,7 +10,7 @@ const BurgerMenu = ({ toggle, isExpandable }) => (
     role="button"
     aria-haspopup="true"
     aria-label="Open and close Navigation Menu"
-    inline
+    $inline
     underline={false}
     onClick={toggle}
     $isExpandable={isExpandable}

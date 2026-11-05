@@ -18,13 +18,13 @@ const HeaderNavItem2025 = (
   <NavItem
     role="none"
     key={`${index}-${thisID}--item`}
-    index={index}
+    $index={index}
     $isSubMenuOpen={!!openedSubMenu}
   >
     {isNotDesktop ? (
       <NavLink
         href={hasPopUp ? '#' : thisUrl}
-        inline
+        $inline
         rel={relNoopener}
         aria-expanded={!!openedSubMenu[thisID]}
         aria-haspopup={hasPopUp}
@@ -44,7 +44,7 @@ const HeaderNavItem2025 = (
       <StyledText>
         <DesktopNavLink
           href={thisUrl}
-          inline
+          $inline
           rel={relNoopener}
           aria-haspopup={hasPopUp}
           key={`${index}-${thisID}`}
@@ -82,7 +82,7 @@ const HeaderNavItem2025 = (
           // Otherwise, render out as usual:
           return (
             <SubNavItem key={`${index}-${thisSubUrl}`}>
-              <SubNavLink href={thisSubUrl} inline role="menuitem">
+              <SubNavLink href={thisSubUrl} $inline role="menuitem">
                 <Text size="s">{child.title}</Text>
               </SubNavLink>
             </SubNavItem>

@@ -45,7 +45,7 @@ const ArticleTeaser = ({
 
   return (
     <OuterWrapper>
-      <Link href={href} type="standard" category={category} $isNewsTeaser={isNewsTeaser} underline={false}>
+      <Link href={href} type="standard" $isNewsTeaser={isNewsTeaser} underline={false}>
         <InnerWrapper $isNewsTeaser={isNewsTeaser}>
           <ImageWrapper $isNewsTeaser={isNewsTeaser}>
             <Image

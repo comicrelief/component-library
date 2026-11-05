@@ -19,7 +19,7 @@ const LogoLinked = ({
         href={url}
         title="Go to Sport Relief homepage"
         target={newTab ? '_blank' : '_self'}
-        animateRotate={animateRotate}
+        $animateRotate={animateRotate}
       >
         <Logo
           rotate={false}
@@ -40,7 +40,7 @@ const LogoLinked = ({
         href={url}
         title="Go to Comic Relief homepage"
         target={newTab ? '_blank' : '_self'}
-        animateRotate={animateRotate}
+        $animateRotate={animateRotate}
       >
         <Logo
           rotate={false}
@@ -63,7 +63,7 @@ const LogoLinked = ({
         href={url}
         title="Go to Comic Relief homepage"
         target={newTab ? '_blank' : '_self'}
-        animatePulse={animatePulse}
+        $animatePulse={animatePulse}
       >
         <Logo
           rotate={false}
@@ -83,7 +83,7 @@ const LogoLinked = ({
       href={url}
       title={title}
       target={newTab ? '_blank' : '_self'}
-      animateRotate={animateRotate}
+      $animateRotate={animateRotate}
     >
       <Logo
         rotate={false}

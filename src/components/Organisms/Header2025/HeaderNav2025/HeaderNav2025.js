@@ -138,7 +138,7 @@ const HeaderNav2025 = ({
                 <HeaderNavItem2025
                   thisID={thisID}
                   key={`${thisID}--item`}
-                  index={index}
+                  $index={index}
                   hasSubMenu={hasSubMenu}
                   openedSubMenu={openedSubMenu}
                   toggleSubMenu={toggleSubMenu}
@@ -172,7 +172,7 @@ const HeaderNav2025 = ({
         {/* These are only shown on the non-desktop view; the desktop nav renders
            these in the parent Header component to suit the design layout */}
         {metaIcons && (
-          <NavMetaIcons isHeader data-testid="meta-icons--mobile">
+          <NavMetaIcons $isHeader data-testid="meta-icons--mobile">
             {metaIcons}
           </NavMetaIcons>
         )}

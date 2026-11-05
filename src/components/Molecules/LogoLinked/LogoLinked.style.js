@@ -8,9 +8,9 @@ const TitleLabel = styled.span`
 `;
 
 const LogoLink = styled.a`
-  ${({ animateRotate }) => logoRotateAnimation(animateRotate)}
+  ${({ $animateRotate }) => logoRotateAnimation($animateRotate)}
   
-  ${({ animatePulse }) => animatePulse && css`
+  ${({ $animatePulse }) => $animatePulse && css`
     img {
         ${pulseOutAnimation};
     }

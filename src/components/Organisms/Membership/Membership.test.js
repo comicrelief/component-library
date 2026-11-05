@@ -584,11 +584,8 @@ it('renders correctly', () => {
                   <input
                     aria-label="£5"
                     aria-required={false}
-                    boxBorderColor=""
                     className="c20"
                     id="mship-1--moneyBuy-box1"
-                    isInputMatchBox="5"
-                    isSelected={false}
                     name="mship-1--moneyBuy1"
                     onClick={[Function]}
                     placeholder=""
@@ -620,11 +617,8 @@ it('renders correctly', () => {
                   <input
                     aria-label="£10"
                     aria-required={false}
-                    boxBorderColor=""
                     className="c20"
                     id="mship-1--moneyBuy-box2"
-                    isInputMatchBox="10"
-                    isSelected={true}
                     name="mship-1--moneyBuy2"
                     onClick={[Function]}
                     placeholder=""
@@ -656,11 +650,8 @@ it('renders correctly', () => {
                   <input
                     aria-label="£20"
                     aria-required={false}
-                    boxBorderColor=""
                     className="c20"
                     id="mship-1--moneyBuy-box3"
-                    isInputMatchBox="20"
-                    isSelected={false}
                     name="mship-1--moneyBuy3"
                     onClick={[Function]}
                     placeholder=""

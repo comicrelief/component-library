@@ -1,7 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import TextInputWithDropdown from '../../Atoms/TextInputWithDropdown/TextInputWithDropdown';
-import spacing from '../../../theme/shared/spacing';
 import ButtonWithStates from '../../Atoms/ButtonWithStates/ButtonWithStates';
 
 const KEY_CODE_ENTER = 13;
@@ -70,7 +69,6 @@ const Lookup = ({
   return (
     <div {...rest}>
       <TextInputWithDropdown
-        css={{ marginBottom: spacing('md') }}
         name={name}
         id={name}
         value={query}

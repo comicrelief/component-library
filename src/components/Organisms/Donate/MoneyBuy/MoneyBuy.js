@@ -32,7 +32,7 @@ const MoneyBuyButton = styled(Input)`
       ${defaultBoxShadow(true)}
     }
 
-    ${({ isSelected }) => isSelected
+    ${({ $isSelected }) => $isSelected
       && css`
         background-color: ${({ theme }) => theme.color('blue_donate')};
         ${defaultBoxShadow(true)}

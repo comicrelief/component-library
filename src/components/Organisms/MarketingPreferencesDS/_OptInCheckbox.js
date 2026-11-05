@@ -48,7 +48,7 @@ const OptInCheckbox = ({
 
   return (
     <CheckContainer>
-      <CheckLabel htmlFor={`${name}-yes`} userSelection={userSelection}>
+      <CheckLabel htmlFor={`${name}-yes`} $userSelection={userSelection}>
         <AssociatedFieldsName className={`icon-${name}`}>
           { AssociatedFields[name].label }
         </AssociatedFieldsName>
