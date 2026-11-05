@@ -262,7 +262,7 @@ const Signup = ({
               step="0.01"
               name="membership_amount"
               type="string"
-              inputBorderColor={isAmountValid(amountDonate) === false}
+              $inputBorderColor={isAmountValid(amountDonate) === false}
               prefix="£"
               label={hideMoneyBuys ? 'Donation amount' : 'Other donation amount'}
               errorMsg=""
