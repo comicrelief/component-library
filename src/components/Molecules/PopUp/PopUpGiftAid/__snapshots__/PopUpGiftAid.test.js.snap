@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders coral_light variant 1`] = `
-.c2 {
+.c3 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   background-color: transparent;
   color: #000000;
@@ -12,7 +12,7 @@ exports[`renders coral_light variant 1`] = `
   border-radius: 1rem;
 }
 
-.c2 h3 {
+.c3 h3 {
   margin-right: 16px;
 }
 
@@ -21,18 +21,22 @@ exports[`renders coral_light variant 1`] = `
   width: 100%;
 }
 
-.c1 {
+.c2 {
   visibility: visible;
 }
 
-.c4 {
+.c5 {
   display: block;
   width: 100%;
   height: auto;
   fill: #000000;
 }
 
-.c3 {
+.c1 {
+  position: static;
+}
+
+.c4 {
   display: block;
   width: 100%;
   padding: 0;
@@ -41,37 +45,37 @@ exports[`renders coral_light variant 1`] = `
   cursor: pointer;
 }
 
-.c3:hover svg {
+.c4:hover svg {
   fill: #E52630;
 }
 
 @media (min-width: 1024px) {
-  .c4 {
+  .c5 {
     fill: #000000;
   }
 }
 
 <div
   backgroundColor="coral_light"
-  className="c0"
+  className="c0 c1"
   data-open="false"
   data-testid="pop-up-gift-aid"
 >
   <div
-    className="c1"
+    className="c2"
   >
     <div
-      className="c2"
+      className="c3"
     >
       <button
         aria-expanded="false"
         aria-label="What is Gift Aid?"
-        className="c3"
+        className="c4"
         onClick={[Function]}
         type="button"
       >
         <svg
-          className="c4"
+          className="c5"
           colour="black"
           fill="#000000"
           mobileColour={null}
@@ -89,7 +93,7 @@ exports[`renders coral_light variant 1`] = `
 `;
 
 exports[`renders default blue_light variant 1`] = `
-.c2 {
+.c3 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   background-color: transparent;
   color: #000000;
@@ -100,7 +104,7 @@ exports[`renders default blue_light variant 1`] = `
   border-radius: 1rem;
 }
 
-.c2 h3 {
+.c3 h3 {
   margin-right: 16px;
 }
 
@@ -109,18 +113,22 @@ exports[`renders default blue_light variant 1`] = `
   width: 100%;
 }
 
-.c1 {
+.c2 {
   visibility: visible;
 }
 
-.c4 {
+.c5 {
   display: block;
   width: 100%;
   height: auto;
   fill: #000000;
 }
 
-.c3 {
+.c1 {
+  position: static;
+}
+
+.c4 {
   display: block;
   width: 100%;
   padding: 0;
@@ -129,36 +137,36 @@ exports[`renders default blue_light variant 1`] = `
   cursor: pointer;
 }
 
-.c3:hover svg {
+.c4:hover svg {
   fill: #E52630;
 }
 
 @media (min-width: 1024px) {
-  .c4 {
+  .c5 {
     fill: #000000;
   }
 }
 
 <div
-  className="c0"
+  className="c0 c1"
   data-open="false"
   data-testid="pop-up-gift-aid"
 >
   <div
-    className="c1"
+    className="c2"
   >
     <div
-      className="c2"
+      className="c3"
     >
       <button
         aria-expanded="false"
         aria-label="What is Gift Aid?"
-        className="c3"
+        className="c4"
         onClick={[Function]}
         type="button"
       >
         <svg
-          className="c4"
+          className="c5"
           colour="black"
           fill="#000000"
           mobileColour={null}

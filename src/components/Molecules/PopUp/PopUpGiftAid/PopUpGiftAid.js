@@ -18,8 +18,16 @@ const DEFAULT_PARAGRAPHS = [
 ];
 
 /**
- * The open popup is positioned over the trigger, so its width is set
- * independently of the trigger's width (via openWindowWidth)
+ * Not positioned itself, so the open popup is absolutely positioned against
+ * the parent container and centred within it
+ */
+const GiftAidContainer = styled(Container)`
+  position: static;
+`;
+
+/**
+ * The open popup is positioned over the parent container, so its width is set
+ * independently of the trigger's width (via openWindowWidth) and centred within it
  */
 const OpenPopUpWindow = styled(PopUpWindow)`
   width: ${({ $openWindowWidth }) => $openWindowWidth};
@@ -58,7 +66,7 @@ const PopUpGiftAid = ({
   } = usePopUpOpen(onOpenChange);
 
   return (
-    <Container
+    <GiftAidContainer
       ref={containerRef}
       data-testid="pop-up-gift-aid"
       data-open={isOpen ? 'true' : 'false'}
@@ -105,7 +113,7 @@ const PopUpGiftAid = ({
           ))}
         </OpenPopUpWindow>
       )}
-    </Container>
+    </GiftAidContainer>
   );
 };
 
