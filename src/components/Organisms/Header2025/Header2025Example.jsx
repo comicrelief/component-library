@@ -115,7 +115,7 @@ export default function Header2025Example() {
           navItems={data}
           rotate="true"
           donateButton={donateButton}
-          metaIcons={
+          metaIcons={(
             <div>
               <Icon
                 icon={searchIcon}
@@ -129,7 +129,7 @@ export default function Header2025Example() {
                 id="search"
               />
             </div>
-          }
+          )}
         />
       </ExampleContainer>
 

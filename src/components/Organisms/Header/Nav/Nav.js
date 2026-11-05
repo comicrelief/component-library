@@ -157,7 +157,7 @@ const MainNav = ({ navItems = {} }) => {
                       }
                       return (
                         <SubNavItem key={thisSubUrl}>
-                          <SubNavLink href={thisSubUrl} inline role="menuitem">
+                          <SubNavLink href={thisSubUrl} $inline role="menuitem">
                             <Text>{child.title}</Text>
                           </SubNavLink>
                         </SubNavItem>

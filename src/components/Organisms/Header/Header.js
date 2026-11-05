@@ -10,7 +10,7 @@ import {
 const Header = ({
   navItems = {}, metaIcons, campaign = 'Comic Relief', logoUrl = '/', ...rest
 }) => (
-  <HeaderWrapper navItems {...rest}>
+  <HeaderWrapper $navItems {...rest}>
     <InnerWrapper>
       <Brand>
         <LogoLinked url={logoUrl} campaign={campaign} />
