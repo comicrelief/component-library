@@ -112,10 +112,8 @@ it('renders a button with an icon', () => {
   >
     <svg
       className="c2"
-      colour="white"
       fill="#FFFFFF"
       height={20}
-      mobileColour={null}
       viewBox="0 0 15 15"
       width={20}
       xmlns="http://www.w3.org/2000/svg"

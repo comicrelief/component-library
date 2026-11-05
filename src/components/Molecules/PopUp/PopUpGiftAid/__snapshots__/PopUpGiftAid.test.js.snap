@@ -26,7 +26,7 @@ exports[`renders coral_light variant 1`] = `
 }
 
 .c4 {
-  fill: #000000;
+  fill: inherit;
 }
 
 .c3 {
@@ -66,10 +66,8 @@ exports[`renders coral_light variant 1`] = `
       >
         <svg
           className="c4"
-          colour="black"
           fill="#000000"
           height={49.6}
-          mobileColour={null}
           viewBox="0 0 350 124"
           width={140}
           xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +108,7 @@ exports[`renders default blue_light variant 1`] = `
 }
 
 .c4 {
-  fill: #000000;
+  fill: inherit;
 }
 
 .c3 {
@@ -149,10 +147,8 @@ exports[`renders default blue_light variant 1`] = `
       >
         <svg
           className="c4"
-          colour="black"
           fill="#000000"
           height={49.6}
-          mobileColour={null}
           viewBox="0 0 350 124"
           width={140}
           xmlns="http://www.w3.org/2000/svg"
