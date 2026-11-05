@@ -108,7 +108,7 @@ const HeaderNav = ({
               <NavItem
                 role="none"
                 key={`${thisID}-item`}
-                index={index}
+                $index={index}
                 $isSubMenuOpen={!!isSubMenuOpen[thisID]}
               >
                 {isNotDesktop ? (

@@ -86,7 +86,7 @@ const MainNav = ({ navItems = {} }) => {
               <NavItem
                 role="none"
                 key={group.id}
-                index={index}
+                $index={index}
                 $isSubMenuOpen={!!isSubMenuOpen[group.id]}
               >
                 {isMobile ? (

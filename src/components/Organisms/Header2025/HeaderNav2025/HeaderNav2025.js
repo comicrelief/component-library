@@ -138,7 +138,7 @@ const HeaderNav2025 = ({
                 <HeaderNavItem2025
                   thisID={thisID}
                   key={`${thisID}--item`}
-                  index={index}
+                  $index={index}
                   hasSubMenu={hasSubMenu}
                   openedSubMenu={openedSubMenu}
                   toggleSubMenu={toggleSubMenu}

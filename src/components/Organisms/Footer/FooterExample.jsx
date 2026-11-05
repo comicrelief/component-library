@@ -7,9 +7,9 @@ export function FooterExample1() {
   return (
     <>
       <h3>Standard footer</h3>
-      <Footer navItems={data} footerCopy={footerCopy.copy} campaign="Comic Relief"  />
+      <Footer navItems={data} footerCopy={footerCopy.copy} campaign="Comic Relief" />
     </>
-  )
+  );
 }
 
 export function FooterExample2() {
@@ -23,7 +23,7 @@ export function FooterExample2() {
         overrideallowList
       />
     </>
-  )
+  );
 }
 
 export function FooterExample3() {
