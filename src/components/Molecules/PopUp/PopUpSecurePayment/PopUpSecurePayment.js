@@ -9,6 +9,23 @@ import {
   Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText
 } from '../PopUpShared.style';
 import { usePopUpOpen } from '../PopUpShared.utils';
+import zIndex from '../../../../theme/shared/zIndex';
+
+/**
+ * Covers the whole visible window while the popup is open. Fixed positioning
+ * is relative to the viewport, so it is not limited to the parent container
+ * (it only is if an ancestor uses transform, filter or similar)
+ */
+const PageOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  ${zIndex('medium')}
+`;
 
 /**
  * The open popup is positioned over the trigger, so its width is set
@@ -67,6 +84,8 @@ const PopUpSecurePayment = ({
       data-open={isOpen ? 'true' : 'false'}
       {...rest}
     >
+      {isRendered && <PageOverlay aria-hidden="true" />}
+
       <Trigger $hidden={isRendered}>
         <SecureButton
           type="button"
