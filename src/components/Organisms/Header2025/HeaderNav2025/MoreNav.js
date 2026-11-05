@@ -102,7 +102,7 @@ const MoreNav = ({
                       <MoreNavSubItem key={thisSubUrl}>
                         <MoreSubNavLink
                           href={thisSubUrl}
-                          inline
+                          $inline
                           role="menuitem"
                           // Allows us to avoid using the 'display:none'
                           // approach so we can animate properly:
