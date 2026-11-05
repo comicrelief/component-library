@@ -26,7 +26,7 @@ exports[`renders coral_light variant 1`] = `
 }
 
 .c4 {
-  fill: inherit;
+  fill: #000000;
 }
 
 .c3 {
@@ -108,7 +108,7 @@ exports[`renders default blue_light variant 1`] = `
 }
 
 .c4 {
-  fill: inherit;
+  fill: #000000;
 }
 
 .c3 {
