@@ -69,7 +69,7 @@ const MoreNav = ({
                 or a 'button' to show the submenu: */}
               <MoreNavNestedLink
                 href={hasPopUp ? '#' : thisUrl}
-                inline
+                $inline
                 rel={relNoopener}
                 aria-haspopup={hasPopUp}
                 role={hasPopUp ? 'button' : 'link'}
