@@ -27,10 +27,6 @@ const Container = styled.div`
   }
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
-  > * {
-    border: 1px solid red;
-  }
 `;
 
 const PopUpExampleWrapper = styled.div`
@@ -43,7 +39,7 @@ export default function PopUpGiftAidExample() {
 
   return (
     <Container $isOpen={isOpen}>
-      <h1>Heading</h1>
+      <h1>Example Heading</h1>
       <PopUpExampleWrapper>
         <PopUpGiftAid onOpenChange={setIsOpen} openWindowWidth='550px'/>
       </PopUpExampleWrapper>
