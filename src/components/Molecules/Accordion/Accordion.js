@@ -88,7 +88,7 @@ const StyledText = styled(Text)`
 `;
 
 const Accordion = ({
-  children, title, contentBottomPadding, tag = 'h4', weight, ...rest
+  children, title, contentBottomPadding, textTag = 'h4', weight, ...rest
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -99,7 +99,7 @@ const Accordion = ({
   return (
     <Container {...rest}>
       <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'} type="button">
-        <StyledText tag={tag} weight={weight}>
+        <StyledText tag={textTag} weight={weight}>
           {title}
         </StyledText>
         <Icon>
@@ -116,7 +116,7 @@ const Accordion = ({
 Accordion.propTypes = {
   contentBottomPadding: PropTypes.string,
   weight: PropTypes.string,
-  tag: PropTypes.string,
+  textTag: PropTypes.string,
   children: PropTypes.node.isRequired,
   title: PropTypes.oneOfType([
     PropTypes.string,
