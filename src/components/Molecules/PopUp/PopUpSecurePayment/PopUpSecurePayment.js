@@ -6,26 +6,9 @@ import Text from '../../../Atoms/Text/Text';
 import Cross from '../../../Atoms/Icons/CrossRoundedCorners';
 import Padlock from '../../../Atoms/Icons/Padlock';
 import {
-  Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText
+  Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText, PageOverlay
 } from '../PopUpShared.style';
 import { usePopUpOpen } from '../PopUpShared.utils';
-import zIndex from '../../../../theme/shared/zIndex';
-
-/**
- * Covers the whole visible window while the popup is open. Fixed positioning
- * is relative to the viewport, so it is not limited to the parent container
- * (it only is if an ancestor uses transform, filter or similar)
- */
-const PageOverlay = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  pointer-events: none;
-  ${zIndex('medium')}
-`;
 
 /**
  * The open popup is positioned over the trigger, so its width is set

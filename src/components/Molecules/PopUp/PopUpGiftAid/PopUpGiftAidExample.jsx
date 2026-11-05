@@ -27,7 +27,6 @@ const Container = styled.div`
   }
   display: flex;
   justify-content: space-between;
-border: 1px solid red;
 `;
 
 const PopUpExampleWrapper = styled.div`

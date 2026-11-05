@@ -5,10 +5,9 @@ import styled, { css } from 'styled-components';
 import Cross from '../../../Atoms/Icons/CrossRoundedCorners';
 import GiftAidLogo from '../../../Atoms/Icons/GiftAidLogo';
 import {
-  Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText
+  Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText, PageOverlay
 } from '../PopUpShared.style';
 import { usePopUpOpen } from '../PopUpShared.utils';
-import zIndex from '../../../../theme/shared/zIndex';
 
 const DEFAULT_HEADING = 'What is Gift Aid and how does it work?';
 
@@ -17,21 +16,6 @@ const DEFAULT_PARAGRAPHS = [
   'Since this extra cash comes straight from the government and not from your pocket, you’ll still only be spending £10 of your own money. Which is great news for you!',
   'In short, £1 + Gift Aid = £1.25, at no extra cost to you.'
 ];
-
-/**
- * When the popup window is open, the whole visible window / viewport is shaded. Fixed positioning
- * is relative to the viewport, so it is not limited to the parent container.
- */
-const PageOverlay = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  pointer-events: none;
-  ${zIndex('medium')}
-`;
 
 /**
  * Not positioned itself, so the open popup is absolutely positioned against
