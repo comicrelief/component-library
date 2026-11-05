@@ -374,7 +374,6 @@ it('renders article teaser correctly', () => {
   className="c0"
 >
   <a
-    category={null}
     className="c1 c2"
     href="/test"
     target="_self"
@@ -802,7 +801,6 @@ it('renders press realese correctly', () => {
   className="c0"
 >
   <a
-    category=""
     className="c1 c2"
     href="/test"
     target="_self"
