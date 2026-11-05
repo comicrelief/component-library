@@ -242,7 +242,7 @@ const Signup = ({
             <MoneyBuys>
               {givingData.moneybuys.map(({ value }, index) => (
                 <MoneyBuy
-                  isSelected={amountDonate === value}
+                  $isSelected={amountDonate === value}
                   amount={value.toString()}
                   description={`£${amountFormatter(value)}`}
                   setOtherAmount={() => setAmountDonate(value)}

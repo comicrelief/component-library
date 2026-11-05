@@ -28,7 +28,7 @@ const MoneyBuyButton = styled(Input)`
       height: 3.4375rem;
     }
 
-    ${({ isSelected }) => (isSelected
+    ${({ $isSelected }) => ($isSelected
     ? css`
           background-color: ${({ theme }) => theme.color('red')};
           border: 1px solid ${({ theme }) => theme.color('red')};
