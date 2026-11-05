@@ -70,7 +70,6 @@ const Lookup = ({
   return (
     <div {...rest}>
       <TextInputWithDropdown
-        css={{ marginBottom: spacing('md') }}
         name={name}
         id={name}
         value={query}
