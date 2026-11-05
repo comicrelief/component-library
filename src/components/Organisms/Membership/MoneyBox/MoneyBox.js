@@ -13,7 +13,7 @@ const MoneyBox = styled(Input)`
     letter-spacing: -2px;
     height: auto;
 
-    ${({ boxBorderColor, isInputMatchBox, isSelected }) => (boxBorderColor === isInputMatchBox || isSelected)
+    ${({ $boxBorderColor, $isInputMatchBox, $isSelected }) => ($boxBorderColor === $isInputMatchBox || $isSelected)
       && css`
         border-color: ${({ theme }) => theme.color('red')};
         background-color: ${({ theme }) => theme.color('red')};

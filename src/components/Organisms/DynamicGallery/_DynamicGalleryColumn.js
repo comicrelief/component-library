@@ -105,7 +105,7 @@ export default function DynamicGalleryColumn({
             <NodeComponent
               key={key}
               className="gallery-node"
-              caption={bodyText}
+              $caption={bodyText}
               aria-label={bodyText}
               title={bodyText}
               data-node-index={nodeIndex}

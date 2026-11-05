@@ -6,7 +6,7 @@ import spacing from '../../../theme/shared/spacing';
 import { breakpointValues } from '../../../theme/shared/allBreakpoints';
 
 const Wrapper = styled.div`
-  background: ${({ theme, backgroundColor }) => theme.color(backgroundColor)};
+  background: ${({ theme, $backgroundColor }) => theme.color($backgroundColor)};
 `;
 
 const Container = styled.div`
@@ -25,7 +25,7 @@ const Container = styled.div`
 `;
 
 const Banner = ({ children, backgroundColor = 'grey_dark' }) => (
-  <Wrapper backgroundColor={backgroundColor}>
+  <Wrapper $backgroundColor={backgroundColor}>
     <Container>
       { children }
     </Container>

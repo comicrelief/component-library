@@ -584,7 +584,6 @@ exports[`renders correctly 1`] = `
 <div>
   <footer
     className="c0"
-    navItems={true}
     role="banner"
   >
     <div
@@ -714,7 +713,6 @@ exports[`renders correctly 1`] = `
         >
           <li
             className="c15"
-            index={0}
             role="none"
           >
             <span
@@ -733,8 +731,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://www.comicrelief.com/#"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -752,8 +748,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://www.comicrelief.com/update-your-preferences"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -769,7 +763,6 @@ exports[`renders correctly 1`] = `
           </li>
           <li
             className="c15"
-            index={1}
             role="none"
           >
             <span
@@ -788,8 +781,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="/contact-us"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -807,8 +798,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://giftaid.comicrelief.com/update"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -826,8 +815,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://www.comicrelief.com/frequently-asked-questions"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -845,8 +832,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://www.comicrelief.com/red-nose-days-frequently-asked-questions"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -862,7 +847,6 @@ exports[`renders correctly 1`] = `
           </li>
           <li
             className="c15"
-            index={2}
             role="none"
           >
             <span
@@ -881,8 +865,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://www.comicrelief.com/about-comic-relief"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -900,8 +882,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://www.comicrelief.com/about-comic-relief/history"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -919,8 +899,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://www.comicrelief.com/about-comic-relief/finances"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -938,8 +916,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://www.comicrelief.com/working-with-us"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -957,8 +933,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://www.comicrelief.com/about-comic-relief/meet-the-team"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -976,8 +950,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://www.sportrelief.com/"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -993,7 +965,6 @@ exports[`renders correctly 1`] = `
           </li>
           <li
             className="c15"
-            index={3}
             role="none"
           >
             <span
@@ -1012,8 +983,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://www.comicrelief.com/careers"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -1031,8 +1000,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://app.beapplied.com/org/comic-relief"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -1048,7 +1015,6 @@ exports[`renders correctly 1`] = `
           </li>
           <li
             className="c15"
-            index={4}
             role="none"
           >
             <span
@@ -1067,8 +1033,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://www.comicrelief.com/news"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -1086,8 +1050,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://www.comicrelief.com/press-releases"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -1103,7 +1065,6 @@ exports[`renders correctly 1`] = `
           </li>
           <li
             className="c15"
-            index={5}
             role="none"
           >
             <span
@@ -1122,8 +1083,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="/homepage"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -1141,8 +1100,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="/this-is-a-test"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -1160,8 +1117,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://www.yahoo.com"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_blank"
                   type="standard"
@@ -1184,8 +1139,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://www.sportrelief.com"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_self"
                   type="standard"
@@ -1203,8 +1156,6 @@ exports[`renders correctly 1`] = `
                 <a
                   className="c8 c19 c20"
                   href="https://bing.com"
-                  inline={true}
-                  overrideallowList={false}
                   role="menuitem"
                   target="_blank"
                   type="standard"

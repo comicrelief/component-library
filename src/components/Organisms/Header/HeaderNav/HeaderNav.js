@@ -108,7 +108,7 @@ const HeaderNav = ({
               <NavItem
                 role="none"
                 key={`${thisID}-item`}
-                index={index}
+                $index={index}
                 $isSubMenuOpen={!!isSubMenuOpen[thisID]}
               >
                 {isNotDesktop ? (
@@ -172,7 +172,7 @@ const HeaderNav = ({
                       // Otherwise, render out as usual:
                       return (
                         <SubNavItem key={thisSubUrl}>
-                          <SubNavLink href={thisSubUrl} inline role="menuitem">
+                          <SubNavLink href={thisSubUrl} $inline role="menuitem">
                             <Text>{child.title}</Text>
                           </SubNavLink>
                         </SubNavItem>
@@ -188,7 +188,7 @@ const HeaderNav = ({
 
         {/* These are only shown on the non-desktop view; the desktop nav renders
            these in the parent Header component to suit the design layout */}
-        <NavMetaIcons isHeader data-testid="meta-icons--mobile">
+        <NavMetaIcons $isHeader data-testid="meta-icons--mobile">
           {metaIcons}
         </NavMetaIcons>
         <DonateButtonWrapperBottom data-testid="donate-button--mobile">

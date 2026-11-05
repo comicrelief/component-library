@@ -59,7 +59,6 @@ exports[`renders correctly 1`] = `
 }
 
 <div
-  backgroundColor="purple_dark"
   className="c0"
 >
   <div

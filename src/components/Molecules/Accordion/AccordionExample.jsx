@@ -12,10 +12,11 @@ export default function AccordionExample() {
     <>
       <Wrapper>
         <Accordion
-          title={
+          title={(
             <Text family="Anton" size="l" uppercase>
               I am the title
-            </Text>}
+            </Text>
+          )}
         >
           <Text tag="p" size="s">
             Name, surname, email and billing address We need these to process your payment,
@@ -32,7 +33,8 @@ export default function AccordionExample() {
         >
           <Text tag="p" size="s">Customised bottom padding here!</Text>
           <Text tag="p" size="s">
-            <a href="https://www.google.com">A plain anchor link, made to resemble a Link component</a>.
+            <a href="https://www.google.com">A plain anchor link, made to resemble a Link component</a>
+            .
           </Text>
         </Accordion>
       </Wrapper>
@@ -40,11 +42,11 @@ export default function AccordionExample() {
       <Wrapper>
         <Accordion
           contentBottomPadding="100px"
-          title={
-            <Text textTag="p" weight="700">
+          title={(
+            <Text tag="p" weight="700">
               I am a title with an overridden text type and weight, to 'p' 700 which is the new donate preference
             </Text>
-          }
+          )}
         >
           <Text tag="p" size="s">lorem ipsum</Text>
         </Accordion>
@@ -53,11 +55,11 @@ export default function AccordionExample() {
       <Wrapper>
         <div style={{ width: '752px' }}>
           <Accordion
-            title={
-              <Text textTag="p" weight="700">
+            title={(
+              <Text tag="p" weight="700">
                 I am  in a width simulating our real world use on desktop (NB because width is fixed, this is only to demonstrate desktop mode, don't use for examining mobile view)
               </Text>
-            }
+            )}
           >
             <Text tag="p" size="s">
               A STAR template answer is a structured way of responding to behavioural interview questions. Here's what it stands for:

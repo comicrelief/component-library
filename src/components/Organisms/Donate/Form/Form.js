@@ -254,7 +254,7 @@ const Signup = ({
             <MoneyBuys>
               {givingData.moneybuys.map(({ value }, index) => (
                 <MoneyBuy
-                  isSelected={amountDonate === value}
+                  $isSelected={amountDonate === value}
                   amount={value.toString()}
                   description={`£${amountFormatter(value)}`}
                   setOtherAmount={() => setAmountDonate(value)}
@@ -275,7 +275,7 @@ const Signup = ({
               step="0.01"
               name="membership_amount"
               type="string"
-              inputBorderColor={isAmountValid(amountDonate) === false}
+              $inputBorderColor={isAmountValid(amountDonate) === false}
               label="£"
               errorMsg=""
               id={`${mbshipID}--MoneyBuy-userInput`}

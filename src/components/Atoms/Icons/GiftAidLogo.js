@@ -11,7 +11,7 @@ const StyledSVG = styled.svg`
   fill: ${({ mobileColour, colour, theme }) => (mobileColour ? theme.color(mobileColour) : theme.color(colour))};
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    fill: ${({ colour, theme }) => (colour ? theme.color(colour) : theme.color('white'))};
+    fill: ${({ $colour, theme }) => ($colour ? theme.color($colour) : theme.color('white'))};
   }
 `;
 
@@ -24,8 +24,8 @@ const GiftAidLogo = ({
     height={size ? (size * 124) / 350 : undefined}
     $fluid={!size}
     fill={theme.color(colour)}
-    colour={colour}
-    mobileColour={mobileColour}
+    $colour={colour}
+    $mobileColour={mobileColour}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 350 124"
   >

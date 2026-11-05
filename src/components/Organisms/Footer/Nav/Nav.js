@@ -63,7 +63,7 @@ const FooterNav = ({ navItems = {}, ...rest }) => {
           <NavItem
             role="none"
             key={`${group.id}-${group.title}`}
-            index={index}
+            $index={index}
             $isSubMenuOpen={!!isSubMenuOpen[group.id]}
           >
             {!isSmallBreakpoint ? (
@@ -73,7 +73,7 @@ const FooterNav = ({ navItems = {}, ...rest }) => {
             ) : (
               <NavLink
                 href="#"
-                inline
+                $inline
                 aria-expanded={!!isSubMenuOpen[group.id]}
                 aria-haspopup="true"
                 role="button"
@@ -104,7 +104,7 @@ const FooterNav = ({ navItems = {}, ...rest }) => {
                         group.links.length % 2 === 0 && group.links.length > 2
                       }
                     >
-                      <SubNavLink href={thisUrl} inline role="menuitem" {...rest}>
+                      <SubNavLink href={thisUrl} $inline role="menuitem" {...rest}>
                         <Text color="white" size="s">{child.title}</Text>
                       </SubNavLink>
                     </SubNavItem>

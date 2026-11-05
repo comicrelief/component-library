@@ -125,9 +125,9 @@ const Signup = ({
   const MoneyBoxes = regularGiving.moneybuys.map(
     ({ value, description }, index) => (
       <MoneyBox
-        isSelected={index === 1 && isSelected}
-        boxBorderColor={boxBorderColor}
-        isInputMatchBox={value}
+        $isSelected={index === 1 && isSelected}
+        $boxBorderColor={boxBorderColor}
+        $isInputMatchBox={value}
         amount={value}
         description={`£${value}`}
         setOtherAmount={() => selectMoneyBuy(description, value)}

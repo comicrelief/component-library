@@ -69,7 +69,7 @@ const MoreNav = ({
                 or a 'button' to show the submenu: */}
               <MoreNavNestedLink
                 href={hasPopUp ? '#' : thisUrl}
-                inline
+                $inline
                 rel={relNoopener}
                 aria-haspopup={hasPopUp}
                 role={hasPopUp ? 'button' : 'link'}
@@ -102,7 +102,7 @@ const MoreNav = ({
                       <MoreNavSubItem key={thisSubUrl}>
                         <MoreSubNavLink
                           href={thisSubUrl}
-                          inline
+                          $inline
                           role="menuitem"
                           // Allows us to avoid using the 'display:none'
                           // approach so we can animate properly:

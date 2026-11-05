@@ -6,11 +6,11 @@ const PATH_DATA = 'M40.811,9.307C36.607,4.664,30.48,2,24,2C11.458,2,2,11.458,2,2
 
 const StyledSVG = styled.svg`
   // Mobile-colour if available, else use standard prop
-  fill: ${({ mobileColour, colour, theme }) => (mobileColour ? theme.color(mobileColour) : theme.color(colour))};
+  fill: ${({ $mobileColour, $colour, theme }) => ($mobileColour ? theme.color($mobileColour) : theme.color($colour))};
 
   // Reinstate standard styles for 'desktop', adding a fallback for good measure:
   @media ${({ theme }) => theme.allBreakpoints('L')} {
-    fill: ${({ colour, theme }) => (colour ? theme.color(colour) : theme.color('white'))};
+    fill: ${({ $colour, theme }) => ($colour ? theme.color($colour) : theme.color('white'))};
   }
 `;
 
@@ -20,8 +20,8 @@ const AtSign = ({
   <StyledSVG
     width={size}
     height={size}
-    colour={colour}
-    mobileColour={mobileColour}
+    $colour={colour}
+    $mobileColour={mobileColour}
     viewBox="0 0 48 48"
     {...rest}
   >
