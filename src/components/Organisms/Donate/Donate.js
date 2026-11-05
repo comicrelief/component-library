@@ -94,7 +94,7 @@ const Donate = ({
     >
       {!isDesktop && mobileImages ? (
         <Picture
-          backgroundColor={mobileBackgroundColor}
+          $backgroundColor={mobileBackgroundColor}
           image={mobileImage}
           images={mobileImages}
           imageLow={mobileImageLow}

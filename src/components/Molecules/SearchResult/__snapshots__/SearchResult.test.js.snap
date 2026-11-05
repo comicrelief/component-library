@@ -160,8 +160,6 @@ exports[`renders correctly in minimalist form 1`] = `
   >
     <div
       className="c3"
-      largeImageWidth="100%"
-      smallImageWidth="45%"
     >
       <div
         className="c4"
@@ -386,8 +384,6 @@ exports[`renders correctly with copy 1`] = `
   >
     <div
       className="c3"
-      largeImageWidth="100%"
-      smallImageWidth="45%"
     >
       <div
         className="c4"
@@ -584,8 +580,6 @@ exports[`renders correctly with date 1`] = `
   >
     <div
       className="c3"
-      largeImageWidth="100%"
-      smallImageWidth="45%"
     >
       <div
         className="c4"
@@ -777,8 +771,6 @@ exports[`renders correctly with date and type 1`] = `
   >
     <div
       className="c3"
-      largeImageWidth="100%"
-      smallImageWidth="45%"
     >
       <div
         className="c4"

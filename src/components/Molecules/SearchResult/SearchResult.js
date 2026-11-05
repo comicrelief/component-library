@@ -36,10 +36,10 @@ const Item = styled(Link)`
 const ImageWrapper = styled.div`
   height: auto;
   @media ${({ theme }) => theme.allBreakpoints('M')} {
-    width: ${({ smallImageWidth }) => smallImageWidth};
+    width: ${({ $smallImageWidth }) => $smallImageWidth};
   }
   @media ${({ theme }) => theme.allBreakpoints('XL')} {
-    width: ${({ largeImageWidth }) => largeImageWidth};
+    width: ${({ $largeImageWidth }) => $largeImageWidth};
   }
 `;
 
@@ -73,8 +73,8 @@ const SearchResult = ({
   <Wrapper>
     <Item href={href} type="standard">
       <ImageWrapper
-        smallImageWidth={smallImageWidth}
-        largeImageWidth={largeImageWidth}
+        $smallImageWidth={smallImageWidth}
+        $largeImageWidth={largeImageWidth}
       >
         <Picture
           imageLow={imageLow}
