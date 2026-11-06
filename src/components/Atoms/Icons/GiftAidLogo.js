@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { withTheme } from 'styled-components';
+import styled, { css, withTheme } from 'styled-components';
 
 const StyledSVG = styled.svg`
-  fill: ${({ $mobileColour, $colour, theme }) => ($mobileColour ? theme.color($mobileColour) : theme.color($colour))};
+  display: block;
+  ${({ $fluid }) => $fluid && css`
+    width: 100%;
+    height: auto;
+  `}
+  fill: ${({ mobileColour, colour, theme }) => (mobileColour ? theme.color(mobileColour) : theme.color(colour))};
 
   @media ${({ theme }) => theme.allBreakpoints('L')} {
     fill: ${({ $colour, theme }) => ($colour ? theme.color($colour) : theme.color('white'))};
@@ -11,12 +16,13 @@ const StyledSVG = styled.svg`
 `;
 
 const GiftAidLogo = ({
-  colour = 'black', mobileColour = null, theme, size = 24, ...rest
+  colour = 'black', mobileColour = null, size = null, theme, ...rest
 }) => (
   <StyledSVG
     {...rest}
-    width={size}
-    height={(size * 124) / 350}
+    width={size || undefined}
+    height={size ? (size * 124) / 350 : undefined}
+    $fluid={!size}
     fill={theme.color(colour)}
     $colour={colour}
     $mobileColour={mobileColour}

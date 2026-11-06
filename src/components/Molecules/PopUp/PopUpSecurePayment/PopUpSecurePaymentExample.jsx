@@ -1,19 +1,15 @@
 import React, { useState } from 'react';
-import PopUpSecurePayment from './PopUpSecurePayment';
 import styled from 'styled-components';
+import PopUpSecurePayment from './PopUpSecurePayment';
 
-/**
-  * Parent styling from the JS state (onOpenChange) uses data-open attribute
-  * on the popup's container to fire CSS styles via :has()
- */
-const Wrapper = styled.div`
+const Container = styled.div`
   position: relative;
   padding: 1rem;
-  background: ${({ $isOpen }) => ($isOpen ? 'orange' : 'green')};
-
-  &:has([data-open="true"]) {
-    outline: 2px solid black;
-  }
+  min-height: 100px;
+  margin: 0 0 1rem auto;
+  border-radius: 6px;
+  background: light_grey;
+  min-height: 100px;
 
   /* Shade over the wrapper's content while the popup is open */
   &:before {
@@ -25,22 +21,34 @@ const Wrapper = styled.div`
     left: 0;
     background-color: rgba(0, 0, 0, 0.4);
     pointer-events: none;
-    display: ${({ $isOpen }) => ($isOpen ? 'block' : 'none')};
   }
-`;
-
-const Status = styled.p`
-  margin: 0 0 0.5rem;
-  color: white;
 `;
 
 export default function PopUpSecurePaymentExample() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Wrapper $isOpen={isOpen}>
-      <Status>{isOpen ? 'Popup is open' : 'popup is closed'}</Status>
-      <PopUpSecurePayment onOpenChange={setIsOpen} />
-    </Wrapper>
+    <>
+      <Container $isOpen={isOpen}>
+        <h3>Default / no props, isOpen trigger</h3>
+        <PopUpSecurePayment onOpenChange={setIsOpen} />
+      </Container>
+
+      <Container>
+        <h3>Props: triggerText, openWindowWidth</h3>
+        <PopUpSecurePayment triggerText="Your payment is protected by 256-bit encryption" openWindowWidth="280px" />
+      </Container>
+
+      <Container>
+        <h3>Custom heading and paragraphs.</h3>
+        <PopUpSecurePayment
+          heading="Your details are safe with us"
+          paragraphs={[
+            'We only use your payment details to process your donation.',
+            'Card details are encrypted and never stored on our servers.'
+          ]}
+        />
+      </Container>
+    </>
   );
 }
