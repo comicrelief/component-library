@@ -83,12 +83,22 @@ const Copy = styled.div`
   `)}
 `;
 
-const StyledText = styled(Text)`
-    margin-bottom: 0;
-`;
+const StyledText = styled(Text)`${({ $fontSizePx }) => css`
+  margin-bottom: 0;
+  ${$fontSizePx != null && css`
+    font-size: ${$fontSizePx}px;
+    line-height: normal;
+  `}
+`}`;
 
 const Accordion = ({
-  children, title, contentBottomPadding, textTag = 'h4', weight, ...rest
+  children,
+  title,
+  contentBottomPadding,
+  textTag = 'h4',
+  weight,
+  fontSizePx,
+  ...rest
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -99,7 +109,7 @@ const Accordion = ({
   return (
     <Container {...rest}>
       <Button onClick={handleOpen} aria-expanded={isOpen ? 'true' : 'false'} type="button">
-        <StyledText tag={textTag} weight={weight}>
+        <StyledText tag={textTag} weight={weight} $fontSizePx={fontSizePx}>
           {title}
         </StyledText>
         <Icon>
@@ -117,6 +127,7 @@ Accordion.propTypes = {
   contentBottomPadding: PropTypes.string,
   weight: PropTypes.string,
   textTag: PropTypes.string,
+  fontSizePx: PropTypes.number,
   children: PropTypes.node.isRequired,
   title: PropTypes.oneOfType([
     PropTypes.string,

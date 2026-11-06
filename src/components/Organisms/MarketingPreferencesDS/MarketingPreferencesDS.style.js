@@ -63,7 +63,10 @@ const FormField = styled.div`${({ theme, $isErroring }) => css`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: ${spacing('m')};
+  padding: ${spacing('md')} ${spacing('m')};
+  &.selected {
+    padding-bottom: 3rem;
+  }
   background-color: ${theme.color('white')};
   border-radius: 0.5rem;
   border: 1px solid ${$isErroring ? theme.color('red') : theme.color('grey')};
@@ -95,10 +98,11 @@ const FormField = styled.div`${({ theme, $isErroring }) => css`
   /* All labels; input AND checkbox */
   label {
     position: relative;
+    height: 32px;
     margin-bottom: 0;
     width: 100%;
     color: inherit;
-    font-weight: 600;
+    font-weight: 800;
     display: flex;
     justify-content: space-between;
   }
@@ -147,12 +151,12 @@ const CheckInput = styled.input`${({ theme }) => css`
   margin: 0;
   
   + span {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     flex-shrink: 0;
     background-color: ${theme.color('white')};
     border: 1px solid ${theme.color('grey')};
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     pointer-events: none;
   }
 
