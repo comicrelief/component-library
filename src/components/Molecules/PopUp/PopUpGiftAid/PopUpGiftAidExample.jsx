@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
-import PopUpGiftAid from './PopUpGiftAid';
 import styled from 'styled-components';
+import PopUpGiftAid from './PopUpGiftAid';
 
-/**
-  * Parent styling from the JS state (onOpenChange) uses data-open attribute
-  * on the popup's container to fire CSS styles via :has()
- */
 const Container = styled.div`
   position: relative;
   padding: 1rem;
-  background: ${({ $isOpen }) => ($isOpen ? 'orange' : 'green')};
-  height: 100px;
-  margin: 0 0 0 auto;
+  min-height: 100px;
+  margin: 0 0 1rem auto;
+  border-radius: 6px;
+  background: light_grey;
+  min-height: 100px;
 
   /* Shade over the Container's content while the popup is open */
   &::before {
@@ -23,7 +21,6 @@ const Container = styled.div`
     left: 0;
     background-color: rgba(0, 0, 0, 0.4);
     pointer-events: none;
-    display: ${({ $isOpen }) => ($isOpen ? 'block' : 'none')};
   }
   display: flex;
   justify-content: space-between;
@@ -38,11 +35,31 @@ export default function PopUpGiftAidExample() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Container $isOpen={isOpen}>
-      <h1>Example Heading</h1>
-      <PopUpExampleWrapper>
-        <PopUpGiftAid onOpenChange={setIsOpen} openWindowWidth='550px'/>
-      </PopUpExampleWrapper>
-    </Container>
+    <>
+      <Container $isOpen={isOpen}>
+        <h3>Default / no props, isOpen trigger</h3>
+        <PopUpExampleWrapper> <PopUpGiftAid onOpenChange={setIsOpen}/> </PopUpExampleWrapper>
+      </Container>
+
+      <Container>
+        <h3>Props - textColour, backgroundColour, hoverColour, openWindowWidth</h3>
+        <PopUpExampleWrapper>
+          <PopUpGiftAid textColour="green" backgroundColour="blue_light" hoverColour='coral_light' openWindowWidth='550px'/>
+        </PopUpExampleWrapper>
+      </Container>
+
+      <Container>
+        <h3>Custom heading and paragraphs</h3>
+        <PopUpExampleWrapper>
+          <PopUpGiftAid
+            heading="Why does Gift Aid matter?"
+            paragraphs={[
+              'Gift Aid lets charities reclaim the tax you have already paid on your donation.',
+              'Every £1 you give can be worth £1.25 to the charity at no extra cost to you.'
+            ]}
+          />
+        </PopUpExampleWrapper>
+      </Container>
+    </>
   );
 }
