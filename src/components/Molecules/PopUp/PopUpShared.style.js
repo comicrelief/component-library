@@ -32,6 +32,28 @@ const closeOverlay = keyframes`
   }
 `;
 
+const ExampleContainer = styled.div`
+  position: relative;
+  padding: 1rem;
+  min-height: 100px;
+  margin: 0 0 1rem auto;
+  border-radius: 6px;
+  background: light_grey;
+  min-height: 100px;
+
+  /* Shade over the wrapper's content while the popup is open */
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+  }
+`;
+
 const PopUpWindow = styled.div`
   font-family: ${({ theme }) => theme.fontFamilies('Montserrat')};
   background-color: ${({ theme, $backgroundColour }) => theme.color($backgroundColour)};
@@ -157,5 +179,12 @@ const PopUpBodyText = styled.p`
 `;
 
 export {
-  Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText, PageOverlay
+  Container,
+  Trigger,
+  CloseButton,
+  PopUpWindow,
+  PopUpHeading,
+  PopUpBodyText,
+  PageOverlay,
+  ExampleContainer
 };
