@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 import Cross from '../../../Atoms/Icons/CrossRoundedCorners';
 import GiftAidLogo from '../../../Atoms/Icons/GiftAidLogo';
 import {
-  Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText
+  Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText, PageOverlay
 } from '../PopUpShared.style';
 import { usePopUpOpen } from '../PopUpShared.utils';
 
@@ -17,7 +17,29 @@ const DEFAULT_PARAGRAPHS = [
   'In short, £1 + Gift Aid = £1.25, at no extra cost to you.'
 ];
 
+/**
+ * Not positioned itself, so the open popup is absolutely positioned against
+ * the parent container and centred within it
+ */
+const GiftAidContainer = styled(Container)`
+  position: static;
+`;
+
+/**
+ * The open popup is positioned over the parent container, so its width is set
+ * independently of the trigger's width (via openWindowWidth) and centred within it
+ */
+const OpenPopUpWindow = styled(PopUpWindow)`
+  width: ${({ $openWindowWidth }) => $openWindowWidth};
+  left: 50%;
+  right: auto;
+  margin-left: ${({ $openWindowWidth }) => `calc(${$openWindowWidth} / -2)`};
+`;
+
 const LogoWrapper = styled.button`
+  display: block;
+  width: 100%;
+  padding: 0;
   border: none;
   background: none;
   cursor: pointer;
@@ -32,6 +54,8 @@ const LogoWrapper = styled.button`
 const PopUpGiftAid = ({
   textColour = 'black',
   hoverColour = 'red',
+  backgroundColour = 'transparent',
+  openWindowWidth = '20rem',
   heading = DEFAULT_HEADING,
   paragraphs = DEFAULT_PARAGRAPHS,
   onOpenChange,
@@ -42,15 +66,17 @@ const PopUpGiftAid = ({
   } = usePopUpOpen(onOpenChange);
 
   return (
-    <Container
+    <GiftAidContainer
       ref={containerRef}
       data-testid="pop-up-gift-aid"
       data-open={isOpen ? 'true' : 'false'}
       {...rest}
     >
+      {isRendered && <PageOverlay aria-hidden="true" />}
+
       <Trigger $hidden={isRendered}>
         <PopUpWindow
-          $backgroundColour="white"
+          $backgroundColour={backgroundColour}
           $textColour={textColour}
         >
           <LogoWrapper
@@ -60,17 +86,18 @@ const PopUpGiftAid = ({
             aria-label="What is Gift Aid?"
             $hoverColour={hoverColour}
           >
-            <GiftAidLogo size={140} colour={textColour} />
+            <GiftAidLogo colour={textColour} />
           </LogoWrapper>
         </PopUpWindow>
       </Trigger>
 
       {isRendered && (
-        <PopUpWindow
+        <OpenPopUpWindow
           $backgroundColour="white"
           $textColour={textColour}
           $isOpen={isRendered}
           $isClosing={isClosing}
+          $openWindowWidth={openWindowWidth}
         >
           <CloseButton
             type="button"
@@ -86,15 +113,17 @@ const PopUpGiftAid = ({
           {paragraphs.map(paragraph => (
             <PopUpBodyText key={paragraph}>{paragraph}</PopUpBodyText>
           ))}
-        </PopUpWindow>
+        </OpenPopUpWindow>
       )}
-    </Container>
+    </GiftAidContainer>
   );
 };
 
 PopUpGiftAid.propTypes = {
   textColour: PropTypes.string,
   hoverColour: PropTypes.string,
+  backgroundColour: PropTypes.string,
+  openWindowWidth: PropTypes.string,
   heading: PropTypes.string,
   paragraphs: PropTypes.arrayOf(PropTypes.string),
   onOpenChange: PropTypes.func

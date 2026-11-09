@@ -6,9 +6,20 @@ import Text from '../../../Atoms/Text/Text';
 import Cross from '../../../Atoms/Icons/CrossRoundedCorners';
 import Padlock from '../../../Atoms/Icons/Padlock';
 import {
-  Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText
+  Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText, PageOverlay
 } from '../PopUpShared.style';
 import { usePopUpOpen } from '../PopUpShared.utils';
+
+/**
+ * The open popup is positioned over the trigger, so its width is set
+ * independently of the trigger's width (via openWindowWidth) and centred on it
+ */
+const OpenPopUpWindow = styled(PopUpWindow)`
+  width: ${({ $openWindowWidth }) => $openWindowWidth};
+  left: 50%;
+  right: auto;
+  margin-left: ${({ $openWindowWidth }) => `calc(${$openWindowWidth} / -2)`};
+`;
 
 const DEFAULT_TRIGGER_TEXT = 'Your donation is secure and encrypted';
 
@@ -41,6 +52,7 @@ const PopUpSecurePayment = ({
   triggerText = DEFAULT_TRIGGER_TEXT,
   heading = DEFAULT_HEADING,
   paragraphs = DEFAULT_PARAGRAPHS,
+  openWindowWidth = '100%',
   onOpenChange,
   ...rest
 }) => {
@@ -55,6 +67,8 @@ const PopUpSecurePayment = ({
       data-open={isOpen ? 'true' : 'false'}
       {...rest}
     >
+      {isRendered && <PageOverlay aria-hidden="true" />}
+
       <Trigger $hidden={isRendered}>
         <SecureButton
           type="button"
@@ -67,10 +81,11 @@ const PopUpSecurePayment = ({
       </Trigger>
 
       {isRendered && (
-        <PopUpWindow
+        <OpenPopUpWindow
           $backgroundColour="white"
           $isOpen={isRendered}
           $isClosing={isClosing}
+          $openWindowWidth={openWindowWidth}
         >
           <CloseButton
             type="button"
@@ -86,7 +101,7 @@ const PopUpSecurePayment = ({
             // eslint-disable-next-line react/no-array-index-key
             <PopUpBodyText key={index}>{paragraph}</PopUpBodyText>
           ))}
-        </PopUpWindow>
+        </OpenPopUpWindow>
       )}
     </Container>
   );
@@ -96,6 +111,7 @@ PopUpSecurePayment.propTypes = {
   triggerText: PropTypes.string,
   heading: PropTypes.string,
   paragraphs: PropTypes.arrayOf(PropTypes.string),
+  openWindowWidth: PropTypes.string,
   onOpenChange: PropTypes.func
 };
 
