@@ -18,7 +18,7 @@ const OuterWrapper = styled.div`
 `;
 
 const TopCopyWrapper = styled.div`
-  margin: ${spacing('l')} 0;
+  margin: 2rem 0 1.5rem;
   display: flex;
   width: 100%;
 `;
