@@ -134,9 +134,8 @@ const CheckLabel = styled.label`${({ theme }) => css`
   position: relative;
   display: flex;
   align-items: center;
-  font-size: ${theme.fontSize('xs')};
+  font-size: 0.875rem;
   cursor: pointer;
-
   @media ${theme.allBreakpoints('M')} {
     font-size: ${theme.fontSize('s')};
   }
