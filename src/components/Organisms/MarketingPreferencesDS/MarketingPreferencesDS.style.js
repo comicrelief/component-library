@@ -65,7 +65,7 @@ const FormField = styled.div`${({ theme, $isErroring }) => css`
   flex-direction: column;
   padding: ${spacing('md')} ${spacing('m')};
   &.selected {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
   }
   background-color: ${theme.color('white')};
   border-radius: 0.5rem;
@@ -95,7 +95,7 @@ const FormField = styled.div`${({ theme, $isErroring }) => css`
     }
   `}
 
-  /* All labels; input AND checkbox */
+  /* Checkbox label */
   label {
     position: relative;
     height: 32px;
@@ -204,6 +204,7 @@ const ExtraInfo = styled.span`
   + label {
     margin-top: ${spacing('md')};
     margin-bottom: 0;
+    height: initial;
 
     /* Visually hide the actual field label for the */
     /* non-multifield options, as we have the */
