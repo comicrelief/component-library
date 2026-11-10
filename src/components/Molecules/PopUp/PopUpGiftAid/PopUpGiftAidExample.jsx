@@ -1,46 +1,47 @@
 import React, { useState } from 'react';
-import PopUpGiftAid from './PopUpGiftAid';
 import styled from 'styled-components';
+import PopUpGiftAid from './PopUpGiftAid';
+import { ExampleContainer } from '../PopUpShared.style';
 
-/**
-  * Parent styling from the JS state (onOpenChange) uses data-open attribute
-  * on the popup's container to fire CSS styles via :has()
- */
-const Wrapper = styled.div`
-  position: relative;
-  background: ${({ $isOpen }) => ($isOpen ? 'orange' : 'green')};
-  padding: 1rem;
-
-  &:has([data-open="true"]) {
-    outline: 2px solid black;
-  }
-
-  /* Shade over the wrapper's content while the popup is open */
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    pointer-events: none;
-    display: ${({ $isOpen }) => ($isOpen ? 'block' : 'none')};
-  }
+const GiftExampleContainer = styled(ExampleContainer)`
+  display: flex;
+  justify-content: space-between;
 `;
 
-const Status = styled.p`
-  margin: 0 0 0.5rem;
-  color: white;
+const PopUpExampleWrapper = styled.div`
+  width: 150px;
+  height: auto;
 `;
 
 export default function PopUpGiftAidExample() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Wrapper $isOpen={isOpen}>
-      <Status>{isOpen ? 'Popup is open' : 'Popup is closed'}</Status>
-      <PopUpGiftAid onOpenChange={setIsOpen} />
-    </Wrapper>
+    <>
+      <GiftExampleContainer $isOpen={isOpen}>
+        <h3>Default / no props, isOpen trigger</h3>
+        <PopUpExampleWrapper> <PopUpGiftAid onOpenChange={setIsOpen}/> </PopUpExampleWrapper>
+      </GiftExampleContainer>
+
+      <GiftExampleContainer>
+        <h3>Props - textColour, backgroundColour, hoverColour, openWindowWidth</h3>
+        <PopUpExampleWrapper>
+          <PopUpGiftAid textColour="green" backgroundColour="blue_light" hoverColour='coral_light' openWindowWidth='550px'/>
+        </PopUpExampleWrapper>
+      </GiftExampleContainer>
+
+      <GiftExampleContainer>
+        <h3>Custom heading and paragraphs</h3>
+        <PopUpExampleWrapper>
+          <PopUpGiftAid
+            heading="Why does Gift Aid matter?"
+            paragraphs={[
+              'Gift Aid lets charities reclaim the tax you have already paid on your donation.',
+              'Every £1 you give can be worth £1.25 to the charity at no extra cost to you.'
+            ]}
+          />
+        </PopUpExampleWrapper>
+      </GiftExampleContainer>
+    </>
   );
 }
