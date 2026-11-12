@@ -123,14 +123,6 @@ const Container = styled.div`
   width: 100%;
 `;
 
-/**
- * Hidden rather than unmounted when open, so the closed trigger keeps its
- * space and content below the popup doesn't do the janky move around when it overlays/opens
- */
-const Trigger = styled.div`
-  visibility: ${({ $hidden }) => ($hidden ? 'hidden' : 'visible')};
-`;
-
 const CloseButton = styled.button`
   align-self: flex-end;
   display: flex;
@@ -180,7 +172,6 @@ const PopUpBodyText = styled.p`
 
 export {
   Container,
-  Trigger,
   CloseButton,
   PopUpWindow,
   PopUpHeading,

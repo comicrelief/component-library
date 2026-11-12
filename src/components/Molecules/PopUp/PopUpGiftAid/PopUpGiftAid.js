@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 import Cross from '../../../Atoms/Icons/CrossRoundedCorners';
 import GiftAidLogo from '../../../Atoms/Icons/GiftAidLogo';
 import {
-  Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText, PageOverlay
+  Container, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText, PageOverlay
 } from '../PopUpShared.style';
 import { usePopUpOpen } from '../PopUpShared.utils';
 
@@ -74,7 +74,7 @@ const PopUpGiftAid = ({
     >
       {isRendered && <PageOverlay aria-hidden="true" />}
 
-      <Trigger $hidden={isRendered}>
+      <div $hidden={isRendered} data-testid="pop-up-gift-aid-trigger">
         <PopUpWindow
           $backgroundColour={backgroundColour}
           $textColour={textColour}
@@ -89,7 +89,7 @@ const PopUpGiftAid = ({
             <GiftAidLogo colour={textColour} />
           </LogoWrapper>
         </PopUpWindow>
-      </Trigger>
+      </div>
 
       {isRendered && (
         <OpenPopUpWindow
