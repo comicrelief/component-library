@@ -8,7 +8,7 @@ export const CLOSE_DURATION = 200;
 /**
  * Tracks open state and reports changes to the parent via onOpenChange
  */
-export const usePopUpOpen = onOpenChange => {
+export const usePopUpOpen = (onOpenChange) => {
   // 'closed' -> 'open' -> 'closing' -> 'closed'; 'closing' keeps the popup
   // mounted long enough to play its exit animation
   const [phase, setPhase] = useState('closed');
@@ -46,7 +46,7 @@ export const usePopUpOpen = onOpenChange => {
       return undefined;
     }
 
-    const handlePointerDown = event => {
+    const handlePointerDown = (event) => {
       if (containerRef.current && !containerRef.current.contains(event.target)) {
         closePopUp();
       }

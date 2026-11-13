@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import { crTheme } from '@comicrelief/component-library';
 
-import Cross from '../../../Atoms/Icons/CrossRoundedCorners';
-import GiftAidLogo from '../../../Atoms/Icons/GiftAidLogo';
+import Cross from '../Icons/CrossRoundedCorners';
+import GiftAidLogo from '../Icons/GiftAidLogo';
 import {
   Container, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText, PageOverlay
 } from '../PopUpShared.style';
@@ -34,6 +35,24 @@ const OpenPopUpWindow = styled(PopUpWindow)`
   left: 50%;
   right: auto;
   margin-left: ${({ $openWindowWidth }) => `calc(${$openWindowWidth} / -2)`};
+
+  /* Open window: fixed and centred in the viewport, so it stays put when the page scrolls.
+     Fixed widths resolve against the viewport, so the width is set here per breakpoint.
+     On S it sits 24px in from the screen edge (no container inset). */
+  /* Centred with inset + auto margins rather than transform, as the library animates transform on open */
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  height: fit-content;
+  width: calc(100vw - 48px);
+
+  // this needs to stay in the repo and not be moved into the CL component itself
+  @media ${crTheme.allBreakpoints('M')} {
+    width: 544px;
+  }
+
+  /* Bug fix: these two keep the shade above the page's inputs (which sit at z-index 2-3) and the popup above the shade */
+  z-index: 6;
 `;
 
 const LogoWrapper = styled.button`
@@ -74,7 +93,7 @@ const PopUpGiftAid = ({
     >
       {isRendered && <PageOverlay aria-hidden="true" />}
 
-      <div $hidden={isRendered} data-testid="pop-up-gift-aid-trigger">
+      <div data-testid="pop-up-gift-aid-trigger">
         <PopUpWindow
           $backgroundColour={backgroundColour}
           $textColour={textColour}

@@ -1,14 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { crTheme } from '@comicrelief/component-library';
 
-import Text from '../../../Atoms/Text/Text';
-import Cross from '../../../Atoms/Icons/CrossRoundedCorners';
-import Padlock from '../../../Atoms/Icons/Padlock';
+import Cross from '../Icons/CrossRoundedCorners';
+import Padlock from '../Icons/Padlock';
 import {
-  Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText, PageOverlay
+  Container, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText, PageOverlay
 } from '../PopUpShared.style';
 import { usePopUpOpen } from '../PopUpShared.utils';
+
+const SecurePaymentContainer = styled(Container)`
+  /* Keep the trigger visible while the popup is open (the library hides it), so it stays in place */
+  & > div {
+    visibility: visible;
+  }
+`;
 
 /**
  * The open popup is positioned over the trigger, so its width is set
@@ -19,6 +26,18 @@ const OpenPopUpWindow = styled(PopUpWindow)`
   left: 50%;
   right: auto;
   margin-left: ${({ $openWindowWidth }) => `calc(${$openWindowWidth} / -2)`};
+
+  /* this probably needs to stay in the repo and not be moved into the CL component itself? */
+  position: fixed;
+  /* Centred with inset + auto margins */
+  inset: 0;
+  margin: auto;
+  height: fit-content;
+  width: calc(100vw - 48px);
+
+  @media ${crTheme.allBreakpoints('M')} {
+    width: 544px;
+  }
 `;
 
 const DEFAULT_TRIGGER_TEXT = 'Your donation is secure and encrypted';
@@ -46,6 +65,24 @@ const SecureButton = styled.button`
   &:focus span {
     text-decoration: underline;
   }
+
+  width: 100%;
+  margin: 0;
+
+  /* Ruled line either side of the padlock and text */
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: ${crTheme.color('grey_medium')};
+  }
+  /* Remove side padding, so the lines reach the container's edges */
+  padding: 0;
+`;
+
+const SecureTriggerText = styled.span`
+  font-size: 0.75rem;
 `;
 
 const PopUpSecurePayment = ({
@@ -61,7 +98,7 @@ const PopUpSecurePayment = ({
   } = usePopUpOpen(onOpenChange);
 
   return (
-    <Container
+    <SecurePaymentContainer
       ref={containerRef}
       data-testid="pop-up-secure-payment"
       data-open={isOpen ? 'true' : 'false'}
@@ -69,16 +106,16 @@ const PopUpSecurePayment = ({
     >
       {isRendered && <PageOverlay aria-hidden="true" />}
 
-      <Trigger $hidden={isRendered}>
+      <div>
         <SecureButton
           type="button"
           onClick={openPopUp}
           aria-expanded={isOpen ? 'true' : 'false'}
         >
-          <Padlock colour="black" size={16} />
-          <Text>{triggerText}</Text>
+          <Padlock colour="black" size={12} />
+          <SecureTriggerText>{triggerText}</SecureTriggerText>
         </SecureButton>
-      </Trigger>
+      </div>
 
       {isRendered && (
         <OpenPopUpWindow
@@ -103,7 +140,7 @@ const PopUpSecurePayment = ({
           ))}
         </OpenPopUpWindow>
       )}
-    </Container>
+    </SecurePaymentContainer>
   );
 };
 

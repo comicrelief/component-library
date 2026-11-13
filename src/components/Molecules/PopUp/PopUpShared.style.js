@@ -1,5 +1,4 @@
 import styled, { css, keyframes } from 'styled-components';
-import zIndex from '../../../theme/shared/zIndex';
 import { CLOSE_DURATION } from './PopUpShared.utils';
 
 /**
@@ -83,7 +82,7 @@ const PopUpWindow = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    ${zIndex('high')}
+    z-index: 5;
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
     animation: ${openOverlay} 250ms ease-out;
 
@@ -115,7 +114,7 @@ const PageOverlay = styled.div`
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
   pointer-events: none;
-  ${zIndex('medium')}
+  z-index: 4;
 `;
 
 const Container = styled.div`
