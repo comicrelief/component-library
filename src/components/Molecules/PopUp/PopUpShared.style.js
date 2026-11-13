@@ -1,5 +1,4 @@
 import styled, { css, keyframes } from 'styled-components';
-import zIndex from '../../../theme/shared/zIndex';
 import { CLOSE_DURATION } from './PopUpShared.utils';
 
 /**
@@ -83,7 +82,7 @@ const PopUpWindow = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    ${zIndex('high')}
+    z-index: 5;
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
     animation: ${openOverlay} 250ms ease-out;
 
@@ -115,20 +114,12 @@ const PageOverlay = styled.div`
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
   pointer-events: none;
-  ${zIndex('medium')}
+  z-index: 4;
 `;
 
 const Container = styled.div`
   position: relative;
   width: 100%;
-`;
-
-/**
- * Hidden rather than unmounted when open, so the closed trigger keeps its
- * space and content below the popup doesn't do the janky move around when it overlays/opens
- */
-const Trigger = styled.div`
-  visibility: ${({ $hidden }) => ($hidden ? 'hidden' : 'visible')};
 `;
 
 const CloseButton = styled.button`
@@ -180,7 +171,6 @@ const PopUpBodyText = styled.p`
 
 export {
   Container,
-  Trigger,
   CloseButton,
   PopUpWindow,
   PopUpHeading,

@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import crTheme from '../../../../theme/crTheme/theme';
 
-import Cross from '../../../Atoms/Icons/CrossRoundedCorners';
-import GiftAidLogo from '../../../Atoms/Icons/GiftAidLogo';
+import Cross from '../Icons/CrossRoundedCorners';
+import GiftAidLogo from '../Icons/GiftAidLogo';
 import {
-  Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText, PageOverlay
+  Container, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText, PageOverlay
 } from '../PopUpShared.style';
 import { usePopUpOpen } from '../PopUpShared.utils';
 
@@ -34,6 +35,24 @@ const OpenPopUpWindow = styled(PopUpWindow)`
   left: 50%;
   right: auto;
   margin-left: ${({ $openWindowWidth }) => `calc(${$openWindowWidth} / -2)`};
+
+  /* Open window: fixed and centred in the viewport, so it stays put when the page scrolls.
+     Fixed widths resolve against the viewport, so the width is set here per breakpoint.
+     On S it sits 24px in from the screen edge (no container inset). */
+  /* Centred with inset + auto margins rather than transform, as the library animates transform on open */
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  height: fit-content;
+  width: calc(100vw - 48px);
+
+  // this needs to stay in the repo and not be moved into the CL component itself
+  @media ${crTheme.allBreakpoints('M')} {
+    width: 544px;
+  }
+
+  /* Bug fix: these two keep the shade above the page's inputs (which sit at z-index 2-3) and the popup above the shade */
+  z-index: 6;
 `;
 
 const LogoWrapper = styled.button`
@@ -68,31 +87,34 @@ const PopUpGiftAid = ({
   return (
     <GiftAidContainer
       ref={containerRef}
-      data-testid="pop-up-gift-aid"
+      data-testid="gift-aid-popup"
       data-open={isOpen ? 'true' : 'false'}
       {...rest}
     >
-      {isRendered && <PageOverlay aria-hidden="true" />}
+      {isRendered && <PageOverlay data-testid="gift-aid-page-overlay" aria-hidden="true" />}
 
-      <Trigger $hidden={isRendered}>
+      <div data-testid="gift-aid-pop-up-trigger">
         <PopUpWindow
+          data-testid="gift-aid-pop-up-window"
           $backgroundColour={backgroundColour}
           $textColour={textColour}
         >
           <LogoWrapper
+            data-testid="gift-aid-pop-up-logo-wrapper"
             type="button"
             onClick={openPopUp}
             aria-expanded={isOpen ? 'true' : 'false'}
             aria-label="What is Gift Aid?"
             $hoverColour={hoverColour}
           >
-            <GiftAidLogo colour={textColour} />
+            <GiftAidLogo colour={textColour} data-testid="gift-aid-pop-up-gift-aid-logo"/>
           </LogoWrapper>
         </PopUpWindow>
-      </Trigger>
+      </div>
 
       {isRendered && (
         <OpenPopUpWindow
+          data-testid="gift-aid-pop-up-open-window"
           $backgroundColour="white"
           $textColour={textColour}
           $isOpen={isRendered}
@@ -100,18 +122,19 @@ const PopUpGiftAid = ({
           $openWindowWidth={openWindowWidth}
         >
           <CloseButton
+            data-testid="gift-aid-pop-up-close-button"
             type="button"
             onClick={closePopUp}
             aria-label="Close"
             $hoverColour={hoverColour}
           >
-            <Cross colour={textColour} size={24} />
+            <Cross colour={textColour} size={24} data-testid="gift-aid-pop-up-cross"/>
           </CloseButton>
 
-          <PopUpHeading>{heading}</PopUpHeading>
+          <PopUpHeading data-testid="gift-aid-pop-up-heading">{heading}</PopUpHeading>
 
           {paragraphs.map(paragraph => (
-            <PopUpBodyText key={paragraph}>{paragraph}</PopUpBodyText>
+            <PopUpBodyText key={paragraph} data-testid="gift-aid-pop-up-body-text">{paragraph}</PopUpBodyText>
           ))}
         </OpenPopUpWindow>
       )}
