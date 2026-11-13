@@ -95,18 +95,6 @@ const FormField = styled.div`${({ theme, $isErroring }) => css`
     }
   `}
 
-  /* Checkbox label */
-  label {
-    position: relative;
-    height: 32px;
-    margin-bottom: 0;
-    width: 100%;
-    color: inherit;
-    font-weight: 800;
-    display: flex;
-    justify-content: space-between;
-  }
-
   h3 {
     position: relative;
     margin-bottom: ${spacing('md')};
@@ -132,8 +120,14 @@ const CheckContainer = styled.div`${({ theme }) => css`
 
 const CheckLabel = styled.label`${({ theme }) => css`
   position: relative;
+  height: 32px;
+  margin-bottom: 0;
+  width: 100%;
+  color: inherit;
+  font-weight: 800;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-size: 0.875rem;
   cursor: pointer;
   @media ${theme.allBreakpoints('M')} {
@@ -203,7 +197,6 @@ const ExtraInfo = styled.span`
   + label {
     margin-top: ${spacing('md')};
     margin-bottom: 0;
-    height: initial;
 
     /* Visually hide the actual field label for the */
     /* non-multifield options, as we have the */
