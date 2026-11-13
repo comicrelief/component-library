@@ -57,9 +57,11 @@ exports[`renders coral_light variant 1`] = `
   backgroundColor="coral_light"
   className="c0 c1"
   data-open="false"
-  data-testid="pop-up-secure-payment"
+  data-testid="secure-text-popup"
 >
-  <div>
+  <div
+    data-testid="secure-text-trigger-button-wrapper"
+  >
     <button
       aria-expanded="false"
       className="c2"
@@ -143,9 +145,11 @@ exports[`renders default blue_light variant 1`] = `
 <div
   className="c0 c1"
   data-open="false"
-  data-testid="pop-up-secure-payment"
+  data-testid="secure-text-popup"
 >
-  <div>
+  <div
+    data-testid="secure-text-trigger-button-wrapper"
+  >
     <button
       aria-expanded="false"
       className="c2"

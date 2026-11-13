@@ -55,23 +55,26 @@ exports[`renders coral_light variant 1`] = `
   backgroundColor="coral_light"
   className="c0 c1"
   data-open="false"
-  data-testid="pop-up-gift-aid"
+  data-testid="gift-aid-popup"
 >
   <div
-    data-testid="pop-up-gift-aid-trigger"
+    data-testid="gift-aid-pop-up-trigger"
   >
     <div
       className="c2"
+      data-testid="gift-aid-pop-up-window"
     >
       <button
         aria-expanded="false"
         aria-label="What is Gift Aid?"
         className="c3"
+        data-testid="gift-aid-pop-up-logo-wrapper"
         onClick={[Function]}
         type="button"
       >
         <svg
           className="c4"
+          data-testid="gift-aid-pop-up-gift-aid-logo"
           fill="#000000"
           viewBox="0 0 350 124"
           xmlns="http://www.w3.org/2000/svg"
@@ -140,23 +143,26 @@ exports[`renders default blue_light variant 1`] = `
 <div
   className="c0 c1"
   data-open="false"
-  data-testid="pop-up-gift-aid"
+  data-testid="gift-aid-popup"
 >
   <div
-    data-testid="pop-up-gift-aid-trigger"
+    data-testid="gift-aid-pop-up-trigger"
   >
     <div
       className="c2"
+      data-testid="gift-aid-pop-up-window"
     >
       <button
         aria-expanded="false"
         aria-label="What is Gift Aid?"
         className="c3"
+        data-testid="gift-aid-pop-up-logo-wrapper"
         onClick={[Function]}
         type="button"
       >
         <svg
           className="c4"
+          data-testid="gift-aid-pop-up-gift-aid-logo"
           fill="#000000"
           viewBox="0 0 350 124"
           xmlns="http://www.w3.org/2000/svg"
