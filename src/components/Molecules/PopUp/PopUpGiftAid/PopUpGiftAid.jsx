@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { crTheme } from '@comicrelief/component-library';
+import crTheme from '../../../../theme/crTheme/theme';
 
 import Cross from '../Icons/CrossRoundedCorners';
 import GiftAidLogo from '../Icons/GiftAidLogo';
