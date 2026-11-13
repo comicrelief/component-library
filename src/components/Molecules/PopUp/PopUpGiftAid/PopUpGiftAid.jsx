@@ -87,31 +87,34 @@ const PopUpGiftAid = ({
   return (
     <GiftAidContainer
       ref={containerRef}
-      data-testid="pop-up-gift-aid"
+      data-testid="gift-aid-popup"
       data-open={isOpen ? 'true' : 'false'}
       {...rest}
     >
-      {isRendered && <PageOverlay aria-hidden="true" />}
+      {isRendered && <PageOverlay data-testid="gift-aid-page-overlay" aria-hidden="true" />}
 
-      <div data-testid="pop-up-gift-aid-trigger">
+      <div data-testid="gift-aid-pop-up-trigger">
         <PopUpWindow
+          data-testid="gift-aid-pop-up-window"
           $backgroundColour={backgroundColour}
           $textColour={textColour}
         >
           <LogoWrapper
+            data-testid="gift-aid-pop-up-logo-wrapper"
             type="button"
             onClick={openPopUp}
             aria-expanded={isOpen ? 'true' : 'false'}
             aria-label="What is Gift Aid?"
             $hoverColour={hoverColour}
           >
-            <GiftAidLogo colour={textColour} />
+            <GiftAidLogo colour={textColour} data-testid="gift-aid-pop-up-gift-aid-logo"/>
           </LogoWrapper>
         </PopUpWindow>
       </div>
 
       {isRendered && (
         <OpenPopUpWindow
+          data-testid="gift-aid-pop-up-open-window"
           $backgroundColour="white"
           $textColour={textColour}
           $isOpen={isRendered}
@@ -119,18 +122,19 @@ const PopUpGiftAid = ({
           $openWindowWidth={openWindowWidth}
         >
           <CloseButton
+            data-testid="gift-aid-pop-up-close-button"
             type="button"
             onClick={closePopUp}
             aria-label="Close"
             $hoverColour={hoverColour}
           >
-            <Cross colour={textColour} size={24} />
+            <Cross colour={textColour} size={24} data-testid="gift-aid-pop-up-cross"/>
           </CloseButton>
 
-          <PopUpHeading>{heading}</PopUpHeading>
+          <PopUpHeading data-testid="gift-aid-pop-up-heading">{heading}</PopUpHeading>
 
           {paragraphs.map(paragraph => (
-            <PopUpBodyText key={paragraph}>{paragraph}</PopUpBodyText>
+            <PopUpBodyText key={paragraph} data-testid="gift-aid-pop-up-body-text">{paragraph}</PopUpBodyText>
           ))}
         </OpenPopUpWindow>
       )}

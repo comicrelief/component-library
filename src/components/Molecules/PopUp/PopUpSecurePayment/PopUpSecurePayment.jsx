@@ -100,13 +100,13 @@ const PopUpSecurePayment = ({
   return (
     <SecurePaymentContainer
       ref={containerRef}
-      data-testid="pop-up-secure-payment"
+      data-testid="secure-text-popup"
       data-open={isOpen ? 'true' : 'false'}
       {...rest}
     >
       {isRendered && <PageOverlay aria-hidden="true" />}
 
-      <div>
+      <div data-testid="secure-text-trigger-button-wrapper">
         <SecureButton
           type="button"
           onClick={openPopUp}
@@ -119,24 +119,29 @@ const PopUpSecurePayment = ({
 
       {isRendered && (
         <OpenPopUpWindow
+          data-testid="secure-text-open-popup-window"
           $backgroundColour="white"
           $isOpen={isRendered}
           $isClosing={isClosing}
           $openWindowWidth={openWindowWidth}
         >
           <CloseButton
+            data-testid="secure-text-close-button"
             type="button"
             onClick={closePopUp}
             aria-label="Close"
           >
-            <Cross colour="black" size={24} />
+            <Cross
+              data-testid="secure-text-cross"
+              colour="black" size={24}
+            />
           </CloseButton>
 
-          <PopUpHeading>{heading}</PopUpHeading>
+          <PopUpHeading data-testid="secure-text-popup-heading">{heading}</PopUpHeading>
 
           {paragraphs.map((paragraph, index) => (
             // eslint-disable-next-line react/no-array-index-key
-            <PopUpBodyText key={index}>{paragraph}</PopUpBodyText>
+            <PopUpBodyText data-testid="secure-text-body-text" key={index}>{paragraph}</PopUpBodyText>
           ))}
         </OpenPopUpWindow>
       )}
