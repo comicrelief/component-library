@@ -35,8 +35,8 @@ exports[`renders coral_light variant 1`] = `
   text-decoration: underline;
 }
 
-.c2::before,
-.c2::after {
+.c2:before,
+.c2:after {
   content: '';
   flex: 1;
   height: 1px;
@@ -124,8 +124,8 @@ exports[`renders default blue_light variant 1`] = `
   text-decoration: underline;
 }
 
-.c2::before,
-.c2::after {
+.c2:before,
+.c2:after {
   content: '';
   flex: 1;
   height: 1px;
