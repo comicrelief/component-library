@@ -64,9 +64,6 @@ const FormField = styled.div`${({ theme, $isErroring }) => css`
   display: flex;
   flex-direction: column;
   padding: ${spacing('md')} ${spacing('m')};
-  &.selected {
-    padding-bottom: 2rem;
-  }
   background-color: ${theme.color('white')};
   border-radius: 0.5rem;
   border: 1px solid ${$isErroring ? theme.color('red') : theme.color('grey')};
@@ -124,14 +121,14 @@ const CheckLabel = styled.label`${({ theme }) => css`
   margin-bottom: 0;
   width: 100%;
   color: inherit;
-  font-weight: 800;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.875rem;
   cursor: pointer;
+  font-size: 0.875rem;
   @media ${theme.allBreakpoints('M')} {
-    font-size: ${theme.fontSize('s')};
+    font-size: 1rem;
   }
 `}`;
 
@@ -182,7 +179,7 @@ const ShowHideInputWrapper = styled.div`
   }
 `;
 
-const ExtraInfo = styled.span`
+const ExtraInfo = styled.span`${({ theme }) => css`
   display: block;
   width: 100%;
   font-size: 1rem;
@@ -193,7 +190,11 @@ const ExtraInfo = styled.span`
   margin-bottom: 0rem;
   margin-top: 1rem;
   color: inherit;
-
+    font-size: 0.875rem;
+    @media ${theme.allBreakpoints('M')} {
+      font-size: 1rem; 
+  }
+      
   + label {
     margin-top: ${spacing('md')};
     margin-bottom: 0;
@@ -217,7 +218,7 @@ const ExtraInfo = styled.span`
       }
     }
   }
-`;
+`}`;
 
 const MPTextInput = styled(TextInput)`${({ theme, $isErroring }) => css`
   color: ${$isErroring ? theme.color('red') : theme.color('black')};
