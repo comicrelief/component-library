@@ -83,6 +83,7 @@ const colors = {
   green_light: '#F4F2F4',
   green_donate: '#27E698',
   green_donate_interact: '#10B981',
+  green_donate_interact_transparency_25: '#10B98140',
 
   magenta: '#FC59CE',
   magenta_dark: '#821C5D',
