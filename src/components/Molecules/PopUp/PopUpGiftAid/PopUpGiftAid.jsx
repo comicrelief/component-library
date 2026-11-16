@@ -46,7 +46,6 @@ const OpenPopUpWindow = styled(PopUpWindow)`
   height: fit-content;
   width: calc(100vw - 48px);
 
-  // this needs to stay in the repo and not be moved into the CL component itself
   @media ${crTheme.allBreakpoints('M')} {
     width: 544px;
   }

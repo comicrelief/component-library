@@ -27,7 +27,6 @@ const OpenPopUpWindow = styled(PopUpWindow)`
   right: auto;
   margin-left: ${({ $openWindowWidth }) => `calc(${$openWindowWidth} / -2)`};
 
-  /* this probably needs to stay in the repo and not be moved into the CL component itself? */
   position: fixed;
   /* Centred with inset + auto margins */
   inset: 0;
@@ -70,8 +69,8 @@ const SecureButton = styled.button`
   margin: 0;
 
   /* Ruled line either side of the padlock and text */
-  &::before,
-  &::after {
+  &:before,
+  &:after {
     content: '';
     flex: 1;
     height: 1px;
