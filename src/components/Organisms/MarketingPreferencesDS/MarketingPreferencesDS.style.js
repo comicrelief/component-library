@@ -18,7 +18,7 @@ const OuterWrapper = styled.div`
 `;
 
 const TopCopyWrapper = styled.div`
-  margin: ${spacing('l')} 0;
+  margin: 2rem 0 1.5rem;
   display: flex;
   width: 100%;
 `;
@@ -63,7 +63,7 @@ const FormField = styled.div`${({ theme, $isErroring }) => css`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: ${spacing('m')};
+  padding: ${spacing('md')} ${spacing('m')};
   background-color: ${theme.color('white')};
   border-radius: 0.5rem;
   border: 1px solid ${$isErroring ? theme.color('red') : theme.color('grey')};
@@ -92,17 +92,6 @@ const FormField = styled.div`${({ theme, $isErroring }) => css`
     }
   `}
 
-  /* All labels; input AND checkbox */
-  label {
-    position: relative;
-    margin-bottom: 0;
-    width: 100%;
-    color: inherit;
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-  }
-
   h3 {
     position: relative;
     margin-bottom: ${spacing('md')};
@@ -128,13 +117,18 @@ const CheckContainer = styled.div`${({ theme }) => css`
 
 const CheckLabel = styled.label`${({ theme }) => css`
   position: relative;
+  height: 32px;
+  margin-bottom: 0;
+  width: 100%;
+  color: inherit;
+  font-weight: 700;
   display: flex;
   align-items: center;
-  font-size: ${theme.fontSize('xs')};
+  justify-content: space-between;
   cursor: pointer;
-
+  font-size: 0.875rem;
   @media ${theme.allBreakpoints('M')} {
-    font-size: ${theme.fontSize('s')};
+    font-size: 1rem;
   }
 `}`;
 
@@ -147,12 +141,12 @@ const CheckInput = styled.input`${({ theme }) => css`
   margin: 0;
   
   + span {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     flex-shrink: 0;
     background-color: ${theme.color('white')};
     border: 1px solid ${theme.color('grey')};
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     pointer-events: none;
   }
 
@@ -185,7 +179,7 @@ const ShowHideInputWrapper = styled.div`
   }
 `;
 
-const ExtraInfo = styled.span`
+const ExtraInfo = styled.span`${({ theme }) => css`
   display: block;
   width: 100%;
   font-size: 1rem;
@@ -196,7 +190,11 @@ const ExtraInfo = styled.span`
   margin-bottom: 0rem;
   margin-top: 1rem;
   color: inherit;
-
+    font-size: 0.875rem;
+    @media ${theme.allBreakpoints('M')} {
+      font-size: 1rem; 
+  }
+      
   + label {
     margin-top: ${spacing('md')};
     margin-bottom: 0;
@@ -220,7 +218,7 @@ const ExtraInfo = styled.span`
       }
     }
   }
-`;
+`}`;
 
 const MPTextInput = styled(TextInput)`${({ theme, $isErroring }) => css`
   color: ${$isErroring ? theme.color('red') : theme.color('black')};
