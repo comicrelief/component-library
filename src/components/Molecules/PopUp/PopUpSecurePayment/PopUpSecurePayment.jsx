@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import crTheme from '../../../../theme/crTheme/theme';
@@ -96,6 +96,16 @@ const PopUpSecurePayment = ({
     isOpen, isClosing, isRendered, containerRef, openPopUp, closePopUp
   } = usePopUpOpen(onOpenChange);
 
+  const closeButtonRef = useRef(null);
+
+  // The trigger doesn't toggle the popup, so move focus to the close button
+  // when it opens so keyboard users land inside the dialog
+  useEffect(() => {
+    if (isOpen && closeButtonRef.current) {
+      closeButtonRef.current.focus();
+    }
+  }, [isOpen]);
+
   return (
     <SecurePaymentContainer
       ref={containerRef}
@@ -125,6 +135,7 @@ const PopUpSecurePayment = ({
           $openWindowWidth={openWindowWidth}
         >
           <CloseButton
+            ref={closeButtonRef}
             data-testid="secure-text-close-button"
             type="button"
             onClick={closePopUp}
