@@ -15,6 +15,8 @@ const SecurePaymentContainer = styled(Container)`
   & > div {
     visibility: visible;
   }
+  width: auto;
+  flex: 0 1 auto;
 `;
 
 /**

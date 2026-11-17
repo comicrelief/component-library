@@ -10,6 +10,11 @@ exports[`renders coral_light variant 1`] = `
   width: 100%;
 }
 
+.c1 {
+  width: auto;
+  flex: 0 1 auto;
+}
+
 .c1>div {
   visibility: visible;
 }
@@ -92,6 +97,11 @@ exports[`renders default blue_light variant 1`] = `
 .c0 {
   position: relative;
   width: 100%;
+}
+
+.c1 {
+  width: auto;
+  flex: 0 1 auto;
 }
 
 .c1>div {
