@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders coral_light variant 1`] = `
-.c3 {
+.c4 {
   fill: #000000;
 }
 
@@ -16,39 +16,33 @@ exports[`renders coral_light variant 1`] = `
 
 .c2 {
   display: flex;
+  justify-content: center;
+}
+
+.c3 {
+  display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
-  margin: 0 auto;
   padding: 1rem;
   border: none;
   background: none;
   cursor: pointer;
   color: #000000;
-  width: 100%;
   margin: 0;
-  padding: 0;
 }
 
-.c2:hover span,
-.c2:focus span {
+.c3:hover span,
+.c3:focus span {
   text-decoration: underline;
 }
 
-.c2:before,
-.c2:after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background-color: #E1E2E3;
-}
-
-.c4 {
+.c5 {
   font-size: 0.75rem;
 }
 
 @media (min-width: 1024px) {
-  .c3 {
+  .c4 {
     fill: #000000;
   }
 }
@@ -60,16 +54,17 @@ exports[`renders coral_light variant 1`] = `
   data-testid="secure-text-popup"
 >
   <div
+    className="c2"
     data-testid="secure-text-trigger-button-wrapper"
   >
     <button
       aria-expanded="false"
-      className="c2"
+      className="c3"
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="c3"
+        className="c4"
         height={13.2}
         viewBox="0 0 10 11"
         width={12}
@@ -80,7 +75,7 @@ exports[`renders coral_light variant 1`] = `
         />
       </svg>
       <span
-        className="c4"
+        className="c5"
       >
         Your donation is secure and encrypted
       </span>
@@ -90,7 +85,7 @@ exports[`renders coral_light variant 1`] = `
 `;
 
 exports[`renders default blue_light variant 1`] = `
-.c3 {
+.c4 {
   fill: #000000;
 }
 
@@ -105,39 +100,33 @@ exports[`renders default blue_light variant 1`] = `
 
 .c2 {
   display: flex;
+  justify-content: center;
+}
+
+.c3 {
+  display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
-  margin: 0 auto;
   padding: 1rem;
   border: none;
   background: none;
   cursor: pointer;
   color: #000000;
-  width: 100%;
   margin: 0;
-  padding: 0;
 }
 
-.c2:hover span,
-.c2:focus span {
+.c3:hover span,
+.c3:focus span {
   text-decoration: underline;
 }
 
-.c2:before,
-.c2:after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background-color: #E1E2E3;
-}
-
-.c4 {
+.c5 {
   font-size: 0.75rem;
 }
 
 @media (min-width: 1024px) {
-  .c3 {
+  .c4 {
     fill: #000000;
   }
 }
@@ -148,16 +137,17 @@ exports[`renders default blue_light variant 1`] = `
   data-testid="secure-text-popup"
 >
   <div
+    className="c2"
     data-testid="secure-text-trigger-button-wrapper"
   >
     <button
       aria-expanded="false"
-      className="c2"
+      className="c3"
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="c3"
+        className="c4"
         height={13.2}
         viewBox="0 0 10 11"
         width={12}
@@ -168,7 +158,7 @@ exports[`renders default blue_light variant 1`] = `
         />
       </svg>
       <span
-        className="c4"
+        className="c5"
       >
         Your donation is secure and encrypted
       </span>

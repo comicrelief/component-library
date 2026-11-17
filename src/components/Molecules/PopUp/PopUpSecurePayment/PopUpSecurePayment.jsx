@@ -48,12 +48,16 @@ const DEFAULT_PARAGRAPHS = [
   'We also use a secure server and follow best practices to protect your data, like your name and address. Our systems get checked every year by the NCC Group, and we regularly chat with AWS to stay ahead of any potential issues.'
 ];
 
+const SecureTextContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 const SecureButton = styled.button`
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
-  margin: 0 auto;
   padding: 1rem;
   border: none;
   background: none;
@@ -65,19 +69,7 @@ const SecureButton = styled.button`
     text-decoration: underline;
   }
 
-  width: 100%;
   margin: 0;
-
-  /* Ruled line either side of the padlock and text */
-  &:before,
-  &:after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background-color: ${crTheme.color('grey_medium')};
-  }
-  /* Remove side padding, so the lines reach the container's edges */
-  padding: 0;
 `;
 
 const SecureTriggerText = styled.span`
@@ -115,7 +107,7 @@ const PopUpSecurePayment = ({
     >
       {isRendered && <PageOverlay aria-hidden="true" />}
 
-      <div data-testid="secure-text-trigger-button-wrapper">
+      <SecureTextContainer data-testid="secure-text-trigger-button-wrapper">
         <SecureButton
           type="button"
           onClick={openPopUp}
@@ -124,7 +116,7 @@ const PopUpSecurePayment = ({
           <Padlock colour="black" size={12} />
           <SecureTriggerText>{triggerText}</SecureTriggerText>
         </SecureButton>
-      </div>
+      </SecureTextContainer>
 
       {isRendered && (
         <OpenPopUpWindow
