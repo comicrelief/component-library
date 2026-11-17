@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import crTheme from '../../../../theme/crTheme/theme';
 
-import Text from '../../../Atoms/Text/Text';
-import Cross from '../../../Atoms/Icons/CrossRoundedCorners';
-import Padlock from '../../../Atoms/Icons/Padlock';
+import Cross from '../Icons/CrossRoundedCorners';
+import Padlock from '../Icons/Padlock';
 import {
-  Container, Trigger, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText, PageOverlay
+  Container, CloseButton, PopUpWindow, PopUpHeading, PopUpBodyText, PageOverlay
 } from '../PopUpShared.style';
 import { usePopUpOpen } from '../PopUpShared.utils';
+
+const SecurePaymentContainer = styled(Container)`
+  /* Keep the trigger visible while the popup is open (the library hides it), so it stays in place */
+  & > div {
+    visibility: visible;
+  }
+`;
 
 /**
  * The open popup is positioned over the trigger, so its width is set
@@ -19,6 +26,17 @@ const OpenPopUpWindow = styled(PopUpWindow)`
   left: 50%;
   right: auto;
   margin-left: ${({ $openWindowWidth }) => `calc(${$openWindowWidth} / -2)`};
+
+  position: fixed;
+  /* Centred with inset + auto margins */
+  inset: 0;
+  margin: auto;
+  height: fit-content;
+  width: calc(100vw - 48px);
+
+  @media ${crTheme.allBreakpoints('M')} {
+    width: 544px;
+  }
 `;
 
 const DEFAULT_TRIGGER_TEXT = 'Your donation is secure and encrypted';
@@ -30,12 +48,16 @@ const DEFAULT_PARAGRAPHS = [
   'We also use a secure server and follow best practices to protect your data, like your name and address. Our systems get checked every year by the NCC Group, and we regularly chat with AWS to stay ahead of any potential issues.'
 ];
 
+const SecureTextContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 const SecureButton = styled.button`
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
-  margin: 0 auto;
   padding: 1rem;
   border: none;
   background: none;
@@ -46,6 +68,12 @@ const SecureButton = styled.button`
   &:focus span {
     text-decoration: underline;
   }
+
+  margin: 0;
+`;
+
+const SecureTriggerText = styled.span`
+  font-size: 0.75rem;
 `;
 
 const PopUpSecurePayment = ({
@@ -60,50 +88,66 @@ const PopUpSecurePayment = ({
     isOpen, isClosing, isRendered, containerRef, openPopUp, closePopUp
   } = usePopUpOpen(onOpenChange);
 
+  const closeButtonRef = useRef(null);
+
+  // The trigger doesn't toggle the popup, so move focus to the close button
+  // when it opens so keyboard users land inside the dialog
+  useEffect(() => {
+    if (isOpen && closeButtonRef.current) {
+      closeButtonRef.current.focus();
+    }
+  }, [isOpen]);
+
   return (
-    <Container
+    <SecurePaymentContainer
       ref={containerRef}
-      data-testid="pop-up-secure-payment"
+      data-testid="secure-text-popup"
       data-open={isOpen ? 'true' : 'false'}
       {...rest}
     >
       {isRendered && <PageOverlay aria-hidden="true" />}
 
-      <Trigger $hidden={isRendered}>
+      <SecureTextContainer data-testid="secure-text-trigger-button-wrapper">
         <SecureButton
           type="button"
           onClick={openPopUp}
           aria-expanded={isOpen ? 'true' : 'false'}
         >
-          <Padlock colour="black" size={16} />
-          <Text>{triggerText}</Text>
+          <Padlock colour="black" size={12} />
+          <SecureTriggerText>{triggerText}</SecureTriggerText>
         </SecureButton>
-      </Trigger>
+      </SecureTextContainer>
 
       {isRendered && (
         <OpenPopUpWindow
+          data-testid="secure-text-open-popup-window"
           $backgroundColour="white"
           $isOpen={isRendered}
           $isClosing={isClosing}
           $openWindowWidth={openWindowWidth}
         >
           <CloseButton
+            ref={closeButtonRef}
+            data-testid="secure-text-close-button"
             type="button"
             onClick={closePopUp}
             aria-label="Close"
           >
-            <Cross colour="black" size={24} />
+            <Cross
+              data-testid="secure-text-cross"
+              colour="black" size={24}
+            />
           </CloseButton>
 
-          <PopUpHeading>{heading}</PopUpHeading>
+          <PopUpHeading data-testid="secure-text-popup-heading">{heading}</PopUpHeading>
 
           {paragraphs.map((paragraph, index) => (
             // eslint-disable-next-line react/no-array-index-key
-            <PopUpBodyText key={index}>{paragraph}</PopUpBodyText>
+            <PopUpBodyText data-testid="secure-text-body-text" key={index}>{paragraph}</PopUpBodyText>
           ))}
         </OpenPopUpWindow>
       )}
-    </Container>
+    </SecurePaymentContainer>
   );
 };
 

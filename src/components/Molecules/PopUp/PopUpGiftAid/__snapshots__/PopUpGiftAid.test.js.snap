@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders coral_light variant 1`] = `
-.c3 {
+.c2 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   background-color: transparent;
   color: #000000;
@@ -12,7 +12,7 @@ exports[`renders coral_light variant 1`] = `
   border-radius: 1rem;
 }
 
-.c3 h3 {
+.c2 h3 {
   margin-right: 16px;
 }
 
@@ -21,11 +21,7 @@ exports[`renders coral_light variant 1`] = `
   width: 100%;
 }
 
-.c2 {
-  visibility: visible;
-}
-
-.c5 {
+.c4 {
   display: block;
   width: 100%;
   height: auto;
@@ -36,7 +32,7 @@ exports[`renders coral_light variant 1`] = `
   position: static;
 }
 
-.c4 {
+.c3 {
   display: block;
   width: 100%;
   padding: 0;
@@ -45,12 +41,12 @@ exports[`renders coral_light variant 1`] = `
   cursor: pointer;
 }
 
-.c4:hover svg {
+.c3:hover svg {
   fill: #E52630;
 }
 
 @media (min-width: 1024px) {
-  .c5 {
+  .c4 {
     fill: #000000;
   }
 }
@@ -59,23 +55,26 @@ exports[`renders coral_light variant 1`] = `
   backgroundColor="coral_light"
   className="c0 c1"
   data-open="false"
-  data-testid="pop-up-gift-aid"
+  data-testid="gift-aid-popup"
 >
   <div
-    className="c2"
+    data-testid="gift-aid-pop-up-trigger"
   >
     <div
-      className="c3"
+      className="c2"
+      data-testid="gift-aid-pop-up-window"
     >
       <button
         aria-expanded="false"
         aria-label="What is Gift Aid?"
-        className="c4"
+        className="c3"
+        data-testid="gift-aid-pop-up-logo-wrapper"
         onClick={[Function]}
         type="button"
       >
         <svg
-          className="c5"
+          className="c4"
+          data-testid="gift-aid-pop-up-gift-aid-logo"
           fill="#000000"
           viewBox="0 0 350 124"
           xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +90,7 @@ exports[`renders coral_light variant 1`] = `
 `;
 
 exports[`renders default blue_light variant 1`] = `
-.c3 {
+.c2 {
   font-family: 'Montserrat',Helvetica,Arial,sans-serif;
   background-color: transparent;
   color: #000000;
@@ -102,7 +101,7 @@ exports[`renders default blue_light variant 1`] = `
   border-radius: 1rem;
 }
 
-.c3 h3 {
+.c2 h3 {
   margin-right: 16px;
 }
 
@@ -111,11 +110,7 @@ exports[`renders default blue_light variant 1`] = `
   width: 100%;
 }
 
-.c2 {
-  visibility: visible;
-}
-
-.c5 {
+.c4 {
   display: block;
   width: 100%;
   height: auto;
@@ -126,7 +121,7 @@ exports[`renders default blue_light variant 1`] = `
   position: static;
 }
 
-.c4 {
+.c3 {
   display: block;
   width: 100%;
   padding: 0;
@@ -135,12 +130,12 @@ exports[`renders default blue_light variant 1`] = `
   cursor: pointer;
 }
 
-.c4:hover svg {
+.c3:hover svg {
   fill: #E52630;
 }
 
 @media (min-width: 1024px) {
-  .c5 {
+  .c4 {
     fill: #000000;
   }
 }
@@ -148,23 +143,26 @@ exports[`renders default blue_light variant 1`] = `
 <div
   className="c0 c1"
   data-open="false"
-  data-testid="pop-up-gift-aid"
+  data-testid="gift-aid-popup"
 >
   <div
-    className="c2"
+    data-testid="gift-aid-pop-up-trigger"
   >
     <div
-      className="c3"
+      className="c2"
+      data-testid="gift-aid-pop-up-window"
     >
       <button
         aria-expanded="false"
         aria-label="What is Gift Aid?"
-        className="c4"
+        className="c3"
+        data-testid="gift-aid-pop-up-logo-wrapper"
         onClick={[Function]}
         type="button"
       >
         <svg
-          className="c5"
+          className="c4"
+          data-testid="gift-aid-pop-up-gift-aid-logo"
           fill="#000000"
           viewBox="0 0 350 124"
           xmlns="http://www.w3.org/2000/svg"

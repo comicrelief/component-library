@@ -2,20 +2,6 @@
 
 exports[`renders coral_light variant 1`] = `
 .c4 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c4 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.c3 {
   fill: #000000;
 }
 
@@ -24,68 +10,64 @@ exports[`renders coral_light variant 1`] = `
   width: 100%;
 }
 
-.c1 {
+.c1>div {
   visibility: visible;
 }
 
 .c2 {
   display: flex;
+  justify-content: center;
+}
+
+.c3 {
+  display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
-  margin: 0 auto;
   padding: 1rem;
   border: none;
   background: none;
   cursor: pointer;
   color: #000000;
+  margin: 0;
 }
 
-.c2:hover span,
-.c2:focus span {
+.c3:hover span,
+.c3:focus span {
   text-decoration: underline;
 }
 
-@media (min-width: 740px) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
+.c5 {
+  font-size: 0.75rem;
 }
 
 @media (min-width: 1024px) {
   .c4 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c3 {
     fill: #000000;
   }
 }
 
 <div
   backgroundColor="coral_light"
-  className="c0"
+  className="c0 c1"
   data-open="false"
-  data-testid="pop-up-secure-payment"
+  data-testid="secure-text-popup"
 >
   <div
-    className="c1"
+    className="c2"
+    data-testid="secure-text-trigger-button-wrapper"
   >
     <button
       aria-expanded="false"
-      className="c2"
+      className="c3"
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="c3"
-        height={17.6}
+        className="c4"
+        height={13.2}
         viewBox="0 0 10 11"
-        width={16}
+        width={12}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -93,7 +75,7 @@ exports[`renders coral_light variant 1`] = `
         />
       </svg>
       <span
-        className="c4"
+        className="c5"
       >
         Your donation is secure and encrypted
       </span>
@@ -104,20 +86,6 @@ exports[`renders coral_light variant 1`] = `
 
 exports[`renders default blue_light variant 1`] = `
 .c4 {
-  font-family: 'Montserrat',Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  text-transform: inherit;
-  letter-spacing: 0;
-  font-size: 1rem;
-  line-height: 1.25rem;
-}
-
-.c4 span {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.c3 {
   fill: #000000;
 }
 
@@ -126,67 +94,63 @@ exports[`renders default blue_light variant 1`] = `
   width: 100%;
 }
 
-.c1 {
+.c1>div {
   visibility: visible;
 }
 
 .c2 {
   display: flex;
+  justify-content: center;
+}
+
+.c3 {
+  display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
-  margin: 0 auto;
   padding: 1rem;
   border: none;
   background: none;
   cursor: pointer;
   color: #000000;
+  margin: 0;
 }
 
-.c2:hover span,
-.c2:focus span {
+.c3:hover span,
+.c3:focus span {
   text-decoration: underline;
 }
 
-@media (min-width: 740px) {
-  .c4 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
+.c5 {
+  font-size: 0.75rem;
 }
 
 @media (min-width: 1024px) {
   .c4 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .c3 {
     fill: #000000;
   }
 }
 
 <div
-  className="c0"
+  className="c0 c1"
   data-open="false"
-  data-testid="pop-up-secure-payment"
+  data-testid="secure-text-popup"
 >
   <div
-    className="c1"
+    className="c2"
+    data-testid="secure-text-trigger-button-wrapper"
   >
     <button
       aria-expanded="false"
-      className="c2"
+      className="c3"
       onClick={[Function]}
       type="button"
     >
       <svg
-        className="c3"
-        height={17.6}
+        className="c4"
+        height={13.2}
         viewBox="0 0 10 11"
-        width={16}
+        width={12}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -194,7 +158,7 @@ exports[`renders default blue_light variant 1`] = `
         />
       </svg>
       <span
-        className="c4"
+        className="c5"
       >
         Your donation is secure and encrypted
       </span>
