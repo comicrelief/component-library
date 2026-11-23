@@ -115,6 +115,7 @@ const PageOverlay = styled.div`
   background-color: rgba(0, 0, 0, 0.4);
   pointer-events: none;
   z-index: 4;
+  pointer-events: auto;
 `;
 
 const Container = styled.div`
